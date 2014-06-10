@@ -102,12 +102,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a4c34a495371c477c06f16a2a0007dea7">new_workbook</a>(<span class="stringliteral">&quot;filename.xlsx&quot;</span>);</div>
 <div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello Excel&quot;</span>, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello Excel&quot;</span>, NULL);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a68ac932149fc7657b5479f067182d317"></a>
+<a class="anchor" id="aa7f1a12b664b4c1d7742529a315e21aa"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -120,13 +120,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
           <td class="paramname"><em>row</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
           <td class="paramname"><em>col</em>, </td>
         </tr>
         <tr>
@@ -158,10 +158,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b" title="Error codes from worksheet_write*() functions. ">lxw_write_error</a> code.</dd></dl>
-<p>The <code><a class="el" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317" title="Write a number to a worksheet cell. ">worksheet_write_number()</a></code> method writes numeric types to the cell specified by <code>row</code> and <code>column</code>:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 0, 0, 123456, NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 1, 0, 2.3451, NULL);</div>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> code.</dd></dl>
+<p>The <code><a class="el" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa" title="Write a number to a worksheet cell. ">worksheet_write_number()</a></code> method writes numeric types to the cell specified by <code>row</code> and <code>column</code>:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 0, 0, 123456, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 1, 0, 2.3451, NULL);</div>
 </div><!-- fragment --><div class="image">
 <img src="write_number01.png" alt="write_number01.png"/>
 </div>
@@ -170,7 +170,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format, <span class="stringliteral">&quot;$#,##0.00&quot;</span>);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 0, 0, 1234.567, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 0, 0, 1234.567, format);</div>
 </div><!-- fragment --><div class="image">
 <img src="write_number02.png" alt="write_number02.png"/>
 </div>
@@ -178,7 +178,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </dl>
 </div>
 </div>
-<a class="anchor" id="ab689b1cfd53d6d14e55b8c078e733ff3"></a>
+<a class="anchor" id="a0c3e081792631511c9ee3f7507afb78c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -191,13 +191,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
           <td class="paramname"><em>row</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
           <td class="paramname"><em>col</em>, </td>
         </tr>
         <tr>
@@ -229,9 +229,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b" title="Error codes from worksheet_write*() functions. ">lxw_write_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> code.</dd></dl>
 <p>The <code>worksheet_write_string()</code> method writes a string to the cell specified by <code>row</code> and <code>column</code>:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;This phrase is English!&quot;</span>, NULL);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;This phrase is English!&quot;</span>, NULL);</div>
 </div><!-- fragment --><div class="image">
 <img src="write_string01.png" alt="write_string01.png"/>
 </div>
@@ -239,12 +239,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(format);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;This phrase is Bold!&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;This phrase is Bold!&quot;</span>, format);</div>
 </div><!-- fragment --><div class="image">
 <img src="write_string02.png" alt="write_string02.png"/>
 </div>
 <p>Unicode strings are supported in UTF-8 encoding. This generally requires that your source file is UTF-8 encoded or that the data has been read from a UTF-8 source:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Это фраза на русском!&quot;</span>, NULL);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Это фраза на русском!&quot;</span>, NULL);</div>
 </div><!-- fragment --><div class="image">
 <img src="write_string03.png" alt="write_string03.png"/>
 </div>
@@ -252,7 +252,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </dl>
 </div>
 </div>
-<a class="anchor" id="a4c1912e29c76ca143314ed4e6f94045e"></a>
+<a class="anchor" id="ad9c384e17c06538c6a45f2cec7b5bef1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -265,13 +265,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
           <td class="paramname"><em>row</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
           <td class="paramname"><em>col</em>, </td>
         </tr>
         <tr>
@@ -303,27 +303,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b" title="Error codes from worksheet_write*() functions. ">lxw_write_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> code.</dd></dl>
 <p>The <code>worksheet_write_formula()</code> method writes a formula or function to the cell specified by <code>row</code> and <code>column</code>:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=B3 + 6&quot;</span>,                    NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=SIN(PI()/4)&quot;</span>,               NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e">worksheet_write_formula</a>(worksheet, 2, 0, <span class="stringliteral">&quot;=SUM(A1:A2)&quot;</span>,                NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e">worksheet_write_formula</a>(worksheet, 3, 0, <span class="stringliteral">&quot;=IF(A3&gt;1,\&quot;Yes\&quot;, \&quot;No\&quot;)&quot;</span>,  NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e">worksheet_write_formula</a>(worksheet, 4, 0, <span class="stringliteral">&quot;=AVERAGE(1, 2, 3, 4)&quot;</span>,       NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e">worksheet_write_formula</a>(worksheet, 5, 0, <span class="stringliteral">&quot;=DATEVALUE(\&quot;1-Jan-2013\&quot;)&quot;</span>, NULL);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=B3 + 6&quot;</span>,                    NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=SIN(PI()/4)&quot;</span>,               NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 2, 0, <span class="stringliteral">&quot;=SUM(A1:A2)&quot;</span>,                NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 3, 0, <span class="stringliteral">&quot;=IF(A3&gt;1,\&quot;Yes\&quot;, \&quot;No\&quot;)&quot;</span>,  NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 4, 0, <span class="stringliteral">&quot;=AVERAGE(1, 2, 3, 4)&quot;</span>,       NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 5, 0, <span class="stringliteral">&quot;=DATEVALUE(\&quot;1-Jan-2013\&quot;)&quot;</span>, NULL);</div>
 </div><!-- fragment --><div class="image">
 <img src="write_formula01.png" alt="write_formula01.png"/>
 </div>
 <p>The <code>format</code> parameter is used to apply formatting to the cell. This parameter can be <code>NULL</code> to indicate no formatting or it can be a <a class="el" href="format_8h.html">Format</a> object.</p>
-<p>Libxlsxwriter doesn't calculate the value of a formula and instead stores a default value of <code>0</code>. The correct formula result is displayed in Excel, as shown in the example above, since it recalculates the formulas when it loads the file. For cases where this is an issue see the <code><a class="el" href="worksheet_8h.html#afbe504aaaa7b96b7032701847f28e13d" title="Write a formula to a worksheet cell with a user defined result. ">worksheet_write_formula_num()</a></code> function and the discussion in that section.</p>
+<p>Libxlsxwriter doesn't calculate the value of a formula and instead stores a default value of <code>0</code>. The correct formula result is displayed in Excel, as shown in the example above, since it recalculates the formulas when it loads the file. For cases where this is an issue see the <code><a class="el" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37" title="Write a formula to a worksheet cell with a user defined result. ">worksheet_write_formula_num()</a></code> function and the discussion in that section.</p>
 <p>Formulas must be written with the US style separator/range operator which is a comma (not semi-colon). Therefore a formula with multiple values should be written as follows:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=SUM(1, 2, 3)&quot;</span>, NULL); <span class="comment">// OK.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=SUM(1; 2; 3)&quot;</span>, NULL); <span class="comment">// NO. Error on load.</span></div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=SUM(1, 2, 3)&quot;</span>, NULL); <span class="comment">// OK.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=SUM(1; 2; 3)&quot;</span>, NULL); <span class="comment">// NO. Error on load.</span></div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="tutorial1_8c-example.html#a6">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a10">tutorial2.c</a>, and <a class="el" href="tutorial3_8c-example.html#a13">tutorial3.c</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="afbe504aaaa7b96b7032701847f28e13d"></a>
+<a class="anchor" id="a9453aff2062f93d2c9784b96393f2f37"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -336,13 +336,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
           <td class="paramname"><em>row</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
           <td class="paramname"><em>col</em>, </td>
         </tr>
         <tr>
@@ -381,19 +381,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b" title="Error codes from worksheet_write*() functions. ">lxw_write_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> code.</dd></dl>
 <p>The <code>worksheet_write_formula_num()</code> method writes a formula or function to the cell specified by <code>row</code> and <code>column</code> with a user defined result:</p>
 <div class="fragment"><div class="line"><span class="comment">// Required as a workaround only.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#afbe504aaaa7b96b7032701847f28e13d">worksheet_write_formula_num</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=1 + 2&quot;</span>, NULL, 3);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37">worksheet_write_formula_num</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=1 + 2&quot;</span>, NULL, 3);</div>
 </div><!-- fragment --><p>Libxlsxwriter doesn't calculate the value of a formula and instead stores the value <code>0</code> as the formula result. It then sets a global flag in the XLSX file to say that all formulas and functions should be recalculated when the file is opened.</p>
 <p>This is the method recommended in the Excel documentation and in general it works fine with spreadsheet applications.</p>
 <p>However, applications that don't have a facility to calculate formulas, such as Excel Viewer, or some mobile applications will only display the <code>0</code> results.</p>
 <p>If required, the <code>worksheet_write_formula_num()</code> function can be used to specify a formula and its result.</p>
-<p>This function is rarely required and is only provided for compatibility with some third party applications. For most applications the <a class="el" href="worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e" title="Write a formula to a worksheet cell. ">worksheet_write_formula()</a> function is the recommended way of writing formulas. </p>
+<p>This function is rarely required and is only provided for compatibility with some third party applications. For most applications the <a class="el" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1" title="Write a formula to a worksheet cell. ">worksheet_write_formula()</a> function is the recommended way of writing formulas. </p>
 
 </div>
 </div>
-<a class="anchor" id="a2a41c29cf82c523d636715ed8cb732d3"></a>
+<a class="anchor" id="acbc5654e9b8987ba263f83fff082ce33"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -406,13 +406,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
           <td class="paramname"><em>row</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
           <td class="paramname"><em>col</em>, </td>
         </tr>
         <tr>
@@ -444,8 +444,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b" title="Error codes from worksheet_write*() functions. ">lxw_write_error</a> code.</dd></dl>
-<p>The <code><a class="el" href="worksheet_8h.html#a2a41c29cf82c523d636715ed8cb732d3" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a></code> method can be used to write a date or time to the cell specified by <code>row</code> and <code>column</code>:</p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> code.</dd></dl>
+<p>The <code><a class="el" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a></code> method can be used to write a date or time to the cell specified by <code>row</code> and <code>column</code>:</p>
  <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
@@ -460,7 +460,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <span class="comment">/* Add a format with date formatting. */</span></div>
 <div class="line">    <a class="code" href="structlxw__format.html">lxw_format</a>    *format    = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line">    <a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format, <span class="stringliteral">&quot;mmm d yyyy hh:mm AM/PM&quot;</span>);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a2a41c29cf82c523d636715ed8cb732d3">worksheet_write_datetime</a>(worksheet, 1, 0, &amp;datetime, format);  <span class="comment">// Feb 28 2013 12:00 PM</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33">worksheet_write_datetime</a>(worksheet, 1, 0, &amp;datetime, format);  <span class="comment">// Feb 28 2013 12:00 PM</span></div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
@@ -471,7 +471,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </dl>
 </div>
 </div>
-<a class="anchor" id="a5be18bd2bcfc926a1982f8915cbdce65"></a>
+<a class="anchor" id="a56bcd1671dc853a4927adb67696726ec"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -484,13 +484,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
           <td class="paramname"><em>row</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
           <td class="paramname"><em>col</em>, </td>
         </tr>
         <tr>
@@ -515,9 +515,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b" title="Error codes from worksheet_write*() functions. ">lxw_write_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> code.</dd></dl>
 <p>Write a blank cell specified by <code>row</code> and <code>column</code>:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a5be18bd2bcfc926a1982f8915cbdce65">worksheet_write_blank</a>(worksheet, 1, 1, border_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a56bcd1671dc853a4927adb67696726ec">worksheet_write_blank</a>(worksheet, 1, 1, border_format);</div>
 </div><!-- fragment --><p>This method is used to add formatting to a cell which doesn't contain a string or number value.</p>
 <p>Excel differentiates between an "Empty" cell and a "Blank" cell. An Empty cell is a cell which doesn't contain data or formatting whilst a Blank cell doesn't contain data but does contain formatting. Excel stores Blank cells but ignores Empty cells.</p>
 <p>As such, if you write an empty cell without formatting it is ignored. </p>
@@ -525,6 +525,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="aaf33b4e2179dcc466359277210774ce3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint32_t <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Data type to represent a row value.</p>
+<p>The maximum row in Excel is 1,048,576. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4fedd8dede664b070e84e850a3f92fd2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint16_t <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Data type to represent a column value.</p>
+<p>The maximum column in Excel is 16,384. </p>
+
+</div>
+</div>
 <a class="anchor" id="a356e12f6f1c3f94b8de98dc99ef78b86"></a>
 <div class="memitem">
 <div class="memproto">
@@ -538,6 +566,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 </div>
 </div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="ad031ffc1d718178a7180e8d63ebbf81b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Error codes from <code>worksheet_write*()</code> functions. </p>
+
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -547,14 +589,17 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:aaf33b4e2179dcc466359277210774ce3"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a></td></tr>
+<tr class="separator:aaf33b4e2179dcc466359277210774ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fedd8dede664b070e84e850a3f92fd2"><td class="memItemLeft" align="right" valign="top">typedef uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a></td></tr>
+<tr class="separator:a4fedd8dede664b070e84e850a3f92fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a356e12f6f1c3f94b8de98dc99ef78b86"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__worksheet.html">lxw_worksheet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a356e12f6f1c3f94b8de98dc99ef78b86">lxw_worksheet</a></td></tr>
 <tr class="memdesc:a356e12f6f1c3f94b8de98dc99ef78b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel worksheet.  <a href="#a356e12f6f1c3f94b8de98dc99ef78b86">More...</a><br /></td></tr>
 <tr class="separator:a356e12f6f1c3f94b8de98dc99ef78b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ad031ffc1d718178a7180e8d63ebbf81b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad031ffc1d718178a7180e8d63ebbf81b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> </td></tr>
-<tr class="memdesc:ad031ffc1d718178a7180e8d63ebbf81b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error codes from <code>worksheet_write*()</code> functions. <br /></td></tr>
+<tr class="memitem:ad031ffc1d718178a7180e8d63ebbf81b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> </td></tr>
 <tr class="separator:ad031ffc1d718178a7180e8d63ebbf81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

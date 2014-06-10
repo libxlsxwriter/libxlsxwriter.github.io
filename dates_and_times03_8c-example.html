@@ -129,8 +129,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a name="a7"></a><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(bold);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write the column headers. */</span></div>
-<div class="line">    <a name="a8"></a><a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, row, col,     <span class="stringliteral">&quot;Formatted date&quot;</span>, bold);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, row, col + 1, <span class="stringliteral">&quot;Format&quot;</span>,         bold);</div>
+<div class="line">    <a name="a8"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, row, col,     <span class="stringliteral">&quot;Formatted date&quot;</span>, bold);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, row, col + 1, <span class="stringliteral">&quot;Format&quot;</span>,         bold);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write the same date and time using each of the above formats. */</span></div>
 <div class="line">    <span class="keywordflow">for</span> (i = 0; i &lt; 14; i++) {</div>
@@ -142,10 +142,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">        <a name="a10"></a><a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>(format, <a name="a11"></a><a class="code" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a6d528fd0486c22c04941cd8ed1bbc8e1">LXW_ALIGN_LEFT</a>);</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">/* Write the datetime with each format. */</span></div>
-<div class="line">        <a name="a12"></a><a class="code" href="worksheet_8h.html#a2a41c29cf82c523d636715ed8cb732d3">worksheet_write_datetime</a>(worksheet, row, col, &amp;datetime, format);</div>
+<div class="line">        <a name="a12"></a><a class="code" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33">worksheet_write_datetime</a>(worksheet, row, col, &amp;datetime, format);</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">/* Also write the format string for comparison. */</span></div>
-<div class="line">        <a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, row, col + 1, date_formats[i], NULL);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, row, col + 1, date_formats[i], NULL);</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> <a name="a13"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>

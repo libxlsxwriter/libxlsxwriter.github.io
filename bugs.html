@@ -93,7 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </pre><h2>Formula results displaying as zero in non-Excel applications</h2>
 <p>Due to wide range of possible formulas and inter-dependencies between them, <code>xlsxwriter</code> doesn't, and realistically cannot, calculate the result of a formula when it is written to an XLSX file. Instead, it stores the value 0 as the formula result. It then sets a global flag in the XLSX file to say that all formulas and functions should be recalculated when the file is opened.</p>
 <p>This is the method recommended in the Excel documentation and in general it works fine with spreadsheet applications. However, applications that don't have a facility to calculate formulas, such as Excel Viewer, or several mobile applications, will only display the 0 results.</p>
-<p>If required, it is also possible to specify the calculated result of the formula using the <a class="el" href="worksheet_8h.html#afbe504aaaa7b96b7032701847f28e13d" title="Write a formula to a worksheet cell with a user defined result. ">worksheet_write_formula_num()</a> function.</p>
+<p>If required, it is also possible to specify the calculated result of the formula using the <a class="el" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37" title="Write a formula to a worksheet cell with a user defined result. ">worksheet_write_formula_num()</a> function.</p>
 <h1>Reporting Bugs</h1>
 <p>Here are some tips on reporting bugs in <code>libxlsxwriter</code>.</p>
 <h2>Upgrade to the latest version of the library</h2>

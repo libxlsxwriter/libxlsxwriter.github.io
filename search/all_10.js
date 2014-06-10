@@ -9,10 +9,10 @@ var searchData=
   ['working_20with_20formats',['Working with Formats',['../working_with_formats.html',1,'']]],
   ['working_20with_20memory_20and_20performance',['Working with Memory and Performance',['../working_with_memory.html',1,'']]],
   ['worksheet_2eh',['worksheet.h',['../worksheet_8h.html',1,'']]],
-  ['worksheet_5fwrite_5fblank',['worksheet_write_blank',['../worksheet_8h.html#a5be18bd2bcfc926a1982f8915cbdce65',1,'worksheet.h']]],
-  ['worksheet_5fwrite_5fdatetime',['worksheet_write_datetime',['../worksheet_8h.html#a2a41c29cf82c523d636715ed8cb732d3',1,'worksheet.h']]],
-  ['worksheet_5fwrite_5fformula',['worksheet_write_formula',['../worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e',1,'worksheet.h']]],
-  ['worksheet_5fwrite_5fformula_5fnum',['worksheet_write_formula_num',['../worksheet_8h.html#afbe504aaaa7b96b7032701847f28e13d',1,'worksheet.h']]],
-  ['worksheet_5fwrite_5fnumber',['worksheet_write_number',['../worksheet_8h.html#a68ac932149fc7657b5479f067182d317',1,'worksheet.h']]],
-  ['worksheet_5fwrite_5fstring',['worksheet_write_string',['../worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3',1,'worksheet.h']]]
+  ['worksheet_5fwrite_5fblank',['worksheet_write_blank',['../worksheet_8h.html#a56bcd1671dc853a4927adb67696726ec',1,'worksheet.h']]],
+  ['worksheet_5fwrite_5fdatetime',['worksheet_write_datetime',['../worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33',1,'worksheet.h']]],
+  ['worksheet_5fwrite_5fformula',['worksheet_write_formula',['../worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1',1,'worksheet.h']]],
+  ['worksheet_5fwrite_5fformula_5fnum',['worksheet_write_formula_num',['../worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37',1,'worksheet.h']]],
+  ['worksheet_5fwrite_5fnumber',['worksheet_write_number',['../worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa',1,'worksheet.h']]],
+  ['worksheet_5fwrite_5fstring',['worksheet_write_string',['../worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c',1,'worksheet.h']]]
 ];

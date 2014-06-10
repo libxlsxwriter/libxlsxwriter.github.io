@@ -122,13 +122,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Iterate over the data and write it out element by element. */</span></div>
 <div class="line">    <span class="keywordflow">for</span> (row = 0; row &lt; 4; row++) {</div>
-<div class="line">        <a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, row, col,     expenses[row].item, NULL);</div>
-<div class="line">        <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, row, col + 1, expenses[row].cost, NULL);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, row, col,     expenses[row].item, NULL);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, row, col + 1, expenses[row].cost, NULL);</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write a total using a formula. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a> (worksheet, row, col,     <span class="stringliteral">&quot;Total&quot;</span>,       NULL);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e">worksheet_write_formula</a>(worksheet, row, col + 1, <span class="stringliteral">&quot;=SUM(B1:B4)&quot;</span>, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a> (worksheet, row, col,     <span class="stringliteral">&quot;Total&quot;</span>,       NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, row, col + 1, <span class="stringliteral">&quot;=SUM(B1:B4)&quot;</span>, NULL);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Save the workbook and free any allocated memory. */</span></div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
@@ -165,18 +165,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line">worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL  );  <span class="comment">// Defaults to Sheet1.</span></div>
 <div class="line">worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, <span class="stringliteral">&quot;Data&quot;</span>);  <span class="comment">// Data.</span></div>
 <div class="line">worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL  );  <span class="comment">// Defaults to Sheet3.</span></div>
-</div><!-- fragment --><p>We can then use the worksheet object to write data via the <a class="el" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3" title="Write a string to a worksheet cell. ">worksheet_write_string()</a> and <a class="el" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317" title="Write a number to a worksheet cell. ">worksheet_write_number()</a> functions:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 1, 0, 1234.56, NULL);</div>
+</div><!-- fragment --><p>We can then use the worksheet object to write data via the <a class="el" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c" title="Write a string to a worksheet cell. ">worksheet_write_string()</a> and <a class="el" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa" title="Write a number to a worksheet cell. ">worksheet_write_number()</a> functions:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 1, 0, 1234.56, NULL);</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Rows and columns are zero indexed throughout the libxlsxwriter API. Thus, the first cell in a worksheet, <code>A1</code>, is equivalent to <code>(0, 0)</code>.</dd></dl>
 <p>So in our example we iterate over our data and write it out as follows:</p>
  <div class="fragment"><div class="line">    <span class="keywordflow">for</span> (row = 0; row &lt; 4; row++) {</div>
-<div class="line">        <a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, row, col,     expenses[row].item, NULL);</div>
-<div class="line">        <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, row, col + 1, expenses[row].cost, NULL);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, row, col,     expenses[row].item, NULL);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, row, col + 1, expenses[row].cost, NULL);</div>
 <div class="line">    }</div>
 </div><!-- fragment --></p>
 <p>We then add a formula to calculate the total of the items in the second column:</p>
- <div class="fragment"><div class="line">    <a class="code" href="worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e">worksheet_write_formula</a>(worksheet, row, col + 1, <span class="stringliteral">&quot;=SUM(B1:B4)&quot;</span>, NULL);</div>
+ <div class="fragment"><div class="line">    <a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, row, col + 1, <span class="stringliteral">&quot;=SUM(B1:B4)&quot;</span>, NULL);</div>
 </div><!-- fragment --></p>
 <p>Finally, we close the Excel file via the close method:</p>
  <div class="fragment"><div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>

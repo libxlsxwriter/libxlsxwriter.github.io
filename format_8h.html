@@ -110,7 +110,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(format, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Use the format to change the text format in a cell.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, format);</div>
 </div><!-- fragment --><p>The full range of formatting options that can be applied using <code>libxlswriter</code> are shown below. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a449e2235a9088cc60233ae443acd2b1a"></a>
@@ -224,7 +224,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"><a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(format, <span class="stringliteral">&quot;red&quot;</span>);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;wheelbarrow&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;wheelbarrow&quot;</span>, format);</div>
 </div><!-- fragment --><p>The color should be an RGB integer value, see <a class="el" href="working_with_colors.html">Working with Colors</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>The <a class="el" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c" title="Set the color of the font used in the cell. ">format_set_font_color()</a> method is used to set the font color in a cell. To set the color of a cell background use the <a class="el" href="format_8h.html#aeef47436c335daf1801683ac7b3b587d" title="Set the pattern background color for a cell. ">format_set_bg_color()</a> and <a class="el" href="format_8h.html#a43ddbc77d637b04fdfbc45e96857d15a" title="Set the background fill pattern for a cell. ">format_set_pattern()</a> methods. </dd></dl>
 
@@ -429,26 +429,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format09, <span class="stringliteral">&quot;0 \&quot;dollar and\&quot; .00 \&quot;cents\&quot;&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write data using the formats. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 0, 0, 3.1415926, NULL);      <span class="comment">// 3.1415926</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 1, 0, 3.1415926, format01);  <span class="comment">// 3.142</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 2, 0, 1234.56,   format02);  <span class="comment">// 1,235</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 3, 0, 1234.56,   format03);  <span class="comment">// 1,234.56</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 4, 0, 49.99,     format04);  <span class="comment">// 49.99</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 5, 0, 36892.521, format05);  <span class="comment">// 01/01/01</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 6, 0, 36892.521, format06);  <span class="comment">// Jan 1 2001</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 7, 0, 36892.521, format07);  <span class="comment">// 1 January 2001</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 8, 0, 36892.521, format08);  <span class="comment">// 01/01/2001 12:30 AM</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 9, 0, 1.87,      format09);  <span class="comment">// 1 dollar and .87 cents</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 0, 0, 3.1415926, NULL);      <span class="comment">// 3.1415926</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 1, 0, 3.1415926, format01);  <span class="comment">// 3.142</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 2, 0, 1234.56,   format02);  <span class="comment">// 1,235</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 3, 0, 1234.56,   format03);  <span class="comment">// 1,234.56</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 4, 0, 49.99,     format04);  <span class="comment">// 49.99</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 5, 0, 36892.521, format05);  <span class="comment">// 01/01/01</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 6, 0, 36892.521, format06);  <span class="comment">// Jan 1 2001</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 7, 0, 36892.521, format07);  <span class="comment">// 1 January 2001</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 8, 0, 36892.521, format08);  <span class="comment">// 01/01/2001 12:30 AM</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 9, 0, 1.87,      format09);  <span class="comment">// 1 dollar and .87 cents</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Show limited conditional number formats. */</span></div>
 <div class="line">    <a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format10, <span class="stringliteral">&quot;[Green]General;[Red]-General;General&quot;</span>);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 10, 0, 123, format10);  <span class="comment">// &gt; 0 Green</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 11, 0, -45, format10);  <span class="comment">// &lt; 0 Red</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 12, 0,   0, format10);  <span class="comment">// = 0 Default color</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 10, 0, 123, format10);  <span class="comment">// &gt; 0 Green</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 11, 0, -45, format10);  <span class="comment">// &lt; 0 Red</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 12, 0,   0, format10);  <span class="comment">// = 0 Default color</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Format a Zip code. */</span></div>
 <div class="line">    <a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format11, <span class="stringliteral">&quot;00000&quot;</span>);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>(worksheet, 13, 0, 1209, format11);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 13, 0, 1209, format11);</div>
 </div><!-- fragment --></p>
 <div class="image">
 <img src="format_set_num_format.png" alt="format_set_num_format.png"/>
@@ -609,10 +609,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">worksheet_protect(worksheet);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// This cell cannot be edited.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=1+2&quot;</span>, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=1+2&quot;</span>, NULL);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// This cell can be edited.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=1+2&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=1+2&quot;</span>, format);</div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -643,7 +643,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">worksheet_protect(worksheet);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// The formula in this cell isn&#39;t visible.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=1+2&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=1+2&quot;</span>, format);</div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -702,7 +702,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>(format, <span class="stringliteral">&quot;vcenter&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">worksheet_set_row(0, 30);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Some Text&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Some Text&quot;</span>, format);</div>
 </div><!-- fragment --><p>Text can be aligned across two or more adjacent cells using the center_across property. However, for genuine merged cells it is better to use the worksheet_merge_range() worksheet method.</p>
 <p>The vertical justify option can be used to provide automatic text wrapping in a cell. The height of the cell will be adjusted to accommodate the wrapped text. To specify where the text wraps use the <a class="el" href="format_8h.html#a56d55dd9257d8f0645c62b296d2c196d" title="Wrap text in a cell. ">format_set_text_wrap()</a> method. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="dates_and_times03_8c-example.html#a10">dates_and_times03.c</a>.</dd>
@@ -726,12 +726,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line">format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#a56d55dd9257d8f0645c62b296d2c196d">format_set_text_wrap</a>(format);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Some long text to wrap in a cell&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Some long text to wrap in a cell&quot;</span>, format);</div>
 </div><!-- fragment --><p>If you wish to control where the text is wrapped you can add newline characters to the string:</p>
 <div class="fragment"><div class="line">format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#a56d55dd9257d8f0645c62b296d2c196d">format_set_text_wrap</a>(format);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;It&#39;s\na bum\nwrap&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;It&#39;s\na bum\nwrap&quot;</span>, format);</div>
 </div><!-- fragment --><p>Excel will adjust the height of the row to accommodate the wrapped text. A similar effect can be obtained without newlines using the <a class="el" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13" title="Set the alignment for data in the cell. ">format_set_align()</a> function with <a class="el" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a4940e5aa8e07a9d659d1cf6c2785286f">LXW_ALIGN_VERTICAL_JUSTIFY</a>. </p>
 
 </div>
@@ -770,7 +770,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line">format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#ae690004cd77f48646da07796b540c309">format_set_rotation</a>(format, 30);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;This text is rotated&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;This text is rotated&quot;</span>, format);</div>
 </div><!-- fragment --><p>The angle 270 is also supported. This indicates text where the letters run from top to bottom. </p>
 
 </div>
@@ -812,8 +812,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a class="code" href="format_8h.html#a99aea699cd7bb3c56a515c9c9e0caa69">format_set_indent</a>(format1, 1);</div>
 <div class="line"><a class="code" href="format_8h.html#a99aea699cd7bb3c56a515c9c9e0caa69">format_set_indent</a>(format2, 2);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;This text is indented 1 level&quot;</span>,  format1);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, 1, 0, <span class="stringliteral">&quot;This text is indented 2 levels&quot;</span>, format2);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;This text is indented 1 level&quot;</span>,  format1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 1, 0, <span class="stringliteral">&quot;This text is indented 2 levels&quot;</span>, format2);</div>
 </div><!-- fragment --><div class="image">
 <img src="text_indent.png" alt="text_indent.png"/>
 </div>
@@ -844,7 +844,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line">format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#a8fc47dd0e47020358c79e20039cbd760">format_set_shrink</a>(format);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Honey, I shrunk the text!&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Honey, I shrunk the text!&quot;</span>, format);</div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -965,7 +965,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a class="code" href="format_8h.html#a43ddbc77d637b04fdfbc45e96857d15a">format_set_pattern</a> (format, <a class="code" href="format_8h.html#a40e28394b961e69d4bee27579b4476e7a1fbd6761c4ccd57d98dfd59eaad9fde5">LXW_PATTERN_SOLID</a>);</div>
 <div class="line"><a class="code" href="format_8h.html#aeef47436c335daf1801683ac7b3b587d">format_set_bg_color</a>(format, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38bae0b5c39ced3b8c871974f0e4917e4871">LXW_COLOR_GREEN</a>);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Ray&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Ray&quot;</span>, format);</div>
 </div><!-- fragment --><div class="image">
 <img src="formats_set_bg_color.png" alt="formats_set_bg_color.png"/>
 </div>
@@ -1417,7 +1417,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(format, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Use the format to change the text format in a cell.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, format);</div>
 </div><!-- fragment --> 
 </div>
 </div>

@@ -139,21 +139,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write some data header. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, row, col,     <span class="stringliteral">&quot;Item&quot;</span>, bold);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>(worksheet, row, col + 1, <span class="stringliteral">&quot;Cost&quot;</span>, bold);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, row, col,     <span class="stringliteral">&quot;Item&quot;</span>, bold);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, row, col + 1, <span class="stringliteral">&quot;Cost&quot;</span>, bold);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Iterate over the data and write it out elementt by element. */</span></div>
 <div class="line">    <span class="keywordflow">for</span> (i = 0; i &lt; 4; i++) {</div>
 <div class="line">        <span class="comment">/* Write from the first cell below the headers. */</span></div>
 <div class="line">        row = i + 1;</div>
-<div class="line">        <a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>  (worksheet, row, col,      expenses[i].item,     NULL);</div>
-<div class="line">        <a class="code" href="worksheet_8h.html#a2a41c29cf82c523d636715ed8cb732d3">worksheet_write_datetime</a>(worksheet, row, col + 1, &amp;expenses[i].datetime, date_format);</div>
-<div class="line">        <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>  (worksheet, row, col + 2,  expenses[i].cost,     money);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>  (worksheet, row, col,      expenses[i].item,     NULL);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33">worksheet_write_datetime</a>(worksheet, row, col + 1, &amp;expenses[i].datetime, date_format);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>  (worksheet, row, col + 2,  expenses[i].cost,     money);</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write a total using a formula. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a> (worksheet, row + 1, col,     <span class="stringliteral">&quot;Total&quot;</span>,       bold);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e">worksheet_write_formula</a>(worksheet, row + 1, col + 2, <span class="stringliteral">&quot;=SUM(C2:C5)&quot;</span>, money);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a> (worksheet, row + 1, col,     <span class="stringliteral">&quot;Total&quot;</span>,       bold);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, row + 1, col + 2, <span class="stringliteral">&quot;=SUM(C2:C5)&quot;</span>, money);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Save the workbook and free any allocated memory. */</span></div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
@@ -176,20 +176,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></p>
 <p>Excel treats different types of input data, such as strings and numbers, differently although it generally does it transparently to the user. Libxlsxwriter tries to emulate this in the <code>worksheet_write*()</code> functions by mapping C data types to types that Excel supports.</p>
 <ul>
-<li><a class="el" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3" title="Write a string to a worksheet cell. ">worksheet_write_string()</a></li>
-<li><a class="el" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317" title="Write a number to a worksheet cell. ">worksheet_write_number()</a></li>
-<li><a class="el" href="worksheet_8h.html#a4c1912e29c76ca143314ed4e6f94045e" title="Write a formula to a worksheet cell. ">worksheet_write_formula()</a></li>
-<li><a class="el" href="worksheet_8h.html#a2a41c29cf82c523d636715ed8cb732d3" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a></li>
-<li><a class="el" href="worksheet_8h.html#a5be18bd2bcfc926a1982f8915cbdce65" title="Write a formatted blank worksheet cell. ">worksheet_write_blank()</a></li>
+<li><a class="el" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c" title="Write a string to a worksheet cell. ">worksheet_write_string()</a></li>
+<li><a class="el" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa" title="Write a number to a worksheet cell. ">worksheet_write_number()</a></li>
+<li><a class="el" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1" title="Write a formula to a worksheet cell. ">worksheet_write_formula()</a></li>
+<li><a class="el" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a></li>
+<li><a class="el" href="worksheet_8h.html#a56bcd1671dc853a4927adb67696726ec" title="Write a formatted blank worksheet cell. ">worksheet_write_blank()</a></li>
 </ul>
 <p>In this version of our program we have used some of these functions for different types of data:</p>
- <div class="fragment"><div class="line">        <a class="code" href="worksheet_8h.html#ab689b1cfd53d6d14e55b8c078e733ff3">worksheet_write_string</a>  (worksheet, row, col,      expenses[i].item,     NULL);</div>
-<div class="line">        <a class="code" href="worksheet_8h.html#a2a41c29cf82c523d636715ed8cb732d3">worksheet_write_datetime</a>(worksheet, row, col + 1, &amp;expenses[i].datetime, date_format);</div>
-<div class="line">        <a class="code" href="worksheet_8h.html#a68ac932149fc7657b5479f067182d317">worksheet_write_number</a>  (worksheet, row, col + 2,  expenses[i].cost,     money);</div>
+ <div class="fragment"><div class="line">        <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>  (worksheet, row, col,      expenses[i].item,     NULL);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33">worksheet_write_datetime</a>(worksheet, row, col + 1, &amp;expenses[i].datetime, date_format);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>  (worksheet, row, col + 2,  expenses[i].cost,     money);</div>
 </div><!-- fragment --></p>
 <p>The handling of dates is also new to our program.</p>
-<p>Dates and times in Excel are floating point numbers that have a number format applied to display them in the correct format. Libxlsxwriter provides the <a class="el" href="worksheet_8h.html#a2a41c29cf82c523d636715ed8cb732d3" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a> and the <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel. ">lxw_datetime</a> struct help to convert dates and times into Excel date and time numbers.</p>
-<p>The <a class="el" href="worksheet_8h.html#a2a41c29cf82c523d636715ed8cb732d3" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a> function converts the <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel. ">lxw_datetime</a> struct to a number that represents an Excel date but we also need to add the number format to ensure that Excel displays it as as date:</p>
+<p>Dates and times in Excel are floating point numbers that have a number format applied to display them in the correct format. Libxlsxwriter provides the <a class="el" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a> and the <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel. ">lxw_datetime</a> struct help to convert dates and times into Excel date and time numbers.</p>
+<p>The <a class="el" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a> function converts the <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel. ">lxw_datetime</a> struct to a number that represents an Excel date but we also need to add the number format to ensure that Excel displays it as as date:</p>
  <div class="fragment"><div class="line">    <a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(date_format, <span class="stringliteral">&quot;mmmm d yyyy&quot;</span>);</div>
 </div><!-- fragment --></p>
 <p>Date handling is explained in more detail in <a class="el" href="working_with_dates.html">Working with Dates and Times</a>.</p>
