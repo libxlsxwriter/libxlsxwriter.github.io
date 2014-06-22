@@ -65,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -132,23 +132,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a name="a8"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, row, col,     <span class="stringliteral">&quot;Formatted date&quot;</span>, bold);</div>
 <div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, row, col + 1, <span class="stringliteral">&quot;Format&quot;</span>,         bold);</div>
 <div class="line"></div>
+<div class="line">    <span class="comment">/* Widen the first column to make the text clearer. */</span></div>
+<div class="line">    <a name="a9"></a><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet, 0, 1, 20, NULL, NULL);</div>
+<div class="line"></div>
 <div class="line">    <span class="comment">/* Write the same date and time using each of the above formats. */</span></div>
 <div class="line">    <span class="keywordflow">for</span> (i = 0; i &lt; 14; i++) {</div>
 <div class="line">        row++;</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">/* Create a format for the date or time.*/</span></div>
 <div class="line">        <a class="code" href="structlxw__format.html">lxw_format</a> *format  = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
-<div class="line">        <a name="a9"></a><a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format, date_formats[i]);</div>
-<div class="line">        <a name="a10"></a><a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>(format, <a name="a11"></a><a class="code" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a6d528fd0486c22c04941cd8ed1bbc8e1">LXW_ALIGN_LEFT</a>);</div>
+<div class="line">        <a name="a10"></a><a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format, date_formats[i]);</div>
+<div class="line">        <a name="a11"></a><a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>(format, <a name="a12"></a><a class="code" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a6d528fd0486c22c04941cd8ed1bbc8e1">LXW_ALIGN_LEFT</a>);</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">/* Write the datetime with each format. */</span></div>
-<div class="line">        <a name="a12"></a><a class="code" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33">worksheet_write_datetime</a>(worksheet, row, col, &amp;datetime, format);</div>
+<div class="line">        <a name="a13"></a><a class="code" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33">worksheet_write_datetime</a>(worksheet, row, col, &amp;datetime, format);</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">/* Also write the format string for comparison. */</span></div>
 <div class="line">        <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, row, col + 1, date_formats[i], NULL);</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> <a name="a13"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="keywordflow">return</span> <a name="a14"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->

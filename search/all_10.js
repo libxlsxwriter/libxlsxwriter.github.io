@@ -9,6 +9,8 @@ var searchData=
   ['working_20with_20formats',['Working with Formats',['../working_with_formats.html',1,'']]],
   ['working_20with_20memory_20and_20performance',['Working with Memory and Performance',['../working_with_memory.html',1,'']]],
   ['worksheet_2eh',['worksheet.h',['../worksheet_8h.html',1,'']]],
+  ['worksheet_5fset_5fcolumn',['worksheet_set_column',['../worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83',1,'worksheet.h']]],
+  ['worksheet_5fset_5frow',['worksheet_set_row',['../worksheet_8h.html#ab2737ea78d5e679613f2fdd7bb425030',1,'worksheet.h']]],
   ['worksheet_5fwrite_5fblank',['worksheet_write_blank',['../worksheet_8h.html#a56bcd1671dc853a4927adb67696726ec',1,'worksheet.h']]],
   ['worksheet_5fwrite_5fdatetime',['worksheet_write_datetime',['../worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33',1,'worksheet.h']]],
   ['worksheet_5fwrite_5fformula',['worksheet_write_formula',['../worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1',1,'worksheet.h']]],

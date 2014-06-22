@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -86,7 +86,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">utility.h File Reference</div>  </div>
 </div><!--header-->
@@ -105,6 +106,71 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 </div>
 </div>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="ad510ac6df573d23203374e24dba373d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CELL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cell</td><td>)</td>
+          <td>&#160;&#160;&#160;xl_get_row(cell), xl_get_col(cell)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Convert an Excel <code>A1</code> cell string into a <code>(row, col)</code> pair.</p>
+<p>This is a little syntactic shortcut to help with worksheet layout:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;A1&quot;</span>), <span class="stringliteral">&quot;Foo&quot;</span>, NULL);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">//Same as:</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0,       <span class="stringliteral">&quot;Foo&quot;</span>, NULL);</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd></dd></dl>
+<p>This macro shouldn't be used in performance critical situations since it expands to two function calls. </p>
+
+</div>
+</div>
+<a class="anchor" id="a189672bfa9c380a28d8db8c40de17fe8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COLS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cols</td><td>)</td>
+          <td>&#160;&#160;&#160;xl_get_col(cols), xl_get_col_2(cols)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Convert an Excel <code>A:B</code> column range into a <code>(col1, col2)</code> pair.</p>
+<p>This is a little syntactic shortcut to help with worksheet layout:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;B:D&quot;</span>), 20, NULL, NULL);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">//Same as:</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet, 1, 3,        20, NULL, NULL);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="a4dbbdfc9b616195c799dee78e727cecc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RANGE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">range</td><td>)</td>
+          <td>&#160;&#160;&#160;xl_get_row(range), xl_get_col(range), xl_get_row_2(range), xl_get_col_2(range)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Convert an Excel <code>A1:B2</code> range into a <code>(row1, col1, row1, col2)</code> sequence.</p>
+<p>This is a little syntactic shortcut to help with worksheet layout. </p>
+
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -117,6 +183,18 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a702a2013231565d5014690478bf3ff26"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__datetime.html">lxw_datetime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#a702a2013231565d5014690478bf3ff26">lxw_datetime</a></td></tr>
 <tr class="memdesc:a702a2013231565d5014690478bf3ff26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent a date and time in Excel.  <a href="#a702a2013231565d5014690478bf3ff26">More...</a><br /></td></tr>
 <tr class="separator:a702a2013231565d5014690478bf3ff26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ad510ac6df573d23203374e24dba373d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(cell)&#160;&#160;&#160;xl_get_row(cell), xl_get_col(cell)</td></tr>
+<tr class="memdesc:ad510ac6df573d23203374e24dba373d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an Excel <code>A1</code> cell string into a <code>(row, col)</code> pair.  <a href="#ad510ac6df573d23203374e24dba373d2">More...</a><br /></td></tr>
+<tr class="separator:ad510ac6df573d23203374e24dba373d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a189672bfa9c380a28d8db8c40de17fe8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(cols)&#160;&#160;&#160;xl_get_col(cols), xl_get_col_2(cols)</td></tr>
+<tr class="memdesc:a189672bfa9c380a28d8db8c40de17fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an Excel <code>A:B</code> column range into a <code>(col1, col2)</code> pair.  <a href="#a189672bfa9c380a28d8db8c40de17fe8">More...</a><br /></td></tr>
+<tr class="separator:a189672bfa9c380a28d8db8c40de17fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dbbdfc9b616195c799dee78e727cecc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(range)&#160;&#160;&#160;xl_get_row(range), xl_get_col(range), xl_get_row_2(range), xl_get_col_2(range)</td></tr>
+<tr class="memdesc:a4dbbdfc9b616195c799dee78e727cecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an Excel <code>A1:B2</code> range into a <code>(row1, col1, row1, col2)</code> sequence.  <a href="#a4dbbdfc9b616195c799dee78e727cecc">More...</a><br /></td></tr>
+<tr class="separator:a4dbbdfc9b616195c799dee78e727cecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
