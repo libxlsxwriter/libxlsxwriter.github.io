@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: Examples</title>
+<title>libxlsxwriter: lxw_workbook_options Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,7 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Contents</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
-      <li class="current"><a href="examples.html"><span>Examples</span></a></li>
+      <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -59,7 +59,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -74,39 +73,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">Examples</div>  </div>
+<div class="title">lxw_workbook_options Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Example programs using libxlsxwriter:</div><ul>
-<li><a class="el" href="hello_8c-example.html">hello.c</a> A simple hello world example</li>
 
-<li><a class="el" href="anatomy_8c-example.html">anatomy.c</a> The anatomy of a libxlsxwriter program</li>
-
-<li><a class="el" href="demo_8c-example.html">demo.c</a> Demo of some of the libxlsxwriter features</li>
-
-<li><a class="el" href="tutorial1_8c-example.html">tutorial1.c</a> Tutorial 1 from the documentation</li>
-
-<li><a class="el" href="tutorial2_8c-example.html">tutorial2.c</a> Tutorial 2 from the documentation</li>
-
-<li><a class="el" href="tutorial3_8c-example.html">tutorial3.c</a> Tutorial 3 from the documentation</li>
-
-<li><a class="el" href="format_font_8c-example.html">format_font.c</a> Example of writing data with font formatting</li>
-
-<li><a class="el" href="format_num_format_8c-example.html">format_num_format.c</a> Example of writing data with number formatting</li>
-
-<li><a class="el" href="dates_and_times01_8c-example.html">dates_and_times01.c</a> Writing dates and times with numbers</li>
-
-<li><a class="el" href="dates_and_times02_8c-example.html">dates_and_times02.c</a> Writing dates and times with datetime</li>
-
-<li><a class="el" href="dates_and_times03_8c-example.html">dates_and_times03.c</a> Dates and times with different formats</li>
-
-<li><a class="el" href="utf8_8c-example.html">utf8.c</a> A example of some UTF-8 text</li>
-
-<li><a class="el" href="constant_memory_8c-example.html">constant_memory.c</a> Write a large file with constant memory usage</li>
-
+<p>Workbook options.  
+ <a href="structlxw__workbook__options.html#details">More...</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Optional parameters when creating a new Workbool object via <a class="el" href="workbook_8h.html#adec7dc2f551c4819ff542b65a00ff5cb" title="Create a new workbook object, and set the workbook options. ">new_workbook_opt()</a>.</p>
+<p>Currently only the <code>constant_memory</code> property is supported:</p>
+<ul>
+<li><code>constant_memory</code> </li>
 </ul>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="constant_memory_8c-example.html#_a0">constant_memory.c</a>.</dd>
+</dl></div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:aa03636857813ca881bdd09e07bcbe738"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__workbook__options.html#aa03636857813ca881bdd09e07bcbe738">constant_memory</a></td></tr>
+<tr class="separator:aa03636857813ca881bdd09e07bcbe738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Field Documentation</h2>
+<a class="anchor" id="aa03636857813ca881bdd09e07bcbe738"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t lxw_workbook_options::constant_memory</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Optimise the workbook to use constant memory for worksheets </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="constant_memory_8c-example.html#a1">constant_memory.c</a>.</dd>
+</dl>
+</div>
+</div>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->

@@ -7,5 +7,6 @@ var searchData=
   ['lxw_5frow_5fcol_5foptions',['lxw_row_col_options',['../worksheet_8h.html#a0d738f9174739380dc3a893c7baeb1ef',1,'worksheet.h']]],
   ['lxw_5frow_5ft',['lxw_row_t',['../worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3',1,'worksheet.h']]],
   ['lxw_5fworkbook',['lxw_workbook',['../workbook_8h.html#aa2650cd721ed5e4ecb1716c60f1977da',1,'workbook.h']]],
+  ['lxw_5fworkbook_5foptions',['lxw_workbook_options',['../workbook_8h.html#abe05edcbed2b2dcf1e7aa37f25343078',1,'workbook.h']]],
   ['lxw_5fworksheet',['lxw_worksheet',['../worksheet_8h.html#a356e12f6f1c3f94b8de98dc99ef78b86',1,'worksheet.h']]]
 ];

@@ -87,6 +87,7 @@ var searchData=
   ['lxw_5funderline_5fsingle',['LXW_UNDERLINE_SINGLE',['../format_8h.html#af530d7971d15c164f3fb6bbfede9a39fa76d5bdd1c57c126df937f0b003597e18',1,'format.h']]],
   ['lxw_5funderline_5fsingle_5faccounting',['LXW_UNDERLINE_SINGLE_ACCOUNTING',['../format_8h.html#af530d7971d15c164f3fb6bbfede9a39faac874d8fee3376d3e989ca008001f6ed',1,'format.h']]],
   ['lxw_5fworkbook',['lxw_workbook',['../structlxw__workbook.html',1,'lxw_workbook'],['../workbook_8h.html#aa2650cd721ed5e4ecb1716c60f1977da',1,'lxw_workbook():&#160;workbook.h']]],
+  ['lxw_5fworkbook_5foptions',['lxw_workbook_options',['../structlxw__workbook__options.html',1,'lxw_workbook_options'],['../workbook_8h.html#abe05edcbed2b2dcf1e7aa37f25343078',1,'lxw_workbook_options():&#160;workbook.h']]],
   ['lxw_5fworksheet',['lxw_worksheet',['../structlxw__worksheet.html',1,'lxw_worksheet'],['../worksheet_8h.html#a356e12f6f1c3f94b8de98dc99ef78b86',1,'lxw_worksheet():&#160;worksheet.h']]],
   ['lxw_5fwrite_5ferror',['lxw_write_error',['../worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b',1,'worksheet.h']]]
 ];

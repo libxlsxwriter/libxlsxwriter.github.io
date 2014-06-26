@@ -80,6 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Here are some instructions to get you up and running with the libxlsxwriter library on a Unix system.</p>
+<p>For FreeBSD use <code>gmake</code> instead of <code>make</code>.</p>
 <p>For Windows see the <a class="el" href="faq.html">FAQ</a>.</p>
 <h2>Installation</h2>
 <h3>Install the dependencies</h3>
@@ -100,6 +101,7 @@ sudo make install
 </pre><h3>Build the source code</h3>
 <p>Build the source code as follows: </p><pre class="fragment">cd libxlsxwriter
 make
+# For FreeBSD use gmake instead of make
 </pre><p>This will create a static and dynamic library in the local <code>./lib</code> directory: </p><pre class="fragment">ls lib
 libxlsxwriter.a     libxlsxwriter.so
 </pre><p>To see a verbose summary of the compilation steps use <code>V=1</code>: </p><pre class="fragment">make V=1
