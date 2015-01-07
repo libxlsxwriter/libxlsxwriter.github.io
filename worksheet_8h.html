@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Description</h2>
 <div class="textblock"><p>The Worksheet object represents an Excel worksheet. It handles operations such as writing data to cells or formatting worksheet layout.</p>
-<p>A Worksheet object isn’t created directly. Instead a worksheet is created by calling the <a class="el" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e" title="Add a new worksheet to a workbook: ">workbook_add_worksheet()</a> method from a Workbook object:</p>
+<p>A Worksheet object isn't created directly. Instead a worksheet is created by calling the <a class="el" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e" title="Add a new worksheet to a workbook: ">workbook_add_worksheet()</a> function from a Workbook object:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
@@ -160,7 +160,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> code.</dd></dl>
-<p>The <code><a class="el" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa" title="Write a number to a worksheet cell. ">worksheet_write_number()</a></code> method writes numeric types to the cell specified by <code>row</code> and <code>column</code>:</p>
+<p>The <code><a class="el" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa" title="Write a number to a worksheet cell. ">worksheet_write_number()</a></code> function writes numeric types to the cell specified by <code>row</code> and <code>column</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 0, 0, 123456, NULL);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 1, 0, 2.3451, NULL);</div>
 </div><!-- fragment --><div class="image">
@@ -231,7 +231,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> code.</dd></dl>
-<p>The <code>worksheet_write_string()</code> method writes a string to the cell specified by <code>row</code> and <code>column</code>:</p>
+<p>The <code>worksheet_write_string()</code> function writes a string to the cell specified by <code>row</code> and <code>column</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;This phrase is English!&quot;</span>, NULL);</div>
 </div><!-- fragment --><div class="image">
 <img src="write_string01.png" alt="write_string01.png"/>
@@ -305,7 +305,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> code.</dd></dl>
-<p>The <code>worksheet_write_formula()</code> method writes a formula or function to the cell specified by <code>row</code> and <code>column</code>:</p>
+<p>The <code>worksheet_write_formula()</code> function writes a formula or function to the cell specified by <code>row</code> and <code>column</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=B3 + 6&quot;</span>,                    NULL);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=SIN(PI()/4)&quot;</span>,               NULL);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 2, 0, <span class="stringliteral">&quot;=SUM(A1:A2)&quot;</span>,                NULL);</div>
@@ -318,8 +318,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>The <code>format</code> parameter is used to apply formatting to the cell. This parameter can be <code>NULL</code> to indicate no formatting or it can be a <a class="el" href="format_8h.html">Format</a> object.</p>
 <p>Libxlsxwriter doesn't calculate the value of a formula and instead stores a default value of <code>0</code>. The correct formula result is displayed in Excel, as shown in the example above, since it recalculates the formulas when it loads the file. For cases where this is an issue see the <code><a class="el" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37" title="Write a formula to a worksheet cell with a user defined result. ">worksheet_write_formula_num()</a></code> function and the discussion in that section.</p>
 <p>Formulas must be written with the US style separator/range operator which is a comma (not semi-colon). Therefore a formula with multiple values should be written as follows:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=SUM(1, 2, 3)&quot;</span>, NULL); <span class="comment">// OK.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=SUM(1; 2; 3)&quot;</span>, NULL); <span class="comment">// NO. Error on load.</span></div>
+<div class="fragment"><div class="line"><span class="comment">// OK.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=SUM(1, 2, 3)&quot;</span>, NULL);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// NO. Error on load.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=SUM(1; 2; 3)&quot;</span>, NULL);</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="tutorial1_8c-example.html#a6">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a10">tutorial2.c</a>, and <a class="el" href="tutorial3_8c-example.html#a14">tutorial3.c</a>.</dd>
 </dl>
 </div>
@@ -383,7 +386,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> code.</dd></dl>
-<p>The <code>worksheet_write_formula_num()</code> method writes a formula or function to the cell specified by <code>row</code> and <code>column</code> with a user defined result:</p>
+<p>The <code>worksheet_write_formula_num()</code> function writes a formula or Excel function to the cell specified by <code>row</code> and <code>column</code> with a user defined result:</p>
 <div class="fragment"><div class="line"><span class="comment">// Required as a workaround only.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37">worksheet_write_formula_num</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=1 + 2&quot;</span>, NULL, 3);</div>
 </div><!-- fragment --><p>Libxlsxwriter doesn't calculate the value of a formula and instead stores the value <code>0</code> as the formula result. It then sets a global flag in the XLSX file to say that all formulas and functions should be recalculated when the file is opened.</p>
@@ -446,7 +449,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> code.</dd></dl>
-<p>The <code><a class="el" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a></code> method can be used to write a date or time to the cell specified by <code>row</code> and <code>column</code>:</p>
+<p>The <code><a class="el" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a></code> function can be used to write a date or time to the cell specified by <code>row</code> and <code>column</code>:</p>
  <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
@@ -519,7 +522,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> code.</dd></dl>
 <p>Write a blank cell specified by <code>row</code> and <code>column</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a56bcd1671dc853a4927adb67696726ec">worksheet_write_blank</a>(worksheet, 1, 1, border_format);</div>
-</div><!-- fragment --><p>This method is used to add formatting to a cell which doesn't contain a string or number value.</p>
+</div><!-- fragment --><p>This function is used to add formatting to a cell which doesn't contain a string or number value.</p>
 <p>Excel differentiates between an "Empty" cell and a "Blank" cell. An Empty cell is a cell which doesn't contain data or formatting whilst a Blank cell doesn't contain data but does contain formatting. Excel stores Blank cells but ignores Empty cells.</p>
 <p>As such, if you write an empty cell without formatting it is ignored. </p>
 
@@ -576,7 +579,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </table>
   </dd>
 </dl>
-<p>The <code>worksheet_set_row()</code> method is used to change the default properties of a row. The most common use for this method is to change the height of a row:</p>
+<p>The <code>worksheet_set_row()</code> function is used to change the default properties of a row. The most common use for this function is to change the height of a row:</p>
 <div class="fragment"><div class="line"><span class="comment">// Set the height of Row 1 to 20.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ab2737ea78d5e679613f2fdd7bb425030">worksheet_set_row</a>(worksheet, 0, 20, NULL, NULL);</div>
 </div><!-- fragment --><p>The other common use for <code>worksheet_set_row()</code> is to set the a <a class="el" href="format_8h.html">Format</a> for all cells in the row:</p>
@@ -669,7 +672,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </table>
   </dd>
 </dl>
-<p>The <code>worksheet_set_column()</code> method can be used to change the default properties of a single column or a range of columns:</p>
+<p>The <code>worksheet_set_column()</code> function can be used to change the default properties of a single column or a range of columns:</p>
 <div class="fragment"><div class="line"><span class="comment">// Width of columns B:D set to 30.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet, 1, 3, 30, NULL, NULL);</div>
 </div><!-- fragment --><p>If <code>worksheet_set_column()</code> is applied to a single column the value of <code>first_col</code> and <code>last_col</code> should be the same:</p>
@@ -722,6 +725,231 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:A&quot;</span>), 8.43, NULL, &amp;options);</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, and <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>.</dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="ad24e2a01fccb881e4cc478a92aa095e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_set_landscape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function is used to set the orientation of a worksheet's printed page to landscape:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ad24e2a01fccb881e4cc478a92aa095e6">worksheet_set_landscape</a>(worksheet);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="af498d1caa032633240af6d26ef80515a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_set_portrait </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function is used to set the orientation of a worksheet's printed page to portrait. The default worksheet orientation is portrait, so this function isn't generally required:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#af498d1caa032633240af6d26ef80515a">worksheet_set_portrait</a>(worksheet);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="a5d442a52a3549d5d2324f13787b66f47"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_set_page_view </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function is used to display the worksheet in "Page View/Layout" mode:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a5d442a52a3549d5d2324f13787b66f47">worksheet_set_page_view</a>(worksheet);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="a9f8af12017797b10c5ee68e04149032f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_set_paper </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>paper_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">paper_type</td><td>The Excel paper format type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function is used to set the paper format for the printed output of a worksheet. The following paper styles are available:</p>
+<table class="doxtable">
+<tr>
+<th align="left">Index </th><th align="left">Paper format </th><th align="left">Paper size  </th></tr>
+<tr>
+<td align="left">0 </td><td align="left">Printer default </td><td align="left">Printer default </td></tr>
+<tr>
+<td align="left">1 </td><td align="left">Letter </td><td align="left">8 1/2 x 11 in </td></tr>
+<tr>
+<td align="left">2 </td><td align="left">Letter Small </td><td align="left">8 1/2 x 11 in </td></tr>
+<tr>
+<td align="left">3 </td><td align="left">Tabloid </td><td align="left">11 x 17 in </td></tr>
+<tr>
+<td align="left">4 </td><td align="left">Ledger </td><td align="left">17 x 11 in </td></tr>
+<tr>
+<td align="left">5 </td><td align="left">Legal </td><td align="left">8 1/2 x 14 in </td></tr>
+<tr>
+<td align="left">6 </td><td align="left">Statement </td><td align="left">5 1/2 x 8 1/2 in </td></tr>
+<tr>
+<td align="left">7 </td><td align="left">Executive </td><td align="left">7 1/4 x 10 1/2 in </td></tr>
+<tr>
+<td align="left">8 </td><td align="left">A3 </td><td align="left">297 x 420 mm </td></tr>
+<tr>
+<td align="left">9 </td><td align="left">A4 </td><td align="left">210 x 297 mm </td></tr>
+<tr>
+<td align="left">10 </td><td align="left">A4 Small </td><td align="left">210 x 297 mm </td></tr>
+<tr>
+<td align="left">11 </td><td align="left">A5 </td><td align="left">148 x 210 mm </td></tr>
+<tr>
+<td align="left">12 </td><td align="left">B4 </td><td align="left">250 x 354 mm </td></tr>
+<tr>
+<td align="left">13 </td><td align="left">B5 </td><td align="left">182 x 257 mm </td></tr>
+<tr>
+<td align="left">14 </td><td align="left">Folio </td><td align="left">8 1/2 x 13 in </td></tr>
+<tr>
+<td align="left">15 </td><td align="left">Quarto </td><td align="left">215 x 275 mm </td></tr>
+<tr>
+<td align="left">16 </td><td align="left">&mdash; </td><td align="left">10x14 in </td></tr>
+<tr>
+<td align="left">17 </td><td align="left">&mdash; </td><td align="left">11x17 in </td></tr>
+<tr>
+<td align="left">18 </td><td align="left">Note </td><td align="left">8 1/2 x 11 in </td></tr>
+<tr>
+<td align="left">19 </td><td align="left">Envelope 9 </td><td align="left">3 7/8 x 8 7/8 </td></tr>
+<tr>
+<td align="left">20 </td><td align="left">Envelope 10 </td><td align="left">4 1/8 x 9 1/2 </td></tr>
+<tr>
+<td align="left">21 </td><td align="left">Envelope 11 </td><td align="left">4 1/2 x 10 3/8 </td></tr>
+<tr>
+<td align="left">22 </td><td align="left">Envelope 12 </td><td align="left">4 3/4 x 11 </td></tr>
+<tr>
+<td align="left">23 </td><td align="left">Envelope 14 </td><td align="left">5 x 11 1/2 </td></tr>
+<tr>
+<td align="left">24 </td><td align="left">C size sheet </td><td align="left">&mdash; </td></tr>
+<tr>
+<td align="left">25 </td><td align="left">D size sheet </td><td align="left">&mdash; </td></tr>
+<tr>
+<td align="left">26 </td><td align="left">E size sheet </td><td align="left">&mdash; </td></tr>
+<tr>
+<td align="left">27 </td><td align="left">Envelope DL </td><td align="left">110 x 220 mm </td></tr>
+<tr>
+<td align="left">28 </td><td align="left">Envelope C3 </td><td align="left">324 x 458 mm </td></tr>
+<tr>
+<td align="left">29 </td><td align="left">Envelope C4 </td><td align="left">229 x 324 mm </td></tr>
+<tr>
+<td align="left">30 </td><td align="left">Envelope C5 </td><td align="left">162 x 229 mm </td></tr>
+<tr>
+<td align="left">31 </td><td align="left">Envelope C6 </td><td align="left">114 x 162 mm </td></tr>
+<tr>
+<td align="left">32 </td><td align="left">Envelope C65 </td><td align="left">114 x 229 mm </td></tr>
+<tr>
+<td align="left">33 </td><td align="left">Envelope B4 </td><td align="left">250 x 353 mm </td></tr>
+<tr>
+<td align="left">34 </td><td align="left">Envelope B5 </td><td align="left">176 x 250 mm </td></tr>
+<tr>
+<td align="left">35 </td><td align="left">Envelope B6 </td><td align="left">176 x 125 mm </td></tr>
+<tr>
+<td align="left">36 </td><td align="left">Envelope </td><td align="left">110 x 230 mm </td></tr>
+<tr>
+<td align="left">37 </td><td align="left">Monarch </td><td align="left">3.875 x 7.5 in </td></tr>
+<tr>
+<td align="left">38 </td><td align="left">Envelope </td><td align="left">3 5/8 x 6 1/2 in </td></tr>
+<tr>
+<td align="left">39 </td><td align="left">Fanfold </td><td align="left">14 7/8 x 11 in </td></tr>
+<tr>
+<td align="left">40 </td><td align="left">German Std Fanfold </td><td align="left">8 1/2 x 12 in </td></tr>
+<tr>
+<td align="left">41 </td><td align="left">German Legal Fanfold </td><td align="left">8 1/2 x 13 in </td></tr>
+</table>
+<p>Note, it is likely that not all of these paper types will be available to the end user since it will depend on the paper formats that the user's printer supports. Therefore, it is best to stick to standard paper types:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9f8af12017797b10c5ee68e04149032f">worksheet_set_paper</a>(worksheet1, 1);  <span class="comment">// US Letter</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9f8af12017797b10c5ee68e04149032f">worksheet_set_paper</a>(worksheet2, 9);  <span class="comment">// A4</span></div>
+</div><!-- fragment --><p>If you do not specify a paper type the worksheet will print using the printer's default paper style. </p>
+
+</div>
+</div>
+<a class="anchor" id="a40d32d247593e01c00b5c5c606fb4bb3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_print_across </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>print_across()</code> function is used to change the default print direction. This is referred to by Excel as the sheet "page order":</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a40d32d247593e01c00b5c5c606fb4bb3">worksheet_print_across</a>(worksheet);</div>
+</div><!-- fragment --><p>The default page order is shown below for a worksheet that extends over 4 pages. The order is called "down then across": </p><pre class="fragment">[1] [3]
+[2] [4]
+</pre><p>However, by using the <code>print_across</code> function the print order will be changed to "across then down": </p><pre class="fragment">[1] [2]
+[3] [4]</pre> 
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
