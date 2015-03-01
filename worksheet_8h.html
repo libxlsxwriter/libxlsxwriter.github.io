@@ -925,6 +925,62 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 </div>
 </div>
+<a class="anchor" id="ab942bbc0493eaa5cf5696da30b6f872d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_set_margins </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>top</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>bottom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">left</td><td>Left margin in inches. Excel default is 0.7. </td></tr>
+    <tr><td class="paramname">right</td><td>Right margin in inches. Excel default is 0.7. </td></tr>
+    <tr><td class="paramname">top</td><td>Top margin in inches. Excel default is 0.75. </td></tr>
+    <tr><td class="paramname">bottom</td><td>Bottom margin in inches. Excel default is 0.75.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>set_margins()</code> function is used to set the margins of the worksheet when it is printed. The units are in inches. Specifying <code>-1</code> for any parameter will give the default Excel value as shown above.</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ab942bbc0493eaa5cf5696da30b6f872d">worksheet_set_margins</a>(worksheet, 1.3, 1.2, -1, -1);</div>
+</div><!-- fragment --> 
+</div>
+</div>
 <a class="anchor" id="a40d32d247593e01c00b5c5c606fb4bb3"></a>
 <div class="memitem">
 <div class="memproto">

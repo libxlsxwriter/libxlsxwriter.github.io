@@ -79,7 +79,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Changes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>0.0.3 January 7 2015</h2>
+<div class="textblock"><h2>0.0.4 March 1 2015</h2>
+<ul>
+<li>Added <code><a class="el" href="worksheet_8h.html#ab942bbc0493eaa5cf5696da30b6f872d" title="Set the worksheet margins for the printed page. ">worksheet_set_margins()</a></code> function to set top, bottom, left and right margins in a worksheet.</li>
+<li>Fix for issue where format objects were written to the file in the order of creation rather than the order of use. This issue caused incorrect formats in cells. Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/3">#3</a>.</li>
+<li>Fix for issue where tmp files in <code>constant_memory</code> mode weren't closed until application exited. Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/1">#1</a>.</li>
+</ul>
+<h2>0.0.3 January 7 2015</h2>
 <ul>
 <li>Added worksheet page setup methods.<ul>
 <li><code><a class="el" href="worksheet_8h.html#ad24e2a01fccb881e4cc478a92aa095e6" title="Set the page orientation as landscape. ">worksheet_set_landscape()</a></code></li>

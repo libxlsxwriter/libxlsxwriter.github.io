@@ -12,6 +12,7 @@ var searchData=
   ['worksheet_5fprint_5facross',['worksheet_print_across',['../worksheet_8h.html#a40d32d247593e01c00b5c5c606fb4bb3',1,'worksheet.h']]],
   ['worksheet_5fset_5fcolumn',['worksheet_set_column',['../worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83',1,'worksheet.h']]],
   ['worksheet_5fset_5flandscape',['worksheet_set_landscape',['../worksheet_8h.html#ad24e2a01fccb881e4cc478a92aa095e6',1,'worksheet.h']]],
+  ['worksheet_5fset_5fmargins',['worksheet_set_margins',['../worksheet_8h.html#ab942bbc0493eaa5cf5696da30b6f872d',1,'worksheet.h']]],
   ['worksheet_5fset_5fpage_5fview',['worksheet_set_page_view',['../worksheet_8h.html#a5d442a52a3549d5d2324f13787b66f47',1,'worksheet.h']]],
   ['worksheet_5fset_5fpaper',['worksheet_set_paper',['../worksheet_8h.html#a9f8af12017797b10c5ee68e04149032f',1,'worksheet.h']]],
   ['worksheet_5fset_5fportrait',['worksheet_set_portrait',['../worksheet_8h.html#af498d1caa032633240af6d26ef80515a',1,'worksheet.h']]],
