@@ -13,5 +13,11 @@ endif
 
 
 # Copy the built html.
-all :
+all:
+	$(Q)make docs -C ../libxlsxwriter
 	$(Q)cp -r ../libxlsxwriter/docs/html/ .
+
+release: all
+	$(Q)git add .
+	$(Q)git commit -m "Updated docs."
+	$(Q)git push origin
