@@ -85,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#func-members">Functions</a> &#124;
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
@@ -107,7 +108,59 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
-</div><!-- fragment --> </div><h2 class="groupheader">Function Documentation</h2>
+</div><!-- fragment --> </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aa7f1a12b664b4c1d7742529a315e21aa"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, double number, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:aa7f1a12b664b4c1d7742529a315e21aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a number to a worksheet cell.  <a href="#aa7f1a12b664b4c1d7742529a315e21aa">More...</a><br /></td></tr>
+<tr class="separator:aa7f1a12b664b4c1d7742529a315e21aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c3e081792631511c9ee3f7507afb78c"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *string, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:a0c3e081792631511c9ee3f7507afb78c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a string to a worksheet cell.  <a href="#a0c3e081792631511c9ee3f7507afb78c">More...</a><br /></td></tr>
+<tr class="separator:a0c3e081792631511c9ee3f7507afb78c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9c384e17c06538c6a45f2cec7b5bef1"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *formula, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:ad9c384e17c06538c6a45f2cec7b5bef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formula to a worksheet cell.  <a href="#ad9c384e17c06538c6a45f2cec7b5bef1">More...</a><br /></td></tr>
+<tr class="separator:ad9c384e17c06538c6a45f2cec7b5bef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9453aff2062f93d2c9784b96393f2f37"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37">worksheet_write_formula_num</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *formula, <a class="el" href="structlxw__format.html">lxw_format</a> *format, double result)</td></tr>
+<tr class="memdesc:a9453aff2062f93d2c9784b96393f2f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formula to a worksheet cell with a user defined result.  <a href="#a9453aff2062f93d2c9784b96393f2f37">More...</a><br /></td></tr>
+<tr class="separator:a9453aff2062f93d2c9784b96393f2f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbc5654e9b8987ba263f83fff082ce33"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33">worksheet_write_datetime</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__datetime.html">lxw_datetime</a> *datetime, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:acbc5654e9b8987ba263f83fff082ce33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a date or time to a worksheet cell.  <a href="#acbc5654e9b8987ba263f83fff082ce33">More...</a><br /></td></tr>
+<tr class="separator:acbc5654e9b8987ba263f83fff082ce33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56bcd1671dc853a4927adb67696726ec"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a56bcd1671dc853a4927adb67696726ec">worksheet_write_blank</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:a56bcd1671dc853a4927adb67696726ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formatted blank worksheet cell.  <a href="#a56bcd1671dc853a4927adb67696726ec">More...</a><br /></td></tr>
+<tr class="separator:a56bcd1671dc853a4927adb67696726ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2737ea78d5e679613f2fdd7bb425030"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ab2737ea78d5e679613f2fdd7bb425030">worksheet_set_row</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, double height, <a class="el" href="structlxw__format.html">lxw_format</a> *format, <a class="el" href="structlxw__row__col__options.html">lxw_row_col_options</a> *options)</td></tr>
+<tr class="memdesc:ab2737ea78d5e679613f2fdd7bb425030"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the properties for a row of cells.  <a href="#ab2737ea78d5e679613f2fdd7bb425030">More...</a><br /></td></tr>
+<tr class="separator:ab2737ea78d5e679613f2fdd7bb425030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aa5044fc41d2d8734acf6ff31b79b83"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col, double width, <a class="el" href="structlxw__format.html">lxw_format</a> *format, <a class="el" href="structlxw__row__col__options.html">lxw_row_col_options</a> *options)</td></tr>
+<tr class="memdesc:a5aa5044fc41d2d8734acf6ff31b79b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the properties for one or more columns of cells.  <a href="#a5aa5044fc41d2d8734acf6ff31b79b83">More...</a><br /></td></tr>
+<tr class="separator:a5aa5044fc41d2d8734acf6ff31b79b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76ec76f91328c512d3d86a35642f0a08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08">worksheet_activate</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
+<tr class="memdesc:a76ec76f91328c512d3d86a35642f0a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a worksheet the active, i.e., visible worksheet.  <a href="#a76ec76f91328c512d3d86a35642f0a08">More...</a><br /></td></tr>
+<tr class="separator:a76ec76f91328c512d3d86a35642f0a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78bfe3a786149deca69248db57da182f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a78bfe3a786149deca69248db57da182f">worksheet_select</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
+<tr class="memdesc:a78bfe3a786149deca69248db57da182f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a worksheet tab as selected.  <a href="#a78bfe3a786149deca69248db57da182f">More...</a><br /></td></tr>
+<tr class="separator:a78bfe3a786149deca69248db57da182f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad24e2a01fccb881e4cc478a92aa095e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ad24e2a01fccb881e4cc478a92aa095e6">worksheet_set_landscape</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
+<tr class="memdesc:ad24e2a01fccb881e4cc478a92aa095e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the page orientation as landscape.  <a href="#ad24e2a01fccb881e4cc478a92aa095e6">More...</a><br /></td></tr>
+<tr class="separator:ad24e2a01fccb881e4cc478a92aa095e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af498d1caa032633240af6d26ef80515a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#af498d1caa032633240af6d26ef80515a">worksheet_set_portrait</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
+<tr class="memdesc:af498d1caa032633240af6d26ef80515a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the page orientation as portrait.  <a href="#af498d1caa032633240af6d26ef80515a">More...</a><br /></td></tr>
+<tr class="separator:af498d1caa032633240af6d26ef80515a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d442a52a3549d5d2324f13787b66f47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a5d442a52a3549d5d2324f13787b66f47">worksheet_set_page_view</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
+<tr class="memdesc:a5d442a52a3549d5d2324f13787b66f47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the page layout to page view mode.  <a href="#a5d442a52a3549d5d2324f13787b66f47">More...</a><br /></td></tr>
+<tr class="separator:a5d442a52a3549d5d2324f13787b66f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8af12017797b10c5ee68e04149032f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a9f8af12017797b10c5ee68e04149032f">worksheet_set_paper</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, uint8_t paper_type)</td></tr>
+<tr class="memdesc:a9f8af12017797b10c5ee68e04149032f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the paper type for printing.  <a href="#a9f8af12017797b10c5ee68e04149032f">More...</a><br /></td></tr>
+<tr class="separator:a9f8af12017797b10c5ee68e04149032f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab942bbc0493eaa5cf5696da30b6f872d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ab942bbc0493eaa5cf5696da30b6f872d">worksheet_set_margins</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, double left, double right, double top, double bottom)</td></tr>
+<tr class="memdesc:ab942bbc0493eaa5cf5696da30b6f872d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the worksheet margins for the printed page.  <a href="#ab942bbc0493eaa5cf5696da30b6f872d">More...</a><br /></td></tr>
+<tr class="separator:ab942bbc0493eaa5cf5696da30b6f872d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40d32d247593e01c00b5c5c606fb4bb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a40d32d247593e01c00b5c5c606fb4bb3">worksheet_print_across</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
+<tr class="memdesc:a40d32d247593e01c00b5c5c606fb4bb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the order in which pages are printed.  <a href="#a40d32d247593e01c00b5c5c606fb4bb3">More...</a><br /></td></tr>
+<tr class="separator:a40d32d247593e01c00b5c5c606fb4bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="aa7f1a12b664b4c1d7742529a315e21aa"></a>
 <div class="memitem">
 <div class="memproto">
@@ -725,6 +778,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:A&quot;</span>), 8.43, NULL, &amp;options);</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, and <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>.</dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="a76ec76f91328c512d3d86a35642f0a08"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_activate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The <code>activate()</code> method is used to specify which worksheet is initially visible in a multi-sheet workbook:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet1 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line"><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet2 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line"><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet3 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08">worksheet_activate</a>(worksheet3);</div>
+</div><!-- fragment --><div class="image">
+<img src="worksheet_activate.png" alt="worksheet_activate.png"/>
+</div>
+<p>More than one worksheet can be selected via the <code>select()</code> method, see below, however only one worksheet can be active.</p>
+<p>The default active worksheet is the first worksheet. </p>
+
+</div>
+</div>
+<a class="anchor" id="a78bfe3a786149deca69248db57da182f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_select </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The <code>select()</code> method is used to indicate that a worksheet is selected in a multi-sheet workbook:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08">worksheet_activate</a>(worksheet1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a78bfe3a786149deca69248db57da182f">worksheet_select</a>(worksheet2);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a78bfe3a786149deca69248db57da182f">worksheet_select</a>(worksheet3);</div>
+</div><!-- fragment --><p>A selected worksheet has its tab highlighted. Selecting worksheets is a way of grouping them together so that, for example, several worksheets could be printed in one go. A worksheet that has been activated via the <code>activate()</code> method will also appear as selected. </p>
+
 </div>
 </div>
 <a class="anchor" id="ad24e2a01fccb881e4cc478a92aa095e6"></a>
