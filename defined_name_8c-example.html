@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: anatomy.c</title>
+<title>libxlsxwriter: defined_name.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -76,15 +76,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">anatomy.c</div>  </div>
+<div class="title">defined_name.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>Anatomy of a simple libxlsxwriter program.</p>
-<p>Next example: <a class="el" href="demo_8c-example.html">demo.c</a> </p><div class="image">
-<img src="anatomy.png" alt="anatomy.png"/>
+<p>Example of how to create defined names (named ranges) using libxlsxwriter.</p>
+<p>Defined names are used to define descriptive names to represent a value, a single cell or a range of cells in a workbook or worksheet.</p>
+<div class="image">
+<img src="defined_name.png" alt="defined_name.png"/>
 </div>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Anatomy of a simple libxlsxwriter program.</span></div>
+<div class="line"><span class="comment"> * Example of how to create defined names using libxlsxwriter. This method is</span></div>
+<div class="line"><span class="comment"> * used to define a user friendly name to represent a value, a single cell or</span></div>
+<div class="line"><span class="comment"> * a range of cells in a workbook.</span></div>
 <div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> * Copyright 2014-2015, John McNamara, jmcnamara@cpan.org</span></div>
 <div class="line"><span class="comment"> *</span></div>
@@ -94,52 +97,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Create a new workbook. */</span></div>
-<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook   = <a name="a1"></a><a class="code" href="workbook_8h.html#a4c34a495371c477c06f16a2a0007dea7">new_workbook</a>(<span class="stringliteral">&quot;anatomy.xlsx&quot;</span>);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Add a worksheet with a user defined sheet name. */</span></div>
-<div class="line">    <a name="_a2"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet1 = <a name="a3"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, <span class="stringliteral">&quot;Demo&quot;</span>);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Add a worksheet with Excel&#39;s default sheet name: Sheet2. */</span></div>
+<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook   = <a name="a1"></a><a class="code" href="workbook_8h.html#a4c34a495371c477c06f16a2a0007dea7">new_workbook</a>(<span class="stringliteral">&quot;defined_name.xlsx&quot;</span>);</div>
+<div class="line">    <a name="_a2"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet1 = <a name="a3"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet2 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Add some cell formats. */</span></div>
-<div class="line">    <a name="_a4"></a><a class="code" href="structlxw__format.html">lxw_format</a>  *myformat1    = <a name="a5"></a><a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
-<div class="line">    <a class="code" href="structlxw__format.html">lxw_format</a>  *myformat2    = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line">    <span class="comment">/* Define some global/workbook names. */</span></div>
+<div class="line">    <a name="a4"></a><a class="code" href="workbook_8h.html#a239893289738cb030cbda1b73d4569b0">workbook_define_name</a>(workbook, <span class="stringliteral">&quot;Sales&quot;</span>, <span class="stringliteral">&quot;=!G1:H10&quot;</span>);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Set the bold property for the first format. */</span></div>
-<div class="line">    <a name="a6"></a><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(myformat1);</div>
+<div class="line">    <a class="code" href="workbook_8h.html#a239893289738cb030cbda1b73d4569b0">workbook_define_name</a>(workbook, <span class="stringliteral">&quot;Exchange_rate&quot;</span>, <span class="stringliteral">&quot;=0.96&quot;</span>);</div>
+<div class="line">    <a class="code" href="workbook_8h.html#a239893289738cb030cbda1b73d4569b0">workbook_define_name</a>(workbook, <span class="stringliteral">&quot;Sales&quot;</span>,         <span class="stringliteral">&quot;=Sheet1!$G$1:$H$10&quot;</span>);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Set a number format for the second format. */</span></div>
-<div class="line">    <a name="a7"></a><a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(myformat2, <span class="stringliteral">&quot;$#,##0.00&quot;</span>);</div>
+<div class="line">    <span class="comment">/* Define a local/worksheet name. */</span></div>
+<div class="line">    <a class="code" href="workbook_8h.html#a239893289738cb030cbda1b73d4569b0">workbook_define_name</a>(workbook, <span class="stringliteral">&quot;Sheet2!Sales&quot;</span>,  <span class="stringliteral">&quot;=Sheet2!$G$1:$G$10&quot;</span>);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Widen the first column to make the text clearer. */</span></div>
-<div class="line">    <a name="a8"></a><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet1, 0, 0, 20, NULL, NULL);</div>
+<div class="line">    <span class="comment">/* Write some text to the first worksheet and a defined names in a formula. */</span></div>
+<div class="line">    <a name="a5"></a><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet1, 0, 0, 45, NULL, NULL);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Write some unformatted data. */</span></div>
-<div class="line">    <a name="a9"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet1, 0, 0, <span class="stringliteral">&quot;Peach&quot;</span>, NULL);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet1, 1, 0, <span class="stringliteral">&quot;Plum&quot;</span>,  NULL);</div>
+<div class="line">    <a name="a6"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet1, 0, 0,</div>
+<div class="line">                           <span class="stringliteral">&quot;This worksheet contains some defined names.&quot;</span>, NULL);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Write formatted data. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet1, 2, 0, <span class="stringliteral">&quot;Pear&quot;</span>,  myformat1);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet1, 1, 0,</div>
+<div class="line">                           <span class="stringliteral">&quot;See Formulas -&gt; Name Manager above.&quot;</span>, NULL);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Formats can be reused. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet1, 3, 0, <span class="stringliteral">&quot;Persimmon&quot;</span>,  myformat1);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet1, 2, 0,</div>
+<div class="line">                           <span class="stringliteral">&quot;Example formula in cell B3 -&gt;&quot;</span>, NULL);</div>
+<div class="line"></div>
+<div class="line">    <a name="a7"></a><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet1, 2, 1, <span class="stringliteral">&quot;=Exchange_rate&quot;</span>, NULL);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Write some text to the second worksheet and a defined names in a formula. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet2, 0, 0, 45, NULL, NULL);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet2, 0, 0,</div>
+<div class="line">                           <span class="stringliteral">&quot;This worksheet contains some defined names.&quot;</span>, NULL);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet2, 1, 0,</div>
+<div class="line">                           <span class="stringliteral">&quot;See Formulas -&gt; Name Manager above.&quot;</span>, NULL);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet2, 2, 0,</div>
+<div class="line">                           <span class="stringliteral">&quot;Example formula in cell B3 -&gt;&quot;</span>, NULL);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet2, 2, 1, <span class="stringliteral">&quot;=Exchange_rate&quot;</span>, NULL);</div>
 <div class="line"></div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Write some numbers. */</span></div>
-<div class="line">    <a name="a10"></a><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet1, 5, 0, 123,       NULL);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet1, 6, 0, 4567.555,  myformat2);</div>
-<div class="line"></div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Write to the second worksheet. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet2, 0, 0, <span class="stringliteral">&quot;Some text&quot;</span>, myformat1);</div>
-<div class="line"></div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Close the workbook, save the file and free any memory. */</span></div>
-<div class="line">    <a name="a11"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
-<div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">    <span class="keywordflow">return</span> <a name="a8"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->

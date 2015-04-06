@@ -3,6 +3,7 @@ var searchData=
   ['workbook_5fadd_5fformat',['workbook_add_format',['../workbook_8h.html#a279a5d7075d09a3931aae9782afede33',1,'workbook.h']]],
   ['workbook_5fadd_5fworksheet',['workbook_add_worksheet',['../workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e',1,'workbook.h']]],
   ['workbook_5fclose',['workbook_close',['../workbook_8h.html#aff39de16411dae703c5574ece9cac09b',1,'workbook.h']]],
+  ['workbook_5fdefine_5fname',['workbook_define_name',['../workbook_8h.html#a239893289738cb030cbda1b73d4569b0',1,'workbook.h']]],
   ['worksheet_5factivate',['worksheet_activate',['../worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08',1,'worksheet.h']]],
   ['worksheet_5fprint_5facross',['worksheet_print_across',['../worksheet_8h.html#a40d32d247593e01c00b5c5c606fb4bb3',1,'worksheet.h']]],
   ['worksheet_5fselect',['worksheet_select',['../worksheet_8h.html#a78bfe3a786149deca69248db57da182f',1,'worksheet.h']]],
