@@ -346,7 +346,7 @@ Functions</h2></td></tr>
 </dl>
 <p>Set the bold property of the font:</p>
 <div class="fragment"><div class="line"><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(format);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a6">anatomy.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a7">dates_and_times03.c</a>, <a class="el" href="demo_8c-example.html#a6">demo.c</a>, <a class="el" href="format_font_8c-example.html#a7">format_font.c</a>, <a class="el" href="tutorial2_8c-example.html#a6">tutorial2.c</a>, and <a class="el" href="tutorial3_8c-example.html#a8">tutorial3.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a6">anatomy.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a7">dates_and_times03.c</a>, <a class="el" href="demo_8c-example.html#a6">demo.c</a>, <a class="el" href="format_font_8c-example.html#a7">format_font.c</a>, <a class="el" href="merge1_8c-example.html#a9">merge1.c</a>, <a class="el" href="tutorial2_8c-example.html#a6">tutorial2.c</a>, and <a class="el" href="tutorial3_8c-example.html#a8">tutorial3.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -793,14 +793,14 @@ Functions</h2></td></tr>
 <p>As in Excel, vertical and horizontal alignments can be combined:</p>
 <div class="fragment"><div class="line">format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>(format, <span class="stringliteral">&quot;center&quot;</span>);</div>
-<div class="line"><a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>(format, <span class="stringliteral">&quot;vcenter&quot;</span>);</div>
+<div class="line"><a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>(format, <a class="code" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a9899936ef3a43721b394b9b5d2314496">LXW_ALIGN_CENTER</a>);</div>
+<div class="line"><a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>(format, <a class="code" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5ae0a52569d3110521d3e9341809336063">LXW_ALIGN_VERTICAL_CENTER</a>);</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ab2737ea78d5e679613f2fdd7bb425030">worksheet_set_row</a>(0, 30);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Some Text&quot;</span>, format);</div>
-</div><!-- fragment --><p>Text can be aligned across two or more adjacent cells using the center_across property. However, for genuine merged cells it is better to use the worksheet_merge_range() worksheet method.</p>
+</div><!-- fragment --><p>Text can be aligned across two or more adjacent cells using the center_across property. However, for genuine merged cells it is better to use the <a class="el" href="worksheet_8h.html#ac15d2e82b73308458e9cdebeffdd46e6" title="Merge a range of cells. ">worksheet_merge_range()</a> worksheet method.</p>
 <p>The vertical justify option can be used to provide automatic text wrapping in a cell. The height of the cell will be adjusted to accommodate the wrapped text. To specify where the text wraps use the <a class="el" href="format_8h.html#a56d55dd9257d8f0645c62b296d2c196d" title="Wrap text in a cell. ">format_set_text_wrap()</a> method. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="dates_and_times03_8c-example.html#a11">dates_and_times03.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="dates_and_times03_8c-example.html#a11">dates_and_times03.c</a>, and <a class="el" href="merge1_8c-example.html#a6">merge1.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1065,7 +1065,8 @@ Functions</h2></td></tr>
 <img src="formats_set_bg_color.png" alt="formats_set_bg_color.png"/>
 </div>
 <p>The color should be an RGB integer value, see <a class="el" href="working_with_colors.html">Working with Colors</a>. </p>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="merge1_8c-example.html#a10">merge1.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="a65086b2b6ee51fd34893e3c53e0578eb"></a>
@@ -1161,7 +1162,8 @@ Functions</h2></td></tr>
 <p class="startli">The most commonly used style is the <code>thin</code> style. </p>
 </li>
 </ul>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="merge1_8c-example.html#a12">merge1.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="a05edc61c138b3ba56727efa24592e990"></a>
