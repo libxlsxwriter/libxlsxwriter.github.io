@@ -174,6 +174,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a40d32d247593e01c00b5c5c606fb4bb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a40d32d247593e01c00b5c5c606fb4bb3">worksheet_print_across</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
 <tr class="memdesc:a40d32d247593e01c00b5c5c606fb4bb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the order in which pages are printed.  <a href="#a40d32d247593e01c00b5c5c606fb4bb3">More...</a><br /></td></tr>
 <tr class="separator:a40d32d247593e01c00b5c5c606fb4bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd9af70f706b738690ebb9103940b0e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#abd9af70f706b738690ebb9103940b0e1">worksheet_gridlines</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, uint8_t option)</td></tr>
+<tr class="memdesc:abd9af70f706b738690ebb9103940b0e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the option to display or hide gridlines on the screen and the printed page.  <a href="#abd9af70f706b738690ebb9103940b0e1">More...</a><br /></td></tr>
+<tr class="separator:abd9af70f706b738690ebb9103940b0e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931114d5266e03931f9fc1b21bd9b56c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a931114d5266e03931f9fc1b21bd9b56c">worksheet_center_horizontally</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
+<tr class="memdesc:a931114d5266e03931f9fc1b21bd9b56c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Center the printed page horizontally.  <a href="#a931114d5266e03931f9fc1b21bd9b56c">More...</a><br /></td></tr>
+<tr class="separator:a931114d5266e03931f9fc1b21bd9b56c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a7fdfe9ef603ef75a03818e6abbfd12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a3a7fdfe9ef603ef75a03818e6abbfd12">worksheet_center_vertically</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
+<tr class="memdesc:a3a7fdfe9ef603ef75a03818e6abbfd12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Center the printed page vertically.  <a href="#a3a7fdfe9ef603ef75a03818e6abbfd12">More...</a><br /></td></tr>
+<tr class="separator:a3a7fdfe9ef603ef75a03818e6abbfd12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb169a9740135f5c01eab94099d77f9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#adb169a9740135f5c01eab94099d77f9b">worksheet_print_row_col_headers</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
+<tr class="memdesc:adb169a9740135f5c01eab94099d77f9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the option to print the row and column headers on the printed page.  <a href="#adb169a9740135f5c01eab94099d77f9b">More...</a><br /></td></tr>
+<tr class="separator:adb169a9740135f5c01eab94099d77f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="aa7f1a12b664b4c1d7742529a315e21aa"></a>
@@ -908,7 +920,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code>activate()</code> method is used to specify which worksheet is initially visible in a multi-sheet workbook:</p>
+<p>The <code>activate()</code> function is used to specify which worksheet is initially visible in a multi-sheet workbook:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet1 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet2 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet3 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
@@ -917,7 +929,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="worksheet_activate.png" alt="worksheet_activate.png"/>
 </div>
-<p>More than one worksheet can be selected via the <code>select()</code> method, see below, however only one worksheet can be active.</p>
+<p>More than one worksheet can be selected via the <code>select()</code> function, see below, however only one worksheet can be active.</p>
 <p>The default active worksheet is the first worksheet. </p>
 
 </div>
@@ -941,11 +953,11 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code>select()</code> method is used to indicate that a worksheet is selected in a multi-sheet workbook:</p>
+<p>The <code>select()</code> function is used to indicate that a worksheet is selected in a multi-sheet workbook:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08">worksheet_activate</a>(worksheet1);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#a78bfe3a786149deca69248db57da182f">worksheet_select</a>(worksheet2);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#a78bfe3a786149deca69248db57da182f">worksheet_select</a>(worksheet3);</div>
-</div><!-- fragment --><p>A selected worksheet has its tab highlighted. Selecting worksheets is a way of grouping them together so that, for example, several worksheets could be printed in one go. A worksheet that has been activated via the <code>activate()</code> method will also appear as selected. </p>
+</div><!-- fragment --><p>A selected worksheet has its tab highlighted. Selecting worksheets is a way of grouping them together so that, for example, several worksheets could be printed in one go. A worksheet that has been activated via the <code>activate()</code> function will also appear as selected. </p>
 
 </div>
 </div>
@@ -1504,6 +1516,117 @@ Functions</h2></td></tr>
 [3] [4]</pre> 
 </div>
 </div>
+<a class="anchor" id="abd9af70f706b738690ebb9103940b0e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_gridlines </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>option</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">option</td><td>Gridline option.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Display or hide screen and print gridlines using one of the values of <a class="el" href="worksheet_8h.html#a487e0bffad0a348421b825d715621c20">lxw_gridlines</a>.</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#abd9af70f706b738690ebb9103940b0e1">worksheet_gridlines</a>(worksheet1, <a class="code" href="worksheet_8h.html#a487e0bffad0a348421b825d715621c20a3fa67c27394bd03fa6642a501598f70b">LXW_HIDE_ALL_GRIDLINES</a>);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="worksheet_8h.html#abd9af70f706b738690ebb9103940b0e1">worksheet_gridlines</a>(worksheet2, <a class="code" href="worksheet_8h.html#a487e0bffad0a348421b825d715621c20a6ad2d5f382b103286ccdf7561a9d2328">LXW_SHOW_PRINT_GRIDLINES</a>);</div>
+</div><!-- fragment --><p>The Excel default is that the screen gridlines are on and the printed worksheet is off. </p>
+
+</div>
+</div>
+<a class="anchor" id="a931114d5266e03931f9fc1b21bd9b56c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_center_horizontally </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Center the worksheet data horizontally between the margins on the printed page:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a931114d5266e03931f9fc1b21bd9b56c">worksheet_center_horizontally</a>(worksheet);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="a3a7fdfe9ef603ef75a03818e6abbfd12"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_center_vertically </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Center the worksheet data vertically between the margins on the printed page:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a3a7fdfe9ef603ef75a03818e6abbfd12">worksheet_center_vertically</a>(worksheet);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="adb169a9740135f5c01eab94099d77f9b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_print_row_col_headers </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>When printing a worksheet from Excel the row and column headers (the row numbers on the left and the column letters at the top) aren't printed by default.</p>
+<p>This function sets the printer option to print these headers:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#adb169a9740135f5c01eab94099d77f9b">worksheet_print_row_col_headers</a>(worksheet);</div>
+</div><!-- fragment --> 
+</div>
+</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="aaf33b4e2179dcc466359277210774ce3"></a>
 <div class="memitem">
@@ -1616,6 +1739,47 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Error codes from <code>worksheet_write*()</code> functions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ad031ffc1d718178a7180e8d63ebbf81ba202ad8c337f2ad191783626e78c6ee8f"></a>LXW_WRITE_ERROR_NONE&#160;</td><td class="fielddoc">
+<p>No error. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad031ffc1d718178a7180e8d63ebbf81baae3d25846483a3146e5f6bdf7465a39f"></a>LXW_RANGE_ERROR&#160;</td><td class="fielddoc">
+<p>Row or column index out of range. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad031ffc1d718178a7180e8d63ebbf81baec83810ff53cc4249dbe1d62142bf2b1"></a>LXW_STRING_LENGTH_ERROR&#160;</td><td class="fielddoc">
+<p>String exceeds Excel's LXW_STRING_LENGTH_ERROR limit. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad031ffc1d718178a7180e8d63ebbf81ba7d3815b64d81431a74522fcdb41645f6"></a>LXW_STRING_HASH_ERROR&#160;</td><td class="fielddoc">
+<p>Error finding string index. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a487e0bffad0a348421b825d715621c20"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="worksheet_8h.html#a487e0bffad0a348421b825d715621c20">lxw_gridlines</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gridline options using in <code><a class="el" href="worksheet_8h.html#abd9af70f706b738690ebb9103940b0e1" title="Set the option to display or hide gridlines on the screen and the printed page. ">worksheet_gridlines()</a></code>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a487e0bffad0a348421b825d715621c20a3fa67c27394bd03fa6642a501598f70b"></a>LXW_HIDE_ALL_GRIDLINES&#160;</td><td class="fielddoc">
+<p>Hide screen and print gridlines. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a487e0bffad0a348421b825d715621c20af5a038f9024f0d20793a77315e9245f9"></a>LXW_SHOW_SCREEN_GRIDLINES&#160;</td><td class="fielddoc">
+<p>Show screen gridlines. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a487e0bffad0a348421b825d715621c20a6ad2d5f382b103286ccdf7561a9d2328"></a>LXW_SHOW_PRINT_GRIDLINES&#160;</td><td class="fielddoc">
+<p>Show print gridlines. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a487e0bffad0a348421b825d715621c20a1dc7944e44eb6ae060dc6ef457b62e04"></a>LXW_SHOW_ALL_GRIDLINES&#160;</td><td class="fielddoc">
+<p>Show screen and print gridlines. </p>
+</td></tr>
+</table>
 
 </div>
 </div>
@@ -1651,8 +1815,18 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ad031ffc1d718178a7180e8d63ebbf81b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> </td></tr>
+<tr class="memitem:ad031ffc1d718178a7180e8d63ebbf81b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> { <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81ba202ad8c337f2ad191783626e78c6ee8f">LXW_WRITE_ERROR_NONE</a> = 0, 
+<a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81baae3d25846483a3146e5f6bdf7465a39f">LXW_RANGE_ERROR</a>, 
+<a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81baec83810ff53cc4249dbe1d62142bf2b1">LXW_STRING_LENGTH_ERROR</a>, 
+<a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81ba7d3815b64d81431a74522fcdb41645f6">LXW_STRING_HASH_ERROR</a>
+ }</td></tr>
 <tr class="separator:ad031ffc1d718178a7180e8d63ebbf81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a487e0bffad0a348421b825d715621c20"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a487e0bffad0a348421b825d715621c20">lxw_gridlines</a> { <a class="el" href="worksheet_8h.html#a487e0bffad0a348421b825d715621c20a3fa67c27394bd03fa6642a501598f70b">LXW_HIDE_ALL_GRIDLINES</a> = 0, 
+<a class="el" href="worksheet_8h.html#a487e0bffad0a348421b825d715621c20af5a038f9024f0d20793a77315e9245f9">LXW_SHOW_SCREEN_GRIDLINES</a>, 
+<a class="el" href="worksheet_8h.html#a487e0bffad0a348421b825d715621c20a6ad2d5f382b103286ccdf7561a9d2328">LXW_SHOW_PRINT_GRIDLINES</a>, 
+<a class="el" href="worksheet_8h.html#a487e0bffad0a348421b825d715621c20a1dc7944e44eb6ae060dc6ef457b62e04">LXW_SHOW_ALL_GRIDLINES</a>
+ }</td></tr>
+<tr class="separator:a487e0bffad0a348421b825d715621c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>

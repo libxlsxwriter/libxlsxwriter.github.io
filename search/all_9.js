@@ -61,7 +61,9 @@ var searchData=
   ['lxw_5fformat_5fpatterns',['lxw_format_patterns',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7',1,'format.h']]],
   ['lxw_5fformat_5fscripts',['lxw_format_scripts',['../format_8h.html#a0ff8fd761893f60fddbd7f1cab4ac75a',1,'format.h']]],
   ['lxw_5fformat_5funderlines',['lxw_format_underlines',['../format_8h.html#af530d7971d15c164f3fb6bbfede9a39f',1,'format.h']]],
+  ['lxw_5fgridlines',['lxw_gridlines',['../worksheet_8h.html#a487e0bffad0a348421b825d715621c20',1,'worksheet.h']]],
   ['lxw_5fheader_5ffooter_5foptions',['lxw_header_footer_options',['../structlxw__header__footer__options.html',1,'lxw_header_footer_options'],['../worksheet_8h.html#a9454ccd4ac56d5f9e796a91c3c2b156e',1,'lxw_header_footer_options():&#160;worksheet.h']]],
+  ['lxw_5fhide_5fall_5fgridlines',['LXW_HIDE_ALL_GRIDLINES',['../worksheet_8h.html#a487e0bffad0a348421b825d715621c20a3fa67c27394bd03fa6642a501598f70b',1,'worksheet.h']]],
   ['lxw_5fpattern_5fdark_5fdown',['LXW_PATTERN_DARK_DOWN',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7a704f3f128794e0bedec3635862e25211',1,'format.h']]],
   ['lxw_5fpattern_5fdark_5fgray',['LXW_PATTERN_DARK_GRAY',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7a7d852861b5d7206be22b15d9fccb024e',1,'format.h']]],
   ['lxw_5fpattern_5fdark_5fgrid',['LXW_PATTERN_DARK_GRID',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7a44857e548d3a18290dac9e71addc6291',1,'format.h']]],
@@ -81,8 +83,14 @@ var searchData=
   ['lxw_5fpattern_5fmedium_5fgray',['LXW_PATTERN_MEDIUM_GRAY',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7af2abac6c05ed8772c2a21d95bce0c332',1,'format.h']]],
   ['lxw_5fpattern_5fnone',['LXW_PATTERN_NONE',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7a8ea9d9b7686442f43da92dff3745adc3',1,'format.h']]],
   ['lxw_5fpattern_5fsolid',['LXW_PATTERN_SOLID',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7a1fbd6761c4ccd57d98dfd59eaad9fde5',1,'format.h']]],
+  ['lxw_5frange_5ferror',['LXW_RANGE_ERROR',['../worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81baae3d25846483a3146e5f6bdf7465a39f',1,'worksheet.h']]],
   ['lxw_5frow_5fcol_5foptions',['lxw_row_col_options',['../structlxw__row__col__options.html',1,'lxw_row_col_options'],['../worksheet_8h.html#a0d738f9174739380dc3a893c7baeb1ef',1,'lxw_row_col_options():&#160;worksheet.h']]],
   ['lxw_5frow_5ft',['lxw_row_t',['../worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3',1,'worksheet.h']]],
+  ['lxw_5fshow_5fall_5fgridlines',['LXW_SHOW_ALL_GRIDLINES',['../worksheet_8h.html#a487e0bffad0a348421b825d715621c20a1dc7944e44eb6ae060dc6ef457b62e04',1,'worksheet.h']]],
+  ['lxw_5fshow_5fprint_5fgridlines',['LXW_SHOW_PRINT_GRIDLINES',['../worksheet_8h.html#a487e0bffad0a348421b825d715621c20a6ad2d5f382b103286ccdf7561a9d2328',1,'worksheet.h']]],
+  ['lxw_5fshow_5fscreen_5fgridlines',['LXW_SHOW_SCREEN_GRIDLINES',['../worksheet_8h.html#a487e0bffad0a348421b825d715621c20af5a038f9024f0d20793a77315e9245f9',1,'worksheet.h']]],
+  ['lxw_5fstring_5fhash_5ferror',['LXW_STRING_HASH_ERROR',['../worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81ba7d3815b64d81431a74522fcdb41645f6',1,'worksheet.h']]],
+  ['lxw_5fstring_5flength_5ferror',['LXW_STRING_LENGTH_ERROR',['../worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81baec83810ff53cc4249dbe1d62142bf2b1',1,'worksheet.h']]],
   ['lxw_5funderline_5fdouble',['LXW_UNDERLINE_DOUBLE',['../format_8h.html#af530d7971d15c164f3fb6bbfede9a39fa578bcd2c45f3d549fcfc46937550de13',1,'format.h']]],
   ['lxw_5funderline_5fdouble_5faccounting',['LXW_UNDERLINE_DOUBLE_ACCOUNTING',['../format_8h.html#af530d7971d15c164f3fb6bbfede9a39fa63088febe121487e7269d6aedcafa628',1,'format.h']]],
   ['lxw_5funderline_5fsingle',['LXW_UNDERLINE_SINGLE',['../format_8h.html#af530d7971d15c164f3fb6bbfede9a39fa76d5bdd1c57c126df937f0b003597e18',1,'format.h']]],
@@ -90,5 +98,6 @@ var searchData=
   ['lxw_5fworkbook',['lxw_workbook',['../structlxw__workbook.html',1,'lxw_workbook'],['../workbook_8h.html#aa2650cd721ed5e4ecb1716c60f1977da',1,'lxw_workbook():&#160;workbook.h']]],
   ['lxw_5fworkbook_5foptions',['lxw_workbook_options',['../structlxw__workbook__options.html',1,'lxw_workbook_options'],['../workbook_8h.html#abe05edcbed2b2dcf1e7aa37f25343078',1,'lxw_workbook_options():&#160;workbook.h']]],
   ['lxw_5fworksheet',['lxw_worksheet',['../structlxw__worksheet.html',1,'lxw_worksheet'],['../worksheet_8h.html#a356e12f6f1c3f94b8de98dc99ef78b86',1,'lxw_worksheet():&#160;worksheet.h']]],
-  ['lxw_5fwrite_5ferror',['lxw_write_error',['../worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b',1,'worksheet.h']]]
+  ['lxw_5fwrite_5ferror',['lxw_write_error',['../worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b',1,'worksheet.h']]],
+  ['lxw_5fwrite_5ferror_5fnone',['LXW_WRITE_ERROR_NONE',['../worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81ba202ad8c337f2ad191783626e78c6ee8f',1,'worksheet.h']]]
 ];
