@@ -61,6 +61,7 @@ var searchData=
   ['lxw_5fformat_5fpatterns',['lxw_format_patterns',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7',1,'format.h']]],
   ['lxw_5fformat_5fscripts',['lxw_format_scripts',['../format_8h.html#a0ff8fd761893f60fddbd7f1cab4ac75a',1,'format.h']]],
   ['lxw_5fformat_5funderlines',['lxw_format_underlines',['../format_8h.html#af530d7971d15c164f3fb6bbfede9a39f',1,'format.h']]],
+  ['lxw_5fheader_5ffooter_5foptions',['lxw_header_footer_options',['../structlxw__header__footer__options.html',1,'lxw_header_footer_options'],['../worksheet_8h.html#a9454ccd4ac56d5f9e796a91c3c2b156e',1,'lxw_header_footer_options():&#160;worksheet.h']]],
   ['lxw_5fpattern_5fdark_5fdown',['LXW_PATTERN_DARK_DOWN',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7a704f3f128794e0bedec3635862e25211',1,'format.h']]],
   ['lxw_5fpattern_5fdark_5fgray',['LXW_PATTERN_DARK_GRAY',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7a7d852861b5d7206be22b15d9fccb024e',1,'format.h']]],
   ['lxw_5fpattern_5fdark_5fgrid',['LXW_PATTERN_DARK_GRID',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7a44857e548d3a18290dac9e71addc6291',1,'format.h']]],

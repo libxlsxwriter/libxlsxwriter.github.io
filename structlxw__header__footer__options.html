@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: Changes</title>
+<title>libxlsxwriter: lxw_header_footer_options Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -38,7 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li class="current"><a href="pages.html"><span>Contents</span></a></li>
+      <li><a href="pages.html"><span>Contents</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
@@ -75,54 +75,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">Changes </div>  </div>
+<div class="title">lxw_header_footer_options Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>0.0.8 March 8 2015</h2>
-<ul>
-<li>Added support for worksheet headers and footers via the <code><a class="el" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77" title="Set the printed page header caption. ">worksheet_set_header()</a></code> and <code><a class="el" href="worksheet_8h.html#abe864b71bbfb5e3c3ad84566d1c40721" title="Set the printed page footer caption. ">worksheet_set_footer()</a></code> functions. See also <a class="el" href="headers_footers_8c-example.html">headers_footers.c</a>.</li>
-</ul>
-<h2>0.0.7 March 7 2015</h2>
-<ul>
-<li>Added the <code><a class="el" href="worksheet_8h.html#ac15d2e82b73308458e9cdebeffdd46e6" title="Merge a range of cells. ">worksheet_merge_range()</a></code> method to merge worksheet cells. See also <a class="el" href="merge1_8c-example.html">merge1.c</a>.</li>
-</ul>
-<h2>0.0.6 March 5 2015</h2>
-<ul>
-<li>Added the <code><a class="el" href="workbook_8h.html#a239893289738cb030cbda1b73d4569b0" title="Create a defined name in the workbook to use as a variable. ">workbook_define_name()</a></code> method to create defined names and ranges in a workbook or worksheet.</li>
-</ul>
-<h2>0.0.5 March 6 2015</h2>
-<ul>
-<li>Added <code><a class="el" href="worksheet_8h.html#a78bfe3a786149deca69248db57da182f" title="Set a worksheet tab as selected. ">worksheet_select()</a></code> function to set worksheets as selected.</li>
-<li>Added <code><a class="el" href="worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08" title="Make a worksheet the active, i.e., visible worksheet. ">worksheet_activate()</a></code> to set the active worksheet.</li>
-<li>Several portability fixes to fix warnings with different compilers.</li>
-</ul>
-<h2>0.0.4 March 1 2015</h2>
-<ul>
-<li>Added <code><a class="el" href="worksheet_8h.html#ab942bbc0493eaa5cf5696da30b6f872d" title="Set the worksheet margins for the printed page. ">worksheet_set_margins()</a></code> function to set top, bottom, left and right margins in a worksheet.</li>
-<li>Fix for issue where format objects were written to the file in the order of creation rather than the order of use. This issue caused incorrect formats in cells. Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/3">#3</a>.</li>
-<li>Fix for issue where tmp files in <code>constant_memory</code> mode weren't closed until application exited. Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/1">#1</a>.</li>
-</ul>
-<h2>0.0.3 January 7 2015</h2>
-<ul>
-<li>Added worksheet page setup methods.<ul>
-<li><code><a class="el" href="worksheet_8h.html#ad24e2a01fccb881e4cc478a92aa095e6" title="Set the page orientation as landscape. ">worksheet_set_landscape()</a></code></li>
-<li><code><a class="el" href="worksheet_8h.html#af498d1caa032633240af6d26ef80515a" title="Set the page orientation as portrait. ">worksheet_set_portrait()</a></code></li>
-<li><code><a class="el" href="worksheet_8h.html#a5d442a52a3549d5d2324f13787b66f47" title="Set the page layout to page view mode. ">worksheet_set_page_view()</a></code></li>
-<li><code><a class="el" href="worksheet_8h.html#a9f8af12017797b10c5ee68e04149032f" title="Set the paper type for printing. ">worksheet_set_paper()</a></code></li>
-<li><code><a class="el" href="worksheet_8h.html#a40d32d247593e01c00b5c5c606fb4bb3" title="Set the order in which pages are printed. ">worksheet_print_across()</a></code></li>
-</ul>
-</li>
-</ul>
-<h2>0.0.2 June 26 2014</h2>
-<ul>
-<li>First public release.</li>
-</ul>
-<h2>0.0.1 June 8 2014</h2>
-<ul>
-<li>First GitHub release. </li>
-</ul>
-</div></div><!-- contents -->
+
+<p>Header and footer options.  
+ <a href="structlxw__header__footer__options.html#details">More...</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Optional parameters used in the <a class="el" href="worksheet_8h.html#afe6950c6b36968336c4a38c51b2571ac" title="Set the printed page header caption with additional options. ">worksheet_set_header_opt()</a> and <a class="el" href="worksheet_8h.html#a41b50b05830945dae840808d548fa445" title="Set the printed page footer caption with additional options. ">worksheet_set_footer_opt()</a> functions. </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a0cd0badf4c6c3dde9aa46e924276a9aa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__header__footer__options.html#a0cd0badf4c6c3dde9aa46e924276a9aa">margin</a></td></tr>
+<tr class="separator:a0cd0badf4c6c3dde9aa46e924276a9aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Field Documentation</h2>
+<a class="anchor" id="a0cd0badf4c6c3dde9aa46e924276a9aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double lxw_header_footer_options::margin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Header or footer margin in inches. Excel default is 0.3. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
