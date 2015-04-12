@@ -186,6 +186,12 @@ Functions</h2></td></tr>
 <tr class="memitem:adb169a9740135f5c01eab94099d77f9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#adb169a9740135f5c01eab94099d77f9b">worksheet_print_row_col_headers</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
 <tr class="memdesc:adb169a9740135f5c01eab94099d77f9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the option to print the row and column headers on the printed page.  <a href="#adb169a9740135f5c01eab94099d77f9b">More...</a><br /></td></tr>
 <tr class="separator:adb169a9740135f5c01eab94099d77f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea3fc48aa23c4f9bfc1d580a3ada66e8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#aea3fc48aa23c4f9bfc1d580a3ada66e8">worksheet_repeat_rows</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row)</td></tr>
+<tr class="memdesc:aea3fc48aa23c4f9bfc1d580a3ada66e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of rows to repeat at the top of each printed page.  <a href="#aea3fc48aa23c4f9bfc1d580a3ada66e8">More...</a><br /></td></tr>
+<tr class="separator:aea3fc48aa23c4f9bfc1d580a3ada66e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04dfac2f4b2307af3e834b7b37436ded"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a04dfac2f4b2307af3e834b7b37436ded">worksheet_repeat_columns</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col)</td></tr>
+<tr class="memdesc:a04dfac2f4b2307af3e834b7b37436ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of columns to repeat at the top of each printed page.  <a href="#a04dfac2f4b2307af3e834b7b37436ded">More...</a><br /></td></tr>
+<tr class="separator:a04dfac2f4b2307af3e834b7b37436ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="aa7f1a12b664b4c1d7742529a315e21aa"></a>
@@ -1625,6 +1631,96 @@ Functions</h2></td></tr>
 <p>This function sets the printer option to print these headers:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#adb169a9740135f5c01eab94099d77f9b">worksheet_print_row_col_headers</a>(worksheet);</div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="aea3fc48aa23c4f9bfc1d580a3ada66e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t worksheet_repeat_rows </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>first_row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>last_row</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">first_row</td><td>First row of repeat range. </td></tr>
+    <tr><td class="paramname">last_row</td><td>Last row of repeat range.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For large Excel documents it is often desirable to have the first row or rows of the worksheet print out at the top of each page.</p>
+<p>This can be achieved by using this function. The parameters <code>first_row</code> and <code>last_row</code> are zero based:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aea3fc48aa23c4f9bfc1d580a3ada66e8">worksheet_repeat_rows</a>(worksheet, 0, 0); <span class="comment">// Repeat the first row.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#aea3fc48aa23c4f9bfc1d580a3ada66e8">worksheet_repeat_rows</a>(worksheet, 0, 1); <span class="comment">// Repeat the first two rows.</span></div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a04dfac2f4b2307af3e834b7b37436ded"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t worksheet_repeat_columns </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>first_col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>last_col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">first_col</td><td>First column of repeat range. </td></tr>
+    <tr><td class="paramname">last_col</td><td>Last column of repeat range.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For large Excel documents it is often desirable to have the first column or columns of the worksheet print out at the left of each page.</p>
+<p>This can be achieved by using this function. The parameters <code>first_col</code> and <code>last_col</code> are zero based:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a04dfac2f4b2307af3e834b7b37436ded">worksheet_repeat_columns</a>(worksheet, 0, 0); <span class="comment">// Repeat the first col.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a04dfac2f4b2307af3e834b7b37436ded">worksheet_repeat_columns</a>(worksheet, 0, 1); <span class="comment">// Repeat the first two cols.</span></div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error. </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
