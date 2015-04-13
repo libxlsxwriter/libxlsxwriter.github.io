@@ -148,7 +148,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>This is a little syntactic shortcut to help with worksheet layout:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;B:D&quot;</span>), 20, NULL, NULL);</div>
 <div class="line"></div>
-<div class="line"><span class="comment">//Same as:</span></div>
+<div class="line"><span class="comment">// Same as:</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet, 1, 3,        20, NULL, NULL);</div>
 </div><!-- fragment --> 
 </div>
@@ -166,9 +166,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Convert an Excel <code>A1:B2</code> range into a <code>(row1, col1, row1, col2)</code> sequence.</p>
-<p>This is a little syntactic shortcut to help with worksheet layout. </p>
-
+<p>Convert an Excel <code>A1:B2</code> range into a <code>(first_row, first_col, last_row, last_col)</code> sequence.</p>
+<p>This is a little syntactic shortcut to help with worksheet layout.</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ae0c82375dda26bb7590a2ad3f42401dd">worksheet_print_area</a>(worksheet, 0, 0, 41, 10); <span class="comment">// A1:K42.</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Same as:</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#ae0c82375dda26bb7590a2ad3f42401dd">worksheet_print_area</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A1:K42&quot;</span>));</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <table class="memberdecls">
@@ -193,7 +197,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:a189672bfa9c380a28d8db8c40de17fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an Excel <code>A:B</code> column range into a <code>(col1, col2)</code> pair.  <a href="#a189672bfa9c380a28d8db8c40de17fe8">More...</a><br /></td></tr>
 <tr class="separator:a189672bfa9c380a28d8db8c40de17fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dbbdfc9b616195c799dee78e727cecc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(range)&#160;&#160;&#160;lxw_get_row(range), lxw_get_col(range), lxw_get_row_2(range), lxw_get_col_2(range)</td></tr>
-<tr class="memdesc:a4dbbdfc9b616195c799dee78e727cecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an Excel <code>A1:B2</code> range into a <code>(row1, col1, row1, col2)</code> sequence.  <a href="#a4dbbdfc9b616195c799dee78e727cecc">More...</a><br /></td></tr>
+<tr class="memdesc:a4dbbdfc9b616195c799dee78e727cecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an Excel <code>A1:B2</code> range into a <code>(first_row, first_col, last_row, last_col)</code> sequence.  <a href="#a4dbbdfc9b616195c799dee78e727cecc">More...</a><br /></td></tr>
 <tr class="separator:a4dbbdfc9b616195c799dee78e727cecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

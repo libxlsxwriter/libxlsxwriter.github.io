@@ -192,6 +192,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a04dfac2f4b2307af3e834b7b37436ded"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a04dfac2f4b2307af3e834b7b37436ded">worksheet_repeat_columns</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col)</td></tr>
 <tr class="memdesc:a04dfac2f4b2307af3e834b7b37436ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of columns to repeat at the top of each printed page.  <a href="#a04dfac2f4b2307af3e834b7b37436ded">More...</a><br /></td></tr>
 <tr class="separator:a04dfac2f4b2307af3e834b7b37436ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0c82375dda26bb7590a2ad3f42401dd"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ae0c82375dda26bb7590a2ad3f42401dd">worksheet_print_area</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col)</td></tr>
+<tr class="memdesc:ae0c82375dda26bb7590a2ad3f42401dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the print area for a worksheet.  <a href="#ae0c82375dda26bb7590a2ad3f42401dd">More...</a><br /></td></tr>
+<tr class="separator:ae0c82375dda26bb7590a2ad3f42401dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ed8b0603df10ce2439b54f7980efb6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d">worksheet_fit_to_pages</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, uint16_t width, uint16_t height)</td></tr>
+<tr class="memdesc:a9ed8b0603df10ce2439b54f7980efb6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fit the printed area to a specific number of pages both vertically and horizontally.  <a href="#a9ed8b0603df10ce2439b54f7980efb6d">More...</a><br /></td></tr>
+<tr class="separator:a9ed8b0603df10ce2439b54f7980efb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="aa7f1a12b664b4c1d7742529a315e21aa"></a>
@@ -880,7 +886,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
-<p>The <code>merge_range()</code> function allows cells to be merged together so that they act as a single area.</p>
+<p>The <code>worksheet_merge_range()</code> function allows cells to be merged together so that they act as a single area.</p>
 <p>Excel generally merges and centers cells at same time. To get similar behaviour with libxlsxwriter you need to apply a <a class="el" href="format_8h.html">Format</a> object with the appropriate alignment:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *merge_format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>(merge_format, <a class="code" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a9899936ef3a43721b394b9b5d2314496">LXW_ALIGN_CENTER</a>);</div>
@@ -897,7 +903,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="merge_range.png" alt="merge_range.png"/>
 </div>
-<p>The <code>merge_range()</code> function writes a <code>char*</code> string using <code><a class="el" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c" title="Write a string to a worksheet cell. ">worksheet_write_string()</a></code>. In order to write other data types, such as a number or a formula, you can overwrite the first cell with a call to one of the other write functions. The same Format should be used as was used in the merged range.</p>
+<p>The <code>worksheet_merge_range()</code> function writes a <code>char*</code> string using <code><a class="el" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c" title="Write a string to a worksheet cell. ">worksheet_write_string()</a></code>. In order to write other data types, such as a number or a formula, you can overwrite the first cell with a call to one of the other write functions. The same Format should be used as was used in the merged range.</p>
 <div class="fragment"><div class="line"><span class="comment">// First write a range with a blank string.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ac15d2e82b73308458e9cdebeffdd46e6">worksheet_merge_range</a> (worksheet, 1, 1, 1, 3, <span class="stringliteral">&quot;&quot;</span>, format);</div>
 <div class="line"></div>
@@ -926,7 +932,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code>activate()</code> function is used to specify which worksheet is initially visible in a multi-sheet workbook:</p>
+<p>The <code>worksheet_activate()</code> function is used to specify which worksheet is initially visible in a multi-sheet workbook:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet1 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet2 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet3 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
@@ -935,7 +941,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="worksheet_activate.png" alt="worksheet_activate.png"/>
 </div>
-<p>More than one worksheet can be selected via the <code>select()</code> function, see below, however only one worksheet can be active.</p>
+<p>More than one worksheet can be selected via the <code><a class="el" href="worksheet_8h.html#a78bfe3a786149deca69248db57da182f" title="Set a worksheet tab as selected. ">worksheet_select()</a></code> function, see below, however only one worksheet can be active.</p>
 <p>The default active worksheet is the first worksheet. </p>
 
 </div>
@@ -959,11 +965,11 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code>select()</code> function is used to indicate that a worksheet is selected in a multi-sheet workbook:</p>
+<p>The <code>worksheet_select()</code> function is used to indicate that a worksheet is selected in a multi-sheet workbook:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08">worksheet_activate</a>(worksheet1);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#a78bfe3a786149deca69248db57da182f">worksheet_select</a>(worksheet2);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#a78bfe3a786149deca69248db57da182f">worksheet_select</a>(worksheet3);</div>
-</div><!-- fragment --><p>A selected worksheet has its tab highlighted. Selecting worksheets is a way of grouping them together so that, for example, several worksheets could be printed in one go. A worksheet that has been activated via the <code>activate()</code> function will also appear as selected. </p>
+</div><!-- fragment --><p>A selected worksheet has its tab highlighted. Selecting worksheets is a way of grouping them together so that, for example, several worksheets could be printed in one go. A worksheet that has been activated via the <code><a class="el" href="worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08" title="Make a worksheet the active, i.e., visible worksheet. ">worksheet_activate()</a></code> function will also appear as selected. </p>
 
 </div>
 </div>
@@ -1216,7 +1222,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code>set_margins()</code> function is used to set the margins of the worksheet when it is printed. The units are in inches. Specifying <code>-1</code> for any parameter will give the default Excel value as shown above.</p>
+<p>The <code>worksheet_set_margins()</code> function is used to set the margins of the worksheet when it is printed. The units are in inches. Specifying <code>-1</code> for any parameter will give the default Excel value as shown above.</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ab942bbc0493eaa5cf5696da30b6f872d">worksheet_set_margins</a>(worksheet, 1.3, 1.2, -1, -1);</div>
 </div><!-- fragment --> 
 </div>
@@ -1357,8 +1363,7 @@ Functions</h2></td></tr>
 <div class="line">.RightHeader = <span class="stringliteral">&quot;&quot;</span></div>
 </div><!-- fragment --><p>Alternatively you can inspect the header and footer strings in an Excel file by unzipping it and grepping the XML sub-files. The following shows how to do that using libxml's xmllint to format the XML for clarity:</p>
 <div class="fragment"><div class="line">$ unzip myfile.xlsm -d myfile</div>
-<div class="line">$ xmllint --format `find myfile -name <span class="stringliteral">&quot;*.xml&quot;</span> | xargs` \</div>
-<div class="line">                    | egrep <span class="stringliteral">&quot;Header|Footer&quot;</span></div>
+<div class="line">$ xmllint --format `find myfile -name <span class="stringliteral">&quot;*.xml&quot;</span> | xargs` | egrep <span class="stringliteral">&quot;Header|Footer&quot;</span></div>
 <div class="line"></div>
 <div class="line">  &lt;headerFooter scaleWithDoc=<span class="stringliteral">&quot;0&quot;</span>&gt;</div>
 <div class="line">    &lt;oddHeader&gt;&amp;amp;L&amp;amp;P&lt;/oddHeader&gt;</div>
@@ -1514,7 +1519,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code>print_across()</code> function is used to change the default print direction. This is referred to by Excel as the sheet "page order":</p>
+<p>The <code>worksheet_print_across()</code> function is used to change the default print direction. This is referred to by Excel as the sheet "page order":</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a40d32d247593e01c00b5c5c606fb4bb3">worksheet_print_across</a>(worksheet);</div>
 </div><!-- fragment --><p>The default page order is shown below for a worksheet that extends over 4 pages. The order is called "down then across": </p><pre class="fragment">[1] [3]
 [2] [4]
@@ -1720,6 +1725,122 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a04dfac2f4b2307af3e834b7b37436ded">worksheet_repeat_columns</a>(worksheet, 0, 0); <span class="comment">// Repeat the first col.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a04dfac2f4b2307af3e834b7b37436ded">worksheet_repeat_columns</a>(worksheet, 0, 1); <span class="comment">// Repeat the first two cols.</span></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae0c82375dda26bb7590a2ad3f42401dd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t worksheet_print_area </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>first_row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>first_col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>last_row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>last_col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">first_row</td><td>The first row of the range. (All zero indexed.) </td></tr>
+    <tr><td class="paramname">first_col</td><td>The first column of the range. </td></tr>
+    <tr><td class="paramname">last_row</td><td>The last row of the range. </td></tr>
+    <tr><td class="paramname">last_col</td><td>The last col of the range.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function is used to specify the area of the worksheet that will be printed. The <a class="el" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc" title="Convert an Excel A1:B2 range into a (first_row, first_col, last_row, last_col) sequence. ">RANGE()</a> macro is often convenient for this.</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ae0c82375dda26bb7590a2ad3f42401dd">worksheet_print_area</a>(worksheet, 0, 0, 41, 10); <span class="comment">// A1:K42.</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Same as:</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#ae0c82375dda26bb7590a2ad3f42401dd">worksheet_print_area</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A1:K42&quot;</span>));</div>
+</div><!-- fragment --><p>In order to set a row or column range you must specify the entire range:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ae0c82375dda26bb7590a2ad3f42401dd">worksheet_print_area</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A1:H1048576&quot;</span>)); <span class="comment">// Same as A:H.</span></div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9ed8b0603df10ce2439b54f7980efb6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_fit_to_pages </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">width</td><td>Number of pages horizontally. </td></tr>
+    <tr><td class="paramname">height</td><td>Number of pages vertically.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>worksheet_fit_to_pages()</code> function is used to fit the printed area to a specific number of pages both vertically and horizontally. If the printed area exceeds the specified number of pages it will be scaled down to fit. This ensures that the printed area will always appear on the specified number of pages even if the page size or margins change:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d">worksheet_fit_to_pages</a>(worksheet1, 1, 1); <span class="comment">// Fit to 1x1 pages.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d">worksheet_fit_to_pages</a>(worksheet2, 2, 1); <span class="comment">// Fit to 2x1 pages.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d">worksheet_fit_to_pages</a>(worksheet3, 1, 2); <span class="comment">// Fit to 1x2 pages.</span></div>
+</div><!-- fragment --><p>The print area can be defined using the <code><a class="el" href="worksheet_8h.html#ae0c82375dda26bb7590a2ad3f42401dd" title="Set the print area for a worksheet. ">worksheet_print_area()</a></code> function as described above.</p>
+<p>A common requirement is to fit the printed output to <code>n</code> pages wide but have the height be as long as necessary. To achieve this set the <code>height</code> to zero:</p>
+<div class="fragment"><div class="line"><span class="comment">// 1 page wide and as long as necessary.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d">worksheet_fit_to_pages</a>(worksheet, 1, 0);  </div>
+</div><!-- fragment --><p><b>Note</b>:</p>
+<ul>
+<li>Although it is valid to use both <code>worksheet_fit_to_pages()</code> and <code>worksheet_set_print_scale()</code> on the same worksheet Excel only allows one of these options to be active at a time. The last function call made will set the active option.</li>
+<li>The <code>worksheet_fit_to_pages()</code> function will override any manual page breaks that are defined in the worksheet.</li>
+<li>When using <code>worksheet_fit_to_pages()</code> it may also be required to set the printer paper size using <code><a class="el" href="worksheet_8h.html#a9f8af12017797b10c5ee68e04149032f" title="Set the paper type for printing. ">worksheet_set_paper()</a></code> or else Excel will default to "US Letter". </li>
+</ul>
 
 </div>
 </div>
