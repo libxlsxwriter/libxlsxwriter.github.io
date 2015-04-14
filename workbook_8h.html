@@ -88,7 +88,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#func-members">Functions</a> &#124;
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">workbook.h File Reference</div>  </div>
 </div><!--header-->
@@ -306,7 +307,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
 </div><!-- fragment --><p>The <code>workbook_close()</code> function returns any <a class="el" href="workbook_8h.html#ad944bb322b4110cde2c5ce8e2eb542a3" title="Errors conditions encountered when closing the Workbook and writing the Excel file to disk...">lxw_close_error</a> error codes encountered when creating the Excel file. The error code can be returned from the program main or the calling function:</p>
 <div class="fragment"><div class="line"><span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a11">anatomy.c</a>, <a class="el" href="constant_memory_8c-example.html#a7">constant_memory.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a9">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a10">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a14">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a8">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a10">demo.c</a>, <a class="el" href="format_font_8c-example.html#a10">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a9">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a8">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a6">hello.c</a>, <a class="el" href="merge1_8c-example.html#a17">merge1.c</a>, <a class="el" href="tutorial1_8c-example.html#a7">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a11">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a15">tutorial3.c</a>, and <a class="el" href="utf8_8c-example.html#a5">utf8.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a11">anatomy.c</a>, <a class="el" href="constant_memory_8c-example.html#a7">constant_memory.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a9">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a10">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a14">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a9">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a10">demo.c</a>, <a class="el" href="format_font_8c-example.html#a10">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a9">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a9">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a6">hello.c</a>, <a class="el" href="merge1_8c-example.html#a17">merge1.c</a>, <a class="el" href="tutorial1_8c-example.html#a7">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a11">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a15">tutorial3.c</a>, and <a class="el" href="utf8_8c-example.html#a5">utf8.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -398,6 +399,48 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a82e722c1ca15a5fd8295dd0103b18caf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LXW_FOREACH_WORKSHEET</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">worksheet, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">workbook&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;STAILQ_FOREACH((worksheet), (workbook)-&gt;worksheets, list_pointers)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This macro allows you to loop over all the worksheets that have been added to a workbook. You must provide a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> pointer and a pointer to the <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook. ">lxw_workbook</a>:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook = <a class="code" href="workbook_8h.html#a4c34a495371c477c06f16a2a0007dea7">new_workbook</a>(<span class="stringliteral">&quot;test.xlsx&quot;</span>);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet; <span class="comment">// Generic worksheet pointer.</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Worksheet objects used in the program.</span></div>
+<div class="line"><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet1 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line"><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet2 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line"><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet3 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Iterate over the 3 worksheets and perform the same operation on each.</span></div>
+<div class="line"><a class="code" href="workbook_8h.html#a82e722c1ca15a5fd8295dd0103b18caf">LXW_FOREACH_WORKSHEET</a>(worksheet, workbook){</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
+<div class="line">}</div>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="defined_name_8c-example.html#a5">defined_name.c</a>.</dd>
+</dl>
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="ad944bb322b4110cde2c5ce8e2eb542a3"></a>
 <div class="memitem">
@@ -445,6 +488,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ad944bb322b4110cde2c5ce8e2eb542a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Errors conditions encountered when closing the Workbook and writing the Excel file to disk.  <a href="workbook_8h.html#ad944bb322b4110cde2c5ce8e2eb542a3">More...</a><br /></td></tr>
 <tr class="separator:ad944bb322b4110cde2c5ce8e2eb542a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a82e722c1ca15a5fd8295dd0103b18caf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a82e722c1ca15a5fd8295dd0103b18caf">LXW_FOREACH_WORKSHEET</a>(worksheet, workbook)&#160;&#160;&#160;STAILQ_FOREACH((worksheet), (workbook)-&gt;worksheets, list_pointers)</td></tr>
+<tr class="memdesc:a82e722c1ca15a5fd8295dd0103b18caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to loop over all the worksheets in a workbook.  <a href="#a82e722c1ca15a5fd8295dd0103b18caf">More...</a><br /></td></tr>
+<tr class="separator:a82e722c1ca15a5fd8295dd0103b18caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->

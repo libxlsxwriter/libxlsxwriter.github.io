@@ -55,6 +55,7 @@ var searchData=
   ['lxw_5fdefined_5fcolors',['lxw_defined_colors',['../format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38b',1,'format.h']]],
   ['lxw_5ffont_5fsubscript',['LXW_FONT_SUBSCRIPT',['../format_8h.html#a0ff8fd761893f60fddbd7f1cab4ac75aa38cf7f98c69b63c30194c5907f8397ec',1,'format.h']]],
   ['lxw_5ffont_5fsuperscript',['LXW_FONT_SUPERSCRIPT',['../format_8h.html#a0ff8fd761893f60fddbd7f1cab4ac75aa191621e73f0f2837147d221ed5f06034',1,'format.h']]],
+  ['lxw_5fforeach_5fworksheet',['LXW_FOREACH_WORKSHEET',['../workbook_8h.html#a82e722c1ca15a5fd8295dd0103b18caf',1,'workbook.h']]],
   ['lxw_5fformat',['lxw_format',['../structlxw__format.html',1,'lxw_format'],['../format_8h.html#a161ec61cf568ac0e07ff4c793f909b41',1,'lxw_format():&#160;format.h']]],
   ['lxw_5fformat_5falignments',['lxw_format_alignments',['../format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5',1,'format.h']]],
   ['lxw_5fformat_5fborders',['lxw_format_borders',['../format_8h.html#a4d5e924b1acd9571fd5e0fe2615e9f8f',1,'format.h']]],
