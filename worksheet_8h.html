@@ -120,15 +120,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ad9c384e17c06538c6a45f2cec7b5bef1"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *formula, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
 <tr class="memdesc:ad9c384e17c06538c6a45f2cec7b5bef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formula to a worksheet cell.  <a href="#ad9c384e17c06538c6a45f2cec7b5bef1">More...</a><br /></td></tr>
 <tr class="separator:ad9c384e17c06538c6a45f2cec7b5bef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9453aff2062f93d2c9784b96393f2f37"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37">worksheet_write_formula_num</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *formula, <a class="el" href="structlxw__format.html">lxw_format</a> *format, double result)</td></tr>
-<tr class="memdesc:a9453aff2062f93d2c9784b96393f2f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formula to a worksheet cell with a user defined result.  <a href="#a9453aff2062f93d2c9784b96393f2f37">More...</a><br /></td></tr>
-<tr class="separator:a9453aff2062f93d2c9784b96393f2f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5524b8304904962d6686d2723252e981"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a5524b8304904962d6686d2723252e981">worksheet_write_array_formula</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col, const char *formula, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:a5524b8304904962d6686d2723252e981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write an array formula to a worksheet cell.  <a href="#a5524b8304904962d6686d2723252e981">More...</a><br /></td></tr>
+<tr class="separator:a5524b8304904962d6686d2723252e981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbc5654e9b8987ba263f83fff082ce33"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33">worksheet_write_datetime</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__datetime.html">lxw_datetime</a> *datetime, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
 <tr class="memdesc:acbc5654e9b8987ba263f83fff082ce33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a date or time to a worksheet cell.  <a href="#acbc5654e9b8987ba263f83fff082ce33">More...</a><br /></td></tr>
 <tr class="separator:acbc5654e9b8987ba263f83fff082ce33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56bcd1671dc853a4927adb67696726ec"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a56bcd1671dc853a4927adb67696726ec">worksheet_write_blank</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
 <tr class="memdesc:a56bcd1671dc853a4927adb67696726ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formatted blank worksheet cell.  <a href="#a56bcd1671dc853a4927adb67696726ec">More...</a><br /></td></tr>
 <tr class="separator:a56bcd1671dc853a4927adb67696726ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9453aff2062f93d2c9784b96393f2f37"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37">worksheet_write_formula_num</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *formula, <a class="el" href="structlxw__format.html">lxw_format</a> *format, double result)</td></tr>
+<tr class="memdesc:a9453aff2062f93d2c9784b96393f2f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formula to a worksheet cell with a user defined result.  <a href="#a9453aff2062f93d2c9784b96393f2f37">More...</a><br /></td></tr>
+<tr class="separator:a9453aff2062f93d2c9784b96393f2f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2737ea78d5e679613f2fdd7bb425030"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ab2737ea78d5e679613f2fdd7bb425030">worksheet_set_row</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, double height, <a class="el" href="structlxw__format.html">lxw_format</a> *format, <a class="el" href="structlxw__row__col__options.html">lxw_row_col_options</a> *options)</td></tr>
 <tr class="memdesc:ab2737ea78d5e679613f2fdd7bb425030"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the properties for a row of cells.  <a href="#ab2737ea78d5e679613f2fdd7bb425030">More...</a><br /></td></tr>
 <tr class="separator:ab2737ea78d5e679613f2fdd7bb425030"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -279,7 +282,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="write_number02.png" alt="write_number02.png"/>
 </div>
- <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a10">anatomy.c</a>, <a class="el" href="constant_memory_8c-example.html#a6">constant_memory.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a8">dates_and_times01.c</a>, <a class="el" href="demo_8c-example.html#a9">demo.c</a>, <a class="el" href="format_num_format_8c-example.html#a8">format_num_format.c</a>, <a class="el" href="hello_8c-example.html#a5">hello.c</a>, <a class="el" href="tutorial1_8c-example.html#a5">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a9">tutorial2.c</a>, and <a class="el" href="tutorial3_8c-example.html#a13">tutorial3.c</a>.</dd>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a10">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a4">array_formula.c</a>, <a class="el" href="constant_memory_8c-example.html#a6">constant_memory.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a8">dates_and_times01.c</a>, <a class="el" href="demo_8c-example.html#a9">demo.c</a>, <a class="el" href="format_num_format_8c-example.html#a8">format_num_format.c</a>, <a class="el" href="hello_8c-example.html#a5">hello.c</a>, <a class="el" href="tutorial1_8c-example.html#a5">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a9">tutorial2.c</a>, and <a class="el" href="tutorial3_8c-example.html#a13">tutorial3.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -431,12 +434,12 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a9453aff2062f93d2c9784b96393f2f37"></a>
+<a class="anchor" id="a5524b8304904962d6686d2723252e981"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t worksheet_write_formula_num </td>
+          <td class="memname">int8_t worksheet_write_array_formula </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -445,13 +448,25 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
-          <td class="paramname"><em>row</em>, </td>
+          <td class="paramname"><em>first_row</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
-          <td class="paramname"><em>col</em>, </td>
+          <td class="paramname"><em>first_col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>last_row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>last_col</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -463,13 +478,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structlxw__format.html">lxw_format</a> *&#160;</td>
-          <td class="paramname"><em>format</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>result</em>&#160;</td>
+          <td class="paramname"><em>format</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -480,25 +489,29 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">worksheet</td><td>Pointer to the <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
-    <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
-    <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
-    <tr><td class="paramname">formula</td><td>Formula string to write to cell. </td></tr>
-    <tr><td class="paramname">format</td><td>A pointer to a Format instance or NULL. </td></tr>
-    <tr><td class="paramname">result</td><td>A user defined result for a formula.</td></tr>
+    <tr><td class="paramname">worksheet</td><td></td></tr>
+    <tr><td class="paramname">first_row</td><td>The first row of the range. (All zero indexed.) </td></tr>
+    <tr><td class="paramname">first_col</td><td>The first column of the range. </td></tr>
+    <tr><td class="paramname">last_row</td><td>The last row of the range. </td></tr>
+    <tr><td class="paramname">last_col</td><td>The last col of the range. </td></tr>
+    <tr><td class="paramname">formula</td><td>Array formula to write to cell. </td></tr>
+    <tr><td class="paramname">format</td><td>A pointer to a Format instance or NULL.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> code.</dd></dl>
-<p>The <code>worksheet_write_formula_num()</code> function writes a formula or Excel function to the cell specified by <code>row</code> and <code>column</code> with a user defined result:</p>
-<div class="fragment"><div class="line"><span class="comment">// Required as a workaround only.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37">worksheet_write_formula_num</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=1 + 2&quot;</span>, NULL, 3);</div>
-</div><!-- fragment --><p>Libxlsxwriter doesn't calculate the value of a formula and instead stores the value <code>0</code> as the formula result. It then sets a global flag in the XLSX file to say that all formulas and functions should be recalculated when the file is opened.</p>
-<p>This is the method recommended in the Excel documentation and in general it works fine with spreadsheet applications.</p>
-<p>However, applications that don't have a facility to calculate formulas, such as Excel Viewer, or some mobile applications will only display the <code>0</code> results.</p>
-<p>If required, the <code>worksheet_write_formula_num()</code> function can be used to specify a formula and its result.</p>
-<p>This function is rarely required and is only provided for compatibility with some third party applications. For most applications the <a class="el" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1" title="Write a formula to a worksheet cell. ">worksheet_write_formula()</a> function is the recommended way of writing formulas. </p>
-
+<p>The <code>worksheet_write_array_formula()</code> function writes an array formula to a cell range. In Excel an array formula is a formula that performs a calculation on a set of values.</p>
+<p>In Excel an array formula is indicated by a pair of braces around the formula: <code>{=SUM(A1:B1*A2:B2)}</code>.</p>
+<p>Array formulas can return a single value or a range or values. For array formulas that return a range of values you must specify the range that the return values will be written to. This is why this function has <code>first_</code> and <code>last_</code> row/column parameters. The <a class="el" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc" title="Convert an Excel A1:B2 range into a (first_row, first_col, last_row, last_col) sequence. ">RANGE()</a> macro can also be used to specify the range:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a5524b8304904962d6686d2723252e981">worksheet_write_array_formula</a>(worksheet, 4, 0, 6, 0,     <span class="stringliteral">&quot;{=TREND(C5:C7,B5:B7)}&quot;</span>, NULL);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Same as above using the RANGE() macro.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a5524b8304904962d6686d2723252e981">worksheet_write_array_formula</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A5:A7&quot;</span>), <span class="stringliteral">&quot;{=TREND(C5:C7,B5:B7)}&quot;</span>, NULL);</div>
+</div><!-- fragment --><p>If the array formula returns a single value then the <code>first_</code> and <code>last_</code> parameters should be the same:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a5524b8304904962d6686d2723252e981">worksheet_write_array_formula</a>(worksheet, 1, 0, 1, 0,     <span class="stringliteral">&quot;{=SUM(B1:C1*B2:C2)}&quot;</span>, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a5524b8304904962d6686d2723252e981">worksheet_write_array_formula</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A2:A2&quot;</span>), <span class="stringliteral">&quot;{=SUM(B1:C1*B2:C2)}&quot;</span>, NULL);</div>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="array_formula_8c-example.html#a5">array_formula.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="acbc5654e9b8987ba263f83fff082ce33"></a>
@@ -632,6 +645,76 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9453aff2062f93d2c9784b96393f2f37"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t worksheet_write_formula_num </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>formula</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__format.html">lxw_format</a> *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to the <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
+    <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
+    <tr><td class="paramname">formula</td><td>Formula string to write to cell. </td></tr>
+    <tr><td class="paramname">format</td><td>A pointer to a Format instance or NULL. </td></tr>
+    <tr><td class="paramname">result</td><td>A user defined result for a formula.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> code.</dd></dl>
+<p>The <code>worksheet_write_formula_num()</code> function writes a formula or Excel function to the cell specified by <code>row</code> and <code>column</code> with a user defined result:</p>
+<div class="fragment"><div class="line"><span class="comment">// Required as a workaround only.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37">worksheet_write_formula_num</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=1 + 2&quot;</span>, NULL, 3);</div>
+</div><!-- fragment --><p>Libxlsxwriter doesn't calculate the value of a formula and instead stores the value <code>0</code> as the formula result. It then sets a global flag in the XLSX file to say that all formulas and functions should be recalculated when the file is opened.</p>
+<p>This is the method recommended in the Excel documentation and in general it works fine with spreadsheet applications.</p>
+<p>However, applications that don't have a facility to calculate formulas, such as Excel Viewer, or some mobile applications will only display the <code>0</code> results.</p>
+<p>If required, the <code>worksheet_write_formula_num()</code> function can be used to specify a formula and its result.</p>
+<p>This function is rarely required and is only provided for compatibility with some third party applications. For most applications the <a class="el" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1" title="Write a formula to a worksheet cell. ">worksheet_write_formula()</a> function is the recommended way of writing formulas. </p>
+
+</div>
+</div>
 <a class="anchor" id="ab2737ea78d5e679613f2fdd7bb425030"></a>
 <div class="memitem">
 <div class="memproto">
@@ -715,7 +798,7 @@ Functions</h2></td></tr>
 <div class="line"></div>
 <div class="line"><span class="comment">// Hide the fourth row.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ab2737ea78d5e679613f2fdd7bb425030">worksheet_set_row</a>(worksheet, 3, 20, NULL, &amp;options);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="merge1_8c-example.html#a15">merge1.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="merge_range_8c-example.html#a15">merge_range.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -828,7 +911,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__row__col__options.html">lxw_row_col_options</a> options = {.<a class="code" href="structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562">hidden</a> = 1, .level = 0, .collapsed = 0};</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:A&quot;</span>), 8.43, NULL, &amp;options);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="merge1_8c-example.html#a14">merge1.c</a>, and <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, and <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -913,7 +996,7 @@ Functions</h2></td></tr>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ac15d2e82b73308458e9cdebeffdd46e6">worksheet_merge_range</a>(worksheet, 2, 1, 3, 3, <span class="stringliteral">&quot;Merged Range&quot;</span>, merge_format);</div>
 </div><!-- fragment --><div class="image">
-<img src="merge_range.png" alt="merge_range.png"/>
+<img src="merge.png" alt="merge.png"/>
 </div>
 <p>The <code>worksheet_merge_range()</code> function writes a <code>char*</code> string using <code><a class="el" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c" title="Write a string to a worksheet cell. ">worksheet_write_string()</a></code>. In order to write other data types, such as a number or a formula, you can overwrite the first cell with a call to one of the other write functions. The same Format should be used as was used in the merged range.</p>
 <div class="fragment"><div class="line"><span class="comment">// First write a range with a blank string.</span></div>
@@ -921,7 +1004,7 @@ Functions</h2></td></tr>
 <div class="line"></div>
 <div class="line"><span class="comment">// Then overwrite the first cell with a number.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 1, 1, 123, format);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="merge1_8c-example.html#a16">merge1.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="merge_range_8c-example.html#a16">merge_range.c</a>.</dd>
 </dl>
 </div>
 </div>
