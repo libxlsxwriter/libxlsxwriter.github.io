@@ -11,6 +11,7 @@ var searchData=
   ['working_20with_20memory_20and_20performance',['Working with Memory and Performance',['../working_with_memory.html',1,'']]],
   ['worksheet_2eh',['worksheet.h',['../worksheet_8h.html',1,'']]],
   ['worksheet_5factivate',['worksheet_activate',['../worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08',1,'worksheet.h']]],
+  ['worksheet_5fautofilter',['worksheet_autofilter',['../worksheet_8h.html#af09ab5ededabf5b82f265823eb3a0e8e',1,'worksheet.h']]],
   ['worksheet_5fcenter_5fhorizontally',['worksheet_center_horizontally',['../worksheet_8h.html#a931114d5266e03931f9fc1b21bd9b56c',1,'worksheet.h']]],
   ['worksheet_5fcenter_5fvertically',['worksheet_center_vertically',['../worksheet_8h.html#a3a7fdfe9ef603ef75a03818e6abbfd12',1,'worksheet.h']]],
   ['worksheet_5ffit_5fto_5fpages',['worksheet_fit_to_pages',['../worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d',1,'worksheet.h']]],
