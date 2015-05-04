@@ -126,6 +126,8 @@ Functions</h2></td></tr>
 <tr class="memitem:acbc5654e9b8987ba263f83fff082ce33"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33">worksheet_write_datetime</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__datetime.html">lxw_datetime</a> *datetime, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
 <tr class="memdesc:acbc5654e9b8987ba263f83fff082ce33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a date or time to a worksheet cell.  <a href="#acbc5654e9b8987ba263f83fff082ce33">More...</a><br /></td></tr>
 <tr class="separator:acbc5654e9b8987ba263f83fff082ce33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22629468c16149a42de1c17ac9ee6aac"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *url, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="separator:a22629468c16149a42de1c17ac9ee6aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56bcd1671dc853a4927adb67696726ec"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a56bcd1671dc853a4927adb67696726ec">worksheet_write_blank</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
 <tr class="memdesc:a56bcd1671dc853a4927adb67696726ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formatted blank worksheet cell.  <a href="#a56bcd1671dc853a4927adb67696726ec">More...</a><br /></td></tr>
 <tr class="separator:a56bcd1671dc853a4927adb67696726ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -359,7 +361,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="write_string03.png" alt="write_string03.png"/>
 </div>
- <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a4">autofilter.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a8">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, and <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>.</dd>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a4">autofilter.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a8">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, and <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -592,6 +594,107 @@ Functions</h2></td></tr>
 <p>The <code>format</code> parameter should be used to apply formatting to the cell using a <a class="el" href="format_8h.html">Format</a> object as shown above. Without a date format the datetime will appear as a number only.</p>
 <p>See <a class="el" href="working_with_dates.html">Working with Dates and Times</a> for more information about handling dates and times in libxlsxwriter. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="dates_and_times02_8c-example.html#a9">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a13">dates_and_times03.c</a>, and <a class="el" href="tutorial3_8c-example.html#a12">tutorial3.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a22629468c16149a42de1c17ac9ee6aac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t worksheet_write_url </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__format.html">lxw_format</a> *&#160;</td>
+          <td class="paramname"><em>format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to the <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
+    <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
+    <tr><td class="paramname">url</td><td>The url to write to the cell. </td></tr>
+    <tr><td class="paramname">format</td><td>A pointer to a Format instance or NULL.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#ad031ffc1d718178a7180e8d63ebbf81b">lxw_write_error</a> code.</dd></dl>
+<p>The <code>worksheet_write_url()</code> function is used to write a URL/hyperlink to a worksheet cell specified by <code>row</code> and <code>column</code>.</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, url_format);</div>
+</div><!-- fragment --><div class="image">
+<img src="hyperlinks_short.png" alt="hyperlinks_short.png"/>
+</div>
+<p>The <code>format</code> parameter is used to apply formatting to the cell. This parameter can be <code>NULL</code> to indicate no formatting or it can be a <a class="el" href="format_8h.html">Format</a> object. The typical worksheet format for a hyperlink is a blue underline:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *url_format   = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="format_8h.html#ad35ee5445826bd93ec1bc0d489fc09db">format_set_underline</a> (url_format, <a class="code" href="format_8h.html#af530d7971d15c164f3fb6bbfede9a39fa76d5bdd1c57c126df937f0b003597e18">LXW_UNDERLINE_SINGLE</a>);</div>
+<div class="line"><a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(url_format, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>);</div>
+</div><!-- fragment --><p>The usual web style URI's are supported: <code>http://</code>, <code>https://</code>, <code>ftp://</code> and <code>mailto:</code> :</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;ftp://www.python.org/&quot;</span>,    url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;http://www.python.org/&quot;</span>,   url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 2, 0, <span class="stringliteral">&quot;https://www.python.org/&quot;</span>,  url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 3, 0, <span class="stringliteral">&quot;mailto:jmcnamaracpan.org&quot;</span>, url_format);</div>
+</div><!-- fragment --><p>An Excel hyperlink is comprised of two elements: the displayed string and the non-displayed link. By default the displayed string is the same as the link. However, it is possible to overwrite it with any other <code>libxlsxwriter</code> type using the appropriate <code>worksheet_write_*()</code> function. The most common case is to overwrite the displayed link text with another string:</p>
+<div class="fragment"><div class="line"><span class="comment">// Write a hyperlink but overwrite the displayed string.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>   (worksheet, 2, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 2, 0, <span class="stringliteral">&quot;Read the documentation.&quot;</span>,        url_format);</div>
+</div><!-- fragment --><div class="image">
+<img src="hyperlinks_short2.png" alt="hyperlinks_short2.png"/>
+</div>
+<p>Two local URIs are supported: <code>internal:</code> and <code>external:</code>. These are used for hyperlinks to internal worksheet references or external workbook and worksheet references:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;internal:Sheet2!A1&quot;</span>,                url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;internal:Sheet2!B2&quot;</span>,                url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 2, 0, <span class="stringliteral">&quot;internal:Sheet2!A1:B2&quot;</span>,             url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 3, 0, <span class="stringliteral">&quot;internal:&#39;Sales Data&#39;!A1&quot;</span>,          url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 4, 0, <span class="stringliteral">&quot;external:c:\\temp\\foo.xlsx&quot;</span>,       url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 5, 0, <span class="stringliteral">&quot;external:c:\\foo.xlsx#Sheet2!A1&quot;</span>,   url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 6, 0, <span class="stringliteral">&quot;external:..\\foo.xlsx&quot;</span>,             url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 7, 0, <span class="stringliteral">&quot;external:..\\foo.xlsx#Sheet2!A1&quot;</span>,   url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 8, 0, <span class="stringliteral">&quot;external:\\\\NET\\share\\foo.xlsx&quot;</span>, url_format);</div>
+</div><!-- fragment --><p>Worksheet references are typically of the form <code>Sheet1!A1</code>. You can also link to a worksheet range using the standard Excel notation: <code>Sheet1!A1:B2</code>.</p>
+<p>In external links the workbook and worksheet name must be separated by the <code>#</code> character:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:c:\\foo.xlsx#Sheet2!A1&quot;</span>,   url_format);</div>
+</div><!-- fragment --><p>You can also link to a named range in the target worksheet: For example say you have a named range called <code>my_name</code> in the workbook <code>c:\temp\foo.xlsx</code> you could link to it as follows:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:c:\\temp\\foo.xlsx#my_name&quot;</span>, url_format);</div>
+</div><!-- fragment --><p>Excel requires that worksheet names containing spaces or non alphanumeric characters are single quoted as follows:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;internal:&#39;Sales Data&#39;!A1&quot;</span>, url_format);</div>
+</div><!-- fragment --><p>Links to network files are also supported. Network files normally begin with two back slashes as follows <code>\\NETWORK\etc</code>. In order to represent this in a C string literal the backslashes should be escaped: </p><div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:\\\\NET\\share\\foo.xlsx&quot;</span>, url_format);</div>
+</div><!-- fragment --><p>Alternatively, you can use Windows style forward slashes. These are translated internally to backslashes:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:c:/temp/foo.xlsx&quot;</span>,     url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;external://NET/share/foo.xlsx&quot;</span>, url_format);</div>
+</div><!-- fragment --><p><b>Note:</b></p>
+<p>libxlsxwriter will escape the following characters in URLs as required by Excel: <code>\s " &lt; &gt; \ [ ] ^ { }</code> unless the URL already contains <code>%xx</code> style escapes. In which case it is assumed that the URL was escaped correctly by the user and will by passed directly to Excel. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="hyperlinks_8c-example.html#a12">hyperlinks.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -914,7 +1017,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__row__col__options.html">lxw_row_col_options</a> options = {.<a class="code" href="structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562">hidden</a> = 1, .level = 0, .collapsed = 0};</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:A&quot;</span>), 8.43, NULL, &amp;options);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, and <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="hyperlinks_8c-example.html#a11">hyperlinks.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, and <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>.</dd>
 </dl>
 </div>
 </div>
