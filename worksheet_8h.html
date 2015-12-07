@@ -666,10 +666,10 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="format_8h.html#ad35ee5445826bd93ec1bc0d489fc09db">format_set_underline</a> (url_format, <a class="code" href="format_8h.html#af530d7971d15c164f3fb6bbfede9a39fa76d5bdd1c57c126df937f0b003597e18">LXW_UNDERLINE_SINGLE</a>);</div>
 <div class="line"><a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(url_format, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>);</div>
 </div><!-- fragment --><p>The usual web style URI's are supported: <code>http://</code>, <code>https://</code>, <code>ftp://</code> and <code>mailto:</code> :</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;ftp://www.python.org/&quot;</span>,    url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;http://www.python.org/&quot;</span>,   url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 2, 0, <span class="stringliteral">&quot;https://www.python.org/&quot;</span>,  url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 3, 0, <span class="stringliteral">&quot;mailto:jmcnamaracpan.org&quot;</span>, url_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;ftp://www.python.org/&quot;</span>,     url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;http://www.python.org/&quot;</span>,    url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 2, 0, <span class="stringliteral">&quot;https://www.python.org/&quot;</span>,   url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 3, 0, <span class="stringliteral">&quot;mailto:jmcnamara@cpan.org&quot;</span>, url_format);</div>
 </div><!-- fragment --><p>An Excel hyperlink is comprised of two elements: the displayed string and the non-displayed link. By default the displayed string is the same as the link. However, it is possible to overwrite it with any other <code>libxlsxwriter</code> type using the appropriate <code>worksheet_write_*()</code> function. The most common case is to overwrite the displayed link text with another string:</p>
 <div class="fragment"><div class="line"><span class="comment">// Write a hyperlink but overwrite the displayed string.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>   (worksheet, 2, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, url_format);</div>
@@ -1094,7 +1094,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
 <p>The <code>worksheet_merge_range()</code> function allows cells to be merged together so that they act as a single area.</p>
-<p>Excel generally merges and centers cells at same time. To get similar behaviour with libxlsxwriter you need to apply a <a class="el" href="format_8h.html">Format</a> object with the appropriate alignment:</p>
+<p>Excel generally merges and centers cells at same time. To get similar behavior with libxlsxwriter you need to apply a <a class="el" href="format_8h.html">Format</a> object with the appropriate alignment:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *merge_format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>(merge_format, <a class="code" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a9899936ef3a43721b394b9b5d2314496">LXW_ALIGN_CENTER</a>);</div>
 <div class="line"></div>
@@ -1691,7 +1691,7 @@ Functions</h2></td></tr>
 <div class="line">|                                                               |</div>
 <div class="line">|                                                         Hello |</div>
 <div class="line">|                                                               |</div>
-</div><!-- fragment --><p>For simple text, if you do not specify any justification the text will be centred. However, you must prefix the text with <code>&amp;C</code> if you specify a font name or any other formatting:</p>
+</div><!-- fragment --><p>For simple text, if you do not specify any justification the text will be centered. However, you must prefix the text with <code>&amp;C</code> if you specify a font name or any other formatting:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;Hello&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"> ---------------------------------------------------------------</div>

@@ -99,10 +99,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="image">
 <img src="formats_intro.png" alt="formats_intro.png"/>
 </div>
-<p>Formats in <code>libxlswriter</code> are accessed via the <a class="el" href="structlxw__format.html" title="Struct to represent the formatting properties of an Excel format. ">lxw_format</a> struct. Throughout this document these will be referred to simply as <em>Formats</em>.</p>
+<p>Formats in <code>libxlsxwriter</code> are accessed via the <a class="el" href="structlxw__format.html" title="Struct to represent the formatting properties of an Excel format. ">lxw_format</a> struct. Throughout this document these will be referred to simply as <em>Formats</em>.</p>
 <p>Formats are created by calling the <a class="el" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33" title="Create a new Format object to formats cells in worksheets. ">workbook_add_format()</a> method as follows:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
-</div><!-- fragment --><p>The members of the <a class="el" href="structlxw__format.html" title="Struct to represent the formatting properties of an Excel format. ">lxw_format</a> struct aren't modified directly. Instead the format properties are set by calling the function shown in this section. For example:</p>
+</div><!-- fragment --><p>The members of the <a class="el" href="structlxw__format.html" title="Struct to represent the formatting properties of an Excel format. ">lxw_format</a> struct aren't modified directly. Instead the format properties are set by calling the functions shown in this section. For example:</p>
 <div class="fragment"><div class="line"><span class="comment">// Create the Format.</span></div>
 <div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"></div>
@@ -112,7 +112,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">// Use the format to change the text format in a cell.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, format);</div>
-</div><!-- fragment --><p>The full range of formatting options that can be applied using <code>libxlswriter</code> are shown below. </p>
+</div><!-- fragment --><p>The full range of formatting options that can be applied using <code>libxlsxwriter</code> are shown below. </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -1493,7 +1493,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The type for RGB colors in libxlswriter. The valid range is <code>0x000000</code> (black) to <code>0xFFFFFF</code> (white). See <a class="el" href="working_with_colors.html">Working with Colors</a>. </p>
+<p>The type for RGB colors in libxlsxwriter. The valid range is <code>0x000000</code> (black) to <code>0xFFFFFF</code> (white). See <a class="el" href="working_with_colors.html">Working with Colors</a>. </p>
 
 </div>
 </div>
@@ -1506,7 +1506,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Formats in <code>libxlswriter</code> are accessed via this struct.</p>
+<p>Formats in <code>libxlsxwriter</code> are accessed via this struct.</p>
 <p>The members of the <a class="el" href="structlxw__format.html" title="Struct to represent the formatting properties of an Excel format. ">lxw_format</a> struct aren't modified directly. Instead the format properties are set by calling the functions shown in <a class="el" href="format_8h.html" title="Functions and properties for adding formatting to cells in Excel. ">format.h</a>.</p>
 <p>For example:</p>
 <div class="fragment"><div class="line"><span class="comment">// Create the Format.</span></div>
@@ -1826,7 +1826,7 @@ Data Structures</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a422d719f90588b17d1399eaced80ae31"><td class="memItemLeft" align="right" valign="top">typedef int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format_8h.html#a422d719f90588b17d1399eaced80ae31">lxw_color_t</a></td></tr>
-<tr class="memdesc:a422d719f90588b17d1399eaced80ae31"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type for RGB colors in libxlswriter.  <a href="#a422d719f90588b17d1399eaced80ae31">More...</a><br /></td></tr>
+<tr class="memdesc:a422d719f90588b17d1399eaced80ae31"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type for RGB colors in libxlsxwriter.  <a href="#a422d719f90588b17d1399eaced80ae31">More...</a><br /></td></tr>
 <tr class="separator:a422d719f90588b17d1399eaced80ae31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a161ec61cf568ac0e07ff4c793f909b41"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__format.html">lxw_format</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format_8h.html#a161ec61cf568ac0e07ff4c793f909b41">lxw_format</a></td></tr>
 <tr class="memdesc:a161ec61cf568ac0e07ff4c793f909b41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent the formatting properties of an Excel format.  <a href="#a161ec61cf568ac0e07ff4c793f909b41">More...</a><br /></td></tr>

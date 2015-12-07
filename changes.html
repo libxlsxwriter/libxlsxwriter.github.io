@@ -79,10 +79,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Changes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>0.1.8 December 7 2015</h2>
+<div class="textblock"><h2>0.1.9 December 7 2015</h2>
+<ul>
+<li>Replaced main worksheet data structure with a Red/Black tree implementation for better performance when data isn't added in linear row-column order. Thanks to Martin Renters. Pull Request <a href="https://github.com/jmcnamara/libxlsxwriter/issues/14">#14</a> and <a href="https://github.com/jmcnamara/libxlsxwriter/issues/16">#16</a>.</li>
+</ul>
+<h2>0.1.8 December 7 2015</h2>
 <ul>
 <li>Added <code><a class="el" href="worksheet_8h.html#a7e52f1eecb20fe4f9e6223bcf195103b" title="Split and freeze a worksheet into panes. ">worksheet_freeze_panes()</a></code> and <code><a class="el" href="worksheet_8h.html#a9f4a3845529bcc2922b89bdb450ded32" title="Split a worksheet into panes. ">worksheet_split_panes()</a></code> to allow setting worksheet panes. See <a class="el" href="panes_8c-example.html">panes.c</a> example.</li>
-<li>Added <a href="https://github.com/lrossi/libxlsxwriterCocoaExamples">link to Xcode project</a> for iOS and OS X with Objective-C and Swift, provided by Ludovico Rossi.</li>
+<li>Added link to <a href="https://github.com/lrossi/libxlsxwriterCocoaExamples">Xcode project</a> for iOS and OS X with Objective-C and Swift, provided by Ludovico Rossi.</li>
 <li>Added improved support for Windows.</li>
 </ul>
 <h2>0.1.7 September 27 2015</h2>

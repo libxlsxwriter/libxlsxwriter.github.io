@@ -111,7 +111,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></p>
 <p>This optimisation works by flushing each row after a subsequent row is written. In this way the largest amount of data held in memory for a worksheet is the amount of data required to hold a single row of data.</p>
 <p>If required, this memory usage can be reduced even more by setting <code>LXW_COL_MAX</code> in worksheet.c from 16384 down to a value that matches the maximum column that is likely to be encountered.</p>
-<p>The trade-off when using <code>constant_memory</code> mode is that data must be added sequentiallly in row order and you won't be able to take advantage of any new features that manipulate cell data after it is written. Currently the only such feature is <a class="el" href="worksheet_8h.html#ab2737ea78d5e679613f2fdd7bb425030" title="Set the properties for a row of cells. ">worksheet_set_row()</a> which in <code>constant_memory</code> mode can only be used when writing data to the current row.</p>
+<p>The trade-off when using <code>constant_memory</code> mode is that data must be added sequentially in row order and you won't be able to take advantage of any new features that manipulate cell data after it is written. Currently the only such feature is <a class="el" href="worksheet_8h.html#ab2737ea78d5e679613f2fdd7bb425030" title="Set the properties for a row of cells. ">worksheet_set_row()</a> which in <code>constant_memory</code> mode can only be used when writing data to the current row.</p>
 <h2>Row Column Order </h2>
 <p>Since each new row flushes the previous row, data must be written in sequential row order when <code>constant_memory</code> mode is on:</p>
 <div class="fragment"><div class="line"> <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#adec7dc2f551c4819ff542b65a00ff5cb">new_workbook_opt</a>(<span class="stringliteral">&quot;constant_memory.xlsx&quot;</span>, &amp;options);</div>
@@ -128,7 +128,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Another optimisation that is used to reduce memory usage in <code>constant_memory</code> mode is that cell strings aren't stored in an Excel structure call "shared
 strings" and instead are written "in-line". This is a documented Excel feature that is supported by most spreadsheet applications. One known exception is Apple Numbers for Mac where the string data isn't displayed.</p>
 <h2>Performance </h2>
-<p>Currently the library isn't optimised. There are some known bottlenecks that will be reduced in upcoming versions. Also, the library is currently single threaded.</p>
+<p>Currently the library isn't optimized. There are some known bottlenecks that will be reduced in upcoming versions. Also, the library is currently single threaded.</p>
 <p>Next: <a class="el" href="examples.html">Example Programs</a> </p>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
