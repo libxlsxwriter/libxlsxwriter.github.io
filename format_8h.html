@@ -280,7 +280,10 @@ Functions</h2></td></tr>
 </dl>
 <p>Set the font size of the cell format:</p>
 <div class="fragment"><div class="line"><a class="code" href="format_8h.html#a4afb671f2edd01aacaf5e79d628be815">format_set_font_size</a>(format, 30);</div>
-</div><!-- fragment --><p>Excel adjusts the height of a row to accommodate the largest font size in the row. You can also explicitly specify the height of a row using the <a class="el" href="worksheet_8h.html#ab2737ea78d5e679613f2fdd7bb425030" title="Set the properties for a row of cells. ">worksheet_set_row()</a> function. </p>
+</div><!-- fragment --><div class="image">
+<img src="format_font_size.png" alt="format_font_size.png"/>
+</div>
+<p>Excel adjusts the height of a row to accommodate the largest font size in the row. You can also explicitly specify the height of a row using the <a class="el" href="worksheet_8h.html#ab2737ea78d5e679613f2fdd7bb425030" title="Set the properties for a row of cells. ">worksheet_set_row()</a> function. </p>
 
 </div>
 </div>
@@ -316,11 +319,13 @@ Functions</h2></td></tr>
 </dl>
 <p>Set the font color:</p>
 <div class="fragment"><div class="line">format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line"><a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(format, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(format, <span class="stringliteral">&quot;red&quot;</span>);</div>
-<div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;wheelbarrow&quot;</span>, format);</div>
-</div><!-- fragment --><p>The color should be an RGB integer value, see <a class="el" href="working_with_colors.html">Working with Colors</a>.</p>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Wheelbarrow&quot;</span>, format);</div>
+</div><!-- fragment --><div class="image">
+<img src="format_font_color.png" alt="format_font_color.png"/>
+</div>
+<p>The color should be an RGB integer value, see <a class="el" href="working_with_colors.html">Working with Colors</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>The <a class="el" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c" title="Set the color of the font used in the cell. ">format_set_font_color()</a> method is used to set the font color in a cell. To set the color of a cell background use the <a class="el" href="format_8h.html#aeef47436c335daf1801683ac7b3b587d" title="Set the pattern background color for a cell. ">format_set_bg_color()</a> and <a class="el" href="format_8h.html#a43ddbc77d637b04fdfbc45e96857d15a" title="Set the background fill pattern for a cell. ">format_set_pattern()</a> methods. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="hyperlinks_8c-example.html#a8">hyperlinks.c</a>.</dd>
 </dl>
@@ -346,8 +351,14 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p>Set the bold property of the font:</p>
-<div class="fragment"><div class="line"><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(format);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a6">anatomy.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a7">dates_and_times03.c</a>, <a class="el" href="demo_8c-example.html#a6">demo.c</a>, <a class="el" href="format_font_8c-example.html#a7">format_font.c</a>, <a class="el" href="merge_range_8c-example.html#a9">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a10">panes.c</a>, <a class="el" href="tutorial2_8c-example.html#a6">tutorial2.c</a>, and <a class="el" href="tutorial3_8c-example.html#a8">tutorial3.c</a>.</dd>
+<div class="fragment"><div class="line">format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line"><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(format);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Bold Text&quot;</span>, format);</div>
+</div><!-- fragment --><div class="image">
+<img src="format_font_bold.png" alt="format_font_bold.png"/>
+</div>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a6">anatomy.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a7">dates_and_times03.c</a>, <a class="el" href="demo_8c-example.html#a6">demo.c</a>, <a class="el" href="format_font_8c-example.html#a7">format_font.c</a>, <a class="el" href="merge_range_8c-example.html#a9">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a10">panes.c</a>, <a class="el" href="tutorial2_8c-example.html#a6">tutorial2.c</a>, and <a class="el" href="tutorial3_8c-example.html#a8">tutorial3.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -371,8 +382,14 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p>Set the italic property of the font:</p>
-<div class="fragment"><div class="line"><a class="code" href="format_8h.html#a19cbd7c34692eb7fb35a7411432d836e">format_set_italic</a>(format);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="format_font_8c-example.html#a8">format_font.c</a>.</dd>
+<div class="fragment"><div class="line">format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line"><a class="code" href="format_8h.html#a19cbd7c34692eb7fb35a7411432d836e">format_set_italic</a>(format);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Italic Text&quot;</span>, format);</div>
+</div><!-- fragment --><div class="image">
+<img src="format_font_italic.png" alt="format_font_italic.png"/>
+</div>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="format_font_8c-example.html#a8">format_font.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -408,7 +425,10 @@ Functions</h2></td></tr>
 </dl>
 <p>Set the underline property of the format:</p>
 <div class="fragment"><div class="line"><a class="code" href="format_8h.html#ad35ee5445826bd93ec1bc0d489fc09db">format_set_underline</a>(format, <a class="code" href="format_8h.html#af530d7971d15c164f3fb6bbfede9a39fa76d5bdd1c57c126df937f0b003597e18">LXW_UNDERLINE_SINGLE</a>);</div>
-</div><!-- fragment --><p>The available underline styles are:</p>
+</div><!-- fragment --><div class="image">
+<img src="format_font_underlined.png" alt="format_font_underlined.png"/>
+</div>
+<p>The available underline styles are:</p>
 <ul>
 <li><a class="el" href="format_8h.html#af530d7971d15c164f3fb6bbfede9a39fa76d5bdd1c57c126df937f0b003597e18">LXW_UNDERLINE_SINGLE</a></li>
 <li><a class="el" href="format_8h.html#af530d7971d15c164f3fb6bbfede9a39fa578bcd2c45f3d549fcfc46937550de13">LXW_UNDERLINE_DOUBLE</a></li>
@@ -434,11 +454,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">format</td><td>Pointer to a Format instance. </td></tr>
+    <tr><td class="paramname">format</td><td>Pointer to a Format instance.</td></tr>
   </table>
   </dd>
 </dl>
-
+<div class="image">
+<img src="format_font_strikeout.png" alt="format_font_strikeout.png"/>
+</div>
+ 
 </div>
 </div>
 <a class="anchor" id="a471ca432e429505c79982ca5aecd1db0"></a>
@@ -472,6 +495,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p>Set the superscript o subscript property of the font.</p>
+<div class="image">
+<img src="format_font_script.png" alt="format_font_script.png"/>
+</div>
 <p>The available script styles are:</p>
 <ul>
 <li><a class="el" href="format_8h.html#a0ff8fd761893f60fddbd7f1cab4ac75aa191621e73f0f2837147d221ed5f06034">LXW_FONT_SUPERSCRIPT</a></li>
@@ -800,7 +826,10 @@ Functions</h2></td></tr>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ab2737ea78d5e679613f2fdd7bb425030">worksheet_set_row</a>(0, 30);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Some Text&quot;</span>, format);</div>
-</div><!-- fragment --><p>Text can be aligned across two or more adjacent cells using the center_across property. However, for genuine merged cells it is better to use the <a class="el" href="worksheet_8h.html#ac15d2e82b73308458e9cdebeffdd46e6" title="Merge a range of cells. ">worksheet_merge_range()</a> worksheet method.</p>
+</div><!-- fragment --><div class="image">
+<img src="format_font_align.png" alt="format_font_align.png"/>
+</div>
+<p>Text can be aligned across two or more adjacent cells using the center_across property. However, for genuine merged cells it is better to use the <a class="el" href="worksheet_8h.html#ac15d2e82b73308458e9cdebeffdd46e6" title="Merge a range of cells. ">worksheet_merge_range()</a> worksheet method.</p>
 <p>The vertical justify option can be used to provide automatic text wrapping in a cell. The height of the cell will be adjusted to accommodate the wrapped text. To specify where the text wraps use the <a class="el" href="format_8h.html#a56d55dd9257d8f0645c62b296d2c196d" title="Wrap text in a cell. ">format_set_text_wrap()</a> method. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="dates_and_times03_8c-example.html#a11">dates_and_times03.c</a>, <a class="el" href="merge_range_8c-example.html#a6">merge_range.c</a>, and <a class="el" href="panes_8c-example.html#a6">panes.c</a>.</dd>
 </dl>
@@ -829,7 +858,10 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="format_8h.html#a56d55dd9257d8f0645c62b296d2c196d">format_set_text_wrap</a>(format);</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;It&#39;s\na bum\nwrap&quot;</span>, format);</div>
-</div><!-- fragment --><p>Excel will adjust the height of the row to accommodate the wrapped text. A similar effect can be obtained without newlines using the <a class="el" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13" title="Set the alignment for data in the cell. ">format_set_align()</a> function with <a class="el" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a4940e5aa8e07a9d659d1cf6c2785286f">LXW_ALIGN_VERTICAL_JUSTIFY</a>. </p>
+</div><!-- fragment --><div class="image">
+<img src="format_font_text_wrap.png" alt="format_font_text_wrap.png"/>
+</div>
+<p>Excel will adjust the height of the row to accommodate the wrapped text. A similar effect can be obtained without newlines using the <a class="el" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13" title="Set the alignment for data in the cell. ">format_set_align()</a> function with <a class="el" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a4940e5aa8e07a9d659d1cf6c2785286f">LXW_ALIGN_VERTICAL_JUSTIFY</a>. </p>
 
 </div>
 </div>
@@ -868,7 +900,10 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="format_8h.html#ae690004cd77f48646da07796b540c309">format_set_rotation</a>(format, 30);</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;This text is rotated&quot;</span>, format);</div>
-</div><!-- fragment --><p>The angle 270 is also supported. This indicates text where the letters run from top to bottom. </p>
+</div><!-- fragment --><div class="image">
+<img src="format_font_text_rotated.png" alt="format_font_text_rotated.png"/>
+</div>
+<p>The angle 270 is also supported. This indicates text where the letters run from top to bottom. </p>
 
 </div>
 </div>

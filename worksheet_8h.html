@@ -158,6 +158,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9f4a3845529bcc2922b89bdb450ded32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a9f4a3845529bcc2922b89bdb450ded32">worksheet_split_panes</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, double vertical, double horizontal)</td></tr>
 <tr class="memdesc:a9f4a3845529bcc2922b89bdb450ded32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a worksheet into panes.  <a href="#a9f4a3845529bcc2922b89bdb450ded32">More...</a><br /></td></tr>
 <tr class="separator:a9f4a3845529bcc2922b89bdb450ded32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62368aa313184d72a9ca2b1cf5de9a8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col)</td></tr>
+<tr class="memdesc:a62368aa313184d72a9ca2b1cf5de9a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the selected cell or cells in a worksheet:  <a href="#a62368aa313184d72a9ca2b1cf5de9a8a">More...</a><br /></td></tr>
+<tr class="separator:a62368aa313184d72a9ca2b1cf5de9a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad24e2a01fccb881e4cc478a92aa095e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ad24e2a01fccb881e4cc478a92aa095e6">worksheet_set_landscape</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
 <tr class="memdesc:ad24e2a01fccb881e4cc478a92aa095e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the page orientation as landscape.  <a href="#ad24e2a01fccb881e4cc478a92aa095e6">More...</a><br /></td></tr>
 <tr class="separator:ad24e2a01fccb881e4cc478a92aa095e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -269,7 +272,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">worksheet</td><td>Pointer to the <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">worksheet</td><td>pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
     <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
     <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
     <tr><td class="paramname">number</td><td>The number to write to the cell. </td></tr>
@@ -293,7 +296,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="write_number02.png" alt="write_number02.png"/>
 </div>
- <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a10">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a4">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a5">autofilter.c</a>, <a class="el" href="constant_memory_8c-example.html#a6">constant_memory.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a8">dates_and_times01.c</a>, <a class="el" href="demo_8c-example.html#a9">demo.c</a>, <a class="el" href="format_num_format_8c-example.html#a8">format_num_format.c</a>, <a class="el" href="hello_8c-example.html#a5">hello.c</a>, <a class="el" href="panes_8c-example.html#a17">panes.c</a>, <a class="el" href="tutorial1_8c-example.html#a5">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a9">tutorial2.c</a>, and <a class="el" href="tutorial3_8c-example.html#a13">tutorial3.c</a>.</dd>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a10">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a4">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a5">autofilter.c</a>, <a class="el" href="constant_memory_8c-example.html#a6">constant_memory.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a8">dates_and_times01.c</a>, <a class="el" href="demo_8c-example.html#a9">demo.c</a>, <a class="el" href="format_num_format_8c-example.html#a8">format_num_format.c</a>, <a class="el" href="hello_8c-example.html#a5">hello.c</a>, <a class="el" href="panes_8c-example.html#a18">panes.c</a>, <a class="el" href="tutorial1_8c-example.html#a5">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a9">tutorial2.c</a>, and <a class="el" href="tutorial3_8c-example.html#a13">tutorial3.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -340,7 +343,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">worksheet</td><td>Pointer to the <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">worksheet</td><td>pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
     <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
     <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
     <tr><td class="paramname">string</td><td>String to write to cell. </td></tr>
@@ -367,7 +370,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="write_string03.png" alt="write_string03.png"/>
 </div>
- <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a4">autofilter.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a8">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="panes_8c-example.html#a16">panes.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, and <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>.</dd>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a4">autofilter.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a8">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="panes_8c-example.html#a17">panes.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, and <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -414,7 +417,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">worksheet</td><td>Pointer to the <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">worksheet</td><td>pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
     <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
     <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
     <tr><td class="paramname">formula</td><td>Formula string to write to cell. </td></tr>
@@ -568,7 +571,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">worksheet</td><td>Pointer to the <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">worksheet</td><td>pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
     <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
     <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
     <tr><td class="paramname">datetime</td><td>The datetime to write to the cell. </td></tr>
@@ -646,7 +649,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">worksheet</td><td>Pointer to the <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">worksheet</td><td>pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
     <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
     <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
     <tr><td class="paramname">url</td><td>The url to write to the cell. </td></tr>
@@ -741,7 +744,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">worksheet</td><td>Pointer to the <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">worksheet</td><td>pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
     <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
     <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
     <tr><td class="paramname">format</td><td>A pointer to a Format instance or NULL.</td></tr>
@@ -806,7 +809,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">worksheet</td><td>Pointer to the <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">worksheet</td><td>pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
     <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
     <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
     <tr><td class="paramname">formula</td><td>Formula string to write to cell. </td></tr>
@@ -1338,7 +1341,69 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9f4a3845529bcc2922b89bdb450ded32">worksheet_split_panes</a>(worksheet1, 15, 0);    <span class="comment">// First row.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a9f4a3845529bcc2922b89bdb450ded32">worksheet_split_panes</a>(worksheet2, 0,  8.43); <span class="comment">// First column.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a9f4a3845529bcc2922b89bdb450ded32">worksheet_split_panes</a>(worksheet3, 15, 8.43); <span class="comment">// First row and column.</span></div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="panes_8c-example.html#a18">panes.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="panes_8c-example.html#a19">panes.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a62368aa313184d72a9ca2b1cf5de9a8a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_set_selection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>first_row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>first_col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>last_row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>last_col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">first_row</td><td>The first row of the range. (All zero indexed.) </td></tr>
+    <tr><td class="paramname">first_col</td><td>The first column of the range. </td></tr>
+    <tr><td class="paramname">last_row</td><td>The last row of the range. </td></tr>
+    <tr><td class="paramname">last_col</td><td>The last col of the range.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>worksheet_set_selection()</code> method can be used to specify which cell or range of cells is selected in a worksheet: The most common requirement is to select a single cell, in which case the <code>first_</code> and <code>last_</code> parameters should be the same.</p>
+<p>The active cell within a selected range is determined by the order in which <code>first_</code> and <code>last_</code> are specified.</p>
+<p>Examples:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a>(worksheet1, 3, 3, 3, 3);     <span class="comment">// Cell D4.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a>(worksheet2, 3, 3, 6, 6);     <span class="comment">// Cells D4 to G7.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a>(worksheet3, 6, 6, 3, 3);     <span class="comment">// Cells G7 to D4.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a>(worksheet5, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;D4:G7&quot;</span>)); <span class="comment">// Using the RANGE macro.</span></div>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="panes_8c-example.html#a16">panes.c</a>.</dd>
 </dl>
 </div>
 </div>

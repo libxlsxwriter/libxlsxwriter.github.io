@@ -127,15 +127,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <span class="comment">/* Some sheet formatting. */</span></div>
 <div class="line">    <a name="a14"></a><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet1, 0, 8, 16, NULL, NULL);</div>
 <div class="line">    <a name="a15"></a><a class="code" href="worksheet_8h.html#ab2737ea78d5e679613f2fdd7bb425030">worksheet_set_row</a>(worksheet1, 0, 20, NULL, NULL);</div>
+<div class="line">    <a name="a16"></a><a class="code" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a>(worksheet1, 4, 3, 4, 3);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Some worksheet text to demonstrate scrolling. */</span></div>
 <div class="line">    <span class="keywordflow">for</span> (col = 0; col &lt; 9; col++) {</div>
-<div class="line">        <a name="a16"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet1, 0, col, <span class="stringliteral">&quot;Scroll down&quot;</span>, header);</div>
+<div class="line">        <a name="a17"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet1, 0, col, <span class="stringliteral">&quot;Scroll down&quot;</span>, header);</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">for</span> (row = 1; row &lt; 100; row++) {</div>
 <div class="line">        <span class="keywordflow">for</span> (col = 0; col &lt; 9; col++) {</div>
-<div class="line">            <a name="a17"></a><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet1, row, col, row + 1, center);</div>
+<div class="line">            <a name="a18"></a><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet1, row, col, row + 1, center);</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line"></div>
@@ -147,6 +148,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Some sheet formatting. */</span></div>
 <div class="line">    <a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet2, 0, 0, 16, NULL, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a>(worksheet2, 4, 3, 4, 3);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Some worksheet text to demonstrate scrolling. */</span></div>
 <div class="line">    <span class="keywordflow">for</span> (row = 0; row &lt; 50; row++) {</div>
@@ -168,6 +170,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet3, 0, 25, 16, NULL, NULL);</div>
 <div class="line">    <a class="code" href="worksheet_8h.html#ab2737ea78d5e679613f2fdd7bb425030">worksheet_set_row</a>(worksheet3, 0, 20, NULL, NULL);</div>
 <div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet3, 0, 0, <span class="stringliteral">&quot;&quot;</span>, header);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a>(worksheet3, 4, 3, 4, 3);</div>
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Some worksheet text to demonstrate scrolling. */</span></div>
@@ -190,7 +193,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><span class="comment">     * The divisions must be specified in terms of row and column dimensions.</span></div>
 <div class="line"><span class="comment">     * The default row height is 15 and the default column width is 8.43</span></div>
 <div class="line"><span class="comment">     */</span></div>
-<div class="line">    <a name="a18"></a><a class="code" href="worksheet_8h.html#a9f4a3845529bcc2922b89bdb450ded32">worksheet_split_panes</a>(worksheet4, 15, 8.43);</div>
+<div class="line">    <a name="a19"></a><a class="code" href="worksheet_8h.html#a9f4a3845529bcc2922b89bdb450ded32">worksheet_split_panes</a>(worksheet4, 15, 8.43);</div>
+<div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Some sheet formatting. */</span></div>
 <div class="line"></div>
@@ -208,7 +212,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line"></div>
-<div class="line">    <a name="a19"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line">    <a name="a20"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
