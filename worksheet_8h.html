@@ -197,6 +197,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a40d32d247593e01c00b5c5c606fb4bb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a40d32d247593e01c00b5c5c606fb4bb3">worksheet_print_across</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
 <tr class="memdesc:a40d32d247593e01c00b5c5c606fb4bb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the order in which pages are printed.  <a href="#a40d32d247593e01c00b5c5c606fb4bb3">More...</a><br /></td></tr>
 <tr class="separator:a40d32d247593e01c00b5c5c606fb4bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38e16dc0a2e75d7ec99dca21fbeec89b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a38e16dc0a2e75d7ec99dca21fbeec89b">worksheet_set_zoom</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, uint16_t scale)</td></tr>
+<tr class="memdesc:a38e16dc0a2e75d7ec99dca21fbeec89b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the worksheet zoom factor.  <a href="#a38e16dc0a2e75d7ec99dca21fbeec89b">More...</a><br /></td></tr>
+<tr class="separator:a38e16dc0a2e75d7ec99dca21fbeec89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd9af70f706b738690ebb9103940b0e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#abd9af70f706b738690ebb9103940b0e1">worksheet_gridlines</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, uint8_t option)</td></tr>
 <tr class="memdesc:abd9af70f706b738690ebb9103940b0e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the option to display or hide gridlines on the screen and the printed page.  <a href="#abd9af70f706b738690ebb9103940b0e1">More...</a><br /></td></tr>
 <tr class="separator:abd9af70f706b738690ebb9103940b0e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -227,6 +230,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a26130cfccecf80a9833d65a84039374d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a26130cfccecf80a9833d65a84039374d">worksheet_set_print_scale</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, uint16_t scale)</td></tr>
 <tr class="memdesc:a26130cfccecf80a9833d65a84039374d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the scale factor for the printed page.  <a href="#a26130cfccecf80a9833d65a84039374d">More...</a><br /></td></tr>
 <tr class="separator:a26130cfccecf80a9833d65a84039374d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e32eb8e5f17aedb048035a5df337538"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a6e32eb8e5f17aedb048035a5df337538">worksheet_right_to_left</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
+<tr class="memdesc:a6e32eb8e5f17aedb048035a5df337538"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the worksheet cells from right to left for some versions of Excel.  <a href="#a6e32eb8e5f17aedb048035a5df337538">More...</a><br /></td></tr>
+<tr class="separator:a6e32eb8e5f17aedb048035a5df337538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b02d53154397cd4024e8ec2a95e2d89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a0b02d53154397cd4024e8ec2a95e2d89">worksheet_hide_zero</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
+<tr class="memdesc:a0b02d53154397cd4024e8ec2a95e2d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide zero values in worksheet cells.  <a href="#a0b02d53154397cd4024e8ec2a95e2d89">More...</a><br /></td></tr>
+<tr class="separator:a0b02d53154397cd4024e8ec2a95e2d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="aa7f1a12b664b4c1d7742529a315e21aa"></a>
@@ -1175,7 +1184,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
-<p>The <code>worksheet_autofilter()</code> method allows an autofilter to be added to a worksheet.</p>
+<p>The <code>worksheet_autofilter()</code> function allows an autofilter to be added to a worksheet.</p>
 <p>An autofilter is a way of adding drop down lists to the headers of a 2D range of worksheet data. This allows users to filter the data based on simple criteria so that some data is shown and some is hidden.</p>
 <div class="image">
 <img src="autofilter.png" alt="autofilter.png"/>
@@ -1287,8 +1296,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code>worksheet_freeze_panes()</code> method can be used to divide a worksheet into horizontal or vertical regions known as panes and to "freeze" these panes so that the splitter bars are not visible.</p>
-<p>The parameters <code>row</code> and <code>col</code> are used to specify the location of the split. It should be noted that the split is specified at the top or left of a cell and that the method uses zero based indexing. Therefore to freeze the first row of a worksheet it is necessary to specify the split at row 2 (which is 1 as the zero-based index).</p>
+<p>The <code>worksheet_freeze_panes()</code> function can be used to divide a worksheet into horizontal or vertical regions known as panes and to "freeze" these panes so that the splitter bars are not visible.</p>
+<p>The parameters <code>row</code> and <code>col</code> are used to specify the location of the split. It should be noted that the split is specified at the top or left of a cell and that the function uses zero based indexing. Therefore to freeze the first row of a worksheet it is necessary to specify the split at row 2 (which is 1 as the zero-based index).</p>
 <p>You can set one of the <code>row</code> and <code>col</code> parameters as zero if you do not want either a vertical or horizontal split.</p>
 <p>Examples:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a7e52f1eecb20fe4f9e6223bcf195103b">worksheet_freeze_panes</a>(worksheet1, 1, 0); <span class="comment">// Freeze the first row.</span></div>
@@ -1335,7 +1344,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code>worksheet_split_panes()</code> method can be used to divide a worksheet into horizontal or vertical regions known as panes. This method is different from the <code><a class="el" href="worksheet_8h.html#a7e52f1eecb20fe4f9e6223bcf195103b" title="Split and freeze a worksheet into panes. ">worksheet_freeze_panes()</a></code> method in that the splits between the panes will be visible to the user and each pane will have its own scroll bars.</p>
+<p>The <code>worksheet_split_panes()</code> function can be used to divide a worksheet into horizontal or vertical regions known as panes. This function is different from the <code><a class="el" href="worksheet_8h.html#a7e52f1eecb20fe4f9e6223bcf195103b" title="Split and freeze a worksheet into panes. ">worksheet_freeze_panes()</a></code> function in that the splits between the panes will be visible to the user and each pane will have its own scroll bars.</p>
 <p>The parameters <code>vertical</code> and <code>horizontal</code> are used to specify the vertical and horizontal position of the split. The units for <code>vertical</code> and <code>horizontal</code> are the same as those used by Excel to specify row height and column width. However, the vertical and horizontal units are different from each other. Therefore you must specify the <code>vertical</code> and <code>horizontal</code> parameters in terms of the row heights and column widths that you have set or the default values which are 15 for a row and 8.43 for a column.</p>
 <p>Examples:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9f4a3845529bcc2922b89bdb450ded32">worksheet_split_panes</a>(worksheet1, 15, 0);    <span class="comment">// First row.</span></div>
@@ -1396,7 +1405,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code>worksheet_set_selection()</code> method can be used to specify which cell or range of cells is selected in a worksheet: The most common requirement is to select a single cell, in which case the <code>first_</code> and <code>last_</code> parameters should be the same.</p>
+<p>The <code>worksheet_set_selection()</code> function can be used to specify which cell or range of cells is selected in a worksheet: The most common requirement is to select a single cell, in which case the <code>first_</code> and <code>last_</code> parameters should be the same.</p>
 <p>The active cell within a selected range is determined by the order in which <code>first_</code> and <code>last_</code> are specified.</p>
 <p>Examples:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a>(worksheet1, 3, 3, 3, 3);     <span class="comment">// Cell D4.</span></div>
@@ -2056,6 +2065,46 @@ Functions</h2></td></tr>
 [3] [4]</pre> 
 </div>
 </div>
+<a class="anchor" id="a38e16dc0a2e75d7ec99dca21fbeec89b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_set_zoom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">scale</td><td>Worksheet zoom factor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the worksheet zoom factor in the range <code>10 &lt;= zoom &lt;= 400</code>:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a38e16dc0a2e75d7ec99dca21fbeec89b">worksheet_set_zoom</a>(worksheet1, 50);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a38e16dc0a2e75d7ec99dca21fbeec89b">worksheet_set_zoom</a>(worksheet2, 75);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a38e16dc0a2e75d7ec99dca21fbeec89b">worksheet_set_zoom</a>(worksheet3, 300);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a38e16dc0a2e75d7ec99dca21fbeec89b">worksheet_set_zoom</a>(worksheet4, 400);</div>
+</div><!-- fragment --><p>The default zoom factor is 100. It isn't possible to set the zoom to "Selection" because it is calculated by Excel at run-time.</p>
+<p>Note, <code>worksheet_zoom()</code> does not affect the scale of the printed page. For that you should use <code><a class="el" href="worksheet_8h.html#a26130cfccecf80a9833d65a84039374d" title="Set the scale factor for the printed page. ">worksheet_set_print_scale()</a></code>. </p>
+
+</div>
+</div>
 <a class="anchor" id="abd9af70f706b738690ebb9103940b0e1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2442,9 +2491,58 @@ Functions</h2></td></tr>
 <p>This function sets the scale factor of the printed page. The Scale factor must be in the range <code>10 &lt;= scale &lt;= 400</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a26130cfccecf80a9833d65a84039374d">worksheet_set_print_scale</a>(worksheet1, 75);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#a26130cfccecf80a9833d65a84039374d">worksheet_set_print_scale</a>(worksheet2, 400);</div>
-</div><!-- fragment --><p>The default scale factor is 100. Note, <code>worksheet_set_print_scale()</code> does not affect the scale of the visible page in Excel. For that you should use <code>worksheet_set_zoom()</code>.</p>
+</div><!-- fragment --><p>The default scale factor is 100. Note, <code>worksheet_set_print_scale()</code> does not affect the scale of the visible page in Excel. For that you should use <code><a class="el" href="worksheet_8h.html#a38e16dc0a2e75d7ec99dca21fbeec89b" title="Set the worksheet zoom factor. ">worksheet_set_zoom()</a></code>.</p>
 <p>Note that although it is valid to use both <code><a class="el" href="worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d" title="Fit the printed area to a specific number of pages both vertically and horizontally. ">worksheet_fit_to_pages()</a></code> and <code>worksheet_set_print_scale()</code> on the same worksheet Excel only allows one of these options to be active at a time. The last function call made will set the active option. </p>
 
+</div>
+</div>
+<a class="anchor" id="a6e32eb8e5f17aedb048035a5df337538"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_right_to_left </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>worksheet_right_to_left()</code> function is used to change the default direction of the worksheet from left-to-right, with the <code>A1</code> cell in the top left, to right-to-left, with the <code>A1</code> cell in the top right.</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a6e32eb8e5f17aedb048035a5df337538">worksheet_right_to_left</a>(worksheet1);</div>
+</div><!-- fragment --><p>This is useful when creating Arabic, Hebrew or other near or far eastern worksheets that use right-to-left as the default direction. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0b02d53154397cd4024e8ec2a95e2d89"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_hide_zero </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>worksheet_hide_zero()</code> function is used to hide any zero values that appear in cells:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a0b02d53154397cd4024e8ec2a95e2d89">worksheet_hide_zero</a>(worksheet1);</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
