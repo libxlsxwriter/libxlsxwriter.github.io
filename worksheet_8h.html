@@ -236,6 +236,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a0b02d53154397cd4024e8ec2a95e2d89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a0b02d53154397cd4024e8ec2a95e2d89">worksheet_hide_zero</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
 <tr class="memdesc:a0b02d53154397cd4024e8ec2a95e2d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide zero values in worksheet cells.  <a href="#a0b02d53154397cd4024e8ec2a95e2d89">More...</a><br /></td></tr>
 <tr class="separator:a0b02d53154397cd4024e8ec2a95e2d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e84ef4dff791fc2278dfb029af94cb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0">worksheet_set_tab_color</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="format_8h.html#a422d719f90588b17d1399eaced80ae31">lxw_color_t</a> color)</td></tr>
+<tr class="memdesc:a1e84ef4dff791fc2278dfb029af94cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the worksheet tab.  <a href="#a1e84ef4dff791fc2278dfb029af94cb0">More...</a><br /></td></tr>
+<tr class="separator:a1e84ef4dff791fc2278dfb029af94cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="aa7f1a12b664b4c1d7742529a315e21aa"></a>
@@ -379,7 +382,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="write_string03.png" alt="write_string03.png"/>
 </div>
- <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a4">autofilter.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a8">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="panes_8c-example.html#a17">panes.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, and <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>.</dd>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a4">autofilter.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a8">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="panes_8c-example.html#a17">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a7">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, and <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2543,6 +2546,45 @@ Functions</h2></td></tr>
 <p>The <code>worksheet_hide_zero()</code> function is used to hide any zero values that appear in cells:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a0b02d53154397cd4024e8ec2a95e2d89">worksheet_hide_zero</a>(worksheet1);</div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="a1e84ef4dff791fc2278dfb029af94cb0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_set_tab_color </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="format_8h.html#a422d719f90588b17d1399eaced80ae31">lxw_color_t</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">color</td><td>The tab color.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>worksheet_set_tab_color()</code> method is used to change the color of the worksheet tab:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0">worksheet_set_tab_color</a>(worksheet1, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0">worksheet_set_tab_color</a>(worksheet2, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38bae0b5c39ced3b8c871974f0e4917e4871">LXW_COLOR_GREEN</a>);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0">worksheet_set_tab_color</a>(worksheet3, 0xFF9900); <span class="comment">// Orange.</span></div>
+</div><!-- fragment --><p>The color should be an RGB integer value, see <a class="el" href="working_with_colors.html">Working with Colors</a>. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="tab_colors_8c-example.html#a4">tab_colors.c</a>.</dd>
+</dl>
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>

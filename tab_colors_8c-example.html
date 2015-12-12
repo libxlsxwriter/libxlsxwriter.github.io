@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: lxw_workbook Struct Reference</title>
+<title>libxlsxwriter: tab_colors.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -59,6 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -73,19 +74,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">lxw_workbook Struct Reference</div>  </div>
+<div class="title">tab_colors.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Struct to represent an Excel workbook.  
- <a href="structlxw__workbook.html#details">More...</a></p>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The members of the <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook. ">lxw_workbook</a> struct aren't modified directly. Instead the workbook properties are set by calling the functions shown in <a class="el" href="workbook_8h.html" title="Functions related to creating an Excel xlsx workbook. ">workbook.h</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#_a0">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#_a0">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#_a0">autofilter.c</a>, <a class="el" href="constant_memory_8c-example.html#_a2">constant_memory.c</a>, <a class="el" href="dates_and_times01_8c-example.html#_a0">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#_a1">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#_a1">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#_a0">defined_name.c</a>, <a class="el" href="demo_8c-example.html#_a0">demo.c</a>, <a class="el" href="format_font_8c-example.html#_a0">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#_a0">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#_a0">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#_a0">hello.c</a>, <a class="el" href="hyperlinks_8c-example.html#_a0">hyperlinks.c</a>, <a class="el" href="merge_range_8c-example.html#_a0">merge_range.c</a>, <a class="el" href="panes_8c-example.html#_a0">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#_a0">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#_a0">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#_a0">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#_a2">tutorial3.c</a>, and <a class="el" href="utf8_8c-example.html#_a0">utf8.c</a>.</dd>
-</dl></div></div><!-- contents -->
+<p>Example of how to set Excel worksheet tab colors.</p>
+<p>Next example: <a class="el" href="panes_8c-example.html">panes.c</a> </p><div class="image">
+<img src="tab_colors.png" alt="tab_colors.png"/>
+</div>
+<div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Example of how to set Excel worksheet tab colors using libxlsxwriter.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Copyright 2014-2015, John McNamara, jmcnamara@cpan.org</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line"></div>
+<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook   = <a name="a1"></a><a class="code" href="workbook_8h.html#a4c34a495371c477c06f16a2a0007dea7">new_workbook</a>(<span class="stringliteral">&quot;tab_colors.xlsx&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Set up some worksheets. */</span></div>
+<div class="line">    <a name="_a2"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet1 = <a name="a3"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet2 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet3 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet4 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Set the tab colors. */</span></div>
+<div class="line">    <a name="a4"></a><a class="code" href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0">worksheet_set_tab_color</a>(worksheet1, <a name="a5"></a><a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0">worksheet_set_tab_color</a>(worksheet2, <a name="a6"></a><a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38bae0b5c39ced3b8c871974f0e4917e4871">LXW_COLOR_GREEN</a>);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0">worksheet_set_tab_color</a>(worksheet3, 0xFF9900); <span class="comment">/* Orange. */</span></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* worksheet4 will have the default color. */</span></div>
+<div class="line">    <a name="a7"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet4, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
+<div class="line"></div>
+<div class="line">    <a name="a8"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
