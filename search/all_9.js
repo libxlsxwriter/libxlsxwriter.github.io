@@ -50,6 +50,7 @@ var searchData=
   ['lxw_5fdef_5fcol_5fwidth',['LXW_DEF_COL_WIDTH',['../worksheet_8h.html#a3df7073ab35462516525d28975286994',1,'worksheet.h']]],
   ['lxw_5fdef_5frow_5fheight',['LXW_DEF_ROW_HEIGHT',['../worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a',1,'worksheet.h']]],
   ['lxw_5fdefined_5fcolors',['lxw_defined_colors',['../format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38b',1,'format.h']]],
+  ['lxw_5fdoc_5fproperties',['lxw_doc_properties',['../structlxw__doc__properties.html',1,'lxw_doc_properties'],['../workbook_8h.html#a82e6f279b1c9478867ef53d60e6cfc9b',1,'lxw_doc_properties():&#160;workbook.h']]],
   ['lxw_5ferror_5fworkbook_5ffile_5fcreate',['LXW_ERROR_WORKBOOK_FILE_CREATE',['../workbook_8h.html#a7272e60b9a9bb05593b1c21a6ec2f5dfad080fc684b72c6547e97b663f7eb66d4',1,'workbook.h']]],
   ['lxw_5ferror_5fworkbook_5fmemory_5ferror',['LXW_ERROR_WORKBOOK_MEMORY_ERROR',['../workbook_8h.html#a7272e60b9a9bb05593b1c21a6ec2f5dfa72ab30b4c3c1fb64bd84305b1f8d9854',1,'workbook.h']]],
   ['lxw_5ferror_5fworkbook_5fnone',['LXW_ERROR_WORKBOOK_NONE',['../workbook_8h.html#a7272e60b9a9bb05593b1c21a6ec2f5dfad10c856e811a3e0811fbe5850500e25a',1,'workbook.h']]],

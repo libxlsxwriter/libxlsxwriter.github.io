@@ -5,6 +5,7 @@ var searchData=
   ['workbook_5fadd_5fworksheet',['workbook_add_worksheet',['../workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e',1,'workbook.h']]],
   ['workbook_5fclose',['workbook_close',['../workbook_8h.html#aff39de16411dae703c5574ece9cac09b',1,'workbook.h']]],
   ['workbook_5fdefine_5fname',['workbook_define_name',['../workbook_8h.html#a239893289738cb030cbda1b73d4569b0',1,'workbook.h']]],
+  ['workbook_5fset_5fproperties',['workbook_set_properties',['../workbook_8h.html#a6780888704192c138b36f08f5a88d57f',1,'workbook.h']]],
   ['working_20with_20colors',['Working with Colors',['../working_with_colors.html',1,'']]],
   ['working_20with_20dates_20and_20times',['Working with Dates and Times',['../working_with_dates.html',1,'']]],
   ['working_20with_20formats',['Working with Formats',['../working_with_formats.html',1,'']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['constant_5fmemory',['constant_memory',['../structlxw__workbook__options.html#aa03636857813ca881bdd09e07bcbe738',1,'lxw_workbook_options']]]
+  ['author',['author',['../structlxw__doc__properties.html#acadb7240dd961f2fff3bdee1948d4446',1,'lxw_doc_properties']]]
 ];

@@ -3,6 +3,7 @@ var searchData=
   ['lxw_5fcol_5ft',['lxw_col_t',['../worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2',1,'worksheet.h']]],
   ['lxw_5fcolor_5ft',['lxw_color_t',['../format_8h.html#a422d719f90588b17d1399eaced80ae31',1,'format.h']]],
   ['lxw_5fdatetime',['lxw_datetime',['../utility_8h.html#a702a2013231565d5014690478bf3ff26',1,'utility.h']]],
+  ['lxw_5fdoc_5fproperties',['lxw_doc_properties',['../workbook_8h.html#a82e6f279b1c9478867ef53d60e6cfc9b',1,'workbook.h']]],
   ['lxw_5fformat',['lxw_format',['../format_8h.html#a161ec61cf568ac0e07ff4c793f909b41',1,'format.h']]],
   ['lxw_5fheader_5ffooter_5foptions',['lxw_header_footer_options',['../worksheet_8h.html#a9454ccd4ac56d5f9e796a91c3c2b156e',1,'worksheet.h']]],
   ['lxw_5frow_5fcol_5foptions',['lxw_row_col_options',['../worksheet_8h.html#a0d738f9174739380dc3a893c7baeb1ef',1,'worksheet.h']]],

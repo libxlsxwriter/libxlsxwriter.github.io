@@ -4,6 +4,7 @@ var searchData=
   ['workbook_5fadd_5fworksheet',['workbook_add_worksheet',['../workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e',1,'workbook.h']]],
   ['workbook_5fclose',['workbook_close',['../workbook_8h.html#aff39de16411dae703c5574ece9cac09b',1,'workbook.h']]],
   ['workbook_5fdefine_5fname',['workbook_define_name',['../workbook_8h.html#a239893289738cb030cbda1b73d4569b0',1,'workbook.h']]],
+  ['workbook_5fset_5fproperties',['workbook_set_properties',['../workbook_8h.html#a6780888704192c138b36f08f5a88d57f',1,'workbook.h']]],
   ['worksheet_5factivate',['worksheet_activate',['../worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08',1,'worksheet.h']]],
   ['worksheet_5fautofilter',['worksheet_autofilter',['../worksheet_8h.html#af09ab5ededabf5b82f265823eb3a0e8e',1,'worksheet.h']]],
   ['worksheet_5fcenter_5fhorizontally',['worksheet_center_horizontally',['../worksheet_8h.html#a931114d5266e03931f9fc1b21bd9b56c',1,'worksheet.h']]],
