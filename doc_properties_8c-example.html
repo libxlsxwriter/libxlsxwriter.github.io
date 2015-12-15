@@ -99,40 +99,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a name="_a2"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a>      *worksheet  = <a name="a3"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Create a properties structure and set some of the fields. */</span></div>
-<div class="line">    <a name="_a4"></a><a class="code" href="structlxw__doc__properties.html">lxw_doc_properties</a> *properties = calloc(1, <span class="keyword">sizeof</span>(<a class="code" href="structlxw__doc__properties.html">lxw_doc_properties</a>));</div>
-<div class="line"></div>
-<div class="line">    properties-&gt;<a name="a5"></a><a class="code" href="structlxw__doc__properties.html#a23d8fd5995ef26d1eab54c4dbd92393c">title</a>    = strdup(<span class="stringliteral">&quot;This is an example spreadsheet&quot;</span>);</div>
-<div class="line">    properties-&gt;<a name="a6"></a><a class="code" href="structlxw__doc__properties.html#a216d40acad776338b8250a61fc29ba6a">subject</a>  = strdup(<span class="stringliteral">&quot;With document properties&quot;</span>);</div>
-<div class="line">    properties-&gt;<a name="a7"></a><a class="code" href="structlxw__doc__properties.html#acadb7240dd961f2fff3bdee1948d4446">author</a>   = strdup(<span class="stringliteral">&quot;John McNamara&quot;</span>);</div>
-<div class="line">    properties-&gt;<a name="a8"></a><a class="code" href="structlxw__doc__properties.html#a5c1f0f25565987691f05f43d705df01b">manager</a>  = strdup(<span class="stringliteral">&quot;Dr. Heinz Doofenshmirtz&quot;</span>);</div>
-<div class="line">    properties-&gt;<a name="a9"></a><a class="code" href="structlxw__doc__properties.html#a67793efe283f109b62e5ea10a6dfd99a">company</a>  = strdup(<span class="stringliteral">&quot;of Wolves&quot;</span>);</div>
-<div class="line">    properties-&gt;<a name="a10"></a><a class="code" href="structlxw__doc__properties.html#a05c0ddf553fb6bc034afc3851645ae4d">category</a> = strdup(<span class="stringliteral">&quot;Example spreadsheets&quot;</span>);</div>
-<div class="line">    properties-&gt;<a name="a11"></a><a class="code" href="structlxw__doc__properties.html#a52e6f2a672566e887590705a52be08b0">keywords</a> = strdup(<span class="stringliteral">&quot;Sample, Example, Properties&quot;</span>);</div>
-<div class="line">    properties-&gt;<a name="a12"></a><a class="code" href="structlxw__doc__properties.html#a1fb19c33fb666bdb551b390997bb0689">comments</a> = strdup(<span class="stringliteral">&quot;Created with libxlsxwriter&quot;</span>);</div>
-<div class="line">    properties-&gt;<a name="a13"></a><a class="code" href="structlxw__doc__properties.html#aa1dac7e63e16678271e45bf0045e93b7">status</a>   = strdup(<span class="stringliteral">&quot;Quo&quot;</span>);</div>
+<div class="line">    <a name="_a4"></a><a class="code" href="structlxw__doc__properties.html">lxw_doc_properties</a> properties = {</div>
+<div class="line">        .<a name="a5"></a><a class="code" href="structlxw__doc__properties.html#a23d8fd5995ef26d1eab54c4dbd92393c">title</a>    = <span class="stringliteral">&quot;This is an example spreadsheet&quot;</span>,</div>
+<div class="line">        .subject  = <span class="stringliteral">&quot;With document properties&quot;</span>,</div>
+<div class="line">        .author   = <span class="stringliteral">&quot;John McNamara&quot;</span>,</div>
+<div class="line">        .manager  = <span class="stringliteral">&quot;Dr. Heinz Doofenshmirtz&quot;</span>,</div>
+<div class="line">        .company  = <span class="stringliteral">&quot;of Wolves&quot;</span>,</div>
+<div class="line">        .category = <span class="stringliteral">&quot;Example spreadsheets&quot;</span>,</div>
+<div class="line">        .keywords = <span class="stringliteral">&quot;Sample, Example, Properties&quot;</span>,</div>
+<div class="line">        .comments = <span class="stringliteral">&quot;Created with libxlsxwriter&quot;</span>,</div>
+<div class="line">        .status   = <span class="stringliteral">&quot;Quo&quot;</span>,</div>
+<div class="line">    };</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Set the properties in the workbook. */</span></div>
-<div class="line">    <a name="a14"></a><a class="code" href="workbook_8h.html#a6780888704192c138b36f08f5a88d57f">workbook_set_properties</a>(workbook, properties);</div>
+<div class="line">    <a name="a6"></a><a class="code" href="workbook_8h.html#a6780888704192c138b36f08f5a88d57f">workbook_set_properties</a>(workbook, &amp;properties);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Add some text to the file. */</span></div>
-<div class="line">    <a name="a15"></a><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet, 0, 0, 70, NULL, NULL);</div>
-<div class="line">    <a name="a16"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0,</div>
+<div class="line">    <a name="a7"></a><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet, 0, 0, 70, NULL, NULL);</div>
+<div class="line">    <a name="a8"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0,</div>
 <div class="line">        <span class="stringliteral">&quot;Select &#39;Workbook Properties&#39; to see properties.&quot;</span> , NULL);</div>
 <div class="line"></div>
-<div class="line">    <a name="a17"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Clean up memory used for properties. */</span></div>
-<div class="line">    free(properties-&gt;<a class="code" href="structlxw__doc__properties.html#a23d8fd5995ef26d1eab54c4dbd92393c">title</a>);</div>
-<div class="line">    free(properties-&gt;<a class="code" href="structlxw__doc__properties.html#a216d40acad776338b8250a61fc29ba6a">subject</a>);</div>
-<div class="line">    free(properties-&gt;<a class="code" href="structlxw__doc__properties.html#acadb7240dd961f2fff3bdee1948d4446">author</a>);</div>
-<div class="line">    free(properties-&gt;<a class="code" href="structlxw__doc__properties.html#a5c1f0f25565987691f05f43d705df01b">manager</a>);</div>
-<div class="line">    free(properties-&gt;<a class="code" href="structlxw__doc__properties.html#a67793efe283f109b62e5ea10a6dfd99a">company</a>);</div>
-<div class="line">    free(properties-&gt;<a class="code" href="structlxw__doc__properties.html#a05c0ddf553fb6bc034afc3851645ae4d">category</a>);</div>
-<div class="line">    free(properties-&gt;<a class="code" href="structlxw__doc__properties.html#a52e6f2a672566e887590705a52be08b0">keywords</a>);</div>
-<div class="line">    free(properties-&gt;<a class="code" href="structlxw__doc__properties.html#a1fb19c33fb666bdb551b390997bb0689">comments</a>);</div>
-<div class="line">    free(properties-&gt;<a class="code" href="structlxw__doc__properties.html#aa1dac7e63e16678271e45bf0045e93b7">status</a>);</div>
-<div class="line">    free(properties);</div>
-<div class="line"></div>
+<div class="line">    <a name="a9"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>

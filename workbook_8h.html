@@ -310,7 +310,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
 </div><!-- fragment --><p>The <code>workbook_close()</code> function returns any <a class="el" href="workbook_8h.html#a7272e60b9a9bb05593b1c21a6ec2f5df" title="Error codes from workbook functions. ">lxw_workbook_error</a> error codes encountered when creating the Excel file. The error code can be returned from the program main or the calling function:</p>
 <div class="fragment"><div class="line"><span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a11">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a7">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a7">autofilter.c</a>, <a class="el" href="constant_memory_8c-example.html#a7">constant_memory.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a9">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a10">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a14">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a9">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a10">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a17">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a10">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a9">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a9">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a6">hello.c</a>, <a class="el" href="hide_sheet_8c-example.html#a7">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a14">hyperlinks.c</a>, <a class="el" href="merge_range_8c-example.html#a17">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a20">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a8">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a7">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a11">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a15">tutorial3.c</a>, and <a class="el" href="utf8_8c-example.html#a5">utf8.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a11">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a7">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a7">autofilter.c</a>, <a class="el" href="constant_memory_8c-example.html#a7">constant_memory.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a9">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a10">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a14">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a9">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a10">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a9">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a10">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a9">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a9">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a6">hello.c</a>, <a class="el" href="hide_sheet_8c-example.html#a7">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a14">hyperlinks.c</a>, <a class="el" href="merge_range_8c-example.html#a17">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a20">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a8">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a7">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a11">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a15">tutorial3.c</a>, and <a class="el" href="utf8_8c-example.html#a5">utf8.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -359,25 +359,25 @@ Functions</h2></td></tr>
 </ul>
 <p>The properties are specified via a <code><a class="el" href="structlxw__doc__properties.html">lxw_doc_properties</a></code> struct. All the members are <code>char *</code> and they are all optional. An example of how to create and pass the properties is:</p>
 <div class="fragment"><div class="line"><span class="comment">// Create a properties structure and set some of the fields.</span></div>
-<div class="line"><a class="code" href="structlxw__doc__properties.html">lxw_doc_properties</a> *properties = calloc(1, <span class="keyword">sizeof</span>(<a class="code" href="structlxw__doc__properties.html">lxw_doc_properties</a>));</div>
-<div class="line"></div>
-<div class="line">properties-&gt;<a class="code" href="structlxw__doc__properties.html#a23d8fd5995ef26d1eab54c4dbd92393c">title</a>    = strdup(<span class="stringliteral">&quot;This is an example spreadsheet&quot;</span>);</div>
-<div class="line">properties-&gt;<a class="code" href="structlxw__doc__properties.html#a216d40acad776338b8250a61fc29ba6a">subject</a>  = strdup(<span class="stringliteral">&quot;With document properties&quot;</span>);</div>
-<div class="line">properties-&gt;<a class="code" href="structlxw__doc__properties.html#acadb7240dd961f2fff3bdee1948d4446">author</a>   = strdup(<span class="stringliteral">&quot;John McNamara&quot;</span>);</div>
-<div class="line">properties-&gt;<a class="code" href="structlxw__doc__properties.html#a5c1f0f25565987691f05f43d705df01b">manager</a>  = strdup(<span class="stringliteral">&quot;Dr. Heinz Doofenshmirtz&quot;</span>);</div>
-<div class="line">properties-&gt;<a class="code" href="structlxw__doc__properties.html#a67793efe283f109b62e5ea10a6dfd99a">company</a>  = strdup(<span class="stringliteral">&quot;of Wolves&quot;</span>);</div>
-<div class="line">properties-&gt;<a class="code" href="structlxw__doc__properties.html#a05c0ddf553fb6bc034afc3851645ae4d">category</a> = strdup(<span class="stringliteral">&quot;Example spreadsheets&quot;</span>);</div>
-<div class="line">properties-&gt;<a class="code" href="structlxw__doc__properties.html#a52e6f2a672566e887590705a52be08b0">keywords</a> = strdup(<span class="stringliteral">&quot;Sample, Example, Properties&quot;</span>);</div>
-<div class="line">properties-&gt;<a class="code" href="structlxw__doc__properties.html#a1fb19c33fb666bdb551b390997bb0689">comments</a> = strdup(<span class="stringliteral">&quot;Created with libxlsxwriter&quot;</span>);</div>
-<div class="line">properties-&gt;<a class="code" href="structlxw__doc__properties.html#aa1dac7e63e16678271e45bf0045e93b7">status</a>   = strdup(<span class="stringliteral">&quot;Quo&quot;</span>);</div>
+<div class="line"><a class="code" href="structlxw__doc__properties.html">lxw_doc_properties</a> properties = {</div>
+<div class="line">    .<a class="code" href="structlxw__doc__properties.html#a23d8fd5995ef26d1eab54c4dbd92393c">title</a>    = <span class="stringliteral">&quot;This is an example spreadsheet&quot;</span>,</div>
+<div class="line">    .subject  = <span class="stringliteral">&quot;With document properties&quot;</span>,</div>
+<div class="line">    .author   = <span class="stringliteral">&quot;John McNamara&quot;</span>,</div>
+<div class="line">    .manager  = <span class="stringliteral">&quot;Dr. Heinz Doofenshmirtz&quot;</span>,</div>
+<div class="line">    .company  = <span class="stringliteral">&quot;of Wolves&quot;</span>,</div>
+<div class="line">    .category = <span class="stringliteral">&quot;Example spreadsheets&quot;</span>,</div>
+<div class="line">    .keywords = <span class="stringliteral">&quot;Sample, Example, Properties&quot;</span>,</div>
+<div class="line">    .comments = <span class="stringliteral">&quot;Created with libxlsxwriter&quot;</span>,</div>
+<div class="line">    .status   = <span class="stringliteral">&quot;Quo&quot;</span>,</div>
+<div class="line">};</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Set the properties in the workbook.</span></div>
-<div class="line"><a class="code" href="workbook_8h.html#a6780888704192c138b36f08f5a88d57f">workbook_set_properties</a>(workbook, properties);</div>
+<div class="line"><a class="code" href="workbook_8h.html#a6780888704192c138b36f08f5a88d57f">workbook_set_properties</a>(workbook, &amp;properties);</div>
 </div><!-- fragment --><div class="image">
 <img src="doc_properties.png" alt="doc_properties.png"/>
 </div>
 <dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="doc_properties_8c-example.html#a14">doc_properties.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="doc_properties_8c-example.html#a6">doc_properties.c</a>.</dd>
 </dl>
 </div>
 </div>
