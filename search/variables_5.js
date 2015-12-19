@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['manager',['manager',['../structlxw__doc__properties.html#a5c1f0f25565987691f05f43d705df01b',1,'lxw_doc_properties']]],
-  ['margin',['margin',['../structlxw__header__footer__options.html#a0cd0badf4c6c3dde9aa46e924276a9aa',1,'lxw_header_footer_options']]],
-  ['min',['min',['../structlxw__datetime.html#a9aaebf7c330b117534b7ee242ab27818',1,'lxw_datetime']]],
-  ['month',['month',['../structlxw__datetime.html#a714772ea2bae9e361b0411ffeb0a6394',1,'lxw_datetime']]]
+  ['insert_5fcolumns',['insert_columns',['../structlxw__protection.html#a6c896e745df57cc5253ef86dad22adb3',1,'lxw_protection']]],
+  ['insert_5fhyperlinks',['insert_hyperlinks',['../structlxw__protection.html#ad91e1d48f426b6d00d88312d0444c356',1,'lxw_protection']]],
+  ['insert_5frows',['insert_rows',['../structlxw__protection.html#a8efd2ec26c4a31b65ba66bb2e44363da',1,'lxw_protection']]]
 ];

@@ -2,6 +2,9 @@ var searchData=
 [
   ['frequently_20asked_20questions',['Frequently Asked Questions',['../faq.html',1,'']]],
   ['format_2eh',['format.h',['../format_8h.html',1,'']]],
+  ['format_5fcells',['format_cells',['../structlxw__protection.html#accce8fbb8b1dad731adbe8234870004e',1,'lxw_protection']]],
+  ['format_5fcolumns',['format_columns',['../structlxw__protection.html#a83c3fd434abb2bf45c2d46047250dac9',1,'lxw_protection']]],
+  ['format_5frows',['format_rows',['../structlxw__protection.html#a6cfcb8e5efd6112c707f74b7f1440b81',1,'lxw_protection']]],
   ['format_5fset_5falign',['format_set_align',['../format_8h.html#a189c83d1f21b01937f1f730720c33d13',1,'format.h']]],
   ['format_5fset_5fbg_5fcolor',['format_set_bg_color',['../format_8h.html#aeef47436c335daf1801683ac7b3b587d',1,'format.h']]],
   ['format_5fset_5fbold',['format_set_bold',['../format_8h.html#a85e1b0baf44b445b65894e48722aec14',1,'format.h']]],

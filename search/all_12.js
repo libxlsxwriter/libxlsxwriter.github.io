@@ -1,10 +1,16 @@
 var searchData=
 [
+  ['workbook_2eh',['workbook.h',['../workbook_8h.html',1,'']]],
   ['workbook_5fadd_5fformat',['workbook_add_format',['../workbook_8h.html#a279a5d7075d09a3931aae9782afede33',1,'workbook.h']]],
   ['workbook_5fadd_5fworksheet',['workbook_add_worksheet',['../workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e',1,'workbook.h']]],
   ['workbook_5fclose',['workbook_close',['../workbook_8h.html#aff39de16411dae703c5574ece9cac09b',1,'workbook.h']]],
   ['workbook_5fdefine_5fname',['workbook_define_name',['../workbook_8h.html#a239893289738cb030cbda1b73d4569b0',1,'workbook.h']]],
   ['workbook_5fset_5fproperties',['workbook_set_properties',['../workbook_8h.html#a6780888704192c138b36f08f5a88d57f',1,'workbook.h']]],
+  ['working_20with_20colors',['Working with Colors',['../working_with_colors.html',1,'']]],
+  ['working_20with_20dates_20and_20times',['Working with Dates and Times',['../working_with_dates.html',1,'']]],
+  ['working_20with_20formats',['Working with Formats',['../working_with_formats.html',1,'']]],
+  ['working_20with_20memory_20and_20performance',['Working with Memory and Performance',['../working_with_memory.html',1,'']]],
+  ['worksheet_2eh',['worksheet.h',['../worksheet_8h.html',1,'']]],
   ['worksheet_5factivate',['worksheet_activate',['../worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08',1,'worksheet.h']]],
   ['worksheet_5fautofilter',['worksheet_autofilter',['../worksheet_8h.html#af09ab5ededabf5b82f265823eb3a0e8e',1,'worksheet.h']]],
   ['worksheet_5fcenter_5fhorizontally',['worksheet_center_horizontally',['../worksheet_8h.html#a931114d5266e03931f9fc1b21bd9b56c',1,'worksheet.h']]],

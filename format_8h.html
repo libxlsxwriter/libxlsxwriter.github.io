@@ -724,19 +724,20 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>This property can be used to allow modification of a cell in a protected worksheet. In Excel, cell locking is turned on by default for all cells. However, it only has an effect if the worksheet has been protected using the worksheet worksheet_protect() method:</p>
+<p>This property can be used to allow modification of a cell in a protected worksheet. In Excel, cell locking is turned on by default for all cells. However, it only has an effect if the worksheet has been protected using the worksheet <a class="el" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f" title="Protect elements of a worksheet from modification. ">worksheet_protect()</a> function:</p>
 <div class="fragment"><div class="line">format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#a1dfd61b72aab2c28c3d51e53e08df587">format_set_unlocked</a>(format);</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// Enable worksheet protection.</span></div>
-<div class="line">worksheet_protect(worksheet);</div>
+<div class="line"><span class="comment">// Enable worksheet protection, without password or options.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a>(worksheet, NULL, NULL);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// This cell cannot be edited.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=1+2&quot;</span>, NULL);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// This cell can be edited.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=1+2&quot;</span>, format);</div>
-</div><!-- fragment --> 
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="worksheet_protection_8c-example.html#a6">worksheet_protection.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="a135d94ec48564c997c5a78ca8b8861e2"></a>
@@ -758,16 +759,17 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>This property is used to hide a formula while still displaying its result. This is generally used to hide complex calculations from end users who are only interested in the result. It only has an effect if the worksheet has been protected using the worksheet write_protect() method:</p>
+<p>This property is used to hide a formula while still displaying its result. This is generally used to hide complex calculations from end users who are only interested in the result. It only has an effect if the worksheet has been protected using the worksheet <a class="el" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f" title="Protect elements of a worksheet from modification. ">worksheet_protect()</a> function:</p>
 <div class="fragment"><div class="line">format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#a135d94ec48564c997c5a78ca8b8861e2">format_set_hidden</a>(format);</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// Enable worksheet protection.</span></div>
-<div class="line">worksheet_protect(worksheet);</div>
+<div class="line"><span class="comment">// Enable worksheet protection, without password or options.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a>(worksheet, NULL, NULL);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// The formula in this cell isn&#39;t visible.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=1+2&quot;</span>, format);</div>
-</div><!-- fragment --> 
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="worksheet_protection_8c-example.html#a7">worksheet_protection.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="a189c83d1f21b01937f1f730720c33d13"></a>

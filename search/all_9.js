@@ -94,6 +94,7 @@ var searchData=
   ['lxw_5fpattern_5fmedium_5fgray',['LXW_PATTERN_MEDIUM_GRAY',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7af2abac6c05ed8772c2a21d95bce0c332',1,'format.h']]],
   ['lxw_5fpattern_5fnone',['LXW_PATTERN_NONE',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7a8ea9d9b7686442f43da92dff3745adc3',1,'format.h']]],
   ['lxw_5fpattern_5fsolid',['LXW_PATTERN_SOLID',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7a1fbd6761c4ccd57d98dfd59eaad9fde5',1,'format.h']]],
+  ['lxw_5fprotection',['lxw_protection',['../structlxw__protection.html',1,'lxw_protection'],['../worksheet_8h.html#ac2c4abcbfd4c21aa6af812e28044f2d1',1,'lxw_protection():&#160;worksheet.h']]],
   ['lxw_5frow_5fcol_5foptions',['lxw_row_col_options',['../structlxw__row__col__options.html',1,'lxw_row_col_options'],['../worksheet_8h.html#a0d738f9174739380dc3a893c7baeb1ef',1,'lxw_row_col_options():&#160;worksheet.h']]],
   ['lxw_5frow_5ft',['lxw_row_t',['../worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3',1,'worksheet.h']]],
   ['lxw_5fshow_5fall_5fgridlines',['LXW_SHOW_ALL_GRIDLINES',['../worksheet_8h.html#a487e0bffad0a348421b825d715621c20a1dc7944e44eb6ae060dc6ef457b62e04',1,'worksheet.h']]],

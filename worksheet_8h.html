@@ -245,6 +245,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a1e84ef4dff791fc2278dfb029af94cb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0">worksheet_set_tab_color</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="format_8h.html#a422d719f90588b17d1399eaced80ae31">lxw_color_t</a> color)</td></tr>
 <tr class="memdesc:a1e84ef4dff791fc2278dfb029af94cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the worksheet tab.  <a href="#a1e84ef4dff791fc2278dfb029af94cb0">More...</a><br /></td></tr>
 <tr class="separator:a1e84ef4dff791fc2278dfb029af94cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40bf1510fab3783d617e78483ad0c54f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, char *password, <a class="el" href="structlxw__protection.html">lxw_protection</a> *options)</td></tr>
+<tr class="memdesc:a40bf1510fab3783d617e78483ad0c54f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protect elements of a worksheet from modification.  <a href="#a40bf1510fab3783d617e78483ad0c54f">More...</a><br /></td></tr>
+<tr class="separator:a40bf1510fab3783d617e78483ad0c54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="aa7f1a12b664b4c1d7742529a315e21aa"></a>
@@ -388,7 +391,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="write_string03.png" alt="write_string03.png"/>
 </div>
- <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a4">autofilter.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a8">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a8">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hide_sheet_8c-example.html#a5">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="panes_8c-example.html#a17">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a7">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, and <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>.</dd>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a4">autofilter.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a8">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a8">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hide_sheet_8c-example.html#a5">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="panes_8c-example.html#a17">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a7">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a10">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -462,7 +465,7 @@ Functions</h2></td></tr>
 <div class="line"></div>
 <div class="line"><span class="comment">// NO. Error on load.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=SUM(1; 2; 3)&quot;</span>, NULL);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="defined_name_8c-example.html#a8">defined_name.c</a>, <a class="el" href="tutorial1_8c-example.html#a6">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a10">tutorial2.c</a>, and <a class="el" href="tutorial3_8c-example.html#a14">tutorial3.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="defined_name_8c-example.html#a8">defined_name.c</a>, <a class="el" href="tutorial1_8c-example.html#a6">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a10">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a14">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a11">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1044,7 +1047,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__row__col__options.html">lxw_row_col_options</a> options = {.<a class="code" href="structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562">hidden</a> = 1, .level = 0, .collapsed = 0};</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:A&quot;</span>), 8.43, NULL, &amp;options);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a7">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="hide_sheet_8c-example.html#a6">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a11">hyperlinks.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a14">panes.c</a>, and <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a7">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="hide_sheet_8c-example.html#a6">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a11">hyperlinks.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a14">panes.c</a>, <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a8">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1287,13 +1290,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code>worksheet_hide()</code> method is used to hide a worksheet:</p>
+<p>The <code>worksheet_hide()</code> function is used to hide a worksheet:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a180fcbcf012b5c165a01490d1128dc11">worksheet_hide</a>(worksheet2);</div>
 </div><!-- fragment --><p>You may wish to hide a worksheet in order to avoid confusing a user with intermediate data or calculations.</p>
 <div class="image">
 <img src="hide_sheet.png" alt="hide_sheet.png"/>
 </div>
-<p>A hidden worksheet can not be activated or selected so this method is mutually exclusive with the <code><a class="el" href="worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08" title="Make a worksheet the active, i.e., visible worksheet. ">worksheet_activate()</a></code> and <code><a class="el" href="worksheet_8h.html#a78bfe3a786149deca69248db57da182f" title="Set a worksheet tab as selected. ">worksheet_select()</a></code> methods. In addition, since the first worksheet will default to being the active worksheet, you cannot hide the first worksheet without activating another sheet:</p>
+<p>A hidden worksheet can not be activated or selected so this function is mutually exclusive with the <code><a class="el" href="worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08" title="Make a worksheet the active, i.e., visible worksheet. ">worksheet_activate()</a></code> and <code><a class="el" href="worksheet_8h.html#a78bfe3a786149deca69248db57da182f" title="Set a worksheet tab as selected. ">worksheet_select()</a></code> functions. In addition, since the first worksheet will default to being the active worksheet, you cannot hide the first worksheet without activating another sheet:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08">worksheet_activate</a>(worksheet2);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#a180fcbcf012b5c165a01490d1128dc11">worksheet_hide</a>(worksheet1);</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="hide_sheet_8c-example.html#a4">hide_sheet.c</a>.</dd>
@@ -1322,7 +1325,7 @@ Functions</h2></td></tr>
 <p>The <code><a class="el" href="worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08" title="Make a worksheet the active, i.e., visible worksheet. ">worksheet_activate()</a></code> function determines which worksheet is initially selected. However, if there are a large number of worksheets the selected worksheet may not appear on the screen. To avoid this you can select the leftmost visible worksheet tab using <code>worksheet_set_first_sheet()</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a463c8d3247f56e0ec191b148355f42f0">worksheet_set_first_sheet</a>(worksheet19); <span class="comment">// First visible worksheet tab.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08">worksheet_activate</a>(worksheet20);        <span class="comment">// First visible worksheet.</span></div>
-</div><!-- fragment --><p>This method is not required very often. The default value is the first worksheet. </p>
+</div><!-- fragment --><p>This function is not required very often. The default value is the first worksheet. </p>
 
 </div>
 </div>
@@ -2642,12 +2645,90 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code>worksheet_set_tab_color()</code> method is used to change the color of the worksheet tab:</p>
+<p>The <code>worksheet_set_tab_color()</code> function is used to change the color of the worksheet tab:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0">worksheet_set_tab_color</a>(worksheet1, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0">worksheet_set_tab_color</a>(worksheet2, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38bae0b5c39ced3b8c871974f0e4917e4871">LXW_COLOR_GREEN</a>);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0">worksheet_set_tab_color</a>(worksheet3, 0xFF9900); <span class="comment">// Orange.</span></div>
 </div><!-- fragment --><p>The color should be an RGB integer value, see <a class="el" href="working_with_colors.html">Working with Colors</a>. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="tab_colors_8c-example.html#a4">tab_colors.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a40bf1510fab3783d617e78483ad0c54f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_protect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>password</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__protection.html">lxw_protection</a> *&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">password</td><td>A worksheet password. </td></tr>
+    <tr><td class="paramname">options</td><td>Worksheet elements to protect.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>worksheet_protect()</code> function protects worksheet elements from modification:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a>(worksheet, <span class="stringliteral">&quot;Some Password&quot;</span>, options);</div>
+</div><!-- fragment --><p>The <code>password</code> and <a class="el" href="structlxw__protection.html" title="Worksheet protection options. ">lxw_protection</a> pointer are both optional:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a>(worksheet1, NULL,       NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a>(worksheet2, NULL,       my_options);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a>(worksheet3, <span class="stringliteral">&quot;password&quot;</span>, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a>(worksheet4, <span class="stringliteral">&quot;password&quot;</span>, my_options);</div>
+</div><!-- fragment --><p>Passing a <code>NULL</code> password is the same as turning on protection without a password. Passing a <code>NULL</code> password and <code>NULL</code> options, or any other combination has the effect of enabling a cell's <code>locked</code> and <code>hidden</code> properties if they have been set.</p>
+<p>A <em>locked</em> cell cannot be edited and this property is on by default for all cells. A <em>hidden</em> cell will display the results of a formula but not the formula itself. These properties can be set using the <a class="el" href="format_8h.html#a1dfd61b72aab2c28c3d51e53e08df587" title="Set the cell unlocked state. ">format_set_unlocked()</a> and <a class="el" href="format_8h.html#a135d94ec48564c997c5a78ca8b8861e2" title="Hide formulas in a cell. ">format_set_hidden()</a> format functions.</p>
+<p>You can specify which worksheet elements you wish to protect by passing a <a class="el" href="structlxw__protection.html" title="Worksheet protection options. ">lxw_protection</a> pointer in the <code>options</code> argument with any or all of the following members set: </p><pre class="fragment">no_select_locked_cells
+no_select_unlocked_cells
+format_cells
+format_columns
+format_rows
+insert_columns
+insert_rows
+insert_hyperlinks
+delete_columns
+delete_rows
+sort
+autofilter
+pivot_tables
+scenarios
+objects
+</pre><p>All parameters are off by default. Individual elements can be protected as follows:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__protection.html">lxw_protection</a> options = {</div>
+<div class="line">    .format_cells             = 1,</div>
+<div class="line">    .insert_hyperlinks        = 1,</div>
+<div class="line">    .insert_rows              = 1,</div>
+<div class="line">    .delete_rows              = 1,</div>
+<div class="line">    .insert_columns           = 1,</div>
+<div class="line">    .delete_columns           = 1,</div>
+<div class="line">};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a>(worksheet, NULL, &amp;options);</div>
+</div><!-- fragment --><p>See also the <a class="el" href="format_8h.html#a1dfd61b72aab2c28c3d51e53e08df587" title="Set the cell unlocked state. ">format_set_unlocked()</a> and <a class="el" href="format_8h.html#a135d94ec48564c997c5a78ca8b8861e2" title="Hide formulas in a cell. ">format_set_hidden()</a> format functions.</p>
+<p><b>Note:</b> Worksheet level passwords in Excel offer <b>very</b> weak protection. They don't encrypt your data and are very easy to deactivate. Full workbook encryption is not supported by <code>libxlsxwriter</code> since it requires a completely different file format and would take several man months to implement. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="worksheet_protection_8c-example.html#a9">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2825,6 +2906,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__header__footer__options.html">lxw_header_footer_options</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Header and footer options.  <a href="structlxw__header__footer__options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__protection.html">lxw_protection</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Worksheet protection options.  <a href="structlxw__protection.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel worksheet.  <a href="structlxw__worksheet.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2842,6 +2926,10 @@ Typedefs</h2></td></tr>
 <a class="el" href="structlxw__header__footer__options.html">lxw_header_footer_options</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a9454ccd4ac56d5f9e796a91c3c2b156e">lxw_header_footer_options</a></td></tr>
 <tr class="memdesc:a9454ccd4ac56d5f9e796a91c3c2b156e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Header and footer options.  <a href="#a9454ccd4ac56d5f9e796a91c3c2b156e">More...</a><br /></td></tr>
 <tr class="separator:a9454ccd4ac56d5f9e796a91c3c2b156e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2c4abcbfd4c21aa6af812e28044f2d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2c4abcbfd4c21aa6af812e28044f2d1"></a>
+typedef struct <a class="el" href="structlxw__protection.html">lxw_protection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ac2c4abcbfd4c21aa6af812e28044f2d1">lxw_protection</a></td></tr>
+<tr class="memdesc:ac2c4abcbfd4c21aa6af812e28044f2d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Worksheet protection options. <br /></td></tr>
+<tr class="separator:ac2c4abcbfd4c21aa6af812e28044f2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a356e12f6f1c3f94b8de98dc99ef78b86"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__worksheet.html">lxw_worksheet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a356e12f6f1c3f94b8de98dc99ef78b86">lxw_worksheet</a></td></tr>
 <tr class="memdesc:a356e12f6f1c3f94b8de98dc99ef78b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel worksheet.  <a href="#a356e12f6f1c3f94b8de98dc99ef78b86">More...</a><br /></td></tr>
 <tr class="separator:a356e12f6f1c3f94b8de98dc99ef78b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
