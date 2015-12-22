@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: lxw_worksheet Struct Reference</title>
+<title>libxlsxwriter: hide_row_col.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -59,6 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -73,19 +74,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">lxw_worksheet Struct Reference</div>  </div>
+<div class="title">hide_row_col.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Struct to represent an Excel worksheet.  
- <a href="structlxw__worksheet.html#details">More...</a></p>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The members of the <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> struct aren't modified directly. Instead the worksheet properties are set by calling the functions shown in <a class="el" href="worksheet_8h.html" title="Functions related to adding data and formatting to a worksheet. ">worksheet.h</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#_a2">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#_a2">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#_a2">autofilter.c</a>, <a class="el" href="constant_memory_8c-example.html#_a4">constant_memory.c</a>, <a class="el" href="dates_and_times01_8c-example.html#_a2">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#_a3">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#_a3">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#_a2">defined_name.c</a>, <a class="el" href="demo_8c-example.html#_a2">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#_a2">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#_a2">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#_a2">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#_a2">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#_a2">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#_a2">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#_a2">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#_a2">hyperlinks.c</a>, <a class="el" href="merge_range_8c-example.html#_a2">merge_range.c</a>, <a class="el" href="panes_8c-example.html#_a2">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#_a2">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#_a2">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#_a2">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#_a4">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#_a2">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#_a2">worksheet_protection.c</a>.</dd>
-</dl></div></div><!-- contents -->
+<p>Example of hiding rows and columns in an Excel worksheet.</p>
+<p>Next example: <a class="el" href="panes_8c-example.html">panes.c</a> </p><div class="image">
+<img src="hide_row_col.png" alt="hide_row_col.png"/>
+</div>
+<div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * An example of how to hide rows and columns using the libxlsxwriter</span></div>
+<div class="line"><span class="comment"> * library.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * In order to hide rows without setting each one, (of approximately 1 million</span></div>
+<div class="line"><span class="comment"> * rows), Excel uses an optimisation to hide all rows that don&#39;t have data.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Copyright 2014-2015, John McNamara, jmcnamara@cpan.org</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Create a new workbook and add a worksheet. */</span></div>
+<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a name="a1"></a><a class="code" href="workbook_8h.html#a4c34a495371c477c06f16a2a0007dea7">new_workbook</a>(<span class="stringliteral">&quot;hide_row_col.xlsx&quot;</span>);</div>
+<div class="line">    <a name="_a2"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a name="a3"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Write some data. */</span></div>
+<div class="line">    <a name="a4"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 3, <span class="stringliteral">&quot;Some hidden columns.&quot;</span>, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 7, 0, <span class="stringliteral">&quot;Some hidden rows.&quot;</span>,    NULL);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Hide all rows without data. */</span></div>
+<div class="line">    <a name="a5"></a><a class="code" href="worksheet_8h.html#a74121de7c4f67639b30f302d4af48eb4">worksheet_set_default_row</a>(worksheet, 15, LXW_TRUE);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Set the height of empty rows that we do want to display even if it is */</span></div>
+<div class="line">    <span class="comment">/* the default height. */</span></div>
+<div class="line">    <span class="keywordflow">for</span> (row = 1; row &lt;= 6; row++)</div>
+<div class="line">        <a name="a6"></a><a class="code" href="worksheet_8h.html#ab2737ea78d5e679613f2fdd7bb425030">worksheet_set_row</a>(worksheet, row, 15, NULL, NULL);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Columns can be hidden explicitly. This doesn&#39;t increase the file size. */</span></div>
+<div class="line">    <a name="_a7"></a><a class="code" href="structlxw__row__col__options.html">lxw_row_col_options</a> options = {.<a name="a8"></a><a class="code" href="structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562">hidden</a> = 1};</div>
+<div class="line">    <a name="a9"></a><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet, <a name="a10"></a><a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;G:XFD&quot;</span>), 8.43, NULL, &amp;options);</div>
+<div class="line"></div>
+<div class="line">    <a name="a11"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

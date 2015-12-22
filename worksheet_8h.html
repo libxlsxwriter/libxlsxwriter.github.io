@@ -248,6 +248,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a40bf1510fab3783d617e78483ad0c54f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, char *password, <a class="el" href="structlxw__protection.html">lxw_protection</a> *options)</td></tr>
 <tr class="memdesc:a40bf1510fab3783d617e78483ad0c54f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protect elements of a worksheet from modification.  <a href="#a40bf1510fab3783d617e78483ad0c54f">More...</a><br /></td></tr>
 <tr class="separator:a40bf1510fab3783d617e78483ad0c54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74121de7c4f67639b30f302d4af48eb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a74121de7c4f67639b30f302d4af48eb4">worksheet_set_default_row</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, double height, uint8_t hide_unused_rows)</td></tr>
+<tr class="memdesc:a74121de7c4f67639b30f302d4af48eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the default row properties.  <a href="#a74121de7c4f67639b30f302d4af48eb4">More...</a><br /></td></tr>
+<tr class="separator:a74121de7c4f67639b30f302d4af48eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="aa7f1a12b664b4c1d7742529a315e21aa"></a>
@@ -391,7 +394,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="write_string03.png" alt="write_string03.png"/>
 </div>
- <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a4">autofilter.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a8">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a8">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hide_sheet_8c-example.html#a5">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="panes_8c-example.html#a17">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a7">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a10">worksheet_protection.c</a>.</dd>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a4">autofilter.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a8">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a8">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a4">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a5">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="panes_8c-example.html#a17">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a7">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a10">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -934,7 +937,7 @@ Functions</h2></td></tr>
 <div class="line"></div>
 <div class="line"><span class="comment">// Hide the fourth row.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ab2737ea78d5e679613f2fdd7bb425030">worksheet_set_row</a>(worksheet, 3, 20, NULL, &amp;options);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="merge_range_8c-example.html#a15">merge_range.c</a>, and <a class="el" href="panes_8c-example.html#a15">panes.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="hide_row_col_8c-example.html#a6">hide_row_col.c</a>, <a class="el" href="merge_range_8c-example.html#a15">merge_range.c</a>, and <a class="el" href="panes_8c-example.html#a15">panes.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1047,7 +1050,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__row__col__options.html">lxw_row_col_options</a> options = {.<a class="code" href="structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562">hidden</a> = 1, .level = 0, .collapsed = 0};</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:A&quot;</span>), 8.43, NULL, &amp;options);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a7">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="hide_sheet_8c-example.html#a6">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a11">hyperlinks.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a14">panes.c</a>, <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a8">worksheet_protection.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a7">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="hide_row_col_8c-example.html#a9">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a6">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a11">hyperlinks.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a14">panes.c</a>, <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a8">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2732,6 +2735,53 @@ objects
 </dl>
 </div>
 </div>
+<a class="anchor" id="a74121de7c4f67639b30f302d4af48eb4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_set_default_row </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>hide_unused_rows</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">height</td><td>Default row height. </td></tr>
+    <tr><td class="paramname">hide_unused_rows</td><td>Hide unused cells.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>worksheet_set_default_row()</code> function is used to set Excel default row properties such as the default height and the option to hide unused rows. These parameters are an optimization used by Excel to set row properties without generating a very large file with an entry for each row.</p>
+<p>To set the default row height:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a74121de7c4f67639b30f302d4af48eb4">worksheet_set_default_row</a>(worksheet, 24, LXW_FALSE);</div>
+</div><!-- fragment --><p>To hide unused rows:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a74121de7c4f67639b30f302d4af48eb4">worksheet_set_default_row</a>(worksheet, 15, LXW_TRUE);</div>
+</div><!-- fragment --><p>Note, in the previous case we use the default height <a class="el" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a> = 15 so the the height remains unchanged. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="hide_row_col_8c-example.html#a5">hide_row_col.c</a>.</dd>
+</dl>
+</div>
+</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="aaf33b4e2179dcc466359277210774ce3"></a>
 <div class="memitem">
@@ -2825,7 +2875,7 @@ objects
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define LXW_DEF_ROW_HEIGHT&#160;&#160;&#160;15</td>
+          <td class="memname">#define LXW_DEF_ROW_HEIGHT&#160;&#160;&#160;15.0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2959,7 +3009,7 @@ Enumerations</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:a3df7073ab35462516525d28975286994"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a3df7073ab35462516525d28975286994">LXW_DEF_COL_WIDTH</a>&#160;&#160;&#160;8.43</td></tr>
 <tr class="separator:a3df7073ab35462516525d28975286994"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8901b9706d1c48c28c97e95b452a927a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>&#160;&#160;&#160;15</td></tr>
+<tr class="memitem:a8901b9706d1c48c28c97e95b452a927a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>&#160;&#160;&#160;15.0</td></tr>
 <tr class="separator:a8901b9706d1c48c28c97e95b452a927a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
