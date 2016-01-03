@@ -140,6 +140,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a5aa5044fc41d2d8734acf6ff31b79b83"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col, double width, <a class="el" href="structlxw__format.html">lxw_format</a> *format, <a class="el" href="structlxw__row__col__options.html">lxw_row_col_options</a> *options)</td></tr>
 <tr class="memdesc:a5aa5044fc41d2d8734acf6ff31b79b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the properties for one or more columns of cells.  <a href="#a5aa5044fc41d2d8734acf6ff31b79b83">More...</a><br /></td></tr>
 <tr class="separator:a5aa5044fc41d2d8734acf6ff31b79b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9cfd4bf719dbbd45866cad7dde4dab3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#aa9cfd4bf719dbbd45866cad7dde4dab3">worksheet_insert_image</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *filename)</td></tr>
+<tr class="memdesc:aa9cfd4bf719dbbd45866cad7dde4dab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an image in a worksheet cell.  <a href="#aa9cfd4bf719dbbd45866cad7dde4dab3">More...</a><br /></td></tr>
+<tr class="separator:aa9cfd4bf719dbbd45866cad7dde4dab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc18290a13a760aebe74c705a7ade0a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#abc18290a13a760aebe74c705a7ade0a7">worksheet_insert_image_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *filename, <a class="el" href="structlxw__image__options.html">lxw_image_options</a> *options)</td></tr>
+<tr class="memdesc:abc18290a13a760aebe74c705a7ade0a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an image in a worksheet cell, with options.  <a href="#abc18290a13a760aebe74c705a7ade0a7">More...</a><br /></td></tr>
+<tr class="separator:abc18290a13a760aebe74c705a7ade0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac15d2e82b73308458e9cdebeffdd46e6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ac15d2e82b73308458e9cdebeffdd46e6">worksheet_merge_range</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col, const char *string, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
 <tr class="memdesc:ac15d2e82b73308458e9cdebeffdd46e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge a range of cells.  <a href="#ac15d2e82b73308458e9cdebeffdd46e6">More...</a><br /></td></tr>
 <tr class="separator:ac15d2e82b73308458e9cdebeffdd46e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -394,7 +400,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="write_string03.png" alt="write_string03.png"/>
 </div>
- <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a4">autofilter.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a8">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a8">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a4">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a5">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="panes_8c-example.html#a17">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a7">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a10">worksheet_protection.c</a>.</dd>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a4">autofilter.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a8">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a8">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a4">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a5">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a6">images.c</a>, <a class="el" href="panes_8c-example.html#a17">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a7">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a10">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1050,7 +1056,129 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__row__col__options.html">lxw_row_col_options</a> options = {.<a class="code" href="structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562">hidden</a> = 1, .level = 0, .collapsed = 0};</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a5aa5044fc41d2d8734acf6ff31b79b83">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:A&quot;</span>), 8.43, NULL, &amp;options);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a7">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="hide_row_col_8c-example.html#a9">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a6">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a11">hyperlinks.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a14">panes.c</a>, <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a8">worksheet_protection.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a7">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="hide_row_col_8c-example.html#a9">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a6">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a11">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a4">images.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a14">panes.c</a>, <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a8">worksheet_protection.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aa9cfd4bf719dbbd45866cad7dde4dab3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int worksheet_insert_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
+    <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
+    <tr><td class="paramname">filename</td><td>The image filename, with path if required.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
+<p>This function can be used to insert a image into a worksheet. The image can be in PNG, JPEG or BMP format:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aa9cfd4bf719dbbd45866cad7dde4dab3">worksheet_insert_image</a>(worksheet, 2, 1, <span class="stringliteral">&quot;logo.png&quot;</span>);</div>
+</div><!-- fragment --><div class="image">
+<img src="insert_image.png" alt="insert_image.png"/>
+</div>
+<p>The <code><a class="el" href="worksheet_8h.html#abc18290a13a760aebe74c705a7ade0a7" title="Insert an image in a worksheet cell, with options. ">worksheet_insert_image_opt()</a></code> function takes additional optional parameters to position and scale the image, see below.</p>
+<p><b>Note</b>: The scaling of a image may be affected if is crosses a row that has its default height changed due to a font that is larger than the default font size or that has text wrapping turned on. To avoid this you should explicitly set the height of the row using <code><a class="el" href="worksheet_8h.html#ab2737ea78d5e679613f2fdd7bb425030" title="Set the properties for a row of cells. ">worksheet_set_row()</a></code> if it crosses an inserted image.</p>
+<p>BMP images are only supported for backward compatibility. In general it is best to avoid BMP images since they aren't compressed. If used, BMP images must be 24 bit, true color, bitmaps. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="demo_8c-example.html#a10">demo.c</a>, and <a class="el" href="images_8c-example.html#a8">images.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="abc18290a13a760aebe74c705a7ade0a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int worksheet_insert_image_opt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__image__options.html">lxw_image_options</a> *&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
+    <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
+    <tr><td class="paramname">filename</td><td>The image filename, with path if required. </td></tr>
+    <tr><td class="paramname">options</td><td>Optional image parameters.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
+<p>The <code>worksheet_insert_image_opt()</code> function is like <code><a class="el" href="worksheet_8h.html#aa9cfd4bf719dbbd45866cad7dde4dab3" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> function except that it takes an optional <a class="el" href="structlxw__image__options.html" title="Options for inserted images. ">lxw_image_options</a> struct to scale and position the image:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__image__options.html">lxw_image_options</a> options = {.x_offset = 30,   .y_offset = 10,</div>
+<div class="line">                             .x_scale  = 0.5, .y_scale  = 0.5};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="worksheet_8h.html#abc18290a13a760aebe74c705a7ade0a7">worksheet_insert_image_opt</a>(worksheet, 2, 1, <span class="stringliteral">&quot;logo.png&quot;</span>, &amp;options);</div>
+</div><!-- fragment --><div class="image">
+<img src="insert_image_opt.png" alt="insert_image_opt.png"/>
+</div>
+<p><b>Note</b>: See the notes about row scaling and BMP images in <code><a class="el" href="worksheet_8h.html#aa9cfd4bf719dbbd45866cad7dde4dab3" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> above. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="images_8c-example.html#a11">images.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2830,6 +2958,19 @@ objects
 
 </div>
 </div>
+<a class="anchor" id="aeb938e392615ac0172f141a2fb4208c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structlxw__image__options.html">lxw_image_options</a>  <a class="el" href="structlxw__image__options.html">lxw_image_options</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Options for modifying images inserted via <code><a class="el" href="worksheet_8h.html#abc18290a13a760aebe74c705a7ade0a7" title="Insert an image in a worksheet cell, with options. ">worksheet_insert_image_opt()</a></code>. </p>
+
+</div>
+</div>
 <a class="anchor" id="a9454ccd4ac56d5f9e796a91c3c2b156e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2953,6 +3094,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__row__col__options.html">lxw_row_col_options</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for rows and columns.  <a href="structlxw__row__col__options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__image__options.html">lxw_image_options</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for inserted images.  <a href="structlxw__image__options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__header__footer__options.html">lxw_header_footer_options</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Header and footer options.  <a href="structlxw__header__footer__options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2972,6 +3116,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a0d738f9174739380dc3a893c7baeb1ef"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__row__col__options.html">lxw_row_col_options</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a0d738f9174739380dc3a893c7baeb1ef">lxw_row_col_options</a></td></tr>
 <tr class="memdesc:a0d738f9174739380dc3a893c7baeb1ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for rows and columns.  <a href="#a0d738f9174739380dc3a893c7baeb1ef">More...</a><br /></td></tr>
 <tr class="separator:a0d738f9174739380dc3a893c7baeb1ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb938e392615ac0172f141a2fb4208c0"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__image__options.html">lxw_image_options</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#aeb938e392615ac0172f141a2fb4208c0">lxw_image_options</a></td></tr>
+<tr class="memdesc:aeb938e392615ac0172f141a2fb4208c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for inserted images.  <a href="#aeb938e392615ac0172f141a2fb4208c0">More...</a><br /></td></tr>
+<tr class="separator:aeb938e392615ac0172f141a2fb4208c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9454ccd4ac56d5f9e796a91c3c2b156e"><td class="memItemLeft" align="right" valign="top">typedef struct <br class="typebreak" />
 <a class="el" href="structlxw__header__footer__options.html">lxw_header_footer_options</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a9454ccd4ac56d5f9e796a91c3c2b156e">lxw_header_footer_options</a></td></tr>
 <tr class="memdesc:a9454ccd4ac56d5f9e796a91c3c2b156e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Header and footer options.  <a href="#a9454ccd4ac56d5f9e796a91c3c2b156e">More...</a><br /></td></tr>

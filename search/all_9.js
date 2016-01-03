@@ -75,6 +75,7 @@ var searchData=
   ['lxw_5fgridlines',['lxw_gridlines',['../worksheet_8h.html#a487e0bffad0a348421b825d715621c20',1,'worksheet.h']]],
   ['lxw_5fheader_5ffooter_5foptions',['lxw_header_footer_options',['../structlxw__header__footer__options.html',1,'lxw_header_footer_options'],['../worksheet_8h.html#a9454ccd4ac56d5f9e796a91c3c2b156e',1,'lxw_header_footer_options():&#160;worksheet.h']]],
   ['lxw_5fhide_5fall_5fgridlines',['LXW_HIDE_ALL_GRIDLINES',['../worksheet_8h.html#a487e0bffad0a348421b825d715621c20a3fa67c27394bd03fa6642a501598f70b',1,'worksheet.h']]],
+  ['lxw_5fimage_5foptions',['lxw_image_options',['../structlxw__image__options.html',1,'lxw_image_options'],['../worksheet_8h.html#aeb938e392615ac0172f141a2fb4208c0',1,'lxw_image_options():&#160;worksheet.h']]],
   ['lxw_5fpattern_5fdark_5fdown',['LXW_PATTERN_DARK_DOWN',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7a704f3f128794e0bedec3635862e25211',1,'format.h']]],
   ['lxw_5fpattern_5fdark_5fgray',['LXW_PATTERN_DARK_GRAY',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7a7d852861b5d7206be22b15d9fccb024e',1,'format.h']]],
   ['lxw_5fpattern_5fdark_5fgrid',['LXW_PATTERN_DARK_GRID',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7a44857e548d3a18290dac9e71addc6291',1,'format.h']]],

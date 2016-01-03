@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: Examples</title>
+<title>libxlsxwriter: lxw_image_options Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,7 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Contents</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
-      <li class="current"><a href="examples.html"><span>Examples</span></a></li>
+      <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -59,7 +59,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -74,65 +73,87 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">Examples</div>  </div>
+<div class="title">lxw_image_options Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Example programs using libxlsxwriter:</div><ul>
-<li><a class="el" href="hello_8c-example.html">hello.c</a> A simple hello world example</li>
 
-<li><a class="el" href="anatomy_8c-example.html">anatomy.c</a> The anatomy of a libxlsxwriter program</li>
+<p>Options for inserted images.  
+ <a href="structlxw__image__options.html#details">More...</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Options for modifying images inserted via <code><a class="el" href="worksheet_8h.html#abc18290a13a760aebe74c705a7ade0a7" title="Insert an image in a worksheet cell, with options. ">worksheet_insert_image_opt()</a></code>. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="images_8c-example.html#_a9">images.c</a>.</dd>
+</dl></div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a7ef9c6980b8e66bcdfff18627250001c"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__image__options.html#a7ef9c6980b8e66bcdfff18627250001c">x_offset</a></td></tr>
+<tr class="separator:a7ef9c6980b8e66bcdfff18627250001c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b7d52e42878af3d7c65f7b0ff9f6279"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__image__options.html#a2b7d52e42878af3d7c65f7b0ff9f6279">y_offset</a></td></tr>
+<tr class="separator:a2b7d52e42878af3d7c65f7b0ff9f6279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac75127b545dc66c6a24e3b41bd20a7ab"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__image__options.html#ac75127b545dc66c6a24e3b41bd20a7ab">x_scale</a></td></tr>
+<tr class="separator:ac75127b545dc66c6a24e3b41bd20a7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13a470303d6128f06474111a6807b87b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__image__options.html#a13a470303d6128f06474111a6807b87b">y_scale</a></td></tr>
+<tr class="separator:a13a470303d6128f06474111a6807b87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Field Documentation</h2>
+<a class="anchor" id="a7ef9c6980b8e66bcdfff18627250001c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t lxw_image_options::x_offset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Offset from the left of the cell in pixels. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="images_8c-example.html#a10">images.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a2b7d52e42878af3d7c65f7b0ff9f6279"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t lxw_image_options::y_offset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Offset from the top of the cell in pixels. </p>
 
-<li><a class="el" href="demo_8c-example.html">demo.c</a> Demo of some of the libxlsxwriter features</li>
+</div>
+</div>
+<a class="anchor" id="ac75127b545dc66c6a24e3b41bd20a7ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double lxw_image_options::x_scale</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>X scale of the image as a decimal. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="images_8c-example.html#a12">images.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a13a470303d6128f06474111a6807b87b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double lxw_image_options::y_scale</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Y scale of the image as a decimal. </p>
 
-<li><a class="el" href="tutorial1_8c-example.html">tutorial1.c</a> Tutorial 1 from the documentation</li>
-
-<li><a class="el" href="tutorial2_8c-example.html">tutorial2.c</a> Tutorial 2 from the documentation</li>
-
-<li><a class="el" href="tutorial3_8c-example.html">tutorial3.c</a> Tutorial 3 from the documentation</li>
-
-<li><a class="el" href="format_font_8c-example.html">format_font.c</a> Example of writing data with font formatting</li>
-
-<li><a class="el" href="format_num_format_8c-example.html">format_num_format.c</a> Example of writing data with number formatting</li>
-
-<li><a class="el" href="dates_and_times01_8c-example.html">dates_and_times01.c</a> Writing dates and times with numbers</li>
-
-<li><a class="el" href="dates_and_times02_8c-example.html">dates_and_times02.c</a> Writing dates and times with datetime</li>
-
-<li><a class="el" href="dates_and_times03_8c-example.html">dates_and_times03.c</a> Dates and times with different formats</li>
-
-<li><a class="el" href="hyperlinks_8c-example.html">hyperlinks.c</a> A example of writing urls/hyperlinks</li>
-
-<li><a class="el" href="array_formula_8c-example.html">array_formula.c</a> A example of using array formulas</li>
-
-<li><a class="el" href="utf8_8c-example.html">utf8.c</a> A example of some UTF-8 text</li>
-
-<li><a class="el" href="constant_memory_8c-example.html">constant_memory.c</a> Write a large file with constant memory usage</li>
-
-<li><a class="el" href="merge_range_8c-example.html">merge_range.c</a> Create a merged range of cells</li>
-
-<li><a class="el" href="autofilter_8c-example.html">autofilter.c</a> An example of a worksheet autofilter</li>
-
-<li><a class="el" href="images_8c-example.html">images.c</a> Example of adding images to a worksheet.</li>
-
-<li><a class="el" href="headers_footers_8c-example.html">headers_footers.c</a> Example of adding worksheet headers/footers</li>
-
-<li><a class="el" href="defined_name_8c-example.html">defined_name.c</a> Example of how to create defined names</li>
-
-<li><a class="el" href="tab_colors_8c-example.html">tab_colors.c</a> Example of how to set worksheet tab colors</li>
-
-<li><a class="el" href="hide_sheet_8c-example.html">hide_sheet.c</a> Example of hiding a worksheet</li>
-
-<li><a class="el" href="doc_properties_8c-example.html">doc_properties.c</a> Example of setting workbook doc properties</li>
-
-<li><a class="el" href="worksheet_protection_8c-example.html">worksheet_protection.c</a> Example of enabling worksheet protection</li>
-
-<li><a class="el" href="hide_row_col_8c-example.html">hide_row_col.c</a> Example of hiding worksheet rows and columns</li>
-
-<li><a class="el" href="panes_8c-example.html">panes.c</a> Example of how to create worksheet panes</li>
-
-</ul>
+</div>
+</div>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
