@@ -88,15 +88,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>This ominous sounding message is Excel's standard warning for any validation error in the XML used for the components of the XLSX file.</p>
 <p>If you encounter an issue like this you should open an issue on GitHub with a program to replicate the issue (see below) or send one of the failing output files to the <a class="el" href="author.html">Author</a>.</p>
 <h2>Formulas displayed as <code>NAME?</code> until edited</h2>
-<p>Excel 2010 and 2013 added functions which weren't defined in the original file specification. These functions are referred to as <em>future</em> functions. Examples of these functions are <code>ACOT</code>, <code>CHISQ.DIST.RT</code> , <code>CONFIDENCE.NORM</code>, <code>STDEV.P</code>, <code>STDEV.S</code> and <code>WORKDAY.INTL</code>. The full list is given in the [MS XLSX extensions documentation on future functions](<a href="http://msdn.microsoft.com/en-us/library/dd907480%28v=office.12%29.aspx">http://msdn.microsoft.com/en-us/library/dd907480%28v=office.12%29.aspx</a>).</p>
+<p>Excel 2010 and 2013 added functions which weren't defined in the original file specification. These functions are referred to as <em>future</em> functions. Examples of these functions are <code>ACOT</code>, <code>CHISQ.DIST.RT</code> , <code>CONFIDENCE.NORM</code>, <code>STDEV.P</code>, <code>STDEV.S</code> and <code>WORKDAY.INTL</code>. The full list is given in the <a href="http://msdn.microsoft.com/en-us/library/dd907480%28v=office.12%29.aspx">MS XLSX extensions documentation on future functions</a>.</p>
 <p>When written using <code>write_formula()</code> these functions need to be fully qualified with the <code>_xlfn.</code> prefix as they are shown in the MS XLSX documentation link above. For example: </p><pre class="fragment">worksheet_write_formula(worksheet, 0, 0,"=_xlfn.STDEV.S(B1:B10)", NULL);
 </pre><h2>Formula results displaying as zero in non-Excel applications</h2>
 <p>Due to wide range of possible formulas and inter-dependencies between them, <code>xlsxwriter</code> doesn't, and realistically cannot, calculate the result of a formula when it is written to an XLSX file. Instead, it stores the value 0 as the formula result. It then sets a global flag in the XLSX file to say that all formulas and functions should be recalculated when the file is opened.</p>
 <p>This is the method recommended in the Excel documentation and in general it works fine with spreadsheet applications. However, applications that don't have a facility to calculate formulas, such as Excel Viewer, or several mobile applications, will only display the 0 results.</p>
-<p>If required, it is also possible to specify the calculated result of the formula using the <a class="el" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37" title="Write a formula to a worksheet cell with a user defined result. ">worksheet_write_formula_num()</a> function.</p>
+<p>If required, it is also possible to specify the calculated result of the formula using the <code><a class="el" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37" title="Write a formula to a worksheet cell with a user defined result. ">worksheet_write_formula_num()</a></code> function.</p>
 <h2>Strings aren't displayed in Apple Numbers in 'constant_memory' mode</h2>
-<p>In new_workbook_opt <code>constant_memory</code> mode libxlsxwriter uses an optimization where cell strings aren't stored in an Excel structure call "shared strings" and instead are written "in-line".</p>
+<p>In <code><a class="el" href="workbook_8h.html#adec7dc2f551c4819ff542b65a00ff5cb" title="Create a new workbook object, and set the workbook options. ">new_workbook_opt()</a></code> <code>constant_memory</code> mode libxlsxwriter uses an optimization where cell strings aren't stored in an Excel structure call "shared strings" and instead are written "in-line".</p>
 <p>This is a documented Excel feature that is supported by most spreadsheet applications. One known exception is Apple Numbers for Mac where the string data isn't displayed.</p>
+<h2>Images not displayed correctly in Excel 2001 for Mac and non-Excel applications</h2>
+<p>Images inserted into worksheets via <code><a class="el" href="worksheet_8h.html#aa9cfd4bf719dbbd45866cad7dde4dab3" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> may not display correctly in Excel 2011 for Mac and non-Excel applications such as OpenOffice and LibreOffice. Specifically the images may looked stretched or squashed.</p>
+<p>This is not an XlsxWriter issue. It also occurs with files created in Excel 2007 and Excel 2010.</p>
 <h1>Reporting Bugs</h1>
 <p>Here are some tips on reporting bugs in <code>libxlsxwriter</code>.</p>
 <h2>Upgrade to the latest version of the library</h2>
@@ -117,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h2>Look at the example programs</h2>
 <p>There are many <a class="el" href="examples.html">Example Programs</a> in the distribution. Try to identify an example program that corresponds to your query and adapt it to use as a bug report.</p>
 <h2>Use the xlsxwriter Issue tracker</h2>
-<p>The <a href="https://github.com/jmcnamara/libxlsxwriter/issues">libxlsxwriter issue tracker</a> is on GitHub.</p>
+<p>The <a href="https://github.com/jmcnamara/libxlsxwriter/issues">libxlsxwriter issuetracker</a> is on GitHub.</p>
 <h2>Tips for submitting a bug report</h2>
 <ol type="1">
 <li>Describe the problem as clearly and as concisely as possible.</li>
@@ -149,7 +152,7 @@ int main() {
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Copyright 2014-2015 John McNamara.
+Copyright 2014-2016 John McNamara.
 Generated by <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a>
