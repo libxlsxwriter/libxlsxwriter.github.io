@@ -100,7 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a4c34a495371c477c06f16a2a0007dea7">new_workbook</a>(<span class="stringliteral">&quot;filename.xlsx&quot;</span>);</div>
+<div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;filename.xlsx&quot;</span>);</div>
 <div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello Excel&quot;</span>, NULL);</div>
@@ -113,12 +113,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4c34a495371c477c06f16a2a0007dea7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__workbook.html">lxw_workbook</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a4c34a495371c477c06f16a2a0007dea7">new_workbook</a> (const char *filename)</td></tr>
-<tr class="memdesc:a4c34a495371c477c06f16a2a0007dea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new workbook object.  <a href="#a4c34a495371c477c06f16a2a0007dea7">More...</a><br /></td></tr>
-<tr class="separator:a4c34a495371c477c06f16a2a0007dea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adec7dc2f551c4819ff542b65a00ff5cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__workbook.html">lxw_workbook</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#adec7dc2f551c4819ff542b65a00ff5cb">new_workbook_opt</a> (const char *filename, <a class="el" href="structlxw__workbook__options.html">lxw_workbook_options</a> *options)</td></tr>
-<tr class="memdesc:adec7dc2f551c4819ff542b65a00ff5cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new workbook object, and set the workbook options.  <a href="#adec7dc2f551c4819ff542b65a00ff5cb">More...</a><br /></td></tr>
-<tr class="separator:adec7dc2f551c4819ff542b65a00ff5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cf96608a23ee4eb0e8467c15240d00b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__workbook.html">lxw_workbook</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a> (const char *filename)</td></tr>
+<tr class="memdesc:a1cf96608a23ee4eb0e8467c15240d00b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new workbook object.  <a href="#a1cf96608a23ee4eb0e8467c15240d00b">More...</a><br /></td></tr>
+<tr class="separator:a1cf96608a23ee4eb0e8467c15240d00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ca9bd8c30c618b81ca6180f78b03323"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__workbook.html">lxw_workbook</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323">workbook_new_opt</a> (const char *filename, <a class="el" href="structlxw__workbook__options.html">lxw_workbook_options</a> *options)</td></tr>
+<tr class="memdesc:a8ca9bd8c30c618b81ca6180f78b03323"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new workbook object, and set the workbook options.  <a href="#a8ca9bd8c30c618b81ca6180f78b03323">More...</a><br /></td></tr>
+<tr class="separator:a8ca9bd8c30c618b81ca6180f78b03323"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81d456b4f65a464e78e4a0030ecc3c2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, const char *sheetname)</td></tr>
 <tr class="memdesc:a81d456b4f65a464e78e4a0030ecc3c2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new worksheet to a workbook:  <a href="#a81d456b4f65a464e78e4a0030ecc3c2e">More...</a><br /></td></tr>
 <tr class="separator:a81d456b4f65a464e78e4a0030ecc3c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,12 +136,12 @@ Functions</h2></td></tr>
 <tr class="separator:a239893289738cb030cbda1b73d4569b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a4c34a495371c477c06f16a2a0007dea7"></a>
+<a class="anchor" id="a1cf96608a23ee4eb0e8467c15240d00b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structlxw__workbook.html">lxw_workbook</a>* new_workbook </td>
+          <td class="memname"><a class="el" href="structlxw__workbook.html">lxw_workbook</a>* workbook_new </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>filename</em></td><td>)</td>
@@ -156,19 +156,19 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook. ">lxw_workbook</a> instance.</dd></dl>
-<p>The <code>new_workbook()</code> constructor is used to create a new Excel workbook with a given filename:</p>
-<div class="fragment"><div class="line"><a class="code" href="structlxw__workbook.html">lxw_workbook</a> *workbook  = <a class="code" href="workbook_8h.html#a4c34a495371c477c06f16a2a0007dea7">new_workbook</a>(<span class="stringliteral">&quot;filename.xlsx&quot;</span>);</div>
+<p>The <code>workbook_new()</code> constructor is used to create a new Excel workbook with a given filename:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__workbook.html">lxw_workbook</a> *workbook  = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;filename.xlsx&quot;</span>);</div>
 </div><!-- fragment --><p>When specifying a filename it is recommended that you use an <code>.xlsx</code> extension or Excel will generate a warning when opening the file. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a1">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a1">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a1">autofilter.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a1">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a2">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a2">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a1">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a1">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a1">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a1">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a1">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a1">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a1">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a1">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a1">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a1">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a1">images.c</a>, <a class="el" href="merge_range_8c-example.html#a1">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a1">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a1">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a1">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a1">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a3">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a1">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a1">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="adec7dc2f551c4819ff542b65a00ff5cb"></a>
+<a class="anchor" id="a8ca9bd8c30c618b81ca6180f78b03323"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structlxw__workbook.html">lxw_workbook</a>* new_workbook_opt </td>
+          <td class="memname"><a class="el" href="structlxw__workbook.html">lxw_workbook</a>* workbook_new_opt </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>filename</em>, </td>
@@ -194,10 +194,10 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook. ">lxw_workbook</a> instance.</dd></dl>
-<p>This method is the same as the <code><a class="el" href="workbook_8h.html#a4c34a495371c477c06f16a2a0007dea7" title="Create a new workbook object. ">new_workbook()</a></code> constructor but allows additional options to be set.</p>
+<p>This method is the same as the <code><a class="el" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b" title="Create a new workbook object. ">workbook_new()</a></code> constructor but allows additional options to be set.</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__workbook__options.html">lxw_workbook_options</a> options = {.<a class="code" href="structlxw__workbook__options.html#aa03636857813ca881bdd09e07bcbe738">constant_memory</a> = 1};</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#adec7dc2f551c4819ff542b65a00ff5cb">new_workbook_opt</a>(<span class="stringliteral">&quot;filename.xlsx&quot;</span>, &amp;options);</div>
+<div class="line"><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323">workbook_new_opt</a>(<span class="stringliteral">&quot;filename.xlsx&quot;</span>, &amp;options);</div>
 </div><!-- fragment --><p>Note, in this mode a row of data is written and then discarded when a cell in a new row is added via one of the worksheet <code>worksheet_write_*()</code> methods. Therefore, once this mode is active, data should be written in sequential row order.</p>
 <p>See <a class="el" href="working_with_memory.html">Working with Memory and Performance</a> for more details. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="constant_memory_8c-example.html#a3">constant_memory.c</a>.</dd>
@@ -461,7 +461,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Optional parameters when creating a new Workbook object via <a class="el" href="workbook_8h.html#adec7dc2f551c4819ff542b65a00ff5cb" title="Create a new workbook object, and set the workbook options. ">new_workbook_opt()</a>.</p>
+<p>Optional parameters when creating a new Workbook object via <a class="el" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323" title="Create a new workbook object, and set the workbook options. ">workbook_new_opt()</a>.</p>
 <p>Currently only the <code>constant_memory</code> property is supported:</p>
 <ul>
 <li><code>constant_memory</code> </li>
@@ -507,7 +507,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This macro allows you to loop over all the worksheets that have been added to a workbook. You must provide a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> pointer and a pointer to the <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook. ">lxw_workbook</a>:</p>
-<div class="fragment"><div class="line"><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook = <a class="code" href="workbook_8h.html#a4c34a495371c477c06f16a2a0007dea7">new_workbook</a>(<span class="stringliteral">&quot;test.xlsx&quot;</span>);</div>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;test.xlsx&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet; <span class="comment">// Generic worksheet pointer.</span></div>
 <div class="line"></div>

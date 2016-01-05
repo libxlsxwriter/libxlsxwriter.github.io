@@ -113,7 +113,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Create a workbook and add a worksheet. */</span></div>
-<div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a4c34a495371c477c06f16a2a0007dea7">new_workbook</a>(<span class="stringliteral">&quot;tutorial01.xlsx&quot;</span>);</div>
+<div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;tutorial01.xlsx&quot;</span>);</div>
 <div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Start from the first cell. Rows and columns are zero indexed. */</span></div>
@@ -155,8 +155,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    {<span class="stringliteral">&quot;Gym&quot;</span>,    50},</div>
 <div class="line">};</div>
 </div><!-- fragment --></p>
-<p>The next step is to create a workbook object in a <code>main</code> block or function using the <a class="el" href="workbook_8h.html#a4c34a495371c477c06f16a2a0007dea7" title="Create a new workbook object. ">new_workbook()</a> function which takes the filename that we want to create:</p>
- <div class="fragment"><div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a4c34a495371c477c06f16a2a0007dea7">new_workbook</a>(<span class="stringliteral">&quot;tutorial01.xlsx&quot;</span>);</div>
+<p>The next step is to create a workbook object in a <code>main</code> block or function using the <a class="el" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b" title="Create a new workbook object. ">workbook_new()</a> function which takes the filename that we want to create:</p>
+ <div class="fragment"><div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;tutorial01.xlsx&quot;</span>);</div>
 </div><!-- fragment --></p>
 <p>The workbook object is then used to add a new worksheet via the <a class="el" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e" title="Add a new worksheet to a workbook: ">workbook_add_worksheet()</a> function:</p>
  <div class="fragment"><div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>

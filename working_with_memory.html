@@ -82,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><h2>Constant Memory Mode </h2>
 <p>By default libxlsxwriter holds all cell data in memory. This is to allow non-sequential data storage and also to allow future features where formatting is applied separately from the data.</p>
 <p>The effect of this is that for large files libxlsxwriter can consume a lot of memory.</p>
-<p>Fortunately, this memory usage can be reduced almost completely by using <a class="el" href="workbook_8h.html#adec7dc2f551c4819ff542b65a00ff5cb" title="Create a new workbook object, and set the workbook options. ">new_workbook_opt()</a> and the <a class="el" href="structlxw__workbook__options.html" title="Workbook options. ">lxw_workbook_options</a> <code>constant_memory</code> property:</p>
+<p>Fortunately, this memory usage can be reduced almost completely by using <a class="el" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323" title="Create a new workbook object, and set the workbook options. ">workbook_new_opt()</a> and the <a class="el" href="structlxw__workbook__options.html" title="Workbook options. ">lxw_workbook_options</a> <code>constant_memory</code> property:</p>
  <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    options.<a class="code" href="structlxw__workbook__options.html#aa03636857813ca881bdd09e07bcbe738">constant_memory</a> = 1;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Create a new workbook with options. */</span></div>
-<div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#adec7dc2f551c4819ff542b65a00ff5cb">new_workbook_opt</a>(<span class="stringliteral">&quot;constant_memory.xlsx&quot;</span>, &amp;options);</div>
+<div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323">workbook_new_opt</a>(<span class="stringliteral">&quot;constant_memory.xlsx&quot;</span>, &amp;options);</div>
 <div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">for</span> (row = 0; row &lt; max_row; row++) {</div>
@@ -114,7 +114,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>The trade-off when using <code>constant_memory</code> mode is that data must be added sequentially in row order and you won't be able to take advantage of any new features that manipulate cell data after it is written. Currently the only such feature is <a class="el" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736" title="Set the properties for a row of cells. ">worksheet_set_row()</a> which in <code>constant_memory</code> mode can only be used when writing data to the current row.</p>
 <h2>Row Column Order </h2>
 <p>Since each new row flushes the previous row, data must be written in sequential row order when <code>constant_memory</code> mode is on:</p>
-<div class="fragment"><div class="line"> <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#adec7dc2f551c4819ff542b65a00ff5cb">new_workbook_opt</a>(<span class="stringliteral">&quot;constant_memory.xlsx&quot;</span>, &amp;options);</div>
+<div class="fragment"><div class="line"> <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323">workbook_new_opt</a>(<span class="stringliteral">&quot;constant_memory.xlsx&quot;</span>, &amp;options);</div>
 <div class="line"> ...</div>
 <div class="line"></div>
 <div class="line"> <span class="comment">// !! Don&#39;t use &quot;column x row&quot; order in &#39;constant_memory&#39; mode. Only</span></div>

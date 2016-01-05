@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>This is the method recommended in the Excel documentation and in general it works fine with spreadsheet applications. However, applications that don't have a facility to calculate formulas, such as Excel Viewer, or several mobile applications, will only display the 0 results.</p>
 <p>If required, it is also possible to specify the calculated result of the formula using the <code><a class="el" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37" title="Write a formula to a worksheet cell with a user defined result. ">worksheet_write_formula_num()</a></code> function.</p>
 <h2>Strings aren't displayed in Apple Numbers in 'constant_memory' mode</h2>
-<p>In <code><a class="el" href="workbook_8h.html#adec7dc2f551c4819ff542b65a00ff5cb" title="Create a new workbook object, and set the workbook options. ">new_workbook_opt()</a></code> <code>constant_memory</code> mode libxlsxwriter uses an optimization where cell strings aren't stored in an Excel structure call "shared strings" and instead are written "in-line".</p>
+<p>In <code><a class="el" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323" title="Create a new workbook object, and set the workbook options. ">workbook_new_opt()</a></code> <code>constant_memory</code> mode libxlsxwriter uses an optimization where cell strings aren't stored in an Excel structure call "shared strings" and instead are written "in-line".</p>
 <p>This is a documented Excel feature that is supported by most spreadsheet applications. One known exception is Apple Numbers for Mac where the string data isn't displayed.</p>
 <h2>Images not displayed correctly in Excel 2001 for Mac and non-Excel applications</h2>
 <p>Images inserted into worksheets via <code><a class="el" href="worksheet_8h.html#aa9cfd4bf719dbbd45866cad7dde4dab3" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> may not display correctly in Excel 2011 for Mac and non-Excel applications such as OpenOffice and LibreOffice. Specifically the images may looked stretched or squashed.</p>
@@ -139,7 +139,7 @@ Here is some code that demonstrates the problem:
 
 int main() {
 
-    lxw_workbook  *workbook  = new_workbook("bug_report.xlsx");
+    lxw_workbook  *workbook  = workbook_new("bug_report.xlsx");
     lxw_worksheet *worksheet = workbook_add_worksheet(workbook, NULL);
 
     worksheet_write_string(worksheet, 0, 0, "Hello", NULL);
