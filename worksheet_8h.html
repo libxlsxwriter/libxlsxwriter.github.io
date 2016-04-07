@@ -128,6 +128,9 @@ Functions</h2></td></tr>
 <tr class="separator:acbc5654e9b8987ba263f83fff082ce33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22629468c16149a42de1c17ac9ee6aac"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *url, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
 <tr class="separator:a22629468c16149a42de1c17ac9ee6aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60cc3159efc17c1b4e82be350f214152"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a60cc3159efc17c1b4e82be350f214152">worksheet_write_boolean</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, int value, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:a60cc3159efc17c1b4e82be350f214152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formatted boolean worksheet cell.  <a href="#a60cc3159efc17c1b4e82be350f214152">More...</a><br /></td></tr>
+<tr class="separator:a60cc3159efc17c1b4e82be350f214152"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56bcd1671dc853a4927adb67696726ec"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a56bcd1671dc853a4927adb67696726ec">worksheet_write_blank</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
 <tr class="memdesc:a56bcd1671dc853a4927adb67696726ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formatted blank worksheet cell.  <a href="#a56bcd1671dc853a4927adb67696726ec">More...</a><br /></td></tr>
 <tr class="separator:a56bcd1671dc853a4927adb67696726ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -741,6 +744,63 @@ Functions</h2></td></tr>
 <p>libxlsxwriter will escape the following characters in URLs as required by Excel: <code>\s " &lt; &gt; \ [ ] ^ { }</code> unless the URL already contains <code>%xx</code> style escapes. In which case it is assumed that the URL was escaped correctly by the user and will by passed directly to Excel. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="hyperlinks_8c-example.html#a12">hyperlinks.c</a>.</dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="a60cc3159efc17c1b4e82be350f214152"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t worksheet_write_boolean </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="worksheet_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__format.html">lxw_format</a> *&#160;</td>
+          <td class="paramname"><em>format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
+    <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
+    <tr><td class="paramname">value</td><td>The boolean value to write to the cell. </td></tr>
+    <tr><td class="paramname">format</td><td>A pointer to a Format instance or NULL.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89">lxw_worksheet_error</a> code.</dd></dl>
+<p>Write an Excel boolean to the cell specified by <code>row</code> and <code>column</code>:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a60cc3159efc17c1b4e82be350f214152">worksheet_write_boolean</a>(worksheet, 2, 2, 0, my_format);</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="a56bcd1671dc853a4927adb67696726ec"></a>

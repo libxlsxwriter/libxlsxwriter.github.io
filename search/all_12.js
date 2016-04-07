@@ -58,6 +58,7 @@ var searchData=
   ['worksheet_5fsplit_5fpanes',['worksheet_split_panes',['../worksheet_8h.html#a9f4a3845529bcc2922b89bdb450ded32',1,'worksheet.h']]],
   ['worksheet_5fwrite_5farray_5fformula',['worksheet_write_array_formula',['../worksheet_8h.html#a5524b8304904962d6686d2723252e981',1,'worksheet.h']]],
   ['worksheet_5fwrite_5fblank',['worksheet_write_blank',['../worksheet_8h.html#a56bcd1671dc853a4927adb67696726ec',1,'worksheet.h']]],
+  ['worksheet_5fwrite_5fboolean',['worksheet_write_boolean',['../worksheet_8h.html#a60cc3159efc17c1b4e82be350f214152',1,'worksheet.h']]],
   ['worksheet_5fwrite_5fdatetime',['worksheet_write_datetime',['../worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33',1,'worksheet.h']]],
   ['worksheet_5fwrite_5fformula',['worksheet_write_formula',['../worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1',1,'worksheet.h']]],
   ['worksheet_5fwrite_5fformula_5fnum',['worksheet_write_formula_num',['../worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37',1,'worksheet.h']]],
