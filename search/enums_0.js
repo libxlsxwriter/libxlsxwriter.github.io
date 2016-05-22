@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['lxw_5fboolean',['lxw_boolean',['../common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349',1,'common.h']]],
+  ['lxw_5fchart_5ftypes',['lxw_chart_types',['../chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2',1,'chart.h']]],
   ['lxw_5fdefined_5fcolors',['lxw_defined_colors',['../format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38b',1,'format.h']]],
   ['lxw_5fformat_5falignments',['lxw_format_alignments',['../format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5',1,'format.h']]],
   ['lxw_5fformat_5fborders',['lxw_format_borders',['../format_8h.html#a4d5e924b1acd9571fd5e0fe2615e9f8f',1,'format.h']]],

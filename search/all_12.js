@@ -1,6 +1,7 @@
 var searchData=
 [
   ['workbook_2eh',['workbook.h',['../workbook_8h.html',1,'']]],
+  ['workbook_5fadd_5fchart',['workbook_add_chart',['../workbook_8h.html#a63b001ecefdbc4417986a3e344657726',1,'workbook.h']]],
   ['workbook_5fadd_5fformat',['workbook_add_format',['../workbook_8h.html#a279a5d7075d09a3931aae9782afede33',1,'workbook.h']]],
   ['workbook_5fadd_5fworksheet',['workbook_add_worksheet',['../workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e',1,'workbook.h']]],
   ['workbook_5fclose',['workbook_close',['../workbook_8h.html#aff39de16411dae703c5574ece9cac09b',1,'workbook.h']]],
@@ -22,6 +23,7 @@ var searchData=
   ['worksheet_5fgridlines',['worksheet_gridlines',['../worksheet_8h.html#abd9af70f706b738690ebb9103940b0e1',1,'worksheet.h']]],
   ['worksheet_5fhide',['worksheet_hide',['../worksheet_8h.html#a180fcbcf012b5c165a01490d1128dc11',1,'worksheet.h']]],
   ['worksheet_5fhide_5fzero',['worksheet_hide_zero',['../worksheet_8h.html#a0b02d53154397cd4024e8ec2a95e2d89',1,'worksheet.h']]],
+  ['worksheet_5finsert_5fchart',['worksheet_insert_chart',['../worksheet_8h.html#a116f2ec4f88dc343a84e9da97ca8da21',1,'worksheet.h']]],
   ['worksheet_5finsert_5fimage',['worksheet_insert_image',['../worksheet_8h.html#aa9cfd4bf719dbbd45866cad7dde4dab3',1,'worksheet.h']]],
   ['worksheet_5finsert_5fimage_5fopt',['worksheet_insert_image_opt',['../worksheet_8h.html#abc18290a13a760aebe74c705a7ade0a7',1,'worksheet.h']]],
   ['worksheet_5fmerge_5frange',['worksheet_merge_range',['../worksheet_8h.html#ac15d2e82b73308458e9cdebeffdd46e6',1,'worksheet.h']]],

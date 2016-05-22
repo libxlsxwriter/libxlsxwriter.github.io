@@ -116,7 +116,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">cell</td><td>)</td>
-          <td>&#160;&#160;&#160;lxw_get_row(cell), lxw_get_col(cell)</td>
+          <td>&#160;&#160;&#160;lxw_name_to_row(cell), lxw_name_to_col(cell)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -128,7 +128,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0,       <span class="stringliteral">&quot;Foo&quot;</span>, NULL);</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd></dd></dl>
 <p>This macro shouldn't be used in performance critical situations since it expands to two function calls. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="images_8c-example.html#a7">images.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_8c-example.html#a9">chart.c</a>, <a class="el" href="chart_area_8c-example.html#a3">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a3">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a3">chart_column.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a3">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a3">chart_line.c</a>, <a class="el" href="chart_pie_8c-example.html#a3">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a3">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a3">chart_scatter.c</a>, and <a class="el" href="images_8c-example.html#a7">images.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -141,7 +141,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">cols</td><td>)</td>
-          <td>&#160;&#160;&#160;lxw_get_col(cols), lxw_get_col_2(cols)</td>
+          <td>&#160;&#160;&#160;lxw_name_to_col(cols), lxw_name_to_col_2(cols)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -151,7 +151,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">// Same as:</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 1, 3,        20, NULL, NULL);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="hide_row_col_8c-example.html#a10">hide_row_col.c</a>, and <a class="el" href="images_8c-example.html#a5">images.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="hide_row_col_8c-example.html#a11">hide_row_col.c</a>, and <a class="el" href="images_8c-example.html#a5">images.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -164,11 +164,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">range</td><td>)</td>
-          <td>&#160;&#160;&#160;lxw_get_row(range), lxw_get_col(range), lxw_get_row_2(range), lxw_get_col_2(range)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Convert an Excel <code>A1:B2</code> range into a <code>(first_row, first_col, last_row, last_col)</code> sequence.</p>
+<b>Value:</b><div class="fragment"><div class="line">lxw_name_to_row(range), lxw_name_to_col(range), \</div>
+<div class="line">    lxw_name_to_row_2(range), lxw_name_to_col_2(range)</div>
+</div><!-- fragment --><p>Convert an Excel <code>A1:B2</code> range into a <code>(first_row, first_col, last_row, last_col)</code> sequence.</p>
 <p>This is a little syntactic shortcut to help with worksheet layout.</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ae0c82375dda26bb7590a2ad3f42401dd">worksheet_print_area</a>(worksheet, 0, 0, 41, 10); <span class="comment">// A1:K42.</span></div>
 <div class="line"></div>
@@ -193,13 +195,13 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ad510ac6df573d23203374e24dba373d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(cell)&#160;&#160;&#160;lxw_get_row(cell), lxw_get_col(cell)</td></tr>
+<tr class="memitem:ad510ac6df573d23203374e24dba373d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(cell)&#160;&#160;&#160;lxw_name_to_row(cell), lxw_name_to_col(cell)</td></tr>
 <tr class="memdesc:ad510ac6df573d23203374e24dba373d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an Excel <code>A1</code> cell string into a <code>(row, col)</code> pair.  <a href="#ad510ac6df573d23203374e24dba373d2">More...</a><br /></td></tr>
 <tr class="separator:ad510ac6df573d23203374e24dba373d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a189672bfa9c380a28d8db8c40de17fe8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(cols)&#160;&#160;&#160;lxw_get_col(cols), lxw_get_col_2(cols)</td></tr>
+<tr class="memitem:a189672bfa9c380a28d8db8c40de17fe8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(cols)&#160;&#160;&#160;lxw_name_to_col(cols), lxw_name_to_col_2(cols)</td></tr>
 <tr class="memdesc:a189672bfa9c380a28d8db8c40de17fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an Excel <code>A:B</code> column range into a <code>(col1, col2)</code> pair.  <a href="#a189672bfa9c380a28d8db8c40de17fe8">More...</a><br /></td></tr>
 <tr class="separator:a189672bfa9c380a28d8db8c40de17fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dbbdfc9b616195c799dee78e727cecc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(range)&#160;&#160;&#160;lxw_get_row(range), lxw_get_col(range), lxw_get_row_2(range), lxw_get_col_2(range)</td></tr>
+<tr class="memitem:a4dbbdfc9b616195c799dee78e727cecc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(range)</td></tr>
 <tr class="memdesc:a4dbbdfc9b616195c799dee78e727cecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an Excel <code>A1:B2</code> range into a <code>(first_row, first_col, last_row, last_col)</code> sequence.  <a href="#a4dbbdfc9b616195c799dee78e727cecc">More...</a><br /></td></tr>
 <tr class="separator:a4dbbdfc9b616195c799dee78e727cecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>

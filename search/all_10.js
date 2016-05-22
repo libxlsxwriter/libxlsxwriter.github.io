@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['the_20chart_20object',['The Chart object',['../chart_page.html',1,'']]],
   ['the_20format_20object',['The Format object',['../format_page.html',1,'']]],
   ['title',['title',['../structlxw__doc__properties.html#a23d8fd5995ef26d1eab54c4dbd92393c',1,'lxw_doc_properties']]],
   ['tutorial_201_3a_20create_20a_20simple_20xlsx_20file',['Tutorial 1: Create a simple XLSX file',['../tutorial01.html',1,'']]],
