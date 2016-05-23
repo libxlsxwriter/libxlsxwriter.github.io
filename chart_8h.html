@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Description</h2>
 <div class="textblock"><p>The Chart object represents an Excel chart. It provides functions for adding data series to the chart and for configuring the chart.</p>
-<p>A Chart object isn't created directly. Instead a chart is created by calling the <a class="el" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726" title="Create a new chart to be added to a worksheet: ">workbook_add_chart()</a> function from a Workbook object:</p>
+<p>A Chart object isn't created directly. Instead a chart is created by calling the <code><a class="el" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726" title="Create a new chart to be added to a worksheet: ">workbook_add_chart()</a></code> function from a Workbook object. For example:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
@@ -206,7 +206,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structlxw__chart__series.html" title="Struct to represent an Excel chart data series. ">lxw_chart_series</a> object pointer.</dd></dl>
-<p>In Excel a chart <b>series</b> is a collection of information that defines which data is plotted such as values, axis labels and formatting.</p>
+<p>In Excel a chart <b>series</b> is a collection of information that defines which data is plotted such as the categories and values. It is also used to define the formatting for the data.</p>
 <p>For an libxlsxwriter chart object the <code>chart_add_series()</code> function is used to set the categories and values of the series:</p>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a6369f65acef669728594381277fd00a4">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$C$2:$C$7&quot;</span>);</div>
 </div><!-- fragment --><p>The series parameters are:</p>
@@ -218,13 +218,13 @@ Functions</h2></td></tr>
 </div><!-- fragment --><ul>
 <li><code>values</code>: This is the most important property of a series and is the only mandatory option for every chart object. This parameter links the chart with the worksheet data that it displays.</li>
 </ul>
-<p>The <code>categories</code> and <code>values</code> should be a string formula like it is represented in Excel such as <code>"=Sheet1!$A$2:$A$7"</code>. This is convenient when recreating a chart from an example in Excel or when the range is particularly complex but it is trickier to generate programmatically. For these cases set the <code>categories</code> and <code>values</code> to <code>NULL</code> and use the <code><a class="el" href="chart_8h.html#adecfcb156866a3057f91e50feb1838e1" title="Set a series &quot;categories&quot; range using row and column values. ">chart_series_set_categories()</a></code> and <code><a class="el" href="chart_8h.html#a985ee9a25fcdcbed209d5a4597de7214" title="Set a series &quot;values&quot; range using row and column values. ">chart_series_set_values()</a></code> functions:</p>
+<p>The <code>categories</code> and <code>values</code> should be a string formula like <code>"=Sheet1!$A$2:$A$7"</code> in the same way it is represented in Excel. This is convenient when recreating a chart from an example in Excel but it is trickier to generate programmatically. For these cases you can set the <code>categories</code> and <code>values</code> to <code>NULL</code> and use the <code><a class="el" href="chart_8h.html#adecfcb156866a3057f91e50feb1838e1" title="Set a series &quot;categories&quot; range using row and column values. ">chart_series_set_categories()</a></code> and <code><a class="el" href="chart_8h.html#a985ee9a25fcdcbed209d5a4597de7214" title="Set a series &quot;values&quot; range using row and column values. ">chart_series_set_values()</a></code> functions:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__chart__series.html">lxw_chart_series</a> *series = <a class="code" href="chart_8h.html#a6369f65acef669728594381277fd00a4">chart_add_series</a>(chart, NULL, NULL);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Configure the series using a syntax that is easier to define programmatically.</span></div>
 <div class="line"><a class="code" href="chart_8h.html#adecfcb156866a3057f91e50feb1838e1">chart_series_set_categories</a>(series, <span class="stringliteral">&quot;Sheet1&quot;</span>, 1, 0, 6, 0); <span class="comment">// &quot;=Sheet1!$A$2:$A$7&quot;</span></div>
 <div class="line"><a class="code" href="chart_8h.html#a985ee9a25fcdcbed209d5a4597de7214">chart_series_set_values</a>(    series, <span class="stringliteral">&quot;Sheet1&quot;</span>, 1, 2, 6, 2); <span class="comment">// &quot;=Sheet1!$C$2:$C$7&quot;</span></div>
-</div><!-- fragment --><p>As shown in the previous example the return values from <code>chart_add_series()</code> is a <a class="el" href="structlxw__chart__series.html" title="Struct to represent an Excel chart data series. ">lxw_chart_series</a> pointer. This can be used in other functions that configure a series.</p>
+</div><!-- fragment --><p>As shown in the previous example the return value from <code>chart_add_series()</code> is a <a class="el" href="structlxw__chart__series.html" title="Struct to represent an Excel chart data series. ">lxw_chart_series</a> pointer. This can be used in other functions that configure a series.</p>
 <p>More than one series can be added to a chart. The series numbering and order in the Excel chart will be the same as the order in which they are added in libxlsxwriter:</p>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a6369f65acef669728594381277fd00a4">chart_add_series</a>(chart, NULL, <span class="stringliteral">&quot;Sheet1!$A$1:$A$5&quot;</span>);</div>
 <div class="line"><a class="code" href="chart_8h.html#a6369f65acef669728594381277fd00a4">chart_add_series</a>(chart, NULL, <span class="stringliteral">&quot;Sheet1!$B$1:$B$5&quot;</span>);</div>
@@ -708,14 +708,14 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code>chart_set_style()</code> method is used to set the style of the chart to one of the 48 built-in styles available on the "Design" tab in Excel 2007:</p>
+<p>The <code>chart_set_style()</code> function is used to set the style of the chart to one of the 48 built-in styles available on the "Design" tab in Excel 2007:</p>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a6865755f0adb52e41466a6576a8a030e">chart_set_style</a>(chart, 37)</div>
 </div><!-- fragment --><div class="image">
 <img src="chart_style.png" alt="chart_style.png"/>
 </div>
 <p>The style index number is counted from 1 on the top left in the Excel dialog. The default style is 2.</p>
 <p><b>Note:</b></p>
-<p>In Excel 2013 the Styles section of the "Design" tab in Excel shows what were referred to as "Layouts" in previous versions of Excel. These layouts are not defined in the file format. They are a collection of modifications to the base chart type. They can not be defined by the <code><a class="el" href="chart_8h.html#a6865755f0adb52e41466a6576a8a030e" title="Set the chart style type. ">chart_set_style()</a></code>` method. </p>
+<p>In Excel 2013 the Styles section of the "Design" tab in Excel shows what were referred to as "Layouts" in previous versions of Excel. These layouts are not defined in the file format. They are a collection of modifications to the base chart type. They can not be defined by the <code><a class="el" href="chart_8h.html#a6865755f0adb52e41466a6576a8a030e" title="Set the chart style type. ">chart_set_style()</a></code>` function. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_area_8c-example.html#a22">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a22">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a22">chart_column.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a16">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a22">chart_line.c</a>, <a class="el" href="chart_pie_8c-example.html#a16">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a22">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a22">chart_scatter.c</a>, and <a class="el" href="chart_styles_8c-example.html#a12">chart_styles.c</a>.</dd>
 </dl>
 </div>

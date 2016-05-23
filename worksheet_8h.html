@@ -158,6 +158,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a116f2ec4f88dc343a84e9da97ca8da21"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a116f2ec4f88dc343a84e9da97ca8da21">worksheet_insert_chart</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__chart.html">lxw_chart</a> *chart)</td></tr>
 <tr class="memdesc:a116f2ec4f88dc343a84e9da97ca8da21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a chart object into a worksheet.  <a href="#a116f2ec4f88dc343a84e9da97ca8da21">More...</a><br /></td></tr>
 <tr class="separator:a116f2ec4f88dc343a84e9da97ca8da21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d951cd8bb662977706b9a24ebbcc93b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a6d951cd8bb662977706b9a24ebbcc93b">worksheet_insert_chart_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, <a class="el" href="structlxw__image__options.html">lxw_image_options</a> *user_options)</td></tr>
+<tr class="memdesc:a6d951cd8bb662977706b9a24ebbcc93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a chart object into a worksheet, with options.  <a href="#a6d951cd8bb662977706b9a24ebbcc93b">More...</a><br /></td></tr>
+<tr class="separator:a6d951cd8bb662977706b9a24ebbcc93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac15d2e82b73308458e9cdebeffdd46e6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ac15d2e82b73308458e9cdebeffdd46e6">worksheet_merge_range</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col, const char *string, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
 <tr class="memdesc:ac15d2e82b73308458e9cdebeffdd46e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge a range of cells.  <a href="#ac15d2e82b73308458e9cdebeffdd46e6">More...</a><br /></td></tr>
 <tr class="separator:ac15d2e82b73308458e9cdebeffdd46e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1343,7 +1346,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
 <p>The <code>worksheet_insert_image_opt()</code> function is like <code><a class="el" href="worksheet_8h.html#aa9cfd4bf719dbbd45866cad7dde4dab3" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> function except that it takes an optional <a class="el" href="structlxw__image__options.html" title="Options for inserted images. ">lxw_image_options</a> struct to scale and position the image:</p>
-<div class="fragment"><div class="line"><a class="code" href="structlxw__image__options.html">lxw_image_options</a> options = {.x_offset = 30,   .y_offset = 10,</div>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__image__options.html">lxw_image_options</a> options = {.x_offset = 30,  .y_offset = 10,</div>
 <div class="line">                             .x_scale  = 0.5, .y_scale  = 0.5};</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#abc18290a13a760aebe74c705a7ade0a7">worksheet_insert_image_opt</a>(worksheet, 2, 1, <span class="stringliteral">&quot;logo.png&quot;</span>, &amp;options);</div>
@@ -1400,7 +1403,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
-<p>The <code>worksheet_insert_chart()</code> can be used to insert a chart into a worksheet. A chart object is created via the <code><a class="el" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726" title="Create a new chart to be added to a worksheet: ">workbook_add_chart()</a></code> function:</p>
+<p>The <code>worksheet_insert_chart()</code> can be used to insert a chart into a worksheet. The chart object must be created first using the <code><a class="el" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726" title="Create a new chart to be added to a worksheet: ">workbook_add_chart()</a></code> function and configured using the <a class="el" href="chart_8h.html">chart.h</a> functions.</p>
 <div class="fragment"><div class="line"><span class="comment">// Create a chart object.</span></div>
 <div class="line"><a class="code" href="structlxw__chart.html">lxw_chart</a> *chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2af309b18af571c90d3ae052e769d30e6c">LXW_CHART_LINE</a>);</div>
 <div class="line"></div>
@@ -1413,9 +1416,73 @@ Functions</h2></td></tr>
 <img src="chart_working.png" alt="chart_working.png"/>
 </div>
 <p><b>Note:</b></p>
-<p>A chart can only be inserted into a worksheet once. If several similar charts are required then each one must be created separately with <code>worksheet_insert_chart()</code>. </p>
+<p>A chart may only be inserted into a worksheet once. If several similar charts are required then each one must be created separately with <code>worksheet_insert_chart()</code>. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_8c-example.html#a8">chart.c</a>, <a class="el" href="chart_area_8c-example.html#a23">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a23">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a23">chart_column.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a17">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a23">chart_line.c</a>, <a class="el" href="chart_pie_8c-example.html#a17">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a23">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a23">chart_scatter.c</a>, and <a class="el" href="chart_styles_8c-example.html#a13">chart_styles.c</a>.</dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="a6d951cd8bb662977706b9a24ebbcc93b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int worksheet_insert_chart_opt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__chart.html">lxw_chart</a> *&#160;</td>
+          <td class="paramname"><em>chart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__image__options.html">lxw_image_options</a> *&#160;</td>
+          <td class="paramname"><em>user_options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
+    <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
+    <tr><td class="paramname">chart</td><td>A <a class="el" href="structlxw__chart.html" title="Struct to represent an Excel chart. ">lxw_chart</a> object created via <a class="el" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726" title="Create a new chart to be added to a worksheet: ">workbook_add_chart()</a>. </td></tr>
+    <tr><td class="paramname">user_options</td><td>Optional chart parameters.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
+<p>The <code>worksheet_insert_chart_opt()</code> function is like <code><a class="el" href="worksheet_8h.html#a116f2ec4f88dc343a84e9da97ca8da21" title="Insert a chart object into a worksheet. ">worksheet_insert_chart()</a></code> function except that it takes an optional <a class="el" href="structlxw__image__options.html" title="Options for inserted images. ">lxw_image_options</a> struct to scale and position the image of the chart:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__image__options.html">lxw_image_options</a> options = {.<a class="code" href="structlxw__image__options.html#a7ef9c6980b8e66bcdfff18627250001c">x_offset</a> = 30,  .y_offset = 10,</div>
+<div class="line">                             .x_scale  = 0.5, .y_scale  = 0.75};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a6d951cd8bb662977706b9a24ebbcc93b">worksheet_insert_chart_opt</a>(worksheet, 0, 2, chart, &amp;options);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_line_opt.png" alt="chart_line_opt.png"/>
+</div>
+<p>The <a class="el" href="structlxw__image__options.html" title="Options for inserted images. ">lxw_image_options</a> struct is the same struct used in <code><a class="el" href="worksheet_8h.html#abc18290a13a760aebe74c705a7ade0a7" title="Insert an image in a worksheet cell, with options. ">worksheet_insert_image_opt()</a></code> to position and scale images. </p>
+
 </div>
 </div>
 <a class="anchor" id="ac15d2e82b73308458e9cdebeffdd46e6"></a>

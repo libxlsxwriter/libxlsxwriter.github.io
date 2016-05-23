@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: Creating Excel files with C and libxlsxwriter</title>
+<title>libxlsxwriter: Working with Charts</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,8 +37,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Contents</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li class="current"><a href="pages.html"><span>Contents</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
@@ -59,7 +59,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -74,59 +73,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Creating Excel files with C and libxlsxwriter </div>  </div>
+<div class="title">Working with Charts </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><b>Libxlsxwriter</b> is a C library for creating Excel XLSX files.</p>
-<div class="image">
-<img src="demo.png" alt="demo.png"/>
-</div>
-<p><a class="el" href="demo_8c-example.html">(Sample code to create the above spreadsheet.)</a></p>
-<h1><a class="anchor" id="mainpage_intro"></a>
-libxlsxwriter</h1>
-<p>Libxlsxwriter is a C library that can be used to write text, numbers, formulas and hyperlinks to multiple worksheets in an Excel 2007+ XLSX file. It supports features such as:</p>
+<div class="textblock"><p>This section explains how to work with some of the options and features of <a class="el" href="chart_8h.html">The Chart object</a>.</p>
+<h2>Chart Value and Category Axes </h2>
+<p>When working with charts it is important to understand how Excel differentiates between a chart axis that is used for series categories and a chart axis that is used for series values.</p>
+<p>In the example above the X axis is the <b>category</b> axis and each of the values is evenly spaced and sequential. The Y axis is the <b>value</b> axis and points are displayed according to their value.</p>
+<p>Excel treats these two types of axis differently and exposes different properties for each.</p>
+<p>As such some of the <code>libxlsxwriter</code>` axis properties can be set for a value axis, some can be set for a category axis and some properties can be set for both. The documentation calls out the type of axis to which functions apply.</p>
+<h2>Chart Limitations </h2>
+<p>The following chart features aren't currently supported in libxlsxwriter but will be in time:</p>
 <ul>
-<li>100% compatible Excel XLSX files.</li>
-<li>Full Excel formatting.</li>
-<li>Merged cells.</li>
-<li>Defined names.</li>
-<li>Autofilters.</li>
-<li>Charts.</li>
-<li>Worksheet PNG/JPEG images.</li>
-<li>Memory optimization mode for writing large files.</li>
-<li>Source code available on <a href="https://github.com/jmcnamara/libxlsxwriter">GitHub</a>.</li>
-<li>FreeBSD <a class="el" href="license.html">License</a>.</li>
-<li>ANSI C.</li>
-<li>Works with GCC 4.x, GCC 5.x, Clang, Xcode, MSVC 2015, ICC and TCC.</li>
-<li>Works on Linux, FreeBSD, OS X, iOS and Windows.</li>
-<li>The only dependency is on <code>zlib</code>.</li>
+<li>Chart formatting.</li>
+<li>Chart markers.</li>
+<li>Secondary axis.</li>
+<li>Combined charts.</li>
+<li>Chart legend formatting.</li>
+<li>Chart area and plot area formatting.</li>
+<li>Chart tables.</li>
+<li>Up down lines.</li>
+<li>Drop boxes.</li>
 </ul>
-<p>This document explains how to use the libxlsxwriter library. See the following sections for more information:</p>
-<ul>
-<li><a class="el" href="introduction.html">Introduction</a></li>
-<li><a class="el" href="getting_started.html">Getting Started with libxlsxwriter</a></li>
-<li><a class="el" href="tutorial01.html">Tutorial 1: Create a simple XLSX file</a></li>
-<li><a class="el" href="tutorial02.html">Tutorial 2: Adding formatting to the XLSX File</a></li>
-<li><a class="el" href="tutorial03.html">Tutorial 3: Writing different types of data to the XLSX File</a></li>
-<li><a class="el" href="workbook_8h.html">The Workbook object</a></li>
-<li><a class="el" href="worksheet_8h.html">The Worksheet object</a></li>
-<li><a class="el" href="format_8h.html">The Format object</a></li>
-<li><a class="el" href="chart_8h.html">The Chart object</a></li>
-<li><a class="el" href="working_with_formats.html">Working with Formats</a></li>
-<li><a class="el" href="working_with_colors.html">Working with Colors</a></li>
-<li><a class="el" href="working_with_dates.html">Working with Dates and Times</a></li>
-<li><a class="el" href="working_with_charts.html">Working with Charts</a></li>
-<li><a class="el" href="working_with_memory.html">Working with Memory and Performance</a></li>
-<li><a class="el" href="examples.html">Example Programs</a></li>
-<li><a class="el" href="running_the_tests.html">Running the Test Suite</a></li>
-<li><a class="el" href="faq.html">Frequently Asked Questions</a></li>
-<li><a class="el" href="bugs.html">Known Issues and Bugs</a></li>
-<li><a class="el" href="author.html">Author</a></li>
-<li><a class="el" href="license.html">License</a></li>
-<li><a class="el" href="changes.html">Changes</a> </li>
-</ul>
+<p>If required these features are all available in the Perl and Python versions of this library.</p>
+<p>Next: <a class="el" href="working_with_memory.html">Working with Memory and Performance</a> </p>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
