@@ -88,7 +88,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#func-members">Functions</a> &#124;
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">workbook.h File Reference</div>  </div>
@@ -400,10 +399,10 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="workbook_8h.html#a7272e60b9a9bb05593b1c21a6ec2f5df" title="Error codes from workbook functions. ">lxw_workbook_error</a>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a>.</dd></dl>
 <p>The <code>workbook_close()</code> function closes a Workbook object, writes the Excel file to disk, frees any memory allocated internally to the Workbook and frees the object itself.</p>
 <div class="fragment"><div class="line"><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
-</div><!-- fragment --><p>The <code>workbook_close()</code> function returns any <a class="el" href="workbook_8h.html#a7272e60b9a9bb05593b1c21a6ec2f5df" title="Error codes from workbook functions. ">lxw_workbook_error</a> error codes encountered when creating the Excel file. The error code can be returned from the program main or the calling function:</p>
+</div><!-- fragment --><p>The <code>workbook_close()</code> function returns any <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> error codes encountered when creating the Excel file. The error code can be returned from the program main or the calling function:</p>
 <div class="fragment"><div class="line"><span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a11">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a7">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a7">autofilter.c</a>, <a class="el" href="chart_8c-example.html#a10">chart.c</a>, <a class="el" href="chart_area_8c-example.html#a26">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a26">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a26">chart_column.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a18">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a24">chart_line.c</a>, <a class="el" href="chart_pie_8c-example.html#a18">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a26">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a28">chart_scatter.c</a>, <a class="el" href="chart_styles_8c-example.html#a15">chart_styles.c</a>, <a class="el" href="constant_memory_8c-example.html#a7">constant_memory.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a9">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a10">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a14">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a9">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a11">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a9">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a10">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a9">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a9">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a6">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a12">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a7">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a14">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a13">images.c</a>, <a class="el" href="merge_range_8c-example.html#a17">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a20">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a8">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a7">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a11">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a15">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a5">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a12">worksheet_protection.c</a>.</dd>
 </dl>
@@ -619,36 +618,6 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="a7272e60b9a9bb05593b1c21a6ec2f5df"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="workbook_8h.html#a7272e60b9a9bb05593b1c21a6ec2f5df">lxw_workbook_error</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a7272e60b9a9bb05593b1c21a6ec2f5dfad10c856e811a3e0811fbe5850500e25a"></a>LXW_ERROR_WORKBOOK_NONE&#160;</td><td class="fielddoc">
-<p>No error </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a7272e60b9a9bb05593b1c21a6ec2f5dfad080fc684b72c6547e97b663f7eb66d4"></a>LXW_ERROR_WORKBOOK_FILE_CREATE&#160;</td><td class="fielddoc">
-<p>Error encountered when creating file </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a7272e60b9a9bb05593b1c21a6ec2f5dfa42f0320615cf84c587e04f5f70676030"></a>LXW_ERROR_WORKBOOK_PACKAGER&#160;</td><td class="fielddoc">
-<p>Error encountered when creating a packager object </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a7272e60b9a9bb05593b1c21a6ec2f5dfacff1931a4da99603977d59dd6af15499"></a>LXW_ERROR_WORKBOOK_ZIP&#160;</td><td class="fielddoc">
-<p>Error encountered when creating file zip container </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a7272e60b9a9bb05593b1c21a6ec2f5dfa72ab30b4c3c1fb64bd84305b1f8d9854"></a>LXW_ERROR_WORKBOOK_MEMORY_ERROR&#160;</td><td class="fielddoc">
-<p>Memory error. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -671,20 +640,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:aa2650cd721ed5e4ecb1716c60f1977da"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__workbook.html">lxw_workbook</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#aa2650cd721ed5e4ecb1716c60f1977da">lxw_workbook</a></td></tr>
 <tr class="memdesc:aa2650cd721ed5e4ecb1716c60f1977da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel workbook.  <a href="#aa2650cd721ed5e4ecb1716c60f1977da">More...</a><br /></td></tr>
 <tr class="separator:aa2650cd721ed5e4ecb1716c60f1977da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a7272e60b9a9bb05593b1c21a6ec2f5df"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a7272e60b9a9bb05593b1c21a6ec2f5df">lxw_workbook_error</a> { <br />
-&#160;&#160;<a class="el" href="workbook_8h.html#a7272e60b9a9bb05593b1c21a6ec2f5dfad10c856e811a3e0811fbe5850500e25a">LXW_ERROR_WORKBOOK_NONE</a> = 0, 
-<a class="el" href="workbook_8h.html#a7272e60b9a9bb05593b1c21a6ec2f5dfad080fc684b72c6547e97b663f7eb66d4">LXW_ERROR_WORKBOOK_FILE_CREATE</a>, 
-<a class="el" href="workbook_8h.html#a7272e60b9a9bb05593b1c21a6ec2f5dfa42f0320615cf84c587e04f5f70676030">LXW_ERROR_WORKBOOK_PACKAGER</a>, 
-<a class="el" href="workbook_8h.html#a7272e60b9a9bb05593b1c21a6ec2f5dfacff1931a4da99603977d59dd6af15499">LXW_ERROR_WORKBOOK_ZIP</a>, 
-<br />
-&#160;&#160;<a class="el" href="workbook_8h.html#a7272e60b9a9bb05593b1c21a6ec2f5dfa72ab30b4c3c1fb64bd84305b1f8d9854">LXW_ERROR_WORKBOOK_MEMORY_ERROR</a>
-<br />
- }</td></tr>
-<tr class="memdesc:a7272e60b9a9bb05593b1c21a6ec2f5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error codes from workbook functions.  <a href="workbook_8h.html#a7272e60b9a9bb05593b1c21a6ec2f5df">More...</a><br /></td></tr>
-<tr class="separator:a7272e60b9a9bb05593b1c21a6ec2f5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>

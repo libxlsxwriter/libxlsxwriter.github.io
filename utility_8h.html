@@ -85,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#func-members">Functions</a> &#124;
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#define-members">Macros</a>  </div>
@@ -92,6 +93,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">utility.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:adbc905fc22acf53d5a1fec0028c4d8e4"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#adbc905fc22acf53d5a1fec0028c4d8e4">lxw_strerror</a> (uint8_t error_num)</td></tr>
+<tr class="memdesc:adbc905fc22acf53d5a1fec0028c4d8e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a libxlsxwriter error number to a string.  <a href="#adbc905fc22acf53d5a1fec0028c4d8e4">More...</a><br /></td></tr>
+<tr class="separator:adbc905fc22acf53d5a1fec0028c4d8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="adbc905fc22acf53d5a1fec0028c4d8e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* lxw_strerror </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>error_num</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The <code>lxw_strerror</code> function converts a libxlsxwriter error number defined by <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> to a pointer to a string description of the error. Similar to the standard library strerror(3) function.</p>
+<p>For example:</p>
+<div class="fragment"><div class="line">uint8_t error = <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line"></div>
+<div class="line"><span class="keywordflow">if</span> (error)</div>
+<div class="line">    printf(<span class="stringliteral">&quot;Error in workbook_close().\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;Error %d = %s\n&quot;</span>, error, <a class="code" href="utility_8h.html#adbc905fc22acf53d5a1fec0028c4d8e4">lxw_strerror</a>(error));</div>
+</div><!-- fragment --><p>This would produce output like the following if the target file wasn't writable: </p><pre class="fragment">Error in workbook_close().
+Error 2 = Error creating output xlsx file. Usually a permissions error.
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">error_num</td><td>The error number returned by a libxlsxwriter function.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a statically allocated string. Do not free. </dd></dl>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a12">anatomy.c</a>.</dd>
+</dl>
+</div>
+</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="a702a2013231565d5014690478bf3ff26"></a>
 <div class="memitem">

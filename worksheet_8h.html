@@ -325,7 +325,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89">lxw_worksheet_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code><a class="el" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa" title="Write a number to a worksheet cell. ">worksheet_write_number()</a></code> function writes numeric types to the cell specified by <code>row</code> and <code>column</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 0, 0, 123456, NULL);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 1, 0, 2.3451, NULL);</div>
@@ -396,7 +396,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89">lxw_worksheet_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_write_string()</code> function writes a string to the cell specified by <code>row</code> and <code>column</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;This phrase is English!&quot;</span>, NULL);</div>
 </div><!-- fragment --><div class="image">
@@ -470,7 +470,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89">lxw_worksheet_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_write_formula()</code> function writes a formula or function to the cell specified by <code>row</code> and <code>column</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=B3 + 6&quot;</span>,                    NULL);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=SIN(PI()/4)&quot;</span>,               NULL);</div>
@@ -558,7 +558,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89">lxw_worksheet_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_write_array_formula()</code> function writes an array formula to a cell range. In Excel an array formula is a formula that performs a calculation on a set of values.</p>
 <p>In Excel an array formula is indicated by a pair of braces around the formula: <code>{=SUM(A1:B1*A2:B2)}</code>.</p>
 <p>Array formulas can return a single value or a range or values. For array formulas that return a range of values you must specify the range that the return values will be written to. This is why this function has <code>first_</code> and <code>last_</code> row/column parameters. The <a class="el" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc" title="Convert an Excel A1:B2 range into a (first_row, first_col, last_row, last_col) sequence. ">RANGE()</a> macro can also be used to specify the range:</p>
@@ -624,7 +624,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89">lxw_worksheet_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code><a class="el" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a></code> function can be used to write a date or time to the cell specified by <code>row</code> and <code>column</code>:</p>
  <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
 <div class="line"></div>
@@ -702,7 +702,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89">lxw_worksheet_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_write_url()</code> function is used to write a URL/hyperlink to a worksheet cell specified by <code>row</code> and <code>column</code>.</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, url_format);</div>
 </div><!-- fragment --><div class="image">
@@ -803,7 +803,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89">lxw_worksheet_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>Write an Excel boolean to the cell specified by <code>row</code> and <code>column</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a60cc3159efc17c1b4e82be350f214152">worksheet_write_boolean</a>(worksheet, 2, 2, 0, my_format);</div>
 </div><!-- fragment --> 
@@ -853,7 +853,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89">lxw_worksheet_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>Write a blank cell specified by <code>row</code> and <code>column</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a56bcd1671dc853a4927adb67696726ec">worksheet_write_blank</a>(worksheet, 1, 1, border_format);</div>
 </div><!-- fragment --><p>This function is used to add formatting to a cell which doesn't contain a string or number value.</p>
@@ -920,7 +920,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89">lxw_worksheet_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_write_formula_num()</code> function writes a formula or Excel function to the cell specified by <code>row</code> and <code>column</code> with a user defined result:</p>
 <div class="fragment"><div class="line"><span class="comment">// Required as a workaround only.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37">worksheet_write_formula_num</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=1 + 2&quot;</span>, NULL, 3);</div>
@@ -3301,42 +3301,6 @@ objects
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="a7691f23e402e9db78212ec316e055b89"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89">lxw_worksheet_error</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Error codes from worksheet functions. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a7691f23e402e9db78212ec316e055b89a7df35c49c7be76c9e0a2b7ca48e04619"></a>LXW_ERROR_WORKSHEET_NONE&#160;</td><td class="fielddoc">
-<p>No error. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a7691f23e402e9db78212ec316e055b89ab0ad31e8aa8a58e9371f18d217d72204"></a>LXW_ERROR_WORKSHEET_INDEX_OUT_OF_RANGE&#160;</td><td class="fielddoc">
-<p>Row or column index out of range. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a7691f23e402e9db78212ec316e055b89a3f2b37ce8342a327c5d0a9ed11bfe62f"></a>LXW_ERROR_WORKSHEET_MAX_STRING_LENGTH_EXCEEDED&#160;</td><td class="fielddoc">
-<p>String exceeds Excel's LXW_STR_MAX limit. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a7691f23e402e9db78212ec316e055b89ae884eb1f5f3ff6fd37dbd248af06bb9f"></a>LXW_ERROR_WORKSHEET_NULL_STRING_IGNORED&#160;</td><td class="fielddoc">
-<p>NULL String ignored as function parameter. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a7691f23e402e9db78212ec316e055b89a574ead0537d6ffc255d1e6fe121527c4"></a>LXW_ERROR_WORKSHEET_MAX_NUMBER_URLS_EXCEEDED&#160;</td><td class="fielddoc">
-<p>Maximum number of worksheet URLs (65530) exceeded. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a7691f23e402e9db78212ec316e055b89a6dcdb4d8f34d200b8c67cba6cda1a7ce"></a>LXW_ERROR_WORKSHEET_STRING_HASH_NOT_FOUND&#160;</td><td class="fielddoc">
-<p>Error finding string index. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a7691f23e402e9db78212ec316e055b89a192e1af8cf01196d351f705d1fb59f1e"></a>LXW_ERROR_WORKSHEET_MEMORY_ERROR&#160;</td><td class="fielddoc">
-<p>Memory error. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
 <a class="anchor" id="a487e0bffad0a348421b825d715621c20"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3405,18 +3369,6 @@ typedef struct <a class="el" href="structlxw__protection.html">lxw_protection</a
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a7691f23e402e9db78212ec316e055b89"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89">lxw_worksheet_error</a> { <br />
-&#160;&#160;<a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89a7df35c49c7be76c9e0a2b7ca48e04619">LXW_ERROR_WORKSHEET_NONE</a> = 0, 
-<a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89ab0ad31e8aa8a58e9371f18d217d72204">LXW_ERROR_WORKSHEET_INDEX_OUT_OF_RANGE</a>, 
-<a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89a3f2b37ce8342a327c5d0a9ed11bfe62f">LXW_ERROR_WORKSHEET_MAX_STRING_LENGTH_EXCEEDED</a>, 
-<a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89ae884eb1f5f3ff6fd37dbd248af06bb9f">LXW_ERROR_WORKSHEET_NULL_STRING_IGNORED</a>, 
-<br />
-&#160;&#160;<a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89a574ead0537d6ffc255d1e6fe121527c4">LXW_ERROR_WORKSHEET_MAX_NUMBER_URLS_EXCEEDED</a>, 
-<a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89a6dcdb4d8f34d200b8c67cba6cda1a7ce">LXW_ERROR_WORKSHEET_STRING_HASH_NOT_FOUND</a>, 
-<a class="el" href="worksheet_8h.html#a7691f23e402e9db78212ec316e055b89a192e1af8cf01196d351f705d1fb59f1e">LXW_ERROR_WORKSHEET_MEMORY_ERROR</a>
-<br />
- }</td></tr>
-<tr class="separator:a7691f23e402e9db78212ec316e055b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a487e0bffad0a348421b825d715621c20"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a487e0bffad0a348421b825d715621c20">lxw_gridlines</a> { <a class="el" href="worksheet_8h.html#a487e0bffad0a348421b825d715621c20a3fa67c27394bd03fa6642a501598f70b">LXW_HIDE_ALL_GRIDLINES</a> = 0, 
 <a class="el" href="worksheet_8h.html#a487e0bffad0a348421b825d715621c20af5a038f9024f0d20793a77315e9245f9">LXW_SHOW_SCREEN_GRIDLINES</a>, 
 <a class="el" href="worksheet_8h.html#a487e0bffad0a348421b825d715621c20a6ad2d5f382b103286ccdf7561a9d2328">LXW_SHOW_PRINT_GRIDLINES</a>, 

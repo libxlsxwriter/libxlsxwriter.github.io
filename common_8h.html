@@ -142,6 +142,57 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 </div>
 </div>
+<a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>See the <code><a class="el" href="utility_8h.html#adbc905fc22acf53d5a1fec0028c4d8e4" title="Converts a libxlsxwriter error number to a string. ">lxw_strerror()</a></code> function for an example of how to convert the enum number to a descriptive error message string. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6a01078a417fbbaab5a5d956a1bcdfef3b"></a>LXW_NO_ERROR&#160;</td><td class="fielddoc">
+<p>No error. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6ae094726a5a4b9ab64fcaa5ef9fc44ec3"></a>LXW_ERROR_MEMORY_MALLOC_FAILED&#160;</td><td class="fielddoc">
+<p>Memory error, failed to malloc() required memory. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6a47dbfec9963f3c0f5f8a22de6d707a78"></a>LXW_ERROR_CREATING_XLSX_FILE&#160;</td><td class="fielddoc">
+<p>Error creating output xlsx file. Usually a permissions error. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6ac3646aa2a376f2bb4ac73189485cdb87"></a>LXW_ERROR_CREATING_TMPFILE&#160;</td><td class="fielddoc">
+<p>Error encountered when creating a tmpfile during file assembly. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6a10f7b1612ddf55f931863430a31b78d1"></a>LXW_ERROR_ZIP_FILE_OPERATION&#160;</td><td class="fielddoc">
+<p>Zlib error with a file operation while creating xlsx file. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6a72140ec5ad9439c4242c3b30a346dbc1"></a>LXW_ERROR_ZIP_FILE_ADD&#160;</td><td class="fielddoc">
+<p>Zlib error when adding sub file to xlsx file. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6ad1b6597961ceac45e001a507726f7473"></a>LXW_ERROR_ZIP_CLOSE&#160;</td><td class="fielddoc">
+<p>Zlib error when closing xlsx file. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6a2040e1d558b6bfa7019be25e353a8371"></a>LXW_ERROR_NULL_STRING_IGNORED&#160;</td><td class="fielddoc">
+<p>NULL string ignored as function parameter. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6af0920185d94c6195fcfe0f2d0957c555"></a>LXW_ERROR_MAX_STRING_LENGTH_EXCEEDED&#160;</td><td class="fielddoc">
+<p>String exceeds Excel's limit of 32,767 characters. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6a650b6fc844176071127cf8f7bab96c20"></a>LXW_ERROR_SHARED_STRING_INDEX_NOT_FOUND&#160;</td><td class="fielddoc">
+<p>Error finding internal string index. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6ab0ad31e8aa8a58e9371f18d217d72204"></a>LXW_ERROR_WORKSHEET_INDEX_OUT_OF_RANGE&#160;</td><td class="fielddoc">
+<p>Worksheet row or column index out of range. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6a574ead0537d6ffc255d1e6fe121527c4"></a>LXW_ERROR_WORKSHEET_MAX_NUMBER_URLS_EXCEEDED&#160;</td><td class="fielddoc">
+<p>Maximum number of worksheet URLs (65530) exceeded. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -156,6 +207,25 @@ Enumerations</h2></td></tr>
 <a class="el" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>
  }</td></tr>
 <tr class="separator:a57bffaf0ff3cb4e9f4f7f2b0b6dad349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04b59aa3c578bc75f88ac16a979c5fe6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> { <br />
+&#160;&#160;<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a01078a417fbbaab5a5d956a1bcdfef3b">LXW_NO_ERROR</a> = 0, 
+<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ae094726a5a4b9ab64fcaa5ef9fc44ec3">LXW_ERROR_MEMORY_MALLOC_FAILED</a>, 
+<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a47dbfec9963f3c0f5f8a22de6d707a78">LXW_ERROR_CREATING_XLSX_FILE</a>, 
+<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ac3646aa2a376f2bb4ac73189485cdb87">LXW_ERROR_CREATING_TMPFILE</a>, 
+<br />
+&#160;&#160;<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a10f7b1612ddf55f931863430a31b78d1">LXW_ERROR_ZIP_FILE_OPERATION</a>, 
+<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a72140ec5ad9439c4242c3b30a346dbc1">LXW_ERROR_ZIP_FILE_ADD</a>, 
+<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ad1b6597961ceac45e001a507726f7473">LXW_ERROR_ZIP_CLOSE</a>, 
+<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a2040e1d558b6bfa7019be25e353a8371">LXW_ERROR_NULL_STRING_IGNORED</a>, 
+<br />
+&#160;&#160;<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6af0920185d94c6195fcfe0f2d0957c555">LXW_ERROR_MAX_STRING_LENGTH_EXCEEDED</a>, 
+<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a650b6fc844176071127cf8f7bab96c20">LXW_ERROR_SHARED_STRING_INDEX_NOT_FOUND</a>, 
+<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ab0ad31e8aa8a58e9371f18d217d72204">LXW_ERROR_WORKSHEET_INDEX_OUT_OF_RANGE</a>, 
+<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a574ead0537d6ffc255d1e6fe121527c4">LXW_ERROR_WORKSHEET_MAX_NUMBER_URLS_EXCEEDED</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a04b59aa3c578bc75f88ac16a979c5fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error codes from libxlsxwriter functions.  <a href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">More...</a><br /></td></tr>
+<tr class="separator:a04b59aa3c578bc75f88ac16a979c5fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
