@@ -79,7 +79,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Changes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>0.3.4 May 28 2016</h2>
+<div class="textblock"><h2>0.3.5 May 31 2016</h2>
+<ul>
+<li><p class="startli">Refactored the error handling and reporting for when the file creation subsystem fails due to file permissions or other issues. The new error codes are in <code><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a></code> and the codes can be converted to strings, for reporting, using the new <code><a class="el" href="utility_8h.html#adbc905fc22acf53d5a1fec0028c4d8e4" title="Converts a libxlsxwriter error number to a string. ">lxw_strerror()</a></code> function.</p>
+<p class="startli">Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/49">#49</a>.</p>
+</li>
+</ul>
+<h2>0.3.4 May 28 2016</h2>
 <ul>
 <li>Updated the <a class="el" href="getting_started.html">Getting Started with libxlsxwriter</a> docs with instructions on how to build libxlsxwriter for Windows using Microsoft Visual Studio and added links to the example MSVC project: <a href="https://github.com/jmcnamara/MSVCLibXlsxWriter">MSVCLibXlsxWriter</a>.</li>
 </ul>
