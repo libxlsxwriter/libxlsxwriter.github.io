@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <table  width="600">
 <tr>
-<td><a class="el" href="hide_sheet_8c-example.html">&lt;&lt; hide_sheet.c</a> </td><td align="right"><a class="el" href="worksheet_protection_8c-example.html">worksheet_protection.c &gt;&gt;</a>  </td></tr>
+<td><a class="el" href="hide_sheet_8c-example.html">&lt;&lt; hide_sheet.c</a> </td><td align="right"><a class="el" href="doc_custom_properties_8c-example.html">doc_custom_properties.c &gt;&gt;</a>  </td></tr>
 </table>
 <p>Example of setting Excel document properties.</p>
 <div class="image">
@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><span class="comment"> * Example of setting document properties such as Author, Title, etc., for an</span></div>
 <div class="line"><span class="comment"> * Excel spreadsheet using libxlsxwriter.</span></div>
 <div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Copyright 2014-2015, John McNamara, jmcnamara@cpan.org</span></div>
+<div class="line"><span class="comment"> * Copyright 2014-2016, John McNamara, jmcnamara@cpan.org</span></div>
 <div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> */</span></div>
 <div class="line"></div>
@@ -99,8 +99,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line"></div>
-<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>       *workbook   = <a name="a1"></a><a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;doc_properties.xlsx&quot;</span>);</div>
-<div class="line">    <a name="_a2"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a>      *worksheet  = <a name="a3"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook   = <a name="a1"></a><a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;doc_properties.xlsx&quot;</span>);</div>
+<div class="line">    <a name="_a2"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet  = <a name="a3"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Create a properties structure and set some of the fields. */</span></div>
 <div class="line">    <a name="_a4"></a><a class="code" href="structlxw__doc__properties.html">lxw_doc_properties</a> properties = {</div>
@@ -119,9 +119,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a name="a6"></a><a class="code" href="workbook_8h.html#a6780888704192c138b36f08f5a88d57f">workbook_set_properties</a>(workbook, &amp;properties);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Add some text to the file. */</span></div>
-<div class="line">    <a name="a7"></a><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 0, 0, 70, NULL);</div>
+<div class="line">    <a name="a7"></a><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 0, 0, 50, NULL);</div>
 <div class="line">    <a name="a8"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0,</div>
-<div class="line">        <span class="stringliteral">&quot;Select &#39;Workbook Properties&#39; to see properties.&quot;</span> , NULL);</div>
+<div class="line">                           <span class="stringliteral">&quot;Select &#39;Workbook Properties&#39; to see properties.&quot;</span> , NULL);</div>
 <div class="line"></div>
 <div class="line">    <a name="a9"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
 <div class="line"></div>

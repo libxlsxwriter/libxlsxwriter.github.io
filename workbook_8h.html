@@ -133,6 +133,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a6780888704192c138b36f08f5a88d57f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a6780888704192c138b36f08f5a88d57f">workbook_set_properties</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, <a class="el" href="structlxw__doc__properties.html">lxw_doc_properties</a> *properties)</td></tr>
 <tr class="memdesc:a6780888704192c138b36f08f5a88d57f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the document properties such as Title, Author etc.  <a href="#a6780888704192c138b36f08f5a88d57f">More...</a><br /></td></tr>
 <tr class="separator:a6780888704192c138b36f08f5a88d57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a088da7843db0b30084cc5d852de7549d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a088da7843db0b30084cc5d852de7549d">workbook_set_custom_property_string</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, char *name, char *value)</td></tr>
+<tr class="memdesc:a088da7843db0b30084cc5d852de7549d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a custom document text property.  <a href="#a088da7843db0b30084cc5d852de7549d">More...</a><br /></td></tr>
+<tr class="separator:a088da7843db0b30084cc5d852de7549d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a982ee4a0252cd1083eb6562b5e5df78b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a982ee4a0252cd1083eb6562b5e5df78b">workbook_set_custom_property_number</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, char *name, double value)</td></tr>
+<tr class="memdesc:a982ee4a0252cd1083eb6562b5e5df78b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a custom document number property.  <a href="#a982ee4a0252cd1083eb6562b5e5df78b">More...</a><br /></td></tr>
+<tr class="separator:a982ee4a0252cd1083eb6562b5e5df78b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d8a5fd34c2b81eab0bf27260fc7279"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a45d8a5fd34c2b81eab0bf27260fc7279">workbook_set_custom_property_boolean</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, char *name, uint8_t value)</td></tr>
+<tr class="memdesc:a45d8a5fd34c2b81eab0bf27260fc7279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a custom document boolean property.  <a href="#a45d8a5fd34c2b81eab0bf27260fc7279">More...</a><br /></td></tr>
+<tr class="separator:a45d8a5fd34c2b81eab0bf27260fc7279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a589e2494b16a2b0fb700a83214093cc6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a589e2494b16a2b0fb700a83214093cc6">workbook_set_custom_property_datetime</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, char *name, <a class="el" href="structlxw__datetime.html">lxw_datetime</a> *datetime)</td></tr>
+<tr class="memdesc:a589e2494b16a2b0fb700a83214093cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a custom document date or time property.  <a href="#a589e2494b16a2b0fb700a83214093cc6">More...</a><br /></td></tr>
+<tr class="separator:a589e2494b16a2b0fb700a83214093cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a239893289738cb030cbda1b73d4569b0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a239893289738cb030cbda1b73d4569b0">workbook_define_name</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, const char *name, const char *formula)</td></tr>
 <tr class="memdesc:a239893289738cb030cbda1b73d4569b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a defined name in the workbook to use as a variable.  <a href="#a239893289738cb030cbda1b73d4569b0">More...</a><br /></td></tr>
 <tr class="separator:a239893289738cb030cbda1b73d4569b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,7 +173,7 @@ Functions</h2></td></tr>
 <p>The <code>workbook_new()</code> constructor is used to create a new Excel workbook with a given filename:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__workbook.html">lxw_workbook</a> *workbook  = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;filename.xlsx&quot;</span>);</div>
 </div><!-- fragment --><p>When specifying a filename it is recommended that you use an <code>.xlsx</code> extension or Excel will generate a warning when opening the file. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a1">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a1">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a1">autofilter.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a1">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a2">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a2">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a1">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a1">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a1">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a1">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a1">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a1">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a1">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a1">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a1">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a1">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a1">images.c</a>, <a class="el" href="merge_range_8c-example.html#a1">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a1">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a1">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a1">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a1">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a3">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a1">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a1">worksheet_protection.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a1">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a1">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a1">autofilter.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a1">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a2">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a2">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a1">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a1">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a1">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a1">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a1">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a1">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a1">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a1">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a1">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a1">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a1">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a1">images.c</a>, <a class="el" href="merge_range_8c-example.html#a1">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a1">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a1">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a1">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a1">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a3">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a1">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a1">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -249,7 +261,7 @@ Functions</h2></td></tr>
 </div>
 <p>The worksheet name must be a valid Excel worksheet name, i.e. it must be less than 32 character and it cannot contain any of the characters: </p><pre class="fragment">/ \ [ ] : * ?
 </pre><p>In addition, you cannot use the same, case insensitive, <code>sheetname</code> for more than one worksheet. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a3">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a3">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a3">autofilter.c</a>, <a class="el" href="chart_8c-example.html#a3">chart.c</a>, <a class="el" href="chart_area_8c-example.html#a6">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a6">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a6">chart_column.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a6">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a6">chart_line.c</a>, <a class="el" href="chart_pie_8c-example.html#a6">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a6">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a6">chart_scatter.c</a>, <a class="el" href="chart_styles_8c-example.html#a7">chart_styles.c</a>, <a class="el" href="constant_memory_8c-example.html#a5">constant_memory.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a3">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a4">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a4">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a3">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a3">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a3">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a3">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a3">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a3">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a3">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a3">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a3">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a3">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a3">images.c</a>, <a class="el" href="merge_range_8c-example.html#a3">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a3">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a3">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a3">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a3">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a5">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a3">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a3">worksheet_protection.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a3">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a3">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a3">autofilter.c</a>, <a class="el" href="chart_8c-example.html#a3">chart.c</a>, <a class="el" href="chart_area_8c-example.html#a6">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a6">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a6">chart_column.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a6">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a6">chart_line.c</a>, <a class="el" href="chart_pie_8c-example.html#a6">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a6">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a6">chart_scatter.c</a>, <a class="el" href="chart_styles_8c-example.html#a7">chart_styles.c</a>, <a class="el" href="constant_memory_8c-example.html#a5">constant_memory.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a3">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a4">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a4">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a3">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a3">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a3">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a3">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a3">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a3">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a3">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a3">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a3">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a3">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a3">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a3">images.c</a>, <a class="el" href="merge_range_8c-example.html#a3">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a3">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a3">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a3">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a3">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a5">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a3">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a3">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -404,7 +416,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
 </div><!-- fragment --><p>The <code>workbook_close()</code> function returns any <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> error codes encountered when creating the Excel file. The error code can be returned from the program main or the calling function:</p>
 <div class="fragment"><div class="line"><span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a11">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a7">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a7">autofilter.c</a>, <a class="el" href="chart_8c-example.html#a10">chart.c</a>, <a class="el" href="chart_area_8c-example.html#a26">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a26">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a26">chart_column.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a18">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a24">chart_line.c</a>, <a class="el" href="chart_pie_8c-example.html#a18">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a26">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a28">chart_scatter.c</a>, <a class="el" href="chart_styles_8c-example.html#a15">chart_styles.c</a>, <a class="el" href="constant_memory_8c-example.html#a7">constant_memory.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a9">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a10">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a14">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a9">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a11">demo.c</a>, <a class="el" href="doc_properties_8c-example.html#a9">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a10">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a9">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a9">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a6">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a12">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a7">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a14">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a13">images.c</a>, <a class="el" href="merge_range_8c-example.html#a17">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a20">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a8">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a7">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a11">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a15">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a5">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a12">worksheet_protection.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a11">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a7">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a7">autofilter.c</a>, <a class="el" href="chart_8c-example.html#a10">chart.c</a>, <a class="el" href="chart_area_8c-example.html#a26">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a26">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a26">chart_column.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a18">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a24">chart_line.c</a>, <a class="el" href="chart_pie_8c-example.html#a18">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a26">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a28">chart_scatter.c</a>, <a class="el" href="chart_styles_8c-example.html#a15">chart_styles.c</a>, <a class="el" href="constant_memory_8c-example.html#a7">constant_memory.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a9">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a10">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a14">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a9">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a11">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a11">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a9">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a10">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a9">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a9">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a6">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a12">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a7">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a14">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a13">images.c</a>, <a class="el" href="merge_range_8c-example.html#a17">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a20">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a8">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a7">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a11">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a15">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a5">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a12">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -438,6 +450,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
 <p>The <code>workbook_set_properties</code> method can be used to set the document properties of the Excel file created by <code>libxlsxwriter</code>. These properties are visible when you use the <code>Office Button -&gt; Prepare -&gt; Properties</code> option in Excel and are also available to external applications that read or index windows files.</p>
 <p>The properties that can be set are:</p>
 <ul>
@@ -470,8 +483,197 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="doc_properties.png" alt="doc_properties.png"/>
 </div>
-<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="doc_properties_8c-example.html#a6">doc_properties.c</a>.</dd>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="doc_properties_8c-example.html#a6">doc_properties.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a088da7843db0b30084cc5d852de7549d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t workbook_set_custom_property_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__workbook.html">lxw_workbook</a> *&#160;</td>
+          <td class="paramname"><em>workbook</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">workbook</td><td>Pointer to a <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook. ">lxw_workbook</a> instance. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the custom property. </td></tr>
+    <tr><td class="paramname">value</td><td>The value of the custom property.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
+<p>The <code>workbook_set_custom_property_string()</code> method can be used to set one or more custom document text properties not covered by the standard properties in the <code><a class="el" href="workbook_8h.html#a6780888704192c138b36f08f5a88d57f" title="Set the document properties such as Title, Author etc. ">workbook_set_properties()</a></code> method above.</p>
+<p>For example:</p>
+<div class="fragment"><div class="line"><a class="code" href="workbook_8h.html#a088da7843db0b30084cc5d852de7549d">workbook_set_custom_property_string</a>(workbook, <span class="stringliteral">&quot;Checked by&quot;</span>, <span class="stringliteral">&quot;Eve&quot;</span>);</div>
+</div><!-- fragment --><div class="image">
+<img src="custom_properties.png" alt="custom_properties.png"/>
+</div>
+<p>There are 4 <code>workbook_set_custom_property_string_*()</code> functions for each of the custom property types supported by Excel:</p>
+<ul>
+<li>text/string: <code><a class="el" href="workbook_8h.html#a088da7843db0b30084cc5d852de7549d" title="Set a custom document text property. ">workbook_set_custom_property_string()</a></code></li>
+<li>number: <code><a class="el" href="workbook_8h.html#a982ee4a0252cd1083eb6562b5e5df78b" title="Set a custom document number property. ">workbook_set_custom_property_number()</a></code></li>
+<li>datetime: <code><a class="el" href="workbook_8h.html#a589e2494b16a2b0fb700a83214093cc6" title="Set a custom document date or time property. ">workbook_set_custom_property_datetime()</a></code></li>
+<li>boolean: <code><a class="el" href="workbook_8h.html#a45d8a5fd34c2b81eab0bf27260fc7279" title="Set a custom document boolean property. ">workbook_set_custom_property_boolean()</a></code></li>
+</ul>
+<p><b>Note</b>: the name and value parameters are limited to 255 characters by Excel. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="doc_custom_properties_8c-example.html#a5">doc_custom_properties.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a982ee4a0252cd1083eb6562b5e5df78b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t workbook_set_custom_property_number </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__workbook.html">lxw_workbook</a> *&#160;</td>
+          <td class="paramname"><em>workbook</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">workbook</td><td>Pointer to a <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook. ">lxw_workbook</a> instance. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the custom property. </td></tr>
+    <tr><td class="paramname">value</td><td>The value of the custom property.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
+<p>Set a custom document number property. See <code><a class="el" href="workbook_8h.html#a088da7843db0b30084cc5d852de7549d" title="Set a custom document text property. ">workbook_set_custom_property_string()</a></code> above for details.</p>
+<div class="fragment"><div class="line"><a class="code" href="workbook_8h.html#a982ee4a0252cd1083eb6562b5e5df78b">workbook_set_custom_property_number</a>(workbook, <span class="stringliteral">&quot;Document number&quot;</span>, 12345);</div>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="doc_custom_properties_8c-example.html#a7">doc_custom_properties.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a45d8a5fd34c2b81eab0bf27260fc7279"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t workbook_set_custom_property_boolean </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__workbook.html">lxw_workbook</a> *&#160;</td>
+          <td class="paramname"><em>workbook</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">workbook</td><td>Pointer to a <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook. ">lxw_workbook</a> instance. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the custom property. </td></tr>
+    <tr><td class="paramname">value</td><td>The value of the custom property.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
+<p>Set a custom document boolean property. See <code><a class="el" href="workbook_8h.html#a088da7843db0b30084cc5d852de7549d" title="Set a custom document text property. ">workbook_set_custom_property_string()</a></code> above for details.</p>
+<div class="fragment"><div class="line"><a class="code" href="workbook_8h.html#a45d8a5fd34c2b81eab0bf27260fc7279">workbook_set_custom_property_boolean</a> (workbook, <span class="stringliteral">&quot;Has Review&quot;</span>, 1);</div>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="doc_custom_properties_8c-example.html#a8">doc_custom_properties.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a589e2494b16a2b0fb700a83214093cc6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t workbook_set_custom_property_datetime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__workbook.html">lxw_workbook</a> *&#160;</td>
+          <td class="paramname"><em>workbook</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__datetime.html">lxw_datetime</a> *&#160;</td>
+          <td class="paramname"><em>datetime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">workbook</td><td>Pointer to a <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook. ">lxw_workbook</a> instance. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the custom property. </td></tr>
+    <tr><td class="paramname">datetime</td><td>The value of the custom property.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
+<p>Set a custom date or time number property. See <code><a class="el" href="workbook_8h.html#a088da7843db0b30084cc5d852de7549d" title="Set a custom document text property. ">workbook_set_custom_property_string()</a></code> above for details.</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__datetime.html">lxw_datetime</a> datetime  = {2016, 12, 1,  11, 55, 0.0};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="workbook_8h.html#a589e2494b16a2b0fb700a83214093cc6">workbook_set_custom_property_datetime</a>(workbook, <span class="stringliteral">&quot;Date completed&quot;</span>, &amp;datetime);</div>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="doc_custom_properties_8c-example.html#a6">doc_custom_properties.c</a>.</dd>
 </dl>
 </div>
 </div>

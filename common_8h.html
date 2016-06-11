@@ -85,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
@@ -117,6 +118,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><div class="memdoc">
 <p>Integer data type to represent a column value. Equivalent to <code>uint16_t</code>.</p>
 <p>The maximum column in Excel is 16,384. </p>
+
+</div>
+</div>
+<a class="anchor" id="a702a2013231565d5014690478bf3ff26"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structlxw__datetime.html">lxw_datetime</a>  <a class="el" href="structlxw__datetime.html">lxw_datetime</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Struct to represent a date and time in Excel. See <a class="el" href="working_with_dates.html">Working with Dates and Times</a>. </p>
 
 </div>
 </div>
@@ -174,11 +188,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6ad1b6597961ceac45e001a507726f7473"></a>LXW_ERROR_ZIP_CLOSE&#160;</td><td class="fielddoc">
 <p>Zlib error when closing xlsx file. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6a2040e1d558b6bfa7019be25e353a8371"></a>LXW_ERROR_NULL_STRING_IGNORED&#160;</td><td class="fielddoc">
-<p>NULL string ignored as function parameter. </p>
+<tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6afcf00a9c84192235d8f1358890cb3d2d"></a>LXW_ERROR_NULL_PARAMETER_IGNORED&#160;</td><td class="fielddoc">
+<p>NULL function parameter ignored. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6af0920185d94c6195fcfe0f2d0957c555"></a>LXW_ERROR_MAX_STRING_LENGTH_EXCEEDED&#160;</td><td class="fielddoc">
 <p>String exceeds Excel's limit of 32,767 characters. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6a2d78ce1e2f5f263a92f76d9d4b6720ca"></a>LXW_ERROR_255_STRING_LENGTH_EXCEEDED&#160;</td><td class="fielddoc">
+<p>Parameter exceeds Excel's limit of 255 characters. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6a650b6fc844176071127cf8f7bab96c20"></a>LXW_ERROR_SHARED_STRING_INDEX_NOT_FOUND&#160;</td><td class="fielddoc">
 <p>Error finding internal string index. </p>
@@ -194,12 +211,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__datetime.html">lxw_datetime</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent a date and time in Excel.  <a href="structlxw__datetime.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:aaf33b4e2179dcc466359277210774ce3"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a></td></tr>
 <tr class="separator:aaf33b4e2179dcc466359277210774ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fedd8dede664b070e84e850a3f92fd2"><td class="memItemLeft" align="right" valign="top">typedef uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a></td></tr>
 <tr class="separator:a4fedd8dede664b070e84e850a3f92fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a702a2013231565d5014690478bf3ff26"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__datetime.html">lxw_datetime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a702a2013231565d5014690478bf3ff26">lxw_datetime</a></td></tr>
+<tr class="memdesc:a702a2013231565d5014690478bf3ff26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent a date and time in Excel.  <a href="#a702a2013231565d5014690478bf3ff26">More...</a><br /></td></tr>
+<tr class="separator:a702a2013231565d5014690478bf3ff26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -216,12 +242,14 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a10f7b1612ddf55f931863430a31b78d1">LXW_ERROR_ZIP_FILE_OPERATION</a>, 
 <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a72140ec5ad9439c4242c3b30a346dbc1">LXW_ERROR_ZIP_FILE_ADD</a>, 
 <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ad1b6597961ceac45e001a507726f7473">LXW_ERROR_ZIP_CLOSE</a>, 
-<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a2040e1d558b6bfa7019be25e353a8371">LXW_ERROR_NULL_STRING_IGNORED</a>, 
+<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6afcf00a9c84192235d8f1358890cb3d2d">LXW_ERROR_NULL_PARAMETER_IGNORED</a>, 
 <br />
 &#160;&#160;<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6af0920185d94c6195fcfe0f2d0957c555">LXW_ERROR_MAX_STRING_LENGTH_EXCEEDED</a>, 
+<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a2d78ce1e2f5f263a92f76d9d4b6720ca">LXW_ERROR_255_STRING_LENGTH_EXCEEDED</a>, 
 <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a650b6fc844176071127cf8f7bab96c20">LXW_ERROR_SHARED_STRING_INDEX_NOT_FOUND</a>, 
 <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ab0ad31e8aa8a58e9371f18d217d72204">LXW_ERROR_WORKSHEET_INDEX_OUT_OF_RANGE</a>, 
-<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a574ead0537d6ffc255d1e6fe121527c4">LXW_ERROR_WORKSHEET_MAX_NUMBER_URLS_EXCEEDED</a>
+<br />
+&#160;&#160;<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a574ead0537d6ffc255d1e6fe121527c4">LXW_ERROR_WORKSHEET_MAX_NUMBER_URLS_EXCEEDED</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a04b59aa3c578bc75f88ac16a979c5fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error codes from libxlsxwriter functions.  <a href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">More...</a><br /></td></tr>

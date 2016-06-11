@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: dates_and_times02.c</title>
+<title>libxlsxwriter: doc_custom_properties.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -76,20 +76,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">dates_and_times02.c</div>  </div>
+<div class="title">doc_custom_properties.c</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table  width="600">
 <tr>
-<td><a class="el" href="dates_and_times01_8c-example.html">&lt;&lt; dates_and_times01.c</a> </td><td align="right"><a class="el" href="dates_and_times03_8c-example.html">dates_and_times03.c &gt;&gt;</a>  </td></tr>
+<td><a class="el" href="doc_properties_8c-example.html">&lt;&lt; doc_properties.c</a> </td><td align="right"><a class="el" href="worksheet_protection_8c-example.html">worksheet_protection.c &gt;&gt;</a>  </td></tr>
 </table>
-<p>Example of writing dates and times in Excel using an <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel. ">lxw_datetime</a> struct and date formatting.</p>
+<p>Example of setting Excel custom document properties, i.e., properties non-standard document properties.</p>
 <div class="image">
-<img src="date_example02.png" alt="date_example02.png"/>
+<img src="custom_properties.png" alt="custom_properties.png"/>
 </div>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Example of writing dates and times in Excel using an lxw_datetime struct</span></div>
-<div class="line"><span class="comment"> * and date formatting.</span></div>
+<div class="line"><span class="comment"> * Example of setting custom document properties for an Excel spreadsheet</span></div>
+<div class="line"><span class="comment"> * using libxlsxwriter.</span></div>
 <div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> * Copyright 2014-2016, John McNamara, jmcnamara@cpan.org</span></div>
 <div class="line"><span class="comment"> *</span></div>
@@ -99,27 +99,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* A datetime to display. */</span></div>
-<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__datetime.html">lxw_datetime</a> datetime = {2013, 2, 28, 12, 0, 0.0};</div>
+<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook   = <a name="a1"></a><a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;doc_custom_properties.xlsx&quot;</span>);</div>
+<div class="line">    <a name="_a2"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet  = <a name="a3"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line">    <a name="_a4"></a><a class="code" href="structlxw__datetime.html">lxw_datetime</a>   datetime  = {2016, 12, 12,  0, 0, 0.0};</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Create a new workbook and add a worksheet. */</span></div>
-<div class="line">    <a name="_a1"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a name="a2"></a><a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;date_and_times02.xlsx&quot;</span>);</div>
-<div class="line">    <a name="_a3"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a name="a4"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line">    <span class="comment">/* Set some custom document properties in the workbook. */</span></div>
+<div class="line">    <a name="a5"></a><a class="code" href="workbook_8h.html#a088da7843db0b30084cc5d852de7549d">workbook_set_custom_property_string</a>  (workbook, <span class="stringliteral">&quot;Checked by&quot;</span>,      <span class="stringliteral">&quot;Eve&quot;</span>);</div>
+<div class="line">    <a name="a6"></a><a class="code" href="workbook_8h.html#a589e2494b16a2b0fb700a83214093cc6">workbook_set_custom_property_datetime</a>(workbook, <span class="stringliteral">&quot;Date completed&quot;</span>,   &amp;datetime);</div>
+<div class="line">    <a name="a7"></a><a class="code" href="workbook_8h.html#a982ee4a0252cd1083eb6562b5e5df78b">workbook_set_custom_property_number</a>  (workbook, <span class="stringliteral">&quot;Document number&quot;</span>,  12345);</div>
+<div class="line">    <a class="code" href="workbook_8h.html#a982ee4a0252cd1083eb6562b5e5df78b">workbook_set_custom_property_number</a>  (workbook, <span class="stringliteral">&quot;Reference number&quot;</span>, 1.2345);</div>
+<div class="line">    <a name="a8"></a><a class="code" href="workbook_8h.html#a45d8a5fd34c2b81eab0bf27260fc7279">workbook_set_custom_property_boolean</a> (workbook, <span class="stringliteral">&quot;Has Review&quot;</span>,       1);</div>
+<div class="line">    <a class="code" href="workbook_8h.html#a45d8a5fd34c2b81eab0bf27260fc7279">workbook_set_custom_property_boolean</a> (workbook, <span class="stringliteral">&quot;Signed off&quot;</span>,       0);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Add a format with date formatting. */</span></div>
-<div class="line">    <a name="_a5"></a><a class="code" href="structlxw__format.html">lxw_format</a>    *format    = <a name="a6"></a><a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
-<div class="line">    <a name="a7"></a><a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format, <span class="stringliteral">&quot;mmm d yyyy hh:mm AM/PM&quot;</span>);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Widen the first column to make the text clearer. */</span></div>
-<div class="line">    <a name="a8"></a><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 0, 0, 20, NULL);</div>
+<div class="line">    <span class="comment">/* Add some text to the file. */</span></div>
+<div class="line">    <a name="a9"></a><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 0, 0, 50, NULL);</div>
+<div class="line">    <a name="a10"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0,</div>
+<div class="line">                           <span class="stringliteral">&quot;Select &#39;Workbook Properties&#39; to see properties.&quot;</span> , NULL);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Write the datetime without formatting. */</span></div>
-<div class="line">    <a name="a9"></a><a class="code" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33">worksheet_write_datetime</a>(worksheet, 0, 0, &amp;datetime, NULL  );  <span class="comment">// 41333.5</span></div>
+<div class="line">    <a name="a11"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Write the datetime with formatting. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33">worksheet_write_datetime</a>(worksheet, 1, 0, &amp;datetime, format);  <span class="comment">// Feb 28 2013 12:00 PM</span></div>
-<div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> <a name="a10"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
