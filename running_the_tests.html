@@ -79,8 +79,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Running the Test Suite </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#tests_functional">Functional Tests</a></li>
+<li class="level1"><a href="#tests_">Unit Tests</a></li>
+<li class="level1"><a href="#tests_valgrind">Valgrind Tests</a></li>
+<li class="level1"><a href="#tests_travis">Travis Continuous Integration</a></li>
+</ul>
+</div>
 <div class="textblock"><p>This section shows how to set up and run the test suite for libxlsxwriter.</p>
-<h2>Functional Tests</h2>
+<h1><a class="anchor" id="tests_functional"></a>
+Functional Tests</h1>
 <p>The functional tests compare the output from libxlsxwriter against xlsx files created in Excel.</p>
 <p>The functional tests use the Python module <a href="http://pytest.org/">pytest</a> as a test runner.</p>
 <p>Install the <code>pytest</code> module using one of the following methods: </p><pre class="fragment">sudo apt-get install -y python-pytest
@@ -104,7 +112,8 @@ test/functional/test_write_data.py:28: TestCompareXLSXFiles.test_data05 PASSED
 test/functional/test_write_data.py:31: TestCompareXLSXFiles.test_data06 PASSED
 test/functional/test_write_data.py:34: TestCompareXLSXFiles.test_data07 PASSED
 =========================== 14 passed in 0.41 seconds =====================
-</pre><h2>Unit Tests</h2>
+</pre><h1><a class="anchor" id="tests_"></a>
+Unit Tests</h1>
 <p>The unit tests test the components of the library at the level of individual functions or compilation units.</p>
 <p>The unit tests uses the <a href="http://github.com/bvdberg/ctest">ctest</a> test framework. This is included as a header file in the <code>test/unit</code> directory and doesn't need to be installed.</p>
 <p>The unit tests can then be run as follows: </p><pre class="fragment">$ make test_unit
@@ -121,11 +130,13 @@ TEST 155/155 styles:xml_declaration [OK]
 
 RESULTS: 155 tests (155 ok, 0 failed, 0 skipped) ran in 42 ms
 </pre><p>Both functional and unit test can be run together: </p><pre class="fragment">$ make test
-</pre><h2>Valgrind Tests</h2>
+</pre><h1><a class="anchor" id="tests_valgrind"></a>
+Valgrind Tests</h1>
 <p>The functional tests and examples can be run under <a href="http://valgrind.org">Valgrind</a> to verify that there are no memory leaks.</p>
 <p>Install <code>valgrind</code> as follows: </p><pre class="fragment">apt-get install -y valgrind
 </pre><p>Then run the tests: </p><pre class="fragment">make test_valgrind
-</pre><h2>Travis Continuous Integration</h2>
+</pre><h1><a class="anchor" id="tests_travis"></a>
+Travis Continuous Integration</h1>
 <p>Libxlsxwriter is configured to run all tests in <a href="https://travis-ci.org/jmcnamara/libxlsxwriter">Travis Continuous Integration</a> for each commit.</p>
 <p>Next: <a class="el" href="faq.html">Frequently Asked Questions</a> </p>
 </div></div><!-- contents -->

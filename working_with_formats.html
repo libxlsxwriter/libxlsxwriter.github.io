@@ -79,8 +79,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Working with Formats </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#ww_formats_creating">Creating and using a Format object</a></li>
+<li class="level1"><a href="#ww_formats_properties">Format methods and Format properties</a></li>
+<li class="level1"><a href="#ww_formats_colors">Format Colors</a></li>
+<li class="level1"><a href="#ww_formats_default">Format Defaults</a></li>
+<li class="level1"><a href="#ww_formats_reusing">Modifying and Reusing Formats</a></li>
+</ul>
+</div>
 <div class="textblock"><p>The main functions and properties used to add formatting to a cell are shown in <a class="el" href="format_8h.html">The Format object</a>. This section provides some additional information about working with formats.</p>
-<h2>Creating and using a Format object</h2>
+<h1><a class="anchor" id="ww_formats_creating"></a>
+Creating and using a Format object</h1>
 <p>Formats are created by calling the <a class="el" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33" title="Create a new Format object to formats cells in worksheets. ">workbook_add_format()</a> method and properties as set using the various functions shown below:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"></div>
@@ -92,7 +101,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --><p>Formats can also be passed to the worksheet <code><a class="el" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736" title="Set the properties for a row of cells. ">worksheet_set_row()</a></code> and <code><a class="el" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc" title="Set the properties for one or more columns of cells. ">worksheet_set_column()</a></code> methods to define the default formatting properties for a row or column:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736">worksheet_set_row</a>   (worksheet, 2,     format, NULL);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 0, 20, format, NULL);</div>
-</div><!-- fragment --><h2>Format methods and Format properties</h2>
+</div><!-- fragment --><h1><a class="anchor" id="ww_formats_properties"></a>
+Format methods and Format properties</h1>
 <p>The following table shows the Excel format categories and the equivalent <code>libxlsxwriter</code> Format function:</p>
 <table class="doxtable">
 <tr>
@@ -158,17 +168,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr>
 <td align="left"></td><td align="left">Right color </td><td align="left"><a class="el" href="format_8h.html#a8b1965f2420d7803b6ad5d5b33ce73a9" title="Set the color of the right cell border. ">format_set_right_color()</a> </td></tr>
 </table>
-<h2>Format Colors</h2>
+<h1><a class="anchor" id="ww_formats_colors"></a>
+Format Colors</h1>
 <p>Format property colors are specified using a Html style RGB integer value or a limited number of defined colors: </p><div class="fragment"><div class="line"><a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(format1, 0x3030E0);</div>
 <div class="line"><a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(format2, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>);</div>
 </div><!-- fragment --><p>See see <a class="el" href="working_with_colors.html">Working with Colors</a> for more details.</p>
-<h2>Format Defaults</h2>
+<h1><a class="anchor" id="ww_formats_default"></a>
+Format Defaults</h1>
 <p>The default Excel 2007+ cell format is Calibri 11 with all other properties off.</p>
 <p>In general a format function call without an argument will turn a property on, for example:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(format);</div>
-</div><!-- fragment --><h2>Modifying and Reusing Formats</h2>
+</div><!-- fragment --><h1><a class="anchor" id="ww_formats_reusing"></a>
+Modifying and Reusing Formats</h1>
 <p>Once a format has been created it can be used and reused in <code>worksheet_write*()</code> functions across any number of worksheets:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a>  *myformat1  = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(myformat1);</div>

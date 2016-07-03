@@ -615,8 +615,7 @@ Functions</h2></td></tr>
 <p>This function is similar to <a class="el" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c" title="Set the number format for a cell. ">format_set_num_format()</a> except that it takes an index to a limited number of Excel's built-in number formats instead of a user defined format string:</p>
 <div class="fragment"><div class="line">format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format, 0x0F);     <span class="comment">// d-mmm-yy</span></div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd></dd></dl>
-<p>Unless you need to specifically access one of Excel's built-in number formats the <a class="el" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c" title="Set the number format for a cell. ">format_set_num_format()</a> function above is a better solution. The <a class="el" href="format_8h.html#a688aa42bcc703d17e125d9a34c721872" title="Set the Excel built-in number format for a cell. ">format_set_num_format_index()</a> function is mainly included for backward compatibility and completeness.</p>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Unless you need to specifically access one of Excel's built-in number formats the <a class="el" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c" title="Set the number format for a cell. ">format_set_num_format()</a> function above is a better solution. The <a class="el" href="format_8h.html#a688aa42bcc703d17e125d9a34c721872" title="Set the Excel built-in number format for a cell. ">format_set_num_format_index()</a> function is mainly included for backward compatibility and completeness.</dd></dl>
 <p>The Excel built-in number formats as shown in the table below:</p>
 <table class="doxtable">
 <tr>
@@ -696,12 +695,12 @@ Functions</h2></td></tr>
 <tr>
 <td>49 </td><td>0x31 </td><td><code>@</code> </td></tr>
 </table>
-<dl class="section note"><dt>Note</dt><dd></dd></dl>
-<ul>
+<dl class="section note"><dt>Note</dt><dd><ul>
 <li>Numeric formats 23 to 36 are not documented by Microsoft and may differ in international versions. The listed date and currency formats may also vary depending on system settings.</li>
 <li>The dollar sign in the above format appears as the defined local currency symbol.</li>
 <li>These formats can also be set via <a class="el" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c" title="Set the number format for a cell. ">format_set_num_format()</a>. </li>
 </ul>
+</dd></dl>
 
 </div>
 </div>

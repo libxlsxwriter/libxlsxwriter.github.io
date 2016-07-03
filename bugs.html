@@ -79,30 +79,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Known Issues and Bugs </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#bugs_unreadable">Content is Unreadable. Open and Repair</a></li>
+<li class="level1"><a href="#bugs_formula_name">Formulas displayed as 'NAME?' until edited</a></li>
+<li class="level1"><a href="#bugs_formula_zero">Formula results displaying as zero in non-Excel applications</a></li>
+<li class="level1"><a href="#bugs_apple_numbers">Strings aren't displayed in Apple Numbers in 'constant_memory' mode</a></li>
+<li class="level1"><a href="#bugs_images">Images not displayed correctly in Excel 2001 for Mac and non-Excel applications</a></li>
+<li class="level1"><a href="#bugs_reporting">Reporting Bugs</a><ul><li class="level2"><a href="#bugs_upgrade">Upgrade to the latest version of the library</a></li>
+<li class="level2"><a href="#bugs_docs">Read the documentation</a></li>
+<li class="level2"><a href="#bugs_examples">Look at the example programs</a></li>
+<li class="level2"><a href="#bugs_issues">Use the xlsxwriter Issue tracker</a></li>
+<li class="level2"><a href="#bugs_tips">Tips for submitting a bug report</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="textblock"><p>This section lists known issues and bugs and gives some information on how to submit bug reports.</p>
-<h2>Content is Unreadable. Open and Repair</h2>
+<h1><a class="anchor" id="bugs_unreadable"></a>
+Content is Unreadable. Open and Repair</h1>
 <p>Very, very occasionally you may encounter a bug which generates an Excel warning when opening an <code>libxlsxwriter</code> file like:</p>
 <blockquote class="doxtable">
 <p>Excel could not open file.xlsx because some content is unreadable. Do you want to open and repair this workbook. </p>
 </blockquote>
 <p>This ominous sounding message is Excel's standard warning for any validation error in the XML used for the components of the XLSX file.</p>
 <p>If you encounter an issue like this you should open an issue on GitHub with a program to replicate the issue (see below) or send one of the failing output files to the <a class="el" href="author.html">Author</a>.</p>
-<h2>Formulas displayed as <code>NAME?</code> until edited</h2>
+<h1><a class="anchor" id="bugs_formula_name"></a>
+Formulas displayed as 'NAME?' until edited</h1>
 <p>Excel 2010 and 2013 added functions which weren't defined in the original file specification. These functions are referred to as <em>future</em> functions. Examples of these functions are <code>ACOT</code>, <code>CHISQ.DIST.RT</code> , <code>CONFIDENCE.NORM</code>, <code>STDEV.P</code>, <code>STDEV.S</code> and <code>WORKDAY.INTL</code>. The full list is given in the <a href="http://msdn.microsoft.com/en-us/library/dd907480%28v=office.12%29.aspx">MS XLSX extensions documentation on future functions</a>.</p>
 <p>When written using <code>write_formula()</code> these functions need to be fully qualified with the <code>_xlfn.</code> prefix as they are shown in the MS XLSX documentation link above. For example: </p><pre class="fragment">worksheet_write_formula(worksheet, 0, 0,"=_xlfn.STDEV.S(B1:B10)", NULL);
-</pre><h2>Formula results displaying as zero in non-Excel applications</h2>
+</pre><h1><a class="anchor" id="bugs_formula_zero"></a>
+Formula results displaying as zero in non-Excel applications</h1>
 <p>Due to wide range of possible formulas and inter-dependencies between them, <code>xlsxwriter</code> doesn't, and realistically cannot, calculate the result of a formula when it is written to an XLSX file. Instead, it stores the value 0 as the formula result. It then sets a global flag in the XLSX file to say that all formulas and functions should be recalculated when the file is opened.</p>
 <p>This is the method recommended in the Excel documentation and in general it works fine with spreadsheet applications. However, applications that don't have a facility to calculate formulas, such as Excel Viewer, or several mobile applications, will only display the 0 results.</p>
 <p>If required, it is also possible to specify the calculated result of the formula using the <code><a class="el" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37" title="Write a formula to a worksheet cell with a user defined result. ">worksheet_write_formula_num()</a></code> function.</p>
-<h2>Strings aren't displayed in Apple Numbers in 'constant_memory' mode</h2>
+<h1><a class="anchor" id="bugs_apple_numbers"></a>
+Strings aren't displayed in Apple Numbers in 'constant_memory' mode</h1>
 <p>In <code><a class="el" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323" title="Create a new workbook object, and set the workbook options. ">workbook_new_opt()</a></code> <code>constant_memory</code> mode libxlsxwriter uses an optimization where cell strings aren't stored in an Excel structure call "shared strings" and instead are written "in-line".</p>
 <p>This is a documented Excel feature that is supported by most spreadsheet applications. One known exception is Apple Numbers for Mac where the string data isn't displayed.</p>
-<h2>Images not displayed correctly in Excel 2001 for Mac and non-Excel applications</h2>
+<h1><a class="anchor" id="bugs_images"></a>
+Images not displayed correctly in Excel 2001 for Mac and non-Excel applications</h1>
 <p>Images inserted into worksheets via <code><a class="el" href="worksheet_8h.html#aa9cfd4bf719dbbd45866cad7dde4dab3" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> may not display correctly in Excel 2011 for Mac and non-Excel applications such as OpenOffice and LibreOffice. Specifically the images may looked stretched or squashed.</p>
 <p>This is not an XlsxWriter issue. It also occurs with files created in Excel 2007 and Excel 2010.</p>
-<h1>Reporting Bugs</h1>
+<h1><a class="anchor" id="bugs_reporting"></a>
+Reporting Bugs</h1>
 <p>Here are some tips on reporting bugs in <code>libxlsxwriter</code>.</p>
-<h2>Upgrade to the latest version of the library</h2>
+<h2><a class="anchor" id="bugs_upgrade"></a>
+Upgrade to the latest version of the library</h2>
 <p>The bug you are reporting may already be fixed in the latest version of the module.</p>
 <p>Check the <a class="el" href="changes.html">Changes</a> section to see what has changed in the latest versions.</p>
 <p>You can check which version of <code>libxlsxwriter</code> that you are using by compiling and running the following program:</p>
@@ -115,13 +137,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2>Read the documentation</h2>
+</div><!-- fragment --><h2><a class="anchor" id="bugs_docs"></a>
+Read the documentation</h2>
 <p>Read or search the <code>libxlsxwriter</code> documentation to see if the issue you are encountering is already explained.</p>
-<h2>Look at the example programs</h2>
+<h2><a class="anchor" id="bugs_examples"></a>
+Look at the example programs</h2>
 <p>There are many <a class="el" href="examples.html">Example Programs</a> in the distribution. Try to identify an example program that corresponds to your query and adapt it to use as a bug report.</p>
-<h2>Use the xlsxwriter Issue tracker</h2>
+<h2><a class="anchor" id="bugs_issues"></a>
+Use the xlsxwriter Issue tracker</h2>
 <p>The <a href="https://github.com/jmcnamara/libxlsxwriter/issues">libxlsxwriter issue tracker</a> is on GitHub.</p>
-<h2>Tips for submitting a bug report</h2>
+<h2><a class="anchor" id="bugs_tips"></a>
+Tips for submitting a bug report</h2>
 <ol type="1">
 <li>Describe the problem as clearly and as concisely as possible.</li>
 <li>Include a sample program. This is probably the most important step. It is generally easier to describe a problem in code than in written prose.</li>

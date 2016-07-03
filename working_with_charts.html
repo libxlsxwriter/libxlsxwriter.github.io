@@ -79,13 +79,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Working with Charts </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#ww_charts_axes">Chart Value and Category Axes</a></li>
+<li class="level1"><a href="#ww_charts_limitations">Chart Limitations</a></li>
+</ul>
+</div>
 <div class="textblock"><p>This section explains how to work with some of the options and features of <a class="el" href="chart_8h.html">The Chart object</a>.</p>
-<h2>Chart Value and Category Axes </h2>
+<h1><a class="anchor" id="ww_charts_axes"></a>
+Chart Value and Category Axes</h1>
 <p>When working with charts it is important to understand how Excel differentiates between a chart axis that is used for series categories and a chart axis that is used for series values.</p>
 <p>In the example above the X axis is the <b>category</b> axis and each of the values is evenly spaced and sequential. The Y axis is the <b>value</b> axis and points are displayed according to their value.</p>
 <p>Excel treats these two types of axis differently and exposes different properties for each.</p>
 <p>As such some of the <code>libxlsxwriter</code>` axis properties can be set for a value axis, some can be set for a category axis and some properties can be set for both. The documentation calls out the type of axis to which functions apply.</p>
-<h2>Chart Limitations </h2>
+<h1><a class="anchor" id="ww_charts_limitations"></a>
+Chart Limitations</h1>
 <p>The following chart features aren't currently supported in libxlsxwriter but will be in time:</p>
 <ul>
 <li>Chart formatting.</li>
