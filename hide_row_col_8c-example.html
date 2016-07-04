@@ -108,8 +108,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write some data. */</span></div>
-<div class="line">    <a name="a4"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 3, <span class="stringliteral">&quot;Some hidden columns.&quot;</span>, NULL);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 7, 0, <span class="stringliteral">&quot;Some hidden rows.&quot;</span>,    NULL);</div>
+<div class="line">    <a name="a4"></a><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 3, <span class="stringliteral">&quot;Some hidden columns.&quot;</span>, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 7, 0, <span class="stringliteral">&quot;Some hidden rows.&quot;</span>,    NULL);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Hide all rows without data. */</span></div>
 <div class="line">    <a name="a5"></a><a class="code" href="worksheet_8h.html#a74121de7c4f67639b30f302d4af48eb4">worksheet_set_default_row</a>(worksheet, 15, <a name="a6"></a><a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>);</div>
@@ -117,13 +117,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <span class="comment">/* Set the height of empty rows that we do want to display even if it is */</span></div>
 <div class="line">    <span class="comment">/* the default height. */</span></div>
 <div class="line">    <span class="keywordflow">for</span> (row = 1; row &lt;= 6; row++)</div>
-<div class="line">        <a name="a7"></a><a class="code" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736">worksheet_set_row</a>(worksheet, row, 15, NULL);</div>
+<div class="line">        <a name="a7"></a><a class="code" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a>(worksheet, row, 15, NULL);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Columns can be hidden explicitly. This doesn&#39;t increase the file size. */</span></div>
 <div class="line">    <a name="_a8"></a><a class="code" href="structlxw__row__col__options.html">lxw_row_col_options</a> options = {.<a name="a9"></a><a class="code" href="structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562">hidden</a> = 1};</div>
-<div class="line">    <a name="a10"></a><a class="code" href="worksheet_8h.html#a81e659e6c5ad6b085e4f83686a69ab3e">worksheet_set_column_opt</a>(worksheet, <a name="a11"></a><a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;G:XFD&quot;</span>), 8.43, NULL, &amp;options);</div>
+<div class="line">    <a name="a10"></a><a class="code" href="worksheet_8h.html#a52c4c145f684c5b4dcd2ed304d1fe907">worksheet_set_column_opt</a>(worksheet, <a name="a11"></a><a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;G:XFD&quot;</span>), 8.43, NULL, &amp;options);</div>
 <div class="line"></div>
-<div class="line">    <a name="a12"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line">    <a name="a12"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>

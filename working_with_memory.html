@@ -110,16 +110,16 @@ Constant Memory Mode</h1>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">for</span> (row = 0; row &lt; max_row; row++) {</div>
 <div class="line">        <span class="keywordflow">for</span> (col = 0; col &lt; max_col; col++) {</div>
-<div class="line">            <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, row, col, 123.45, NULL);</div>
+<div class="line">            <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, row, col, 123.45, NULL);</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --></p>
 <p>This optimization works by flushing each row after a subsequent row is written. In this way the largest amount of data held in memory for a worksheet is the amount of data required to hold a single row of data.</p>
 <p>If required, this memory usage can be reduced even more by setting <code>LXW_COL_MAX</code> in worksheet.c from 16384 down to a value that matches the maximum column that is likely to be encountered.</p>
-<p>The trade-off when using <code>constant_memory</code> mode is that data must be added sequentially in row order and you won't be able to take advantage of any new features that manipulate cell data after it is written. Currently the only such feature is <a class="el" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736" title="Set the properties for a row of cells. ">worksheet_set_row()</a> which in <code>constant_memory</code> mode can only be used when writing data to the current row.</p>
+<p>The trade-off when using <code>constant_memory</code> mode is that data must be added sequentially in row order and you won't be able to take advantage of any new features that manipulate cell data after it is written. Currently the only such feature is <a class="el" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173" title="Set the properties for a row of cells. ">worksheet_set_row()</a> which in <code>constant_memory</code> mode can only be used when writing data to the current row.</p>
 <h1><a class="anchor" id="ww_mem_row_order"></a>
 Row Column Order</h1>
 <p>Since each new row flushes the previous row, data must be written in sequential row order when <code>constant_memory</code> mode is on:</p>
@@ -130,7 +130,7 @@ Row Column Order</h1>
 <div class="line"> <span class="comment">//    the first column of data will be written.</span></div>
 <div class="line"> <span class="keywordflow">for</span> (col = 0; col &lt; max_col; col++) {</div>
 <div class="line">     <span class="keywordflow">for</span> (row = 0; row &lt; max_row; row++) {</div>
-<div class="line">         <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, row, col, 123.45, NULL);</div>
+<div class="line">         <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, row, col, 123.45, NULL);</div>
 <div class="line">     }</div>
 <div class="line">-*- mode:  }</div>
 </div><!-- fragment --><h1><a class="anchor" id="ww_mem_inline_strings"></a>

@@ -117,28 +117,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(red_format, <a name="a10"></a><a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Widen the first column to make the text clearer. */</span></div>
-<div class="line">    <a name="a11"></a><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 0, 0, 30, NULL);</div>
+<div class="line">    <a name="a11"></a><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 0, 0, 30, NULL);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write a hyperlink. */</span></div>
-<div class="line">    <a name="a12"></a><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet,    0, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, url_format);</div>
+<div class="line">    <a name="a12"></a><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet,    0, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, url_format);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write a hyperlink but overwrite the displayed string. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>   (worksheet, 2, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, url_format);</div>
-<div class="line">    <a name="a13"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 2, 0, <span class="stringliteral">&quot;Read the documentation.&quot;</span>,        url_format);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>   (worksheet, 2, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, url_format);</div>
+<div class="line">    <a name="a13"></a><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 2, 0, <span class="stringliteral">&quot;Read the documentation.&quot;</span>,        url_format);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write a hyperlink with a different format. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet,    4, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, red_format);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet,    4, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, red_format);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write a mail hyperlink. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>   (worksheet, 6, 0, <span class="stringliteral">&quot;mailto:jmcnamara@cpan.org&quot;</span>,      url_format);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>   (worksheet, 6, 0, <span class="stringliteral">&quot;mailto:jmcnamara@cpan.org&quot;</span>,      url_format);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write a mail hyperlink and overwrite the displayed string. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>   (worksheet, 8, 0, <span class="stringliteral">&quot;mailto:jmcnamara@cpan.org&quot;</span>,      url_format);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 8, 0, <span class="stringliteral">&quot;Drop me a line.&quot;</span>,                url_format);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>   (worksheet, 8, 0, <span class="stringliteral">&quot;mailto:jmcnamara@cpan.org&quot;</span>,      url_format);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 8, 0, <span class="stringliteral">&quot;Drop me a line.&quot;</span>,                url_format);</div>
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Close the workbook, save the file and free any memory. */</span></div>
-<div class="line">    <a name="a14"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line">    <a name="a14"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>

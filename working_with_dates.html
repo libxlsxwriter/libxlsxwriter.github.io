@@ -98,24 +98,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format, <span class="stringliteral">&quot;mmm d yyyy hh:mm AM/PM&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Widen the first column to make the text clearer. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 0, 0, 20, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 0, 0, 20, NULL);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write the number without formatting. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 0, 0, number, NULL   );  <span class="comment">// 41333.5</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 0, 0, number, NULL   );  <span class="comment">// 41333.5</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write the number with formatting. Note: the worksheet_write_datetime()</span></div>
 <div class="line"><span class="comment">     * function is preferable for writing dates and times. This is for</span></div>
 <div class="line"><span class="comment">     * demonstration purposes only.</span></div>
 <div class="line"><span class="comment">     */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 1, 0, number, format);   <span class="comment">// Feb 28 2013 12:00 PM</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 1, 0, number, format);   <span class="comment">// Feb 28 2013 12:00 PM</span></div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --></p>
 <div class="image">
 <img src="date_example01.png" alt="date_example01.png"/>
 </div>
-<p>To make working with dates and times a little easier the <code>libxlsxwriter</code> library provides the <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel. ">lxw_datetime</a> struct and the <a class="el" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a> function.</p>
+<p>To make working with dates and times a little easier the <code>libxlsxwriter</code> library provides the <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel. ">lxw_datetime</a> struct and the <a class="el" href="worksheet_8h.html#afb0b3211160927a3412be28c9364b1b5" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a> function.</p>
 <p>The members of the <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel. ">lxw_datetime</a> struct and the range of their values are:</p>
 <table class="doxtable">
 <tr>
@@ -143,7 +143,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">// Time only.</span></div>
 <div class="line"><a class="code" href="structlxw__datetime.html">lxw_datetime</a> datetime3 = {0, 0, 0, 17, 45, 5.1};</div>
-</div><!-- fragment --><p>Using <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel. ">lxw_datetime</a> and <a class="el" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a> the previous example can then be re-written as follows:</p>
+</div><!-- fragment --><p>Using <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel. ">lxw_datetime</a> and <a class="el" href="worksheet_8h.html#afb0b3211160927a3412be28c9364b1b5" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a> the previous example can then be re-written as follows:</p>
  <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
@@ -160,15 +160,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format, <span class="stringliteral">&quot;mmm d yyyy hh:mm AM/PM&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Widen the first column to make the text clearer. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 0, 0, 20, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 0, 0, 20, NULL);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write the datetime without formatting. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33">worksheet_write_datetime</a>(worksheet, 0, 0, &amp;datetime, NULL  );  <span class="comment">// 41333.5</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#afb0b3211160927a3412be28c9364b1b5">worksheet_write_datetime</a>(worksheet, 0, 0, &amp;datetime, NULL  );  <span class="comment">// 41333.5</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write the datetime with formatting. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33">worksheet_write_datetime</a>(worksheet, 1, 0, &amp;datetime, format);  <span class="comment">// Feb 28 2013 12:00 PM</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#afb0b3211160927a3412be28c9364b1b5">worksheet_write_datetime</a>(worksheet, 1, 0, &amp;datetime, format);  <span class="comment">// Feb 28 2013 12:00 PM</span></div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --></p>
 <p>The output from this program is the same as the previous example.</p>
@@ -215,11 +215,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(bold);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write the column headers. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, row, col,     <span class="stringliteral">&quot;Formatted date&quot;</span>, bold);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, row, col + 1, <span class="stringliteral">&quot;Format&quot;</span>,         bold);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, row, col,     <span class="stringliteral">&quot;Formatted date&quot;</span>, bold);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, row, col + 1, <span class="stringliteral">&quot;Format&quot;</span>,         bold);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Widen the first column to make the text clearer. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 0, 1, 20, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 0, 1, 20, NULL);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write the same date and time using each of the above formats. */</span></div>
 <div class="line">    <span class="keywordflow">for</span> (i = 0; i &lt; 14; i++) {</div>
@@ -231,13 +231,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">        <a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>(format, <a class="code" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a6d528fd0486c22c04941cd8ed1bbc8e1">LXW_ALIGN_LEFT</a>);</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">/* Write the datetime with each format. */</span></div>
-<div class="line">        <a class="code" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33">worksheet_write_datetime</a>(worksheet, row, col, &amp;datetime, format);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#afb0b3211160927a3412be28c9364b1b5">worksheet_write_datetime</a>(worksheet, row, col, &amp;datetime, format);</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">/* Also write the format string for comparison. */</span></div>
-<div class="line">        <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, row, col + 1, date_formats[i], NULL);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, row, col + 1, date_formats[i], NULL);</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --></p>
 <div class="image">

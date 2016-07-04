@@ -112,9 +112,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The <code>lxw_strerror</code> function converts a libxlsxwriter error number defined by <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> to a pointer to a string description of the error. Similar to the standard library strerror(3) function.</p>
+<p>The <code>lxw_strerror</code> function converts a libxlsxwriter error number defined by <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> to a pointer to a string description of the error. Similar to the standard library strerror(3) function.</p>
 <p>For example:</p>
-<div class="fragment"><div class="line">uint8_t error = <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="fragment"><div class="line">uint8_t error = <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line"></div>
 <div class="line"><span class="keywordflow">if</span> (error)</div>
 <div class="line">    printf(<span class="stringliteral">&quot;Error in workbook_close().\n&quot;</span></div>
@@ -148,10 +148,10 @@ Error 2 = Error creating output xlsx file. Usually a permissions error.
 </div><div class="memdoc">
 <p>Convert an Excel <code>A1</code> cell string into a <code>(row, col)</code> pair.</p>
 <p>This is a little syntactic shortcut to help with worksheet layout:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;A1&quot;</span>), <span class="stringliteral">&quot;Foo&quot;</span>, NULL);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;A1&quot;</span>), <span class="stringliteral">&quot;Foo&quot;</span>, NULL);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">//Same as:</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0,       <span class="stringliteral">&quot;Foo&quot;</span>, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0,       <span class="stringliteral">&quot;Foo&quot;</span>, NULL);</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd></dd></dl>
 <p>This macro shouldn't be used in performance critical situations since it expands to two function calls. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_8c-example.html#a9">chart.c</a>, <a class="el" href="chart_area_8c-example.html#a3">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a3">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a3">chart_column.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a3">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a3">chart_line.c</a>, <a class="el" href="chart_pie_8c-example.html#a3">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a3">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a3">chart_scatter.c</a>, and <a class="el" href="images_8c-example.html#a7">images.c</a>.</dd>
@@ -173,10 +173,10 @@ Error 2 = Error creating output xlsx file. Usually a permissions error.
 </div><div class="memdoc">
 <p>Convert an Excel <code>A:B</code> column range into a <code>(col1, col2)</code> pair.</p>
 <p>This is a little syntactic shortcut to help with worksheet layout:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;B:D&quot;</span>), 20, NULL, NULL);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;B:D&quot;</span>), 20, NULL, NULL);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Same as:</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 1, 3,        20, NULL, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 1, 3,        20, NULL, NULL);</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="hide_row_col_8c-example.html#a11">hide_row_col.c</a>, and <a class="el" href="images_8c-example.html#a5">images.c</a>.</dd>
 </dl>
 </div>
@@ -198,10 +198,10 @@ Error 2 = Error creating output xlsx file. Usually a permissions error.
 <div class="line">    lxw_name_to_row_2(range), lxw_name_to_col_2(range)</div>
 </div><!-- fragment --><p>Convert an Excel <code>A1:B2</code> range into a <code>(first_row, first_col, last_row, last_col)</code> sequence.</p>
 <p>This is a little syntactic shortcut to help with worksheet layout.</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ae0c82375dda26bb7590a2ad3f42401dd">worksheet_print_area</a>(worksheet, 0, 0, 41, 10); <span class="comment">// A1:K42.</span></div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ab92116759b56cd67419febf6e0aa2c9e">worksheet_print_area</a>(worksheet, 0, 0, 41, 10); <span class="comment">// A1:K42.</span></div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Same as:</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ae0c82375dda26bb7590a2ad3f42401dd">worksheet_print_area</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A1:K42&quot;</span>));</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ab92116759b56cd67419febf6e0aa2c9e">worksheet_print_area</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A1:K42&quot;</span>));</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="array_formula_8c-example.html#a6">array_formula.c</a>.</dd>
 </dl>
 </div>

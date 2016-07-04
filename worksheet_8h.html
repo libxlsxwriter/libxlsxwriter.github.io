@@ -104,69 +104,69 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;filename.xlsx&quot;</span>);</div>
 <div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello Excel&quot;</span>, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello Excel&quot;</span>, NULL);</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa7f1a12b664b4c1d7742529a315e21aa"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, double number, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
-<tr class="memdesc:aa7f1a12b664b4c1d7742529a315e21aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a number to a worksheet cell.  <a href="#aa7f1a12b664b4c1d7742529a315e21aa">More...</a><br /></td></tr>
-<tr class="separator:aa7f1a12b664b4c1d7742529a315e21aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c3e081792631511c9ee3f7507afb78c"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *string, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
-<tr class="memdesc:a0c3e081792631511c9ee3f7507afb78c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a string to a worksheet cell.  <a href="#a0c3e081792631511c9ee3f7507afb78c">More...</a><br /></td></tr>
-<tr class="separator:a0c3e081792631511c9ee3f7507afb78c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9c384e17c06538c6a45f2cec7b5bef1"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *formula, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
-<tr class="memdesc:ad9c384e17c06538c6a45f2cec7b5bef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formula to a worksheet cell.  <a href="#ad9c384e17c06538c6a45f2cec7b5bef1">More...</a><br /></td></tr>
-<tr class="separator:ad9c384e17c06538c6a45f2cec7b5bef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5524b8304904962d6686d2723252e981"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a5524b8304904962d6686d2723252e981">worksheet_write_array_formula</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col, const char *formula, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
-<tr class="memdesc:a5524b8304904962d6686d2723252e981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write an array formula to a worksheet cell.  <a href="#a5524b8304904962d6686d2723252e981">More...</a><br /></td></tr>
-<tr class="separator:a5524b8304904962d6686d2723252e981"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbc5654e9b8987ba263f83fff082ce33"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33">worksheet_write_datetime</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__datetime.html">lxw_datetime</a> *datetime, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
-<tr class="memdesc:acbc5654e9b8987ba263f83fff082ce33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a date or time to a worksheet cell.  <a href="#acbc5654e9b8987ba263f83fff082ce33">More...</a><br /></td></tr>
-<tr class="separator:acbc5654e9b8987ba263f83fff082ce33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22629468c16149a42de1c17ac9ee6aac"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *url, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
-<tr class="separator:a22629468c16149a42de1c17ac9ee6aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60cc3159efc17c1b4e82be350f214152"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a60cc3159efc17c1b4e82be350f214152">worksheet_write_boolean</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, int value, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
-<tr class="memdesc:a60cc3159efc17c1b4e82be350f214152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formatted boolean worksheet cell.  <a href="#a60cc3159efc17c1b4e82be350f214152">More...</a><br /></td></tr>
-<tr class="separator:a60cc3159efc17c1b4e82be350f214152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56bcd1671dc853a4927adb67696726ec"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a56bcd1671dc853a4927adb67696726ec">worksheet_write_blank</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
-<tr class="memdesc:a56bcd1671dc853a4927adb67696726ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formatted blank worksheet cell.  <a href="#a56bcd1671dc853a4927adb67696726ec">More...</a><br /></td></tr>
-<tr class="separator:a56bcd1671dc853a4927adb67696726ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9453aff2062f93d2c9784b96393f2f37"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37">worksheet_write_formula_num</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *formula, <a class="el" href="structlxw__format.html">lxw_format</a> *format, double result)</td></tr>
-<tr class="memdesc:a9453aff2062f93d2c9784b96393f2f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formula to a worksheet cell with a user defined result.  <a href="#a9453aff2062f93d2c9784b96393f2f37">More...</a><br /></td></tr>
-<tr class="separator:a9453aff2062f93d2c9784b96393f2f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9810487fa940f487edd57099b8e8c736"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736">worksheet_set_row</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, double height, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
-<tr class="memdesc:a9810487fa940f487edd57099b8e8c736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the properties for a row of cells.  <a href="#a9810487fa940f487edd57099b8e8c736">More...</a><br /></td></tr>
-<tr class="separator:a9810487fa940f487edd57099b8e8c736"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a448e1deb5239b9241148c69590da84b3"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a448e1deb5239b9241148c69590da84b3">worksheet_set_row_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, double height, <a class="el" href="structlxw__format.html">lxw_format</a> *format, <a class="el" href="structlxw__row__col__options.html">lxw_row_col_options</a> *options)</td></tr>
-<tr class="memdesc:a448e1deb5239b9241148c69590da84b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the properties for a row of cells.  <a href="#a448e1deb5239b9241148c69590da84b3">More...</a><br /></td></tr>
-<tr class="separator:a448e1deb5239b9241148c69590da84b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e54e97691068c7fd227f8713938aedc"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col, double width, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
-<tr class="memdesc:a5e54e97691068c7fd227f8713938aedc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the properties for one or more columns of cells.  <a href="#a5e54e97691068c7fd227f8713938aedc">More...</a><br /></td></tr>
-<tr class="separator:a5e54e97691068c7fd227f8713938aedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81e659e6c5ad6b085e4f83686a69ab3e"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a81e659e6c5ad6b085e4f83686a69ab3e">worksheet_set_column_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col, double width, <a class="el" href="structlxw__format.html">lxw_format</a> *format, <a class="el" href="structlxw__row__col__options.html">lxw_row_col_options</a> *options)</td></tr>
-<tr class="memdesc:a81e659e6c5ad6b085e4f83686a69ab3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the properties for one or more columns of cells with options.  <a href="#a81e659e6c5ad6b085e4f83686a69ab3e">More...</a><br /></td></tr>
-<tr class="separator:a81e659e6c5ad6b085e4f83686a69ab3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9cfd4bf719dbbd45866cad7dde4dab3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#aa9cfd4bf719dbbd45866cad7dde4dab3">worksheet_insert_image</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *filename)</td></tr>
-<tr class="memdesc:aa9cfd4bf719dbbd45866cad7dde4dab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an image in a worksheet cell.  <a href="#aa9cfd4bf719dbbd45866cad7dde4dab3">More...</a><br /></td></tr>
-<tr class="separator:aa9cfd4bf719dbbd45866cad7dde4dab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc18290a13a760aebe74c705a7ade0a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#abc18290a13a760aebe74c705a7ade0a7">worksheet_insert_image_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *filename, <a class="el" href="structlxw__image__options.html">lxw_image_options</a> *options)</td></tr>
-<tr class="memdesc:abc18290a13a760aebe74c705a7ade0a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an image in a worksheet cell, with options.  <a href="#abc18290a13a760aebe74c705a7ade0a7">More...</a><br /></td></tr>
-<tr class="separator:abc18290a13a760aebe74c705a7ade0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a116f2ec4f88dc343a84e9da97ca8da21"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a116f2ec4f88dc343a84e9da97ca8da21">worksheet_insert_chart</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__chart.html">lxw_chart</a> *chart)</td></tr>
-<tr class="memdesc:a116f2ec4f88dc343a84e9da97ca8da21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a chart object into a worksheet.  <a href="#a116f2ec4f88dc343a84e9da97ca8da21">More...</a><br /></td></tr>
-<tr class="separator:a116f2ec4f88dc343a84e9da97ca8da21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d951cd8bb662977706b9a24ebbcc93b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a6d951cd8bb662977706b9a24ebbcc93b">worksheet_insert_chart_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, <a class="el" href="structlxw__image__options.html">lxw_image_options</a> *user_options)</td></tr>
-<tr class="memdesc:a6d951cd8bb662977706b9a24ebbcc93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a chart object into a worksheet, with options.  <a href="#a6d951cd8bb662977706b9a24ebbcc93b">More...</a><br /></td></tr>
-<tr class="separator:a6d951cd8bb662977706b9a24ebbcc93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac15d2e82b73308458e9cdebeffdd46e6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ac15d2e82b73308458e9cdebeffdd46e6">worksheet_merge_range</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col, const char *string, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
-<tr class="memdesc:ac15d2e82b73308458e9cdebeffdd46e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge a range of cells.  <a href="#ac15d2e82b73308458e9cdebeffdd46e6">More...</a><br /></td></tr>
-<tr class="separator:ac15d2e82b73308458e9cdebeffdd46e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af09ab5ededabf5b82f265823eb3a0e8e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#af09ab5ededabf5b82f265823eb3a0e8e">worksheet_autofilter</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col)</td></tr>
-<tr class="memdesc:af09ab5ededabf5b82f265823eb3a0e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the autofilter area in the worksheet.  <a href="#af09ab5ededabf5b82f265823eb3a0e8e">More...</a><br /></td></tr>
-<tr class="separator:af09ab5ededabf5b82f265823eb3a0e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9fc47d3beaa2ab4759414e8580c2289"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, double number, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:ad9fc47d3beaa2ab4759414e8580c2289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a number to a worksheet cell.  <a href="#ad9fc47d3beaa2ab4759414e8580c2289">More...</a><br /></td></tr>
+<tr class="separator:ad9fc47d3beaa2ab4759414e8580c2289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac208046e7a6d12cc87982422efa41b31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *string, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:ac208046e7a6d12cc87982422efa41b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a string to a worksheet cell.  <a href="#ac208046e7a6d12cc87982422efa41b31">More...</a><br /></td></tr>
+<tr class="separator:ac208046e7a6d12cc87982422efa41b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae57117f04c82bef29805ec3eabc219bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *formula, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:ae57117f04c82bef29805ec3eabc219bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formula to a worksheet cell.  <a href="#ae57117f04c82bef29805ec3eabc219bb">More...</a><br /></td></tr>
+<tr class="separator:ae57117f04c82bef29805ec3eabc219bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8331799b5821d70c442d637ca66dd6e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a8331799b5821d70c442d637ca66dd6e7">worksheet_write_array_formula</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col, const char *formula, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:a8331799b5821d70c442d637ca66dd6e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write an array formula to a worksheet cell.  <a href="#a8331799b5821d70c442d637ca66dd6e7">More...</a><br /></td></tr>
+<tr class="separator:a8331799b5821d70c442d637ca66dd6e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb0b3211160927a3412be28c9364b1b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#afb0b3211160927a3412be28c9364b1b5">worksheet_write_datetime</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__datetime.html">lxw_datetime</a> *datetime, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:afb0b3211160927a3412be28c9364b1b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a date or time to a worksheet cell.  <a href="#afb0b3211160927a3412be28c9364b1b5">More...</a><br /></td></tr>
+<tr class="separator:afb0b3211160927a3412be28c9364b1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b2ac96ee23574a432f5703eedcaf9a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *url, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="separator:a9b2ac96ee23574a432f5703eedcaf9a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af14fc7b20ba84e56510caf15c577cf8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#af14fc7b20ba84e56510caf15c577cf8c">worksheet_write_boolean</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, int value, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:af14fc7b20ba84e56510caf15c577cf8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formatted boolean worksheet cell.  <a href="#af14fc7b20ba84e56510caf15c577cf8c">More...</a><br /></td></tr>
+<tr class="separator:af14fc7b20ba84e56510caf15c577cf8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c81b7e398d686a1fe17e76ef4485f34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a8c81b7e398d686a1fe17e76ef4485f34">worksheet_write_blank</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:a8c81b7e398d686a1fe17e76ef4485f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formatted blank worksheet cell.  <a href="#a8c81b7e398d686a1fe17e76ef4485f34">More...</a><br /></td></tr>
+<tr class="separator:a8c81b7e398d686a1fe17e76ef4485f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af474c01f7ec8ac1a01206c9c4a5867af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#af474c01f7ec8ac1a01206c9c4a5867af">worksheet_write_formula_num</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *formula, <a class="el" href="structlxw__format.html">lxw_format</a> *format, double result)</td></tr>
+<tr class="memdesc:af474c01f7ec8ac1a01206c9c4a5867af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formula to a worksheet cell with a user defined result.  <a href="#af474c01f7ec8ac1a01206c9c4a5867af">More...</a><br /></td></tr>
+<tr class="separator:af474c01f7ec8ac1a01206c9c4a5867af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b7fb95e1bd9b0da70befd0d37a9173"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, double height, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:ab9b7fb95e1bd9b0da70befd0d37a9173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the properties for a row of cells.  <a href="#ab9b7fb95e1bd9b0da70befd0d37a9173">More...</a><br /></td></tr>
+<tr class="separator:ab9b7fb95e1bd9b0da70befd0d37a9173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc2de45e0aa84341fb10a98778b3807"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807">worksheet_set_row_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, double height, <a class="el" href="structlxw__format.html">lxw_format</a> *format, <a class="el" href="structlxw__row__col__options.html">lxw_row_col_options</a> *options)</td></tr>
+<tr class="memdesc:abbc2de45e0aa84341fb10a98778b3807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the properties for a row of cells.  <a href="#abbc2de45e0aa84341fb10a98778b3807">More...</a><br /></td></tr>
+<tr class="separator:abbc2de45e0aa84341fb10a98778b3807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9656e4e05d3787eee6b3e4d8e82d9b7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col, double width, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:a9656e4e05d3787eee6b3e4d8e82d9b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the properties for one or more columns of cells.  <a href="#a9656e4e05d3787eee6b3e4d8e82d9b7f">More...</a><br /></td></tr>
+<tr class="separator:a9656e4e05d3787eee6b3e4d8e82d9b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52c4c145f684c5b4dcd2ed304d1fe907"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a52c4c145f684c5b4dcd2ed304d1fe907">worksheet_set_column_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col, double width, <a class="el" href="structlxw__format.html">lxw_format</a> *format, <a class="el" href="structlxw__row__col__options.html">lxw_row_col_options</a> *options)</td></tr>
+<tr class="memdesc:a52c4c145f684c5b4dcd2ed304d1fe907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the properties for one or more columns of cells with options.  <a href="#a52c4c145f684c5b4dcd2ed304d1fe907">More...</a><br /></td></tr>
+<tr class="separator:a52c4c145f684c5b4dcd2ed304d1fe907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4529d77bcefcf478b8209f46fe730f6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f">worksheet_insert_image</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *filename)</td></tr>
+<tr class="memdesc:a4529d77bcefcf478b8209f46fe730f6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an image in a worksheet cell.  <a href="#a4529d77bcefcf478b8209f46fe730f6f">More...</a><br /></td></tr>
+<tr class="separator:a4529d77bcefcf478b8209f46fe730f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b05e75e2c2a5c3452374714cdb2b79b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b">worksheet_insert_image_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *filename, <a class="el" href="structlxw__image__options.html">lxw_image_options</a> *options)</td></tr>
+<tr class="memdesc:a0b05e75e2c2a5c3452374714cdb2b79b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an image in a worksheet cell, with options.  <a href="#a0b05e75e2c2a5c3452374714cdb2b79b">More...</a><br /></td></tr>
+<tr class="separator:a0b05e75e2c2a5c3452374714cdb2b79b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2067faaacb8bfa6550b019e915900a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__chart.html">lxw_chart</a> *chart)</td></tr>
+<tr class="memdesc:ac2067faaacb8bfa6550b019e915900a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a chart object into a worksheet.  <a href="#ac2067faaacb8bfa6550b019e915900a2">More...</a><br /></td></tr>
+<tr class="separator:ac2067faaacb8bfa6550b019e915900a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c24ef5b630e33cbbc8a83f71a458bb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a8c24ef5b630e33cbbc8a83f71a458bb7">worksheet_insert_chart_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, <a class="el" href="structlxw__image__options.html">lxw_image_options</a> *user_options)</td></tr>
+<tr class="memdesc:a8c24ef5b630e33cbbc8a83f71a458bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a chart object into a worksheet, with options.  <a href="#a8c24ef5b630e33cbbc8a83f71a458bb7">More...</a><br /></td></tr>
+<tr class="separator:a8c24ef5b630e33cbbc8a83f71a458bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5a2a09ec65c0f286b756235c7327225"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225">worksheet_merge_range</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col, const char *string, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:ad5a2a09ec65c0f286b756235c7327225"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge a range of cells.  <a href="#ad5a2a09ec65c0f286b756235c7327225">More...</a><br /></td></tr>
+<tr class="separator:ad5a2a09ec65c0f286b756235c7327225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e2b1de34e96331000a996f512aecfcf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a4e2b1de34e96331000a996f512aecfcf">worksheet_autofilter</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col)</td></tr>
+<tr class="memdesc:a4e2b1de34e96331000a996f512aecfcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the autofilter area in the worksheet.  <a href="#a4e2b1de34e96331000a996f512aecfcf">More...</a><br /></td></tr>
+<tr class="separator:a4e2b1de34e96331000a996f512aecfcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76ec76f91328c512d3d86a35642f0a08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08">worksheet_activate</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
 <tr class="memdesc:a76ec76f91328c512d3d86a35642f0a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a worksheet the active, i.e., visible worksheet.  <a href="#a76ec76f91328c512d3d86a35642f0a08">More...</a><br /></td></tr>
 <tr class="separator:a76ec76f91328c512d3d86a35642f0a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,24 +203,24 @@ Functions</h2></td></tr>
 <tr class="memitem:ab942bbc0493eaa5cf5696da30b6f872d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ab942bbc0493eaa5cf5696da30b6f872d">worksheet_set_margins</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, double left, double right, double top, double bottom)</td></tr>
 <tr class="memdesc:ab942bbc0493eaa5cf5696da30b6f872d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the worksheet margins for the printed page.  <a href="#ab942bbc0493eaa5cf5696da30b6f872d">More...</a><br /></td></tr>
 <tr class="separator:ab942bbc0493eaa5cf5696da30b6f872d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba04869a61c4246f5d2f2d51e4947f77"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77">worksheet_set_header</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, char *string)</td></tr>
-<tr class="memdesc:aba04869a61c4246f5d2f2d51e4947f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the printed page header caption.  <a href="#aba04869a61c4246f5d2f2d51e4947f77">More...</a><br /></td></tr>
-<tr class="separator:aba04869a61c4246f5d2f2d51e4947f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe864b71bbfb5e3c3ad84566d1c40721"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#abe864b71bbfb5e3c3ad84566d1c40721">worksheet_set_footer</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, char *string)</td></tr>
-<tr class="memdesc:abe864b71bbfb5e3c3ad84566d1c40721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the printed page footer caption.  <a href="#abe864b71bbfb5e3c3ad84566d1c40721">More...</a><br /></td></tr>
-<tr class="separator:abe864b71bbfb5e3c3ad84566d1c40721"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe6950c6b36968336c4a38c51b2571ac"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#afe6950c6b36968336c4a38c51b2571ac">worksheet_set_header_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, char *string, <a class="el" href="structlxw__header__footer__options.html">lxw_header_footer_options</a> *options)</td></tr>
-<tr class="memdesc:afe6950c6b36968336c4a38c51b2571ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the printed page header caption with additional options.  <a href="#afe6950c6b36968336c4a38c51b2571ac">More...</a><br /></td></tr>
-<tr class="separator:afe6950c6b36968336c4a38c51b2571ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41b50b05830945dae840808d548fa445"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a41b50b05830945dae840808d548fa445">worksheet_set_footer_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, char *string, <a class="el" href="structlxw__header__footer__options.html">lxw_header_footer_options</a> *options)</td></tr>
-<tr class="memdesc:a41b50b05830945dae840808d548fa445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the printed page footer caption with additional options.  <a href="#a41b50b05830945dae840808d548fa445">More...</a><br /></td></tr>
-<tr class="separator:a41b50b05830945dae840808d548fa445"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58ec014b7180d921805b112ae2968e05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a58ec014b7180d921805b112ae2968e05">worksheet_set_h_pagebreaks</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> breaks[])</td></tr>
-<tr class="memdesc:a58ec014b7180d921805b112ae2968e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the horizontal page breaks on a worksheet.  <a href="#a58ec014b7180d921805b112ae2968e05">More...</a><br /></td></tr>
-<tr class="separator:a58ec014b7180d921805b112ae2968e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed0c73920321ef536af07a4d4a05434d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#aed0c73920321ef536af07a4d4a05434d">worksheet_set_v_pagebreaks</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> breaks[])</td></tr>
-<tr class="memdesc:aed0c73920321ef536af07a4d4a05434d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the vertical page breaks on a worksheet.  <a href="#aed0c73920321ef536af07a4d4a05434d">More...</a><br /></td></tr>
-<tr class="separator:aed0c73920321ef536af07a4d4a05434d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4070c24ed5107f33e94f30a1bf865ba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, const char *string)</td></tr>
+<tr class="memdesc:a4070c24ed5107f33e94f30a1bf865ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the printed page header caption.  <a href="#a4070c24ed5107f33e94f30a1bf865ba9">More...</a><br /></td></tr>
+<tr class="separator:a4070c24ed5107f33e94f30a1bf865ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57eb561cf3ab5e408a6612f0e379903a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a57eb561cf3ab5e408a6612f0e379903a">worksheet_set_footer</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, const char *string)</td></tr>
+<tr class="memdesc:a57eb561cf3ab5e408a6612f0e379903a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the printed page footer caption.  <a href="#a57eb561cf3ab5e408a6612f0e379903a">More...</a><br /></td></tr>
+<tr class="separator:a57eb561cf3ab5e408a6612f0e379903a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab913a06656ecf28292d6b21d3c3eaaac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac">worksheet_set_header_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, const char *string, <a class="el" href="structlxw__header__footer__options.html">lxw_header_footer_options</a> *options)</td></tr>
+<tr class="memdesc:ab913a06656ecf28292d6b21d3c3eaaac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the printed page header caption with additional options.  <a href="#ab913a06656ecf28292d6b21d3c3eaaac">More...</a><br /></td></tr>
+<tr class="separator:ab913a06656ecf28292d6b21d3c3eaaac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed383b6dd3319d58a113226e5e73331f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#aed383b6dd3319d58a113226e5e73331f">worksheet_set_footer_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, const char *string, <a class="el" href="structlxw__header__footer__options.html">lxw_header_footer_options</a> *options)</td></tr>
+<tr class="memdesc:aed383b6dd3319d58a113226e5e73331f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the printed page footer caption with additional options.  <a href="#aed383b6dd3319d58a113226e5e73331f">More...</a><br /></td></tr>
+<tr class="separator:aed383b6dd3319d58a113226e5e73331f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9601745a2e9e7b1e194b7f5283f197f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a9601745a2e9e7b1e194b7f5283f197f0">worksheet_set_h_pagebreaks</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> breaks[])</td></tr>
+<tr class="memdesc:a9601745a2e9e7b1e194b7f5283f197f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the horizontal page breaks on a worksheet.  <a href="#a9601745a2e9e7b1e194b7f5283f197f0">More...</a><br /></td></tr>
+<tr class="separator:a9601745a2e9e7b1e194b7f5283f197f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00621cf25b5a449a92bb9b3fc83327e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a00621cf25b5a449a92bb9b3fc83327e6">worksheet_set_v_pagebreaks</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> breaks[])</td></tr>
+<tr class="memdesc:a00621cf25b5a449a92bb9b3fc83327e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the vertical page breaks on a worksheet.  <a href="#a00621cf25b5a449a92bb9b3fc83327e6">More...</a><br /></td></tr>
+<tr class="separator:a00621cf25b5a449a92bb9b3fc83327e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40d32d247593e01c00b5c5c606fb4bb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a40d32d247593e01c00b5c5c606fb4bb3">worksheet_print_across</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
 <tr class="memdesc:a40d32d247593e01c00b5c5c606fb4bb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the order in which pages are printed.  <a href="#a40d32d247593e01c00b5c5c606fb4bb3">More...</a><br /></td></tr>
 <tr class="separator:a40d32d247593e01c00b5c5c606fb4bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,15 +239,15 @@ Functions</h2></td></tr>
 <tr class="memitem:adb169a9740135f5c01eab94099d77f9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#adb169a9740135f5c01eab94099d77f9b">worksheet_print_row_col_headers</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
 <tr class="memdesc:adb169a9740135f5c01eab94099d77f9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the option to print the row and column headers on the printed page.  <a href="#adb169a9740135f5c01eab94099d77f9b">More...</a><br /></td></tr>
 <tr class="separator:adb169a9740135f5c01eab94099d77f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea3fc48aa23c4f9bfc1d580a3ada66e8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#aea3fc48aa23c4f9bfc1d580a3ada66e8">worksheet_repeat_rows</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row)</td></tr>
-<tr class="memdesc:aea3fc48aa23c4f9bfc1d580a3ada66e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of rows to repeat at the top of each printed page.  <a href="#aea3fc48aa23c4f9bfc1d580a3ada66e8">More...</a><br /></td></tr>
-<tr class="separator:aea3fc48aa23c4f9bfc1d580a3ada66e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04dfac2f4b2307af3e834b7b37436ded"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a04dfac2f4b2307af3e834b7b37436ded">worksheet_repeat_columns</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col)</td></tr>
-<tr class="memdesc:a04dfac2f4b2307af3e834b7b37436ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of columns to repeat at the top of each printed page.  <a href="#a04dfac2f4b2307af3e834b7b37436ded">More...</a><br /></td></tr>
-<tr class="separator:a04dfac2f4b2307af3e834b7b37436ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0c82375dda26bb7590a2ad3f42401dd"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ae0c82375dda26bb7590a2ad3f42401dd">worksheet_print_area</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col)</td></tr>
-<tr class="memdesc:ae0c82375dda26bb7590a2ad3f42401dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the print area for a worksheet.  <a href="#ae0c82375dda26bb7590a2ad3f42401dd">More...</a><br /></td></tr>
-<tr class="separator:ae0c82375dda26bb7590a2ad3f42401dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5022e812b6fe0414f2a8bab03fd0ec48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a5022e812b6fe0414f2a8bab03fd0ec48">worksheet_repeat_rows</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row)</td></tr>
+<tr class="memdesc:a5022e812b6fe0414f2a8bab03fd0ec48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of rows to repeat at the top of each printed page.  <a href="#a5022e812b6fe0414f2a8bab03fd0ec48">More...</a><br /></td></tr>
+<tr class="separator:a5022e812b6fe0414f2a8bab03fd0ec48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a932dd78e18c8e82a21f87e5344aa9c65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a932dd78e18c8e82a21f87e5344aa9c65">worksheet_repeat_columns</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col)</td></tr>
+<tr class="memdesc:a932dd78e18c8e82a21f87e5344aa9c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of columns to repeat at the top of each printed page.  <a href="#a932dd78e18c8e82a21f87e5344aa9c65">More...</a><br /></td></tr>
+<tr class="separator:a932dd78e18c8e82a21f87e5344aa9c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab92116759b56cd67419febf6e0aa2c9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ab92116759b56cd67419febf6e0aa2c9e">worksheet_print_area</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col)</td></tr>
+<tr class="memdesc:ab92116759b56cd67419febf6e0aa2c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the print area for a worksheet.  <a href="#ab92116759b56cd67419febf6e0aa2c9e">More...</a><br /></td></tr>
+<tr class="separator:ab92116759b56cd67419febf6e0aa2c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ed8b0603df10ce2439b54f7980efb6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d">worksheet_fit_to_pages</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, uint16_t width, uint16_t height)</td></tr>
 <tr class="memdesc:a9ed8b0603df10ce2439b54f7980efb6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fit the printed area to a specific number of pages both vertically and horizontally.  <a href="#a9ed8b0603df10ce2439b54f7980efb6d">More...</a><br /></td></tr>
 <tr class="separator:a9ed8b0603df10ce2439b54f7980efb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -266,20 +266,20 @@ Functions</h2></td></tr>
 <tr class="memitem:a1e84ef4dff791fc2278dfb029af94cb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0">worksheet_set_tab_color</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="format_8h.html#a422d719f90588b17d1399eaced80ae31">lxw_color_t</a> color)</td></tr>
 <tr class="memdesc:a1e84ef4dff791fc2278dfb029af94cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the worksheet tab.  <a href="#a1e84ef4dff791fc2278dfb029af94cb0">More...</a><br /></td></tr>
 <tr class="separator:a1e84ef4dff791fc2278dfb029af94cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40bf1510fab3783d617e78483ad0c54f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, char *password, <a class="el" href="structlxw__protection.html">lxw_protection</a> *options)</td></tr>
-<tr class="memdesc:a40bf1510fab3783d617e78483ad0c54f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protect elements of a worksheet from modification.  <a href="#a40bf1510fab3783d617e78483ad0c54f">More...</a><br /></td></tr>
-<tr class="separator:a40bf1510fab3783d617e78483ad0c54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b49e135d4debcdb25941f2f40f04cb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a1b49e135d4debcdb25941f2f40f04cb0">worksheet_protect</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, const char *password, <a class="el" href="structlxw__protection.html">lxw_protection</a> *options)</td></tr>
+<tr class="memdesc:a1b49e135d4debcdb25941f2f40f04cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protect elements of a worksheet from modification.  <a href="#a1b49e135d4debcdb25941f2f40f04cb0">More...</a><br /></td></tr>
+<tr class="separator:a1b49e135d4debcdb25941f2f40f04cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74121de7c4f67639b30f302d4af48eb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a74121de7c4f67639b30f302d4af48eb4">worksheet_set_default_row</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, double height, uint8_t hide_unused_rows)</td></tr>
 <tr class="memdesc:a74121de7c4f67639b30f302d4af48eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the default row properties.  <a href="#a74121de7c4f67639b30f302d4af48eb4">More...</a><br /></td></tr>
 <tr class="separator:a74121de7c4f67639b30f302d4af48eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="aa7f1a12b664b4c1d7742529a315e21aa"></a>
+<a class="anchor" id="ad9fc47d3beaa2ab4759414e8580c2289"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t worksheet_write_number </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_write_number </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -325,10 +325,10 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
-<p>The <code><a class="el" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa" title="Write a number to a worksheet cell. ">worksheet_write_number()</a></code> function writes numeric types to the cell specified by <code>row</code> and <code>column</code>:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 0, 0, 123456, NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 1, 0, 2.3451, NULL);</div>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<p>The <code><a class="el" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289" title="Write a number to a worksheet cell. ">worksheet_write_number()</a></code> function writes numeric types to the cell specified by <code>row</code> and <code>column</code>:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 0, 0, 123456, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 1, 0, 2.3451, NULL);</div>
 </div><!-- fragment --><div class="image">
 <img src="write_number01.png" alt="write_number01.png"/>
 </div>
@@ -337,7 +337,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format, <span class="stringliteral">&quot;$#,##0.00&quot;</span>);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 0, 0, 1234.567, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 0, 0, 1234.567, format);</div>
 </div><!-- fragment --><div class="image">
 <img src="write_number02.png" alt="write_number02.png"/>
 </div>
@@ -345,12 +345,12 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a0c3e081792631511c9ee3f7507afb78c"></a>
+<a class="anchor" id="ac208046e7a6d12cc87982422efa41b31"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t worksheet_write_string </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_write_string </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -396,9 +396,9 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_write_string()</code> function writes a string to the cell specified by <code>row</code> and <code>column</code>:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;This phrase is English!&quot;</span>, NULL);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;This phrase is English!&quot;</span>, NULL);</div>
 </div><!-- fragment --><div class="image">
 <img src="write_string01.png" alt="write_string01.png"/>
 </div>
@@ -406,12 +406,12 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(format);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;This phrase is Bold!&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;This phrase is Bold!&quot;</span>, format);</div>
 </div><!-- fragment --><div class="image">
 <img src="write_string02.png" alt="write_string02.png"/>
 </div>
 <p>Unicode strings are supported in UTF-8 encoding. This generally requires that your source file is UTF-8 encoded or that the data has been read from a UTF-8 source:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Это фраза на русском!&quot;</span>, NULL);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Это фраза на русском!&quot;</span>, NULL);</div>
 </div><!-- fragment --><div class="image">
 <img src="write_string03.png" alt="write_string03.png"/>
 </div>
@@ -419,12 +419,12 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<a class="anchor" id="ad9c384e17c06538c6a45f2cec7b5bef1"></a>
+<a class="anchor" id="ae57117f04c82bef29805ec3eabc219bb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t worksheet_write_formula </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_write_formula </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -470,35 +470,35 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_write_formula()</code> function writes a formula or function to the cell specified by <code>row</code> and <code>column</code>:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=B3 + 6&quot;</span>,                    NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=SIN(PI()/4)&quot;</span>,               NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 2, 0, <span class="stringliteral">&quot;=SUM(A1:A2)&quot;</span>,                NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 3, 0, <span class="stringliteral">&quot;=IF(A3&gt;1,\&quot;Yes\&quot;, \&quot;No\&quot;)&quot;</span>,  NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 4, 0, <span class="stringliteral">&quot;=AVERAGE(1, 2, 3, 4)&quot;</span>,       NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 5, 0, <span class="stringliteral">&quot;=DATEVALUE(\&quot;1-Jan-2013\&quot;)&quot;</span>, NULL);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=B3 + 6&quot;</span>,                    NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=SIN(PI()/4)&quot;</span>,               NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, 2, 0, <span class="stringliteral">&quot;=SUM(A1:A2)&quot;</span>,                NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, 3, 0, <span class="stringliteral">&quot;=IF(A3&gt;1,\&quot;Yes\&quot;, \&quot;No\&quot;)&quot;</span>,  NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, 4, 0, <span class="stringliteral">&quot;=AVERAGE(1, 2, 3, 4)&quot;</span>,       NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, 5, 0, <span class="stringliteral">&quot;=DATEVALUE(\&quot;1-Jan-2013\&quot;)&quot;</span>, NULL);</div>
 </div><!-- fragment --><div class="image">
 <img src="write_formula01.png" alt="write_formula01.png"/>
 </div>
 <p>The <code>format</code> parameter is used to apply formatting to the cell. This parameter can be <code>NULL</code> to indicate no formatting or it can be a <a class="el" href="format_8h.html">Format</a> object.</p>
-<p>Libxlsxwriter doesn't calculate the value of a formula and instead stores a default value of <code>0</code>. The correct formula result is displayed in Excel, as shown in the example above, since it recalculates the formulas when it loads the file. For cases where this is an issue see the <code><a class="el" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37" title="Write a formula to a worksheet cell with a user defined result. ">worksheet_write_formula_num()</a></code> function and the discussion in that section.</p>
+<p>Libxlsxwriter doesn't calculate the value of a formula and instead stores a default value of <code>0</code>. The correct formula result is displayed in Excel, as shown in the example above, since it recalculates the formulas when it loads the file. For cases where this is an issue see the <code><a class="el" href="worksheet_8h.html#af474c01f7ec8ac1a01206c9c4a5867af" title="Write a formula to a worksheet cell with a user defined result. ">worksheet_write_formula_num()</a></code> function and the discussion in that section.</p>
 <p>Formulas must be written with the US style separator/range operator which is a comma (not semi-colon). Therefore a formula with multiple values should be written as follows:</p>
 <div class="fragment"><div class="line"><span class="comment">// OK.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=SUM(1, 2, 3)&quot;</span>, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=SUM(1, 2, 3)&quot;</span>, NULL);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// NO. Error on load.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=SUM(1; 2; 3)&quot;</span>, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=SUM(1; 2; 3)&quot;</span>, NULL);</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="defined_name_8c-example.html#a8">defined_name.c</a>, <a class="el" href="tutorial1_8c-example.html#a6">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a10">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a14">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a11">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a5524b8304904962d6686d2723252e981"></a>
+<a class="anchor" id="a8331799b5821d70c442d637ca66dd6e7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t worksheet_write_array_formula </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_write_array_formula </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -558,27 +558,27 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_write_array_formula()</code> function writes an array formula to a cell range. In Excel an array formula is a formula that performs a calculation on a set of values.</p>
 <p>In Excel an array formula is indicated by a pair of braces around the formula: <code>{=SUM(A1:B1*A2:B2)}</code>.</p>
 <p>Array formulas can return a single value or a range or values. For array formulas that return a range of values you must specify the range that the return values will be written to. This is why this function has <code>first_</code> and <code>last_</code> row/column parameters. The <a class="el" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc" title="Convert an Excel A1:B2 range into a (first_row, first_col, last_row, last_col) sequence. ">RANGE()</a> macro can also be used to specify the range:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a5524b8304904962d6686d2723252e981">worksheet_write_array_formula</a>(worksheet, 4, 0, 6, 0,     <span class="stringliteral">&quot;{=TREND(C5:C7,B5:B7)}&quot;</span>, NULL);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a8331799b5821d70c442d637ca66dd6e7">worksheet_write_array_formula</a>(worksheet, 4, 0, 6, 0,     <span class="stringliteral">&quot;{=TREND(C5:C7,B5:B7)}&quot;</span>, NULL);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Same as above using the RANGE() macro.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a5524b8304904962d6686d2723252e981">worksheet_write_array_formula</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A5:A7&quot;</span>), <span class="stringliteral">&quot;{=TREND(C5:C7,B5:B7)}&quot;</span>, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a8331799b5821d70c442d637ca66dd6e7">worksheet_write_array_formula</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A5:A7&quot;</span>), <span class="stringliteral">&quot;{=TREND(C5:C7,B5:B7)}&quot;</span>, NULL);</div>
 </div><!-- fragment --><p>If the array formula returns a single value then the <code>first_</code> and <code>last_</code> parameters should be the same:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a5524b8304904962d6686d2723252e981">worksheet_write_array_formula</a>(worksheet, 1, 0, 1, 0,     <span class="stringliteral">&quot;{=SUM(B1:C1*B2:C2)}&quot;</span>, NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a5524b8304904962d6686d2723252e981">worksheet_write_array_formula</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A2:A2&quot;</span>), <span class="stringliteral">&quot;{=SUM(B1:C1*B2:C2)}&quot;</span>, NULL);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a8331799b5821d70c442d637ca66dd6e7">worksheet_write_array_formula</a>(worksheet, 1, 0, 1, 0,     <span class="stringliteral">&quot;{=SUM(B1:C1*B2:C2)}&quot;</span>, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a8331799b5821d70c442d637ca66dd6e7">worksheet_write_array_formula</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A2:A2&quot;</span>), <span class="stringliteral">&quot;{=SUM(B1:C1*B2:C2)}&quot;</span>, NULL);</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="array_formula_8c-example.html#a5">array_formula.c</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="acbc5654e9b8987ba263f83fff082ce33"></a>
+<a class="anchor" id="afb0b3211160927a3412be28c9364b1b5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t worksheet_write_datetime </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_write_datetime </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -624,8 +624,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
-<p>The <code><a class="el" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a></code> function can be used to write a date or time to the cell specified by <code>row</code> and <code>column</code>:</p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<p>The <code><a class="el" href="worksheet_8h.html#afb0b3211160927a3412be28c9364b1b5" title="Write a date or time to a worksheet cell. ">worksheet_write_datetime()</a></code> function can be used to write a date or time to the cell specified by <code>row</code> and <code>column</code>:</p>
  <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
@@ -640,9 +640,9 @@ Functions</h2></td></tr>
 <div class="line">    <span class="comment">/* Add a format with date formatting. */</span></div>
 <div class="line">    <a class="code" href="structlxw__format.html">lxw_format</a>    *format    = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line">    <a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format, <span class="stringliteral">&quot;mmm d yyyy hh:mm AM/PM&quot;</span>);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#acbc5654e9b8987ba263f83fff082ce33">worksheet_write_datetime</a>(worksheet, 1, 0, &amp;datetime, format);  <span class="comment">// Feb 28 2013 12:00 PM</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#afb0b3211160927a3412be28c9364b1b5">worksheet_write_datetime</a>(worksheet, 1, 0, &amp;datetime, format);  <span class="comment">// Feb 28 2013 12:00 PM</span></div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --></p>
 <p>The <code>format</code> parameter should be used to apply formatting to the cell using a <a class="el" href="format_8h.html">Format</a> object as shown above. Without a date format the datetime will appear as a number only.</p>
@@ -651,12 +651,12 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a22629468c16149a42de1c17ac9ee6aac"></a>
+<a class="anchor" id="a9b2ac96ee23574a432f5703eedcaf9a1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t worksheet_write_url </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_write_url </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -702,9 +702,9 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_write_url()</code> function is used to write a URL/hyperlink to a worksheet cell specified by <code>row</code> and <code>column</code>.</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, url_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, url_format);</div>
 </div><!-- fragment --><div class="image">
 <img src="hyperlinks_short.png" alt="hyperlinks_short.png"/>
 </div>
@@ -714,50 +714,50 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="format_8h.html#ad35ee5445826bd93ec1bc0d489fc09db">format_set_underline</a> (url_format, <a class="code" href="format_8h.html#af530d7971d15c164f3fb6bbfede9a39fa76d5bdd1c57c126df937f0b003597e18">LXW_UNDERLINE_SINGLE</a>);</div>
 <div class="line"><a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(url_format, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>);</div>
 </div><!-- fragment --><p>The usual web style URI's are supported: <code>http://</code>, <code>https://</code>, <code>ftp://</code> and <code>mailto:</code> :</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;ftp://www.python.org/&quot;</span>,     url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;http://www.python.org/&quot;</span>,    url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 2, 0, <span class="stringliteral">&quot;https://www.python.org/&quot;</span>,   url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 3, 0, <span class="stringliteral">&quot;mailto:jmcnamara@cpan.org&quot;</span>, url_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;ftp://www.python.org/&quot;</span>,     url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;http://www.python.org/&quot;</span>,    url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 2, 0, <span class="stringliteral">&quot;https://www.python.org/&quot;</span>,   url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 3, 0, <span class="stringliteral">&quot;mailto:jmcnamara@cpan.org&quot;</span>, url_format);</div>
 </div><!-- fragment --><p>An Excel hyperlink is comprised of two elements: the displayed string and the non-displayed link. By default the displayed string is the same as the link. However, it is possible to overwrite it with any other <code>libxlsxwriter</code> type using the appropriate <code>worksheet_write_*()</code> function. The most common case is to overwrite the displayed link text with another string:</p>
 <div class="fragment"><div class="line"><span class="comment">// Write a hyperlink but overwrite the displayed string.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>   (worksheet, 2, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 2, 0, <span class="stringliteral">&quot;Read the documentation.&quot;</span>,        url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>   (worksheet, 2, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 2, 0, <span class="stringliteral">&quot;Read the documentation.&quot;</span>,        url_format);</div>
 </div><!-- fragment --><div class="image">
 <img src="hyperlinks_short2.png" alt="hyperlinks_short2.png"/>
 </div>
 <p>Two local URIs are supported: <code>internal:</code> and <code>external:</code>. These are used for hyperlinks to internal worksheet references or external workbook and worksheet references:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;internal:Sheet2!A1&quot;</span>,                url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;internal:Sheet2!B2&quot;</span>,                url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 2, 0, <span class="stringliteral">&quot;internal:Sheet2!A1:B2&quot;</span>,             url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 3, 0, <span class="stringliteral">&quot;internal:&#39;Sales Data&#39;!A1&quot;</span>,          url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 4, 0, <span class="stringliteral">&quot;external:c:\\temp\\foo.xlsx&quot;</span>,       url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 5, 0, <span class="stringliteral">&quot;external:c:\\foo.xlsx#Sheet2!A1&quot;</span>,   url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 6, 0, <span class="stringliteral">&quot;external:..\\foo.xlsx&quot;</span>,             url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 7, 0, <span class="stringliteral">&quot;external:..\\foo.xlsx#Sheet2!A1&quot;</span>,   url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 8, 0, <span class="stringliteral">&quot;external:\\\\NET\\share\\foo.xlsx&quot;</span>, url_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;internal:Sheet2!A1&quot;</span>,                url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;internal:Sheet2!B2&quot;</span>,                url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 2, 0, <span class="stringliteral">&quot;internal:Sheet2!A1:B2&quot;</span>,             url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 3, 0, <span class="stringliteral">&quot;internal:&#39;Sales Data&#39;!A1&quot;</span>,          url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 4, 0, <span class="stringliteral">&quot;external:c:\\temp\\foo.xlsx&quot;</span>,       url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 5, 0, <span class="stringliteral">&quot;external:c:\\foo.xlsx#Sheet2!A1&quot;</span>,   url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 6, 0, <span class="stringliteral">&quot;external:..\\foo.xlsx&quot;</span>,             url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 7, 0, <span class="stringliteral">&quot;external:..\\foo.xlsx#Sheet2!A1&quot;</span>,   url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 8, 0, <span class="stringliteral">&quot;external:\\\\NET\\share\\foo.xlsx&quot;</span>, url_format);</div>
 </div><!-- fragment --><p>Worksheet references are typically of the form <code>Sheet1!A1</code>. You can also link to a worksheet range using the standard Excel notation: <code>Sheet1!A1:B2</code>.</p>
 <p>In external links the workbook and worksheet name must be separated by the <code>#</code> character:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:c:\\foo.xlsx#Sheet2!A1&quot;</span>,   url_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:c:\\foo.xlsx#Sheet2!A1&quot;</span>,   url_format);</div>
 </div><!-- fragment --><p>You can also link to a named range in the target worksheet: For example say you have a named range called <code>my_name</code> in the workbook <code>c:\temp\foo.xlsx</code> you could link to it as follows:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:c:\\temp\\foo.xlsx#my_name&quot;</span>, url_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:c:\\temp\\foo.xlsx#my_name&quot;</span>, url_format);</div>
 </div><!-- fragment --><p>Excel requires that worksheet names containing spaces or non alphanumeric characters are single quoted as follows:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;internal:&#39;Sales Data&#39;!A1&quot;</span>, url_format);</div>
-</div><!-- fragment --><p>Links to network files are also supported. Network files normally begin with two back slashes as follows <code>\\NETWORK\etc</code>. In order to represent this in a C string literal the backslashes should be escaped: </p><div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:\\\\NET\\share\\foo.xlsx&quot;</span>, url_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;internal:&#39;Sales Data&#39;!A1&quot;</span>, url_format);</div>
+</div><!-- fragment --><p>Links to network files are also supported. Network files normally begin with two back slashes as follows <code>\\NETWORK\etc</code>. In order to represent this in a C string literal the backslashes should be escaped: </p><div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:\\\\NET\\share\\foo.xlsx&quot;</span>, url_format);</div>
 </div><!-- fragment --><p>Alternatively, you can use Windows style forward slashes. These are translated internally to backslashes:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:c:/temp/foo.xlsx&quot;</span>,     url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;external://NET/share/foo.xlsx&quot;</span>, url_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:c:/temp/foo.xlsx&quot;</span>,     url_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;external://NET/share/foo.xlsx&quot;</span>, url_format);</div>
 </div><!-- fragment --><p><b>Note:</b></p>
 <p>libxlsxwriter will escape the following characters in URLs as required by Excel: <code>\s " &lt; &gt; \ [ ] ^ { }</code> unless the URL already contains <code>%xx</code> style escapes. In which case it is assumed that the URL was escaped correctly by the user and will by passed directly to Excel. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="hyperlinks_8c-example.html#a12">hyperlinks.c</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a60cc3159efc17c1b4e82be350f214152"></a>
+<a class="anchor" id="af14fc7b20ba84e56510caf15c577cf8c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t worksheet_write_boolean </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_write_boolean </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -803,18 +803,18 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>Write an Excel boolean to the cell specified by <code>row</code> and <code>column</code>:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a60cc3159efc17c1b4e82be350f214152">worksheet_write_boolean</a>(worksheet, 2, 2, 0, my_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#af14fc7b20ba84e56510caf15c577cf8c">worksheet_write_boolean</a>(worksheet, 2, 2, 0, my_format);</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="a56bcd1671dc853a4927adb67696726ec"></a>
+<a class="anchor" id="a8c81b7e398d686a1fe17e76ef4485f34"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t worksheet_write_blank </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_write_blank </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -853,21 +853,21 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>Write a blank cell specified by <code>row</code> and <code>column</code>:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a56bcd1671dc853a4927adb67696726ec">worksheet_write_blank</a>(worksheet, 1, 1, border_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a8c81b7e398d686a1fe17e76ef4485f34">worksheet_write_blank</a>(worksheet, 1, 1, border_format);</div>
 </div><!-- fragment --><p>This function is used to add formatting to a cell which doesn't contain a string or number value.</p>
 <p>Excel differentiates between an "Empty" cell and a "Blank" cell. An Empty cell is a cell which doesn't contain data or formatting whilst a Blank cell doesn't contain data but does contain formatting. Excel stores Blank cells but ignores Empty cells.</p>
 <p>As such, if you write an empty cell without formatting it is ignored. </p>
 
 </div>
 </div>
-<a class="anchor" id="a9453aff2062f93d2c9784b96393f2f37"></a>
+<a class="anchor" id="af474c01f7ec8ac1a01206c9c4a5867af"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t worksheet_write_formula_num </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_write_formula_num </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -920,24 +920,24 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_write_formula_num()</code> function writes a formula or Excel function to the cell specified by <code>row</code> and <code>column</code> with a user defined result:</p>
 <div class="fragment"><div class="line"><span class="comment">// Required as a workaround only.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37">worksheet_write_formula_num</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=1 + 2&quot;</span>, NULL, 3);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#af474c01f7ec8ac1a01206c9c4a5867af">worksheet_write_formula_num</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=1 + 2&quot;</span>, NULL, 3);</div>
 </div><!-- fragment --><p>Libxlsxwriter doesn't calculate the value of a formula and instead stores the value <code>0</code> as the formula result. It then sets a global flag in the XLSX file to say that all formulas and functions should be recalculated when the file is opened.</p>
 <p>This is the method recommended in the Excel documentation and in general it works fine with spreadsheet applications.</p>
 <p>However, applications that don't have a facility to calculate formulas, such as Excel Viewer, or some mobile applications will only display the <code>0</code> results.</p>
 <p>If required, the <code>worksheet_write_formula_num()</code> function can be used to specify a formula and its result.</p>
-<p>This function is rarely required and is only provided for compatibility with some third party applications. For most applications the <a class="el" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1" title="Write a formula to a worksheet cell. ">worksheet_write_formula()</a> function is the recommended way of writing formulas. </p>
+<p>This function is rarely required and is only provided for compatibility with some third party applications. For most applications the <a class="el" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb" title="Write a formula to a worksheet cell. ">worksheet_write_formula()</a> function is the recommended way of writing formulas. </p>
 
 </div>
 </div>
-<a class="anchor" id="a9810487fa940f487edd57099b8e8c736"></a>
+<a class="anchor" id="ab9b7fb95e1bd9b0da70befd0d37a9173"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t worksheet_set_row </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_set_row </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -978,35 +978,35 @@ Functions</h2></td></tr>
 </dl>
 <p>The <code>worksheet_set_row()</code> function is used to change the default properties of a row. The most common use for this function is to change the height of a row:</p>
 <div class="fragment"><div class="line"><span class="comment">// Set the height of Row 1 to 20.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736">worksheet_set_row</a>(worksheet, 0, 20, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a>(worksheet, 0, 20, NULL);</div>
 </div><!-- fragment --><p>The other common use for <code>worksheet_set_row()</code> is to set the a <a class="el" href="format_8h.html">Format</a> for all cells in the row:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *bold = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(bold);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Set the header row to bold.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736">worksheet_set_row</a>(worksheet, 0, 15, bold);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a>(worksheet, 0, 15, bold);</div>
 </div><!-- fragment --><p>If you wish to set the format of a row without changing the height you can pass the default row height of <a class="el" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a> = 15:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736">worksheet_set_row</a>(worksheet, 0, <a class="code" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>, format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736">worksheet_set_row</a>(worksheet, 0, 15, format); <span class="comment">// Same as above.</span></div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a>(worksheet, 0, <a class="code" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a>(worksheet, 0, 15, format); <span class="comment">// Same as above.</span></div>
 </div><!-- fragment --><p>The <code>format</code> parameter will be applied to any cells in the row that don't have a format. As with Excel the row format is overridden by an explicit cell format. For example:</p>
 <div class="fragment"><div class="line"><span class="comment">// Row 1 has format1.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736">worksheet_set_row</a>(worksheet, 0, 15, format1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a>(worksheet, 0, 15, format1);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Cell A1 in Row 1 defaults to format1.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Cell B1 in Row 1 keeps format2.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 1, <span class="stringliteral">&quot;Hello&quot;</span>, format2);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 1, <span class="stringliteral">&quot;Hello&quot;</span>, format2);</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="hide_row_col_8c-example.html#a7">hide_row_col.c</a>, <a class="el" href="merge_range_8c-example.html#a15">merge_range.c</a>, and <a class="el" href="panes_8c-example.html#a15">panes.c</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a448e1deb5239b9241148c69590da84b3"></a>
+<a class="anchor" id="abbc2de45e0aa84341fb10a98778b3807"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t worksheet_set_row_opt </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_set_row_opt </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -1052,7 +1052,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code>worksheet_set_row_opt()</code> function is the same as <code><a class="el" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736" title="Set the properties for a row of cells. ">worksheet_set_row()</a></code> with an additional <code>options</code> parameter.</p>
+<p>The <code>worksheet_set_row_opt()</code> function is the same as <code><a class="el" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173" title="Set the properties for a row of cells. ">worksheet_set_row()</a></code> with an additional <code>options</code> parameter.</p>
 <p>The <code>options</code> parameter is a <a class="el" href="structlxw__row__col__options.html" title="Options for rows and columns. ">lxw_row_col_options</a> struct. It has the following members but currently only the <code>hidden</code> property is supported:</p>
 <ul>
 <li><code>hidden</code></li>
@@ -1063,16 +1063,16 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__row__col__options.html">lxw_row_col_options</a> options = {.hidden = 1, .level = 0, .collapsed = 0};</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Hide the fourth row.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736">worksheet_set_row</a>(worksheet, 3, 20, NULL, &amp;options);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a>(worksheet, 3, 20, NULL, &amp;options);</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="a5e54e97691068c7fd227f8713938aedc"></a>
+<a class="anchor" id="a9656e4e05d3787eee6b3e4d8e82d9b7f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t worksheet_set_column </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_set_column </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -1120,55 +1120,55 @@ Functions</h2></td></tr>
 </dl>
 <p>The <code>worksheet_set_column()</code> function can be used to change the default properties of a single column or a range of columns:</p>
 <div class="fragment"><div class="line"><span class="comment">// Width of columns B:D set to 30.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 1, 3, 30, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 1, 3, 30, NULL);</div>
 </div><!-- fragment --><p>If <code>worksheet_set_column()</code> is applied to a single column the value of <code>first_col</code> and <code>last_col</code> should be the same:</p>
 <div class="fragment"><div class="line"><span class="comment">// Width of column B set to 30.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 1, 1, 30, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 1, 1, 30, NULL);</div>
 </div><!-- fragment --><p>It is also possible, and generally clearer, to specify a column range using the form of <code><a class="el" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8" title="Convert an Excel A:B column range into a (col1, col2) pair. ">COLS()</a></code> macro:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 4, 4, 20, NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 5, 8, 30, NULL);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 4, 4, 20, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 5, 8, 30, NULL);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Same as the examples above but clearer.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;E:E&quot;</span>), 20, NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;F:H&quot;</span>), 30, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;E:E&quot;</span>), 20, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;F:H&quot;</span>), 30, NULL);</div>
 </div><!-- fragment --><p>The width corresponds to the column width value that is specified in Excel. It is approximately equal to the length of a string in the default font of Calibri 11. Unfortunately, there is no way to specify "AutoFit" for a column in the Excel file format. This feature is only available at runtime from within Excel. It is possible to simulate "AutoFit" by tracking the width of the data in the column as your write it.</p>
 <p>As usual the <a class="el" href="format_8h.html">format.h</a> <code>format</code> parameter is optional. If you wish to set the format without changing the width you can pass default col width of <a class="el" href="worksheet_8h.html#a3df7073ab35462516525d28975286994">LXW_DEF_COL_WIDTH</a> = 8.43:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *bold = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(bold);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Set the first column to bold.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 0, 0, LXW_DEF_COL_HEIGHT, bold);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 0, 0, LXW_DEF_COL_HEIGHT, bold);</div>
 </div><!-- fragment --><p>The <code>format</code> parameter will be applied to any cells in the column that don't have a format. For example:</p>
 <div class="fragment"><div class="line"><span class="comment">// Column 1 has format1.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:A&quot;</span>), 8.43, format1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:A&quot;</span>), 8.43, format1);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Cell A1 in column 1 defaults to format1.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Cell A2 in column 1 keeps format2.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 1, 0, <span class="stringliteral">&quot;Hello&quot;</span>, format2);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 1, 0, <span class="stringliteral">&quot;Hello&quot;</span>, format2);</div>
 </div><!-- fragment --><p>As in Excel a row format takes precedence over a default column format:</p>
 <div class="fragment"><div class="line"> <span class="comment">// Row 1 has format1.</span></div>
-<div class="line"> <a class="code" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736">worksheet_set_row</a>(worksheet, 0, 15, format1);</div>
+<div class="line"> <a class="code" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a>(worksheet, 0, 15, format1);</div>
 <div class="line"></div>
 <div class="line"> <span class="comment">// Col 1 has format2.</span></div>
-<div class="line"> <a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:A&quot;</span>), 8.43, format2);</div>
+<div class="line"> <a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:A&quot;</span>), 8.43, format2);</div>
 <div class="line"></div>
 <div class="line"> <span class="comment">// Cell A1 defaults to format1, the row format.</span></div>
-<div class="line"> <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
+<div class="line"> <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Cell A2 keeps format2, the column format.</span></div>
-<div class="line"> <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 1, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
+<div class="line"> <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 1, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a9">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a7">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="hide_sheet_8c-example.html#a6">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a11">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a4">images.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a14">panes.c</a>, <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a8">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a81e659e6c5ad6b085e4f83686a69ab3e"></a>
+<a class="anchor" id="a52c4c145f684c5b4dcd2ed304d1fe907"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t worksheet_set_column_opt </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_set_column_opt </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -1221,7 +1221,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code>worksheet_set_column_opt()</code> function is the same as <code><a class="el" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc" title="Set the properties for one or more columns of cells. ">worksheet_set_column()</a></code> with an additional <code>options</code> parameter.</p>
+<p>The <code>worksheet_set_column_opt()</code> function is the same as <code><a class="el" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f" title="Set the properties for one or more columns of cells. ">worksheet_set_column()</a></code> with an additional <code>options</code> parameter.</p>
 <p>The <code>options</code> parameter is a <a class="el" href="structlxw__row__col__options.html" title="Options for rows and columns. ">lxw_row_col_options</a> struct. It has the following members but currently only the <code>hidden</code> property is supported:</p>
 <ul>
 <li><code>hidden</code></li>
@@ -1231,17 +1231,17 @@ Functions</h2></td></tr>
 <p>The <code>"hidden"</code> option is used to hide a column. This can be used, for example, to hide intermediary steps in a complicated calculation:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__row__col__options.html">lxw_row_col_options</a> options = {.<a class="code" href="structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562">hidden</a> = 1, .level = 0, .collapsed = 0};</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a81e659e6c5ad6b085e4f83686a69ab3e">worksheet_set_column_opt</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:A&quot;</span>), 8.43, NULL, &amp;options);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a52c4c145f684c5b4dcd2ed304d1fe907">worksheet_set_column_opt</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:A&quot;</span>), 8.43, NULL, &amp;options);</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="hide_row_col_8c-example.html#a10">hide_row_col.c</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="aa9cfd4bf719dbbd45866cad7dde4dab3"></a>
+<a class="anchor" id="a4529d77bcefcf478b8209f46fe730f6f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int worksheet_insert_image </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_insert_image </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -1280,25 +1280,25 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>This function can be used to insert a image into a worksheet. The image can be in PNG, JPEG or BMP format:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aa9cfd4bf719dbbd45866cad7dde4dab3">worksheet_insert_image</a>(worksheet, 2, 1, <span class="stringliteral">&quot;logo.png&quot;</span>);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f">worksheet_insert_image</a>(worksheet, 2, 1, <span class="stringliteral">&quot;logo.png&quot;</span>);</div>
 </div><!-- fragment --><div class="image">
 <img src="insert_image.png" alt="insert_image.png"/>
 </div>
-<p>The <code><a class="el" href="worksheet_8h.html#abc18290a13a760aebe74c705a7ade0a7" title="Insert an image in a worksheet cell, with options. ">worksheet_insert_image_opt()</a></code> function takes additional optional parameters to position and scale the image, see below.</p>
-<p><b>Note</b>: The scaling of a image may be affected if is crosses a row that has its default height changed due to a font that is larger than the default font size or that has text wrapping turned on. To avoid this you should explicitly set the height of the row using <code><a class="el" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736" title="Set the properties for a row of cells. ">worksheet_set_row()</a></code> if it crosses an inserted image.</p>
+<p>The <code><a class="el" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b" title="Insert an image in a worksheet cell, with options. ">worksheet_insert_image_opt()</a></code> function takes additional optional parameters to position and scale the image, see below.</p>
+<p><b>Note</b>: The scaling of a image may be affected if is crosses a row that has its default height changed due to a font that is larger than the default font size or that has text wrapping turned on. To avoid this you should explicitly set the height of the row using <code><a class="el" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173" title="Set the properties for a row of cells. ">worksheet_set_row()</a></code> if it crosses an inserted image.</p>
 <p>BMP images are only supported for backward compatibility. In general it is best to avoid BMP images since they aren't compressed. If used, BMP images must be 24 bit, true color, bitmaps. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="demo_8c-example.html#a10">demo.c</a>, and <a class="el" href="images_8c-example.html#a8">images.c</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="abc18290a13a760aebe74c705a7ade0a7"></a>
+<a class="anchor" id="a0b05e75e2c2a5c3452374714cdb2b79b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int worksheet_insert_image_opt </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_insert_image_opt </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -1344,26 +1344,26 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
-<p>The <code>worksheet_insert_image_opt()</code> function is like <code><a class="el" href="worksheet_8h.html#aa9cfd4bf719dbbd45866cad7dde4dab3" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> function except that it takes an optional <a class="el" href="structlxw__image__options.html" title="Options for inserted images. ">lxw_image_options</a> struct to scale and position the image:</p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<p>The <code>worksheet_insert_image_opt()</code> function is like <code><a class="el" href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> function except that it takes an optional <a class="el" href="structlxw__image__options.html" title="Options for inserted images. ">lxw_image_options</a> struct to scale and position the image:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__image__options.html">lxw_image_options</a> options = {.x_offset = 30,  .y_offset = 10,</div>
 <div class="line">                             .x_scale  = 0.5, .y_scale  = 0.5};</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#abc18290a13a760aebe74c705a7ade0a7">worksheet_insert_image_opt</a>(worksheet, 2, 1, <span class="stringliteral">&quot;logo.png&quot;</span>, &amp;options);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b">worksheet_insert_image_opt</a>(worksheet, 2, 1, <span class="stringliteral">&quot;logo.png&quot;</span>, &amp;options);</div>
 </div><!-- fragment --><div class="image">
 <img src="insert_image_opt.png" alt="insert_image_opt.png"/>
 </div>
-<dl class="section note"><dt>Note</dt><dd>See the notes about row scaling and BMP images in <code><a class="el" href="worksheet_8h.html#aa9cfd4bf719dbbd45866cad7dde4dab3" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> above. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>See the notes about row scaling and BMP images in <code><a class="el" href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> above. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="images_8c-example.html#a11">images.c</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a116f2ec4f88dc343a84e9da97ca8da21"></a>
+<a class="anchor" id="ac2067faaacb8bfa6550b019e915900a2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int worksheet_insert_chart </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_insert_chart </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -1402,16 +1402,16 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_insert_chart()</code> can be used to insert a chart into a worksheet. The chart object must be created first using the <code><a class="el" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726" title="Create a new chart to be added to a worksheet: ">workbook_add_chart()</a></code> function and configured using the <a class="el" href="chart_8h.html">chart.h</a> functions.</p>
 <div class="fragment"><div class="line"><span class="comment">// Create a chart object.</span></div>
 <div class="line"><a class="code" href="structlxw__chart.html">lxw_chart</a> *chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2af309b18af571c90d3ae052e769d30e6c">LXW_CHART_LINE</a>);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Add a data series to the chart.</span></div>
-<div class="line"><a class="code" href="chart_8h.html#a6369f65acef669728594381277fd00a4">chart_add_series</a>(chart, NULL, <span class="stringliteral">&quot;=Sheet1!$A$1:$A$6&quot;</span>);</div>
+<div class="line"><a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, NULL, <span class="stringliteral">&quot;=Sheet1!$A$1:$A$6&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Insert the chart into the worksheet</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a116f2ec4f88dc343a84e9da97ca8da21">worksheet_insert_chart</a>(worksheet, 0, 2, chart);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a>(worksheet, 0, 2, chart);</div>
 </div><!-- fragment --><div class="image">
 <img src="chart_working.png" alt="chart_working.png"/>
 </div>
@@ -1421,12 +1421,12 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a6d951cd8bb662977706b9a24ebbcc93b"></a>
+<a class="anchor" id="a8c24ef5b630e33cbbc8a83f71a458bb7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int worksheet_insert_chart_opt </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_insert_chart_opt </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -1472,25 +1472,25 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
-<p>The <code>worksheet_insert_chart_opt()</code> function is like <code><a class="el" href="worksheet_8h.html#a116f2ec4f88dc343a84e9da97ca8da21" title="Insert a chart object into a worksheet. ">worksheet_insert_chart()</a></code> function except that it takes an optional <a class="el" href="structlxw__image__options.html" title="Options for inserted images. ">lxw_image_options</a> struct to scale and position the image of the chart:</p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<p>The <code>worksheet_insert_chart_opt()</code> function is like <code><a class="el" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2" title="Insert a chart object into a worksheet. ">worksheet_insert_chart()</a></code> function except that it takes an optional <a class="el" href="structlxw__image__options.html" title="Options for inserted images. ">lxw_image_options</a> struct to scale and position the image of the chart:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__image__options.html">lxw_image_options</a> options = {.<a class="code" href="structlxw__image__options.html#a7ef9c6980b8e66bcdfff18627250001c">x_offset</a> = 30,  .y_offset = 10,</div>
 <div class="line">                             .x_scale  = 0.5, .y_scale  = 0.75};</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a6d951cd8bb662977706b9a24ebbcc93b">worksheet_insert_chart_opt</a>(worksheet, 0, 2, chart, &amp;options);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a8c24ef5b630e33cbbc8a83f71a458bb7">worksheet_insert_chart_opt</a>(worksheet, 0, 2, chart, &amp;options);</div>
 </div><!-- fragment --><div class="image">
 <img src="chart_line_opt.png" alt="chart_line_opt.png"/>
 </div>
-<p>The <a class="el" href="structlxw__image__options.html" title="Options for inserted images. ">lxw_image_options</a> struct is the same struct used in <code><a class="el" href="worksheet_8h.html#abc18290a13a760aebe74c705a7ade0a7" title="Insert an image in a worksheet cell, with options. ">worksheet_insert_image_opt()</a></code> to position and scale images. </p>
+<p>The <a class="el" href="structlxw__image__options.html" title="Options for inserted images. ">lxw_image_options</a> struct is the same struct used in <code><a class="el" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b" title="Insert an image in a worksheet cell, with options. ">worksheet_insert_image_opt()</a></code> to position and scale images. </p>
 
 </div>
 </div>
-<a class="anchor" id="ac15d2e82b73308458e9cdebeffdd46e6"></a>
+<a class="anchor" id="ad5a2a09ec65c0f286b756235c7327225"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t worksheet_merge_range </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_merge_range </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -1550,13 +1550,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_merge_range()</code> function allows cells to be merged together so that they act as a single area.</p>
 <p>Excel generally merges and centers cells at same time. To get similar behavior with libxlsxwriter you need to apply a <a class="el" href="format_8h.html">Format</a> object with the appropriate alignment:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *merge_format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>(merge_format, <a class="code" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a9899936ef3a43721b394b9b5d2314496">LXW_ALIGN_CENTER</a>);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ac15d2e82b73308458e9cdebeffdd46e6">worksheet_merge_range</a>(worksheet, 1, 1, 1, 3, <span class="stringliteral">&quot;Merged Range&quot;</span>, merge_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225">worksheet_merge_range</a>(worksheet, 1, 1, 1, 3, <span class="stringliteral">&quot;Merged Range&quot;</span>, merge_format);</div>
 </div><!-- fragment --><p>It is possible to apply other formatting to the merged cells as well:</p>
 <div class="fragment"><div class="line"><a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>   (merge_format, <a class="code" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a9899936ef3a43721b394b9b5d2314496">LXW_ALIGN_CENTER</a>);</div>
 <div class="line"><a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>   (merge_format, <a class="code" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5ae0a52569d3110521d3e9341809336063">LXW_ALIGN_VERTICAL_CENTER</a>);</div>
@@ -1564,26 +1564,26 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>    (merge_format);</div>
 <div class="line"><a class="code" href="format_8h.html#aeef47436c335daf1801683ac7b3b587d">format_set_bg_color</a>(merge_format, 0xD7E4BC);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ac15d2e82b73308458e9cdebeffdd46e6">worksheet_merge_range</a>(worksheet, 2, 1, 3, 3, <span class="stringliteral">&quot;Merged Range&quot;</span>, merge_format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225">worksheet_merge_range</a>(worksheet, 2, 1, 3, 3, <span class="stringliteral">&quot;Merged Range&quot;</span>, merge_format);</div>
 </div><!-- fragment --><div class="image">
 <img src="merge.png" alt="merge.png"/>
 </div>
-<p>The <code>worksheet_merge_range()</code> function writes a <code>char*</code> string using <code><a class="el" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c" title="Write a string to a worksheet cell. ">worksheet_write_string()</a></code>. In order to write other data types, such as a number or a formula, you can overwrite the first cell with a call to one of the other write functions. The same Format should be used as was used in the merged range.</p>
+<p>The <code>worksheet_merge_range()</code> function writes a <code>char*</code> string using <code><a class="el" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31" title="Write a string to a worksheet cell. ">worksheet_write_string()</a></code>. In order to write other data types, such as a number or a formula, you can overwrite the first cell with a call to one of the other write functions. The same Format should be used as was used in the merged range.</p>
 <div class="fragment"><div class="line"><span class="comment">// First write a range with a blank string.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ac15d2e82b73308458e9cdebeffdd46e6">worksheet_merge_range</a> (worksheet, 1, 1, 1, 3, <span class="stringliteral">&quot;&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225">worksheet_merge_range</a> (worksheet, 1, 1, 1, 3, <span class="stringliteral">&quot;&quot;</span>, format);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Then overwrite the first cell with a number.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 1, 1, 123, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 1, 1, 123, format);</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="merge_range_8c-example.html#a16">merge_range.c</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="af09ab5ededabf5b82f265823eb3a0e8e"></a>
+<a class="anchor" id="a4e2b1de34e96331000a996f512aecfcf"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t worksheet_autofilter </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_autofilter </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -1629,17 +1629,17 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_autofilter()</code> function allows an autofilter to be added to a worksheet.</p>
 <p>An autofilter is a way of adding drop down lists to the headers of a 2D range of worksheet data. This allows users to filter the data based on simple criteria so that some data is shown and some is hidden.</p>
 <div class="image">
 <img src="autofilter.png" alt="autofilter.png"/>
 </div>
 <p>To add an autofilter to a worksheet:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#af09ab5ededabf5b82f265823eb3a0e8e">worksheet_autofilter</a>(worksheet, 0, 0, 50, 3);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4e2b1de34e96331000a996f512aecfcf">worksheet_autofilter</a>(worksheet, 0, 0, 50, 3);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Same as above using the RANGE() macro.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#af09ab5ededabf5b82f265823eb3a0e8e">worksheet_autofilter</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A1:D51&quot;</span>));</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a4e2b1de34e96331000a996f512aecfcf">worksheet_autofilter</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A1:D51&quot;</span>));</div>
 </div><!-- fragment --><p>Note: it isn't currently possible to apply filter conditions to the autofilter. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="autofilter_8c-example.html#a6">autofilter.c</a>.</dd>
 </dl>
@@ -2174,12 +2174,12 @@ Functions</h2></td></tr>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="aba04869a61c4246f5d2f2d51e4947f77"></a>
+<a class="anchor" id="a4070c24ed5107f33e94f30a1bf865ba9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t worksheet_set_header </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_set_header </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -2187,7 +2187,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>string</em>&#160;</td>
         </tr>
         <tr>
@@ -2204,7 +2204,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>Headers and footers are generated using a string which is a combination of plain text and control characters.</p>
 <p>The available control character are:</p>
 <table class="doxtable">
@@ -2247,7 +2247,7 @@ Functions</h2></td></tr>
 </table>
 <p>Text in headers and footers can be justified (aligned) to the left, center and right by prefixing the text with the control characters <code>&amp;L</code>, <code>&amp;C</code> and <code>&amp;R</code>.</p>
 <p>For example (with ASCII art representation of the results):</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;LHello&quot;</span>);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;LHello&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"> ---------------------------------------------------------------</div>
 <div class="line">|                                                               |</div>
@@ -2255,7 +2255,7 @@ Functions</h2></td></tr>
 <div class="line">|                                                               |</div>
 <div class="line"></div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;CHello&quot;</span>);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;CHello&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"> ---------------------------------------------------------------</div>
 <div class="line">|                                                               |</div>
@@ -2263,47 +2263,47 @@ Functions</h2></td></tr>
 <div class="line">|                                                               |</div>
 <div class="line"></div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;RHello&quot;</span>);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;RHello&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"> ---------------------------------------------------------------</div>
 <div class="line">|                                                               |</div>
 <div class="line">|                                                         Hello |</div>
 <div class="line">|                                                               |</div>
 </div><!-- fragment --><p>For simple text, if you do not specify any justification the text will be centered. However, you must prefix the text with <code>&amp;C</code> if you specify a font name or any other formatting:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;Hello&quot;</span>);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;Hello&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"> ---------------------------------------------------------------</div>
 <div class="line">|                                                               |</div>
 <div class="line">|                          Hello                                |</div>
 <div class="line">|                                                               |</div>
 </div><!-- fragment --><p>You can have text in each of the justification regions:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;LCiao&amp;CBello&amp;RCielo&quot;</span>);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;LCiao&amp;CBello&amp;RCielo&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"> ---------------------------------------------------------------</div>
 <div class="line">|                                                               |</div>
 <div class="line">| Ciao                     Bello                          Cielo |</div>
 <div class="line">|                                                               |</div>
 </div><!-- fragment --><p>The information control characters act as variables that Excel will update as the workbook or worksheet changes. Times and dates are in the users default format:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;CPage &amp;P of &amp;N&quot;</span>);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;CPage &amp;P of &amp;N&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"> ---------------------------------------------------------------</div>
 <div class="line">|                                                               |</div>
 <div class="line">|                        Page 1 of 6                            |</div>
 <div class="line">|                                                               |</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;CUpdated at &amp;T&quot;</span>);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;CUpdated at &amp;T&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"> ---------------------------------------------------------------</div>
 <div class="line">|                                                               |</div>
 <div class="line">|                    Updated at 12:30 PM                        |</div>
 <div class="line">|                                                               |</div>
 </div><!-- fragment --><p>You can specify the font size of a section of the text by prefixing it with the control character <code>&amp;n</code> where <code>n</code> is the font size:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77">worksheet_set_header</a>(worksheet1, <span class="stringliteral">&quot;&amp;C&amp;30Hello Big&quot;</span>);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77">worksheet_set_header</a>(worksheet2, <span class="stringliteral">&quot;&amp;C&amp;10Hello Small&quot;</span>);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet1, <span class="stringliteral">&quot;&amp;C&amp;30Hello Big&quot;</span>);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet2, <span class="stringliteral">&quot;&amp;C&amp;10Hello Small&quot;</span>);</div>
 </div><!-- fragment --><p>You can specify the font of a section of the text by prefixing it with the control sequence <code>&amp;"font,style"</code> where <code>fontname</code> is a font name such as Windows font descriptions: "Regular", "Italic", "Bold" or "Bold Italic": "Courier New" or "Times New Roman" and <code>style</code> is one of the standard</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77">worksheet_set_header</a>(worksheet1, <span class="stringliteral">&quot;&amp;C&amp;\&quot;Courier New,Italic\&quot;Hello&quot;</span>);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77">worksheet_set_header</a>(worksheet2, <span class="stringliteral">&quot;&amp;C&amp;\&quot;Courier New,Bold Italic\&quot;Hello&quot;</span>);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77">worksheet_set_header</a>(worksheet3, <span class="stringliteral">&quot;&amp;C&amp;\&quot;Times New Roman,Regular\&quot;Hello&quot;</span>);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet1, <span class="stringliteral">&quot;&amp;C&amp;\&quot;Courier New,Italic\&quot;Hello&quot;</span>);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet2, <span class="stringliteral">&quot;&amp;C&amp;\&quot;Courier New,Bold Italic\&quot;Hello&quot;</span>);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet3, <span class="stringliteral">&quot;&amp;C&amp;\&quot;Times New Roman,Regular\&quot;Hello&quot;</span>);</div>
 </div><!-- fragment --><p>It is possible to combine all of these features together to create sophisticated headers and footers. As an aid to setting up complicated headers and footers you can record a page set-up as a macro in Excel and look at the format strings that VBA produces. Remember however that VBA uses two double quotes <code>""</code> to indicate a single double quote. For the last example above the equivalent VBA code looks like this:</p>
 <div class="fragment"><div class="line">.LeftHeader = <span class="stringliteral">&quot;&quot;</span></div>
 <div class="line">.CenterHeader = <span class="stringliteral">&quot;&amp;&quot;</span><span class="stringliteral">&quot;Times New Roman,Regular&quot;</span><span class="stringliteral">&quot;Hello&quot;</span></div>
@@ -2317,18 +2317,18 @@ Functions</h2></td></tr>
 <div class="line">  &lt;/headerFooter&gt;</div>
 </div><!-- fragment --><p>Note that in this case you need to unescape the Html. In the above example the header string would be <code>&amp;L&amp;P</code>.</p>
 <p>To include a single literal ampersand <code>&amp;</code> in a header or footer you should use a double ampersand <code>&amp;&amp;</code>:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;CCuriouser &amp;&amp; Curiouser - Attorneys at Law&quot;</span>);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;CCuriouser &amp;&amp; Curiouser - Attorneys at Law&quot;</span>);</div>
 </div><!-- fragment --><p>Note, the header or footer string must be less than 255 characters. Strings longer than this will not be written. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="headers_footers_8c-example.html#a4">headers_footers.c</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="abe864b71bbfb5e3c3ad84566d1c40721"></a>
+<a class="anchor" id="a57eb561cf3ab5e408a6612f0e379903a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t worksheet_set_footer </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_set_footer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -2336,7 +2336,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>string</em>&#160;</td>
         </tr>
         <tr>
@@ -2353,18 +2353,18 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
-<p>The syntax of this function is the same as <a class="el" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77" title="Set the printed page header caption. ">worksheet_set_header()</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<p>The syntax of this function is the same as <a class="el" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9" title="Set the printed page header caption. ">worksheet_set_header()</a>. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="headers_footers_8c-example.html#a5">headers_footers.c</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="afe6950c6b36968336c4a38c51b2571ac"></a>
+<a class="anchor" id="ab913a06656ecf28292d6b21d3c3eaaac"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t worksheet_set_header_opt </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_set_header_opt </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -2372,7 +2372,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>string</em>, </td>
         </tr>
         <tr>
@@ -2396,21 +2396,21 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
-<p>The syntax of this function is the same as <a class="el" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77" title="Set the printed page header caption. ">worksheet_set_header()</a> with an additional parameter to specify options for the header.</p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<p>The syntax of this function is the same as <a class="el" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9" title="Set the printed page header caption. ">worksheet_set_header()</a> with an additional parameter to specify options for the header.</p>
 <p>Currently, the only available option is the header margin:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__header__footer__options.html">lxw_header_footer_options</a> header_options = { 0.2 };</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#afe6950c6b36968336c4a38c51b2571ac">worksheet_set_header_opt</a>(worksheet, <span class="stringliteral">&quot;Some text&quot;</span>, &amp;header_options);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac">worksheet_set_header_opt</a>(worksheet, <span class="stringliteral">&quot;Some text&quot;</span>, &amp;header_options);</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="a41b50b05830945dae840808d548fa445"></a>
+<a class="anchor" id="aed383b6dd3319d58a113226e5e73331f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t worksheet_set_footer_opt </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_set_footer_opt </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -2418,7 +2418,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>string</em>, </td>
         </tr>
         <tr>
@@ -2442,17 +2442,17 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error.</dd></dl>
-<p>The syntax of this function is the same as <a class="el" href="worksheet_8h.html#afe6950c6b36968336c4a38c51b2571ac" title="Set the printed page header caption with additional options. ">worksheet_set_header_opt()</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<p>The syntax of this function is the same as <a class="el" href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac" title="Set the printed page header caption with additional options. ">worksheet_set_header_opt()</a>. </p>
 
 </div>
 </div>
-<a class="anchor" id="a58ec014b7180d921805b112ae2968e05"></a>
+<a class="anchor" id="a9601745a2e9e7b1e194b7f5283f197f0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void worksheet_set_h_pagebreaks </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_set_h_pagebreaks </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -2477,30 +2477,31 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_set_h_pagebreaks()</code> function adds horizontal page breaks to a worksheet. A page break causes all the data that follows it to be printed on the next page. Horizontal page breaks act between rows.</p>
 <p>The function takes an array of one or more page breaks. The type of the array data is <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> and the last element of the array must be 0:</p>
 <div class="fragment"><div class="line"><a class="code" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> breaks1[] = {20, 0}; <span class="comment">// 1 page break. Zero indicates the end.</span></div>
 <div class="line"><a class="code" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> breaks2[] = {20, 40, 60, 80, 0};</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a58ec014b7180d921805b112ae2968e05">worksheet_set_h_pagebreaks</a>(worksheet1, breaks1);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a58ec014b7180d921805b112ae2968e05">worksheet_set_h_pagebreaks</a>(worksheet2, breaks2);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9601745a2e9e7b1e194b7f5283f197f0">worksheet_set_h_pagebreaks</a>(worksheet1, breaks1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9601745a2e9e7b1e194b7f5283f197f0">worksheet_set_h_pagebreaks</a>(worksheet2, breaks2);</div>
 </div><!-- fragment --><p>To create a page break between rows 20 and 21 you must specify the break at row 21. However in zero index notation this is actually row 20:</p>
 <div class="fragment"><div class="line"><span class="comment">// Break between row 20 and 21.</span></div>
 <div class="line"><a class="code" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> breaks[] = {20, 0};</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a58ec014b7180d921805b112ae2968e05">worksheet_set_h_pagebreaks</a>(worksheet, breaks);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9601745a2e9e7b1e194b7f5283f197f0">worksheet_set_h_pagebreaks</a>(worksheet, breaks);</div>
 </div><!-- fragment --><p>There is an Excel limitation of 1023 horizontal page breaks per worksheet.</p>
 <p>Note: If you specify the "fit to page" option via the <code><a class="el" href="worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d" title="Fit the printed area to a specific number of pages both vertically and horizontally. ">worksheet_fit_to_pages()</a></code> function it will override all manual page breaks. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="headers_footers_8c-example.html#a8">headers_footers.c</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="aed0c73920321ef536af07a4d4a05434d"></a>
+<a class="anchor" id="a00621cf25b5a449a92bb9b3fc83327e6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void worksheet_set_v_pagebreaks </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_set_v_pagebreaks </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -2525,18 +2526,19 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_set_v_pagebreaks()</code> function adds vertical page breaks to a worksheet. A page break causes all the data that follows it to be printed on the next page. Vertical page breaks act between columns.</p>
 <p>The function takes an array of one or more page breaks. The type of the array data is <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> and the last element of the array must be 0:</p>
 <div class="fragment"><div class="line"><a class="code" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> breaks1[] = {20, 0}; <span class="comment">// 1 page break. Zero indicates the end.</span></div>
 <div class="line"><a class="code" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> breaks2[] = {20, 40, 60, 80, 0};</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#aed0c73920321ef536af07a4d4a05434d">worksheet_set_v_pagebreaks</a>(worksheet1, breaks1);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#aed0c73920321ef536af07a4d4a05434d">worksheet_set_v_pagebreaks</a>(worksheet2, breaks2);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a00621cf25b5a449a92bb9b3fc83327e6">worksheet_set_v_pagebreaks</a>(worksheet1, breaks1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a00621cf25b5a449a92bb9b3fc83327e6">worksheet_set_v_pagebreaks</a>(worksheet2, breaks2);</div>
 </div><!-- fragment --><p>To create a page break between columns 20 and 21 you must specify the break at column 21. However in zero index notation this is actually column 20:</p>
 <div class="fragment"><div class="line"><span class="comment">// Break between column 20 and 21.</span></div>
 <div class="line"><a class="code" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> breaks[] = {20, 0};</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#aed0c73920321ef536af07a4d4a05434d">worksheet_set_v_pagebreaks</a>(worksheet, breaks);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a00621cf25b5a449a92bb9b3fc83327e6">worksheet_set_v_pagebreaks</a>(worksheet, breaks);</div>
 </div><!-- fragment --><p>There is an Excel limitation of 1023 vertical page breaks per worksheet.</p>
 <p>Note: If you specify the "fit to page" option via the <code><a class="el" href="worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d" title="Fit the printed area to a specific number of pages both vertically and horizontally. ">worksheet_fit_to_pages()</a></code> function it will override all manual page breaks. </p>
 
@@ -2721,12 +2723,12 @@ Functions</h2></td></tr>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="aea3fc48aa23c4f9bfc1d580a3ada66e8"></a>
+<a class="anchor" id="a5022e812b6fe0414f2a8bab03fd0ec48"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t worksheet_repeat_rows </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_repeat_rows </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -2758,20 +2760,20 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>For large Excel documents it is often desirable to have the first row or rows of the worksheet print out at the top of each page.</p>
 <p>This can be achieved by using this function. The parameters <code>first_row</code> and <code>last_row</code> are zero based:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aea3fc48aa23c4f9bfc1d580a3ada66e8">worksheet_repeat_rows</a>(worksheet, 0, 0); <span class="comment">// Repeat the first row.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#aea3fc48aa23c4f9bfc1d580a3ada66e8">worksheet_repeat_rows</a>(worksheet, 0, 1); <span class="comment">// Repeat the first two rows.</span></div>
-</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error. </dd></dl>
-
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a5022e812b6fe0414f2a8bab03fd0ec48">worksheet_repeat_rows</a>(worksheet, 0, 0); <span class="comment">// Repeat the first row.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a5022e812b6fe0414f2a8bab03fd0ec48">worksheet_repeat_rows</a>(worksheet, 0, 1); <span class="comment">// Repeat the first two rows.</span></div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="a04dfac2f4b2307af3e834b7b37436ded"></a>
+<a class="anchor" id="a932dd78e18c8e82a21f87e5344aa9c65"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t worksheet_repeat_columns </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_repeat_columns </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -2803,20 +2805,20 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>For large Excel documents it is often desirable to have the first column or columns of the worksheet print out at the left of each page.</p>
 <p>This can be achieved by using this function. The parameters <code>first_col</code> and <code>last_col</code> are zero based:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a04dfac2f4b2307af3e834b7b37436ded">worksheet_repeat_columns</a>(worksheet, 0, 0); <span class="comment">// Repeat the first col.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a04dfac2f4b2307af3e834b7b37436ded">worksheet_repeat_columns</a>(worksheet, 0, 1); <span class="comment">// Repeat the first two cols.</span></div>
-</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error. </dd></dl>
-
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a932dd78e18c8e82a21f87e5344aa9c65">worksheet_repeat_columns</a>(worksheet, 0, 0); <span class="comment">// Repeat the first col.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a932dd78e18c8e82a21f87e5344aa9c65">worksheet_repeat_columns</a>(worksheet, 0, 1); <span class="comment">// Repeat the first two cols.</span></div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ae0c82375dda26bb7590a2ad3f42401dd"></a>
+<a class="anchor" id="ab92116759b56cd67419febf6e0aa2c9e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t worksheet_print_area </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_print_area </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -2862,15 +2864,15 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>This function is used to specify the area of the worksheet that will be printed. The <a class="el" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc" title="Convert an Excel A1:B2 range into a (first_row, first_col, last_row, last_col) sequence. ">RANGE()</a> macro is often convenient for this.</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ae0c82375dda26bb7590a2ad3f42401dd">worksheet_print_area</a>(worksheet, 0, 0, 41, 10); <span class="comment">// A1:K42.</span></div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ab92116759b56cd67419febf6e0aa2c9e">worksheet_print_area</a>(worksheet, 0, 0, 41, 10); <span class="comment">// A1:K42.</span></div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Same as:</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ae0c82375dda26bb7590a2ad3f42401dd">worksheet_print_area</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A1:K42&quot;</span>));</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ab92116759b56cd67419febf6e0aa2c9e">worksheet_print_area</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A1:K42&quot;</span>));</div>
 </div><!-- fragment --><p>In order to set a row or column range you must specify the entire range:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ae0c82375dda26bb7590a2ad3f42401dd">worksheet_print_area</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A1:H1048576&quot;</span>)); <span class="comment">// Same as A:H.</span></div>
-</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>0 for success, non-zero on error. </dd></dl>
-
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ab92116759b56cd67419febf6e0aa2c9e">worksheet_print_area</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;A1:H1048576&quot;</span>)); <span class="comment">// Same as A:H.</span></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="a9ed8b0603df10ce2439b54f7980efb6d"></a>
@@ -2914,7 +2916,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d">worksheet_fit_to_pages</a>(worksheet1, 1, 1); <span class="comment">// Fit to 1x1 pages.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d">worksheet_fit_to_pages</a>(worksheet2, 2, 1); <span class="comment">// Fit to 2x1 pages.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d">worksheet_fit_to_pages</a>(worksheet3, 1, 2); <span class="comment">// Fit to 1x2 pages.</span></div>
-</div><!-- fragment --><p>The print area can be defined using the <code><a class="el" href="worksheet_8h.html#ae0c82375dda26bb7590a2ad3f42401dd" title="Set the print area for a worksheet. ">worksheet_print_area()</a></code> function as described above.</p>
+</div><!-- fragment --><p>The print area can be defined using the <code><a class="el" href="worksheet_8h.html#ab92116759b56cd67419febf6e0aa2c9e" title="Set the print area for a worksheet. ">worksheet_print_area()</a></code> function as described above.</p>
 <p>A common requirement is to fit the printed output to <code>n</code> pages wide but have the height be as long as necessary. To achieve this set the <code>height</code> to zero:</p>
 <div class="fragment"><div class="line"><span class="comment">// 1 page wide and as long as necessary.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d">worksheet_fit_to_pages</a>(worksheet, 1, 0);</div>
@@ -3089,7 +3091,7 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a40bf1510fab3783d617e78483ad0c54f"></a>
+<a class="anchor" id="a1b49e135d4debcdb25941f2f40f04cb0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -3102,7 +3104,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>password</em>, </td>
         </tr>
         <tr>
@@ -3127,12 +3129,12 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p>The <code>worksheet_protect()</code> function protects worksheet elements from modification:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a>(worksheet, <span class="stringliteral">&quot;Some Password&quot;</span>, options);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a1b49e135d4debcdb25941f2f40f04cb0">worksheet_protect</a>(worksheet, <span class="stringliteral">&quot;Some Password&quot;</span>, options);</div>
 </div><!-- fragment --><p>The <code>password</code> and <a class="el" href="structlxw__protection.html" title="Worksheet protection options. ">lxw_protection</a> pointer are both optional:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a>(worksheet1, NULL,       NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a>(worksheet2, NULL,       my_options);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a>(worksheet3, <span class="stringliteral">&quot;password&quot;</span>, NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a>(worksheet4, <span class="stringliteral">&quot;password&quot;</span>, my_options);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a1b49e135d4debcdb25941f2f40f04cb0">worksheet_protect</a>(worksheet1, NULL,       NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a1b49e135d4debcdb25941f2f40f04cb0">worksheet_protect</a>(worksheet2, NULL,       my_options);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a1b49e135d4debcdb25941f2f40f04cb0">worksheet_protect</a>(worksheet3, <span class="stringliteral">&quot;password&quot;</span>, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a1b49e135d4debcdb25941f2f40f04cb0">worksheet_protect</a>(worksheet4, <span class="stringliteral">&quot;password&quot;</span>, my_options);</div>
 </div><!-- fragment --><p>Passing a <code>NULL</code> password is the same as turning on protection without a password. Passing a <code>NULL</code> password and <code>NULL</code> options, or any other combination has the effect of enabling a cell's <code>locked</code> and <code>hidden</code> properties if they have been set.</p>
 <p>A <em>locked</em> cell cannot be edited and this property is on by default for all cells. A <em>hidden</em> cell will display the results of a formula but not the formula itself. These properties can be set using the <a class="el" href="format_8h.html#a1dfd61b72aab2c28c3d51e53e08df587" title="Set the cell unlocked state. ">format_set_unlocked()</a> and <a class="el" href="format_8h.html#a135d94ec48564c997c5a78ca8b8861e2" title="Hide formulas in a cell. ">format_set_hidden()</a> format functions.</p>
 <p>You can specify which worksheet elements you wish to protect by passing a <a class="el" href="structlxw__protection.html" title="Worksheet protection options. ">lxw_protection</a> pointer in the <code>options</code> argument with any or all of the following members set: </p><pre class="fragment">no_select_locked_cells
@@ -3160,7 +3162,7 @@ objects
 <div class="line">    .delete_columns           = 1,</div>
 <div class="line">};</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a>(worksheet, NULL, &amp;options);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a1b49e135d4debcdb25941f2f40f04cb0">worksheet_protect</a>(worksheet, NULL, &amp;options);</div>
 </div><!-- fragment --><p>See also the <a class="el" href="format_8h.html#a1dfd61b72aab2c28c3d51e53e08df587" title="Set the cell unlocked state. ">format_set_unlocked()</a> and <a class="el" href="format_8h.html#a135d94ec48564c997c5a78ca8b8861e2" title="Hide formulas in a cell. ">format_set_hidden()</a> format functions.</p>
 <p><b>Note:</b> Worksheet level passwords in Excel offer <b>very</b> weak protection. They don't encrypt your data and are very easy to deactivate. Full workbook encryption is not supported by <code>libxlsxwriter</code> since it requires a completely different file format and would take several man months to implement. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="worksheet_protection_8c-example.html#a9">worksheet_protection.c</a>.</dd>
@@ -3224,7 +3226,7 @@ objects
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Options struct for the <a class="el" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc" title="Set the properties for one or more columns of cells. ">worksheet_set_column()</a> and <a class="el" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736" title="Set the properties for a row of cells. ">worksheet_set_row()</a> functions.</p>
+<p>Options struct for the <a class="el" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f" title="Set the properties for one or more columns of cells. ">worksheet_set_column()</a> and <a class="el" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173" title="Set the properties for a row of cells. ">worksheet_set_row()</a> functions.</p>
 <p>It has the following members but currently only the <code>hidden</code> property is supported:</p>
 <ul>
 <li><code>hidden</code></li>
@@ -3243,7 +3245,7 @@ objects
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Options for modifying images inserted via <code><a class="el" href="worksheet_8h.html#abc18290a13a760aebe74c705a7ade0a7" title="Insert an image in a worksheet cell, with options. ">worksheet_insert_image_opt()</a></code>. </p>
+<p>Options for modifying images inserted via <code><a class="el" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b" title="Insert an image in a worksheet cell, with options. ">worksheet_insert_image_opt()</a></code>. </p>
 
 </div>
 </div>
@@ -3256,7 +3258,7 @@ objects
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Optional parameters used in the <a class="el" href="worksheet_8h.html#afe6950c6b36968336c4a38c51b2571ac" title="Set the printed page header caption with additional options. ">worksheet_set_header_opt()</a> and <a class="el" href="worksheet_8h.html#a41b50b05830945dae840808d548fa445" title="Set the printed page footer caption with additional options. ">worksheet_set_footer_opt()</a> functions. </p>
+<p>Optional parameters used in the <a class="el" href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac" title="Set the printed page header caption with additional options. ">worksheet_set_header_opt()</a> and <a class="el" href="worksheet_8h.html#aed383b6dd3319d58a113226e5e73331f" title="Set the printed page footer caption with additional options. ">worksheet_set_footer_opt()</a> functions. </p>
 
 </div>
 </div>

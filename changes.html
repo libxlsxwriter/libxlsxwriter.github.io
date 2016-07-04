@@ -79,13 +79,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Changes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>0.3.9 July 2 2016</h1>
+<div class="textblock"><h1>0.4.0 July 5 2016</h1>
+<ul>
+<li>Added fixes for MSVC 2010.</li>
+<li>Refactored public APIs to return <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> instead of int.</li>
+</ul>
+<h1>0.3.9 July 2 2016</h1>
 <ul>
 <li>Added support for MinGW, MinGW-w64, Gygwin, MSYS and MSYS2. See <a class="el" href="getting_started.html#gsg_ming">Installation on Windows using Mingw-w64 and MSYS2</a>.</li>
 </ul>
 <h1>0.3.8 June 11 2016</h1>
 <ul>
-<li>Added workbook functions to set custom document properties. See <code><a class="el" href="workbook_8h.html#a088da7843db0b30084cc5d852de7549d" title="Set a custom document text property. ">workbook_set_custom_property_string()</a></code> and <a class="el" href="doc_custom_properties_8c-example.html">doc_custom_properties.c</a>.</li>
+<li>Added workbook functions to set custom document properties. See <code><a class="el" href="workbook_8h.html#a337caad1c1cb16fed505a180d77f20d3" title="Set a custom document text property. ">workbook_set_custom_property_string()</a></code> and <a class="el" href="doc_custom_properties_8c-example.html">doc_custom_properties.c</a>.</li>
 </ul>
 <h1>0.3.7 June 2 2016</h1>
 <ul>
@@ -95,11 +100,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 <h2>0.3.6 June 1 2016</h2>
 <ul>
-<li>Fix for <code><a class="el" href="worksheet_8h.html#aa9cfd4bf719dbbd45866cad7dde4dab3" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> issue when handling images with zero dpi.</li>
+<li>Fix for <code><a class="el" href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> issue when handling images with zero dpi.</li>
 </ul>
 <h2>0.3.5 May 31 2016</h2>
 <ul>
-<li><p class="startli">Refactored the error handling and reporting for when the file creation subsystem fails due to file permissions or other issues. The new error codes are in <code><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions. ">lxw_error</a></code> and the codes can be converted to strings, for reporting, using the new <code><a class="el" href="utility_8h.html#adbc905fc22acf53d5a1fec0028c4d8e4" title="Converts a libxlsxwriter error number to a string. ">lxw_strerror()</a></code> function.</p>
+<li><p class="startli">Refactored the error handling and reporting for when the file creation subsystem fails due to file permissions or other issues. The new error codes are in <code><a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a></code> and the codes can be converted to strings, for reporting, using the new <code><a class="el" href="utility_8h.html#adbc905fc22acf53d5a1fec0028c4d8e4" title="Converts a libxlsxwriter error number to a string. ">lxw_strerror()</a></code> function.</p>
 <p class="startli">Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/49">#49</a>.</p>
 </li>
 </ul>
@@ -125,7 +130,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 <h2>0.3.2 April 8 2016</h2>
 <ul>
-<li>Added the <code><a class="el" href="worksheet_8h.html#a60cc3159efc17c1b4e82be350f214152" title="Write a formatted boolean worksheet cell. ">worksheet_write_boolean()</a></code> function to write Excel boolean values. Feature request <a href="https://github.com/jmcnamara/libxlsxwriter/issues/47">#47</a>.</li>
+<li>Added the <code><a class="el" href="worksheet_8h.html#af14fc7b20ba84e56510caf15c577cf8c" title="Write a formatted boolean worksheet cell. ">worksheet_write_boolean()</a></code> function to write Excel boolean values. Feature request <a href="https://github.com/jmcnamara/libxlsxwriter/issues/47">#47</a>.</li>
 </ul>
 <h2>0.3.1 January 9 2016</h2>
 <ul>
@@ -133,16 +138,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 <h2>0.3.0 January 4 2016</h2>
 <ul>
-<li><p class="startli">Renamed <code><a class="el" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736" title="Set the properties for a row of cells. ">worksheet_set_row()</a></code> function to <code><a class="el" href="worksheet_8h.html#a448e1deb5239b9241148c69590da84b3" title="Set the properties for a row of cells. ">worksheet_set_row_opt()</a></code> for consistency with current and future APIs. The <code><a class="el" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736" title="Set the properties for a row of cells. ">worksheet_set_row()</a></code> function is now used without the options parameter.</p>
+<li><p class="startli">Renamed <code><a class="el" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173" title="Set the properties for a row of cells. ">worksheet_set_row()</a></code> function to <code><a class="el" href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807" title="Set the properties for a row of cells. ">worksheet_set_row_opt()</a></code> for consistency with current and future APIs. The <code><a class="el" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173" title="Set the properties for a row of cells. ">worksheet_set_row()</a></code> function is now used without the options parameter.</p>
 <p class="startli">Note: This is a backward incompatible change.</p>
 </li>
-<li><p class="startli">Renamed <code><a class="el" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc" title="Set the properties for one or more columns of cells. ">worksheet_set_column()</a></code> function to <code><a class="el" href="worksheet_8h.html#a81e659e6c5ad6b085e4f83686a69ab3e" title="Set the properties for one or more columns of cells with options. ">worksheet_set_column_opt()</a></code> for consistency with current and future APIs. The <code><a class="el" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc" title="Set the properties for one or more columns of cells. ">worksheet_set_column()</a></code> function is now used without the options parameter.</p>
+<li><p class="startli">Renamed <code><a class="el" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f" title="Set the properties for one or more columns of cells. ">worksheet_set_column()</a></code> function to <code><a class="el" href="worksheet_8h.html#a52c4c145f684c5b4dcd2ed304d1fe907" title="Set the properties for one or more columns of cells with options. ">worksheet_set_column_opt()</a></code> for consistency with current and future APIs. The <code><a class="el" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f" title="Set the properties for one or more columns of cells. ">worksheet_set_column()</a></code> function is now used without the options parameter.</p>
 <p class="startli">Note: This is a backward incompatible change.</p>
 </li>
 </ul>
 <h2>0.2.9 January 3 2016</h2>
 <ul>
-<li>Added the <code><a class="el" href="worksheet_8h.html#aa9cfd4bf719dbbd45866cad7dde4dab3" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> function to add PNG and JPG images to worksheets. See <a class="el" href="demo_8c-example.html">demo.c</a> and <a class="el" href="images_8c-example.html">images.c</a>.</li>
+<li>Added the <code><a class="el" href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> function to add PNG and JPG images to worksheets. See <a class="el" href="demo_8c-example.html">demo.c</a> and <a class="el" href="images_8c-example.html">images.c</a>.</li>
 </ul>
 <h2>0.2.8 December 22 2015</h2>
 <ul>
@@ -154,11 +159,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 <h2>0.2.6 December 19 2015</h2>
 <ul>
-<li>Added <code><a class="el" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f" title="Protect elements of a worksheet from modification. ">worksheet_protect()</a></code> function to protect Excel worksheet elements from modification. See the <a class="el" href="worksheet_protection_8c-example.html">worksheet_protection.c</a> example.</li>
+<li>Added <code><a class="el" href="worksheet_8h.html#a1b49e135d4debcdb25941f2f40f04cb0" title="Protect elements of a worksheet from modification. ">worksheet_protect()</a></code> function to protect Excel worksheet elements from modification. See the <a class="el" href="worksheet_protection_8c-example.html">worksheet_protection.c</a> example.</li>
 </ul>
 <h2>0.2.5 December 14 2015</h2>
 <ul>
-<li>Added <code><a class="el" href="workbook_8h.html#a6780888704192c138b36f08f5a88d57f" title="Set the document properties such as Title, Author etc. ">workbook_set_properties()</a></code> function to set Excel document properties such as Author and Title. See the <a class="el" href="doc_properties_8c-example.html">doc_properties.c</a> example.</li>
+<li>Added <code><a class="el" href="workbook_8h.html#aa814fd7f8d2c3ce86a7aa5d5ed127000" title="Set the document properties such as Title, Author etc. ">workbook_set_properties()</a></code> function to set Excel document properties such as Author and Title. See the <a class="el" href="doc_properties_8c-example.html">doc_properties.c</a> example.</li>
 </ul>
 <h2>0.2.4 December 13 2015</h2>
 <ul>
@@ -203,31 +208,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 <h2>0.1.5 May 3 2015</h2>
 <ul>
-<li>Added <code><a class="el" href="worksheet_8h.html#a22629468c16149a42de1c17ac9ee6aac">worksheet_write_url()</a></code> function to write urls/hyperlinks to worksheets. See also <a class="el" href="hyperlinks_8c-example.html">hyperlinks.c</a>.</li>
+<li>Added <code><a class="el" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url()</a></code> function to write urls/hyperlinks to worksheets. See also <a class="el" href="hyperlinks_8c-example.html">hyperlinks.c</a>.</li>
 </ul>
 <h2>0.1.4 March 18 2015</h2>
 <ul>
-<li>Added <code><a class="el" href="worksheet_8h.html#af09ab5ededabf5b82f265823eb3a0e8e" title="Set the autofilter area in the worksheet. ">worksheet_autofilter()</a></code> function to add autofilters to worksheets. See also <a class="el" href="autofilter_8c-example.html">autofilter.c</a>.</li>
+<li>Added <code><a class="el" href="worksheet_8h.html#a4e2b1de34e96331000a996f512aecfcf" title="Set the autofilter area in the worksheet. ">worksheet_autofilter()</a></code> function to add autofilters to worksheets. See also <a class="el" href="autofilter_8c-example.html">autofilter.c</a>.</li>
 </ul>
 <h2>0.1.3 March 15 2015</h2>
 <ul>
-<li>Added <code><a class="el" href="worksheet_8h.html#a5524b8304904962d6686d2723252e981" title="Write an array formula to a worksheet cell. ">worksheet_write_array_formula()</a></code> function to allow writing of array formulas in worksheets.</li>
+<li>Added <code><a class="el" href="worksheet_8h.html#a8331799b5821d70c442d637ca66dd6e7" title="Write an array formula to a worksheet cell. ">worksheet_write_array_formula()</a></code> function to allow writing of array formulas in worksheets.</li>
 </ul>
 <h2>0.1.2 March 14 2015</h2>
 <ul>
-<li>Added <code><a class="el" href="worksheet_8h.html#a58ec014b7180d921805b112ae2968e05" title="Set the horizontal page breaks on a worksheet. ">worksheet_set_h_pagebreaks()</a></code> and <code><a class="el" href="worksheet_8h.html#aed0c73920321ef536af07a4d4a05434d" title="Set the vertical page breaks on a worksheet. ">worksheet_set_v_pagebreaks()</a></code> functions to define worksheet page breaks.</li>
+<li>Added <code><a class="el" href="worksheet_8h.html#a9601745a2e9e7b1e194b7f5283f197f0" title="Set the horizontal page breaks on a worksheet. ">worksheet_set_h_pagebreaks()</a></code> and <code><a class="el" href="worksheet_8h.html#a00621cf25b5a449a92bb9b3fc83327e6" title="Set the vertical page breaks on a worksheet. ">worksheet_set_v_pagebreaks()</a></code> functions to define worksheet page breaks.</li>
 <li>Added <a class="el" href="workbook_8h.html#a82e722c1ca15a5fd8295dd0103b18caf" title="Macro to loop over all the worksheets in a workbook. ">LXW_FOREACH_WORKSHEET()</a> macro to allow iteration over all the worksheets in a workbook.</li>
 <li>Added <code><a class="el" href="worksheet_8h.html#a26130cfccecf80a9833d65a84039374d" title="Set the scale factor for the printed page. ">worksheet_set_print_scale()</a></code> function to set the scale factor for the printed page.</li>
 <li>Added <code><a class="el" href="worksheet_8h.html#a817235e5ce7b1ea030bedd86ddbb9844" title="Set the start page number when printing. ">worksheet_set_start_page()</a></code> function to set the start page number when printing.</li>
 </ul>
 <h2>0.1.1 March 13 2015</h2>
 <ul>
-<li>Added <code><a class="el" href="worksheet_8h.html#ae0c82375dda26bb7590a2ad3f42401dd" title="Set the print area for a worksheet. ">worksheet_print_area()</a></code> function to control the print area of a worksheet.</li>
+<li>Added <code><a class="el" href="worksheet_8h.html#ab92116759b56cd67419febf6e0aa2c9e" title="Set the print area for a worksheet. ">worksheet_print_area()</a></code> function to control the print area of a worksheet.</li>
 <li>Added <code><a class="el" href="worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d" title="Fit the printed area to a specific number of pages both vertically and horizontally. ">worksheet_fit_to_pages()</a></code> function to fit the printed area to a specific number of pages both vertically and horizontally.</li>
 </ul>
 <h2>0.1.0 March 12 2015</h2>
 <ul>
-<li>Added <code><a class="el" href="worksheet_8h.html#aea3fc48aa23c4f9bfc1d580a3ada66e8" title="Set the number of rows to repeat at the top of each printed page. ">worksheet_repeat_rows()</a></code> and <code><a class="el" href="worksheet_8h.html#a04dfac2f4b2307af3e834b7b37436ded" title="Set the number of columns to repeat at the top of each printed page. ">worksheet_repeat_columns()</a></code> functions to control the repeated rows/columns on printed worksheets.</li>
+<li>Added <code><a class="el" href="worksheet_8h.html#a5022e812b6fe0414f2a8bab03fd0ec48" title="Set the number of rows to repeat at the top of each printed page. ">worksheet_repeat_rows()</a></code> and <code><a class="el" href="worksheet_8h.html#a932dd78e18c8e82a21f87e5344aa9c65" title="Set the number of columns to repeat at the top of each printed page. ">worksheet_repeat_columns()</a></code> functions to control the repeated rows/columns on printed worksheets.</li>
 </ul>
 <h2>0.0.9 March 9 2015</h2>
 <ul>
@@ -237,15 +242,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 <h2>0.0.8 March 8 2015</h2>
 <ul>
-<li>Added support for worksheet headers and footers via the <code><a class="el" href="worksheet_8h.html#aba04869a61c4246f5d2f2d51e4947f77" title="Set the printed page header caption. ">worksheet_set_header()</a></code> and <code><a class="el" href="worksheet_8h.html#abe864b71bbfb5e3c3ad84566d1c40721" title="Set the printed page footer caption. ">worksheet_set_footer()</a></code> functions. See also <a class="el" href="headers_footers_8c-example.html">headers_footers.c</a>.</li>
+<li>Added support for worksheet headers and footers via the <code><a class="el" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9" title="Set the printed page header caption. ">worksheet_set_header()</a></code> and <code><a class="el" href="worksheet_8h.html#a57eb561cf3ab5e408a6612f0e379903a" title="Set the printed page footer caption. ">worksheet_set_footer()</a></code> functions. See also <a class="el" href="headers_footers_8c-example.html">headers_footers.c</a>.</li>
 </ul>
 <h2>0.0.7 March 7 2015</h2>
 <ul>
-<li>Added the <code><a class="el" href="worksheet_8h.html#ac15d2e82b73308458e9cdebeffdd46e6" title="Merge a range of cells. ">worksheet_merge_range()</a></code> method to merge worksheet cells. See also <a class="el" href="merge_range_8c-example.html">merge_range.c</a>.</li>
+<li>Added the <code><a class="el" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225" title="Merge a range of cells. ">worksheet_merge_range()</a></code> method to merge worksheet cells. See also <a class="el" href="merge_range_8c-example.html">merge_range.c</a>.</li>
 </ul>
 <h2>0.0.6 March 5 2015</h2>
 <ul>
-<li>Added the <code><a class="el" href="workbook_8h.html#a239893289738cb030cbda1b73d4569b0" title="Create a defined name in the workbook to use as a variable. ">workbook_define_name()</a></code> method to create defined names and ranges in a workbook or worksheet.</li>
+<li>Added the <code><a class="el" href="workbook_8h.html#a442b4056e8d4debf56c07888f2a776f6" title="Create a defined name in the workbook to use as a variable. ">workbook_define_name()</a></code> method to create defined names and ranges in a workbook or worksheet.</li>
 </ul>
 <h2>0.0.5 March 6 2015</h2>
 <ul>

@@ -109,22 +109,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a name="a7"></a><a class="code" href="format_8h.html#a135d94ec48564c997c5a78ca8b8861e2">format_set_hidden</a>(hidden);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Widen the first column to make the text clearer. */</span></div>
-<div class="line">    <a name="a8"></a><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 0, 0, 40, NULL);</div>
+<div class="line">    <a name="a8"></a><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 0, 0, 40, NULL);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Turn worksheet protection on without a password. */</span></div>
-<div class="line">    <a name="a9"></a><a class="code" href="worksheet_8h.html#a40bf1510fab3783d617e78483ad0c54f">worksheet_protect</a>(worksheet, NULL, NULL);</div>
+<div class="line">    <a name="a9"></a><a class="code" href="worksheet_8h.html#a1b49e135d4debcdb25941f2f40f04cb0">worksheet_protect</a>(worksheet, NULL, NULL);</div>
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write a locked, unlocked and hidden cell. */</span></div>
-<div class="line">    <a name="a10"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;B1 is locked. It cannot be edited.&quot;</span>,       NULL);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 1, 0, <span class="stringliteral">&quot;B2 is unlocked. It can be edited.&quot;</span>,        NULL);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 2, 0, <span class="stringliteral">&quot;B3 is hidden. The formula isn&#39;t visible.&quot;</span>, NULL);</div>
+<div class="line">    <a name="a10"></a><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;B1 is locked. It cannot be edited.&quot;</span>,       NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 1, 0, <span class="stringliteral">&quot;B2 is unlocked. It can be edited.&quot;</span>,        NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 2, 0, <span class="stringliteral">&quot;B3 is hidden. The formula isn&#39;t visible.&quot;</span>, NULL);</div>
 <div class="line"></div>
-<div class="line">    <a name="a11"></a><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 0, 1, <span class="stringliteral">&quot;=1+2&quot;</span>, NULL);     <span class="comment">/* Locked by default. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 1, 1, <span class="stringliteral">&quot;=1+2&quot;</span>, unlocked);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, 2, 1, <span class="stringliteral">&quot;=1+2&quot;</span>, hidden);</div>
+<div class="line">    <a name="a11"></a><a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, 0, 1, <span class="stringliteral">&quot;=1+2&quot;</span>, NULL);     <span class="comment">/* Locked by default. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, 1, 1, <span class="stringliteral">&quot;=1+2&quot;</span>, unlocked);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, 2, 1, <span class="stringliteral">&quot;=1+2&quot;</span>, hidden);</div>
 <div class="line"></div>
-<div class="line">    <a name="a12"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line">    <a name="a12"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>

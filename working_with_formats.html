@@ -96,11 +96,11 @@ Creating and using a Format object</h1>
 <div class="line"><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(format);</div>
 <div class="line"><a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(format, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>);</div>
 </div><!-- fragment --><p>Once a Format object has been created and its properties have been set it can be passed as an argument to the <code>worksheet_write*()</code> methods as follows:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, 1, 0, 123.456, format);</div>
-</div><!-- fragment --><p>Formats can also be passed to the worksheet <code><a class="el" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736" title="Set the properties for a row of cells. ">worksheet_set_row()</a></code> and <code><a class="el" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc" title="Set the properties for one or more columns of cells. ">worksheet_set_column()</a></code> methods to define the default formatting properties for a row or column:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736">worksheet_set_row</a>   (worksheet, 2,     format, NULL);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet, 0, 20, format, NULL);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 1, 0, 123.456, format);</div>
+</div><!-- fragment --><p>Formats can also be passed to the worksheet <code><a class="el" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173" title="Set the properties for a row of cells. ">worksheet_set_row()</a></code> and <code><a class="el" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f" title="Set the properties for one or more columns of cells. ">worksheet_set_column()</a></code> methods to define the default formatting properties for a row or column:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a>   (worksheet, 2,     format, NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 0, 20, format, NULL);</div>
 </div><!-- fragment --><h1><a class="anchor" id="ww_formats_properties"></a>
 Format methods and Format properties</h1>
 <p>The following table shows the Excel format categories and the equivalent <code>libxlsxwriter</code> Format function:</p>
@@ -186,17 +186,17 @@ Modifying and Reusing Formats</h1>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a>  *myformat1  = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(myformat1);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet1, 1, 4, <span class="stringliteral">&quot;Some text&quot;</span>, myformat1);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet2, 1, 4, <span class="stringliteral">&quot;Some text&quot;</span>, myformat1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet1, 1, 4, <span class="stringliteral">&quot;Some text&quot;</span>, myformat1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet2, 1, 4, <span class="stringliteral">&quot;Some text&quot;</span>, myformat1);</div>
 </div><!-- fragment --><p>However, each unique cell format in an <code>libxlsxwriter</code> spreadsheet must have a corresponding Format object. It isn't possible to use a Format with a <code>worksheet_write*()</code> method and then redefine it for use at a later stage. This is because a Format is applied to a cell not in its current state but in its final state. Consider the following example:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(format);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, format);</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="format_8h.html#a19cbd7c34692eb7fb35a7411432d836e">format_set_italic</a>(format);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, 1, 0, <span class="stringliteral">&quot;World&quot;</span>, format);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 1, 0, <span class="stringliteral">&quot;World&quot;</span>, format);</div>
 </div><!-- fragment --><p>Cell <code>(0, 0)</code> is assigned a format which with the font set to bold. However, the italic property is subsequently and used in cell <code>(1, 0)</code>. This has the effect of adding italic to any previous uses of <code>format</code>. The result in this case is that "Hello" and "World" will both appear as bold and italic.</p>
 <p>Next: <a class="el" href="working_with_colors.html">Working with Colors</a> </p>
 </div></div><!-- contents -->

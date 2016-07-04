@@ -132,23 +132,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a name="a7"></a><a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(money, <span class="stringliteral">&quot;$#,##0&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write some data header. */</span></div>
-<div class="line">    <a name="a8"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, row, col,     <span class="stringliteral">&quot;Item&quot;</span>, bold);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, row, col + 1, <span class="stringliteral">&quot;Cost&quot;</span>, bold);</div>
+<div class="line">    <a name="a8"></a><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, row, col,     <span class="stringliteral">&quot;Item&quot;</span>, bold);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, row, col + 1, <span class="stringliteral">&quot;Cost&quot;</span>, bold);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Iterate over the data and write it out element by element. */</span></div>
 <div class="line">    <span class="keywordflow">for</span> (i = 0; i &lt; 4; i++) {</div>
 <div class="line">        <span class="comment">/* Write from the first cell below the headers. */</span></div>
 <div class="line">        row = i + 1;</div>
-<div class="line">        <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet, row, col,     expenses[i].item, NULL);</div>
-<div class="line">        <a name="a9"></a><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet, row, col + 1, expenses[i].cost, money);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, row, col,     expenses[i].item, NULL);</div>
+<div class="line">        <a name="a9"></a><a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, row, col + 1, expenses[i].cost, money);</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write a total using a formula. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a> (worksheet, row + 1, col,     <span class="stringliteral">&quot;Total&quot;</span>,       bold);</div>
-<div class="line">    <a name="a10"></a><a class="code" href="worksheet_8h.html#ad9c384e17c06538c6a45f2cec7b5bef1">worksheet_write_formula</a>(worksheet, row + 1, col + 1, <span class="stringliteral">&quot;=SUM(B2:B5)&quot;</span>, money);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a> (worksheet, row + 1, col,     <span class="stringliteral">&quot;Total&quot;</span>,       bold);</div>
+<div class="line">    <a name="a10"></a><a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, row + 1, col + 1, <span class="stringliteral">&quot;=SUM(B2:B5)&quot;</span>, money);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Save the workbook and free any allocated memory. */</span></div>
-<div class="line">    <span class="keywordflow">return</span> <a name="a11"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="keywordflow">return</span> <a name="a11"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->

@@ -129,18 +129,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a name="a13"></a><a class="code" href="worksheet_8h.html#a7e52f1eecb20fe4f9e6223bcf195103b">worksheet_freeze_panes</a>(worksheet1, 1, 0);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Some sheet formatting. */</span></div>
-<div class="line">    <a name="a14"></a><a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet1, 0, 8, 16, NULL);</div>
-<div class="line">    <a name="a15"></a><a class="code" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736">worksheet_set_row</a>(worksheet1, 0, 20, NULL);</div>
+<div class="line">    <a name="a14"></a><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet1, 0, 8, 16, NULL);</div>
+<div class="line">    <a name="a15"></a><a class="code" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a>(worksheet1, 0, 20, NULL);</div>
 <div class="line">    <a name="a16"></a><a class="code" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a>(worksheet1, 4, 3, 4, 3);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Some worksheet text to demonstrate scrolling. */</span></div>
 <div class="line">    <span class="keywordflow">for</span> (col = 0; col &lt; 9; col++) {</div>
-<div class="line">        <a name="a17"></a><a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet1, 0, col, <span class="stringliteral">&quot;Scroll down&quot;</span>, header);</div>
+<div class="line">        <a name="a17"></a><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet1, 0, col, <span class="stringliteral">&quot;Scroll down&quot;</span>, header);</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">for</span> (row = 1; row &lt; 100; row++) {</div>
 <div class="line">        <span class="keywordflow">for</span> (col = 0; col &lt; 9; col++) {</div>
-<div class="line">            <a name="a18"></a><a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet1, row, col, row + 1, center);</div>
+<div class="line">            <a name="a18"></a><a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet1, row, col, row + 1, center);</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line"></div>
@@ -151,15 +151,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="worksheet_8h.html#a7e52f1eecb20fe4f9e6223bcf195103b">worksheet_freeze_panes</a>(worksheet2, 0, 1);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Some sheet formatting. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet2, 0, 0, 16, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet2, 0, 0, 16, NULL);</div>
 <div class="line">    <a class="code" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a>(worksheet2, 4, 3, 4, 3);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Some worksheet text to demonstrate scrolling. */</span></div>
 <div class="line">    <span class="keywordflow">for</span> (row = 0; row &lt; 50; row++) {</div>
-<div class="line">        <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet2, row, 0, <span class="stringliteral">&quot;Scroll right&quot;</span>, header);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet2, row, 0, <span class="stringliteral">&quot;Scroll right&quot;</span>, header);</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">for</span> (col = 1; col &lt; 26; col++) {</div>
-<div class="line">            <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet2, row, col, col, center);</div>
+<div class="line">            <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet2, row, col, col, center);</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line"></div>
@@ -171,22 +171,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Some sheet formatting. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a5e54e97691068c7fd227f8713938aedc">worksheet_set_column</a>(worksheet3, 0, 25, 16, NULL);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a9810487fa940f487edd57099b8e8c736">worksheet_set_row</a>(worksheet3, 0, 20, NULL);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet3, 0, 0, <span class="stringliteral">&quot;&quot;</span>, header);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet3, 0, 25, 16, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a>(worksheet3, 0, 20, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet3, 0, 0, <span class="stringliteral">&quot;&quot;</span>, header);</div>
 <div class="line">    <a class="code" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a>(worksheet3, 4, 3, 4, 3);</div>
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Some worksheet text to demonstrate scrolling. */</span></div>
 <div class="line">    <span class="keywordflow">for</span> (col = 1; col &lt; 26; col++) {</div>
-<div class="line">        <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet3, 0, col, <span class="stringliteral">&quot;Scroll down&quot;</span>, header);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet3, 0, col, <span class="stringliteral">&quot;Scroll down&quot;</span>, header);</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">for</span> (row = 1; row &lt; 50; row++) {</div>
-<div class="line">        <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet3, row, 0, <span class="stringliteral">&quot;Scroll right&quot;</span>, header);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet3, row, 0, <span class="stringliteral">&quot;Scroll right&quot;</span>, header);</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">for</span> (col = 1; col &lt; 26; col++) {</div>
-<div class="line">            <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet3, row, col, col, center);</div>
+<div class="line">            <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet3, row, col, col, center);</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line"></div>
@@ -204,19 +204,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Some worksheet text to demonstrate scrolling. */</span></div>
 <div class="line">    <span class="keywordflow">for</span> (col = 1; col &lt; 26; col++) {</div>
-<div class="line">        <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet4, 0, col, <span class="stringliteral">&quot;Scroll&quot;</span>, center);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet4, 0, col, <span class="stringliteral">&quot;Scroll&quot;</span>, center);</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">for</span> (row = 1; row &lt; 50; row++) {</div>
-<div class="line">        <a class="code" href="worksheet_8h.html#a0c3e081792631511c9ee3f7507afb78c">worksheet_write_string</a>(worksheet4, row, 0, <span class="stringliteral">&quot;Scroll&quot;</span>, center);</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet4, row, 0, <span class="stringliteral">&quot;Scroll&quot;</span>, center);</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">for</span> (col = 1; col &lt; 26; col++) {</div>
-<div class="line">            <a class="code" href="worksheet_8h.html#aa7f1a12b664b4c1d7742529a315e21aa">worksheet_write_number</a>(worksheet4, row, col, col, center);</div>
+<div class="line">            <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet4, row, col, col, center);</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line"></div>
-<div class="line">    <a name="a20"></a><a class="code" href="workbook_8h.html#aff39de16411dae703c5574ece9cac09b">workbook_close</a>(workbook);</div>
+<div class="line">    <a name="a20"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>

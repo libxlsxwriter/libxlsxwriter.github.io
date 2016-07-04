@@ -111,14 +111,14 @@ Formulas displayed as 'NAME?' until edited</h1>
 Formula results displaying as zero in non-Excel applications</h1>
 <p>Due to wide range of possible formulas and inter-dependencies between them, <code>xlsxwriter</code> doesn't, and realistically cannot, calculate the result of a formula when it is written to an XLSX file. Instead, it stores the value 0 as the formula result. It then sets a global flag in the XLSX file to say that all formulas and functions should be recalculated when the file is opened.</p>
 <p>This is the method recommended in the Excel documentation and in general it works fine with spreadsheet applications. However, applications that don't have a facility to calculate formulas, such as Excel Viewer, or several mobile applications, will only display the 0 results.</p>
-<p>If required, it is also possible to specify the calculated result of the formula using the <code><a class="el" href="worksheet_8h.html#a9453aff2062f93d2c9784b96393f2f37" title="Write a formula to a worksheet cell with a user defined result. ">worksheet_write_formula_num()</a></code> function.</p>
+<p>If required, it is also possible to specify the calculated result of the formula using the <code><a class="el" href="worksheet_8h.html#af474c01f7ec8ac1a01206c9c4a5867af" title="Write a formula to a worksheet cell with a user defined result. ">worksheet_write_formula_num()</a></code> function.</p>
 <h1><a class="anchor" id="bugs_apple_numbers"></a>
 Strings aren't displayed in Apple Numbers in 'constant_memory' mode</h1>
 <p>In <code><a class="el" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323" title="Create a new workbook object, and set the workbook options. ">workbook_new_opt()</a></code> <code>constant_memory</code> mode libxlsxwriter uses an optimization where cell strings aren't stored in an Excel structure call "shared strings" and instead are written "in-line".</p>
 <p>This is a documented Excel feature that is supported by most spreadsheet applications. One known exception is Apple Numbers for Mac where the string data isn't displayed.</p>
 <h1><a class="anchor" id="bugs_images"></a>
 Images not displayed correctly in Excel 2001 for Mac and non-Excel applications</h1>
-<p>Images inserted into worksheets via <code><a class="el" href="worksheet_8h.html#aa9cfd4bf719dbbd45866cad7dde4dab3" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> may not display correctly in Excel 2011 for Mac and non-Excel applications such as OpenOffice and LibreOffice. Specifically the images may looked stretched or squashed.</p>
+<p>Images inserted into worksheets via <code><a class="el" href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> may not display correctly in Excel 2011 for Mac and non-Excel applications such as OpenOffice and LibreOffice. Specifically the images may looked stretched or squashed.</p>
 <p>This is not an XlsxWriter issue. It also occurs with files created in Excel 2007 and Excel 2010.</p>
 <h1><a class="anchor" id="bugs_reporting"></a>
 Reporting Bugs</h1>
