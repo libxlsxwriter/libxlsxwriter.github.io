@@ -94,19 +94,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:adbc905fc22acf53d5a1fec0028c4d8e4"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#adbc905fc22acf53d5a1fec0028c4d8e4">lxw_strerror</a> (uint8_t error_num)</td></tr>
-<tr class="memdesc:adbc905fc22acf53d5a1fec0028c4d8e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a libxlsxwriter error number to a string.  <a href="#adbc905fc22acf53d5a1fec0028c4d8e4">More...</a><br /></td></tr>
-<tr class="separator:adbc905fc22acf53d5a1fec0028c4d8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cebc342ea88aa9fb9fe46e26ad442d8"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#a8cebc342ea88aa9fb9fe46e26ad442d8">lxw_strerror</a> (<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> error_num)</td></tr>
+<tr class="memdesc:a8cebc342ea88aa9fb9fe46e26ad442d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a libxlsxwriter error number to a string.  <a href="#a8cebc342ea88aa9fb9fe46e26ad442d8">More...</a><br /></td></tr>
+<tr class="separator:a8cebc342ea88aa9fb9fe46e26ad442d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="adbc905fc22acf53d5a1fec0028c4d8e4"></a>
+<a class="anchor" id="a8cebc342ea88aa9fb9fe46e26ad442d8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">char* lxw_strerror </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td>
           <td class="paramname"><em>error_num</em></td><td>)</td>
           <td></td>
         </tr>
@@ -118,7 +118,7 @@ Functions</h2></td></tr>
 <div class="line"></div>
 <div class="line"><span class="keywordflow">if</span> (error)</div>
 <div class="line">    printf(<span class="stringliteral">&quot;Error in workbook_close().\n&quot;</span></div>
-<div class="line">           <span class="stringliteral">&quot;Error %d = %s\n&quot;</span>, error, <a class="code" href="utility_8h.html#adbc905fc22acf53d5a1fec0028c4d8e4">lxw_strerror</a>(error));</div>
+<div class="line">           <span class="stringliteral">&quot;Error %d = %s\n&quot;</span>, error, <a class="code" href="utility_8h.html#a8cebc342ea88aa9fb9fe46e26ad442d8">lxw_strerror</a>(error));</div>
 </div><!-- fragment --><p>This would produce output like the following if the target file wasn't writable: </p><pre class="fragment">Error in workbook_close().
 Error 2 = Error creating output xlsx file. Usually a permissions error.
 </pre><dl class="params"><dt>Parameters</dt><dd>
