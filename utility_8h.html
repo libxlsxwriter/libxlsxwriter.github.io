@@ -114,7 +114,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>The <code>lxw_strerror</code> function converts a libxlsxwriter error number defined by <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> to a pointer to a string description of the error. Similar to the standard library strerror(3) function.</p>
 <p>For example:</p>
-<div class="fragment"><div class="line">uint8_t error = <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="fragment"><div class="line"><a class="code" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> error = <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line"></div>
 <div class="line"><span class="keywordflow">if</span> (error)</div>
 <div class="line">    printf(<span class="stringliteral">&quot;Error in workbook_close().\n&quot;</span></div>
