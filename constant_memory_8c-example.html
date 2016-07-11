@@ -105,20 +105,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> max_col = 50;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Set the worksheet options. */</span></div>
-<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook__options.html">lxw_workbook_options</a> options;</div>
-<div class="line">    options.<a name="a1"></a><a class="code" href="structlxw__workbook__options.html#aa03636857813ca881bdd09e07bcbe738">constant_memory</a> = 1;</div>
+<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook__options.html">lxw_workbook_options</a> options = {.<a name="a1"></a><a class="code" href="structlxw__workbook__options.html#aa03636857813ca881bdd09e07bcbe738">constant_memory</a> = <a name="a2"></a><a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>,</div>
+<div class="line">                                    .tmpdir = NULL};</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Create a new workbook with options. */</span></div>
-<div class="line">    <a name="_a2"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a name="a3"></a><a class="code" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323">workbook_new_opt</a>(<span class="stringliteral">&quot;constant_memory.xlsx&quot;</span>, &amp;options);</div>
-<div class="line">    <a name="_a4"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a name="a5"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line">    <a name="_a3"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a name="a4"></a><a class="code" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323">workbook_new_opt</a>(<span class="stringliteral">&quot;constant_memory.xlsx&quot;</span>, &amp;options);</div>
+<div class="line">    <a name="_a5"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a name="a6"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">for</span> (row = 0; row &lt; max_row; row++) {</div>
 <div class="line">        <span class="keywordflow">for</span> (col = 0; col &lt; max_col; col++) {</div>
-<div class="line">            <a name="a6"></a><a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, row, col, 123.45, NULL);</div>
+<div class="line">            <a name="a7"></a><a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, row, col, 123.45, NULL);</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> <a name="a7"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="keywordflow">return</span> <a name="a8"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->

@@ -86,9 +86,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="structlxw__workbook__options.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Optional parameters when creating a new Workbook object via <a class="el" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323" title="Create a new workbook object, and set the workbook options. ">workbook_new_opt()</a>.</p>
-<p>Currently only the <code>constant_memory</code> property is supported:</p>
+<p>The following properties are supported:</p>
 <ul>
-<li><code>constant_memory</code> </li>
+<li><p class="startli"><code>constant_memory</code>: Reduces the amount of data stored in memory so that large files can be written efficiently.</p>
+<dl class="section note"><dt>Note</dt><dd>In this mode a row of data is written and then discarded when a cell in a new row is added via one of the <code>worksheet_write_*()</code> methods. Therefore, once this option is active, data should be written in sequential row order. For this reason the <code><a class="el" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225" title="Merge a range of cells. ">worksheet_merge_range()</a></code> doesn't work in this mode. See also <a class="el" href="working_with_memory.html#ww_mem_constant">Constant Memory Mode</a>.</dd></dl>
+</li>
+<li><code>tmpdir</code>: libxlsxwriter stores workbook data in temporary files prior to assembling the final XLSX file. The temporary files are created in the system's temp directory. If the default temporary directory isn't accessible to your application, or doesn't contain enough space, you can specify an alternative location using the <code>tempdir</code> option. </li>
 </ul>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="constant_memory_8c-example.html#_a0">constant_memory.c</a>.</dd>
 </dl></div><table class="memberdecls">
@@ -96,6 +99,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Data Fields</h2></td></tr>
 <tr class="memitem:aa03636857813ca881bdd09e07bcbe738"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__workbook__options.html#aa03636857813ca881bdd09e07bcbe738">constant_memory</a></td></tr>
 <tr class="separator:aa03636857813ca881bdd09e07bcbe738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a79cfd2824acc5a438f37d4f79da325"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__workbook__options.html#a6a79cfd2824acc5a438f37d4f79da325">tmpdir</a></td></tr>
+<tr class="separator:a6a79cfd2824acc5a438f37d4f79da325"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
 <a class="anchor" id="aa03636857813ca881bdd09e07bcbe738"></a>
@@ -110,6 +115,19 @@ Data Fields</h2></td></tr>
 <p>Optimize the workbook to use constant memory for worksheets </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="constant_memory_8c-example.html#a1">constant_memory.c</a>.</dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="a6a79cfd2824acc5a438f37d4f79da325"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* lxw_workbook_options::tmpdir</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Directory to use for the temporary files created by libxlsxwriter. </p>
+
 </div>
 </div>
 </div><!-- contents -->

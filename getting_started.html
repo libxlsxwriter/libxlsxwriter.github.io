@@ -95,6 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li class="level1"><a href="#gsg_msvc">Installation on Windows using Microsoft Visual Studio</a><ul><li class="level2"><a href="#gsg_dll">Building a Windows DLL of libxlsxwriter</a></li>
 <li class="level2"><a href="#gsg_console">Building a console application using the LibXlsxWriter.lib</a></li>
+<li class="level2"><a href="#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a></li>
 </ul>
 </li>
 <li class="level1"><a href="#gsg_ming">Installation on Windows using Mingw-w64 and MSYS2</a></li>
@@ -209,6 +210,14 @@ Building a console application using the LibXlsxWriter.lib</h2>
 <p>In the default configuration this will build the following x64 exe file: </p><pre class="fragment">MSVCLibXlsxWriter\ExampleExe\x64\Debug\ExampleExe.exe
 </pre><p>To run the application copy the <code>LibXlsxWriter.dll</code> and <code>Zlib.dll</code> files from the <code>MSVCLibXlsxWriter\LibXlsxWriterProj</code> sub-directories to the same directory as the executable. You can then run the application by double clicking on it in File Explorer or by opening a CMD console and running it from the directory.</p>
 <p>Once the program has run it will create a <code>chart_column.xlsx</code> file based on the default sample application in ExampleExe.cpp. You can run other libxlsxwriter example programs by copying the code from one of the <code>libxlsxwriter\example\*.c</code> programs.</p>
+<h2><a class="anchor" id="gsg_tmpdir"></a>
+Specifying a TEMP directory for libxlsxwriter</h2>
+<p>The libxlsxwriter library creates temporary files in the system <code>TEMP</code> directory during assembly of an xlsx file. On Windows this directory may not be writeable by a libxlsxwriter application (although it will try several <code>TEMP</code> locations before returning an error). To work around this you can set the <code>tmpdir</code> parameter of the <a class="el" href="structlxw__workbook__options.html" title="Workbook options. ">lxw_workbook_options</a> struct and pass it to <code><a class="el" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323" title="Create a new workbook object, and set the workbook options. ">workbook_new_opt()</a></code>:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__workbook__options.html">lxw_workbook_options</a> options = {.constant_memory = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>,</div>
+<div class="line">                                .tmpdir = <span class="stringliteral">&quot;C:\\Temp&quot;</span>};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323">workbook_new_opt</a>(<span class="stringliteral">&quot;filename.xlsx&quot;</span>, &amp;options);</div>
+</div><!-- fragment --><p>This can also be used on Unix systems where the <code>TEMP</code> directory isn't writeable.</p>
 <h1><a class="anchor" id="gsg_ming"></a>
 Installation on Windows using Mingw-w64 and MSYS2</h1>
 <p>The libxlsxwriter library can also be compiled on Windows using the <a href="http://mingw-w64.org/doku.php">Mingw-w64</a> "Minimalist GNU for Windows" toolchain. These tools can be run from the Windows <code>cmd.exe</code> but it is recommended to use the <a href="http://msys2.github.io">MSYS2</a> "Minimal System" Bourne Shell.</p>
@@ -222,8 +231,8 @@ git clone https://github.com/jmcnamara/libxlsxwriter.git
 cd libxlsxwriter/
 make
 </pre><p>After compilation you can follow the instructions in the <a class="el" href="getting_started.html#gsg_install">Install the library</a> and <a class="el" href="getting_started.html#gsg_using">Using the library</a> sections above. When using the library you may also need to link against the zlib library using <code>-lz</code>: </p><pre class="fragment">gcc myexcel.c -o myexcel -lxlsxwriter -lz
-</pre><p>It is also possible to use the older <a href="http://mingw.org">MinGW and MSYS</a> and with <a href="https://cygwin.com">Cygwin</a>. Libxlsxwriter has been confirmed to compile and work in all of these environments.</p>
-<dl class="section note"><dt>Note</dt><dd>The libxlsxwriter library uses files in the system TEMP directory during assembly of a xlsx file. On Windows this directory may not be writeable by a libxlsxwriter application. To work around this you can make the Windows TEMP directory writeable or if you are using MSYS/MSYS2 you can change the <code>/tmp</code> directory using the system fstab file. Or alternatively you can define your own TEMP directory in libxlsxwriter using the <code>USE_TMPFILE2</code> workaround in <code>src/utility.c</code></dd></dl>
+</pre><p>It is also possible to use <a href="https://cygwin.com">Cygwin</a> and the older <a href="http://mingw.org">MinGW and MSYS</a>. Libxlsxwriter has been confirmed to compile and work in all of these environments.</p>
+<p>See also <a class="el" href="getting_started.html#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a>.</p>
 <h1><a class="anchor" id="gsg_next"></a>
 Next steps</h1>
 <p>If you got libxlsxwriter built and working then the next sections will look at some more detailed examples.</p>
