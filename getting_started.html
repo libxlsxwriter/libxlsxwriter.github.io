@@ -90,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li class="level2"><a href="#gsg_using">Using the library</a></li>
 </ul>
 </li>
+<li class="level1"><a href="#gsg_bsd">Installation on FreeBSD and OpenBSD</a></li>
 <li class="level1"><a href="#gsg_macos">Installation on Mac OS X and iOS</a><ul><li class="level2"><a href="#gsg_cocoapods">Install using Cocoa Pods for Xcode</a></li>
 </ul>
 </li>
@@ -137,8 +138,6 @@ Get the source code as a tarball</h2>
 Build the source code</h2>
 <p>Build the source code as follows: </p><pre class="fragment">cd libxlsxwriter
 make
-
-# For FreeBSD use gmake instead of make
 </pre><p>This will create a static and dynamic library in the local <code>./lib</code> directory: </p><pre class="fragment">ls lib
 libxlsxwriter.a     libxlsxwriter.so
 </pre><p>To see a verbose summary of the compilation steps use <code>V=1</code>: </p><pre class="fragment">make V=1
@@ -175,7 +174,13 @@ Using the library</h2>
 xdg-open myexcel.xlsx
 </pre><p>If the installation didn't work for you then you can link against the static library you created in the "Build the source code" step: </p><pre class="fragment">cc myexcel.c -o myexcel -I /path/to/libxlsxwriter/include \
                            /path/to/libxlsxwriter/lib/libxlsxwriter.a -lz
-</pre><h1><a class="anchor" id="gsg_macos"></a>
+</pre><h1><a class="anchor" id="gsg_bsd"></a>
+Installation on FreeBSD and OpenBSD</h1>
+<p>Both FreeBSD and OpenBSD come with the zlib development libraries pre-installed so there are no additional dependencies. However, if you have any issues then follow the instructions <a class="el" href="getting_started.html#gsg_dependencies">to install zlib</a>.</p>
+<p><a class="el" href="getting_started.html#gsg_git">Get the source code via Git</a> or <a class="el" href="getting_started.html#gsg_tarball">get the source code as a tarball</a> as shown above then build the source code as follows using <code>gmake</code> (not make): </p><pre class="fragment">cd libxlsxwriter
+gmake
+</pre><p>Then follow the instructions in the Linux section to <a class="el" href="getting_started.html#gsg_install">install the library</a> and <a class="el" href="getting_started.html#gsg_using">use the library</a>.</p>
+<h1><a class="anchor" id="gsg_macos"></a>
 Installation on Mac OS X and iOS</h1>
 <p>The instructions for installing on Linux, shown above, will also work on Mac OS X.</p>
 <p>To install for Xcode and iOS use the Cocoa Pods method shown in the next section.</p>
@@ -218,6 +223,8 @@ Specifying a TEMP directory for libxlsxwriter</h2>
 <div class="line"></div>
 <div class="line"><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323">workbook_new_opt</a>(<span class="stringliteral">&quot;filename.xlsx&quot;</span>, &amp;options);</div>
 </div><!-- fragment --><p>This can also be used on Unix systems where the <code>TEMP</code> directory isn't writeable.</p>
+<p>The TEMP file handling with optional temporary directory support is provided by the <a href="http://www.di-mgt.com.au/c_function_to_create_temp_file.html">Tmpfileplus</a> library which is included in the source tree. If you wish to use the standard library <code>tmpfile()</code> function instead you can compile without <code>tmpfileplus</code> as follows: </p><pre class="fragment">USE_STANDARD_TMPFILE=1 make
+</pre><dl class="section note"><dt>Note</dt><dd>When using the the standard library <code>tmpfile()</code> the <code>tmpdir</code> parameter, shown above, is ignored.</dd></dl>
 <h1><a class="anchor" id="gsg_ming"></a>
 Installation on Windows using Mingw-w64 and MSYS2</h1>
 <p>The libxlsxwriter library can also be compiled on Windows using the <a href="http://mingw-w64.org/doku.php">Mingw-w64</a> "Minimalist GNU for Windows" toolchain. These tools can be run from the Windows <code>cmd.exe</code> but it is recommended to use the <a href="http://msys2.github.io">MSYS2</a> "Minimal System" Bourne Shell.</p>

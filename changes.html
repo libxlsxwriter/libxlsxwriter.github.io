@@ -79,7 +79,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Changes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>0.4.1 July 11 2016</h1>
+<div class="textblock"><h1>0.4.2 July 14 2016</h1>
+<ul>
+<li>Added support for OpenBSD and better support for FreeBSD. See <a class="el" href="getting_started.html#gsg_bsd">Installation on FreeBSD and OpenBSD</a>.</li>
+</ul>
+<h1>0.4.1 July 11 2016</h1>
 <ul>
 <li><p class="startli">Switched to using <a href="http://www.di-mgt.com.au/c_function_to_create_temp_file.html">tmpfileplus</a> for temporary file handles to work around issue when the temp directory on Windows isn't writeable. The temp file directory is now also configurable at runtime, see <a class="el" href="getting_started.html#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a>.</p>
 <p class="startli">Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/63">#63</a>.</p>
