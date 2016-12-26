@@ -79,30 +79,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Changes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>0.4.2 July 14 2016</h1>
+<div class="textblock"><h2>0.4.3 December 26 2016</h2>
+<ul>
+<li>Added <code><a class="el" href="workbook_8h.html#a857f1d02d04a7d5a039642abde91c280" title="Get a worksheet object from its name. ">workbook_get_worksheet_by_name()</a></code> function to get a worksheet object from its name.</li>
+<li>Added <code><a class="el" href="workbook_8h.html#af73200590cfb420db317dc8964c92a6d" title="Validate a worksheet name. ">workbook_validate_worksheet_name()</a></code> function to validate a worksheet name.</li>
+<li>Fix for parameter length check when strings are UTF-8. Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/84">#84</a>.</li>
+</ul>
+<h2>0.4.2 July 14 2016</h2>
 <ul>
 <li>Added support for OpenBSD and better support for FreeBSD. See <a class="el" href="getting_started.html#gsg_bsd">Installation on FreeBSD and OpenBSD</a>.</li>
 </ul>
-<h1>0.4.1 July 11 2016</h1>
+<h2>0.4.1 July 11 2016</h2>
 <ul>
 <li><p class="startli">Switched to using <a href="http://www.di-mgt.com.au/c_function_to_create_temp_file.html">tmpfileplus</a> for temporary file handles to work around issue when the temp directory on Windows isn't writeable. The temp file directory is now also configurable at runtime, see <a class="el" href="getting_started.html#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a>.</p>
 <p class="startli">Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/63">#63</a>.</p>
 </li>
 </ul>
-<h1>0.4.0 July 5 2016</h1>
+<h2>0.4.0 July 5 2016</h2>
 <ul>
 <li>Added fixes for MSVC 2010.</li>
 <li>Refactored public APIs to return <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> instead of int.</li>
 </ul>
-<h1>0.3.9 July 2 2016</h1>
+<h2>0.3.9 July 2 2016</h2>
 <ul>
 <li>Added support for MinGW, MinGW-w64, Cygwin, MSYS and MSYS2. See <a class="el" href="getting_started.html#gsg_ming">Installation on Windows using Mingw-w64 and MSYS2</a>.</li>
 </ul>
-<h1>0.3.8 June 11 2016</h1>
+<h2>0.3.8 June 11 2016</h2>
 <ul>
 <li>Added workbook functions to set custom document properties. See <code><a class="el" href="workbook_8h.html#a337caad1c1cb16fed505a180d77f20d3" title="Set a custom document text property. ">workbook_set_custom_property_string()</a></code> and <a class="el" href="doc_custom_properties_8c-example.html">doc_custom_properties.c</a>.</li>
 </ul>
-<h1>0.3.7 June 2 2016</h1>
+<h2>0.3.7 June 2 2016</h2>
 <ul>
 <li><p class="startli">Added updated Cocoapods file for Cocoapods 1.0.0. This also add support for the "use_frameworks" directive. Thanks to Ludovico Rossi. See <a class="el" href="getting_started.html">Getting Started with libxlsxwriter</a> for instructions on how to use the cocoapod.</p>
 <p class="startli">Pull request <a href="https://github.com/jmcnamara/libxlsxwriter/issues/50">#50</a>.</p>

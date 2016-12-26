@@ -119,7 +119,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a8ca9bd8c30c618b81ca6180f78b03323"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new workbook object, and set the workbook options.  <a href="#a8ca9bd8c30c618b81ca6180f78b03323">More...</a><br /></td></tr>
 <tr class="separator:a8ca9bd8c30c618b81ca6180f78b03323"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81d456b4f65a464e78e4a0030ecc3c2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, const char *sheetname)</td></tr>
-<tr class="memdesc:a81d456b4f65a464e78e4a0030ecc3c2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new worksheet to a workbook:  <a href="#a81d456b4f65a464e78e4a0030ecc3c2e">More...</a><br /></td></tr>
+<tr class="memdesc:a81d456b4f65a464e78e4a0030ecc3c2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new worksheet to a workbook.  <a href="#a81d456b4f65a464e78e4a0030ecc3c2e">More...</a><br /></td></tr>
 <tr class="separator:a81d456b4f65a464e78e4a0030ecc3c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a279a5d7075d09a3931aae9782afede33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__format.html">lxw_format</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook)</td></tr>
 <tr class="memdesc:a279a5d7075d09a3931aae9782afede33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new <a class="el" href="format_8h.html">Format</a> object to formats cells in worksheets.  <a href="#a279a5d7075d09a3931aae9782afede33">More...</a><br /></td></tr>
@@ -148,6 +148,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a442b4056e8d4debf56c07888f2a776f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a442b4056e8d4debf56c07888f2a776f6">workbook_define_name</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, const char *name, const char *formula)</td></tr>
 <tr class="memdesc:a442b4056e8d4debf56c07888f2a776f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a defined name in the workbook to use as a variable.  <a href="#a442b4056e8d4debf56c07888f2a776f6">More...</a><br /></td></tr>
 <tr class="separator:a442b4056e8d4debf56c07888f2a776f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a857f1d02d04a7d5a039642abde91c280"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a857f1d02d04a7d5a039642abde91c280">workbook_get_worksheet_by_name</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, const char *name)</td></tr>
+<tr class="memdesc:a857f1d02d04a7d5a039642abde91c280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a worksheet object from its name.  <a href="#a857f1d02d04a7d5a039642abde91c280">More...</a><br /></td></tr>
+<tr class="separator:a857f1d02d04a7d5a039642abde91c280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73200590cfb420db317dc8964c92a6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#af73200590cfb420db317dc8964c92a6d">workbook_validate_worksheet_name</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, const char *sheetname)</td></tr>
+<tr class="memdesc:af73200590cfb420db317dc8964c92a6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validate a worksheet name.  <a href="#af73200590cfb420db317dc8964c92a6d">More...</a><br /></td></tr>
+<tr class="separator:af73200590cfb420db317dc8964c92a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a1cf96608a23ee4eb0e8467c15240d00b"></a>
@@ -208,7 +214,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook. ">lxw_workbook</a> instance.</dd></dl>
-<p>This method is the same as the <code><a class="el" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b" title="Create a new workbook object. ">workbook_new()</a></code> constructor but allows additional options to be set.</p>
+<p>This function is the same as the <code><a class="el" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b" title="Create a new workbook object. ">workbook_new()</a></code> constructor but allows additional options to be set.</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__workbook__options.html">lxw_workbook_options</a> options = {.<a class="code" href="structlxw__workbook__options.html#aa03636857813ca881bdd09e07bcbe738">constant_memory</a> = 1,</div>
 <div class="line">                                .tmpdir = <span class="stringliteral">&quot;C:\\Temp&quot;</span>};</div>
 <div class="line"></div>
@@ -216,7 +222,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><p>The options that can be set via <a class="el" href="structlxw__workbook__options.html" title="Workbook options. ">lxw_workbook_options</a> are:</p>
 <ul>
 <li><p class="startli"><code>constant_memory</code>: Reduces the amount of data stored in memory so that large files can be written efficiently.</p>
-<dl class="section note"><dt>Note</dt><dd>In this mode a row of data is written and then discarded when a cell in a new row is added via one of the <code>worksheet_write_*()</code> methods. Therefore, once this option is active, data should be written in sequential row order. For this reason the <code><a class="el" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225" title="Merge a range of cells. ">worksheet_merge_range()</a></code> doesn't work in this mode. See also <a class="el" href="working_with_memory.html#ww_mem_constant">Constant Memory Mode</a>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>In this mode a row of data is written and then discarded when a cell in a new row is added via one of the <code>worksheet_write_*()</code> functions. Therefore, once this option is active, data should be written in sequential row order. For this reason the <code><a class="el" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225" title="Merge a range of cells. ">worksheet_merge_range()</a></code> doesn't work in this mode. See also <a class="el" href="working_with_memory.html#ww_mem_constant">Constant Memory Mode</a>.</dd></dl>
 </li>
 <li><code>tmpdir</code>: libxlsxwriter stores workbook data in temporary files prior to assembling the final XLSX file. The temporary files are created in the system's temp directory. If the default temporary directory isn't accessible to your application, or doesn't contain enough space, you can specify an alternative location using the <code>tempdir</code> option.*</li>
 </ul>
@@ -458,7 +464,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a>.</dd></dl>
-<p>The <code>workbook_set_properties</code> method can be used to set the document properties of the Excel file created by <code>libxlsxwriter</code>. These properties are visible when you use the <code>Office Button -&gt; Prepare -&gt; Properties</code> option in Excel and are also available to external applications that read or index windows files.</p>
+<p>The <code>workbook_set_properties</code> function can be used to set the document properties of the Excel file created by <code>libxlsxwriter</code>. These properties are visible when you use the <code>Office Button -&gt; Prepare -&gt; Properties</code> option in Excel and are also available to external applications that read or index windows files.</p>
 <p>The properties that can be set are:</p>
 <ul>
 <li><code>title</code></li>
@@ -532,7 +538,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a>.</dd></dl>
-<p>The <code>workbook_set_custom_property_string()</code> method can be used to set one or more custom document text properties not covered by the standard properties in the <code><a class="el" href="workbook_8h.html#aa814fd7f8d2c3ce86a7aa5d5ed127000" title="Set the document properties such as Title, Author etc. ">workbook_set_properties()</a></code> method above.</p>
+<p>The <code>workbook_set_custom_property_string()</code> function can be used to set one or more custom document text properties not covered by the standard properties in the <code><a class="el" href="workbook_8h.html#aa814fd7f8d2c3ce86a7aa5d5ed127000" title="Set the document properties such as Title, Author etc. ">workbook_set_properties()</a></code> function above.</p>
 <p>For example:</p>
 <div class="fragment"><div class="line"><a class="code" href="workbook_8h.html#a337caad1c1cb16fed505a180d77f20d3">workbook_set_custom_property_string</a>(workbook, <span class="stringliteral">&quot;Checked by&quot;</span>, <span class="stringliteral">&quot;Eve&quot;</span>);</div>
 </div><!-- fragment --><div class="image">
@@ -722,7 +728,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a>.</dd></dl>
-<p>This method is used to defined a name that can be used to represent a value, a single cell or a range of cells in a workbook: These defined names can then be used in formulas:</p>
+<p>This function is used to defined a name that can be used to represent a value, a single cell or a range of cells in a workbook: These defined names can then be used in formulas:</p>
 <div class="fragment"><div class="line"><a class="code" href="workbook_8h.html#a442b4056e8d4debf56c07888f2a776f6">workbook_define_name</a>(workbook, <span class="stringliteral">&quot;Exchange_rate&quot;</span>, <span class="stringliteral">&quot;=0.96&quot;</span>);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, 2, 1, <span class="stringliteral">&quot;=Exchange_rate&quot;</span>, NULL);</div>
 </div><!-- fragment --><div class="image">
@@ -739,6 +745,84 @@ Functions</h2></td></tr>
 </div><!-- fragment --><p>The rules for names in Excel are explained in the <a href="http://office.microsoft.com/en-001/excel-help/define-and-use-names-in-formulas-HA010147120.aspx">Microsoft Office documentation</a>. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="defined_name_8c-example.html#a4">defined_name.c</a>.</dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="a857f1d02d04a7d5a039642abde91c280"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a>* workbook_get_worksheet_by_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__workbook.html">lxw_workbook</a> *&#160;</td>
+          <td class="paramname"><em>workbook</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">workbook</td><td></td></tr>
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> object.</dd></dl>
+<p>This function returns a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> object reference based on its name:</p>
+<div class="fragment"><div class="line">worksheet = <a class="code" href="workbook_8h.html#a857f1d02d04a7d5a039642abde91c280">workbook_get_worksheet_by_name</a>(workbook, <span class="stringliteral">&quot;Sheet1&quot;</span>);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="af73200590cfb420db317dc8964c92a6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> workbook_validate_worksheet_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__workbook.html">lxw_workbook</a> *&#160;</td>
+          <td class="paramname"><em>workbook</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>sheetname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">workbook</td><td>Pointer to a <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook. ">lxw_workbook</a> instance. </td></tr>
+    <tr><td class="paramname">sheetname</td><td>Worksheet name to validate.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a>.</dd></dl>
+<p>This function is used to validate a worksheet name according to the rules used by Excel:</p>
+<ul>
+<li>The name is less than or equal to 31 UTF-8 characters.</li>
+<li>The name doesn't contain any of the characters: <code>[ ] : * ? / \</code></li>
+<li>The name isn't already in use.</li>
+</ul>
+<div class="fragment"><div class="line"><a class="code" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> err = <a class="code" href="workbook_8h.html#af73200590cfb420db317dc8964c92a6d">workbook_validate_worksheet_name</a>(workbook, <span class="stringliteral">&quot;Foglio&quot;</span>);</div>
+</div><!-- fragment --><p>This function is called by <code><a class="el" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e" title="Add a new worksheet to a workbook. ">workbook_add_worksheet()</a></code> but it can be explicitly called by the user beforehand to ensure that the worksheet name is valid. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -768,7 +852,7 @@ Functions</h2></td></tr>
 <p>The following properties are supported:</p>
 <ul>
 <li><p class="startli"><code>constant_memory</code>: Reduces the amount of data stored in memory so that large files can be written efficiently.</p>
-<dl class="section note"><dt>Note</dt><dd>In this mode a row of data is written and then discarded when a cell in a new row is added via one of the <code>worksheet_write_*()</code> methods. Therefore, once this option is active, data should be written in sequential row order. For this reason the <code><a class="el" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225" title="Merge a range of cells. ">worksheet_merge_range()</a></code> doesn't work in this mode. See also <a class="el" href="working_with_memory.html#ww_mem_constant">Constant Memory Mode</a>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>In this mode a row of data is written and then discarded when a cell in a new row is added via one of the <code>worksheet_write_*()</code> functions. Therefore, once this option is active, data should be written in sequential row order. For this reason the <code><a class="el" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225" title="Merge a range of cells. ">worksheet_merge_range()</a></code> doesn't work in this mode. See also <a class="el" href="working_with_memory.html#ww_mem_constant">Constant Memory Mode</a>.</dd></dl>
 </li>
 <li><code>tmpdir</code>: libxlsxwriter stores workbook data in temporary files prior to assembling the final XLSX file. The temporary files are created in the system's temp directory. If the default temporary directory isn't accessible to your application, or doesn't contain enough space, you can specify an alternative location using the <code>tempdir</code> option. </li>
 </ul>
