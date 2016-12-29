@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['range',['RANGE',['../utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc',1,'utility.h']]],
-  ['running_20the_20test_20suite',['Running the Test Suite',['../running_the_tests.html',1,'']]]
+  ['pivot_5ftables',['pivot_tables',['../structlxw__protection.html#a50c444dca6d5f2e1a94edbad1b9d3bc2',1,'lxw_protection']]]
 ];

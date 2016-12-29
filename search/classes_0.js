@@ -2,6 +2,7 @@ var searchData=
 [
   ['lxw_5fchart',['lxw_chart',['../structlxw__chart.html',1,'']]],
   ['lxw_5fchart_5faxis',['lxw_chart_axis',['../structlxw__chart__axis.html',1,'']]],
+  ['lxw_5fchart_5ffont',['lxw_chart_font',['../structlxw__chart__font.html',1,'']]],
   ['lxw_5fchart_5fseries',['lxw_chart_series',['../structlxw__chart__series.html',1,'']]],
   ['lxw_5fdatetime',['lxw_datetime',['../structlxw__datetime.html',1,'']]],
   ['lxw_5fdoc_5fproperties',['lxw_doc_properties',['../structlxw__doc__properties.html',1,'']]],

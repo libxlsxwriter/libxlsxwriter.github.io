@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['known_20issues_20and_20bugs',['Known Issues and Bugs',['../bugs.html',1,'']]],
-  ['keywords',['keywords',['../structlxw__doc__properties.html#a52e6f2a672566e887590705a52be08b0',1,'lxw_doc_properties']]]
+  ['insert_5fcolumns',['insert_columns',['../structlxw__protection.html#a6c896e745df57cc5253ef86dad22adb3',1,'lxw_protection']]],
+  ['insert_5fhyperlinks',['insert_hyperlinks',['../structlxw__protection.html#ad91e1d48f426b6d00d88312d0444c356',1,'lxw_protection']]],
+  ['insert_5frows',['insert_rows',['../structlxw__protection.html#a8efd2ec26c4a31b65ba66bb2e44363da',1,'lxw_protection']]],
+  ['introduction',['Introduction',['../introduction.html',1,'']]],
+  ['italic',['italic',['../structlxw__chart__font.html#ab202b61d5a753874fdd963646e2a0e38',1,'lxw_chart_font']]]
 ];

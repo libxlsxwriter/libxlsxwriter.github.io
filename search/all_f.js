@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['scenarios',['scenarios',['../structlxw__protection.html#af9a96d57cb9d27aed44533c03057f517',1,'lxw_protection']]],
-  ['sec',['sec',['../structlxw__datetime.html#a001bad63fba21571bbcdf109dfa0f296',1,'lxw_datetime']]],
-  ['sort',['sort',['../structlxw__protection.html#a65d1e87b6603a1a3e4f00d93d228c46b',1,'lxw_protection']]],
-  ['status',['status',['../structlxw__doc__properties.html#aa1dac7e63e16678271e45bf0045e93b7',1,'lxw_doc_properties']]],
-  ['subject',['subject',['../structlxw__doc__properties.html#a216d40acad776338b8250a61fc29ba6a',1,'lxw_doc_properties']]]
+  ['range',['RANGE',['../utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc',1,'utility.h']]],
+  ['rotation',['rotation',['../structlxw__chart__font.html#a6ed9b251728efcaf0e8ee460377ab17f',1,'lxw_chart_font']]],
+  ['running_20the_20test_20suite',['Running the Test Suite',['../running_the_tests.html',1,'']]]
 ];

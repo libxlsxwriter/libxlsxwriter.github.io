@@ -1,12 +1,9 @@
 var searchData=
 [
-  ['the_20chart_20object',['The Chart object',['../chart_page.html',1,'']]],
-  ['the_20format_20object',['The Format object',['../format_page.html',1,'']]],
-  ['title',['title',['../structlxw__doc__properties.html#a23d8fd5995ef26d1eab54c4dbd92393c',1,'lxw_doc_properties']]],
-  ['tmpdir',['tmpdir',['../structlxw__workbook__options.html#a6a79cfd2824acc5a438f37d4f79da325',1,'lxw_workbook_options']]],
-  ['tutorial_201_3a_20create_20a_20simple_20xlsx_20file',['Tutorial 1: Create a simple XLSX file',['../tutorial01.html',1,'']]],
-  ['tutorial_202_3a_20adding_20formatting_20to_20the_20xlsx_20file',['Tutorial 2: Adding formatting to the XLSX File',['../tutorial02.html',1,'']]],
-  ['tutorial_203_3a_20writing_20different_20types_20of_20data_20to_20the_20xlsx_20file',['Tutorial 3: Writing different types of data to the XLSX File',['../tutorial03.html',1,'']]],
-  ['the_20workbook_20object',['The Workbook object',['../workbook_page.html',1,'']]],
-  ['the_20worksheet_20object',['The Worksheet object',['../worksheet_page.html',1,'']]]
+  ['scenarios',['scenarios',['../structlxw__protection.html#af9a96d57cb9d27aed44533c03057f517',1,'lxw_protection']]],
+  ['sec',['sec',['../structlxw__datetime.html#a001bad63fba21571bbcdf109dfa0f296',1,'lxw_datetime']]],
+  ['size',['size',['../structlxw__chart__font.html#ac854fec6027386422d66893121812343',1,'lxw_chart_font']]],
+  ['sort',['sort',['../structlxw__protection.html#a65d1e87b6603a1a3e4f00d93d228c46b',1,'lxw_protection']]],
+  ['status',['status',['../structlxw__doc__properties.html#aa1dac7e63e16678271e45bf0045e93b7',1,'lxw_doc_properties']]],
+  ['subject',['subject',['../structlxw__doc__properties.html#a216d40acad776338b8250a61fc29ba6a',1,'lxw_doc_properties']]]
 ];
