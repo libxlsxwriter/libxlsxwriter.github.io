@@ -91,11 +91,11 @@ Chart Value and Category Axes</h1>
 <p>When working with charts it is important to understand how Excel differentiates between a chart axis that is used for series categories and a chart axis that is used for series values.</p>
 <p>In the example above the X axis is the <b>category</b> axis and each of the values is evenly spaced and sequential. The Y axis is the <b>value</b> axis and points are displayed according to their value.</p>
 <p>Excel treats these two types of axis differently and exposes different properties for each.</p>
-<p>As such some of the <code>libxlsxwriter</code>` axis properties can be set for a value axis, some can be set for a category axis and some properties can be set for both. The documentation calls out the type of axis to which functions apply.</p>
+<p>As such some of the <code>libxlsxwriter</code> axis properties can be set for a value axis, some can be set for a category axis and some properties can be set for both. The documentation calls out the type of axis to which functions apply.</p>
 <h1><a class="anchor" id="chart_fonts"></a>
 Chart Fonts</h1>
-<p>Font properties can be set for any chart object that they apply to (and that are supported by libxlsxwriter) such as chart titles, axis labels, and axis numbering.</p>
-<p>A chart font with default properties is:</p>
+<p>Font properties can be set for several chart objects such as chart titles, axis labels, and axis numbering.</p>
+<p>A chart font <a class="el" href="structlxw__chart__font.html" title="Struct to represent a chart font. ">lxw_chart_font</a> struct with default properties is:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a>      = <span class="stringliteral">&quot;Calibri&quot;</span>,</div>
 <div class="line">                       .size      = 10,</div>
 <div class="line">                       .bold      = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>,</div>
@@ -103,42 +103,28 @@ Chart Fonts</h1>
 <div class="line">                       .underline = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>,</div>
 <div class="line">                       .rotation  = 0,</div>
 <div class="line">                       .color     = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba13bdb1312b42e892cd29dfeb79ec8451">LXW_COLOR_BLACK</a>};</div>
-</div><!-- fragment --><p>Where the font properties are:</p>
-<ul>
-<li><code>name</code>: Set the font name:</li>
-</ul>
+</div><!-- fragment --><p>The font properties are:</p>
+<p><b>name</b>: Set the font name:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Arial&quot;</span>};</div>
-</div><!-- fragment --><ul>
-<li><code>size</code>: Set the font size:</li>
-</ul>
+</div><!-- fragment --><p><b>size</b>: Set the font size:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Arial&quot;</span>, .size = 11};</div>
-</div><!-- fragment --><ul>
-<li><code>bold</code>: Set the font bold property:</li>
-</ul>
+</div><!-- fragment --><p><b>bold</b>: Set the font bold property:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font = {.<a class="code" href="structlxw__chart__font.html#abca1be9b66dcd9bc4558cc97556456b5">bold</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>};</div>
-</div><!-- fragment --><ul>
-<li><code>italic</code>: Set the font italic property:</li>
-</ul>
+</div><!-- fragment --><p><b>italic</b>: Set the font italic property:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font = {.<a class="code" href="structlxw__chart__font.html#ab202b61d5a753874fdd963646e2a0e38">italic</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>};</div>
-</div><!-- fragment --><ul>
-<li><code>underline</code>: Set the font underline property:</li>
-</ul>
+</div><!-- fragment --><p><b>underline</b>: Set the font underline property:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font = {.<a class="code" href="structlxw__chart__font.html#a13fce73724d63f5f2ab70a1abf64f758">underline</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>};</div>
-</div><!-- fragment --><ul>
-<li><code>rotation</code>: Set the font rotation, angle, property in the range -90 to 90 deg:</li>
-</ul>
+</div><!-- fragment --><p><b>rotation</b>: Set the font rotation, angle, property in the range -90 to 90 deg:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font = {.<a class="code" href="structlxw__chart__font.html#a6ed9b251728efcaf0e8ee460377ab17f">rotation</a> = 45};</div>
 </div><!-- fragment --><p>This is useful for displaying axis data such as dates in a more compact format.</p>
-<ul>
-<li><code>color</code>: Set the font color property. Can be a color index, a color name or HTML style RGB color, See <a class="el" href="working_with_colors.html">Working with Colors</a> :</li>
-</ul>
+<p><b>color</b>: Set the font color property. Can be a color index, a color name or HTML style RGB color, See <a class="el" href="working_with_colors.html">Working with Colors</a> :</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font = {.<a class="code" href="structlxw__chart__font.html#a7921a876ed780271df6e0f4bca8e38f5">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>};</div>
 </div><!-- fragment --><p>Here is a longer example of several chart formats:</p>
 <div class="fragment"><div class="line"><span class="comment">// Create some fonts to use in the chart.</span></div>
-<div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font1 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Calibri&quot;</span>,     .color = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>};</div>
-<div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font2 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Courier New&quot;</span>, .color = 0x92D050};</div>
-<div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font3 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Arial&quot;</span>,       .color = 0x00B0F0};</div>
-<div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font4 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Century&quot;</span>,     .color = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>};</div>
+<div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font1 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Calibri&quot;</span>, .color = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>};</div>
+<div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font2 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Courier&quot;</span>, .color = 0x92D050};</div>
+<div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font3 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Arial&quot;</span>,   .color = 0x00B0F0};</div>
+<div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font4 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Century&quot;</span>, .color = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>};</div>
 <div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font5 = {.<a class="code" href="structlxw__chart__font.html#abca1be9b66dcd9bc4558cc97556456b5">bold</a>      = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>,</div>
 <div class="line">                        .italic    = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>,</div>
 <div class="line">                        .underline = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>,</div>
