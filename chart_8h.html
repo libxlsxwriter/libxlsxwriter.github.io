@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    write_worksheet_data(worksheet);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Create a chart object.</span></div>
-<div class="line">    <a class="code" href="structlxw__chart.html">lxw_chart</a> *chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2afa7f69bde9c99b5818297c64e8b9070a">LXW_CHART_COLUMN</a>);</div>
+<div class="line">    <a class="code" href="structlxw__chart.html">lxw_chart</a> *chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cafa7f69bde9c99b5818297c64e8b9070a">LXW_CHART_COLUMN</a>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// In the simplest case we just add some value data series.</span></div>
 <div class="line">    <span class="comment">// The NULL categories will default to 1 to 5 like in Excel.</span></div>
@@ -172,6 +172,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a3a0a7351b8ad164d917877ae8a4a7622"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a3a0a7351b8ad164d917877ae8a4a7622">chart_title_off</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart)</td></tr>
 <tr class="memdesc:a3a0a7351b8ad164d917877ae8a4a7622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off an automatic chart title.  <a href="#a3a0a7351b8ad164d917877ae8a4a7622">More...</a><br /></td></tr>
 <tr class="separator:a3a0a7351b8ad164d917877ae8a4a7622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1382251c31fd8f97e19048acf5db0a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#af1382251c31fd8f97e19048acf5db0a1">chart_legend_set_position</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, uint8_t position)</td></tr>
+<tr class="memdesc:af1382251c31fd8f97e19048acf5db0a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the chart legend.  <a href="#af1382251c31fd8f97e19048acf5db0a1">More...</a><br /></td></tr>
+<tr class="separator:af1382251c31fd8f97e19048acf5db0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac24ae880bab2fa949d8b84a25fc9a457"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ac24ae880bab2fa949d8b84a25fc9a457">chart_legend_set_font</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, <a class="el" href="structlxw__chart__font.html">lxw_chart_font</a> *font)</td></tr>
+<tr class="memdesc:ac24ae880bab2fa949d8b84a25fc9a457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the font properties for a chart legend.  <a href="#ac24ae880bab2fa949d8b84a25fc9a457">More...</a><br /></td></tr>
+<tr class="separator:ac24ae880bab2fa949d8b84a25fc9a457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac22638faf2a6168d23af1969fcaa0612"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ac22638faf2a6168d23af1969fcaa0612">chart_legend_delete_series</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, int16_t delete_series[])</td></tr>
+<tr class="memdesc:ac22638faf2a6168d23af1969fcaa0612"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove one or more series from the the legend.  <a href="#ac22638faf2a6168d23af1969fcaa0612">More...</a><br /></td></tr>
+<tr class="separator:ac22638faf2a6168d23af1969fcaa0612"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6865755f0adb52e41466a6576a8a030e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a6865755f0adb52e41466a6576a8a030e">chart_set_style</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, uint8_t style_id)</td></tr>
 <tr class="memdesc:a6865755f0adb52e41466a6576a8a030e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the chart style type.  <a href="#a6865755f0adb52e41466a6576a8a030e">More...</a><br /></td></tr>
 <tr class="separator:a6865755f0adb52e41466a6576a8a030e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -517,7 +526,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <span class="stringliteral">&quot;=Sheet1!$B1$1&quot;</span>);</div>
 </div><!-- fragment --><p>See also the <code><a class="el" href="chart_8h.html#ae3cfd6a286f3b717e68d4bca348387ff" title="Set a chart axis name formula using row and column values. ">chart_axis_set_name_range()</a></code> function to see how to set the name formula programmatically.</p>
 <p>This function is applicable to category, date and value axes. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_area_8c-example.html#a19">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a19">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a19">chart_column.c</a>, <a class="el" href="chart_fonts_8c-example.html#a16">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a19">chart_line.c</a>, <a class="el" href="chart_radar_8c-example.html#a19">chart_radar.c</a>, and <a class="el" href="chart_scatter_8c-example.html#a19">chart_scatter.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_area_8c-example.html#a19">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a19">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a19">chart_column.c</a>, <a class="el" href="chart_fonts_8c-example.html#a17">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a19">chart_line.c</a>, <a class="el" href="chart_radar_8c-example.html#a19">chart_radar.c</a>, and <a class="el" href="chart_scatter_8c-example.html#a19">chart_scatter.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -610,7 +619,7 @@ Functions</h2></td></tr>
 <img src="chart_axis_set_name_font.png" alt="chart_axis_set_name_font.png"/>
 </div>
 <p>For more information see <a class="el" href="working_with_charts.html#chart_fonts">Working with Chart Fonts</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_fonts_8c-example.html#a18">chart_fonts.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_fonts_8c-example.html#a19">chart_fonts.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -647,12 +656,12 @@ Functions</h2></td></tr>
 <p>The <code>chart_axis_set_num_font()</code> function is used to set the font of the numbers on an axis:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font = {.<a class="code" href="structlxw__chart__font.html#abca1be9b66dcd9bc4558cc97556456b5">bold</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>, .color = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>};</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="chart_8h.html#a01f1ac1674089e0dc219dc3214b911c4">chart_axis_set_num_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, &amp;font1;</div>
+<div class="line"><a class="code" href="chart_8h.html#a01f1ac1674089e0dc219dc3214b911c4">chart_axis_set_num_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, &amp;font1);</div>
 </div><!-- fragment --><div class="image">
 <img src="chart_axis_set_num_font.png" alt="chart_axis_set_num_font.png"/>
 </div>
 <p>For more information see <a class="el" href="working_with_charts.html#chart_fonts">Working with Chart Fonts</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_fonts_8c-example.html#a19">chart_fonts.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_fonts_8c-example.html#a20">chart_fonts.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -695,7 +704,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, <span class="stringliteral">&quot;=Sheet1!$B1$1&quot;</span>);</div>
 </div><!-- fragment --><p>See also the <code><a class="el" href="chart_8h.html#a642fbe010112eefcf10779da732e936b" title="Set a chart title formula using row and column values. ">chart_title_set_name_range()</a></code> function to see how to set the name formula programmatically.</p>
 <p>The Excel default is to have no chart title. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_area_8c-example.html#a18">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a18">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a18">chart_column.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a15">chart_doughnut.c</a>, <a class="el" href="chart_fonts_8c-example.html#a14">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a18">chart_line.c</a>, <a class="el" href="chart_pie_8c-example.html#a15">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a18">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a18">chart_scatter.c</a>, and <a class="el" href="chart_styles_8c-example.html#a11">chart_styles.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_area_8c-example.html#a18">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a18">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a18">chart_column.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a15">chart_doughnut.c</a>, <a class="el" href="chart_fonts_8c-example.html#a15">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a18">chart_line.c</a>, <a class="el" href="chart_pie_8c-example.html#a15">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a18">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a18">chart_scatter.c</a>, and <a class="el" href="chart_styles_8c-example.html#a11">chart_styles.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -787,7 +796,7 @@ Functions</h2></td></tr>
 <img src="chart_title_set_name_font.png" alt="chart_title_set_name_font.png"/>
 </div>
 <p>For more information see <a class="el" href="working_with_charts.html#chart_fonts">Working with Chart Fonts</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_fonts_8c-example.html#a15">chart_fonts.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_fonts_8c-example.html#a16">chart_fonts.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -813,6 +822,142 @@ Functions</h2></td></tr>
 <p>In general in Excel a chart title isn't displayed unless the user explicitly adds one. However, Excel adds an automatic chart title to charts with a single series and a user defined series name. The <code><a class="el" href="chart_8h.html#a3a0a7351b8ad164d917877ae8a4a7622" title="Turn off an automatic chart title. ">chart_title_off()</a></code> function allows you to turn off this automatic chart title:</p>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a3a0a7351b8ad164d917877ae8a4a7622">chart_title_off</a>(chart);</div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="af1382251c31fd8f97e19048acf5db0a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_legend_set_position </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart.html">lxw_chart</a> *&#160;</td>
+          <td class="paramname"><em>chart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chart</td><td>Pointer to a <a class="el" href="structlxw__chart.html" title="Struct to represent an Excel chart. ">lxw_chart</a> instance to be configured. </td></tr>
+    <tr><td class="paramname">position</td><td>The <a class="el" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22">lxw_chart_legend_position</a> value for the legend.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>chart_legend_set_position()</code> function is used to set the chart legend to one of the <a class="el" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22">lxw_chart_legend_position</a> values: </p><pre class="fragment">LXW_CHART_LEGEND_NONE
+LXW_CHART_LEGEND_RIGHT
+LXW_CHART_LEGEND_LEFT
+LXW_CHART_LEGEND_TOP
+LXW_CHART_LEGEND_BOTTOM
+LXW_CHART_LEGEND_OVERLAY_RIGHT
+LXW_CHART_LEGEND_OVERLAY_LEFT
+</pre><p>For example:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#af1382251c31fd8f97e19048acf5db0a1">chart_legend_set_position</a>(chart, <a class="code" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22ad8ecb14a4843e242f037b00c8d28c8ec">LXW_CHART_LEGEND_BOTTOM</a>);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_legend_bottom.png" alt="chart_legend_bottom.png"/>
+</div>
+<p>This function can also be used to turn off a chart legend:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#af1382251c31fd8f97e19048acf5db0a1">chart_legend_set_position</a>(chart, <a class="code" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22a8077ef4a20bd15141f6b747f12ea17a4">LXW_CHART_LEGEND_NONE</a>);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_legend_none.png" alt="chart_legend_none.png"/>
+</div>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_fonts_8c-example.html#a22">chart_fonts.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ac24ae880bab2fa949d8b84a25fc9a457"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_legend_set_font </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart.html">lxw_chart</a> *&#160;</td>
+          <td class="paramname"><em>chart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__font.html">lxw_chart_font</a> *&#160;</td>
+          <td class="paramname"><em>font</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chart</td><td>Pointer to a <a class="el" href="structlxw__chart.html" title="Struct to represent an Excel chart. ">lxw_chart</a> instance to be configured. </td></tr>
+    <tr><td class="paramname">font</td><td>A pointer to a chart <a class="el" href="structlxw__chart__font.html" title="Struct to represent a chart font. ">lxw_chart_font</a> font struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>chart_legend_set_font()</code> function is used to set the font of a chart legend:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font = {.<a class="code" href="structlxw__chart__font.html#abca1be9b66dcd9bc4558cc97556456b5">bold</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>, .color = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#ac24ae880bab2fa949d8b84a25fc9a457">chart_legend_set_font</a>(chart, &amp;font);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_legend_set_font.png" alt="chart_legend_set_font.png"/>
+</div>
+<p>For more information see <a class="el" href="working_with_charts.html#chart_fonts">Working with Chart Fonts</a>. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_fonts_8c-example.html#a24">chart_fonts.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ac22638faf2a6168d23af1969fcaa0612"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> chart_legend_delete_series </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart.html">lxw_chart</a> *&#160;</td>
+          <td class="paramname"><em>chart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&#160;</td>
+          <td class="paramname"><em>delete_series</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chart</td><td>Pointer to a <a class="el" href="structlxw__chart.html" title="Struct to represent an Excel chart. ">lxw_chart</a> instance to be configured. </td></tr>
+    <tr><td class="paramname">delete_series</td><td>An array of zero-indexed values to delete from series.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a>.</dd></dl>
+<p>The <code>chart_legend_delete_series()</code> function allows you to remove/hide one or more series in a chart legend (the series will still display on the chart).</p>
+<p>This function takes an array of one or more zero indexed series numbers. The array should be terminated with -1.</p>
+<p>For example to remove the first and third zero-indexed series from the legend of a chart with 3 series:</p>
+<div class="fragment"><div class="line">int16_t series[] = {0, 2, -1};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#ac22638faf2a6168d23af1969fcaa0612">chart_legend_delete_series</a>(chart, series);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_legend_delete.png" alt="chart_legend_delete.png"/>
+</div>
+ 
 </div>
 </div>
 <a class="anchor" id="a6865755f0adb52e41466a6576a8a030e"></a>
@@ -858,16 +1003,29 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="a6663db38bc8c2953147a629c5d01ac83"></a>
+<a class="anchor" id="ad30e22b3cf06dddd125254b2399719f3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef enum <a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2">lxw_chart_types</a>  <a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2">lxw_chart_types</a></td>
+          <td class="memname">typedef enum <a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85c">lxw_chart_type</a>  <a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85c">lxw_chart_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Available chart types . </p>
+
+</div>
+</div>
+<a class="anchor" id="a6d6509f2e1ef2267e737a34b4a4a0b2d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22">lxw_chart_legend_position</a>  <a class="el" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22">lxw_chart_legend_position</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Chart legend positions. </p>
 
 </div>
 </div>
@@ -924,79 +1082,115 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2"></a>
+<a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2">lxw_chart_types</a></td>
+          <td class="memname">enum <a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85c">lxw_chart_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Available chart types . </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2aa2eca7ad095d4b8b340377603b5331db"></a>LXW_CHART_NONE&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85caa2eca7ad095d4b8b340377603b5331db"></a>LXW_CHART_NONE&#160;</td><td class="fielddoc">
 <p>None. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2ab7d204b0c88aa41565b792a3ac946e73"></a>LXW_CHART_AREA&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85cab7d204b0c88aa41565b792a3ac946e73"></a>LXW_CHART_AREA&#160;</td><td class="fielddoc">
 <p>Area chart. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2af78202456c43feb53a91c2f56fd3341b"></a>LXW_CHART_AREA_STACKED&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85caf78202456c43feb53a91c2f56fd3341b"></a>LXW_CHART_AREA_STACKED&#160;</td><td class="fielddoc">
 <p>Area chart - stacked. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2a9df7f4ab4ee2fc2e45937e3937046d17"></a>LXW_CHART_AREA_STACKED_PERCENT&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85ca9df7f4ab4ee2fc2e45937e3937046d17"></a>LXW_CHART_AREA_STACKED_PERCENT&#160;</td><td class="fielddoc">
 <p>Area chart - percentage stacked. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2ab70e5b5cf00126d7040ab25af3b117d5"></a>LXW_CHART_BAR&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85cab70e5b5cf00126d7040ab25af3b117d5"></a>LXW_CHART_BAR&#160;</td><td class="fielddoc">
 <p>Bar chart. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2aa73fe9250d87a0b5c012d9861854285f"></a>LXW_CHART_BAR_STACKED&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85caa73fe9250d87a0b5c012d9861854285f"></a>LXW_CHART_BAR_STACKED&#160;</td><td class="fielddoc">
 <p>Bar chart - stacked. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2a11e520d38ebd7c5a5710e60e8ffa5dbc"></a>LXW_CHART_BAR_STACKED_PERCENT&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85ca11e520d38ebd7c5a5710e60e8ffa5dbc"></a>LXW_CHART_BAR_STACKED_PERCENT&#160;</td><td class="fielddoc">
 <p>Bar chart - percentage stacked. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2afa7f69bde9c99b5818297c64e8b9070a"></a>LXW_CHART_COLUMN&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85cafa7f69bde9c99b5818297c64e8b9070a"></a>LXW_CHART_COLUMN&#160;</td><td class="fielddoc">
 <p>Column chart. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2a1f3eecb6292871e7075c8227bee42a45"></a>LXW_CHART_COLUMN_STACKED&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85ca1f3eecb6292871e7075c8227bee42a45"></a>LXW_CHART_COLUMN_STACKED&#160;</td><td class="fielddoc">
 <p>Column chart - stacked. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2a05a44c21f8339df6c21a5dbf1d4aa611"></a>LXW_CHART_COLUMN_STACKED_PERCENT&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85ca05a44c21f8339df6c21a5dbf1d4aa611"></a>LXW_CHART_COLUMN_STACKED_PERCENT&#160;</td><td class="fielddoc">
 <p>Column chart - percentage stacked. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2ac6f314457fbc3aa1f7429aa34dd3e823"></a>LXW_CHART_DOUGHNUT&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85cac6f314457fbc3aa1f7429aa34dd3e823"></a>LXW_CHART_DOUGHNUT&#160;</td><td class="fielddoc">
 <p>Doughnut chart. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2af309b18af571c90d3ae052e769d30e6c"></a>LXW_CHART_LINE&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85caf309b18af571c90d3ae052e769d30e6c"></a>LXW_CHART_LINE&#160;</td><td class="fielddoc">
 <p>Line chart. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2a679756788a8bec4bfc1e1c723ec5246a"></a>LXW_CHART_PIE&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85ca679756788a8bec4bfc1e1c723ec5246a"></a>LXW_CHART_PIE&#160;</td><td class="fielddoc">
 <p>Pie chart. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2ac67f7cb8fb0cdd98b0e3d8ecd7c5cd4e"></a>LXW_CHART_SCATTER&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85cac67f7cb8fb0cdd98b0e3d8ecd7c5cd4e"></a>LXW_CHART_SCATTER&#160;</td><td class="fielddoc">
 <p>Scatter chart. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2a2c790940adb04ba5030a3fb1cf9a4c83"></a>LXW_CHART_SCATTER_STRAIGHT&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85ca2c790940adb04ba5030a3fb1cf9a4c83"></a>LXW_CHART_SCATTER_STRAIGHT&#160;</td><td class="fielddoc">
 <p>Scatter chart - straight. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2a4629ad350ebcdb6f98e1ce8b3c0bdcfa"></a>LXW_CHART_SCATTER_STRAIGHT_WITH_MARKERS&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85ca4629ad350ebcdb6f98e1ce8b3c0bdcfa"></a>LXW_CHART_SCATTER_STRAIGHT_WITH_MARKERS&#160;</td><td class="fielddoc">
 <p>Scatter chart - straight with markers. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2abc16d4ec606d150661855b2252565506"></a>LXW_CHART_SCATTER_SMOOTH&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85cabc16d4ec606d150661855b2252565506"></a>LXW_CHART_SCATTER_SMOOTH&#160;</td><td class="fielddoc">
 <p>Scatter chart - smooth. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2a50cf4163e4a7b146771ff7dd180ae4c1"></a>LXW_CHART_SCATTER_SMOOTH_WITH_MARKERS&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85ca50cf4163e4a7b146771ff7dd180ae4c1"></a>LXW_CHART_SCATTER_SMOOTH_WITH_MARKERS&#160;</td><td class="fielddoc">
 <p>Scatter chart - smooth with markers. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2a700d2ed934b73997dc030c6f5f652b58"></a>LXW_CHART_RADAR&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85ca700d2ed934b73997dc030c6f5f652b58"></a>LXW_CHART_RADAR&#160;</td><td class="fielddoc">
 <p>Radar chart. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2ae7bc22beb8b3f55a83f7ea8df896b595"></a>LXW_CHART_RADAR_WITH_MARKERS&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85cae7bc22beb8b3f55a83f7ea8df896b595"></a>LXW_CHART_RADAR_WITH_MARKERS&#160;</td><td class="fielddoc">
 <p>Radar chart - with markers. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a13ff0553ea84ef3ef3677be48421a2d2a10120027a87029da4cb9e66ecab5e22f"></a>LXW_CHART_RADAR_FILLED&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a9f577b0fcabe6cac9118a26a483fe85ca10120027a87029da4cb9e66ecab5e22f"></a>LXW_CHART_RADAR_FILLED&#160;</td><td class="fielddoc">
 <p>Radar chart - filled. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="aa7331d5134989542f324aa6f1f1f7d22"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22">lxw_chart_legend_position</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Chart legend positions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aa7331d5134989542f324aa6f1f1f7d22a8077ef4a20bd15141f6b747f12ea17a4"></a>LXW_CHART_LEGEND_NONE&#160;</td><td class="fielddoc">
+<p>No chart legend. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa7331d5134989542f324aa6f1f1f7d22a3e143177b14e1f4b05e332c9f6bb1510"></a>LXW_CHART_LEGEND_RIGHT&#160;</td><td class="fielddoc">
+<p>Chart legend positioned at right side. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa7331d5134989542f324aa6f1f1f7d22abe03ad30aaddbf0dd09759960c59b7b1"></a>LXW_CHART_LEGEND_LEFT&#160;</td><td class="fielddoc">
+<p>Chart legend positioned at left side. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa7331d5134989542f324aa6f1f1f7d22ae5a0056cf08df61e5e5972a830e830fc"></a>LXW_CHART_LEGEND_TOP&#160;</td><td class="fielddoc">
+<p>Chart legend positioned at top. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa7331d5134989542f324aa6f1f1f7d22ad8ecb14a4843e242f037b00c8d28c8ec"></a>LXW_CHART_LEGEND_BOTTOM&#160;</td><td class="fielddoc">
+<p>Chart legend positioned at bottom. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa7331d5134989542f324aa6f1f1f7d22a954b4324e43c90d8205d17dd67b54574"></a>LXW_CHART_LEGEND_OVERLAY_RIGHT&#160;</td><td class="fielddoc">
+<p>Chart legend overlaid at right side. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa7331d5134989542f324aa6f1f1f7d22a29af3519670a69bea28a4930d1c74e80"></a>LXW_CHART_LEGEND_OVERLAY_LEFT&#160;</td><td class="fielddoc">
+<p>Chart legend overlaid at left side. </p>
 </td></tr>
 </table>
 
@@ -1020,8 +1214,11 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a6663db38bc8c2953147a629c5d01ac83"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2">lxw_chart_types</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a6663db38bc8c2953147a629c5d01ac83">lxw_chart_types</a></td></tr>
-<tr class="separator:a6663db38bc8c2953147a629c5d01ac83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30e22b3cf06dddd125254b2399719f3"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85c">lxw_chart_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ad30e22b3cf06dddd125254b2399719f3">lxw_chart_type</a></td></tr>
+<tr class="separator:ad30e22b3cf06dddd125254b2399719f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d6509f2e1ef2267e737a34b4a4a0b2d"><td class="memItemLeft" align="right" valign="top">typedef enum <br class="typebreak" />
+<a class="el" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22">lxw_chart_legend_position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a6d6509f2e1ef2267e737a34b4a4a0b2d">lxw_chart_legend_position</a></td></tr>
+<tr class="separator:a6d6509f2e1ef2267e737a34b4a4a0b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a2f91c8af4830581f8430304783d956"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__chart__font.html">lxw_chart_font</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a1a2f91c8af4830581f8430304783d956">lxw_chart_font</a></td></tr>
 <tr class="memdesc:a1a2f91c8af4830581f8430304783d956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent a chart font.  <a href="#a1a2f91c8af4830581f8430304783d956">More...</a><br /></td></tr>
 <tr class="separator:a1a2f91c8af4830581f8430304783d956"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1037,36 +1234,48 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a13ff0553ea84ef3ef3677be48421a2d2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2">lxw_chart_types</a> { <br />
-&#160;&#160;<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2aa2eca7ad095d4b8b340377603b5331db">LXW_CHART_NONE</a> = 0, 
-<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2ab7d204b0c88aa41565b792a3ac946e73">LXW_CHART_AREA</a>, 
-<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2af78202456c43feb53a91c2f56fd3341b">LXW_CHART_AREA_STACKED</a>, 
-<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2a9df7f4ab4ee2fc2e45937e3937046d17">LXW_CHART_AREA_STACKED_PERCENT</a>, 
+<tr class="memitem:a9f577b0fcabe6cac9118a26a483fe85c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85c">lxw_chart_type</a> { <br />
+&#160;&#160;<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85caa2eca7ad095d4b8b340377603b5331db">LXW_CHART_NONE</a> = 0, 
+<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cab7d204b0c88aa41565b792a3ac946e73">LXW_CHART_AREA</a>, 
+<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85caf78202456c43feb53a91c2f56fd3341b">LXW_CHART_AREA_STACKED</a>, 
+<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca9df7f4ab4ee2fc2e45937e3937046d17">LXW_CHART_AREA_STACKED_PERCENT</a>, 
 <br />
-&#160;&#160;<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2ab70e5b5cf00126d7040ab25af3b117d5">LXW_CHART_BAR</a>, 
-<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2aa73fe9250d87a0b5c012d9861854285f">LXW_CHART_BAR_STACKED</a>, 
-<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2a11e520d38ebd7c5a5710e60e8ffa5dbc">LXW_CHART_BAR_STACKED_PERCENT</a>, 
-<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2afa7f69bde9c99b5818297c64e8b9070a">LXW_CHART_COLUMN</a>, 
+&#160;&#160;<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cab70e5b5cf00126d7040ab25af3b117d5">LXW_CHART_BAR</a>, 
+<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85caa73fe9250d87a0b5c012d9861854285f">LXW_CHART_BAR_STACKED</a>, 
+<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca11e520d38ebd7c5a5710e60e8ffa5dbc">LXW_CHART_BAR_STACKED_PERCENT</a>, 
+<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cafa7f69bde9c99b5818297c64e8b9070a">LXW_CHART_COLUMN</a>, 
 <br />
-&#160;&#160;<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2a1f3eecb6292871e7075c8227bee42a45">LXW_CHART_COLUMN_STACKED</a>, 
-<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2a05a44c21f8339df6c21a5dbf1d4aa611">LXW_CHART_COLUMN_STACKED_PERCENT</a>, 
-<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2ac6f314457fbc3aa1f7429aa34dd3e823">LXW_CHART_DOUGHNUT</a>, 
-<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2af309b18af571c90d3ae052e769d30e6c">LXW_CHART_LINE</a>, 
+&#160;&#160;<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca1f3eecb6292871e7075c8227bee42a45">LXW_CHART_COLUMN_STACKED</a>, 
+<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca05a44c21f8339df6c21a5dbf1d4aa611">LXW_CHART_COLUMN_STACKED_PERCENT</a>, 
+<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cac6f314457fbc3aa1f7429aa34dd3e823">LXW_CHART_DOUGHNUT</a>, 
+<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85caf309b18af571c90d3ae052e769d30e6c">LXW_CHART_LINE</a>, 
 <br />
-&#160;&#160;<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2a679756788a8bec4bfc1e1c723ec5246a">LXW_CHART_PIE</a>, 
-<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2ac67f7cb8fb0cdd98b0e3d8ecd7c5cd4e">LXW_CHART_SCATTER</a>, 
-<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2a2c790940adb04ba5030a3fb1cf9a4c83">LXW_CHART_SCATTER_STRAIGHT</a>, 
-<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2a4629ad350ebcdb6f98e1ce8b3c0bdcfa">LXW_CHART_SCATTER_STRAIGHT_WITH_MARKERS</a>, 
+&#160;&#160;<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca679756788a8bec4bfc1e1c723ec5246a">LXW_CHART_PIE</a>, 
+<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cac67f7cb8fb0cdd98b0e3d8ecd7c5cd4e">LXW_CHART_SCATTER</a>, 
+<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca2c790940adb04ba5030a3fb1cf9a4c83">LXW_CHART_SCATTER_STRAIGHT</a>, 
+<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca4629ad350ebcdb6f98e1ce8b3c0bdcfa">LXW_CHART_SCATTER_STRAIGHT_WITH_MARKERS</a>, 
 <br />
-&#160;&#160;<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2abc16d4ec606d150661855b2252565506">LXW_CHART_SCATTER_SMOOTH</a>, 
-<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2a50cf4163e4a7b146771ff7dd180ae4c1">LXW_CHART_SCATTER_SMOOTH_WITH_MARKERS</a>, 
-<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2a700d2ed934b73997dc030c6f5f652b58">LXW_CHART_RADAR</a>, 
-<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2ae7bc22beb8b3f55a83f7ea8df896b595">LXW_CHART_RADAR_WITH_MARKERS</a>, 
+&#160;&#160;<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cabc16d4ec606d150661855b2252565506">LXW_CHART_SCATTER_SMOOTH</a>, 
+<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca50cf4163e4a7b146771ff7dd180ae4c1">LXW_CHART_SCATTER_SMOOTH_WITH_MARKERS</a>, 
+<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca700d2ed934b73997dc030c6f5f652b58">LXW_CHART_RADAR</a>, 
+<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cae7bc22beb8b3f55a83f7ea8df896b595">LXW_CHART_RADAR_WITH_MARKERS</a>, 
 <br />
-&#160;&#160;<a class="el" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2a10120027a87029da4cb9e66ecab5e22f">LXW_CHART_RADAR_FILLED</a>
+&#160;&#160;<a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca10120027a87029da4cb9e66ecab5e22f">LXW_CHART_RADAR_FILLED</a>
 <br />
  }</td></tr>
-<tr class="separator:a13ff0553ea84ef3ef3677be48421a2d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a9f577b0fcabe6cac9118a26a483fe85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7331d5134989542f324aa6f1f1f7d22"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22">lxw_chart_legend_position</a> { <br />
+&#160;&#160;<a class="el" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22a8077ef4a20bd15141f6b747f12ea17a4">LXW_CHART_LEGEND_NONE</a> = 0, 
+<a class="el" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22a3e143177b14e1f4b05e332c9f6bb1510">LXW_CHART_LEGEND_RIGHT</a>, 
+<a class="el" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22abe03ad30aaddbf0dd09759960c59b7b1">LXW_CHART_LEGEND_LEFT</a>, 
+<a class="el" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22ae5a0056cf08df61e5e5972a830e830fc">LXW_CHART_LEGEND_TOP</a>, 
+<br />
+&#160;&#160;<a class="el" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22ad8ecb14a4843e242f037b00c8d28c8ec">LXW_CHART_LEGEND_BOTTOM</a>, 
+<a class="el" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22a954b4324e43c90d8205d17dd67b54574">LXW_CHART_LEGEND_OVERLAY_RIGHT</a>, 
+<a class="el" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22a29af3519670a69bea28a4930d1c74e80">LXW_CHART_LEGEND_OVERLAY_LEFT</a>
+<br />
+ }</td></tr>
+<tr class="separator:aa7331d5134989542f324aa6f1f1f7d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->

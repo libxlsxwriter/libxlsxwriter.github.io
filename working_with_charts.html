@@ -120,30 +120,36 @@ Working with Chart Fonts</h1>
 <p><b>color</b>: Set the font color property. Can be a color index, a color name or HTML style RGB color, See <a class="el" href="working_with_colors.html">Working with Colors</a> :</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font = {.<a class="code" href="structlxw__chart__font.html#a7921a876ed780271df6e0f4bca8e38f5">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>};</div>
 </div><!-- fragment --><p>Here is a longer example of several chart formats:</p>
-<div class="fragment"><div class="line"><span class="comment">// Create some fonts to use in the chart.</span></div>
-<div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font1 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Calibri&quot;</span>, .color = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>};</div>
-<div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font2 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Courier&quot;</span>, .color = 0x92D050};</div>
-<div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font3 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Arial&quot;</span>,   .color = 0x00B0F0};</div>
-<div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font4 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Century&quot;</span>, .color = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>};</div>
-<div class="line"><a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font5 = {.<a class="code" href="structlxw__chart__font.html#abca1be9b66dcd9bc4558cc97556456b5">bold</a>      = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>,</div>
-<div class="line">                        .italic    = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>,</div>
-<div class="line">                        .underline = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>,</div>
-<div class="line">                        .color     = 0x7030A0};</div>
+ <div class="fragment"><div class="line">    <a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font1 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Calibri&quot;</span>, .color = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font2 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Courier&quot;</span>, .color = 0x92D050};</div>
+<div class="line">    <a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font3 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Arial&quot;</span>,   .color = 0x00B0F0};</div>
+<div class="line">    <a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font4 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Century&quot;</span>, .color = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font5 = {.<a class="code" href="structlxw__chart__font.html#a6ed9b251728efcaf0e8ee460377ab17f">rotation</a> = -30};</div>
+<div class="line">    <a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font6 = {.<a class="code" href="structlxw__chart__font.html#abca1be9b66dcd9bc4558cc97556456b5">bold</a>      = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>,</div>
+<div class="line">                            .italic    = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>,</div>
+<div class="line">                            .underline = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>,</div>
+<div class="line">                            .color     = 0x7030A0};</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// Write the chart title with a font.</span></div>
-<div class="line"><a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, <span class="stringliteral">&quot;Test Results&quot;</span>);</div>
-<div class="line"><a class="code" href="chart_8h.html#ab3cde364ea66bb2edfae426299fe7dc7">chart_title_set_name_font</a>(chart, &amp;font1);</div>
+<div class="line">    <span class="comment">/* Write the chart title with a font. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, <span class="stringliteral">&quot;Test Results&quot;</span>);</div>
+<div class="line">    <a class="code" href="chart_8h.html#ab3cde364ea66bb2edfae426299fe7dc7">chart_title_set_name_font</a>(chart, &amp;font1);</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// Write the X axis with a font.</span></div>
-<div class="line"><a class="code" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <span class="stringliteral">&quot;Month&quot;</span>);</div>
-<div class="line"><a class="code" href="chart_8h.html#ac4be8325cbcaeddda0a92f1809d8156d">chart_axis_set_name_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, &amp;font2);</div>
-<div class="line"><a class="code" href="chart_8h.html#a01f1ac1674089e0dc219dc3214b911c4">chart_axis_set_num_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, &amp;font3);</div>
+<div class="line">    <span class="comment">/* Write the Y axis with a font. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, <span class="stringliteral">&quot;Units&quot;</span>);</div>
+<div class="line">    <a class="code" href="chart_8h.html#ac4be8325cbcaeddda0a92f1809d8156d">chart_axis_set_name_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, &amp;font2);</div>
+<div class="line">    <a class="code" href="chart_8h.html#a01f1ac1674089e0dc219dc3214b911c4">chart_axis_set_num_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, &amp;font3);</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// Write the Y axis with a font.</span></div>
-<div class="line"><a class="code" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, <span class="stringliteral">&quot;Units&quot;</span>);</div>
-<div class="line"><a class="code" href="chart_8h.html#ac4be8325cbcaeddda0a92f1809d8156d">chart_axis_set_name_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, &amp;font4);</div>
-<div class="line"><a class="code" href="chart_8h.html#a01f1ac1674089e0dc219dc3214b911c4">chart_axis_set_num_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, &amp;font5);</div>
-</div><!-- fragment --><div class="image">
+<div class="line">    <span class="comment">/* Write the X axis with a font. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <span class="stringliteral">&quot;Month&quot;</span>);</div>
+<div class="line">    <a class="code" href="chart_8h.html#ac4be8325cbcaeddda0a92f1809d8156d">chart_axis_set_name_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, &amp;font4);</div>
+<div class="line">    <a class="code" href="chart_8h.html#a01f1ac1674089e0dc219dc3214b911c4">chart_axis_set_num_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, &amp;font5);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Display the chart legend at the bottom of the chart. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#af1382251c31fd8f97e19048acf5db0a1">chart_legend_set_position</a>(chart, <a class="code" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22ad8ecb14a4843e242f037b00c8d28c8ec">LXW_CHART_LEGEND_BOTTOM</a>);</div>
+<div class="line">    <a class="code" href="chart_8h.html#ac24ae880bab2fa949d8b84a25fc9a457">chart_legend_set_font</a>(chart, &amp;font6);</div>
+</div><!-- fragment --></p>
+<div class="image">
 <img src="chart_fonts.png" alt="chart_fonts.png"/>
 </div>
 <h1><a class="anchor" id="ww_charts_limitations"></a>

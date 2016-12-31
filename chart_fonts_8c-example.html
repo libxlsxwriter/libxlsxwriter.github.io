@@ -125,7 +125,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    write_worksheet_data(worksheet);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Create a chart object. */</span></div>
-<div class="line">    <a name="_a4"></a><a class="code" href="structlxw__chart.html">lxw_chart</a> *chart = <a name="a5"></a><a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a name="a6"></a><a class="code" href="chart_8h.html#a13ff0553ea84ef3ef3677be48421a2d2afa7f69bde9c99b5818297c64e8b9070a">LXW_CHART_COLUMN</a>);</div>
+<div class="line">    <a name="_a4"></a><a class="code" href="structlxw__chart.html">lxw_chart</a> *chart = <a name="a5"></a><a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a name="a6"></a><a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cafa7f69bde9c99b5818297c64e8b9070a">LXW_CHART_COLUMN</a>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Configure the chart. In simplest case we just add some value data</span></div>
 <div class="line"><span class="comment">     * series. The NULL categories will default to 1 to 5 like in Excel.</span></div>
@@ -139,29 +139,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font2 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Courier&quot;</span>, .color = 0x92D050};</div>
 <div class="line">    <a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font3 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Arial&quot;</span>,   .color = 0x00B0F0};</div>
 <div class="line">    <a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font4 = {.<a class="code" href="structlxw__chart__font.html#a9d9fc7673d551efbe2a9729f211c25c4">name</a> = <span class="stringliteral">&quot;Century&quot;</span>, .color = <a name="a11"></a><a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>};</div>
-<div class="line">    <a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font5 = {.<a name="a12"></a><a class="code" href="structlxw__chart__font.html#abca1be9b66dcd9bc4558cc97556456b5">bold</a>      = <a name="a13"></a><a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>,</div>
+<div class="line">    <a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font5 = {.<a name="a12"></a><a class="code" href="structlxw__chart__font.html#a6ed9b251728efcaf0e8ee460377ab17f">rotation</a> = -30};</div>
+<div class="line">    <a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font6 = {.<a name="a13"></a><a class="code" href="structlxw__chart__font.html#abca1be9b66dcd9bc4558cc97556456b5">bold</a>      = <a name="a14"></a><a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>,</div>
 <div class="line">                            .italic    = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>,</div>
 <div class="line">                            .underline = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>,</div>
 <div class="line">                            .color     = 0x7030A0};</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write the chart title with a font. */</span></div>
-<div class="line">    <a name="a14"></a><a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, <span class="stringliteral">&quot;Test Results&quot;</span>);</div>
-<div class="line">    <a name="a15"></a><a class="code" href="chart_8h.html#ab3cde364ea66bb2edfae426299fe7dc7">chart_title_set_name_font</a>(chart, &amp;font1);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Write the X axis with a font. */</span></div>
-<div class="line">    <a name="a16"></a><a class="code" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a>(chart-&gt;<a name="a17"></a><a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <span class="stringliteral">&quot;Month&quot;</span>);</div>
-<div class="line">    <a name="a18"></a><a class="code" href="chart_8h.html#ac4be8325cbcaeddda0a92f1809d8156d">chart_axis_set_name_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, &amp;font2);</div>
-<div class="line">    <a name="a19"></a><a class="code" href="chart_8h.html#a01f1ac1674089e0dc219dc3214b911c4">chart_axis_set_num_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, &amp;font3);</div>
+<div class="line">    <a name="a15"></a><a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, <span class="stringliteral">&quot;Test Results&quot;</span>);</div>
+<div class="line">    <a name="a16"></a><a class="code" href="chart_8h.html#ab3cde364ea66bb2edfae426299fe7dc7">chart_title_set_name_font</a>(chart, &amp;font1);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write the Y axis with a font. */</span></div>
-<div class="line">    <a class="code" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a>(chart-&gt;<a name="a20"></a><a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, <span class="stringliteral">&quot;Units&quot;</span>);</div>
-<div class="line">    <a class="code" href="chart_8h.html#ac4be8325cbcaeddda0a92f1809d8156d">chart_axis_set_name_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, &amp;font4);</div>
-<div class="line">    <a class="code" href="chart_8h.html#a01f1ac1674089e0dc219dc3214b911c4">chart_axis_set_num_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, &amp;font5);</div>
+<div class="line">    <a name="a17"></a><a class="code" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a>(chart-&gt;<a name="a18"></a><a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, <span class="stringliteral">&quot;Units&quot;</span>);</div>
+<div class="line">    <a name="a19"></a><a class="code" href="chart_8h.html#ac4be8325cbcaeddda0a92f1809d8156d">chart_axis_set_name_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, &amp;font2);</div>
+<div class="line">    <a name="a20"></a><a class="code" href="chart_8h.html#a01f1ac1674089e0dc219dc3214b911c4">chart_axis_set_num_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, &amp;font3);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Write the X axis with a font. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a>(chart-&gt;<a name="a21"></a><a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <span class="stringliteral">&quot;Month&quot;</span>);</div>
+<div class="line">    <a class="code" href="chart_8h.html#ac4be8325cbcaeddda0a92f1809d8156d">chart_axis_set_name_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, &amp;font4);</div>
+<div class="line">    <a class="code" href="chart_8h.html#a01f1ac1674089e0dc219dc3214b911c4">chart_axis_set_num_font</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, &amp;font5);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Display the chart legend at the bottom of the chart. */</span></div>
+<div class="line">    <a name="a22"></a><a class="code" href="chart_8h.html#af1382251c31fd8f97e19048acf5db0a1">chart_legend_set_position</a>(chart, <a name="a23"></a><a class="code" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22ad8ecb14a4843e242f037b00c8d28c8ec">LXW_CHART_LEGEND_BOTTOM</a>);</div>
+<div class="line">    <a name="a24"></a><a class="code" href="chart_8h.html#ac24ae880bab2fa949d8b84a25fc9a457">chart_legend_set_font</a>(chart, &amp;font6);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Insert the chart into the worksheet. */</span></div>
-<div class="line">    <a name="a21"></a><a class="code" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a>(worksheet, <a name="a22"></a><a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;E9&quot;</span>), chart);</div>
+<div class="line">    <a name="a25"></a><a class="code" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a>(worksheet, <a name="a26"></a><a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;E9&quot;</span>), chart);</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> <a name="a23"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="keywordflow">return</span> <a name="a27"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
