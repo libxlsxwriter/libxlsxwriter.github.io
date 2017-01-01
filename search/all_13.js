@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['width',['width',['../structlxw__chart__line.html#ab548d8a04d084df9f14cea072111b052',1,'lxw_chart_line']]],
   ['workbook_2eh',['workbook.h',['../workbook_8h.html',1,'']]],
   ['workbook_5fadd_5fchart',['workbook_add_chart',['../workbook_8h.html#a63b001ecefdbc4417986a3e344657726',1,'workbook.h']]],
   ['workbook_5fadd_5fformat',['workbook_add_format',['../workbook_8h.html#a279a5d7075d09a3931aae9782afede33',1,'workbook.h']]],
