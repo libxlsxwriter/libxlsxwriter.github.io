@@ -172,6 +172,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ade5392d9d303458c48420f89cc3a8b5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ade5392d9d303458c48420f89cc3a8b5e">chart_axis_set_fill</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, <a class="el" href="structlxw__chart__fill.html">lxw_chart_fill</a> *fill)</td></tr>
 <tr class="memdesc:ade5392d9d303458c48420f89cc3a8b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the fill properties for a chart axis.  <a href="#ade5392d9d303458c48420f89cc3a8b5e">More...</a><br /></td></tr>
 <tr class="separator:ade5392d9d303458c48420f89cc3a8b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae268cf39e3ffaa6390a00f9e58aa83a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ae268cf39e3ffaa6390a00f9e58aa83a2">chart_axis_set_reverse</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis)</td></tr>
+<tr class="memdesc:ae268cf39e3ffaa6390a00f9e58aa83a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse the order of the axis categories or values.  <a href="#ae268cf39e3ffaa6390a00f9e58aa83a2">More...</a><br /></td></tr>
+<tr class="separator:ae268cf39e3ffaa6390a00f9e58aa83a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a709657333cfdaf12066fa2bf68e92663"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a709657333cfdaf12066fa2bf68e92663">chart_axis_set_min</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, double min)</td></tr>
+<tr class="memdesc:a709657333cfdaf12066fa2bf68e92663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minimum value for a chart axis.  <a href="#a709657333cfdaf12066fa2bf68e92663">More...</a><br /></td></tr>
+<tr class="separator:a709657333cfdaf12066fa2bf68e92663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9339204d64e055adef0302115b5e4281"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a9339204d64e055adef0302115b5e4281">chart_axis_set_max</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, double max)</td></tr>
+<tr class="memdesc:a9339204d64e055adef0302115b5e4281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the maximum value for a chart axis.  <a href="#a9339204d64e055adef0302115b5e4281">More...</a><br /></td></tr>
+<tr class="separator:a9339204d64e055adef0302115b5e4281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac27a9a20daf4f0a6be8595fbd7f41151"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ac27a9a20daf4f0a6be8595fbd7f41151">chart_axis_set_log_base</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint16_t log_base)</td></tr>
+<tr class="memdesc:ac27a9a20daf4f0a6be8595fbd7f41151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log base of the axis range.  <a href="#ac27a9a20daf4f0a6be8595fbd7f41151">More...</a><br /></td></tr>
+<tr class="separator:ac27a9a20daf4f0a6be8595fbd7f41151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0a0b3eadc51a608c76bb9473943e191"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, const char *name)</td></tr>
 <tr class="memdesc:aa0a0b3eadc51a608c76bb9473943e191"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the title of the chart.  <a href="#aa0a0b3eadc51a608c76bb9473943e191">More...</a><br /></td></tr>
 <tr class="separator:aa0a0b3eadc51a608c76bb9473943e191"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -845,6 +857,152 @@ Functions</h2></td></tr>
 <img src="chart_axis_set_fill.png" alt="chart_axis_set_fill.png"/>
 </div>
 <p>For more information see <a class="el" href="working_with_charts.html#chart_fills">Chart formatting: Fill</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae268cf39e3ffaa6390a00f9e58aa83a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_reverse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Reverse the order of the axis categories or values:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#ae268cf39e3ffaa6390a00f9e58aa83a2">chart_axis_set_reverse</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_reverse.png" alt="chart_reverse.png"/>
+</div>
+<p>Applicable to category, date and value axes. </p>
+
+</div>
+</div>
+<a class="anchor" id="a709657333cfdaf12066fa2bf68e92663"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_min </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>min</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object. </td></tr>
+    <tr><td class="paramname">min</td><td>Minimum value for chart axis. Value axes only.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the minimum value for the axis range.</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a709657333cfdaf12066fa2bf68e92663">chart_axis_set_min</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, -4);</div>
+<div class="line"><a class="code" href="chart_8h.html#a9339204d64e055adef0302115b5e4281">chart_axis_set_max</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, 21);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_max_min.png" alt="chart_max_min.png"/>
+</div>
+<dl class="section note"><dt>Note</dt><dd>This function is applicable to value and date axes only. It isn't applicable to the horizontal category axis in the above example. For more information see <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9339204d64e055adef0302115b5e4281"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_max </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object. </td></tr>
+    <tr><td class="paramname">max</td><td>Maximum value for chart axis. Value axes only.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the maximum value for the axis range.</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a709657333cfdaf12066fa2bf68e92663">chart_axis_set_min</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, -4);</div>
+<div class="line"><a class="code" href="chart_8h.html#a9339204d64e055adef0302115b5e4281">chart_axis_set_max</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, 21);</div>
+</div><!-- fragment --><p>See the above image.</p>
+<dl class="section note"><dt>Note</dt><dd>This function is applicable to value and date axes only. It isn't applicable to the horizontal category axis in the above example. For more information see <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac27a9a20daf4f0a6be8595fbd7f41151"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_log_base </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>log_base</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object. </td></tr>
+    <tr><td class="paramname">log_base</td><td>The log base for value axis. Value axes only.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the log base for the axis:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#ac27a9a20daf4f0a6be8595fbd7f41151">chart_axis_set_log_base</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, 10);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_log_base.png" alt="chart_log_base.png"/>
+</div>
+<p>The allowable range of values for the log base in Excel is between 2 and 1000.</p>
+<dl class="section note"><dt>Note</dt><dd>This function is applicable to value and date axes only. It isn't applicable to the horizontal category axis in the above example. For more information see <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </dd></dl>
 
 </div>
 </div>
