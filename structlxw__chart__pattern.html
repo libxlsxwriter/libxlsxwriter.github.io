@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: lxw_chart Struct Reference</title>
+<title>libxlsxwriter: lxw_chart_pattern Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -78,49 +78,63 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">lxw_chart Struct Reference</div>  </div>
+<div class="title">lxw_chart_pattern Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Struct to represent an Excel chart.  
- <a href="structlxw__chart.html#details">More...</a></p>
+<p>Struct to represent a chart pattern.  
+ <a href="structlxw__chart__pattern.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The members of the <a class="el" href="structlxw__chart.html" title="Struct to represent an Excel chart. ">lxw_chart</a> struct aren't modified directly. Instead the chart properties are set by calling the functions shown in <a class="el" href="chart_8h.html" title="Functions related to adding data to and configuring a chart. ">chart.h</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_8c-example.html#_a4">chart.c</a>, <a class="el" href="chart_area_8c-example.html#_a10">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#_a10">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#_a10">chart_column.c</a>, <a class="el" href="chart_doughnut_8c-example.html#_a10">chart_doughnut.c</a>, <a class="el" href="chart_fonts_8c-example.html#_a4">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#_a10">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#_a3">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#_a10">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#_a10">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#_a10">chart_scatter.c</a>, and <a class="el" href="chart_styles_8c-example.html#_a5">chart_styles.c</a>.</dd>
+<div class="textblock"><p>See <a class="el" href="working_with_charts.html#chart_patterns">Chart formatting: Pattern</a>. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_pattern_8c-example.html#_a18">chart_pattern.c</a>.</dd>
 </dl></div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a17fa7931e6825a60de50444438e7f718"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a></td></tr>
-<tr class="separator:a17fa7931e6825a60de50444438e7f718"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec951bda729ea8184fa0827c5f091f37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a></td></tr>
-<tr class="separator:aec951bda729ea8184fa0827c5f091f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6b955efa0f4fc0df8e6c6ff38a3f30d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="format_8h.html#a422d719f90588b17d1399eaced80ae31">lxw_color_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__pattern.html#ac6b955efa0f4fc0df8e6c6ff38a3f30d">fg_color</a></td></tr>
+<tr class="separator:ac6b955efa0f4fc0df8e6c6ff38a3f30d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b30bd570bc877324f9b4ff4b0732841"><td class="memItemLeft" align="right" valign="top"><a class="el" href="format_8h.html#a422d719f90588b17d1399eaced80ae31">lxw_color_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__pattern.html#a4b30bd570bc877324f9b4ff4b0732841">bg_color</a></td></tr>
+<tr class="separator:a4b30bd570bc877324f9b4ff4b0732841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad89b0a7ee149372b44b42519d9ae6d80"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__pattern.html#ad89b0a7ee149372b44b42519d9ae6d80">type</a></td></tr>
+<tr class="separator:ad89b0a7ee149372b44b42519d9ae6d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
-<a class="anchor" id="a17fa7931e6825a60de50444438e7f718"></a>
+<a class="anchor" id="ac6b955efa0f4fc0df8e6c6ff38a3f30d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a>* lxw_chart::x_axis</td>
+          <td class="memname"><a class="el" href="format_8h.html#a422d719f90588b17d1399eaced80ae31">lxw_color_t</a> lxw_chart_pattern::fg_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>A pointer to the chart x_axis object which can be used in functions that configures the X axis. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_area_8c-example.html#a20">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a20">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a20">chart_column.c</a>, <a class="el" href="chart_fonts_8c-example.html#a21">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a20">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a16">chart_pattern.c</a>, <a class="el" href="chart_radar_8c-example.html#a20">chart_radar.c</a>, and <a class="el" href="chart_scatter_8c-example.html#a20">chart_scatter.c</a>.</dd>
-</dl>
+<p>The pattern foreground color. See <a class="el" href="working_with_colors.html">Working with Colors</a>. </p>
+
 </div>
 </div>
-<a class="anchor" id="aec951bda729ea8184fa0827c5f091f37"></a>
+<a class="anchor" id="a4b30bd570bc877324f9b4ff4b0732841"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a>* lxw_chart::y_axis</td>
+          <td class="memname"><a class="el" href="format_8h.html#a422d719f90588b17d1399eaced80ae31">lxw_color_t</a> lxw_chart_pattern::bg_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>A pointer to the chart y_axis object which can be used in functions that configures the Y axis. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_area_8c-example.html#a21">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a21">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a21">chart_column.c</a>, <a class="el" href="chart_fonts_8c-example.html#a18">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a21">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a17">chart_pattern.c</a>, <a class="el" href="chart_radar_8c-example.html#a21">chart_radar.c</a>, and <a class="el" href="chart_scatter_8c-example.html#a21">chart_scatter.c</a>.</dd>
+<p>The pattern background color. See <a class="el" href="working_with_colors.html">Working with Colors</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad89b0a7ee149372b44b42519d9ae6d80"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t lxw_chart_pattern::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The pattern type. See <a class="el" href="chart_8h.html#af4881c046f6e6b9207c14e1da970ef84" title="Chart pattern types. ">lxw_chart_pattern_type</a>. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_pattern_8c-example.html#a19">chart_pattern.c</a>.</dd>
 </dl>
 </div>
 </div>

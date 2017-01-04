@@ -1,6 +1,7 @@
 var searchData=
 [
   ['frequently_20asked_20questions',['Frequently Asked Questions',['../faq.html',1,'']]],
+  ['fg_5fcolor',['fg_color',['../structlxw__chart__pattern.html#ac6b955efa0f4fc0df8e6c6ff38a3f30d',1,'lxw_chart_pattern']]],
   ['format_2eh',['format.h',['../format_8h.html',1,'']]],
   ['format_5fcells',['format_cells',['../structlxw__protection.html#accce8fbb8b1dad731adbe8234870004e',1,'lxw_protection']]],
   ['format_5fcolumns',['format_columns',['../structlxw__protection.html#a83c3fd434abb2bf45c2d46047250dac9',1,'lxw_protection']]],

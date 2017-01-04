@@ -86,6 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li class="level2"><a href="#chart_lines">Chart formatting: Line</a></li>
 <li class="level2"><a href="#chart_borders">Chart formatting: Border</a></li>
 <li class="level2"><a href="#chart_fills">Chart formatting: Fill</a></li>
+<li class="level2"><a href="#chart_patterns">Chart formatting: Pattern</a></li>
 </ul>
 </li>
 <li class="level1"><a href="#ww_charts_limitations">Chart Limitations</a></li>
@@ -196,6 +197,7 @@ Chart Formatting</h1>
 <li>Font</li>
 <li>Line/Border</li>
 <li>Fill</li>
+<li>Pattern</li>
 </ul>
 <p>For example:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__chart__line.html">lxw_chart_line</a> chart_line  = {.<a class="code" href="structlxw__chart__line.html#a2619e85b4ece41f55302b5bc8157d738">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>};</div>
@@ -358,7 +360,7 @@ Chart formatting: Border</h2>
 <h2><a class="anchor" id="chart_fills"></a>
 Chart formatting: Fill</h2>
 <p>The fill format is used to specify properties of chart objects that internal boundaries such as a column chart.</p>
-<p>A chart fill <a class="el" href="structlxw__chart__fill.html" title="Struct to represent a chart line. ">lxw_chart_fill</a> struct with default properties is:</p>
+<p>A chart fill <a class="el" href="structlxw__chart__fill.html" title="Struct to represent a chart fill. ">lxw_chart_fill</a> struct with default properties is:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__chart__fill.html">lxw_chart_fill</a> fill = {.<a class="code" href="structlxw__chart__fill.html#a97c6c00984b20f692af6b6c1ac2cc3b4">none</a>         = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>,</div>
 <div class="line">                       .color        = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba13bdb1312b42e892cd29dfeb79ec8451">LXW_COLOR_BLACK</a>,</div>
 <div class="line">                       .transparency = 0};</div>
@@ -371,7 +373,7 @@ Chart formatting: Fill</h2>
 </div><!-- fragment --><div class="image">
 <img src="chart_fill1.png" alt="chart_fill1.png"/>
 </div>
-<p>The <code>color</code> member sets the color of the fill area. It can be a HTML style RGB color or a limited number of named colors, (see <a class="el" href="working_with_colors.html">Working with Colors</a> for more information):</p>
+<p>The <code>color</code> member sets the color of the fill area. It can be a HTML style RGB color or a limited number of named colors (see <a class="el" href="working_with_colors.html">Working with Colors</a> for more information):</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__chart__fill.html">lxw_chart_fill</a> fill = {.<a class="code" href="structlxw__chart__fill.html#a1780f71f3de68cb03e2f2825952283e4">color</a> = 0xFF9900};</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="chart_8h.html#a6f1d7cd452a4a3f87046468ce5588bfd">chart_series_set_fill</a>(series, &amp;fill);</div>
@@ -395,6 +397,87 @@ Chart formatting: Fill</h2>
 </div><!-- fragment --><div class="image">
 <img src="chart_fill4.png" alt="chart_fill4.png"/>
 </div>
+<h2><a class="anchor" id="chart_patterns"></a>
+Chart formatting: Pattern</h2>
+<p>The pattern fill is used to specify pattern filled areas of chart objects such as the interior of a column or the background of the chart itself.</p>
+<p>A chart pattern <a class="el" href="structlxw__chart__pattern.html" title="Struct to represent a chart pattern. ">lxw_chart_pattern</a> struct with default properties is:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__chart__pattern.html">lxw_chart_pattern</a> pattern = {.<a class="code" href="structlxw__chart__pattern.html#ad89b0a7ee149372b44b42519d9ae6d80">type</a>      = <a class="code" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da5a62210a0468e996272d93cbf1cb9209">LXW_CHART_PATTERN_NONE</a>,</div>
+<div class="line">                             .fg_color  = LXW_COLOR_NONE,;</div>
+<div class="line">                             .bg_color  = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba77f6d9e520849cf6c25a7f33cf303da2">LXW_COLOR_WHITE</a>};</div>
+</div><!-- fragment --><p>Where the members are:</p>
+<ul>
+<li><code>pattern</code>: The pattern to be applied (required).</li>
+<li><code>fg_color</code>: The foreground color of the pattern (required).</li>
+<li><code>bg_color</code>: The background color (optional, defaults to white).</li>
+</ul>
+<p>The foreground color, <code>fg_color</code>, is a required parameter and can be HTML style RGB color or a limited number of named colors (see <a class="el" href="working_with_colors.html">Working with Colors</a> for more information):</p>
+<p>The background color, <code>bg_color</code>, is optional and defaults to LXW_COLOR_WHITE.</p>
+<p>For example:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__chart__pattern.html">lxw_chart_pattern</a> pattern1 = {.<a class="code" href="structlxw__chart__pattern.html#ad89b0a7ee149372b44b42519d9ae6d80">type</a> = <a class="code" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da533285cbc53748d985e923ff1ccc4650">LXW_CHART_PATTERN_SHINGLE</a>,</div>
+<div class="line">                              .fg_color = 0x804000,</div>
+<div class="line">                              .bg_color = 0XC68C53};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="structlxw__chart__pattern.html">lxw_chart_pattern</a> pattern2 = {.<a class="code" href="structlxw__chart__pattern.html#ad89b0a7ee149372b44b42519d9ae6d80">type</a> = <a class="code" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9daf528922e8775b461b61eb077644c2478">LXW_CHART_PATTERN_HORIZONTAL_BRICK</a>,</div>
+<div class="line">                              .fg_color = 0XB30000,</div>
+<div class="line">                              .bg_color = 0XFF6666};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a36f77a797d545b07a656965e4bf2978b">chart_series_set_pattern</a>(series1, &amp;pattern1);</div>
+<div class="line"><a class="code" href="chart_8h.html#a36f77a797d545b07a656965e4bf2978b">chart_series_set_pattern</a>(series2, &amp;pattern2);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_pattern.png" alt="chart_pattern.png"/>
+</div>
+<p>The following patterns <a class="el" href="chart_8h.html#af4881c046f6e6b9207c14e1da970ef84" title="Chart pattern types. ">lxw_chart_pattern_type</a> can be applied:</p>
+<ul>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9dac24f9a61bd0f1347d0a71413d7482086">LXW_CHART_PATTERN_PERCENT_5</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da3f864e01a4b50b5ed894c58c74ea5044">LXW_CHART_PATTERN_PERCENT_10</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da343b42b49d911c18661ae673c0714252">LXW_CHART_PATTERN_PERCENT_20</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da0f64d55a296609974db6ba350deb5be8">LXW_CHART_PATTERN_PERCENT_25</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da21eba92923b8d4aaa59c09263ad536f1">LXW_CHART_PATTERN_PERCENT_30</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da71df56fba88ea1d6d2887050e88ba189">LXW_CHART_PATTERN_PERCENT_40</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da12e7c7ad9f342c0f0be98fd4d20fcc74">LXW_CHART_PATTERN_PERCENT_50</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9daaaf89778f37e47326b8d4de5db49f185">LXW_CHART_PATTERN_PERCENT_60</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da3a8d32a58e356e7e5021fbff51cafe8f">LXW_CHART_PATTERN_PERCENT_70</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da00b805977a00752ba3980145da8d3f23">LXW_CHART_PATTERN_PERCENT_75</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da76073462d50186cbe7c8f78943419fd6">LXW_CHART_PATTERN_PERCENT_80</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da48f40a9e6662b6c734b1062e0850ad5e">LXW_CHART_PATTERN_PERCENT_90</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da6278b9d0eb4a4e120ad0efca5fe21ea8">LXW_CHART_PATTERN_LIGHT_DOWNWARD_DIAGONAL</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da9295301a4fde1d07b912f064104ac580">LXW_CHART_PATTERN_LIGHT_UPWARD_DIAGONAL</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9daa07a2ea802f5d1e31f50c1b90bccf66c">LXW_CHART_PATTERN_DARK_DOWNWARD_DIAGONAL</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da2bab5bb1568aa4488b08b0bf07ac1b45">LXW_CHART_PATTERN_DARK_UPWARD_DIAGONAL</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da66cae16b81e7d20416a4a570ef8d0c16">LXW_CHART_PATTERN_WIDE_DOWNWARD_DIAGONAL</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da0b278b42ec1f8332f0b87cd65dda9310">LXW_CHART_PATTERN_WIDE_UPWARD_DIAGONAL</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da9d186fc40d05a7bbd1c319d0baea0a0b">LXW_CHART_PATTERN_LIGHT_VERTICAL</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9dacf0ba4ae24b26c4444210d15bee98190">LXW_CHART_PATTERN_LIGHT_HORIZONTAL</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da710d8a2e64454b86da691cfa9b78f185">LXW_CHART_PATTERN_NARROW_VERTICAL</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9dad6bb75b692915b7a31932e7ad216002a">LXW_CHART_PATTERN_NARROW_HORIZONTAL</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da92554731f397b77e05349819d33e6a9e">LXW_CHART_PATTERN_DARK_VERTICAL</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da52616899771a9e22e975b66238685eaf">LXW_CHART_PATTERN_DARK_HORIZONTAL</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da2bed857ed24d9e9a9c1f2ac46f9f3442">LXW_CHART_PATTERN_DASHED_DOWNWARD_DIAGONAL</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da1c8fedb44808807126126936bcf70e94">LXW_CHART_PATTERN_DASHED_UPWARD_DIAGONAL</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9dad1c1816ae52e86e51878ec85a081ece2">LXW_CHART_PATTERN_DASHED_HORIZONTAL</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da6a42c81611ef25fc43702ddc6dc846ee">LXW_CHART_PATTERN_DASHED_VERTICAL</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9dafa5c51d0c66faa4f7164598ff4205c53">LXW_CHART_PATTERN_SMALL_CONFETTI</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9dae36317ed4f7ceea17731b4b9ac9b5619">LXW_CHART_PATTERN_LARGE_CONFETTI</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da5e9e62b299164b226e3530a17927ccde">LXW_CHART_PATTERN_ZIGZAG</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da8e355806e2f97b12bce7ca2c29e1fcf0">LXW_CHART_PATTERN_WAVE</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9dae9ee90da2c3750f667f915b608d0b000">LXW_CHART_PATTERN_DIAGONAL_BRICK</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9daf528922e8775b461b61eb077644c2478">LXW_CHART_PATTERN_HORIZONTAL_BRICK</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9dac59d890caaa9fd94368a5f9c22b46065">LXW_CHART_PATTERN_WEAVE</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da2f131a3e22118542890b8814ecee7746">LXW_CHART_PATTERN_PLAID</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da9144157cacfbce24aa06c319f3d7f3ce">LXW_CHART_PATTERN_DIVOT</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da2990d42f2dec7d335bbd53d0396b33b4">LXW_CHART_PATTERN_DOTTED_GRID</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da292c50f4d6e9812bb171c49211b2f5d0">LXW_CHART_PATTERN_DOTTED_DIAMOND</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da533285cbc53748d985e923ff1ccc4650">LXW_CHART_PATTERN_SHINGLE</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da0e511c291add359d48f5b0a1ca833d9b">LXW_CHART_PATTERN_TRELLIS</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da91a25e4f50afc2f5c3b0682e4a826420">LXW_CHART_PATTERN_SPHERE</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da8273b305ea014e11024c5b67c9c34ca0">LXW_CHART_PATTERN_SMALL_GRID</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da96f095cb93bbb612a319db8d8939f2a0">LXW_CHART_PATTERN_LARGE_GRID</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9dae05b9a175dd917ff66adc28b9b3a0e62">LXW_CHART_PATTERN_SMALL_CHECK</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da0d2c5932327db4dd570d8c88b3d63263">LXW_CHART_PATTERN_LARGE_CHECK</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da49fa41a6340d9fb57a75d54dd1a840fc">LXW_CHART_PATTERN_OUTLINED_DIAMOND</a></li>
+<li><a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9da3177756848e745e5c7cd06592faed36d">LXW_CHART_PATTERN_SOLID_DIAMOND</a></li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>If a pattern fill is used on a chart object it overrides the solid fill properties of the object.</dd></dl>
 <h1><a class="anchor" id="ww_charts_limitations"></a>
 Chart Limitations</h1>
 <p>The following chart features aren't currently supported in libxlsxwriter but will be in time. See the <a href="https://github.com/jmcnamara/libxlsxwriter/issues/51">GitHub Chart Feature Request</a>.</p>
