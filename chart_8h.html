@@ -196,6 +196,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae268cf39e3ffaa6390a00f9e58aa83a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ae268cf39e3ffaa6390a00f9e58aa83a2">chart_axis_set_reverse</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis)</td></tr>
 <tr class="memdesc:ae268cf39e3ffaa6390a00f9e58aa83a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse the order of the axis categories or values.  <a href="#ae268cf39e3ffaa6390a00f9e58aa83a2">More...</a><br /></td></tr>
 <tr class="separator:ae268cf39e3ffaa6390a00f9e58aa83a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b982a99851997f9b090aaf0c1dfbd74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a5b982a99851997f9b090aaf0c1dfbd74">chart_axis_off</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis)</td></tr>
+<tr class="memdesc:a5b982a99851997f9b090aaf0c1dfbd74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off/hide an axis.  <a href="#a5b982a99851997f9b090aaf0c1dfbd74">More...</a><br /></td></tr>
+<tr class="separator:a5b982a99851997f9b090aaf0c1dfbd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a709657333cfdaf12066fa2bf68e92663"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a709657333cfdaf12066fa2bf68e92663">chart_axis_set_min</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, double min)</td></tr>
 <tr class="memdesc:a709657333cfdaf12066fa2bf68e92663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minimum value for a chart axis.  <a href="#a709657333cfdaf12066fa2bf68e92663">More...</a><br /></td></tr>
 <tr class="separator:a709657333cfdaf12066fa2bf68e92663"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1250,6 +1253,33 @@ Functions</h2></td></tr>
 </div>
 <p>Applicable to category, date and value axes. </p>
 
+</div>
+</div>
+<a class="anchor" id="a5b982a99851997f9b090aaf0c1dfbd74"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_off </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Turn off, hide, a chart axis:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a5b982a99851997f9b090aaf0c1dfbd74">chart_axis_off</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_axis_off.png" alt="chart_axis_off.png"/>
+</div>
+ 
 </div>
 </div>
 <a class="anchor" id="a709657333cfdaf12066fa2bf68e92663"></a>
