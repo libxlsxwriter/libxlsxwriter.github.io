@@ -971,7 +971,7 @@ Functions</h2></td></tr>
 <p>The name parameter can also be a formula such as <code>=Sheet1!$A$1</code> to point to a cell in the workbook that contains the name:</p>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <span class="stringliteral">&quot;=Sheet1!$B1$1&quot;</span>);</div>
 </div><!-- fragment --><p>See also the <code><a class="el" href="chart_8h.html#ae3cfd6a286f3b717e68d4bca348387ff" title="Set a chart axis name formula using row and column values. ">chart_axis_set_name_range()</a></code> function to see how to set the name formula programmatically.</p>
-<p>This function is applicable to category, date and value axes. </p>
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_area_8c-example.html#a19">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a19">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a19">chart_column.c</a>, <a class="el" href="chart_fonts_8c-example.html#a17">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a19">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a15">chart_pattern.c</a>, <a class="el" href="chart_radar_8c-example.html#a19">chart_radar.c</a>, and <a class="el" href="chart_scatter_8c-example.html#a19">chart_scatter.c</a>.</dd>
 </dl>
 </div>
@@ -1023,7 +1023,8 @@ Functions</h2></td></tr>
 <p>The <code>chart_axis_set_name_range()</code> function can be used to set an axis name range and is an alternative to using <code><a class="el" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130" title="Set the name caption of the an axis. ">chart_axis_set_name()</a></code> and a string formula:</p>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#ae3cfd6a286f3b717e68d4bca348387ff">chart_axis_set_name_range</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <span class="stringliteral">&quot;Sheet1&quot;</span>, 1, 0);</div>
 <div class="line"><a class="code" href="chart_8h.html#ae3cfd6a286f3b717e68d4bca348387ff">chart_axis_set_name_range</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, <span class="stringliteral">&quot;Sheet1&quot;</span>, 2, 0);</div>
-</div><!-- fragment --> 
+</div><!-- fragment --><p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
 </div>
 </div>
 <a class="anchor" id="ac4be8325cbcaeddda0a92f1809d8156d"></a>
@@ -1064,7 +1065,8 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="chart_axis_set_name_font.png" alt="chart_axis_set_name_font.png"/>
 </div>
-<p>For more information see <a class="el" href="working_with_charts.html#chart_fonts">Chart formatting: Fonts</a>. </p>
+<p>For more information see <a class="el" href="working_with_charts.html#chart_fonts">Chart formatting: Fonts</a>.</p>
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_fonts_8c-example.html#a19">chart_fonts.c</a>.</dd>
 </dl>
 </div>
@@ -1106,7 +1108,8 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="chart_axis_set_num_font.png" alt="chart_axis_set_num_font.png"/>
 </div>
-<p>For more information see <a class="el" href="working_with_charts.html#chart_fonts">Chart formatting: Fonts</a>. </p>
+<p>For more information see <a class="el" href="working_with_charts.html#chart_fonts">Chart formatting: Fonts</a>.</p>
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_fonts_8c-example.html#a20">chart_fonts.c</a>.</dd>
 </dl>
 </div>
@@ -1149,7 +1152,8 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="chart_axis_set_line.png" alt="chart_axis_set_line.png"/>
 </div>
-<p>For more information see <a class="el" href="working_with_charts.html#chart_lines">Chart formatting: Line</a>. </p>
+<p>For more information see <a class="el" href="working_with_charts.html#chart_lines">Chart formatting: Line</a>.</p>
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 
 </div>
 </div>
@@ -1190,7 +1194,8 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="chart_axis_set_fill.png" alt="chart_axis_set_fill.png"/>
 </div>
-<p>For more information see <a class="el" href="working_with_charts.html#chart_fills">Chart formatting: Fill</a>. </p>
+<p>For more information see <a class="el" href="working_with_charts.html#chart_fills">Chart formatting: Fill</a>.</p>
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 
 </div>
 </div>
@@ -1226,7 +1231,8 @@ Functions</h2></td></tr>
 </dl>
 <p>Set the pattern properties of a chart axis:</p>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a194bc7498752a67cd6c523c1e090b54f">chart_axis_set_pattern</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, &amp;pattern);</div>
-</div><!-- fragment --><p>For more information see <a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9d" title="Chart pattern types. ">lxw_chart_pattern_type</a> and <a class="el" href="working_with_charts.html#chart_patterns">Chart formatting: Pattern</a>. </p>
+</div><!-- fragment --><p>For more information see <a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9d" title="Chart pattern types. ">lxw_chart_pattern_type</a> and <a class="el" href="working_with_charts.html#chart_patterns">Chart formatting: Pattern</a>.</p>
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 
 </div>
 </div>
@@ -1254,7 +1260,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="chart_reverse.png" alt="chart_reverse.png"/>
 </div>
-<p>Applicable to category, date and value axes. </p>
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 
 </div>
 </div>
@@ -1282,7 +1288,8 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="chart_axis_off.png" alt="chart_axis_off.png"/>
 </div>
- 
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
 </div>
 </div>
 <a class="anchor" id="af9292ba5b24b01a55529d8b5a0afa24f"></a>
@@ -1325,7 +1332,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="chart_axis_set_position.png" alt="chart_axis_set_position.png"/>
 </div>
-<p>Applicable to category axes only. </p>
+<p><b>Axis types</b>: This function is applicable to category axes only. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 
 </div>
 </div>
@@ -1365,7 +1372,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="chart_max_min.png" alt="chart_max_min.png"/>
 </div>
-<dl class="section note"><dt>Note</dt><dd>This function is applicable to value and date axes only. It isn't applicable to the horizontal category axis in the above example. For more information see <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </dd></dl>
+<p><b>Axis types</b>: This function is applicable to value and date axes only. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 
 </div>
 </div>
@@ -1403,7 +1410,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a709657333cfdaf12066fa2bf68e92663">chart_axis_set_min</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, -4);</div>
 <div class="line"><a class="code" href="chart_8h.html#a9339204d64e055adef0302115b5e4281">chart_axis_set_max</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, 21);</div>
 </div><!-- fragment --><p>See the above image.</p>
-<dl class="section note"><dt>Note</dt><dd>This function is applicable to value and date axes only. It isn't applicable to the horizontal category axis in the above example. For more information see <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </dd></dl>
+<p><b>Axis types</b>: This function is applicable to value and date axes only. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 
 </div>
 </div>
@@ -1443,7 +1450,7 @@ Functions</h2></td></tr>
 <img src="chart_log_base.png" alt="chart_log_base.png"/>
 </div>
 <p>The allowable range of values for the log base in Excel is between 2 and 1000.</p>
-<dl class="section note"><dt>Note</dt><dd>This function is applicable to value and date axes only. It isn't applicable to the horizontal category axis in the above example. For more information see <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </dd></dl>
+<p><b>Axis types</b>: This function is applicable to value axes only. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 
 </div>
 </div>
@@ -1485,7 +1492,8 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="chart_gridline1.png" alt="chart_gridline1.png"/>
 </div>
- 
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
 </div>
 </div>
 <a class="anchor" id="aa53081409c448c71a535bd5dd1c0cfeb"></a>
@@ -1527,7 +1535,8 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="chart_gridline2.png" alt="chart_gridline2.png"/>
 </div>
- 
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
 </div>
 </div>
 <a class="anchor" id="a1ab904dd305f6308811a3a92ce71b5ac"></a>
@@ -1579,7 +1588,8 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="chart_gridline3.png" alt="chart_gridline3.png"/>
 </div>
-<p>For more information see <a class="el" href="working_with_charts.html#chart_lines">Chart formatting: Line</a>. </p>
+<p>For more information see <a class="el" href="working_with_charts.html#chart_lines">Chart formatting: Line</a>.</p>
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 
 </div>
 </div>
@@ -1614,7 +1624,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p>Format the line properties of the minor gridlines of a chart, see the example above.</p>
-<p>For more information see <a class="el" href="working_with_charts.html#chart_lines">Chart formatting: Line</a>. </p>
+<p>For more information see <a class="el" href="working_with_charts.html#chart_lines">Chart formatting: Line</a>.</p>
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 
 </div>
 </div>

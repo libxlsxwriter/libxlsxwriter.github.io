@@ -129,9 +129,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h1><a class="anchor" id="ww_charts_axes"></a>
 Chart Value and Category Axes</h1>
 <p>When working with charts it is important to understand how Excel differentiates between a chart axis that is used for series categories and a chart axis that is used for series values.</p>
-<p>In the example above the X axis is the <b>category</b> axis and each of the values is evenly spaced and sequential. The Y axis is the <b>value</b> axis and points are displayed according to their value.</p>
-<p>Excel treats these two types of axis differently and exposes different properties for each.</p>
-<p>As such, some of the <code>libxlsxwriter</code> axis properties can be set for a value axis, some can be set for a category axis and some properties can be set for both. The documentation calls out the type of axis to which functions apply.</p>
+<p>In the majority of Excel charts the X axis is the <b>category</b> axis and each of the values is evenly spaced and sequential. The Y axis is the <b>value</b> axis and points are displayed according to their value:</p>
+<div class="image">
+<img src="chart_axes01.png" alt="chart_axes01.png"/>
+</div>
+<p>Excel treats these two types of axis differently and exposes different properties for each. For example, here are the properties for a category axis:</p>
+<div class="image">
+<img src="chart_axes02.png" alt="chart_axes02.png"/>
+</div>
+<p>Here are properties for a value axis:</p>
+<div class="image">
+<img src="chart_axes03.png" alt="chart_axes03.png"/>
+</div>
+<p>As such, some of the <code>libxlsxwriter</code> axis properties can be set for a value axis, some can be set for a category axis and some properties can be set for both. The documentation calls out the type of axis to which functions apply and the API emits a warning if the wrong type is used.</p>
+<p>Some category axes, such as the one in the column chart example above, use numbers as the categories. However, these numbers can't be treated like value axes. In particular you can't use <a class="el" href="chart_8h.html#a9339204d64e055adef0302115b5e4281" title="Set the maximum value for a chart axis. ">chart_axis_set_max()</a> and <a class="el" href="chart_8h.html#a709657333cfdaf12066fa2bf68e92663" title="Set the minimum value for a chart axis. ">chart_axis_set_min()</a> for category axes, as you can see in the respective format dialogs above.</p>
+<p>For a Bar chart the Category and Value axes are reversed:</p>
+<div class="image">
+<img src="chart_axes04.png" alt="chart_axes04.png"/>
+</div>
+<p>A Scatter chart (but not a Line chart) has 2 value axes:</p>
+<div class="image">
+<img src="chart_axes05.png" alt="chart_axes05.png"/>
+</div>
+<dl class="section note"><dt>Note</dt><dd>Date axes are supported yet.</dd></dl>
 <h1><a class="anchor" id="chart_markers"></a>
 Working with Chart markers</h1>
 <p>In Excel a chart marker is used to distinguish data points in a plotted series. In general only Line and Scatter and Radar chart types use markers. The libxlsxwriter chart types that can have markers are:</p>
