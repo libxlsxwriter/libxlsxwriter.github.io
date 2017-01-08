@@ -20,6 +20,7 @@ var searchData=
   ['chart_5faxis_5fset_5fname_5frange',['chart_axis_set_name_range',['../chart_8h.html#ae3cfd6a286f3b717e68d4bca348387ff',1,'chart.h']]],
   ['chart_5faxis_5fset_5fnum_5ffont',['chart_axis_set_num_font',['../chart_8h.html#a01f1ac1674089e0dc219dc3214b911c4',1,'chart.h']]],
   ['chart_5faxis_5fset_5fpattern',['chart_axis_set_pattern',['../chart_8h.html#a194bc7498752a67cd6c523c1e090b54f',1,'chart.h']]],
+  ['chart_5faxis_5fset_5fposition',['chart_axis_set_position',['../chart_8h.html#af9292ba5b24b01a55529d8b5a0afa24f',1,'chart.h']]],
   ['chart_5faxis_5fset_5freverse',['chart_axis_set_reverse',['../chart_8h.html#ae268cf39e3ffaa6390a00f9e58aa83a2',1,'chart.h']]],
   ['chart_5fchartarea_5fset_5ffill',['chart_chartarea_set_fill',['../chart_8h.html#ac43525c7e357f8c5ae2c5e3ad2158856',1,'chart.h']]],
   ['chart_5fchartarea_5fset_5fline',['chart_chartarea_set_line',['../chart_8h.html#aaf39aa2f25ed3e812dba320bf2832727',1,'chart.h']]],

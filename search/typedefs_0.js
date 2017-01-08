@@ -2,6 +2,7 @@ var searchData=
 [
   ['lxw_5fchart',['lxw_chart',['../chart_8h.html#a917a40dd0c74c88f290f4ac188a9b235',1,'chart.h']]],
   ['lxw_5fchart_5faxis',['lxw_chart_axis',['../chart_8h.html#a08fb818c59b2d29c0dcb624026c4bf14',1,'chart.h']]],
+  ['lxw_5fchart_5faxis_5ftick_5fposition',['lxw_chart_axis_tick_position',['../chart_8h.html#aa40b19d5576be11988d2f8fe4e3ee8c3',1,'chart.h']]],
   ['lxw_5fchart_5ffill',['lxw_chart_fill',['../chart_8h.html#a894050452ed8a7bac448d885c43d3ea3',1,'chart.h']]],
   ['lxw_5fchart_5ffont',['lxw_chart_font',['../chart_8h.html#a1a2f91c8af4830581f8430304783d956',1,'chart.h']]],
   ['lxw_5fchart_5flegend_5fposition',['lxw_chart_legend_position',['../chart_8h.html#a6d6509f2e1ef2267e737a34b4a4a0b2d',1,'chart.h']]],

@@ -30,6 +30,8 @@ var searchData=
   ['lxw_5fchart_5farea',['LXW_CHART_AREA',['../chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cab7d204b0c88aa41565b792a3ac946e73',1,'chart.h']]],
   ['lxw_5fchart_5farea_5fstacked',['LXW_CHART_AREA_STACKED',['../chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85caf78202456c43feb53a91c2f56fd3341b',1,'chart.h']]],
   ['lxw_5fchart_5farea_5fstacked_5fpercent',['LXW_CHART_AREA_STACKED_PERCENT',['../chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca9df7f4ab4ee2fc2e45937e3937046d17',1,'chart.h']]],
+  ['lxw_5fchart_5faxis_5fposition_5fbetween',['LXW_CHART_AXIS_POSITION_BETWEEN',['../chart_8h.html#aab90178f4981b77368f84155ebd5377daff9b211b7fca280eaa284c815eaa279f',1,'chart.h']]],
+  ['lxw_5fchart_5faxis_5fposition_5fon_5ftick',['LXW_CHART_AXIS_POSITION_ON_TICK',['../chart_8h.html#aab90178f4981b77368f84155ebd5377da4cda231bc6fd3a80ea1c8fa21e63b444',1,'chart.h']]],
   ['lxw_5fchart_5fbar',['LXW_CHART_BAR',['../chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cab70e5b5cf00126d7040ab25af3b117d5',1,'chart.h']]],
   ['lxw_5fchart_5fbar_5fstacked',['LXW_CHART_BAR_STACKED',['../chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85caa73fe9250d87a0b5c012d9861854285f',1,'chart.h']]],
   ['lxw_5fchart_5fbar_5fstacked_5fpercent',['LXW_CHART_BAR_STACKED_PERCENT',['../chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca11e520d38ebd7c5a5710e60e8ffa5dbc',1,'chart.h']]],
