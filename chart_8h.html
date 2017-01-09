@@ -202,6 +202,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af9292ba5b24b01a55529d8b5a0afa24f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#af9292ba5b24b01a55529d8b5a0afa24f">chart_axis_set_position</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint8_t position)</td></tr>
 <tr class="memdesc:af9292ba5b24b01a55529d8b5a0afa24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position the axis on or between the axis tick marks.  <a href="#af9292ba5b24b01a55529d8b5a0afa24f">More...</a><br /></td></tr>
 <tr class="separator:af9292ba5b24b01a55529d8b5a0afa24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a389ffe61edd2347a86282ae634eaf5d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a389ffe61edd2347a86282ae634eaf5d0">chart_axis_set_label_position</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint8_t position)</td></tr>
+<tr class="memdesc:a389ffe61edd2347a86282ae634eaf5d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position the axis labels.  <a href="#a389ffe61edd2347a86282ae634eaf5d0">More...</a><br /></td></tr>
+<tr class="separator:a389ffe61edd2347a86282ae634eaf5d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a709657333cfdaf12066fa2bf68e92663"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a709657333cfdaf12066fa2bf68e92663">chart_axis_set_min</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, double min)</td></tr>
 <tr class="memdesc:a709657333cfdaf12066fa2bf68e92663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minimum value for a chart axis.  <a href="#a709657333cfdaf12066fa2bf68e92663">More...</a><br /></td></tr>
 <tr class="separator:a709657333cfdaf12066fa2bf68e92663"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1333,6 +1336,58 @@ Functions</h2></td></tr>
 <img src="chart_axis_set_position.png" alt="chart_axis_set_position.png"/>
 </div>
 <p><b>Axis types</b>: This function is applicable to category axes only. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a389ffe61edd2347a86282ae634eaf5d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_label_position </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object. </td></tr>
+    <tr><td class="paramname">position</td><td>A <a class="el" href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2" title="Axis label positions. ">lxw_chart_axis_label_position</a> value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Position the axis labels for the chart. The labels are the numbers, or strings or dates, on the axis that indicate the categories or values of the axis.</p>
+<p>For example:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a389ffe61edd2347a86282ae634eaf5d0">chart_axis_set_label_position</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <a class="code" href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2a0dee32fbc50d4874ee2107a443ad33fb">LXW_CHART_AXIS_LABEL_POSITION_HIGH</a>);</div>
+<div class="line"><a class="code" href="chart_8h.html#a389ffe61edd2347a86282ae634eaf5d0">chart_axis_set_label_position</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, <a class="code" href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2a0dee32fbc50d4874ee2107a443ad33fb">LXW_CHART_AXIS_LABEL_POSITION_HIGH</a>);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_label_position2.png" alt="chart_label_position2.png"/>
+</div>
+<p>The allowable values:</p>
+<ul>
+<li><a class="el" href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2ab19b81929bd741404aabca97965766ce">LXW_CHART_AXIS_LABEL_POSITION_NEXT_TO</a> - The default.</li>
+<li><a class="el" href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2a0dee32fbc50d4874ee2107a443ad33fb">LXW_CHART_AXIS_LABEL_POSITION_HIGH</a> - Also right for vertical axes.</li>
+<li><a class="el" href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2a918e5b6a43f7e81eb6d41fe7acaf0515">LXW_CHART_AXIS_LABEL_POSITION_LOW</a> - Also left for vertical axes.</li>
+<li><a class="el" href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2ad013163404b69dbaaa4da7fd19dfe58e">LXW_CHART_AXIS_LABEL_POSITION_NONE</a></li>
+</ul>
+<div class="image">
+<img src="chart_label_position1.png" alt="chart_label_position1.png"/>
+</div>
+<p>The <a class="el" href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2ad013163404b69dbaaa4da7fd19dfe58e">LXW_CHART_AXIS_LABEL_POSITION_NONE</a> turns off the axis labels. This is slightly different from <code><a class="el" href="chart_8h.html#a5b982a99851997f9b090aaf0c1dfbd74" title="Turn off/hide an axis. ">chart_axis_off()</a></code> which also turns off the labels but also turns off tick marks.</p>
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 
 </div>
 </div>
@@ -2685,6 +2740,32 @@ LXW_CHART_LEGEND_OVERLAY_LEFT
 
 </div>
 </div>
+<a class="anchor" id="a8e225505503d9f488427f2d06666a5f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2">lxw_chart_axis_label_position</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a8e225505503d9f488427f2d06666a5f2ab19b81929bd741404aabca97965766ce"></a>LXW_CHART_AXIS_LABEL_POSITION_NEXT_TO&#160;</td><td class="fielddoc">
+<p>Position the axis labels next to the axis. The default. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a8e225505503d9f488427f2d06666a5f2a0dee32fbc50d4874ee2107a443ad33fb"></a>LXW_CHART_AXIS_LABEL_POSITION_HIGH&#160;</td><td class="fielddoc">
+<p>Position the axis labels at the top of the chart, for horizontal axes, or to the right for vertical axes. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a8e225505503d9f488427f2d06666a5f2a918e5b6a43f7e81eb6d41fe7acaf0515"></a>LXW_CHART_AXIS_LABEL_POSITION_LOW&#160;</td><td class="fielddoc">
+<p>Position the axis labels at the bottom of the chart, for horizontal axes, or to the left for vertical axes. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a8e225505503d9f488427f2d06666a5f2ad013163404b69dbaaa4da7fd19dfe58e"></a>LXW_CHART_AXIS_LABEL_POSITION_NONE&#160;</td><td class="fielddoc">
+<p>Turn off the the axis labels. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -2738,6 +2819,11 @@ typedef enum <br class="typebreak" />
 <a class="el" href="chart_8h.html#aab90178f4981b77368f84155ebd5377d">lxw_chart_axis_tick_position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aa40b19d5576be11988d2f8fe4e3ee8c3">lxw_chart_axis_tick_position</a></td></tr>
 <tr class="memdesc:aa40b19d5576be11988d2f8fe4e3ee8c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Axis positions for category axes. <br /></td></tr>
 <tr class="separator:aa40b19d5576be11988d2f8fe4e3ee8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a599d4c090c8821ca17445a7519b843"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a599d4c090c8821ca17445a7519b843"></a>
+typedef enum <br class="typebreak" />
+<a class="el" href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2">lxw_chart_axis_label_position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a7a599d4c090c8821ca17445a7519b843">lxw_chart_axis_label_position</a></td></tr>
+<tr class="memdesc:a7a599d4c090c8821ca17445a7519b843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Axis label positions. <br /></td></tr>
+<tr class="separator:a7a599d4c090c8821ca17445a7519b843"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affa9560ea7382648eac9a14ae225bdf9"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__chart__line.html">lxw_chart_line</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#affa9560ea7382648eac9a14ae225bdf9">lxw_chart_line</a></td></tr>
 <tr class="memdesc:affa9560ea7382648eac9a14ae225bdf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent a chart line.  <a href="#affa9560ea7382648eac9a14ae225bdf9">More...</a><br /></td></tr>
 <tr class="separator:affa9560ea7382648eac9a14ae225bdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2909,6 +2995,13 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:aab90178f4981b77368f84155ebd5377d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Axis positions for category axes.  <a href="chart_8h.html#aab90178f4981b77368f84155ebd5377d">More...</a><br /></td></tr>
 <tr class="separator:aab90178f4981b77368f84155ebd5377d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e225505503d9f488427f2d06666a5f2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2">lxw_chart_axis_label_position</a> { <a class="el" href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2ab19b81929bd741404aabca97965766ce">LXW_CHART_AXIS_LABEL_POSITION_NEXT_TO</a>, 
+<a class="el" href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2a0dee32fbc50d4874ee2107a443ad33fb">LXW_CHART_AXIS_LABEL_POSITION_HIGH</a>, 
+<a class="el" href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2a918e5b6a43f7e81eb6d41fe7acaf0515">LXW_CHART_AXIS_LABEL_POSITION_LOW</a>, 
+<a class="el" href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2ad013163404b69dbaaa4da7fd19dfe58e">LXW_CHART_AXIS_LABEL_POSITION_NONE</a>
+ }</td></tr>
+<tr class="memdesc:a8e225505503d9f488427f2d06666a5f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Axis label positions.  <a href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2">More...</a><br /></td></tr>
+<tr class="separator:a8e225505503d9f488427f2d06666a5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
