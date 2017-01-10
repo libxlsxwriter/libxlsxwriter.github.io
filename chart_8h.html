@@ -214,6 +214,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ac27a9a20daf4f0a6be8595fbd7f41151"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ac27a9a20daf4f0a6be8595fbd7f41151">chart_axis_set_log_base</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint16_t log_base)</td></tr>
 <tr class="memdesc:ac27a9a20daf4f0a6be8595fbd7f41151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log base of the axis range.  <a href="#ac27a9a20daf4f0a6be8595fbd7f41151">More...</a><br /></td></tr>
 <tr class="separator:ac27a9a20daf4f0a6be8595fbd7f41151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae23da9d1aeeb43d4ed06f17220fd73f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ae23da9d1aeeb43d4ed06f17220fd73f4">chart_axis_set_major_unit</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, double unit)</td></tr>
+<tr class="memdesc:ae23da9d1aeeb43d4ed06f17220fd73f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the increment of the major units in the axis.  <a href="#ae23da9d1aeeb43d4ed06f17220fd73f4">More...</a><br /></td></tr>
+<tr class="separator:ae23da9d1aeeb43d4ed06f17220fd73f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a715028e1980288900be080d9f5ff81e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a715028e1980288900be080d9f5ff81e7">chart_axis_set_minor_unit</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, double unit)</td></tr>
+<tr class="memdesc:a715028e1980288900be080d9f5ff81e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the increment of the minor units in the axis.  <a href="#a715028e1980288900be080d9f5ff81e7">More...</a><br /></td></tr>
+<tr class="separator:a715028e1980288900be080d9f5ff81e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f7ddf67b9eaafef1e2d301cf88355e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a1f7ddf67b9eaafef1e2d301cf88355e7">chart_axis_major_gridlines_set_visible</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint8_t visible)</td></tr>
 <tr class="memdesc:a1f7ddf67b9eaafef1e2d301cf88355e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on/off the major gridlines for an axis.  <a href="#a1f7ddf67b9eaafef1e2d301cf88355e7">More...</a><br /></td></tr>
 <tr class="separator:a1f7ddf67b9eaafef1e2d301cf88355e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1506,6 +1512,86 @@ Functions</h2></td></tr>
 </div>
 <p>The allowable range of values for the log base in Excel is between 2 and 1000.</p>
 <p><b>Axis types</b>: This function is applicable to value axes only. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae23da9d1aeeb43d4ed06f17220fd73f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_major_unit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object. </td></tr>
+    <tr><td class="paramname">unit</td><td>The increment of the major units.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the increment of the major units in the axis range.</p>
+<div class="fragment"><div class="line"><span class="comment">// Turn on the minor gridline (it is off by default).</span></div>
+<div class="line"><a class="code" href="chart_8h.html#aa53081409c448c71a535bd5dd1c0cfeb">chart_axis_minor_gridlines_set_visible</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#ae23da9d1aeeb43d4ed06f17220fd73f4">chart_axis_set_major_unit</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, 4);</div>
+<div class="line"><a class="code" href="chart_8h.html#a715028e1980288900be080d9f5ff81e7">chart_axis_set_minor_unit</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, 2);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_set_major_units.png" alt="chart_set_major_units.png"/>
+</div>
+<p><b>Axis types</b>: This function is applicable to value and date axes only. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a715028e1980288900be080d9f5ff81e7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_minor_unit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object. </td></tr>
+    <tr><td class="paramname">unit</td><td>The increment of the minor units.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the increment of the minor units in the axis range.</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a715028e1980288900be080d9f5ff81e7">chart_axis_set_minor_unit</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, 2);</div>
+</div><!-- fragment --><p>See the image above</p>
+<p><b>Axis types</b>: This function is applicable to value and date axes only. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 
 </div>
 </div>
