@@ -214,6 +214,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ac27a9a20daf4f0a6be8595fbd7f41151"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ac27a9a20daf4f0a6be8595fbd7f41151">chart_axis_set_log_base</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint16_t log_base)</td></tr>
 <tr class="memdesc:ac27a9a20daf4f0a6be8595fbd7f41151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log base of the axis range.  <a href="#ac27a9a20daf4f0a6be8595fbd7f41151">More...</a><br /></td></tr>
 <tr class="separator:ac27a9a20daf4f0a6be8595fbd7f41151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad92a8a1ad8c6225c05f36287510fa0ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ad92a8a1ad8c6225c05f36287510fa0ea">chart_axis_set_interval_unit</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint16_t unit)</td></tr>
+<tr class="memdesc:ad92a8a1ad8c6225c05f36287510fa0ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the interval between category values.  <a href="#ad92a8a1ad8c6225c05f36287510fa0ea">More...</a><br /></td></tr>
+<tr class="separator:ad92a8a1ad8c6225c05f36287510fa0ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accdb835432241836d6a8dd36c98246ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#accdb835432241836d6a8dd36c98246ab">chart_axis_set_interval_tick</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint16_t unit)</td></tr>
+<tr class="memdesc:accdb835432241836d6a8dd36c98246ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the interval between category tick marks.  <a href="#accdb835432241836d6a8dd36c98246ab">More...</a><br /></td></tr>
+<tr class="separator:accdb835432241836d6a8dd36c98246ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae23da9d1aeeb43d4ed06f17220fd73f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ae23da9d1aeeb43d4ed06f17220fd73f4">chart_axis_set_major_unit</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, double unit)</td></tr>
 <tr class="memdesc:ae23da9d1aeeb43d4ed06f17220fd73f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the increment of the major units in the axis.  <a href="#ae23da9d1aeeb43d4ed06f17220fd73f4">More...</a><br /></td></tr>
 <tr class="separator:ae23da9d1aeeb43d4ed06f17220fd73f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1512,6 +1518,86 @@ Functions</h2></td></tr>
 </div>
 <p>The allowable range of values for the log base in Excel is between 2 and 1000.</p>
 <p><b>Axis types</b>: This function is applicable to value axes only. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad92a8a1ad8c6225c05f36287510fa0ea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_interval_unit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object. </td></tr>
+    <tr><td class="paramname">unit</td><td>The interval between the categories.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the interval between the category values. The default interval is 1 which gives the intervals shown in the charts above: </p><pre class="fragment">1, 2, 3, 4, 5, etc.
+</pre><p>Setting it to 2 gives: </p><pre class="fragment">1, 3, 5, 7, etc.
+</pre><p>For example:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#ad92a8a1ad8c6225c05f36287510fa0ea">chart_axis_set_interval_unit</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, 2);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_set_interval1.png" alt="chart_set_interval1.png"/>
+</div>
+<p><b>Axis types</b>: This function is applicable to category and date axes only. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="accdb835432241836d6a8dd36c98246ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_interval_tick </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object. </td></tr>
+    <tr><td class="paramname">unit</td><td>The interval between the category ticks.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the interval between the category tick marks. The default interval is 1 between each category but it can be set to other integer values:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#accdb835432241836d6a8dd36c98246ab">chart_axis_set_interval_tick</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, 2);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_set_interval2.png" alt="chart_set_interval2.png"/>
+</div>
+<p><b>Axis types</b>: This function is applicable to category and date axes only. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 
 </div>
 </div>
