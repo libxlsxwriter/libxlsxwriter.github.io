@@ -214,6 +214,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ac27a9a20daf4f0a6be8595fbd7f41151"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ac27a9a20daf4f0a6be8595fbd7f41151">chart_axis_set_log_base</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint16_t log_base)</td></tr>
 <tr class="memdesc:ac27a9a20daf4f0a6be8595fbd7f41151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log base of the axis range.  <a href="#ac27a9a20daf4f0a6be8595fbd7f41151">More...</a><br /></td></tr>
 <tr class="separator:ac27a9a20daf4f0a6be8595fbd7f41151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ecb1a6293d9adcbe075dd9eff5f4881"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a5ecb1a6293d9adcbe075dd9eff5f4881">chart_axis_set_major_tick_mark</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint8_t type)</td></tr>
+<tr class="memdesc:a5ecb1a6293d9adcbe075dd9eff5f4881"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the major axis tick mark type.  <a href="#a5ecb1a6293d9adcbe075dd9eff5f4881">More...</a><br /></td></tr>
+<tr class="separator:a5ecb1a6293d9adcbe075dd9eff5f4881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa035a17aae37b4b4ad2c5ba9e237c45f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aa035a17aae37b4b4ad2c5ba9e237c45f">chart_axis_set_minor_tick_mark</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint8_t type)</td></tr>
+<tr class="memdesc:aa035a17aae37b4b4ad2c5ba9e237c45f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minor axis tick mark type.  <a href="#aa035a17aae37b4b4ad2c5ba9e237c45f">More...</a><br /></td></tr>
+<tr class="separator:aa035a17aae37b4b4ad2c5ba9e237c45f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad92a8a1ad8c6225c05f36287510fa0ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ad92a8a1ad8c6225c05f36287510fa0ea">chart_axis_set_interval_unit</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint16_t unit)</td></tr>
 <tr class="memdesc:ad92a8a1ad8c6225c05f36287510fa0ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the interval between category values.  <a href="#ad92a8a1ad8c6225c05f36287510fa0ea">More...</a><br /></td></tr>
 <tr class="separator:ad92a8a1ad8c6225c05f36287510fa0ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1524,6 +1530,96 @@ Functions</h2></td></tr>
 </div>
 <p>The allowable range of values for the log base in Excel is between 2 and 1000.</p>
 <p><b>Axis types</b>: This function is applicable to value axes only. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5ecb1a6293d9adcbe075dd9eff5f4881"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_major_tick_mark </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object. </td></tr>
+    <tr><td class="paramname">type</td><td>The tick mark type, defined by <a class="el" href="chart_8h.html#a774fe4039f890235d9bd199ca607a8ad" title="Tick mark types for an axis. ">lxw_chart_tick_mark</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the type of the major axis tick mark:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a5ecb1a6293d9adcbe075dd9eff5f4881">chart_axis_set_major_tick_mark</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <a class="code" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67a0b0066aa99eba3dbd1c25bcb162b3efb">LXW_CHART_AXIS_TICK_MARK_CROSSING</a>);</div>
+<div class="line"><a class="code" href="chart_8h.html#aa035a17aae37b4b4ad2c5ba9e237c45f">chart_axis_set_minor_tick_mark</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <a class="code" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67ae54eabf41024f474a504aebcafba0755">LXW_CHART_AXIS_TICK_MARK_INSIDE</a>);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a5ecb1a6293d9adcbe075dd9eff5f4881">chart_axis_set_major_tick_mark</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <a class="code" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67a6e71563a41de494d608edaa84835fd37">LXW_CHART_AXIS_TICK_MARK_OUTSIDE</a>);</div>
+<div class="line"><a class="code" href="chart_8h.html#aa035a17aae37b4b4ad2c5ba9e237c45f">chart_axis_set_minor_tick_mark</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, <a class="code" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67ae54eabf41024f474a504aebcafba0755">LXW_CHART_AXIS_TICK_MARK_INSIDE</a>);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Hide the default gridlines so the tick marks are visible.</span></div>
+<div class="line"><a class="code" href="chart_8h.html#a1f7ddf67b9eaafef1e2d301cf88355e7">chart_axis_major_gridlines_set_visible</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_tick_marks.png" alt="chart_tick_marks.png"/>
+</div>
+<p>The tick mark types are:</p>
+<ul>
+<li><a class="el" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67a938368b9ce0113aa3c76a433d6406cf7">LXW_CHART_AXIS_TICK_MARK_NONE</a></li>
+<li><a class="el" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67ae54eabf41024f474a504aebcafba0755">LXW_CHART_AXIS_TICK_MARK_INSIDE</a></li>
+<li><a class="el" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67a6e71563a41de494d608edaa84835fd37">LXW_CHART_AXIS_TICK_MARK_OUTSIDE</a></li>
+<li><a class="el" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67a0b0066aa99eba3dbd1c25bcb162b3efb">LXW_CHART_AXIS_TICK_MARK_CROSSING</a></li>
+</ul>
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa035a17aae37b4b4ad2c5ba9e237c45f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_minor_tick_mark </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object. </td></tr>
+    <tr><td class="paramname">type</td><td>The tick mark type, defined by <a class="el" href="chart_8h.html#a774fe4039f890235d9bd199ca607a8ad" title="Tick mark types for an axis. ">lxw_chart_tick_mark</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the type of the minor axis tick mark:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#aa035a17aae37b4b4ad2c5ba9e237c45f">chart_axis_set_minor_tick_mark</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <a class="code" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67ae54eabf41024f474a504aebcafba0755">LXW_CHART_AXIS_TICK_MARK_INSIDE</a>);</div>
+</div><!-- fragment --><p>See the image and example above.</p>
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 
 </div>
 </div>
@@ -3064,6 +3160,35 @@ LXW_CHART_LEGEND_OVERLAY_LEFT
 
 </div>
 </div>
+<a class="anchor" id="aa22c6ef3802e14d3ef8f0055c6d09e67"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67">lxw_chart_axis_tick_mark</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aa22c6ef3802e14d3ef8f0055c6d09e67a9a66fa2b0fb49faf71fedd7f147572f9"></a>LXW_CHART_AXIS_TICK_MARK_DEFAULT&#160;</td><td class="fielddoc">
+<p>Default tick mark for the chart axis. Usually outside. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa22c6ef3802e14d3ef8f0055c6d09e67a938368b9ce0113aa3c76a433d6406cf7"></a>LXW_CHART_AXIS_TICK_MARK_NONE&#160;</td><td class="fielddoc">
+<p>No tick mark for the axis. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa22c6ef3802e14d3ef8f0055c6d09e67ae54eabf41024f474a504aebcafba0755"></a>LXW_CHART_AXIS_TICK_MARK_INSIDE&#160;</td><td class="fielddoc">
+<p>Tick mark inside the axis only. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa22c6ef3802e14d3ef8f0055c6d09e67a6e71563a41de494d608edaa84835fd37"></a>LXW_CHART_AXIS_TICK_MARK_OUTSIDE&#160;</td><td class="fielddoc">
+<p>Tick mark outside the axis only. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa22c6ef3802e14d3ef8f0055c6d09e67a0b0066aa99eba3dbd1c25bcb162b3efb"></a>LXW_CHART_AXIS_TICK_MARK_CROSSING&#160;</td><td class="fielddoc">
+<p>Tick mark inside and outside the axis. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -3127,6 +3252,11 @@ typedef enum <br class="typebreak" />
 <a class="el" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90">lxw_chart_axis_display_unit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a8ff14a855d5030e3a82ce9de0d7ca5f7">lxw_chart_axis_display_unit</a></td></tr>
 <tr class="memdesc:a8ff14a855d5030e3a82ce9de0d7ca5f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display units for chart value axis. <br /></td></tr>
 <tr class="separator:a8ff14a855d5030e3a82ce9de0d7ca5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a774fe4039f890235d9bd199ca607a8ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a774fe4039f890235d9bd199ca607a8ad"></a>
+typedef enum <br class="typebreak" />
+<a class="el" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67">lxw_chart_axis_tick_mark</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a774fe4039f890235d9bd199ca607a8ad">lxw_chart_tick_mark</a></td></tr>
+<tr class="memdesc:a774fe4039f890235d9bd199ca607a8ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tick mark types for an axis. <br /></td></tr>
+<tr class="separator:a774fe4039f890235d9bd199ca607a8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affa9560ea7382648eac9a14ae225bdf9"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__chart__line.html">lxw_chart_line</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#affa9560ea7382648eac9a14ae225bdf9">lxw_chart_line</a></td></tr>
 <tr class="memdesc:affa9560ea7382648eac9a14ae225bdf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent a chart line.  <a href="#affa9560ea7382648eac9a14ae225bdf9">More...</a><br /></td></tr>
 <tr class="separator:affa9560ea7382648eac9a14ae225bdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3322,6 +3452,17 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a36e5182bd82f3d40e633a2eaed15bd90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display units for chart value axis.  <a href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90">More...</a><br /></td></tr>
 <tr class="separator:a36e5182bd82f3d40e633a2eaed15bd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa22c6ef3802e14d3ef8f0055c6d09e67"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67">lxw_chart_axis_tick_mark</a> { <br />
+&#160;&#160;<a class="el" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67a9a66fa2b0fb49faf71fedd7f147572f9">LXW_CHART_AXIS_TICK_MARK_DEFAULT</a>, 
+<a class="el" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67a938368b9ce0113aa3c76a433d6406cf7">LXW_CHART_AXIS_TICK_MARK_NONE</a>, 
+<a class="el" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67ae54eabf41024f474a504aebcafba0755">LXW_CHART_AXIS_TICK_MARK_INSIDE</a>, 
+<a class="el" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67a6e71563a41de494d608edaa84835fd37">LXW_CHART_AXIS_TICK_MARK_OUTSIDE</a>, 
+<br />
+&#160;&#160;<a class="el" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67a0b0066aa99eba3dbd1c25bcb162b3efb">LXW_CHART_AXIS_TICK_MARK_CROSSING</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:aa22c6ef3802e14d3ef8f0055c6d09e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tick mark types for an axis.  <a href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67">More...</a><br /></td></tr>
+<tr class="separator:aa22c6ef3802e14d3ef8f0055c6d09e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
