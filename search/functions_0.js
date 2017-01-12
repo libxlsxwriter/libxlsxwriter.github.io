@@ -6,6 +6,8 @@ var searchData=
   ['chart_5faxis_5fminor_5fgridlines_5fset_5fline',['chart_axis_minor_gridlines_set_line',['../chart_8h.html#add2c1e7be42ea91fd85ba7b676e07e09',1,'chart.h']]],
   ['chart_5faxis_5fminor_5fgridlines_5fset_5fvisible',['chart_axis_minor_gridlines_set_visible',['../chart_8h.html#aa53081409c448c71a535bd5dd1c0cfeb',1,'chart.h']]],
   ['chart_5faxis_5foff',['chart_axis_off',['../chart_8h.html#a5b982a99851997f9b090aaf0c1dfbd74',1,'chart.h']]],
+  ['chart_5faxis_5fset_5fdisplay_5funits',['chart_axis_set_display_units',['../chart_8h.html#a869c6e1c9951435bd89ff1f3465b2bc8',1,'chart.h']]],
+  ['chart_5faxis_5fset_5fdisplay_5funits_5fvisible',['chart_axis_set_display_units_visible',['../chart_8h.html#a8cfd93648bbd9b29201eb0fe8854ae0e',1,'chart.h']]],
   ['chart_5faxis_5fset_5ffill',['chart_axis_set_fill',['../chart_8h.html#ade5392d9d303458c48420f89cc3a8b5e',1,'chart.h']]],
   ['chart_5faxis_5fset_5finterval_5ftick',['chart_axis_set_interval_tick',['../chart_8h.html#accdb835432241836d6a8dd36c98246ab',1,'chart.h']]],
   ['chart_5faxis_5fset_5finterval_5funit',['chart_axis_set_interval_unit',['../chart_8h.html#ad92a8a1ad8c6225c05f36287510fa0ea',1,'chart.h']]],

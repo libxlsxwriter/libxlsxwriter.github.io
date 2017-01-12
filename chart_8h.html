@@ -226,6 +226,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a715028e1980288900be080d9f5ff81e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a715028e1980288900be080d9f5ff81e7">chart_axis_set_minor_unit</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, double unit)</td></tr>
 <tr class="memdesc:a715028e1980288900be080d9f5ff81e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the increment of the minor units in the axis.  <a href="#a715028e1980288900be080d9f5ff81e7">More...</a><br /></td></tr>
 <tr class="separator:a715028e1980288900be080d9f5ff81e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a869c6e1c9951435bd89ff1f3465b2bc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a869c6e1c9951435bd89ff1f3465b2bc8">chart_axis_set_display_units</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint8_t units)</td></tr>
+<tr class="memdesc:a869c6e1c9951435bd89ff1f3465b2bc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the display units for a value axis.  <a href="#a869c6e1c9951435bd89ff1f3465b2bc8">More...</a><br /></td></tr>
+<tr class="separator:a869c6e1c9951435bd89ff1f3465b2bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cfd93648bbd9b29201eb0fe8854ae0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a8cfd93648bbd9b29201eb0fe8854ae0e">chart_axis_set_display_units_visible</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint8_t visible)</td></tr>
+<tr class="memdesc:a8cfd93648bbd9b29201eb0fe8854ae0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on/off the display units for a value axis.  <a href="#a8cfd93648bbd9b29201eb0fe8854ae0e">More...</a><br /></td></tr>
+<tr class="separator:a8cfd93648bbd9b29201eb0fe8854ae0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f7ddf67b9eaafef1e2d301cf88355e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a1f7ddf67b9eaafef1e2d301cf88355e7">chart_axis_major_gridlines_set_visible</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint8_t visible)</td></tr>
 <tr class="memdesc:a1f7ddf67b9eaafef1e2d301cf88355e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on/off the major gridlines for an axis.  <a href="#a1f7ddf67b9eaafef1e2d301cf88355e7">More...</a><br /></td></tr>
 <tr class="separator:a1f7ddf67b9eaafef1e2d301cf88355e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1681,6 +1687,82 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a869c6e1c9951435bd89ff1f3465b2bc8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_display_units </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>units</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object. </td></tr>
+    <tr><td class="paramname">units</td><td>The display units: <a class="el" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90" title="Display units for chart value axis. ">lxw_chart_axis_display_unit</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the display units for the axis. This can be useful if the axis numbers are very large but you don't want to represent them in scientific notation:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a869c6e1c9951435bd89ff1f3465b2bc8">chart_axis_set_display_units</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <a class="code" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90aa3b2171ef7f83ed65119cd98d7d83d5a">LXW_CHART_AXIS_UNITS_THOUSANDS</a>);</div>
+<div class="line"><a class="code" href="chart_8h.html#a869c6e1c9951435bd89ff1f3465b2bc8">chart_axis_set_display_units</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, <a class="code" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90a07a294752096367ac5371f111fba44fd">LXW_CHART_AXIS_UNITS_MILLIONS</a>);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_display_units.png" alt="chart_display_units.png"/>
+</div>
+<p><b>Axis types</b>: This function is applicable to value axes only. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8cfd93648bbd9b29201eb0fe8854ae0e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_display_units_visible </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>visible</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object. </td></tr>
+    <tr><td class="paramname">visible</td><td>Turn off/on the display units. (0/1)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Turn on or off the display units for the axis. This option is set on automatically by <code><a class="el" href="chart_8h.html#a869c6e1c9951435bd89ff1f3465b2bc8" title="Set the display units for a value axis. ">chart_axis_set_display_units()</a></code>.</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a8cfd93648bbd9b29201eb0fe8854ae0e">chart_axis_set_display_units_visible</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>);</div>
+</div><!-- fragment --><p><b>Axis types</b>: This function is applicable to value axes only. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
+</div>
+</div>
 <a class="anchor" id="a1f7ddf67b9eaafef1e2d301cf88355e7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2938,6 +3020,50 @@ LXW_CHART_LEGEND_OVERLAY_LEFT
 
 </div>
 </div>
+<a class="anchor" id="a36e5182bd82f3d40e633a2eaed15bd90"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90">lxw_chart_axis_display_unit</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a36e5182bd82f3d40e633a2eaed15bd90a35df86a56c3800f0be970a982c87c5f8"></a>LXW_CHART_AXIS_UNITS_NONE&#160;</td><td class="fielddoc">
+<p>Axis display units: None. The default. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a36e5182bd82f3d40e633a2eaed15bd90a0b9473e2c88d35034465e8642c7ec287"></a>LXW_CHART_AXIS_UNITS_HUNDREDS&#160;</td><td class="fielddoc">
+<p>Axis display units: Hundreds. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a36e5182bd82f3d40e633a2eaed15bd90aa3b2171ef7f83ed65119cd98d7d83d5a"></a>LXW_CHART_AXIS_UNITS_THOUSANDS&#160;</td><td class="fielddoc">
+<p>Axis display units: Thousands. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a36e5182bd82f3d40e633a2eaed15bd90ac864d5d75351f04e96bfb99bb752b954"></a>LXW_CHART_AXIS_UNITS_TEN_THOUSANDS&#160;</td><td class="fielddoc">
+<p>Axis display units: Ten thousands. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a36e5182bd82f3d40e633a2eaed15bd90a443e8787ddeae1283e9157c388320bd3"></a>LXW_CHART_AXIS_UNITS_HUNDRED_THOUSANDS&#160;</td><td class="fielddoc">
+<p>Axis display units: Hundred thousands. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a36e5182bd82f3d40e633a2eaed15bd90a07a294752096367ac5371f111fba44fd"></a>LXW_CHART_AXIS_UNITS_MILLIONS&#160;</td><td class="fielddoc">
+<p>Axis display units: Millions. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a36e5182bd82f3d40e633a2eaed15bd90a37d6184c4fe9dde9ac760c0dd8936666"></a>LXW_CHART_AXIS_UNITS_TEN_MILLIONS&#160;</td><td class="fielddoc">
+<p>Axis display units: Ten millions. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a36e5182bd82f3d40e633a2eaed15bd90a329952b803863493d1dfc5e1e9819bc9"></a>LXW_CHART_AXIS_UNITS_HUNDRED_MILLIONS&#160;</td><td class="fielddoc">
+<p>Axis display units: Hundred millions. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a36e5182bd82f3d40e633a2eaed15bd90afbbeefe672d9854b3980632687698802"></a>LXW_CHART_AXIS_UNITS_BILLIONS&#160;</td><td class="fielddoc">
+<p>Axis display units: Billions. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a36e5182bd82f3d40e633a2eaed15bd90af8bcb62c782ebd04942ec6db2e97f0b8"></a>LXW_CHART_AXIS_UNITS_TRILLIONS&#160;</td><td class="fielddoc">
+<p>Axis display units: Trillions. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -2996,6 +3122,11 @@ typedef enum <br class="typebreak" />
 <a class="el" href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2">lxw_chart_axis_label_position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a7a599d4c090c8821ca17445a7519b843">lxw_chart_axis_label_position</a></td></tr>
 <tr class="memdesc:a7a599d4c090c8821ca17445a7519b843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Axis label positions. <br /></td></tr>
 <tr class="separator:a7a599d4c090c8821ca17445a7519b843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ff14a855d5030e3a82ce9de0d7ca5f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ff14a855d5030e3a82ce9de0d7ca5f7"></a>
+typedef enum <br class="typebreak" />
+<a class="el" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90">lxw_chart_axis_display_unit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a8ff14a855d5030e3a82ce9de0d7ca5f7">lxw_chart_axis_display_unit</a></td></tr>
+<tr class="memdesc:a8ff14a855d5030e3a82ce9de0d7ca5f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display units for chart value axis. <br /></td></tr>
+<tr class="separator:a8ff14a855d5030e3a82ce9de0d7ca5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affa9560ea7382648eac9a14ae225bdf9"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__chart__line.html">lxw_chart_line</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#affa9560ea7382648eac9a14ae225bdf9">lxw_chart_line</a></td></tr>
 <tr class="memdesc:affa9560ea7382648eac9a14ae225bdf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent a chart line.  <a href="#affa9560ea7382648eac9a14ae225bdf9">More...</a><br /></td></tr>
 <tr class="separator:affa9560ea7382648eac9a14ae225bdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3174,6 +3305,23 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a8e225505503d9f488427f2d06666a5f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Axis label positions.  <a href="chart_8h.html#a8e225505503d9f488427f2d06666a5f2">More...</a><br /></td></tr>
 <tr class="separator:a8e225505503d9f488427f2d06666a5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e5182bd82f3d40e633a2eaed15bd90"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90">lxw_chart_axis_display_unit</a> { <br />
+&#160;&#160;<a class="el" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90a35df86a56c3800f0be970a982c87c5f8">LXW_CHART_AXIS_UNITS_NONE</a>, 
+<a class="el" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90a0b9473e2c88d35034465e8642c7ec287">LXW_CHART_AXIS_UNITS_HUNDREDS</a>, 
+<a class="el" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90aa3b2171ef7f83ed65119cd98d7d83d5a">LXW_CHART_AXIS_UNITS_THOUSANDS</a>, 
+<a class="el" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90ac864d5d75351f04e96bfb99bb752b954">LXW_CHART_AXIS_UNITS_TEN_THOUSANDS</a>, 
+<br />
+&#160;&#160;<a class="el" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90a443e8787ddeae1283e9157c388320bd3">LXW_CHART_AXIS_UNITS_HUNDRED_THOUSANDS</a>, 
+<a class="el" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90a07a294752096367ac5371f111fba44fd">LXW_CHART_AXIS_UNITS_MILLIONS</a>, 
+<a class="el" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90a37d6184c4fe9dde9ac760c0dd8936666">LXW_CHART_AXIS_UNITS_TEN_MILLIONS</a>, 
+<a class="el" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90a329952b803863493d1dfc5e1e9819bc9">LXW_CHART_AXIS_UNITS_HUNDRED_MILLIONS</a>, 
+<br />
+&#160;&#160;<a class="el" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90afbbeefe672d9854b3980632687698802">LXW_CHART_AXIS_UNITS_BILLIONS</a>, 
+<a class="el" href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90af8bcb62c782ebd04942ec6db2e97f0b8">LXW_CHART_AXIS_UNITS_TRILLIONS</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a36e5182bd82f3d40e633a2eaed15bd90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display units for chart value axis.  <a href="chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90">More...</a><br /></td></tr>
+<tr class="separator:a36e5182bd82f3d40e633a2eaed15bd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->

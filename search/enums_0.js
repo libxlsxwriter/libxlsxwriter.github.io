@@ -1,6 +1,7 @@
 var searchData=
 [
   ['lxw_5fboolean',['lxw_boolean',['../common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349',1,'common.h']]],
+  ['lxw_5fchart_5faxis_5fdisplay_5funit',['lxw_chart_axis_display_unit',['../chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90',1,'chart.h']]],
   ['lxw_5fchart_5faxis_5flabel_5fposition',['lxw_chart_axis_label_position',['../chart_8h.html#a8e225505503d9f488427f2d06666a5f2',1,'chart.h']]],
   ['lxw_5fchart_5faxis_5ftick_5fposition',['lxw_chart_axis_tick_position',['../chart_8h.html#aab90178f4981b77368f84155ebd5377d',1,'chart.h']]],
   ['lxw_5fchart_5flegend_5fposition',['lxw_chart_legend_position',['../chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22',1,'chart.h']]],
