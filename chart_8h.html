@@ -196,11 +196,17 @@ Functions</h2></td></tr>
 <tr class="memitem:ae268cf39e3ffaa6390a00f9e58aa83a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ae268cf39e3ffaa6390a00f9e58aa83a2">chart_axis_set_reverse</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis)</td></tr>
 <tr class="memdesc:ae268cf39e3ffaa6390a00f9e58aa83a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse the order of the axis categories or values.  <a href="#ae268cf39e3ffaa6390a00f9e58aa83a2">More...</a><br /></td></tr>
 <tr class="separator:ae268cf39e3ffaa6390a00f9e58aa83a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaf517f72f9722ddc36ffd8dd687784e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#afaf517f72f9722ddc36ffd8dd687784e">chart_axis_set_crossing</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, double value)</td></tr>
+<tr class="memdesc:afaf517f72f9722ddc36ffd8dd687784e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position that the axis will cross the opposite axis.  <a href="#afaf517f72f9722ddc36ffd8dd687784e">More...</a><br /></td></tr>
+<tr class="separator:afaf517f72f9722ddc36ffd8dd687784e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a351c1962d29f06a85a74d53dd5929363"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a351c1962d29f06a85a74d53dd5929363">chart_axis_set_crossing_max</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis)</td></tr>
+<tr class="memdesc:a351c1962d29f06a85a74d53dd5929363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the opposite axis crossing position as the axis maximum.  <a href="#a351c1962d29f06a85a74d53dd5929363">More...</a><br /></td></tr>
+<tr class="separator:a351c1962d29f06a85a74d53dd5929363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b982a99851997f9b090aaf0c1dfbd74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a5b982a99851997f9b090aaf0c1dfbd74">chart_axis_off</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis)</td></tr>
 <tr class="memdesc:a5b982a99851997f9b090aaf0c1dfbd74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off/hide an axis.  <a href="#a5b982a99851997f9b090aaf0c1dfbd74">More...</a><br /></td></tr>
 <tr class="separator:a5b982a99851997f9b090aaf0c1dfbd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9292ba5b24b01a55529d8b5a0afa24f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#af9292ba5b24b01a55529d8b5a0afa24f">chart_axis_set_position</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint8_t position)</td></tr>
-<tr class="memdesc:af9292ba5b24b01a55529d8b5a0afa24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position the axis on or between the axis tick marks.  <a href="#af9292ba5b24b01a55529d8b5a0afa24f">More...</a><br /></td></tr>
+<tr class="memdesc:af9292ba5b24b01a55529d8b5a0afa24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position a category axis on or between the axis tick marks.  <a href="#af9292ba5b24b01a55529d8b5a0afa24f">More...</a><br /></td></tr>
 <tr class="separator:af9292ba5b24b01a55529d8b5a0afa24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a389ffe61edd2347a86282ae634eaf5d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a389ffe61edd2347a86282ae634eaf5d0">chart_axis_set_label_position</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, uint8_t position)</td></tr>
 <tr class="memdesc:a389ffe61edd2347a86282ae634eaf5d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position the axis labels.  <a href="#a389ffe61edd2347a86282ae634eaf5d0">More...</a><br /></td></tr>
@@ -1286,6 +1292,76 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#ae268cf39e3ffaa6390a00f9e58aa83a2">chart_axis_set_reverse</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>);</div>
 </div><!-- fragment --><div class="image">
 <img src="chart_reverse.png" alt="chart_reverse.png"/>
+</div>
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="afaf517f72f9722ddc36ffd8dd687784e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_crossing </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object. </td></tr>
+    <tr><td class="paramname">value</td><td>The category or value that the axis crosses at.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the position that the axis will cross the opposite axis:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#afaf517f72f9722ddc36ffd8dd687784e">chart_axis_set_crossing</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, 3);</div>
+<div class="line"><a class="code" href="chart_8h.html#afaf517f72f9722ddc36ffd8dd687784e">chart_axis_set_crossing</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, 8);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_crossing1.png" alt="chart_crossing1.png"/>
+</div>
+<p>If crossing is omitted (the default) the crossing will be set automatically by Excel based on the chart data.</p>
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a351c1962d29f06a85a74d53dd5929363"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_crossing_max </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the position that the opposite axis will cross as the axis maximum. The default axis crossing position is generally the axis minimum so this function can be used to reverse the location of the axes without reversing the number sequence:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a351c1962d29f06a85a74d53dd5929363">chart_axis_set_crossing_max</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>);</div>
+<div class="line"><a class="code" href="chart_8h.html#a351c1962d29f06a85a74d53dd5929363">chart_axis_set_crossing_max</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_crossing2.png" alt="chart_crossing2.png"/>
 </div>
 <p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 
