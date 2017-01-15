@@ -154,6 +154,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a6f1d7cd452a4a3f87046468ce5588bfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a6f1d7cd452a4a3f87046468ce5588bfd">chart_series_set_fill</a> (<a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *series, <a class="el" href="structlxw__chart__fill.html">lxw_chart_fill</a> *fill)</td></tr>
 <tr class="memdesc:a6f1d7cd452a4a3f87046468ce5588bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the fill properties for a chart series.  <a href="#a6f1d7cd452a4a3f87046468ce5588bfd">More...</a><br /></td></tr>
 <tr class="separator:a6f1d7cd452a4a3f87046468ce5588bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec54a5e2359af30e5d5694db63ab9607"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aec54a5e2359af30e5d5694db63ab9607">chart_series_set_invert_if_negative</a> (<a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *series)</td></tr>
+<tr class="memdesc:aec54a5e2359af30e5d5694db63ab9607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invert the fill color for negative series values.  <a href="#aec54a5e2359af30e5d5694db63ab9607">More...</a><br /></td></tr>
+<tr class="separator:aec54a5e2359af30e5d5694db63ab9607"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36f77a797d545b07a656965e4bf2978b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a36f77a797d545b07a656965e4bf2978b">chart_series_set_pattern</a> (<a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *series, <a class="el" href="structlxw__chart__pattern.html">lxw_chart_pattern</a> *pattern)</td></tr>
 <tr class="memdesc:a36f77a797d545b07a656965e4bf2978b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pattern properties for a chart series.  <a href="#a36f77a797d545b07a656965e4bf2978b">More...</a><br /></td></tr>
 <tr class="separator:a36f77a797d545b07a656965e4bf2978b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,6 +187,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a01f1ac1674089e0dc219dc3214b911c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a01f1ac1674089e0dc219dc3214b911c4">chart_axis_set_num_font</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, <a class="el" href="structlxw__chart__font.html">lxw_chart_font</a> *font)</td></tr>
 <tr class="memdesc:a01f1ac1674089e0dc219dc3214b911c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the font properties for the numbers of a chart axis.  <a href="#a01f1ac1674089e0dc219dc3214b911c4">More...</a><br /></td></tr>
 <tr class="separator:a01f1ac1674089e0dc219dc3214b911c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a469bee6fc817fd70eafadbd55f893fd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a469bee6fc817fd70eafadbd55f893fd6">chart_axis_set_num_format</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, char *num_format)</td></tr>
+<tr class="memdesc:a469bee6fc817fd70eafadbd55f893fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number format for a chart axis.  <a href="#a469bee6fc817fd70eafadbd55f893fd6">More...</a><br /></td></tr>
+<tr class="separator:a469bee6fc817fd70eafadbd55f893fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7c72e968f26df7184878e58d7324960"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ab7c72e968f26df7184878e58d7324960">chart_axis_set_line</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, <a class="el" href="structlxw__chart__line.html">lxw_chart_line</a> *line)</td></tr>
 <tr class="memdesc:ab7c72e968f26df7184878e58d7324960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the line properties for a chart axis.  <a href="#ab7c72e968f26df7184878e58d7324960">More...</a><br /></td></tr>
 <tr class="separator:ab7c72e968f26df7184878e58d7324960"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -689,6 +695,30 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aec54a5e2359af30e5d5694db63ab9607"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_series_set_invert_if_negative </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *&#160;</td>
+          <td class="paramname"><em>series</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">series</td><td>A series object created via <code><a class="el" href="chart_8h.html#ad60de0eb056e93435407e91482115f55" title="Add a data series to a chart. ">chart_add_series()</a></code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Invert the fill color for negative values. Usually only applicable to column and bar charts.</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#aec54a5e2359af30e5d5694db63ab9607">chart_series_set_invert_if_negative</a>(series);</div>
+</div><!-- fragment --> 
+</div>
+</div>
 <a class="anchor" id="a36f77a797d545b07a656965e4bf2978b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1145,6 +1175,47 @@ Functions</h2></td></tr>
 <p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_fonts_8c-example.html#a20">chart_fonts.c</a>.</dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="a469bee6fc817fd70eafadbd55f893fd6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_num_format </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>num_format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis. ">lxw_chart_axis</a> object. </td></tr>
+    <tr><td class="paramname">num_format</td><td>The number format string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>chart_axis_set_num_format()</code> function is used to set the format of the numbers on an axis:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a469bee6fc817fd70eafadbd55f893fd6">chart_axis_set_num_format</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <span class="stringliteral">&quot;0.00%&quot;</span>);</div>
+<div class="line"><a class="code" href="chart_8h.html#a469bee6fc817fd70eafadbd55f893fd6">chart_axis_set_num_format</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, <span class="stringliteral">&quot;$#,##0.00&quot;</span>);</div>
+</div><!-- fragment --><p>The number format is similar to the Worksheet Cell Format num_format, see <code><a class="el" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c" title="Set the number format for a cell. ">format_set_num_format()</a></code>.</p>
+<div class="image">
+<img src="chart_axis_num_format.png" alt="chart_axis_num_format.png"/>
+</div>
+<p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
 </div>
 </div>
 <a class="anchor" id="ab7c72e968f26df7184878e58d7324960"></a>
