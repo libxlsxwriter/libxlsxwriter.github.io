@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: lxw_chart_series Struct Reference</title>
+<title>libxlsxwriter: lxw_chart_point Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,17 +75,70 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">lxw_chart_series Struct Reference</div>  </div>
+<div class="title">lxw_chart_point Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Struct to represent an Excel chart data series.  
- <a href="structlxw__chart__series.html#details">More...</a></p>
+<p>Struct to represent an Excel chart data point.  
+ <a href="structlxw__chart__point.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="structlxw__chart__series.html" title="Struct to represent an Excel chart data series. ">lxw_chart_series</a> is created using the chart_add_series function. It is used in functions that modify a chart series but the members of the struct aren't modified directly. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_area_8c-example.html#_a7">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#_a7">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#_a7">chart_column.c</a>, <a class="el" href="chart_doughnut_8c-example.html#_a8">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#_a7">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#_a11">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#_a8">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#_a7">chart_radar.c</a>, and <a class="el" href="chart_scatter_8c-example.html#_a7">chart_scatter.c</a>.</dd>
-</dl></div></div><!-- contents -->
+<div class="textblock"><p>The <a class="el" href="structlxw__chart__point.html" title="Struct to represent an Excel chart data point. ">lxw_chart_point</a> used to set the line, fill and pattern of one or more points in a chart data series. See <a class="el" href="working_with_charts.html#chart_points">Working with Chart points</a>. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_doughnut_8c-example.html#_a20">chart_doughnut.c</a>, and <a class="el" href="chart_pie_8c-example.html#_a20">chart_pie.c</a>.</dd>
+</dl></div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a87fef88f0b3cedd6d61dc4d89eb77e11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__chart__line.html">lxw_chart_line</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__point.html#a87fef88f0b3cedd6d61dc4d89eb77e11">line</a></td></tr>
+<tr class="separator:a87fef88f0b3cedd6d61dc4d89eb77e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99ad02687c88e7ac4625fa8c12f6ba48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__chart__fill.html">lxw_chart_fill</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__point.html#a99ad02687c88e7ac4625fa8c12f6ba48">fill</a></td></tr>
+<tr class="separator:a99ad02687c88e7ac4625fa8c12f6ba48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28534debcee9564e8c8ee7d5cd9c1aea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__chart__pattern.html">lxw_chart_pattern</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__point.html#a28534debcee9564e8c8ee7d5cd9c1aea">pattern</a></td></tr>
+<tr class="separator:a28534debcee9564e8c8ee7d5cd9c1aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Field Documentation</h2>
+<a class="anchor" id="a87fef88f0b3cedd6d61dc4d89eb77e11"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlxw__chart__line.html">lxw_chart_line</a>* lxw_chart_point::line</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The line/border for the chart point. See <a class="el" href="working_with_charts.html#chart_lines">Chart formatting: Line</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a99ad02687c88e7ac4625fa8c12f6ba48"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlxw__chart__fill.html">lxw_chart_fill</a>* lxw_chart_point::fill</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The fill for the chart point. See <a class="el" href="working_with_charts.html#chart_fills">Chart formatting: Fill</a>. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_doughnut_8c-example.html#a21">chart_doughnut.c</a>, and <a class="el" href="chart_pie_8c-example.html#a21">chart_pie.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a28534debcee9564e8c8ee7d5cd9c1aea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlxw__chart__pattern.html">lxw_chart_pattern</a>* lxw_chart_point::pattern</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The pattern for the chart point. See <a class="el" href="working_with_charts.html#chart_patterns">Chart formatting: Pattern</a>. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

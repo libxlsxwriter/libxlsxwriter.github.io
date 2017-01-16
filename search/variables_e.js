@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['title',['title',['../structlxw__doc__properties.html#a23d8fd5995ef26d1eab54c4dbd92393c',1,'lxw_doc_properties']]],
-  ['tmpdir',['tmpdir',['../structlxw__workbook__options.html#a6a79cfd2824acc5a438f37d4f79da325',1,'lxw_workbook_options']]],
-  ['transparency',['transparency',['../structlxw__chart__fill.html#a9525caba07fe20ac7c1f0c4e42264cc2',1,'lxw_chart_fill']]],
-  ['type',['type',['../structlxw__chart__pattern.html#ad89b0a7ee149372b44b42519d9ae6d80',1,'lxw_chart_pattern']]]
+  ['scenarios',['scenarios',['../structlxw__protection.html#af9a96d57cb9d27aed44533c03057f517',1,'lxw_protection']]],
+  ['sec',['sec',['../structlxw__datetime.html#a001bad63fba21571bbcdf109dfa0f296',1,'lxw_datetime']]],
+  ['size',['size',['../structlxw__chart__font.html#ac854fec6027386422d66893121812343',1,'lxw_chart_font']]],
+  ['sort',['sort',['../structlxw__protection.html#a65d1e87b6603a1a3e4f00d93d228c46b',1,'lxw_protection']]],
+  ['status',['status',['../structlxw__doc__properties.html#aa1dac7e63e16678271e45bf0045e93b7',1,'lxw_doc_properties']]],
+  ['subject',['subject',['../structlxw__doc__properties.html#a216d40acad776338b8250a61fc29ba6a',1,'lxw_doc_properties']]]
 ];

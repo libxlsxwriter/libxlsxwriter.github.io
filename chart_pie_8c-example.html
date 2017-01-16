@@ -83,12 +83,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr>
 <td><a class="el" href="chart_radar_8c-example.html">&lt;&lt; chart_radar.c</a> </td><td align="right"><a class="el" href="chart_doughnut_8c-example.html">chart_doughnut.c &gt;&gt;</a>  </td></tr>
 </table>
-<p>Example of creating an Excel Pie chart.</p>
+<p>Examples of creating an Excel Pie chart.</p>
 <p>The default pie chart: </p><div class="image">
 <img src="chart_pie1.png" alt="chart_pie1.png"/>
 </div>
+<p>A pie chart with user defined colors: </p><div class="image">
+<img src="chart_pie2.png" alt="chart_pie2.png"/>
+</div>
+<p>A pie chart with rotated segments: </p><div class="image">
+<img src="chart_pie3.png" alt="chart_pie3.png"/>
+</div>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment"> * An example of creating an Excel pie chart using the libxlsxwriter library.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * The demo also shows how to set segment colors. It is possible to define</span></div>
+<div class="line"><span class="comment"> * chart colors for most types of libxlsxwriter charts via the series</span></div>
+<div class="line"><span class="comment"> * formatting functions. However, Pie/Doughnut charts are a special case since</span></div>
+<div class="line"><span class="comment"> * each segment is represented as a point so it is necessary to assign</span></div>
+<div class="line"><span class="comment"> * formatting to each point in the series.</span></div>
 <div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> * Copyright 2014-2017, John McNamara, jmcnamara@cpan.org</span></div>
 <div class="line"><span class="comment"> *</span></div>
@@ -114,25 +126,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment"> * Create a worksheet with examples charts.</span></div>
+<div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> */</span></div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line"></div>
 <div class="line">    <a name="_a5"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>     *workbook  = new_workbook(<span class="stringliteral">&quot;chart_pie.xlsx&quot;</span>);</div>
 <div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a>    *worksheet = <a name="a6"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
-<div class="line">    <a name="_a7"></a><a class="code" href="structlxw__chart__series.html">lxw_chart_series</a> *series;</div>
+<div class="line">    <a name="_a7"></a><a class="code" href="structlxw__chart.html">lxw_chart</a> *chart ;</div>
+<div class="line">    <a name="_a8"></a><a class="code" href="structlxw__chart__series.html">lxw_chart_series</a> *series;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Add a bold format to use to highlight the header cells. */</span></div>
-<div class="line">    <a class="code" href="structlxw__format.html">lxw_format</a> *bold = <a name="a8"></a><a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
-<div class="line">    <a name="a9"></a><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(bold);</div>
+<div class="line">    <a class="code" href="structlxw__format.html">lxw_format</a> *bold = <a name="a9"></a><a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line">    <a name="a10"></a><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(bold);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Write some data for the chart. */</span></div>
 <div class="line">    write_worksheet_data(worksheet, bold);</div>
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/*</span></div>
-<div class="line"><span class="comment">     * Create a pie chart.</span></div>
+<div class="line"><span class="comment">     * Chart 1: Create a simple pie chart.</span></div>
 <div class="line"><span class="comment">     */</span></div>
-<div class="line">    <a name="_a10"></a><a class="code" href="structlxw__chart.html">lxw_chart</a> *chart = <a name="a11"></a><a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a name="a12"></a><a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca679756788a8bec4bfc1e1c723ec5246a">LXW_CHART_PIE</a>);</div>
+<div class="line">    chart = <a name="a11"></a><a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a name="a12"></a><a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca679756788a8bec4bfc1e1c723ec5246a">LXW_CHART_PIE</a>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Add the first series to the chart. */</span></div>
 <div class="line">    series = <a name="a13"></a><a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$4&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$B$2:$B$4&quot;</span>);</div>
@@ -150,7 +164,66 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a name="a17"></a><a class="code" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;D2&quot;</span>), chart);</div>
 <div class="line"></div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> <a name="a18"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     * Chart 2: Create a pie chart with user defined segment colors.</span></div>
+<div class="line"><span class="comment">     */</span></div>
+<div class="line">    chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca679756788a8bec4bfc1e1c723ec5246a">LXW_CHART_PIE</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add the first series to the chart. */</span></div>
+<div class="line">    series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$4&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$B$2:$B$4&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Set the name for the series instead of the default &quot;Series 1&quot;. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#a4361fb66cf0e15501995f89466888578">chart_series_set_name</a>(series, <span class="stringliteral">&quot;Pie sales data&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add a chart title. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, <span class="stringliteral">&quot;Pie Chart with user defined colors&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add for fills for use in the chart. */</span></div>
+<div class="line">    <a name="_a18"></a><a class="code" href="structlxw__chart__fill.html">lxw_chart_fill</a> fill1 = {.<a name="a19"></a><a class="code" href="structlxw__chart__fill.html#a1780f71f3de68cb03e2f2825952283e4">color</a> = 0x5ABA10};</div>
+<div class="line">    <a class="code" href="structlxw__chart__fill.html">lxw_chart_fill</a> fill2 = {.<a class="code" href="structlxw__chart__fill.html#a1780f71f3de68cb03e2f2825952283e4">color</a> = 0xFE110E};</div>
+<div class="line">    <a class="code" href="structlxw__chart__fill.html">lxw_chart_fill</a> fill3 = {.<a class="code" href="structlxw__chart__fill.html#a1780f71f3de68cb03e2f2825952283e4">color</a> = 0xCA5C05};</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add some points with the above fills. */</span></div>
+<div class="line">    <a name="_a20"></a><a class="code" href="structlxw__chart__point.html">lxw_chart_point</a> point1 = {.<a name="a21"></a><a class="code" href="structlxw__chart__point.html#a99ad02687c88e7ac4625fa8c12f6ba48">fill</a> = &amp;fill1};</div>
+<div class="line">    <a class="code" href="structlxw__chart__point.html">lxw_chart_point</a> point2 = {.<a class="code" href="structlxw__chart__point.html#a99ad02687c88e7ac4625fa8c12f6ba48">fill</a> = &amp;fill2};</div>
+<div class="line">    <a class="code" href="structlxw__chart__point.html">lxw_chart_point</a> point3 = {.<a class="code" href="structlxw__chart__point.html#a99ad02687c88e7ac4625fa8c12f6ba48">fill</a> = &amp;fill3};</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Create an array of the point objects. */</span></div>
+<div class="line">    <a class="code" href="structlxw__chart__point.html">lxw_chart_point</a> *points[] = {&amp;point1,</div>
+<div class="line">                                 &amp;point2,</div>
+<div class="line">                                 &amp;point3,</div>
+<div class="line">                                 NULL};</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add/override the points/segments of the chart. */</span></div>
+<div class="line">    <a name="a22"></a><a class="code" href="chart_8h.html#a0e27dc551820c1d8d0e06cdd393f4b78">chart_series_set_points</a>(series, points);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Insert the chart into the worksheet. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;D18&quot;</span>), chart);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     * Chart 3: Create a pie chart with rotation of the segments.</span></div>
+<div class="line"><span class="comment">     */</span></div>
+<div class="line">    chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca679756788a8bec4bfc1e1c723ec5246a">LXW_CHART_PIE</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add the first series to the chart. */</span></div>
+<div class="line">    series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$4&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$B$2:$B$4&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Set the name for the series instead of the default &quot;Series 1&quot;. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#a4361fb66cf0e15501995f89466888578">chart_series_set_name</a>(series, <span class="stringliteral">&quot;Pie sales data&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add a chart title. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, <span class="stringliteral">&quot;Pie Chart with segment rotation&quot;</span>);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Change the angle/rotation of the first segment. */</span></div>
+<div class="line">    <a name="a23"></a><a class="code" href="chart_8h.html#ae0441e6a3a1d173be18ff96a4ded874a">chart_set_rotation</a>(chart, 90);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Insert the chart into the worksheet. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;D34&quot;</span>), chart);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> <a name="a24"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->

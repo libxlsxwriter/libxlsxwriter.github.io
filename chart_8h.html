@@ -175,6 +175,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aa976686014981abd5a8837a7a26883f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aa976686014981abd5a8837a7a26883f9">chart_series_set_marker_pattern</a> (<a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *series, <a class="el" href="structlxw__chart__pattern.html">lxw_chart_pattern</a> *pattern)</td></tr>
 <tr class="memdesc:aa976686014981abd5a8837a7a26883f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pattern properties for a chart series marker.  <a href="#aa976686014981abd5a8837a7a26883f9">More...</a><br /></td></tr>
 <tr class="separator:aa976686014981abd5a8837a7a26883f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e27dc551820c1d8d0e06cdd393f4b78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a0e27dc551820c1d8d0e06cdd393f4b78">chart_series_set_points</a> (<a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *series, <a class="el" href="structlxw__chart__point.html">lxw_chart_point</a> *points[])</td></tr>
+<tr class="memdesc:a0e27dc551820c1d8d0e06cdd393f4b78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the formatting for points in the series.  <a href="#a0e27dc551820c1d8d0e06cdd393f4b78">More...</a><br /></td></tr>
+<tr class="separator:a0e27dc551820c1d8d0e06cdd393f4b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a650d569ff37a087101b7bff4ee7bb130"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, const char *name)</td></tr>
 <tr class="memdesc:a650d569ff37a087101b7bff4ee7bb130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the name caption of the an axis.  <a href="#a650d569ff37a087101b7bff4ee7bb130">More...</a><br /></td></tr>
 <tr class="separator:a650d569ff37a087101b7bff4ee7bb130"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,6 +307,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a6865755f0adb52e41466a6576a8a030e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a6865755f0adb52e41466a6576a8a030e">chart_set_style</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, uint8_t style_id)</td></tr>
 <tr class="memdesc:a6865755f0adb52e41466a6576a8a030e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the chart style type.  <a href="#a6865755f0adb52e41466a6576a8a030e">More...</a><br /></td></tr>
 <tr class="separator:a6865755f0adb52e41466a6576a8a030e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0441e6a3a1d173be18ff96a4ded874a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ae0441e6a3a1d173be18ff96a4ded874a">chart_set_rotation</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, uint16_t rotation)</td></tr>
+<tr class="memdesc:ae0441e6a3a1d173be18ff96a4ded874a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Pie/Doughnut chart rotation.  <a href="#ae0441e6a3a1d173be18ff96a4ded874a">More...</a><br /></td></tr>
+<tr class="separator:ae0441e6a3a1d173be18ff96a4ded874a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a867ce116a88d422724f79f1a378e5502"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a867ce116a88d422724f79f1a378e5502">chart_set_hole_size</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, uint8_t size)</td></tr>
+<tr class="memdesc:a867ce116a88d422724f79f1a378e5502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Doughnut chart hole size.  <a href="#a867ce116a88d422724f79f1a378e5502">More...</a><br /></td></tr>
+<tr class="separator:a867ce116a88d422724f79f1a378e5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ad60de0eb056e93435407e91482115f55"></a>
@@ -993,6 +1002,68 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#aa976686014981abd5a8837a7a26883f9">chart_series_set_marker_pattern</a>(series, &amp;pattern);</div>
 </div><!-- fragment --><p>For more information see <a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9d" title="Chart pattern types. ">lxw_chart_pattern_type</a> and <a class="el" href="working_with_charts.html#chart_patterns">Chart formatting: Pattern</a>. </p>
 
+</div>
+</div>
+<a class="anchor" id="a0e27dc551820c1d8d0e06cdd393f4b78"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> chart_series_set_points </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *&#160;</td>
+          <td class="paramname"><em>series</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__point.html">lxw_chart_point</a> *&#160;</td>
+          <td class="paramname"><em>points</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">series</td><td>A series object created via <code><a class="el" href="chart_8h.html#ad60de0eb056e93435407e91482115f55" title="Add a data series to a chart. ">chart_add_series()</a></code>. </td></tr>
+    <tr><td class="paramname">points</td><td>An NULL terminated array of <a class="el" href="structlxw__chart__point.html" title="Struct to represent an Excel chart data point. ">lxw_chart_point</a> pointers.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a>.</dd></dl>
+<p>In general formatting is applied to an entire series in a chart. However, it is occasionally required to format individual points in a series. In particular this is required for Pie/Doughnut charts where each segment is represented by a point.</p>
+ <div class="fragment"><div class="line">    <span class="comment">/* Add the data series to the chart. */</span></div>
+<div class="line">    series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$1:$A$2&quot;</span>,</div>
+<div class="line">                                     <span class="stringliteral">&quot;=Sheet1!$B$1:$B$2&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Create some fills for the chart points/segments. */</span></div>
+<div class="line">    <a class="code" href="structlxw__chart__fill.html">lxw_chart_fill</a> red_fill     = {.<a class="code" href="structlxw__chart__fill.html#a1780f71f3de68cb03e2f2825952283e4">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>  };</div>
+<div class="line">    <a class="code" href="structlxw__chart__fill.html">lxw_chart_fill</a> green_fill   = {.<a class="code" href="structlxw__chart__fill.html#a1780f71f3de68cb03e2f2825952283e4">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38bae0b5c39ced3b8c871974f0e4917e4871">LXW_COLOR_GREEN</a>};</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add the fills to the point objects. */</span></div>
+<div class="line">    <a class="code" href="structlxw__chart__point.html">lxw_chart_point</a> red_point   = {.<a class="code" href="structlxw__chart__point.html#a99ad02687c88e7ac4625fa8c12f6ba48">fill</a> = &amp;red_fill  };</div>
+<div class="line">    <a class="code" href="structlxw__chart__point.html">lxw_chart_point</a> green_point = {.<a class="code" href="structlxw__chart__point.html#a99ad02687c88e7ac4625fa8c12f6ba48">fill</a> = &amp;green_fill};</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Create an array of pointer to chart points. Note, the array should be</span></div>
+<div class="line"><span class="comment">     * NULL terminated. */</span></div>
+<div class="line">    <a class="code" href="structlxw__chart__point.html">lxw_chart_point</a> *points[] = {&amp;green_point,</div>
+<div class="line">                                 &amp;red_point,</div>
+<div class="line">                                 NULL};</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add the points to the series. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#a0e27dc551820c1d8d0e06cdd393f4b78">chart_series_set_points</a>(series, points);</div>
+</div><!-- fragment --></p>
+<div class="image">
+<img src="chart_points1.png" alt="chart_points1.png"/>
+</div>
+<dl class="section note"><dt>Note</dt><dd>The array of <a class="el" href="structlxw__chart__point.html" title="Struct to represent an Excel chart data point. ">lxw_chart_point</a> pointers should be NULL terminated as shown in the example.</dd></dl>
+<p>For more details see <a class="el" href="working_with_charts.html#chart_points">Working with Chart points</a> </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_doughnut_8c-example.html#a22">chart_doughnut.c</a>, and <a class="el" href="chart_pie_8c-example.html#a22">chart_pie.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="a650d569ff37a087101b7bff4ee7bb130"></a>
@@ -2752,6 +2823,82 @@ LXW_CHART_LEGEND_OVERLAY_LEFT
 </dl>
 </div>
 </div>
+<a class="anchor" id="ae0441e6a3a1d173be18ff96a4ded874a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_set_rotation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart.html">lxw_chart</a> *&#160;</td>
+          <td class="paramname"><em>chart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>rotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chart</td><td>Pointer to a <a class="el" href="structlxw__chart.html" title="Struct to represent an Excel chart. ">lxw_chart</a> instance to be configured. </td></tr>
+    <tr><td class="paramname">rotation</td><td>The angle of rotation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code><a class="el" href="chart_8h.html#ae0441e6a3a1d173be18ff96a4ded874a" title="Set the Pie/Doughnut chart rotation. ">chart_set_rotation()</a></code> function is used to set the rotation of the first segment of a Pie/Doughnut chart. This has the effect of rotating the entire chart:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#ae0441e6a3a1d173be18ff96a4ded874a">chart_set_rotation</a>(chart, 28);</div>
+</div><!-- fragment --><p>The angle of rotation must be in the range <code>0 &lt;= rotation &lt;= 360</code>.</p>
+<p>This option is only available for Pie/Doughnut charts. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_doughnut_8c-example.html#a23">chart_doughnut.c</a>, and <a class="el" href="chart_pie_8c-example.html#a23">chart_pie.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a867ce116a88d422724f79f1a378e5502"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_set_hole_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart.html">lxw_chart</a> *&#160;</td>
+          <td class="paramname"><em>chart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chart</td><td>Pointer to a <a class="el" href="structlxw__chart.html" title="Struct to represent an Excel chart. ">lxw_chart</a> instance to be configured. </td></tr>
+    <tr><td class="paramname">size</td><td>The hole size as a percentage.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code><a class="el" href="chart_8h.html#a867ce116a88d422724f79f1a378e5502" title="Set the Doughnut chart hole size. ">chart_set_hole_size()</a></code> function is used to set the hole size of a Doughnut chart:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a867ce116a88d422724f79f1a378e5502">chart_set_hole_size</a>(chart, 33);</div>
+</div><!-- fragment --><p>The hole size must be in the range <code>10 &lt;= size &lt;= 90</code>.</p>
+<p>This option is only available for Doughnut charts. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_doughnut_8c-example.html#a24">chart_doughnut.c</a>.</dd>
+</dl>
+</div>
+</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="a03baa8d4eba7432627168457648bdff1"></a>
 <div class="memitem">
@@ -2815,6 +2962,19 @@ LXW_CHART_LEGEND_OVERLAY_LEFT
       </table>
 </div><div class="memdoc">
 <p>See <a class="el" href="working_with_charts.html#chart_fonts">Chart formatting: Fonts</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7431004f56580318db63df64ff239d4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structlxw__chart__point.html">lxw_chart_point</a>  <a class="el" href="structlxw__chart__point.html">lxw_chart_point</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The <a class="el" href="structlxw__chart__point.html" title="Struct to represent an Excel chart data point. ">lxw_chart_point</a> used to set the line, fill and pattern of one or more points in a chart data series. See <a class="el" href="working_with_charts.html#chart_points">Working with Chart points</a>. </p>
 
 </div>
 </div>
@@ -3351,6 +3511,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__font.html">lxw_chart_font</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent a chart font.  <a href="structlxw__chart__font.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__point.html">lxw_chart_point</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel chart data point.  <a href="structlxw__chart__point.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__series.html">lxw_chart_series</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel chart data series.  <a href="structlxw__chart__series.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3416,6 +3579,9 @@ typedef enum <br class="typebreak" />
 <tr class="memitem:a1a2f91c8af4830581f8430304783d956"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__chart__font.html">lxw_chart_font</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a1a2f91c8af4830581f8430304783d956">lxw_chart_font</a></td></tr>
 <tr class="memdesc:a1a2f91c8af4830581f8430304783d956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent a chart font.  <a href="#a1a2f91c8af4830581f8430304783d956">More...</a><br /></td></tr>
 <tr class="separator:a1a2f91c8af4830581f8430304783d956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7431004f56580318db63df64ff239d4a"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__chart__point.html">lxw_chart_point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a7431004f56580318db63df64ff239d4a">lxw_chart_point</a></td></tr>
+<tr class="memdesc:a7431004f56580318db63df64ff239d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel chart data point.  <a href="#a7431004f56580318db63df64ff239d4a">More...</a><br /></td></tr>
+<tr class="separator:a7431004f56580318db63df64ff239d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a404c5dd6bc6d21a5e20c2e96ccb701"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__chart__series.html">lxw_chart_series</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a3a404c5dd6bc6d21a5e20c2e96ccb701">lxw_chart_series</a></td></tr>
 <tr class="memdesc:a3a404c5dd6bc6d21a5e20c2e96ccb701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel chart data series.  <a href="#a3a404c5dd6bc6d21a5e20c2e96ccb701">More...</a><br /></td></tr>
 <tr class="separator:a3a404c5dd6bc6d21a5e20c2e96ccb701"><td class="memSeparator" colspan="2">&#160;</td></tr>
