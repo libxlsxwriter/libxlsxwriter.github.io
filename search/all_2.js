@@ -58,6 +58,8 @@ var searchData=
   ['chart_5fseries_5fset_5fpoints',['chart_series_set_points',['../chart_8h.html#a0e27dc551820c1d8d0e06cdd393f4b78',1,'chart.h']]],
   ['chart_5fseries_5fset_5fsmooth',['chart_series_set_smooth',['../chart_8h.html#ab16a25dbe2de350e9d11e6e25f6fe412',1,'chart.h']]],
   ['chart_5fseries_5fset_5fvalues',['chart_series_set_values',['../chart_8h.html#ac29dbe36b53288990ec0b20dddbaf967',1,'chart.h']]],
+  ['chart_5fset_5fdrop_5flines',['chart_set_drop_lines',['../chart_8h.html#aefafc0eb6e84560d819d53206de774e5',1,'chart.h']]],
+  ['chart_5fset_5fhigh_5flow_5flines',['chart_set_high_low_lines',['../chart_8h.html#ac242cec241cb423fa1cec46ff8fe6887',1,'chart.h']]],
   ['chart_5fset_5fhole_5fsize',['chart_set_hole_size',['../chart_8h.html#a867ce116a88d422724f79f1a378e5502',1,'chart.h']]],
   ['chart_5fset_5frotation',['chart_set_rotation',['../chart_8h.html#ae0441e6a3a1d173be18ff96a4ded874a',1,'chart.h']]],
   ['chart_5fset_5fstyle',['chart_set_style',['../chart_8h.html#a6865755f0adb52e41466a6576a8a030e',1,'chart.h']]],

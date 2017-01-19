@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: chart_line.c</title>
+<title>libxlsxwriter: chart_data_tools.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -76,19 +76,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">chart_line.c</div>  </div>
+<div class="title">chart_data_tools.c</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table  width="600">
 <tr>
-<td><a class="el" href="chart_column_8c-example.html">&lt;&lt; chart_column.c</a> </td><td align="right"><a class="el" href="chart_scatter_8c-example.html">chart_scatter.c &gt;&gt;</a>  </td></tr>
+<td><a class="el" href="chart_doughnut_8c-example.html">&lt;&lt; chart_doughnut.c</a> </td><td align="right"><a class="el" href="chart_fonts_8c-example.html">chart_fonts.c &gt;&gt;</a>  </td></tr>
 </table>
-<p>Example of creating an Excel Line chart.</p>
-<p>The default line chart: </p><div class="image">
-<img src="chart_line1.png" alt="chart_line1.png"/>
+<p>A demo of an various Excel chart data tools that are available via a libxlsxwriter chart. These include Drop Lines and High-Low Lines.</p>
+<p>Chart with high-low lines.</p>
+<div class="image">
+<img src="chart_data_tools5.png" alt="chart_data_tools5.png"/>
+</div>
+<p>Chart with drop lines.</p>
+<div class="image">
+<img src="chart_data_tools6.png" alt="chart_data_tools6.png"/>
 </div>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * An example of creating an Excel line chart using the libxlsxwriter library.</span></div>
+<div class="line"><span class="comment"> * A demo of an various Excel chart data tools that are available via a</span></div>
+<div class="line"><span class="comment"> * libxlsxwriter chart.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * These include Drop Lines and High-Low Lines.</span></div>
 <div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> * Copyright 2014-2017, John McNamara, jmcnamara@cpan.org</span></div>
 <div class="line"><span class="comment"> *</span></div>
@@ -126,9 +134,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><span class="comment"> */</span></div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line"></div>
-<div class="line">    <a name="_a5"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>     *workbook  = new_workbook(<span class="stringliteral">&quot;chart_line.xlsx&quot;</span>);</div>
+<div class="line">    <a name="_a5"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>     *workbook  = new_workbook(<span class="stringliteral">&quot;chart_data_tools.xlsx&quot;</span>);</div>
 <div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a>    *worksheet = <a name="a6"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
-<div class="line">    <a name="_a7"></a><a class="code" href="structlxw__chart__series.html">lxw_chart_series</a> *series;</div>
+<div class="line">    <a name="_a7"></a><a class="code" href="structlxw__chart__series.html">lxw_chart_series</a> *series1;</div>
+<div class="line">    <a class="code" href="structlxw__chart__series.html">lxw_chart_series</a> *series2;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Add a bold format to use to highlight the header cells. */</span></div>
 <div class="line">    <a class="code" href="structlxw__format.html">lxw_format</a> *bold = <a name="a8"></a><a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
@@ -139,38 +148,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/*</span></div>
-<div class="line"><span class="comment">     * Chart 1. Create a line chart.</span></div>
+<div class="line"><span class="comment">     * Chart 1. Example with High Low Lines.</span></div>
 <div class="line"><span class="comment">     */</span></div>
 <div class="line">    <a name="_a10"></a><a class="code" href="structlxw__chart.html">lxw_chart</a> *chart = <a name="a11"></a><a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a name="a12"></a><a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85caf309b18af571c90d3ae052e769d30e6c">LXW_CHART_LINE</a>);</div>
 <div class="line"></div>
+<div class="line">    <span class="comment">/* Add a chart title. */</span></div>
+<div class="line">    <a name="a13"></a><a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, <span class="stringliteral">&quot;Chart with High-Low Lines&quot;</span>);</div>
+<div class="line"></div>
 <div class="line">    <span class="comment">/* Add the first series to the chart. */</span></div>
-<div class="line">    series = <a name="a13"></a><a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$B$2:$B$7&quot;</span>);</div>
+<div class="line">    series1 = <a name="a14"></a><a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$B$2:$B$7&quot;</span>);</div>
+<div class="line">    series2 = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$C$2:$C$7&quot;</span>);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Set the name for the series instead of the default &quot;Series 1&quot;. */</span></div>
-<div class="line">    <a name="a14"></a><a class="code" href="chart_8h.html#a4361fb66cf0e15501995f89466888578">chart_series_set_name</a>(series, <span class="stringliteral">&quot;=Sheet1!$B1$1&quot;</span>);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Add a second series but leave the categories and values undefined. They</span></div>
-<div class="line"><span class="comment">     * can be defined later using the alternative syntax shown below.  */</span></div>
-<div class="line">    series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, NULL, NULL);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Configure the series using a syntax that is easier to define programmatically. */</span></div>
-<div class="line">    <a name="a15"></a><a class="code" href="chart_8h.html#abfde30539e8538e64eee370797b4abc5">chart_series_set_categories</a>(series, <span class="stringliteral">&quot;Sheet1&quot;</span>, 1, 0, 6, 0); <span class="comment">/* &quot;=Sheet1!$A$2:$A$7&quot; */</span></div>
-<div class="line">    <a name="a16"></a><a class="code" href="chart_8h.html#ac29dbe36b53288990ec0b20dddbaf967">chart_series_set_values</a>(series,     <span class="stringliteral">&quot;Sheet1&quot;</span>, 1, 2, 6, 2); <span class="comment">/* &quot;=Sheet1!$C$2:$C$7&quot; */</span></div>
-<div class="line">    <a name="a17"></a><a class="code" href="chart_8h.html#afcd0c12a60048ef0240aba415f528e39">chart_series_set_name_range</a>(series, <span class="stringliteral">&quot;Sheet1&quot;</span>, 0, 2);       <span class="comment">/* &quot;=Sheet1!$C$1&quot;      */</span></div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Add a chart title and some axis labels. */</span></div>
-<div class="line">    <a name="a18"></a><a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart,        <span class="stringliteral">&quot;Results of sample analysis&quot;</span>);</div>
-<div class="line">    <a name="a19"></a><a class="code" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a>(chart-&gt;<a name="a20"></a><a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <span class="stringliteral">&quot;Test number&quot;</span>);</div>
-<div class="line">    <a class="code" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a>(chart-&gt;<a name="a21"></a><a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, <span class="stringliteral">&quot;Sample length (mm)&quot;</span>);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Set an Excel chart style. */</span></div>
-<div class="line">    <a name="a22"></a><a class="code" href="chart_8h.html#a6865755f0adb52e41466a6576a8a030e">chart_set_style</a>(chart, 10);</div>
+<div class="line">    <span class="comment">/* Add high-low lines to the chart. */</span></div>
+<div class="line">    <a name="a15"></a><a class="code" href="chart_8h.html#ac242cec241cb423fa1cec46ff8fe6887">chart_set_high_low_lines</a>(chart, NULL);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Insert the chart into the worksheet. */</span></div>
-<div class="line">    <a name="a23"></a><a class="code" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;E2&quot;</span>), chart);</div>
+<div class="line">    <a name="a16"></a><a class="code" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;E2&quot;</span>), chart);</div>
 <div class="line"></div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> <a name="a24"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     * Chart 2. Example with Drop Lines.</span></div>
+<div class="line"><span class="comment">     */</span></div>
+<div class="line">    chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85caf309b18af571c90d3ae052e769d30e6c">LXW_CHART_LINE</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add a chart title. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, <span class="stringliteral">&quot;Chart with Drop Lines&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add the first series to the chart. */</span></div>
+<div class="line">    series1 = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$B$2:$B$7&quot;</span>);</div>
+<div class="line">    series2 = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$C$2:$C$7&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add drop lines to the chart. */</span></div>
+<div class="line">    <a name="a17"></a><a class="code" href="chart_8h.html#aefafc0eb6e84560d819d53206de774e5">chart_set_drop_lines</a>(chart, NULL);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Insert the chart into the worksheet. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;E18&quot;</span>), chart);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> <a name="a18"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
