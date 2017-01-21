@@ -62,6 +62,8 @@ var searchData=
   ['chart_5fset_5fhigh_5flow_5flines',['chart_set_high_low_lines',['../chart_8h.html#ac242cec241cb423fa1cec46ff8fe6887',1,'chart.h']]],
   ['chart_5fset_5fhole_5fsize',['chart_set_hole_size',['../chart_8h.html#a867ce116a88d422724f79f1a378e5502',1,'chart.h']]],
   ['chart_5fset_5frotation',['chart_set_rotation',['../chart_8h.html#ae0441e6a3a1d173be18ff96a4ded874a',1,'chart.h']]],
+  ['chart_5fset_5fseries_5fgap',['chart_set_series_gap',['../chart_8h.html#a4a3e57d55a2238724bef8cf20a64641f',1,'chart.h']]],
+  ['chart_5fset_5fseries_5foverlap',['chart_set_series_overlap',['../chart_8h.html#a655aa8dfd0ed8483d28ae86683dcf0af',1,'chart.h']]],
   ['chart_5fset_5fstyle',['chart_set_style',['../chart_8h.html#a6865755f0adb52e41466a6576a8a030e',1,'chart.h']]],
   ['chart_5fset_5ftable',['chart_set_table',['../chart_8h.html#a18acd351fb3ab4758cadccba802f1c34',1,'chart.h']]],
   ['chart_5fset_5ftable_5fgrid',['chart_set_table_grid',['../chart_8h.html#a93a2bfcde3072b5c20e4a65f3adb01a2',1,'chart.h']]],

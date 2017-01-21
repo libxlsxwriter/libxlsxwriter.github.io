@@ -322,6 +322,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ac242cec241cb423fa1cec46ff8fe6887"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ac242cec241cb423fa1cec46ff8fe6887">chart_set_high_low_lines</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, <a class="el" href="structlxw__chart__line.html">lxw_chart_line</a> *line)</td></tr>
 <tr class="memdesc:ac242cec241cb423fa1cec46ff8fe6887"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on and format high-low Lines for a chart.  <a href="#ac242cec241cb423fa1cec46ff8fe6887">More...</a><br /></td></tr>
 <tr class="separator:ac242cec241cb423fa1cec46ff8fe6887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a655aa8dfd0ed8483d28ae86683dcf0af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a655aa8dfd0ed8483d28ae86683dcf0af">chart_set_series_overlap</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, int8_t overlap)</td></tr>
+<tr class="memdesc:a655aa8dfd0ed8483d28ae86683dcf0af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the overlap between series in a Bar/Column chart.  <a href="#a655aa8dfd0ed8483d28ae86683dcf0af">More...</a><br /></td></tr>
+<tr class="separator:a655aa8dfd0ed8483d28ae86683dcf0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a3e57d55a2238724bef8cf20a64641f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a4a3e57d55a2238724bef8cf20a64641f">chart_set_series_gap</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, uint16_t gap)</td></tr>
+<tr class="memdesc:a4a3e57d55a2238724bef8cf20a64641f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the gap between series in a Bar/Column chart.  <a href="#a4a3e57d55a2238724bef8cf20a64641f">More...</a><br /></td></tr>
+<tr class="separator:a4a3e57d55a2238724bef8cf20a64641f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0441e6a3a1d173be18ff96a4ded874a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ae0441e6a3a1d173be18ff96a4ded874a">chart_set_rotation</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, uint16_t rotation)</td></tr>
 <tr class="memdesc:ae0441e6a3a1d173be18ff96a4ded874a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Pie/Doughnut chart rotation.  <a href="#ae0441e6a3a1d173be18ff96a4ded874a">More...</a><br /></td></tr>
 <tr class="separator:ae0441e6a3a1d173be18ff96a4ded874a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3072,6 +3078,87 @@ LXW_CHART_LEGEND_OVERLAY_LEFT
 <div class="line"><a class="code" href="chart_8h.html#ac242cec241cb423fa1cec46ff8fe6887">chart_set_high_low_lines</a>(chart, &amp;line);</div>
 </div><!-- fragment --><p>High-Low Lines are only available in Line charts. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_tools_8c-example.html#a14">chart_data_tools.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a655aa8dfd0ed8483d28ae86683dcf0af"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_set_series_overlap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart.html">lxw_chart</a> *&#160;</td>
+          <td class="paramname"><em>chart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&#160;</td>
+          <td class="paramname"><em>overlap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chart</td><td>Pointer to a <a class="el" href="structlxw__chart.html" title="Struct to represent an Excel chart. ">lxw_chart</a> instance to be configured. </td></tr>
+    <tr><td class="paramname">overlap</td><td>The overlap between the series. -100 to 100.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>chart_set_series_overlap()</code> function sets the overlap between series in Bar and Column charts.</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a655aa8dfd0ed8483d28ae86683dcf0af">chart_set_series_overlap</a>(chart, -50);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_overlap.png" alt="chart_overlap.png"/>
+</div>
+<p>The overlap value must be in the range <code>0 &lt;= overlap &lt;= 500</code>. The default value is 0.</p>
+<p>This option is only available for Bar/Column charts. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4a3e57d55a2238724bef8cf20a64641f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_set_series_gap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart.html">lxw_chart</a> *&#160;</td>
+          <td class="paramname"><em>chart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>gap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chart</td><td>Pointer to a <a class="el" href="structlxw__chart.html" title="Struct to represent an Excel chart. ">lxw_chart</a> instance to be configured. </td></tr>
+    <tr><td class="paramname">gap</td><td>The gap between the series. 0 to 500.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>chart_set_series_gap()</code> function sets the gap between series in Bar and Column charts.</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a4a3e57d55a2238724bef8cf20a64641f">chart_set_series_gap</a>(chart, 400);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_gap.png" alt="chart_gap.png"/>
+</div>
+<p>The gap value must be in the range <code>0 &lt;= gap &lt;= 500</code>. The default value is 150.</p>
+<p>This option is only available for Bar/Column charts. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_pattern_8c-example.html#a26">chart_pattern.c</a>.</dd>
 </dl>
 </div>
 </div>
