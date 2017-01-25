@@ -6,6 +6,8 @@ var searchData=
   ['lxw_5fchart_5faxis_5ftick_5fmark',['lxw_chart_axis_tick_mark',['../chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67',1,'chart.h']]],
   ['lxw_5fchart_5faxis_5ftick_5fposition',['lxw_chart_axis_tick_position',['../chart_8h.html#aab90178f4981b77368f84155ebd5377d',1,'chart.h']]],
   ['lxw_5fchart_5fblank',['lxw_chart_blank',['../chart_8h.html#af7ecbdf6aeea5098164e88a0107aa89c',1,'chart.h']]],
+  ['lxw_5fchart_5flabel_5fposition',['lxw_chart_label_position',['../chart_8h.html#a1128d0e553fc350134c4937a19cfe430',1,'chart.h']]],
+  ['lxw_5fchart_5flabel_5fseparator',['lxw_chart_label_separator',['../chart_8h.html#a2775e02cfba1d2b2dc85ebadc03f264d',1,'chart.h']]],
   ['lxw_5fchart_5flegend_5fposition',['lxw_chart_legend_position',['../chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22',1,'chart.h']]],
   ['lxw_5fchart_5fline_5fdash_5ftype',['lxw_chart_line_dash_type',['../chart_8h.html#afb0d1b3884f1520c227ef9c8945c2570',1,'chart.h']]],
   ['lxw_5fchart_5fmarker_5ftype',['lxw_chart_marker_type',['../chart_8h.html#a347dc392e6077c1137df42d2ad01edfc',1,'chart.h']]],
