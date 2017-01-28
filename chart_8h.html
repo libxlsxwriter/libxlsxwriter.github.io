@@ -208,6 +208,17 @@ Functions</h2></td></tr>
 <tr class="memitem:aea2957adf1e8c754f771bbcb836229d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aea2957adf1e8c754f771bbcb836229d4">chart_series_set_labels_font</a> (<a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *series, <a class="el" href="structlxw__chart__font.html">lxw_chart_font</a> *font)</td></tr>
 <tr class="memdesc:aea2957adf1e8c754f771bbcb836229d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the font properties for chart data labels in a series.  <a href="#aea2957adf1e8c754f771bbcb836229d4">More...</a><br /></td></tr>
 <tr class="separator:aea2957adf1e8c754f771bbcb836229d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b72a8b98d7db92c4cc63e226442d0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a> (lxw_series_error_bars *error_bars, uint8_t type, double value)</td></tr>
+<tr class="separator:a31b72a8b98d7db92c4cc63e226442d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa897ee54d4a19f264a6b8f9dd43604b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aa897ee54d4a19f264a6b8f9dd43604b3">chart_series_set_error_bars_direction</a> (lxw_series_error_bars *error_bars, uint8_t direction)</td></tr>
+<tr class="memdesc:aa897ee54d4a19f264a6b8f9dd43604b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the direction (up, down or both) of the error bars for a chart series.  <a href="#aa897ee54d4a19f264a6b8f9dd43604b3">More...</a><br /></td></tr>
+<tr class="separator:aa897ee54d4a19f264a6b8f9dd43604b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab03b0a4da953fa6bb47e2296b82476d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ab03b0a4da953fa6bb47e2296b82476d2">chart_series_set_error_bars_endcap</a> (lxw_series_error_bars *error_bars, uint8_t endcap)</td></tr>
+<tr class="memdesc:ab03b0a4da953fa6bb47e2296b82476d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the end cap type for the error bars of a chart series.  <a href="#ab03b0a4da953fa6bb47e2296b82476d2">More...</a><br /></td></tr>
+<tr class="separator:ab03b0a4da953fa6bb47e2296b82476d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97496720a6c6c9d0c82cf4f26bf71ae0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a97496720a6c6c9d0c82cf4f26bf71ae0">chart_series_set_error_bars_line</a> (lxw_series_error_bars *error_bars, <a class="el" href="structlxw__chart__line.html">lxw_chart_line</a> *line)</td></tr>
+<tr class="memdesc:a97496720a6c6c9d0c82cf4f26bf71ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the line properties for a chart series error bars.  <a href="#a97496720a6c6c9d0c82cf4f26bf71ae0">More...</a><br /></td></tr>
+<tr class="separator:a97496720a6c6c9d0c82cf4f26bf71ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a650d569ff37a087101b7bff4ee7bb130"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, const char *name)</td></tr>
 <tr class="memdesc:a650d569ff37a087101b7bff4ee7bb130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the name caption of the an axis.  <a href="#a650d569ff37a087101b7bff4ee7bb130">More...</a><br /></td></tr>
 <tr class="separator:a650d569ff37a087101b7bff4ee7bb130"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1531,6 +1542,223 @@ Functions</h2></td></tr>
 <img src="chart_labels9.png" alt="chart_labels9.png"/>
 </div>
 <p>For more information see <a class="el" href="working_with_charts.html#chart_fonts">Chart formatting: Fonts</a> and <a class="el" href="working_with_charts.html#chart_labels">Working with Chart Data Labels</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a31b72a8b98d7db92c4cc63e226442d0a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_series_set_error_bars </td>
+          <td>(</td>
+          <td class="paramtype">lxw_series_error_bars *&#160;</td>
+          <td class="paramname"><em>error_bars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the X or Y error bars for a chart series.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">error_bars</td><td>A pointer to the series X or Y error bars. </td></tr>
+    <tr><td class="paramname">type</td><td>The type of error bar: <a class="el" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fe" title="Type/amount of data series error bar. ">lxw_chart_error_bar_type</a>. </td></tr>
+    <tr><td class="paramname">value</td><td>The error value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Error bars can be added to a chart series to indicate error bounds in the data. The error bars can be vertical <code>y_error_bars</code> (the most common type) or horizontal <code>x_error_bars</code> (for Bar and Scatter charts only).</p>
+<div class="image">
+<img src="chart_error_bars0.png" alt="chart_error_bars0.png"/>
+</div>
+<p>The <code>chart_series_set_error_bars()</code> function sets the error bar type and value associated with the type:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__chart__series.html">lxw_chart_series</a> *series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart,</div>
+<div class="line">                                            <span class="stringliteral">&quot;=Sheet1!$A$1:$A$5&quot;</span>,</div>
+<div class="line">                                            <span class="stringliteral">&quot;=Sheet1!$B$1:$B$5&quot;</span>);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series-&gt;y_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a>, 0);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_error_bars1.png" alt="chart_error_bars1.png"/>
+</div>
+<p>The error bar types that be used are:</p>
+<ul>
+<li><a class="el" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a>: Standard error.</li>
+<li><a class="el" href="chart_8h.html#a858b96fd44354565fd9019cdb26149feaba45d9e553700f3f1a3df0c1f80259c0">LXW_CHART_ERROR_BAR_TYPE_FIXED</a>: Fixed value.</li>
+<li><a class="el" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea49e056be9e39bfca5268ae9eaab11c46">LXW_CHART_ERROR_BAR_TYPE_PERCENTAGE</a>: Percentage.</li>
+<li><a class="el" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fead7300dcc1274164a42e2359a3dfc1465">LXW_CHART_ERROR_BAR_TYPE_STD_DEV</a>: Standard deviation(s).</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Custom error bars are not currently supported.</dd></dl>
+<p>All error bar types, apart from Standard error, should have a valid value to set the error range:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series1-&gt;y_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149feaba45d9e553700f3f1a3df0c1f80259c0">LXW_CHART_ERROR_BAR_TYPE_FIXED</a>, 2);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series2-&gt;y_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea49e056be9e39bfca5268ae9eaab11c46">LXW_CHART_ERROR_BAR_TYPE_PERCENTAGE</a>, 5);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series3-&gt;y_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fead7300dcc1274164a42e2359a3dfc1465">LXW_CHART_ERROR_BAR_TYPE_STD_DEV</a>, 1);</div>
+</div><!-- fragment --><p>For the Standard error type the value is ignored.</p>
+<p>For more information see <a class="el" href="working_with_charts.html#chart_error_bars">Working with Chart Error Bars</a>. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_tools_8c-example.html#a29">chart_data_tools.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aa897ee54d4a19f264a6b8f9dd43604b3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_series_set_error_bars_direction </td>
+          <td>(</td>
+          <td class="paramtype">lxw_series_error_bars *&#160;</td>
+          <td class="paramname"><em>error_bars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">error_bars</td><td>A pointer to the series X or Y error bars. </td></tr>
+    <tr><td class="paramname">direction</td><td>The bar direction: <a class="el" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66e" title="Direction for a data series error bar. ">lxw_chart_error_bar_direction</a> .</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>chart_series_set_error_bars_direction()</code> function sets the direction of the error bars:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series-&gt;y_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a>, 0);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#aa897ee54d4a19f264a6b8f9dd43604b3">chart_series_set_error_bars_direction</a>(series-&gt;y_error_bars,</div>
+<div class="line">                                      <a class="code" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66ea359a4cea90dabfa009eeb80d2bde5a14">LXW_CHART_ERROR_BAR_DIR_PLUS</a>);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_error_bars2.png" alt="chart_error_bars2.png"/>
+</div>
+<p>The valid directions are:</p>
+<ul>
+<li><a class="el" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66ea5b459ae0fc66ee0629a273985ffc08d2">LXW_CHART_ERROR_BAR_DIR_BOTH</a>: Error bar extends in both directions. The default.</li>
+<li><a class="el" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66ea359a4cea90dabfa009eeb80d2bde5a14">LXW_CHART_ERROR_BAR_DIR_PLUS</a>: Error bar extends in positive direction.</li>
+<li><a class="el" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66eaec134bf6168f87ac999b0a5203d19013">LXW_CHART_ERROR_BAR_DIR_MINUS</a>: Error bar extends in negative direction.</li>
+</ul>
+<p>For more information see <a class="el" href="working_with_charts.html#chart_error_bars">Working with Chart Error Bars</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab03b0a4da953fa6bb47e2296b82476d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_series_set_error_bars_endcap </td>
+          <td>(</td>
+          <td class="paramtype">lxw_series_error_bars *&#160;</td>
+          <td class="paramname"><em>error_bars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>endcap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">error_bars</td><td>A pointer to the series X or Y error bars. </td></tr>
+    <tr><td class="paramname">endcap</td><td>The error bar end cap type: <a class="el" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7f" title="End cap styles for a data series error bar. ">lxw_chart_error_bar_cap</a> .</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>chart_series_set_error_bars_endcap()</code> function sets the end cap type for the error bars:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series-&gt;y_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a>, 0);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#ab03b0a4da953fa6bb47e2296b82476d2">chart_series_set_error_bars_endcap</a>(series-&gt;y_error_bars,</div>
+<div class="line">                                   <a class="code" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7fa5d70a912eb58cf4790bbadf8bde2dcdd">LXW_CHART_ERROR_BAR_NO_CAP</a>);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_error_bars3.png" alt="chart_error_bars3.png"/>
+</div>
+<p>The valid values are:</p>
+<ul>
+<li><a class="el" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7fad62f98e12866c933ee7c52da3af6fa8e">LXW_CHART_ERROR_BAR_END_CAP</a>: Flat end cap. The default.</li>
+<li><a class="el" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7fa5d70a912eb58cf4790bbadf8bde2dcdd">LXW_CHART_ERROR_BAR_NO_CAP</a>: No end cap.</li>
+</ul>
+<p>For more information see <a class="el" href="working_with_charts.html#chart_error_bars">Working with Chart Error Bars</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a97496720a6c6c9d0c82cf4f26bf71ae0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_series_set_error_bars_line </td>
+          <td>(</td>
+          <td class="paramtype">lxw_series_error_bars *&#160;</td>
+          <td class="paramname"><em>error_bars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__line.html">lxw_chart_line</a> *&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">error_bars</td><td>A pointer to the series X or Y error bars. </td></tr>
+    <tr><td class="paramname">line</td><td>A <a class="el" href="structlxw__chart__line.html" title="Struct to represent a chart line. ">lxw_chart_line</a> struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>chart_series_set_error_bars_line()</code> function sets the line properties for the error bars:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__chart__line.html">lxw_chart_line</a> line = {.<a class="code" href="structlxw__chart__line.html#a2619e85b4ece41f55302b5bc8157d738">color</a>     = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>,</div>
+<div class="line">                       .dash_type = <a class="code" href="chart_8h.html#afb0d1b3884f1520c227ef9c8945c2570a0b8b0397fefbaef241d5e99153a7a9ff">LXW_CHART_LINE_DASH_ROUND_DOT</a>};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series-&gt;y_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a>, 0);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a97496720a6c6c9d0c82cf4f26bf71ae0">chart_series_set_error_bars_line</a>(series-&gt;y_error_bars, &amp;line);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_error_bars4.png" alt="chart_error_bars4.png"/>
+</div>
+<p>For more information see <a class="el" href="working_with_charts.html#chart_lines">Chart formatting: Line</a> and <a class="el" href="working_with_charts.html#chart_error_bars">Working with Chart Error Bars</a>. </p>
 
 </div>
 </div>
@@ -4499,6 +4727,75 @@ LXW_CHART_LEGEND_OVERLAY_LEFT
 
 </div>
 </div>
+<a class="anchor" id="a858b96fd44354565fd9019cdb26149fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fe">lxw_chart_error_bar_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f"></a>LXW_CHART_ERROR_BAR_TYPE_STD_ERROR&#160;</td><td class="fielddoc">
+<p>Error bar type: Standard error. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a858b96fd44354565fd9019cdb26149feaba45d9e553700f3f1a3df0c1f80259c0"></a>LXW_CHART_ERROR_BAR_TYPE_FIXED&#160;</td><td class="fielddoc">
+<p>Error bar type: Fixed value. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a858b96fd44354565fd9019cdb26149fea49e056be9e39bfca5268ae9eaab11c46"></a>LXW_CHART_ERROR_BAR_TYPE_PERCENTAGE&#160;</td><td class="fielddoc">
+<p>Error bar type: Percentage. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a858b96fd44354565fd9019cdb26149fead7300dcc1274164a42e2359a3dfc1465"></a>LXW_CHART_ERROR_BAR_TYPE_STD_DEV&#160;</td><td class="fielddoc">
+<p>Error bar type: Standard deviation(s). </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a5416ddeb493de3e78245d77d0af8a66e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66e">lxw_chart_error_bar_direction</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a5416ddeb493de3e78245d77d0af8a66ea5b459ae0fc66ee0629a273985ffc08d2"></a>LXW_CHART_ERROR_BAR_DIR_BOTH&#160;</td><td class="fielddoc">
+<p>Error bar extends in both directions. The default. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5416ddeb493de3e78245d77d0af8a66ea359a4cea90dabfa009eeb80d2bde5a14"></a>LXW_CHART_ERROR_BAR_DIR_PLUS&#160;</td><td class="fielddoc">
+<p>Error bar extends in positive direction. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5416ddeb493de3e78245d77d0af8a66eaec134bf6168f87ac999b0a5203d19013"></a>LXW_CHART_ERROR_BAR_DIR_MINUS&#160;</td><td class="fielddoc">
+<p>Error bar extends in negative direction. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a2893fbacd275cd67fc0e310ea0101a7f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7f">lxw_chart_error_bar_cap</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a2893fbacd275cd67fc0e310ea0101a7fad62f98e12866c933ee7c52da3af6fa8e"></a>LXW_CHART_ERROR_BAR_END_CAP&#160;</td><td class="fielddoc">
+<p>Flat end cap. The default. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2893fbacd275cd67fc0e310ea0101a7fa5d70a912eb58cf4790bbadf8bde2dcdd"></a>LXW_CHART_ERROR_BAR_NO_CAP&#160;</td><td class="fielddoc">
+<p>No end cap. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -4580,10 +4877,6 @@ typedef enum <br class="typebreak" />
 <a class="el" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67">lxw_chart_axis_tick_mark</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a774fe4039f890235d9bd199ca607a8ad">lxw_chart_tick_mark</a></td></tr>
 <tr class="memdesc:a774fe4039f890235d9bd199ca607a8ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tick mark types for an axis. <br /></td></tr>
 <tr class="separator:a774fe4039f890235d9bd199ca607a8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a049cdd6d20fcfc71def6a6155afda2ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a049cdd6d20fcfc71def6a6155afda2ac"></a>
-typedef enum <a class="el" href="chart_8h.html#af7ecbdf6aeea5098164e88a0107aa89c">lxw_chart_blank</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a049cdd6d20fcfc71def6a6155afda2ac">lxw_chart_blank</a></td></tr>
-<tr class="memdesc:a049cdd6d20fcfc71def6a6155afda2ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define how blank values are displayed in a chart. <br /></td></tr>
-<tr class="separator:a049cdd6d20fcfc71def6a6155afda2ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affa9560ea7382648eac9a14ae225bdf9"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__chart__line.html">lxw_chart_line</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#affa9560ea7382648eac9a14ae225bdf9">lxw_chart_line</a></td></tr>
 <tr class="memdesc:affa9560ea7382648eac9a14ae225bdf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent a chart line.  <a href="#affa9560ea7382648eac9a14ae225bdf9">More...</a><br /></td></tr>
 <tr class="separator:affa9560ea7382648eac9a14ae225bdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4599,6 +4892,25 @@ typedef enum <a class="el" href="chart_8h.html#af7ecbdf6aeea5098164e88a0107aa89c
 <tr class="memitem:a7431004f56580318db63df64ff239d4a"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__chart__point.html">lxw_chart_point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a7431004f56580318db63df64ff239d4a">lxw_chart_point</a></td></tr>
 <tr class="memdesc:a7431004f56580318db63df64ff239d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel chart data point.  <a href="#a7431004f56580318db63df64ff239d4a">More...</a><br /></td></tr>
 <tr class="separator:a7431004f56580318db63df64ff239d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a049cdd6d20fcfc71def6a6155afda2ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a049cdd6d20fcfc71def6a6155afda2ac"></a>
+typedef enum <a class="el" href="chart_8h.html#af7ecbdf6aeea5098164e88a0107aa89c">lxw_chart_blank</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a049cdd6d20fcfc71def6a6155afda2ac">lxw_chart_blank</a></td></tr>
+<tr class="memdesc:a049cdd6d20fcfc71def6a6155afda2ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define how blank values are displayed in a chart. <br /></td></tr>
+<tr class="separator:a049cdd6d20fcfc71def6a6155afda2ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59adb5eab8216aa16296469436abe7c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59adb5eab8216aa16296469436abe7c6"></a>
+typedef enum <br class="typebreak" />
+<a class="el" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fe">lxw_chart_error_bar_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a59adb5eab8216aa16296469436abe7c6">lxw_chart_error_bar_type</a></td></tr>
+<tr class="memdesc:a59adb5eab8216aa16296469436abe7c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type/amount of data series error bar. <br /></td></tr>
+<tr class="separator:a59adb5eab8216aa16296469436abe7c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67b71f99fe00822f67e7631c80d5aff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae67b71f99fe00822f67e7631c80d5aff"></a>
+typedef enum <br class="typebreak" />
+<a class="el" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66e">lxw_chart_error_bar_direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ae67b71f99fe00822f67e7631c80d5aff">lxw_chart_error_bar_direction</a></td></tr>
+<tr class="memdesc:ae67b71f99fe00822f67e7631c80d5aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direction for a data series error bar. <br /></td></tr>
+<tr class="separator:ae67b71f99fe00822f67e7631c80d5aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8497875b7ff31f1724fb32ea461dd135"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8497875b7ff31f1724fb32ea461dd135"></a>
+typedef enum <br class="typebreak" />
+<a class="el" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7f">lxw_chart_error_bar_cap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a8497875b7ff31f1724fb32ea461dd135">lxw_chart_error_bar_cap</a></td></tr>
+<tr class="memdesc:a8497875b7ff31f1724fb32ea461dd135"><td class="mdescLeft">&#160;</td><td class="mdescRight">End cap styles for a data series error bar. <br /></td></tr>
+<tr class="separator:a8497875b7ff31f1724fb32ea461dd135"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a404c5dd6bc6d21a5e20c2e96ccb701"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__chart__series.html">lxw_chart_series</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a3a404c5dd6bc6d21a5e20c2e96ccb701">lxw_chart_series</a></td></tr>
 <tr class="memdesc:a3a404c5dd6bc6d21a5e20c2e96ccb701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel chart data series.  <a href="#a3a404c5dd6bc6d21a5e20c2e96ccb701">More...</a><br /></td></tr>
 <tr class="separator:a3a404c5dd6bc6d21a5e20c2e96ccb701"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4827,6 +5139,24 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:af7ecbdf6aeea5098164e88a0107aa89c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define how blank values are displayed in a chart.  <a href="chart_8h.html#af7ecbdf6aeea5098164e88a0107aa89c">More...</a><br /></td></tr>
 <tr class="separator:af7ecbdf6aeea5098164e88a0107aa89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a858b96fd44354565fd9019cdb26149fe"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fe">lxw_chart_error_bar_type</a> { <a class="el" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a>, 
+<a class="el" href="chart_8h.html#a858b96fd44354565fd9019cdb26149feaba45d9e553700f3f1a3df0c1f80259c0">LXW_CHART_ERROR_BAR_TYPE_FIXED</a>, 
+<a class="el" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea49e056be9e39bfca5268ae9eaab11c46">LXW_CHART_ERROR_BAR_TYPE_PERCENTAGE</a>, 
+<a class="el" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fead7300dcc1274164a42e2359a3dfc1465">LXW_CHART_ERROR_BAR_TYPE_STD_DEV</a>
+ }</td></tr>
+<tr class="memdesc:a858b96fd44354565fd9019cdb26149fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type/amount of data series error bar.  <a href="chart_8h.html#a858b96fd44354565fd9019cdb26149fe">More...</a><br /></td></tr>
+<tr class="separator:a858b96fd44354565fd9019cdb26149fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5416ddeb493de3e78245d77d0af8a66e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66e">lxw_chart_error_bar_direction</a> { <a class="el" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66ea5b459ae0fc66ee0629a273985ffc08d2">LXW_CHART_ERROR_BAR_DIR_BOTH</a>, 
+<a class="el" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66ea359a4cea90dabfa009eeb80d2bde5a14">LXW_CHART_ERROR_BAR_DIR_PLUS</a>, 
+<a class="el" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66eaec134bf6168f87ac999b0a5203d19013">LXW_CHART_ERROR_BAR_DIR_MINUS</a>
+ }</td></tr>
+<tr class="memdesc:a5416ddeb493de3e78245d77d0af8a66e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direction for a data series error bar.  <a href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66e">More...</a><br /></td></tr>
+<tr class="separator:a5416ddeb493de3e78245d77d0af8a66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2893fbacd275cd67fc0e310ea0101a7f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7f">lxw_chart_error_bar_cap</a> { <a class="el" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7fad62f98e12866c933ee7c52da3af6fa8e">LXW_CHART_ERROR_BAR_END_CAP</a>, 
+<a class="el" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7fa5d70a912eb58cf4790bbadf8bde2dcdd">LXW_CHART_ERROR_BAR_NO_CAP</a>
+ }</td></tr>
+<tr class="memdesc:a2893fbacd275cd67fc0e310ea0101a7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">End cap styles for a data series error bar.  <a href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7f">More...</a><br /></td></tr>
+<tr class="separator:a2893fbacd275cd67fc0e310ea0101a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->

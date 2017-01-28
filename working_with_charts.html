@@ -82,6 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="toc"><h3>Table of Contents</h3>
 <ul><li class="level1"><a href="#ww_charts_axes">Chart Value and Category Axes</a></li>
 <li class="level1"><a href="#chart_markers">Working with Chart Markers</a></li>
+<li class="level1"><a href="#chart_error_bars">Working with Chart Error Bars</a></li>
 <li class="level1"><a href="#chart_points">Working with Chart Points</a></li>
 <li class="level1"><a href="#chart_labels">Working with Chart Data Labels</a></li>
 <li class="level1"><a href="#chart_formatting">Chart Formatting</a><ul><li class="level2"><a href="#chart_fonts">Chart formatting: Fonts</a></li>
@@ -212,6 +213,86 @@ Working with Chart Markers</h1>
 <img src="chart_marker2.png" alt="chart_marker2.png"/>
 </div>
 <p>For more information on line/border and fill formatting see <a class="el" href="working_with_charts.html#chart_lines">Chart formatting: Line</a> and <a class="el" href="working_with_charts.html#chart_fills">Chart formatting: Fill</a> below.</p>
+<h1><a class="anchor" id="chart_error_bars"></a>
+Working with Chart Error Bars</h1>
+<p>Error bars can be added to a chart series to indicate error bounds in the data.</p>
+<p>The error bars can be vertical <code>y_error_bars</code> (the most common type) or horizontal <code>x_error_bars</code> (for Bar and Scatter charts only). For convenience these can be accessed from a series as follows:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series-&gt;y_error_bars, ...);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series-&gt;x_error_bars, ...);</div>
+</div><!-- fragment --><p>The error bar properties that can be set in Excel are show in the following dialog:</p>
+<div class="image">
+<img src="chart_error_bars0.png" alt="chart_error_bars0.png"/>
+</div>
+<p>Some of these properties can be set using the functions discussed below.</p>
+<p>The <code><a class="el" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars()</a></code> function sets the error bar type and value associated with the type:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__chart__series.html">lxw_chart_series</a> *series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart,</div>
+<div class="line">                                            <span class="stringliteral">&quot;=Sheet1!$A$1:$A$5&quot;</span>,</div>
+<div class="line">                                            <span class="stringliteral">&quot;=Sheet1!$B$1:$B$5&quot;</span>);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series-&gt;y_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a>, 0);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_error_bars1.png" alt="chart_error_bars1.png"/>
+</div>
+<p>The error bar types that be used are:</p>
+<ul>
+<li><a class="el" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a>: Standard error.</li>
+<li><a class="el" href="chart_8h.html#a858b96fd44354565fd9019cdb26149feaba45d9e553700f3f1a3df0c1f80259c0">LXW_CHART_ERROR_BAR_TYPE_FIXED</a>: Fixed value.</li>
+<li><a class="el" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea49e056be9e39bfca5268ae9eaab11c46">LXW_CHART_ERROR_BAR_TYPE_PERCENTAGE</a>: Percentage.</li>
+<li><a class="el" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fead7300dcc1274164a42e2359a3dfc1465">LXW_CHART_ERROR_BAR_TYPE_STD_DEV</a>: Standard deviation(s).</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Custom error bars are not currently supported.</dd></dl>
+<p>All error bar types, apart from Standard error, should have a valid value to set the error range:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series1-&gt;y_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149feaba45d9e553700f3f1a3df0c1f80259c0">LXW_CHART_ERROR_BAR_TYPE_FIXED</a>, 2);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series2-&gt;y_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea49e056be9e39bfca5268ae9eaab11c46">LXW_CHART_ERROR_BAR_TYPE_PERCENTAGE</a>, 5);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series3-&gt;y_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fead7300dcc1274164a42e2359a3dfc1465">LXW_CHART_ERROR_BAR_TYPE_STD_DEV</a>, 1);</div>
+</div><!-- fragment --><p>For the Standard error type the value is ignored.</p>
+<p>The <code><a class="el" href="chart_8h.html#aa897ee54d4a19f264a6b8f9dd43604b3" title="Set the direction (up, down or both) of the error bars for a chart series. ">chart_series_set_error_bars_direction()</a></code> function sets the direction of the error bars:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series-&gt;y_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a>, 0);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#aa897ee54d4a19f264a6b8f9dd43604b3">chart_series_set_error_bars_direction</a>(series-&gt;y_error_bars,</div>
+<div class="line">                                      <a class="code" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66ea359a4cea90dabfa009eeb80d2bde5a14">LXW_CHART_ERROR_BAR_DIR_PLUS</a>);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_error_bars2.png" alt="chart_error_bars2.png"/>
+</div>
+<p>The valid directions are:</p>
+<ul>
+<li><a class="el" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66ea5b459ae0fc66ee0629a273985ffc08d2">LXW_CHART_ERROR_BAR_DIR_BOTH</a>: Error bar extends in both directions. The default.</li>
+<li><a class="el" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66ea359a4cea90dabfa009eeb80d2bde5a14">LXW_CHART_ERROR_BAR_DIR_PLUS</a>: Error bar extends in positive direction.</li>
+<li><a class="el" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66eaec134bf6168f87ac999b0a5203d19013">LXW_CHART_ERROR_BAR_DIR_MINUS</a>: Error bar extends in negative direction.</li>
+</ul>
+<p>The <code><a class="el" href="chart_8h.html#ab03b0a4da953fa6bb47e2296b82476d2" title="Set the end cap type for the error bars of a chart series. ">chart_series_set_error_bars_endcap()</a></code> function sets the end cap type for the error bars:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series-&gt;y_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a>, 0);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#ab03b0a4da953fa6bb47e2296b82476d2">chart_series_set_error_bars_endcap</a>(series-&gt;y_error_bars,</div>
+<div class="line">                                   <a class="code" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7fa5d70a912eb58cf4790bbadf8bde2dcdd">LXW_CHART_ERROR_BAR_NO_CAP</a>);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_error_bars3.png" alt="chart_error_bars3.png"/>
+</div>
+<p>The valid values are:</p>
+<ul>
+<li><a class="el" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7fad62f98e12866c933ee7c52da3af6fa8e">LXW_CHART_ERROR_BAR_END_CAP</a>: Flat end cap. The default.</li>
+<li><a class="el" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7fa5d70a912eb58cf4790bbadf8bde2dcdd">LXW_CHART_ERROR_BAR_NO_CAP</a>: No end cap.</li>
+</ul>
+<p>The <code><a class="el" href="chart_8h.html#a97496720a6c6c9d0c82cf4f26bf71ae0" title="Set the line properties for a chart series error bars. ">chart_series_set_error_bars_line()</a></code> function sets the line properties for the error bars:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__chart__line.html">lxw_chart_line</a> line = {.<a class="code" href="structlxw__chart__line.html#a2619e85b4ece41f55302b5bc8157d738">color</a>     = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>,</div>
+<div class="line">                       .dash_type = <a class="code" href="chart_8h.html#afb0d1b3884f1520c227ef9c8945c2570a0b8b0397fefbaef241d5e99153a7a9ff">LXW_CHART_LINE_DASH_ROUND_DOT</a>};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series-&gt;y_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a>, 0);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a97496720a6c6c9d0c82cf4f26bf71ae0">chart_series_set_error_bars_line</a>(series-&gt;y_error_bars, &amp;line);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_error_bars4.png" alt="chart_error_bars4.png"/>
+</div>
 <h1><a class="anchor" id="chart_points"></a>
 Working with Chart Points</h1>
 <p>In general formatting is applied to an entire series in a chart. However, it is occasionally required to format individual points within a series.</p>
@@ -718,9 +799,7 @@ Chart Limitations</h1>
 <ul>
 <li>Secondary axis.</li>
 <li>Combined charts.</li>
-<li>Chart tables.</li>
-<li>Up down lines.</li>
-<li>Drop boxes.</li>
+<li>Chartsheets.</li>
 </ul>
 <p>If required these features are all available in the Perl and Python versions of this library.</p>
 <p>Next: <a class="el" href="working_with_memory.html">Working with Memory and Performance</a> </p>

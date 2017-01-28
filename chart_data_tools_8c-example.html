@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Chart 2: chart with drop lines. </p><div class="image">
 <img src="chart_data_tools6.png" alt="chart_data_tools6.png"/>
 </div>
-<p>Chart 3: chart with Up-down bars. </p><div class="image">
+<p>Chart 3: chart with up-down bars. </p><div class="image">
 <img src="chart_data_tools4.png" alt="chart_data_tools4.png"/>
 </div>
 <p>Chart 4: chart with formatted Up-down bars. </p><div class="image">
@@ -98,6 +98,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <p>Chart 5: chart with markers and data labels. </p><div class="image">
 <img src="chart_data_tools8.png" alt="chart_data_tools8.png"/>
+</div>
+<p>Chart 6: chart with error bars. </p><div class="image">
+<img src="chart_data_tools3.png" alt="chart_data_tools3.png"/>
 </div>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment"> * A demo of an various Excel chart data tools that are available via a</span></div>
@@ -242,7 +245,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Add the first series to the chart. */</span></div>
 <div class="line">    series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$B$2:$B$7&quot;</span>);</div>
-<div class="line">    <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$C$2:$C$7&quot;</span>);</div>
+<div class="line">    <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(         chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$C$2:$C$7&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Add series markers. */</span></div>
 <div class="line">    <a name="a26"></a><a class="code" href="chart_8h.html#ae4653bb0e1bdb5e1e1dbedf52d1c06b5">chart_series_set_marker_type</a>(series, <a name="a27"></a><a class="code" href="chart_8h.html#a347dc392e6077c1137df42d2ad01edfca0ae3b0b530833d7a3e5315d72467f6ce">LXW_CHART_MARKER_CIRCLE</a>);</div>
@@ -254,7 +257,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;E66&quot;</span>), chart);</div>
 <div class="line"></div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> <a name="a29"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     * Chart 6. Example with Error Bars.</span></div>
+<div class="line"><span class="comment">     */</span></div>
+<div class="line">    chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85caf309b18af571c90d3ae052e769d30e6c">LXW_CHART_LINE</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add a chart title. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, <span class="stringliteral">&quot;Chart with Error Bars&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add the first series to the chart. */</span></div>
+<div class="line">    series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$B$2:$B$7&quot;</span>);</div>
+<div class="line">    <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(         chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$C$2:$C$7&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add error bars to show Standard Error. */</span></div>
+<div class="line">    <a name="a29"></a><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series-&gt;<a name="a30"></a>y_error_bars,</div>
+<div class="line">                                <a name="a31"></a><a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a>, 0);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add series data labels. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Insert the chart into the worksheet. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;E82&quot;</span>), chart);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> <a name="a32"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
