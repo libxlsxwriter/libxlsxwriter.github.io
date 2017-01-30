@@ -82,6 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="toc"><h3>Table of Contents</h3>
 <ul><li class="level1"><a href="#ww_charts_axes">Chart Value and Category Axes</a></li>
 <li class="level1"><a href="#chart_markers">Working with Chart Markers</a></li>
+<li class="level1"><a href="#chart_trendlines">Working with Chart Trendlines</a></li>
 <li class="level1"><a href="#chart_error_bars">Working with Chart Error Bars</a></li>
 <li class="level1"><a href="#chart_points">Working with Chart Points</a></li>
 <li class="level1"><a href="#chart_labels">Working with Chart Data Labels</a></li>
@@ -213,6 +214,94 @@ Working with Chart Markers</h1>
 <img src="chart_marker2.png" alt="chart_marker2.png"/>
 </div>
 <p>For more information on line/border and fill formatting see <a class="el" href="working_with_charts.html#chart_lines">Chart formatting: Line</a> and <a class="el" href="working_with_charts.html#chart_fills">Chart formatting: Fill</a> below.</p>
+<h1><a class="anchor" id="chart_trendlines"></a>
+Working with Chart Trendlines</h1>
+<p>A trendline can be added to a chart series to indicate trends in the data such as a moving average or a polynomial fit. The trendlines types are shown in the following Excel dialog:</p>
+<div class="image">
+<img src="chart_trendline0.png" alt="chart_trendline0.png"/>
+</div>
+<p>The <code><a class="el" href="chart_8h.html#a59b3a386d854b9cb5e8bbdf9eef0c97d" title="Turn on a trendline for a chart data series. ">chart_series_set_trendline()</a></code> function turns on these trendlines for a data series:</p>
+<div class="fragment"><div class="line">chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85caf309b18af571c90d3ae052e769d30e6c">LXW_CHART_LINE</a>);</div>
+<div class="line">series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, NULL, <span class="stringliteral">&quot;Sheet1!$A$1:$A$6&quot;</span>);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a59b3a386d854b9cb5e8bbdf9eef0c97d">chart_series_set_trendline</a>(series, <a class="code" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a412a1b24bf43c9de3b2c0445d8e8e93e">LXW_CHART_TRENDLINE_TYPE_LINEAR</a>, 0);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_trendline2.png" alt="chart_trendline2.png"/>
+</div>
+<p>The <code>value</code> parameter corresponds to <em>order</em> for a polynomial trendline and <em>period</em> for a Moving Average trendline. It both cases it must be &gt;= 2. The <code>value</code> parameter is ignored for all other trendlines:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a59b3a386d854b9cb5e8bbdf9eef0c97d">chart_series_set_trendline</a>(series, <a class="code" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1ab260b3815f45cbea6ce2b7c0d19157b3">LXW_CHART_TRENDLINE_TYPE_AVERAGE</a>, 2);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_trendline3.png" alt="chart_trendline3.png"/>
+</div>
+<p>The allowable values for the the trendline <code>type</code> are:</p>
+<ul>
+<li><a class="el" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a412a1b24bf43c9de3b2c0445d8e8e93e">LXW_CHART_TRENDLINE_TYPE_LINEAR</a>: Linear trendline.</li>
+<li><a class="el" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a6182fcff33df52fc8fdeeb64a14d3e13">LXW_CHART_TRENDLINE_TYPE_LOG</a>: Logarithm trendline.</li>
+<li><a class="el" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a93bf93434b12f928eed686da2cf50b9b">LXW_CHART_TRENDLINE_TYPE_POLY</a>: Polynomial trendline. The <code>value</code> parameter corresponds to <em>order</em>.</li>
+<li><a class="el" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a982a6397c9a9713d2474c2ab1fba1b51">LXW_CHART_TRENDLINE_TYPE_POWER</a>: Power trendline.</li>
+<li><a class="el" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1aa8fc1ac6643c99a034a4f73047c9286f">LXW_CHART_TRENDLINE_TYPE_EXP</a>: Exponential trendline.</li>
+<li><a class="el" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1ab260b3815f45cbea6ce2b7c0d19157b3">LXW_CHART_TRENDLINE_TYPE_AVERAGE</a>: Moving Average trendline. The <code>value</code> parameter corresponds to <em>period</em>.</li>
+</ul>
+<p>Other trendline options, such as those shown in the following Excel dialog, can be set using the functions described below.</p>
+<div class="image">
+<img src="chart_trendline1.png" alt="chart_trendline1.png"/>
+</div>
+<p>The <code><a class="el" href="chart_8h.html#a401668a7c3f88fad6a6c3631a5620f61" title="Set the trendline forecast for a chart data series. ">chart_series_set_trendline_forecast()</a></code> function sets the forward and backward forecast periods for the trendline:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a59b3a386d854b9cb5e8bbdf9eef0c97d">chart_series_set_trendline</a>(series, <a class="code" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a412a1b24bf43c9de3b2c0445d8e8e93e">LXW_CHART_TRENDLINE_TYPE_LINEAR</a>, 0);</div>
+<div class="line"><a class="code" href="chart_8h.html#a401668a7c3f88fad6a6c3631a5620f61">chart_series_set_trendline_forecast</a>(series, 0.5, 0.5);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_trendline4.png" alt="chart_trendline4.png"/>
+</div>
+<dl class="section note"><dt>Note</dt><dd>This feature isn't available for Moving Average in Excel.</dd></dl>
+<p>The <code><a class="el" href="chart_8h.html#a9ce06ada55f8341e3e12559c38e5df9d" title="Display the equation of a trendline for a chart data series. ">chart_series_set_trendline_equation()</a></code> function displays the equation of the trendline on the chart:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a59b3a386d854b9cb5e8bbdf9eef0c97d">chart_series_set_trendline</a>(series, <a class="code" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a412a1b24bf43c9de3b2c0445d8e8e93e">LXW_CHART_TRENDLINE_TYPE_LINEAR</a>, 0);</div>
+<div class="line"><a class="code" href="chart_8h.html#a9ce06ada55f8341e3e12559c38e5df9d">chart_series_set_trendline_equation</a>(series);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_trendline5.png" alt="chart_trendline5.png"/>
+</div>
+<dl class="section note"><dt>Note</dt><dd>This feature isn't available for Moving Average in Excel.</dd></dl>
+<p>The <code><a class="el" href="chart_8h.html#a85cee89620705cec1c3f705d30ce5fe5" title="Display the R squared value of a trendline for a chart data series. ">chart_series_set_trendline_r_squared()</a></code> function displays the R-squared value for the trendline on the chart:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a59b3a386d854b9cb5e8bbdf9eef0c97d">chart_series_set_trendline</a>(series, <a class="code" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a412a1b24bf43c9de3b2c0445d8e8e93e">LXW_CHART_TRENDLINE_TYPE_LINEAR</a>, 0);</div>
+<div class="line"><a class="code" href="chart_8h.html#a85cee89620705cec1c3f705d30ce5fe5">chart_series_set_trendline_r_squared</a>(series);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_trendline6.png" alt="chart_trendline6.png"/>
+</div>
+<dl class="section note"><dt>Note</dt><dd>This feature isn't available for Moving Average in Excel.</dd></dl>
+<p>The <code><a class="el" href="chart_8h.html#a542deffbda8d6be959401c936d821e11" title="Set the trendline Y-axis intercept for a chart data series. ">chart_series_set_trendline_intercept()</a></code> function sets the Y-axis intercept for the trendline:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a59b3a386d854b9cb5e8bbdf9eef0c97d">chart_series_set_trendline</a>(series, <a class="code" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a412a1b24bf43c9de3b2c0445d8e8e93e">LXW_CHART_TRENDLINE_TYPE_LINEAR</a>, 0);</div>
+<div class="line"><a class="code" href="chart_8h.html#a9ce06ada55f8341e3e12559c38e5df9d">chart_series_set_trendline_equation</a>(series);</div>
+<div class="line"><a class="code" href="chart_8h.html#a542deffbda8d6be959401c936d821e11">chart_series_set_trendline_intercept</a>(series, 0.8);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_trendline7.png" alt="chart_trendline7.png"/>
+</div>
+<p>As can be seen from the equation on the chart the intercept point (when X=0) is the same as the value set in the equation.</p>
+<dl class="section note"><dt>Note</dt><dd>The intercept feature is only available in Excel for Exponential, Linear and Polynomial trendline types.</dd></dl>
+<p>The <code><a class="el" href="chart_8h.html#ae7c2ce319d9a5d350b22a1096f1a1855" title="Set the trendline name for a chart data series. ">chart_series_set_trendline_name()</a></code> function sets the name of the trendline that is displayed in the chart legend. In the examples above the trendlines are displayed with default names like "Linear (Series 1)" and "2 per Mov. Avg. (Series 1)". If these names are too verbose or not descriptive enough you can set your own trendline name:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a59b3a386d854b9cb5e8bbdf9eef0c97d">chart_series_set_trendline</a>(series, <a class="code" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a412a1b24bf43c9de3b2c0445d8e8e93e">LXW_CHART_TRENDLINE_TYPE_LINEAR</a>, 0);</div>
+<div class="line"><a class="code" href="chart_8h.html#ae7c2ce319d9a5d350b22a1096f1a1855">chart_series_set_trendline_name</a>(series, <span class="stringliteral">&quot;My trendline&quot;</span>);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_trendline8.png" alt="chart_trendline8.png"/>
+</div>
+<p>It is often preferable to turn off the trendline caption in the legend. This is done in Excel by deleting the trendline name from the legend. In libxlsxwriter this is done using the <code><a class="el" href="chart_8h.html#ac22638faf2a6168d23af1969fcaa0612" title="Remove one or more series from the the legend. ">chart_legend_delete_series()</a></code> function to delete the zero based series numbers:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#a59b3a386d854b9cb5e8bbdf9eef0c97d">chart_series_set_trendline</a>(series, <a class="code" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a412a1b24bf43c9de3b2c0445d8e8e93e">LXW_CHART_TRENDLINE_TYPE_LINEAR</a>, 0);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Delete the series name for the second series (=1 in zero base).</span></div>
+<div class="line"><span class="comment">// The -1 value indicates the end of the array of values.</span></div>
+<div class="line">int16_t names[] = {1, -1};</div>
+<div class="line"><a class="code" href="chart_8h.html#ac22638faf2a6168d23af1969fcaa0612">chart_legend_delete_series</a>(chart, names);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_trendline9.png" alt="chart_trendline9.png"/>
+</div>
+<p>The <code><a class="el" href="chart_8h.html#ab815412fe8d862efaa8c932df4923178" title="Set the trendline line properties for a chart data series. ">chart_series_set_trendline_line()</a></code> function is used to set the line properties of a trendline:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__chart__line.html">lxw_chart_line</a> line = {.<a class="code" href="structlxw__chart__line.html#a2619e85b4ece41f55302b5bc8157d738">color</a>     = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>,</div>
+<div class="line">                       .dash_type = <a class="code" href="chart_8h.html#afb0d1b3884f1520c227ef9c8945c2570a913ea1b36ac420c9acf302f6edef768a">LXW_CHART_LINE_DASH_LONG_DASH</a>};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a59b3a386d854b9cb5e8bbdf9eef0c97d">chart_series_set_trendline</a>(series, <a class="code" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a412a1b24bf43c9de3b2c0445d8e8e93e">LXW_CHART_TRENDLINE_TYPE_LINEAR</a>, 0);</div>
+<div class="line"><a class="code" href="chart_8h.html#ab815412fe8d862efaa8c932df4923178">chart_series_set_trendline_line</a>(series, &amp;line);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_trendline10.png" alt="chart_trendline10.png"/>
+</div>
+<dl class="section note"><dt>Note</dt><dd>Trendlines cannot be added to series in a stacked chart, pie chart, doughnut chart or radar chart.</dd></dl>
 <h1><a class="anchor" id="chart_error_bars"></a>
 Working with Chart Error Bars</h1>
 <p>Error bars can be added to a chart series to indicate error bounds in the data.</p>

@@ -22,6 +22,7 @@ var searchData=
   ['lxw_5fchart_5fpoint',['lxw_chart_point',['../chart_8h.html#a7431004f56580318db63df64ff239d4a',1,'chart.h']]],
   ['lxw_5fchart_5fseries',['lxw_chart_series',['../chart_8h.html#a3a404c5dd6bc6d21a5e20c2e96ccb701',1,'chart.h']]],
   ['lxw_5fchart_5ftick_5fmark',['lxw_chart_tick_mark',['../chart_8h.html#a774fe4039f890235d9bd199ca607a8ad',1,'chart.h']]],
+  ['lxw_5fchart_5ftrendline_5ftype',['lxw_chart_trendline_type',['../chart_8h.html#a55a942fac4a675a272ec0afd20a6d1bf',1,'chart.h']]],
   ['lxw_5fchart_5ftype',['lxw_chart_type',['../chart_8h.html#ad30e22b3cf06dddd125254b2399719f3',1,'chart.h']]],
   ['lxw_5fcol_5ft',['lxw_col_t',['../common_8h.html#a4fedd8dede664b070e84e850a3f92fd2',1,'common.h']]],
   ['lxw_5fcolor_5ft',['lxw_color_t',['../format_8h.html#a422d719f90588b17d1399eaced80ae31',1,'format.h']]],
