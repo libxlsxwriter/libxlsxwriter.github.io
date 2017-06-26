@@ -94,6 +94,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li class="level1"><a href="#gsg_macos">Installation on Mac OS X and iOS</a><ul><li class="level2"><a href="#gsg_cocoapods">Install using Cocoa Pods for Xcode</a></li>
 </ul>
 </li>
+<li class="level1"><a href="#gsg_cmake">Install using CMake</a><ul><li class="level2"><a href="#gsg_cmake_flags">CMake Flags</a></li>
+<li class="level2"><a href="#gsg_cmake_options">CMake Options</a></li>
+<li class="level2"><a href="#gsg_cmake_generators">CMake Generators</a></li>
+</ul>
+</li>
 <li class="level1"><a href="#gsg_msvc">Installation on Windows using Microsoft Visual Studio</a><ul><li class="level2"><a href="#gsg_dll">Building a Windows DLL of libxlsxwriter</a></li>
 <li class="level2"><a href="#gsg_console">Building a console application using the LibXlsxWriter.lib</a></li>
 <li class="level2"><a href="#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a></li>
@@ -190,6 +195,33 @@ Installation on Mac OS X and iOS</h1>
 Install using Cocoa Pods for Xcode</h2>
 <p>For iOS and OS X projects in Xcode you can install libxlsxwriter using <a href="https://cocoapods.org">CocoaPods</a>.</p>
 <p>For a sample Xcode project that uses the libxlsxwriter cocoapod for iOS and OS X with Objective-C and Swift see <a href="https://github.com/lrossi/libxlsxwriterCocoaExamples">libxlsxwriter Cocoa Examples</a>, provided by Ludovico Rossi.</p>
+<h1><a class="anchor" id="gsg_cmake"></a>
+Install using CMake</h1>
+<p>Libxlsxwriter also supports <a href="https://cmake.org">CMake</a> for building and installing the library, as follows: </p><pre class="fragment">cmake $SOURCE_DIR $FLAGS
+</pre><p>For example: </p><pre class="fragment">cd cmake
+cmake ..
+make
+make install
+</pre><h2><a class="anchor" id="gsg_cmake_flags"></a>
+CMake Flags</h2>
+<p>Certain build features can be controlled by passing flags to Cmake. For example: </p><pre class="fragment">cd cmake
+cmake .. -DBUILD_TESTS=ON
+make
+make check_xlsxwriter_unit
+</pre><p>Some of the Libxlsxwriter specific flags are:</p>
+<ul>
+<li><code>BUILD_STATIC</code>: Build static libraries (default on). To build shared libraries, pass <code>-DBUILD_STATIC=OFF</code> during configuration.</li>
+<li><code>BUILD_EXAMPLES</code>: Build example files (default off). To build the examples, pass <code>-DBUILD_EXAMPLES=ON</code> during configuration.</li>
+<li><code>BUILD_TESTS</code>: Build unittests (default off). To build the unittests, pass <code>-DBUILD_TESTS=ON</code> during configuration.</li>
+<li><code>ZLIB_ROOT</code>: The ZLIB root directory can be specified either through an environment variable (<code>export ZLIB_ROOT=/usr/include</code>) or using a flag with CMake (<code>-DZLIB_ROOT:STRING=/usr/include</code>). This sets the preferred search path for the ZLIB installation.</li>
+</ul>
+<h2><a class="anchor" id="gsg_cmake_options"></a>
+CMake Options</h2>
+<p>CMake sets debug and release builds with the <code>CMAKE_BUILD_TYPE</code> option. To build in release mode, pass <code>-DCMAKE_BUILD_TYPE=Release</code> during configuration.</p>
+<h2><a class="anchor" id="gsg_cmake_generators"></a>
+CMake Generators</h2>
+<p>CMake also supports custom build generators, such as Makefiles, Ninja, Visual Studio, and Xcode. For example, to generate a Visual Studio solution, configure with: </p><pre class="fragment">cmake .. -G "Visual Studio 14 2015 Win64"
+</pre><p>For more information on using generators see: <a href="https://cmake.org/cmake/help/v3.0/manual/cmake-generators.7.html">cmake-generators</a>.</p>
 <h1><a class="anchor" id="gsg_msvc"></a>
 Installation on Windows using Microsoft Visual Studio</h1>
 <p>There is a sample Microsoft Visual Studio project on GitHub called <a href="https://github.com/jmcnamara/MSVCLibXlsxWriter">MSVCLibXlsxWriter</a>.</p>
