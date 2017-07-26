@@ -11,7 +11,7 @@ var searchData=
   ['format_5fset_5ffont_5fcolor',['format_set_font_color',['../format_8h.html#a61981b2080bfe6381ede5358ee05b05c',1,'format.h']]],
   ['format_5fset_5ffont_5fname',['format_set_font_name',['../format_8h.html#a449e2235a9088cc60233ae443acd2b1a',1,'format.h']]],
   ['format_5fset_5ffont_5fscript',['format_set_font_script',['../format_8h.html#a471ca432e429505c79982ca5aecd1db0',1,'format.h']]],
-  ['format_5fset_5ffont_5fsize',['format_set_font_size',['../format_8h.html#a4afb671f2edd01aacaf5e79d628be815',1,'format.h']]],
+  ['format_5fset_5ffont_5fsize',['format_set_font_size',['../format_8h.html#aec5c1028fa3e25ad60e439fd64afb245',1,'format.h']]],
   ['format_5fset_5ffont_5fstrikeout',['format_set_font_strikeout',['../format_8h.html#ad6e9600723fd772c3cd4d62599beaf31',1,'format.h']]],
   ['format_5fset_5fhidden',['format_set_hidden',['../format_8h.html#a135d94ec48564c997c5a78ca8b8861e2',1,'format.h']]],
   ['format_5fset_5findent',['format_set_indent',['../format_8h.html#a99aea699cd7bb3c56a515c9c9e0caa69',1,'format.h']]],
