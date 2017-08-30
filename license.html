@@ -156,7 +156,7 @@ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre><p><a href="http://www.zlib.net">Zlib</a> has the following License/Copyright: </p><pre class="fragment">(C) 1995-2013 Jean-loup Gailly and Mark Adler
+</pre><p>The <code>minizip</code> files used in the libxlsxwriter source tree are taken from the <code>zlib</code> <code>contrib/minizip</code> directory. <a href="http://www.zlib.net">Zlib</a> has the following License/Copyright: </p><pre class="fragment">(C) 1995-2013 Jean-loup Gailly and Mark Adler
 
 This software is provided 'as-is', without any express or implied
 warranty.  In no event will the authors be held liable for any damages
@@ -176,14 +176,20 @@ freely, subject to the following restrictions:
 
 Jean-loup Gailly        Mark Adler
 jloup@gzip.org          madler@alumni.caltech.edu
-</pre><p><a href="http://www.di-mgt.com.au/c_function_to_create_temp_file.html">Tmpfileplus</a> has the following license:</p>
-<pre class="fragment"> This Source Code Form is subject to the terms of the Mozilla Public
+</pre><p>The <code>minizip</code> files have the following additional copyright declarations: </p><pre class="fragment">Copyright (C) 1998-2010 Gilles Vollant
+(minizip) ( http://www.winimage.com/zLibDll/minizip.html )
+
+Modifications for Zip64 support
+Copyright (C) 2009-2010 Mathias Svensson ( http://result42.com )
+</pre><p>Note, it is possible to compile libxlsxwriter without statically linking the <code>minizip</code> files and instead dynamically linking to <code>lminizip</code>, see <a class="el" href="getting_started.html#gsg_minizip">Linking against system minizip</a>.</p>
+<p><a href="http://www.di-mgt.com.au/c_function_to_create_temp_file.html">Tmpfileplus</a> has the following license: </p><pre class="fragment"> This Source Code Form is subject to the terms of the Mozilla Public
  License, v. 2.0. If a copy of the MPL was not distributed with this
  file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
  Copyright (c) 2012-16 David Ireland, DI Management Services Pty Ltd
  &lt;http://www.di-mgt.com.au/contact/&gt;.
 </pre><p>See the <a href="http://mozilla.org/MPL/2.0/">Mozilla Public License, v. 2.0</a>.</p>
+<p>Note, it is possible to compile libxlsxwriter using the standard library <code>tmpfile()</code> function instead of <code>tmpfileplus</code>, see <a class="el" href="getting_started.html#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a>.</p>
 <p>Next: <a class="el" href="changes.html">Changes</a> </p>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->

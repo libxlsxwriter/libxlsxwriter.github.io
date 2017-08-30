@@ -106,6 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 </li>
 <li class="level1"><a href="#gsg_ming">Installation on Windows using Mingw-w64 and MSYS2</a></li>
+<li class="level1"><a href="#gsg_minizip">Linking against system minizip</a></li>
 <li class="level1"><a href="#gsg_next">Next steps</a></li>
 </ul>
 </div>
@@ -286,9 +287,13 @@ make
 </pre><p>After compilation you can follow the instructions in the <a class="el" href="getting_started.html#gsg_install">Install the library</a> and <a class="el" href="getting_started.html#gsg_using">Using the library</a> sections above. When using the library you may also need to link against the zlib library using <code>-lz</code>: </p><pre class="fragment">gcc myexcel.c -o myexcel -lxlsxwriter -lz
 </pre><p>It is also possible to use <a href="https://cygwin.com">Cygwin</a> and the older <a href="http://mingw.org">MinGW and MSYS</a>. Libxlsxwriter has been confirmed to compile and work in all of these environments.</p>
 <p>See also <a class="el" href="getting_started.html#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a>.</p>
-<h1><a class="anchor" id="gsg_next"></a>
+<h1><a class="anchor" id="gsg_minizip"></a>
+Linking against system minizip</h1>
+<p>Libxlsxwriter uses the <code>minizip</code> component of <a href="http://www.zlib.net">Zlib</a> to create the xlsx zip file container. The source files for <code>minizip</code> are included in the src tree of libxlsxwriter and are statically linked by default.</p>
+<p>If you have a <code>lminizip</code> library already installed on your system and prefer to dynamically link against that you can use the following compilation option: </p><pre class="fragment">make USE_SYSTEM_MINIZIP=1
+</pre><h1><a class="anchor" id="gsg_next"></a>
 Next steps</h1>
-<p>If you got libxlsxwriter built and working then the next sections will look at some more detailed examples.</p>
+<p>If you got libxlsxwriter built and working successfully then the next sections will look at how to create some more in-depth examples.</p>
 <p>Next: <a class="el" href="tutorial01.html">Tutorial 1: Create a simple XLSX file</a> </p>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
