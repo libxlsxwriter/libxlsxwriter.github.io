@@ -24,5 +24,9 @@ var searchData=
   ['lxw_5fformat_5fpatterns',['lxw_format_patterns',['../format_8h.html#a40e28394b961e69d4bee27579b4476e7',1,'format.h']]],
   ['lxw_5fformat_5fscripts',['lxw_format_scripts',['../format_8h.html#a0ff8fd761893f60fddbd7f1cab4ac75a',1,'format.h']]],
   ['lxw_5fformat_5funderlines',['lxw_format_underlines',['../format_8h.html#af530d7971d15c164f3fb6bbfede9a39f',1,'format.h']]],
-  ['lxw_5fgridlines',['lxw_gridlines',['../worksheet_8h.html#a487e0bffad0a348421b825d715621c20',1,'worksheet.h']]]
+  ['lxw_5fgridlines',['lxw_gridlines',['../worksheet_8h.html#a487e0bffad0a348421b825d715621c20',1,'worksheet.h']]],
+  ['lxw_5fvalidation_5fboolean',['lxw_validation_boolean',['../worksheet_8h.html#a00c0cb6be9a2864d2a4cc977eadea74b',1,'worksheet.h']]],
+  ['lxw_5fvalidation_5fcriteria',['lxw_validation_criteria',['../worksheet_8h.html#a88eed033ce0af97d5151528bc514fbf5',1,'worksheet.h']]],
+  ['lxw_5fvalidation_5ferror_5ftypes',['lxw_validation_error_types',['../worksheet_8h.html#a814e4b2e983125351c617e44b73b8998',1,'worksheet.h']]],
+  ['lxw_5fvalidation_5ftypes',['lxw_validation_types',['../worksheet_8h.html#a20e0dbd70400f2eb7c5d88696f812b4c',1,'worksheet.h']]]
 ];

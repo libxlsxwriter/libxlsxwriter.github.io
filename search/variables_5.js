@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['hidden',['hidden',['../structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562',1,'lxw_row_col_options']]],
-  ['hour',['hour',['../structlxw__datetime.html#a200f63d0c424b1e28d5a915f57465fef',1,'lxw_datetime']]],
-  ['hyperlink_5fbase',['hyperlink_base',['../structlxw__doc__properties.html#a4b0fdadfdc134f9bbfd780e7a12ae252',1,'lxw_doc_properties']]]
+  ['fg_5fcolor',['fg_color',['../structlxw__chart__pattern.html#ac6b955efa0f4fc0df8e6c6ff38a3f30d',1,'lxw_chart_pattern']]],
+  ['fill',['fill',['../structlxw__chart__point.html#a99ad02687c88e7ac4625fa8c12f6ba48',1,'lxw_chart_point']]],
+  ['format_5fcells',['format_cells',['../structlxw__protection.html#accce8fbb8b1dad731adbe8234870004e',1,'lxw_protection']]],
+  ['format_5fcolumns',['format_columns',['../structlxw__protection.html#a83c3fd434abb2bf45c2d46047250dac9',1,'lxw_protection']]],
+  ['format_5frows',['format_rows',['../structlxw__protection.html#a6cfcb8e5efd6112c707f74b7f1440b81',1,'lxw_protection']]]
 ];

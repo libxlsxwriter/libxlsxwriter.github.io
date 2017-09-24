@@ -358,7 +358,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="format_font_bold.png" alt="format_font_bold.png"/>
 </div>
- <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a6">anatomy.c</a>, <a class="el" href="chart_area_8c-example.html#a9">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a9">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#a10">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#a9">chart_column.c</a>, <a class="el" href="chart_data_table_8c-example.html#a9">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a9">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a10">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a9">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a6">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a10">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a9">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a9">chart_scatter.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a7">dates_and_times03.c</a>, <a class="el" href="demo_8c-example.html#a6">demo.c</a>, <a class="el" href="format_font_8c-example.html#a7">format_font.c</a>, <a class="el" href="merge_range_8c-example.html#a9">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a10">panes.c</a>, <a class="el" href="tutorial2_8c-example.html#a6">tutorial2.c</a>, and <a class="el" href="tutorial3_8c-example.html#a8">tutorial3.c</a>.</dd>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a6">anatomy.c</a>, <a class="el" href="chart_area_8c-example.html#a9">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a9">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#a10">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#a9">chart_column.c</a>, <a class="el" href="chart_data_table_8c-example.html#a9">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a9">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a10">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a9">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a6">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a10">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a9">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a9">chart_scatter.c</a>, <a class="el" href="data_validate_8c-example.html#a13">data_validate.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a7">dates_and_times03.c</a>, <a class="el" href="demo_8c-example.html#a6">demo.c</a>, <a class="el" href="format_font_8c-example.html#a7">format_font.c</a>, <a class="el" href="merge_range_8c-example.html#a9">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a10">panes.c</a>, <a class="el" href="tutorial2_8c-example.html#a6">tutorial2.c</a>, and <a class="el" href="tutorial3_8c-example.html#a8">tutorial3.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -832,7 +832,7 @@ Functions</h2></td></tr>
 </div>
 <p>Text can be aligned across two or more adjacent cells using the center_across property. However, for genuine merged cells it is better to use the <a class="el" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225" title="Merge a range of cells. ">worksheet_merge_range()</a> worksheet method.</p>
 <p>The vertical justify option can be used to provide automatic text wrapping in a cell. The height of the cell will be adjusted to accommodate the wrapped text. To specify where the text wraps use the <a class="el" href="format_8h.html#a56d55dd9257d8f0645c62b296d2c196d" title="Wrap text in a cell. ">format_set_text_wrap()</a> method. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="dates_and_times03_8c-example.html#a11">dates_and_times03.c</a>, <a class="el" href="merge_range_8c-example.html#a6">merge_range.c</a>, and <a class="el" href="panes_8c-example.html#a6">panes.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="data_validate_8c-example.html#a15">data_validate.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a11">dates_and_times03.c</a>, <a class="el" href="merge_range_8c-example.html#a6">merge_range.c</a>, and <a class="el" href="panes_8c-example.html#a6">panes.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -863,7 +863,8 @@ Functions</h2></td></tr>
 <img src="format_font_text_wrap.png" alt="format_font_text_wrap.png"/>
 </div>
 <p>Excel will adjust the height of the row to accommodate the wrapped text. A similar effect can be obtained without newlines using the <a class="el" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13" title="Set the alignment for data in the cell. ">format_set_align()</a> function with <a class="el" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a4940e5aa8e07a9d659d1cf6c2785286f">LXW_ALIGN_VERTICAL_JUSTIFY</a>. </p>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="data_validate_8c-example.html#a14">data_validate.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="ae690004cd77f48646da07796b540c309"></a>
@@ -951,7 +952,8 @@ Functions</h2></td></tr>
 <img src="text_indent.png" alt="text_indent.png"/>
 </div>
 <dl class="section note"><dt>Note</dt><dd>Indentation is a horizontal alignment property. It will override any other horizontal properties but it can be used in conjunction with vertical properties. </dd></dl>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="data_validate_8c-example.html#a17">data_validate.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="a8fc47dd0e47020358c79e20039cbd760"></a>
@@ -1139,7 +1141,7 @@ Functions</h2></td></tr>
 </dl>
 <p>The <a class="el" href="format_8h.html#a65086b2b6ee51fd34893e3c53e0578eb" title="Set the pattern foreground color for a cell. ">format_set_fg_color()</a> method can be used to set the foreground color of a pattern.</p>
 <p>The color should be an RGB integer value, see <a class="el" href="working_with_colors.html">Working with Colors</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="panes_8c-example.html#a9">panes.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="data_validate_8c-example.html#a12">data_validate.c</a>, and <a class="el" href="panes_8c-example.html#a9">panes.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1201,7 +1203,7 @@ Functions</h2></td></tr>
 <p class="startli">The most commonly used style is the <code>thin</code> style. </p>
 </li>
 </ul>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="merge_range_8c-example.html#a12">merge_range.c</a>, and <a class="el" href="panes_8c-example.html#a11">panes.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="data_validate_8c-example.html#a10">data_validate.c</a>, <a class="el" href="merge_range_8c-example.html#a12">merge_range.c</a>, and <a class="el" href="panes_8c-example.html#a11">panes.c</a>.</dd>
 </dl>
 </div>
 </div>

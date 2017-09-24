@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['width',['width',['../structlxw__chart__line.html#ab548d8a04d084df9f14cea072111b052',1,'lxw_chart_line']]]
+  ['underline',['underline',['../structlxw__chart__font.html#a13fce73724d63f5f2ab70a1abf64f758',1,'lxw_chart_font']]]
 ];

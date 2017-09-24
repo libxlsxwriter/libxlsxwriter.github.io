@@ -18,6 +18,8 @@ var searchData=
   ['worksheet_5fautofilter',['worksheet_autofilter',['../worksheet_8h.html#a4e2b1de34e96331000a996f512aecfcf',1,'worksheet.h']]],
   ['worksheet_5fcenter_5fhorizontally',['worksheet_center_horizontally',['../worksheet_8h.html#a931114d5266e03931f9fc1b21bd9b56c',1,'worksheet.h']]],
   ['worksheet_5fcenter_5fvertically',['worksheet_center_vertically',['../worksheet_8h.html#a3a7fdfe9ef603ef75a03818e6abbfd12',1,'worksheet.h']]],
+  ['worksheet_5fdata_5fvalidation_5fcell',['worksheet_data_validation_cell',['../worksheet_8h.html#a70c4b9cfb27b18258117545ac6ce6da0',1,'worksheet.h']]],
+  ['worksheet_5fdata_5fvalidation_5frange',['worksheet_data_validation_range',['../worksheet_8h.html#a14f482010dd0f817e17001d01644a57f',1,'worksheet.h']]],
   ['worksheet_5ffit_5fto_5fpages',['worksheet_fit_to_pages',['../worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d',1,'worksheet.h']]],
   ['worksheet_5ffreeze_5fpanes',['worksheet_freeze_panes',['../worksheet_8h.html#a7e52f1eecb20fe4f9e6223bcf195103b',1,'worksheet.h']]],
   ['worksheet_5fgridlines',['worksheet_gridlines',['../worksheet_8h.html#abd9af70f706b738690ebb9103940b0e1',1,'worksheet.h']]],
