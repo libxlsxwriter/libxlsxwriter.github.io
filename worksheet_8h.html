@@ -750,7 +750,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><p>Excel requires that worksheet names containing spaces or non alphanumeric characters are single quoted as follows:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;internal:&#39;Sales Data&#39;!A1&quot;</span>, url_format);</div>
 </div><!-- fragment --><p>Links to network files are also supported. Network files normally begin with two back slashes as follows <code>\\NETWORK\etc</code>. In order to represent this in a C string literal the backslashes should be escaped: </p><div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:\\\\NET\\share\\foo.xlsx&quot;</span>, url_format);</div>
-</div><!-- fragment --><p>Alternatively, you can use Windows style forward slashes. These are translated internally to backslashes:</p>
+</div><!-- fragment --><p>Alternatively, you can use Unix style forward slashes. These are translated internally to backslashes:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:c:/temp/foo.xlsx&quot;</span>,     url_format);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;external://NET/share/foo.xlsx&quot;</span>, url_format);</div>
 </div><!-- fragment --><p><b>Note:</b></p>
