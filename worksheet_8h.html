@@ -275,6 +275,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a1b49e135d4debcdb25941f2f40f04cb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a1b49e135d4debcdb25941f2f40f04cb0">worksheet_protect</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, const char *password, <a class="el" href="structlxw__protection.html">lxw_protection</a> *options)</td></tr>
 <tr class="memdesc:a1b49e135d4debcdb25941f2f40f04cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protect elements of a worksheet from modification.  <a href="#a1b49e135d4debcdb25941f2f40f04cb0">More...</a><br /></td></tr>
 <tr class="separator:a1b49e135d4debcdb25941f2f40f04cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9efae5027e762c9a29f6afa547e4b2db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a9efae5027e762c9a29f6afa547e4b2db">worksheet_outline_settings</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, uint8_t visible, uint8_t symbols_below, uint8_t symbols_right, uint8_t auto_style)</td></tr>
+<tr class="memdesc:a9efae5027e762c9a29f6afa547e4b2db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Outline and Grouping display properties.  <a href="#a9efae5027e762c9a29f6afa547e4b2db">More...</a><br /></td></tr>
+<tr class="separator:a9efae5027e762c9a29f6afa547e4b2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74121de7c4f67639b30f302d4af48eb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a74121de7c4f67639b30f302d4af48eb4">worksheet_set_default_row</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, double height, uint8_t hide_unused_rows)</td></tr>
 <tr class="memdesc:a74121de7c4f67639b30f302d4af48eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the default row properties.  <a href="#a74121de7c4f67639b30f302d4af48eb4">More...</a><br /></td></tr>
 <tr class="separator:a74121de7c4f67639b30f302d4af48eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -348,7 +351,7 @@ Functions</h2></td></tr>
 <img src="write_number02.png" alt="write_number02.png"/>
 </div>
 <dl class="section note"><dt>Note</dt><dd>Excel doesn't support <code>NaN</code>, <code>Inf</code> or <code>-Inf</code> as a number value. If you are writing data that contains these values then your application should convert them to a string or handle them in some other way. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a10">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a4">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a5">autofilter.c</a>, <a class="el" href="chart_8c-example.html#a1">chart.c</a>, <a class="el" href="chart_area_8c-example.html#a4">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a4">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#a3">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#a4">chart_column.c</a>, <a class="el" href="chart_data_table_8c-example.html#a4">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a4">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a4">chart_doughnut.c</a>, <a class="el" href="chart_fonts_8c-example.html#a3">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a4">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a8">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a4">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a4">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a4">chart_scatter.c</a>, <a class="el" href="chart_styles_8c-example.html#a14">chart_styles.c</a>, <a class="el" href="constant_memory_8c-example.html#a7">constant_memory.c</a>, <a class="el" href="data_validate_8c-example.html#a4">data_validate.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a8">dates_and_times01.c</a>, <a class="el" href="demo_8c-example.html#a9">demo.c</a>, <a class="el" href="format_num_format_8c-example.html#a8">format_num_format.c</a>, <a class="el" href="hello_8c-example.html#a5">hello.c</a>, <a class="el" href="panes_8c-example.html#a18">panes.c</a>, <a class="el" href="tutorial1_8c-example.html#a5">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a9">tutorial2.c</a>, and <a class="el" href="tutorial3_8c-example.html#a13">tutorial3.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a10">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a4">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a5">autofilter.c</a>, <a class="el" href="chart_8c-example.html#a1">chart.c</a>, <a class="el" href="chart_area_8c-example.html#a4">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a4">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#a3">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#a4">chart_column.c</a>, <a class="el" href="chart_data_table_8c-example.html#a4">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a4">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a4">chart_doughnut.c</a>, <a class="el" href="chart_fonts_8c-example.html#a3">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a4">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a8">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a4">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a4">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a4">chart_scatter.c</a>, <a class="el" href="chart_styles_8c-example.html#a14">chart_styles.c</a>, <a class="el" href="constant_memory_8c-example.html#a7">constant_memory.c</a>, <a class="el" href="data_validate_8c-example.html#a4">data_validate.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a8">dates_and_times01.c</a>, <a class="el" href="demo_8c-example.html#a9">demo.c</a>, <a class="el" href="format_num_format_8c-example.html#a8">format_num_format.c</a>, <a class="el" href="hello_8c-example.html#a5">hello.c</a>, <a class="el" href="outline_8c-example.html#a15">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a6">outline_collapsed.c</a>, <a class="el" href="panes_8c-example.html#a18">panes.c</a>, <a class="el" href="tutorial1_8c-example.html#a5">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a9">tutorial2.c</a>, and <a class="el" href="tutorial3_8c-example.html#a13">tutorial3.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -422,7 +425,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="write_string03.png" alt="write_string03.png"/>
 </div>
- <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a4">autofilter.c</a>, <a class="el" href="chart_area_8c-example.html#a2">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a2">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#a2">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#a2">chart_column.c</a>, <a class="el" href="chart_data_table_8c-example.html#a2">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a2">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a2">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a2">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a7">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a2">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a2">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a2">chart_scatter.c</a>, <a class="el" href="data_validate_8c-example.html#a2">data_validate.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a8">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a10">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a8">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a4">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a5">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a6">images.c</a>, <a class="el" href="panes_8c-example.html#a17">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a7">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a10">worksheet_protection.c</a>.</dd>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a4">autofilter.c</a>, <a class="el" href="chart_area_8c-example.html#a2">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a2">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#a2">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#a2">chart_column.c</a>, <a class="el" href="chart_data_table_8c-example.html#a2">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a2">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a2">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a2">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a7">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a2">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a2">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a2">chart_scatter.c</a>, <a class="el" href="data_validate_8c-example.html#a2">data_validate.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a8">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a10">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a8">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a4">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a5">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a6">images.c</a>, <a class="el" href="outline_8c-example.html#a13">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a4">outline_collapsed.c</a>, <a class="el" href="panes_8c-example.html#a17">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a7">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a10">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -496,7 +499,7 @@ Functions</h2></td></tr>
 <div class="line"></div>
 <div class="line"><span class="comment">// NO. Error on load.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=SUM(1; 2; 3)&quot;</span>, NULL);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="data_validate_8c-example.html#a5">data_validate.c</a>, <a class="el" href="defined_name_8c-example.html#a8">defined_name.c</a>, <a class="el" href="tutorial1_8c-example.html#a6">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a10">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a14">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a11">worksheet_protection.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="data_validate_8c-example.html#a5">data_validate.c</a>, <a class="el" href="defined_name_8c-example.html#a8">defined_name.c</a>, <a class="el" href="outline_8c-example.html#a16">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a7">outline_collapsed.c</a>, <a class="el" href="tutorial1_8c-example.html#a6">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a10">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a14">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a11">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1004,7 +1007,7 @@ Functions</h2></td></tr>
 <div class="line"></div>
 <div class="line"><span class="comment">// Cell B1 in Row 1 keeps format2.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 1, <span class="stringliteral">&quot;Hello&quot;</span>, format2);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="data_validate_8c-example.html#a19">data_validate.c</a>, <a class="el" href="hide_row_col_8c-example.html#a7">hide_row_col.c</a>, <a class="el" href="merge_range_8c-example.html#a15">merge_range.c</a>, and <a class="el" href="panes_8c-example.html#a15">panes.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="data_validate_8c-example.html#a19">data_validate.c</a>, <a class="el" href="hide_row_col_8c-example.html#a7">hide_row_col.c</a>, <a class="el" href="merge_range_8c-example.html#a15">merge_range.c</a>, <a class="el" href="outline_8c-example.html#a17">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a17">outline_collapsed.c</a>, and <a class="el" href="panes_8c-example.html#a15">panes.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1060,18 +1063,44 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p>The <code>worksheet_set_row_opt()</code> function is the same as <code><a class="el" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173" title="Set the properties for a row of cells. ">worksheet_set_row()</a></code> with an additional <code>options</code> parameter.</p>
-<p>The <code>options</code> parameter is a <a class="el" href="structlxw__row__col__options.html" title="Options for rows and columns. ">lxw_row_col_options</a> struct. It has the following members but currently only the <code>hidden</code> property is supported:</p>
+<p>The <code>options</code> parameter is a <a class="el" href="structlxw__row__col__options.html" title="Options for rows and columns. ">lxw_row_col_options</a> struct. It has the following members:</p>
 <ul>
 <li><code>hidden</code></li>
 <li><code>level</code></li>
 <li><code>collapsed</code></li>
 </ul>
 <p>The <code>"hidden"</code> option is used to hide a row. This can be used, for example, to hide intermediary steps in a complicated calculation:</p>
-<div class="fragment"><div class="line"><a class="code" href="structlxw__row__col__options.html">lxw_row_col_options</a> options = {.hidden = 1, .level = 0, .collapsed = 0};</div>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__row__col__options.html">lxw_row_col_options</a> options1 = {.<a class="code" href="structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562">hidden</a> = 1, .level = 0, .collapsed = 0};</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// Hide the fourth row.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a>(worksheet, 3, 20, NULL, &amp;options);</div>
-</div><!-- fragment --> 
+<div class="line"><span class="comment">// Hide the fourth and fifth (zero indexed) rows.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807">worksheet_set_row_opt</a>(worksheet, 3,  <a class="code" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>, NULL, &amp;options1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807">worksheet_set_row_opt</a>(worksheet, 4,  <a class="code" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>, NULL, &amp;options1);</div>
+</div><!-- fragment --><div class="image">
+<img src="hide_row_col2.png" alt="hide_row_col2.png"/>
+</div>
+<p>The <code>"hidden"</code>, <code>"level"</code>, and <code>"collapsed"</code>, options can also be used to create Outlines and Grouping. See <a class="el" href="working_with_outlines.html">Working with Outlines and Grouping</a>.</p>
+<div class="fragment"><div class="line"><span class="comment">// The option structs with the outline level set.</span></div>
+<div class="line"><a class="code" href="structlxw__row__col__options.html">lxw_row_col_options</a> options1 = {.<a class="code" href="structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562">hidden</a> = 0, .level = 2, .collapsed = 0};</div>
+<div class="line"><a class="code" href="structlxw__row__col__options.html">lxw_row_col_options</a> options2 = {.<a class="code" href="structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562">hidden</a> = 0, .level = 1, .collapsed = 0};</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Set the row options with the outline level.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807">worksheet_set_row_opt</a>(worksheet, 1,  <a class="code" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>, NULL, &amp;options1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807">worksheet_set_row_opt</a>(worksheet, 2,  <a class="code" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>, NULL, &amp;options1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807">worksheet_set_row_opt</a>(worksheet, 3,  <a class="code" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>, NULL, &amp;options1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807">worksheet_set_row_opt</a>(worksheet, 4,  <a class="code" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>, NULL, &amp;options1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807">worksheet_set_row_opt</a>(worksheet, 5,  <a class="code" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>, NULL, &amp;options2);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807">worksheet_set_row_opt</a>(worksheet, 6,  <a class="code" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>, NULL, &amp;options1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807">worksheet_set_row_opt</a>(worksheet, 7,  <a class="code" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>, NULL, &amp;options1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807">worksheet_set_row_opt</a>(worksheet, 8,  <a class="code" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>, NULL, &amp;options1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807">worksheet_set_row_opt</a>(worksheet, 9,  <a class="code" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>, NULL, &amp;options1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807">worksheet_set_row_opt</a>(worksheet, 10, <a class="code" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>, NULL, &amp;options2);</div>
+</div><!-- fragment --><div class="image">
+<img src="outline1.png" alt="outline1.png"/>
+</div>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="outline_8c-example.html#a11">outline.c</a>, and <a class="el" href="outline_collapsed_8c-example.html#a15">outline_collapsed.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="a9656e4e05d3787eee6b3e4d8e82d9b7f"></a>
@@ -1167,7 +1196,7 @@ Functions</h2></td></tr>
 <div class="line"></div>
 <div class="line"><span class="comment">// Cell A2 keeps format2, the column format.</span></div>
 <div class="line"> <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 1, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="data_validate_8c-example.html#a18">data_validate.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a9">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a7">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="hide_sheet_8c-example.html#a6">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a11">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a4">images.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, <a class="el" href="panes_8c-example.html#a14">panes.c</a>, <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a8">worksheet_protection.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="data_validate_8c-example.html#a18">data_validate.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a9">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a7">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="hide_sheet_8c-example.html#a6">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a11">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a4">images.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, <a class="el" href="outline_8c-example.html#a9">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a2">outline_collapsed.c</a>, <a class="el" href="panes_8c-example.html#a14">panes.c</a>, <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a8">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1230,17 +1259,27 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p>The <code>worksheet_set_column_opt()</code> function is the same as <code><a class="el" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f" title="Set the properties for one or more columns of cells. ">worksheet_set_column()</a></code> with an additional <code>options</code> parameter.</p>
-<p>The <code>options</code> parameter is a <a class="el" href="structlxw__row__col__options.html" title="Options for rows and columns. ">lxw_row_col_options</a> struct. It has the following members but currently only the <code>hidden</code> property is supported:</p>
+<p>The <code>options</code> parameter is a <a class="el" href="structlxw__row__col__options.html" title="Options for rows and columns. ">lxw_row_col_options</a> struct. It has the following members:</p>
 <ul>
 <li><code>hidden</code></li>
 <li><code>level</code></li>
 <li><code>collapsed</code></li>
 </ul>
 <p>The <code>"hidden"</code> option is used to hide a column. This can be used, for example, to hide intermediary steps in a complicated calculation:</p>
-<div class="fragment"><div class="line"><a class="code" href="structlxw__row__col__options.html">lxw_row_col_options</a> options = {.<a class="code" href="structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562">hidden</a> = 1, .level = 0, .collapsed = 0};</div>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__row__col__options.html">lxw_row_col_options</a> options1 = {.<a class="code" href="structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562">hidden</a> = 1, .level = 0, .collapsed = 0};</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a52c4c145f684c5b4dcd2ed304d1fe907">worksheet_set_column_opt</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:A&quot;</span>), 8.43, NULL, &amp;options);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="hide_row_col_8c-example.html#a10">hide_row_col.c</a>.</dd>
+<div class="line"><a class="code" href="worksheet_8h.html#a52c4c145f684c5b4dcd2ed304d1fe907">worksheet_set_column_opt</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;D:E&quot;</span>),  <a class="code" href="worksheet_8h.html#a3df7073ab35462516525d28975286994">LXW_DEF_COL_WIDTH</a>, NULL, &amp;options1);</div>
+</div><!-- fragment --><div class="image">
+<img src="hide_row_col3.png" alt="hide_row_col3.png"/>
+</div>
+<p>The <code>"hidden"</code>, <code>"level"</code>, and <code>"collapsed"</code>, options can also be used to create Outlines and Grouping. See <a class="el" href="working_with_outlines.html">Working with Outlines and Grouping</a>.</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__row__col__options.html">lxw_row_col_options</a> options1 = {.<a class="code" href="structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562">hidden</a> = 0, .level = 1, .collapsed = 0};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a52c4c145f684c5b4dcd2ed304d1fe907">worksheet_set_column_opt</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;B:G&quot;</span>),  5, NULL, &amp;options1);</div>
+</div><!-- fragment --><div class="image">
+<img src="outline8.png" alt="outline8.png"/>
+</div>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="hide_row_col_8c-example.html#a10">hide_row_col.c</a>, <a class="el" href="outline_8c-example.html#a18">outline.c</a>, and <a class="el" href="outline_collapsed_8c-example.html#a18">outline_collapsed.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -3318,6 +3357,68 @@ objects
 </dl>
 </div>
 </div>
+<a class="anchor" id="a9efae5027e762c9a29f6afa547e4b2db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_outline_settings </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>visible</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>symbols_below</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>symbols_right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>auto_style</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">visible</td><td>Outlines are visible. Optional, defaults to True. </td></tr>
+    <tr><td class="paramname">symbols_below</td><td>Show row outline symbols below the outline bar. </td></tr>
+    <tr><td class="paramname">symbols_right</td><td>Show column outline symbols to the right of outline. </td></tr>
+    <tr><td class="paramname">auto_style</td><td>Use Automatic outline style.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>worksheet_outline_settings()</code> method is used to control the appearance of outlines in Excel. Outlines are described the section on <a class="el" href="working_with_outlines.html">Working with Outlines and Grouping</a>.</p>
+<p>The <code>visible</code> parameter is used to control whether or not outlines are visible. Setting this parameter to False will cause all outlines on the worksheet to be hidden. They can be un-hidden in Excel by means of the "Show Outline Symbols" command button. The default Excel setting is True for visible outlines.</p>
+<p>The <code>symbols_below</code> parameter is used to control whether the row outline symbol will appear above or below the outline level bar. The default Excel setting is True for symbols to appear below the outline level bar.</p>
+<p>The <code>symbols_right</code> parameter is used to control whether the column outline symbol will appear to the left or the right of the outline level bar. The default Excel setting is True for symbols to appear to the right of the outline level bar.</p>
+<p>The <code>auto_style</code> parameter is used to control whether the automatic outline generator in Excel uses automatic styles when creating an outline. This has no effect on a file generated by XlsxWriter but it does have an effect on how the worksheet behaves after it is created. The default Excel setting is False for "Automatic Styles" to be turned off.</p>
+<p>The default settings for all of these parameters in libxlsxwriter correspond to Excel's default parameters and are shown below:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9efae5027e762c9a29f6afa547e4b2db">worksheet_outline_settings</a>(worksheet1, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>);</div>
+</div><!-- fragment --><p>The worksheet parameters controlled by <code><a class="el" href="worksheet_8h.html#a9efae5027e762c9a29f6afa547e4b2db" title="Set the Outline and Grouping display properties. ">worksheet_outline_settings()</a></code> are rarely used. </p>
+
+</div>
+</div>
 <a class="anchor" id="a74121de7c4f67639b30f302d4af48eb4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3376,12 +3477,13 @@ objects
       </table>
 </div><div class="memdoc">
 <p>Options struct for the <a class="el" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f" title="Set the properties for one or more columns of cells. ">worksheet_set_column()</a> and <a class="el" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173" title="Set the properties for a row of cells. ">worksheet_set_row()</a> functions.</p>
-<p>It has the following members but currently only the <code>hidden</code> property is supported:</p>
+<p>It has the following members:</p>
 <ul>
 <li><code>hidden</code></li>
 <li><code>level</code></li>
-<li><code>collapsed</code> </li>
+<li><code>collapsed</code></li>
 </ul>
+<p>The members of this struct are explained in <a class="el" href="working_with_outlines.html#ww_outlines_grouping">Outlines and Grouping in libxlsxwriter</a>. </p>
 
 </div>
 </div>
@@ -3448,7 +3550,8 @@ objects
       </table>
 </div><div class="memdoc">
 <p>Default row height in Excel </p>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="outline_8c-example.html#a12">outline.c</a>, and <a class="el" href="outline_collapsed_8c-example.html#a16">outline_collapsed.c</a>.</dd>
+</dl>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
@@ -3729,7 +3832,7 @@ Macros</h2></td></tr>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Copyright 2014-2017 John McNamara.
+Copyright 2014-2018 John McNamara.
 Generated by <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a>

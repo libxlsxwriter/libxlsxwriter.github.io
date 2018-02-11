@@ -30,6 +30,7 @@ var searchData=
   ['worksheet_5finsert_5fimage',['worksheet_insert_image',['../worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f',1,'worksheet.h']]],
   ['worksheet_5finsert_5fimage_5fopt',['worksheet_insert_image_opt',['../worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b',1,'worksheet.h']]],
   ['worksheet_5fmerge_5frange',['worksheet_merge_range',['../worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225',1,'worksheet.h']]],
+  ['worksheet_5foutline_5fsettings',['worksheet_outline_settings',['../worksheet_8h.html#a9efae5027e762c9a29f6afa547e4b2db',1,'worksheet.h']]],
   ['worksheet_5fprint_5facross',['worksheet_print_across',['../worksheet_8h.html#a40d32d247593e01c00b5c5c606fb4bb3',1,'worksheet.h']]],
   ['worksheet_5fprint_5farea',['worksheet_print_area',['../worksheet_8h.html#ab92116759b56cd67419febf6e0aa2c9e',1,'worksheet.h']]],
   ['worksheet_5fprint_5frow_5fcol_5fheaders',['worksheet_print_row_col_headers',['../worksheet_8h.html#adb169a9740135f5c01eab94099d77f9b',1,'worksheet.h']]],

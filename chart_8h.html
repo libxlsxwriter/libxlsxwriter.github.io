@@ -229,6 +229,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ab815412fe8d862efaa8c932df4923178"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ab815412fe8d862efaa8c932df4923178">chart_series_set_trendline_line</a> (<a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *series, <a class="el" href="structlxw__chart__line.html">lxw_chart_line</a> *line)</td></tr>
 <tr class="memdesc:ab815412fe8d862efaa8c932df4923178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the trendline line properties for a chart data series.  <a href="#ab815412fe8d862efaa8c932df4923178">More...</a><br /></td></tr>
 <tr class="separator:ab815412fe8d862efaa8c932df4923178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8edf637b55d6d63770d2c6b710510b3"><td class="memItemLeft" align="right" valign="top">lxw_series_error_bars *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#af8edf637b55d6d63770d2c6b710510b3">chart_series_get_error_bars</a> (<a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *series, <a class="el" href="chart_8h.html#a78b7d07d421d5339d0e721e28d3dbf2d">lxw_chart_error_bar_axis</a> axis_type)</td></tr>
+<tr class="memdesc:af8edf637b55d6d63770d2c6b710510b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to X or Y error bars from a chart series.  <a href="#af8edf637b55d6d63770d2c6b710510b3">More...</a><br /></td></tr>
+<tr class="separator:af8edf637b55d6d63770d2c6b710510b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31b72a8b98d7db92c4cc63e226442d0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a> (lxw_series_error_bars *error_bars, uint8_t type, double value)</td></tr>
 <tr class="separator:a31b72a8b98d7db92c4cc63e226442d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa897ee54d4a19f264a6b8f9dd43604b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aa897ee54d4a19f264a6b8f9dd43604b3">chart_series_set_error_bars_direction</a> (lxw_series_error_bars *error_bars, uint8_t direction)</td></tr>
@@ -240,6 +243,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a97496720a6c6c9d0c82cf4f26bf71ae0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a97496720a6c6c9d0c82cf4f26bf71ae0">chart_series_set_error_bars_line</a> (lxw_series_error_bars *error_bars, <a class="el" href="structlxw__chart__line.html">lxw_chart_line</a> *line)</td></tr>
 <tr class="memdesc:a97496720a6c6c9d0c82cf4f26bf71ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the line properties for a chart series error bars.  <a href="#a97496720a6c6c9d0c82cf4f26bf71ae0">More...</a><br /></td></tr>
 <tr class="separator:a97496720a6c6c9d0c82cf4f26bf71ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2c0daabdcf3b982ffde5be718f7e954"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aa2c0daabdcf3b982ffde5be718f7e954">chart_axis_get</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, <a class="el" href="chart_8h.html#a3c36cef7a49c5698e95d112a35d3dc92">lxw_chart_axis_type</a> axis_type)</td></tr>
+<tr class="memdesc:aa2c0daabdcf3b982ffde5be718f7e954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an axis pointer from a chart.  <a href="#aa2c0daabdcf3b982ffde5be718f7e954">More...</a><br /></td></tr>
+<tr class="separator:aa2c0daabdcf3b982ffde5be718f7e954"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a650d569ff37a087101b7bff4ee7bb130"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, const char *name)</td></tr>
 <tr class="memdesc:a650d569ff37a087101b7bff4ee7bb130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the name caption of the an axis.  <a href="#a650d569ff37a087101b7bff4ee7bb130">More...</a><br /></td></tr>
 <tr class="separator:a650d569ff37a087101b7bff4ee7bb130"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1883,6 +1889,60 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
+<a class="anchor" id="af8edf637b55d6d63770d2c6b710510b3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lxw_series_error_bars* chart_series_get_error_bars </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *&#160;</td>
+          <td class="paramname"><em>series</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="chart_8h.html#a78b7d07d421d5339d0e721e28d3dbf2d">lxw_chart_error_bar_axis</a>&#160;</td>
+          <td class="paramname"><em>axis_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">series</td><td>A series object created via <code><a class="el" href="chart_8h.html#ad60de0eb056e93435407e91482115f55" title="Add a data series to a chart. ">chart_add_series()</a></code>. </td></tr>
+    <tr><td class="paramname">axis_type</td><td>The axis type (X or Y): <a class="el" href="chart_8h.html#a78b7d07d421d5339d0e721e28d3dbf2d" title="Direction for a data series error bar. ">lxw_chart_error_bar_axis</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>chart_series_get_error_bars()</code> function returns a pointer to the error bars of a series based on the type of <a class="el" href="chart_8h.html#a78b7d07d421d5339d0e721e28d3dbf2d" title="Direction for a data series error bar. ">lxw_chart_error_bar_axis</a>:</p>
+<div class="fragment"><div class="line">lxw_series_error_bars *x_error_bars;</div>
+<div class="line">lxw_series_error_bars *y_error_bars;</div>
+<div class="line"></div>
+<div class="line">x_error_bars = <a class="code" href="chart_8h.html#af8edf637b55d6d63770d2c6b710510b3">chart_series_get_error_bars</a>(series, <a class="code" href="chart_8h.html#a78b7d07d421d5339d0e721e28d3dbf2da4ce3511c1f112d18876c00604dfa5306">LXW_CHART_ERROR_BAR_AXIS_X</a>);</div>
+<div class="line">y_error_bars = <a class="code" href="chart_8h.html#af8edf637b55d6d63770d2c6b710510b3">chart_series_get_error_bars</a>(series, <a class="code" href="chart_8h.html#a78b7d07d421d5339d0e721e28d3dbf2da763c0a7dcb94414ee10ae91f5455ac08">LXW_CHART_ERROR_BAR_AXIS_Y</a>);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Use the error bar pointers.</span></div>
+<div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(x_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fead7300dcc1274164a42e2359a3dfc1465">LXW_CHART_ERROR_BAR_TYPE_STD_DEV</a>, 1);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(y_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a>, 0);</div>
+</div><!-- fragment --><p>Note, the series error bars can also be accessed directly:</p>
+<div class="fragment"><div class="line"><span class="comment">// Equivalent to the above example, without function calls.</span></div>
+<div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series-&gt;x_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fead7300dcc1274164a42e2359a3dfc1465">LXW_CHART_ERROR_BAR_TYPE_STD_DEV</a>, 1);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series-&gt;y_error_bars,</div>
+<div class="line">                            <a class="code" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a>, 0);</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>Pointer to the series error bars, or NULL if not found. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a31b72a8b98d7db92c4cc63e226442d0a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1984,7 +2044,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">error_bars</td><td>A pointer to the series X or Y error bars. </td></tr>
-    <tr><td class="paramname">direction</td><td>The bar direction: <a class="el" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66e" title="Direction for a data series error bar. ">lxw_chart_error_bar_direction</a> .</td></tr>
+    <tr><td class="paramname">direction</td><td>The bar direction: <a class="el" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66e" title="Direction for a data series error bar. ">lxw_chart_error_bar_direction</a>.</td></tr>
   </table>
   </dd>
 </dl>
@@ -2097,6 +2157,51 @@ Functions</h2></td></tr>
 <img src="chart_error_bars4.png" alt="chart_error_bars4.png"/>
 </div>
 <p>For more information see <a class="el" href="working_with_charts.html#chart_lines">Chart formatting: Line</a> and <a class="el" href="working_with_charts.html#chart_error_bars">Working with Chart Error Bars</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa2c0daabdcf3b982ffde5be718f7e954"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a>* chart_axis_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart.html">lxw_chart</a> *&#160;</td>
+          <td class="paramname"><em>chart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="chart_8h.html#a3c36cef7a49c5698e95d112a35d3dc92">lxw_chart_axis_type</a>&#160;</td>
+          <td class="paramname"><em>axis_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chart</td><td>Pointer to a <a class="el" href="structlxw__chart.html" title="Struct to represent an Excel chart. ">lxw_chart</a> instance to be configured. </td></tr>
+    <tr><td class="paramname">axis_type</td><td>The axis type (X or Y): <a class="el" href="chart_8h.html#a3c36cef7a49c5698e95d112a35d3dc92" title="Chart axis types. ">lxw_chart_axis_type</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>chart_axis_get()</code> function returns a pointer to a chart axis based on the <a class="el" href="chart_8h.html#a3c36cef7a49c5698e95d112a35d3dc92" title="Chart axis types. ">lxw_chart_axis_type</a>:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__chart__axis.html">lxw_chart_axis</a> *x_axis = <a class="code" href="chart_8h.html#aa2c0daabdcf3b982ffde5be718f7e954">chart_axis_get</a>(chart, <a class="code" href="chart_8h.html#a3c36cef7a49c5698e95d112a35d3dc92a0c4f5ebbdbe59d52061b1201370210aa">LXW_CHART_AXIS_TYPE_X</a>);</div>
+<div class="line"><a class="code" href="structlxw__chart__axis.html">lxw_chart_axis</a> *y_axis = <a class="code" href="chart_8h.html#aa2c0daabdcf3b982ffde5be718f7e954">chart_axis_get</a>(chart, <a class="code" href="chart_8h.html#a3c36cef7a49c5698e95d112a35d3dc92a186015afd06af105db5662f7e9ac2809">LXW_CHART_AXIS_TYPE_Y</a>);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Use the axis pointer in other functions.</span></div>
+<div class="line"><a class="code" href="chart_8h.html#a1f7ddf67b9eaafef1e2d301cf88355e7">chart_axis_major_gridlines_set_visible</a>(x_axis, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>);</div>
+<div class="line"><a class="code" href="chart_8h.html#a1f7ddf67b9eaafef1e2d301cf88355e7">chart_axis_major_gridlines_set_visible</a>(y_axis, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>);</div>
+</div><!-- fragment --><p>Note, the axis pointer can also be accessed directly:</p>
+<div class="fragment"><div class="line"><span class="comment">// Equivalent to the above example, without function calls.</span></div>
+<div class="line"><a class="code" href="chart_8h.html#a1f7ddf67b9eaafef1e2d301cf88355e7">chart_axis_major_gridlines_set_visible</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>);</div>
+<div class="line"><a class="code" href="chart_8h.html#a1f7ddf67b9eaafef1e2d301cf88355e7">chart_axis_major_gridlines_set_visible</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>);</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>Pointer to the chart axis, or NULL if not found. </dd></dl>
 
 </div>
 </div>
@@ -4923,6 +5028,26 @@ LXW_CHART_LEGEND_OVERLAY_LEFT
 
 </div>
 </div>
+<a class="anchor" id="a3c36cef7a49c5698e95d112a35d3dc92"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="chart_8h.html#a3c36cef7a49c5698e95d112a35d3dc92">lxw_chart_axis_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a3c36cef7a49c5698e95d112a35d3dc92a0c4f5ebbdbe59d52061b1201370210aa"></a>LXW_CHART_AXIS_TYPE_X&#160;</td><td class="fielddoc">
+<p>Chart X axis. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3c36cef7a49c5698e95d112a35d3dc92a186015afd06af105db5662f7e9ac2809"></a>LXW_CHART_AXIS_TYPE_Y&#160;</td><td class="fielddoc">
+<p>Chart Y axis. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a class="anchor" id="aab90178f4981b77368f84155ebd5377d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -5114,6 +5239,26 @@ LXW_CHART_LEGEND_OVERLAY_LEFT
 
 </div>
 </div>
+<a class="anchor" id="a78b7d07d421d5339d0e721e28d3dbf2d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="chart_8h.html#a78b7d07d421d5339d0e721e28d3dbf2d">lxw_chart_error_bar_axis</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a78b7d07d421d5339d0e721e28d3dbf2da4ce3511c1f112d18876c00604dfa5306"></a>LXW_CHART_ERROR_BAR_AXIS_X&#160;</td><td class="fielddoc">
+<p>X axis error bar. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a78b7d07d421d5339d0e721e28d3dbf2da763c0a7dcb94414ee10ae91f5455ac08"></a>LXW_CHART_ERROR_BAR_AXIS_Y&#160;</td><td class="fielddoc">
+<p>Y axis error bar. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a class="anchor" id="a2893fbacd275cd67fc0e310ea0101a7f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -5227,6 +5372,10 @@ typedef enum <br class="typebreak" />
 <a class="el" href="chart_8h.html#a2775e02cfba1d2b2dc85ebadc03f264d">lxw_chart_label_separator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a2205e2c3795f9cd6f6013a1c46e8adf7">lxw_chart_label_separator</a></td></tr>
 <tr class="memdesc:a2205e2c3795f9cd6f6013a1c46e8adf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chart data label separator. <br /></td></tr>
 <tr class="separator:a2205e2c3795f9cd6f6013a1c46e8adf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa057baee0d7fab6a02e21e4de8a0e425"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa057baee0d7fab6a02e21e4de8a0e425"></a>
+typedef enum <a class="el" href="chart_8h.html#a3c36cef7a49c5698e95d112a35d3dc92">lxw_chart_axis_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aa057baee0d7fab6a02e21e4de8a0e425">lxw_chart_axis_type</a></td></tr>
+<tr class="memdesc:aa057baee0d7fab6a02e21e4de8a0e425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chart axis types. <br /></td></tr>
+<tr class="separator:aa057baee0d7fab6a02e21e4de8a0e425"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa40b19d5576be11988d2f8fe4e3ee8c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa40b19d5576be11988d2f8fe4e3ee8c3"></a>
 typedef enum <br class="typebreak" />
 <a class="el" href="chart_8h.html#aab90178f4981b77368f84155ebd5377d">lxw_chart_axis_tick_position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aa40b19d5576be11988d2f8fe4e3ee8c3">lxw_chart_axis_tick_position</a></td></tr>
@@ -5276,6 +5425,11 @@ typedef enum <br class="typebreak" />
 <a class="el" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66e">lxw_chart_error_bar_direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ae67b71f99fe00822f67e7631c80d5aff">lxw_chart_error_bar_direction</a></td></tr>
 <tr class="memdesc:ae67b71f99fe00822f67e7631c80d5aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direction for a data series error bar. <br /></td></tr>
 <tr class="separator:ae67b71f99fe00822f67e7631c80d5aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe7da8cd21a9b550ce2287b2f734dd58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe7da8cd21a9b550ce2287b2f734dd58"></a>
+typedef enum <br class="typebreak" />
+<a class="el" href="chart_8h.html#a78b7d07d421d5339d0e721e28d3dbf2d">lxw_chart_error_bar_axis</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#afe7da8cd21a9b550ce2287b2f734dd58">lxw_chart_error_bar_axis</a></td></tr>
+<tr class="memdesc:afe7da8cd21a9b550ce2287b2f734dd58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direction for a data series error bar. <br /></td></tr>
+<tr class="separator:afe7da8cd21a9b550ce2287b2f734dd58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8497875b7ff31f1724fb32ea461dd135"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8497875b7ff31f1724fb32ea461dd135"></a>
 typedef enum <br class="typebreak" />
 <a class="el" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7f">lxw_chart_error_bar_cap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a8497875b7ff31f1724fb32ea461dd135">lxw_chart_error_bar_cap</a></td></tr>
@@ -5468,6 +5622,11 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a2775e02cfba1d2b2dc85ebadc03f264d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chart data label separator.  <a href="chart_8h.html#a2775e02cfba1d2b2dc85ebadc03f264d">More...</a><br /></td></tr>
 <tr class="separator:a2775e02cfba1d2b2dc85ebadc03f264d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c36cef7a49c5698e95d112a35d3dc92"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a3c36cef7a49c5698e95d112a35d3dc92">lxw_chart_axis_type</a> { <a class="el" href="chart_8h.html#a3c36cef7a49c5698e95d112a35d3dc92a0c4f5ebbdbe59d52061b1201370210aa">LXW_CHART_AXIS_TYPE_X</a>, 
+<a class="el" href="chart_8h.html#a3c36cef7a49c5698e95d112a35d3dc92a186015afd06af105db5662f7e9ac2809">LXW_CHART_AXIS_TYPE_Y</a>
+ }</td></tr>
+<tr class="memdesc:a3c36cef7a49c5698e95d112a35d3dc92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chart axis types.  <a href="chart_8h.html#a3c36cef7a49c5698e95d112a35d3dc92">More...</a><br /></td></tr>
+<tr class="separator:a3c36cef7a49c5698e95d112a35d3dc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab90178f4981b77368f84155ebd5377d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aab90178f4981b77368f84155ebd5377d">lxw_chart_axis_tick_position</a> { , <a class="el" href="chart_8h.html#aab90178f4981b77368f84155ebd5377da4cda231bc6fd3a80ea1c8fa21e63b444">LXW_CHART_AXIS_POSITION_ON_TICK</a>, 
 <a class="el" href="chart_8h.html#aab90178f4981b77368f84155ebd5377daff9b211b7fca280eaa284c815eaa279f">LXW_CHART_AXIS_POSITION_BETWEEN</a>
  }</td></tr>
@@ -5527,6 +5686,11 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a5416ddeb493de3e78245d77d0af8a66e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direction for a data series error bar.  <a href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66e">More...</a><br /></td></tr>
 <tr class="separator:a5416ddeb493de3e78245d77d0af8a66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78b7d07d421d5339d0e721e28d3dbf2d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a78b7d07d421d5339d0e721e28d3dbf2d">lxw_chart_error_bar_axis</a> { <a class="el" href="chart_8h.html#a78b7d07d421d5339d0e721e28d3dbf2da4ce3511c1f112d18876c00604dfa5306">LXW_CHART_ERROR_BAR_AXIS_X</a>, 
+<a class="el" href="chart_8h.html#a78b7d07d421d5339d0e721e28d3dbf2da763c0a7dcb94414ee10ae91f5455ac08">LXW_CHART_ERROR_BAR_AXIS_Y</a>
+ }</td></tr>
+<tr class="memdesc:a78b7d07d421d5339d0e721e28d3dbf2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direction for a data series error bar.  <a href="chart_8h.html#a78b7d07d421d5339d0e721e28d3dbf2d">More...</a><br /></td></tr>
+<tr class="separator:a78b7d07d421d5339d0e721e28d3dbf2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2893fbacd275cd67fc0e310ea0101a7f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7f">lxw_chart_error_bar_cap</a> { <a class="el" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7fad62f98e12866c933ee7c52da3af6fa8e">LXW_CHART_ERROR_BAR_END_CAP</a>, 
 <a class="el" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7fa5d70a912eb58cf4790bbadf8bde2dcdd">LXW_CHART_ERROR_BAR_NO_CAP</a>
  }</td></tr>
@@ -5549,7 +5713,7 @@ Enumerations</h2></td></tr>
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Copyright 2014-2017 John McNamara.
+Copyright 2014-2018 John McNamara.
 Generated by <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a>
