@@ -96,21 +96,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><p>This section lists known issues and bugs and gives some information on how to submit bug reports.</p>
 <h1><a class="anchor" id="bugs_unreadable"></a>
 Content is Unreadable. Open and Repair</h1>
-<p>Very, very occasionally you may encounter a bug which generates an Excel warning when opening an <code>libxlsxwriter</code> file like:</p>
+<p>Very occasionally you may encounter a bug which generates an Excel warning when opening an <code>libxlsxwriter</code> file like:</p>
 <blockquote class="doxtable">
 <p>Excel could not open file.xlsx because some content is unreadable. Do you want to open and repair this workbook. </p>
 </blockquote>
 <p>This ominous sounding message is Excel's standard warning for any validation error in the XML used for the components of the XLSX file.</p>
-<p>If you encounter an issue like this you should open an issue on GitHub with a program to replicate the issue (see below) or send one of the failing output files to the <a class="el" href="author.html">Author</a>.</p>
+<p>If you encounter an issue like this you should open an issue on GitHub with a program to replicate the issue (see below).</p>
 <h1><a class="anchor" id="bugs_formula_name"></a>
 Formulas displayed as 'NAME?' until edited</h1>
 <p>Excel 2010 and 2013 added functions which weren't defined in the original file specification. These functions are referred to as <em>future</em> functions. Examples of these functions are <code>ACOT</code>, <code>CHISQ.DIST.RT</code> , <code>CONFIDENCE.NORM</code>, <code>STDEV.P</code>, <code>STDEV.S</code> and <code>WORKDAY.INTL</code>. The full list is given in the <a href="http://msdn.microsoft.com/en-us/library/dd907480%28v=office.12%29.aspx">MS XLSX extensions documentation on future functions</a>.</p>
-<p>When written using <code>write_formula()</code> these functions need to be fully qualified with the <code>_xlfn.</code> prefix as they are shown in the MS XLSX documentation link above. For example: </p><pre class="fragment">worksheet_write_formula(worksheet, 0, 0,"=_xlfn.STDEV.S(B1:B10)", NULL);
-</pre><h1><a class="anchor" id="bugs_formula_zero"></a>
+<p>When written using <code>write_formula()</code> these functions need to be fully qualified with the <code>_xlfn.</code> prefix as they are shown in the MS XLSX documentation link above. For example:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, 0, 0,<span class="stringliteral">&quot;=_xlfn.STDEV.S(B1:B10)&quot;</span>, NULL);</div>
+</div><!-- fragment --><p>See also <a class="el" href="working_with_formulas.html">Working with Formulas</a>.</p>
+<h1><a class="anchor" id="bugs_formula_zero"></a>
 Formula results displaying as zero in non-Excel applications</h1>
 <p>Due to wide range of possible formulas and inter-dependencies between them, <code>xlsxwriter</code> doesn't, and realistically cannot, calculate the result of a formula when it is written to an XLSX file. Instead, it stores the value 0 as the formula result. It then sets a global flag in the XLSX file to say that all formulas and functions should be recalculated when the file is opened.</p>
 <p>This is the method recommended in the Excel documentation and in general it works fine with spreadsheet applications. However, applications that don't have a facility to calculate formulas, such as Excel Viewer, or several mobile applications, will only display the 0 results.</p>
 <p>If required, it is also possible to specify the calculated result of the formula using the <code><a class="el" href="worksheet_8h.html#af474c01f7ec8ac1a01206c9c4a5867af" title="Write a formula to a worksheet cell with a user defined result. ">worksheet_write_formula_num()</a></code> function.</p>
+<p>See also <a class="el" href="working_with_formulas.html">Working with Formulas</a>.</p>
 <h1><a class="anchor" id="bugs_images"></a>
 Images not displayed correctly in Excel 2001 for Mac and non-Excel applications</h1>
 <p>Images inserted into worksheets via <code><a class="el" href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> may not display correctly in Excel 2011 for Mac and non-Excel applications such as OpenOffice and LibreOffice. Specifically the images may looked stretched or squashed.</p>
