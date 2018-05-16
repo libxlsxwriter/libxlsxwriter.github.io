@@ -98,6 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li class="level1"><a href="#gsg_cmake">Install using CMake</a><ul><li class="level2"><a href="#gsg_cmake_flags">CMake Flags</a></li>
 <li class="level2"><a href="#gsg_cmake_options">CMake Options</a></li>
 <li class="level2"><a href="#gsg_cmake_generators">CMake Generators</a></li>
+<li class="level2"><a href="#gsg_cmake_app">Building an app with Cmake and Microsoft Visual Studio</a></li>
 </ul>
 </li>
 <li class="level1"><a href="#gsg_msvc">Installation on Windows using Microsoft Visual Studio</a><ul><li class="level2"><a href="#gsg_dll">Building a Windows DLL of libxlsxwriter</a></li>
@@ -236,9 +237,87 @@ CMake Options</h2>
 CMake Generators</h2>
 <p>CMake also supports custom build generators, such as Makefiles, Ninja, Visual Studio, and Xcode. For example, to generate a Visual Studio solution, configure with: </p><pre class="fragment">cmake .. -G "Visual Studio 14 2015 Win64"
 </pre><p>For more information on using generators see: <a href="https://cmake.org/cmake/help/v3.0/manual/cmake-generators.7.html">cmake-generators</a>.</p>
+<h2><a class="anchor" id="gsg_cmake_app"></a>
+Building an app with Cmake and Microsoft Visual Studio</h2>
+<p>Open a Windows CMD or Command Window and set up your MSVC environment, if required.</p>
+<p>Then create a work directory and and an install directory that the include and library files will be installed to. Set the follow variables to point to the directories: </p><pre class="fragment">set    WORK_DIR=C:/Users/Username/tmp
+set INSTALL_DIR=C:/Users/Username/tmp/install_dir
+</pre><p>Build the Zlib library: </p><pre class="fragment">cd %WORK_DIR%
+
+git clone https://github.com/madler/zlib.git
+cd zlib
+mkdir build
+cd    build
+
+cmake .. -G "Visual Studio 14 Win64" -DCMAKE_INSTALL_PREFIX:PATH="%INSTALL_DIR%/zlib"
+
+cmake --build . --config Release --target install
+</pre><p>Build the libxlsxwriter library: </p><pre class="fragment">cd %WORK_DIR%
+
+git clone https://github.com/jmcnamara/libxlsxwriter.git
+cd libxlsxwriter
+mkdir build
+cd    build
+
+cmake .. -G "Visual Studio 14 Win64" -DCMAKE_INSTALL_PREFIX:PATH="%INSTALL_DIR%/libxlsxwriter" -DZLIB_ROOT:STRING="%INSTALL_DIR%/zlib"
+
+cmake --build . --config Release --target install
+</pre><p>Create a new Win32 Console (or other C/C++) application in Visual Studio: </p><pre class="fragment">File
+  -&gt; New
+    -&gt; Project
+
+Visual C++
+  -&gt; Win32
+    -&gt; Win32 Console Application
+</pre><p>Change the ARCH in the main Dialog to "x64" (or to match the parameter to cmake).</p>
+<p>Replace the empty main with a libxlsxwriter example, make sure to include "stdafx.h" and "xlsxwriter.h":</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;stdafx.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;hello_world.xlsx&quot;</span>);</div>
+<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 1, 0, 123, NULL);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Edit the application properties: </p><pre class="fragment">Project
+  -&gt; ConsoleApplication Properties
+</pre><p>Set the libxlsxwriter include path to match the path used above: </p><pre class="fragment">Configuration Properties
+  -&gt; C/C++
+    -&gt; General
+      -&gt; Additional Include Directories
+
+Set it to the following (or similar path used above):
+
+C:\Users\Username\tmp\install_dir\libxlsxwriter\include
+</pre><p>Set the linker directories to match the path created above: </p><pre class="fragment">Configuration Properties
+  -&gt; Linker
+    -&gt; General
+      -&gt; Additional Library Directories
+
+Add the following (or similar paths used above):
+
+C:\Users\Username\tmp\install_dir\libxlsxwriter\lib\x64\Release
+C:\Users\Username\tmp\install_dir\zlib\lib
+</pre><p>Set the linker additional libraries to match the zlib and xlsxwriter libs created above: </p><pre class="fragment">Configuration Properties
+  -&gt; Linker
+     -&gt; Input
+        -&gt; Additional Dependencies
+
+Add the following:
+
+xlsxwriter.lib
+zlib.lib
+</pre><p>Build the solution and run the output executable. It should create a hello_world.xlsx file in the same directory you ran it from.</p>
 <h1><a class="anchor" id="gsg_msvc"></a>
 Installation on Windows using Microsoft Visual Studio</h1>
-<p>There is a sample Microsoft Visual Studio project on GitHub called <a href="https://github.com/jmcnamara/MSVCLibXlsxWriter">MSVCLibXlsxWriter</a>.</p>
+<p>As an alternative to the Cmake option shown above there is a complete sample Microsoft Visual Studio project on GitHub called <a href="https://github.com/jmcnamara/MSVCLibXlsxWriter">MSVCLibXlsxWriter</a>.</p>
 <p>The allows you to build a DLL of libxlsxwriter and also a sample application that uses it to create an Excel output file.</p>
 <h2><a class="anchor" id="gsg_dll"></a>
 Building a Windows DLL of libxlsxwriter</h2>
