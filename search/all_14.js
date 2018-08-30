@@ -39,6 +39,8 @@ var searchData=
   ['worksheet_5finsert_5fchart',['worksheet_insert_chart',['../worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2',1,'worksheet.h']]],
   ['worksheet_5finsert_5fchart_5fopt',['worksheet_insert_chart_opt',['../worksheet_8h.html#a8c24ef5b630e33cbbc8a83f71a458bb7',1,'worksheet.h']]],
   ['worksheet_5finsert_5fimage',['worksheet_insert_image',['../worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f',1,'worksheet.h']]],
+  ['worksheet_5finsert_5fimage_5fbuffer',['worksheet_insert_image_buffer',['../worksheet_8h.html#aebd5cc71a42ab0e4a9ce45fe9a6f6908',1,'worksheet.h']]],
+  ['worksheet_5finsert_5fimage_5fbuffer_5fopt',['worksheet_insert_image_buffer_opt',['../worksheet_8h.html#af4c868a5cf0eaab8740c1f966ba5561c',1,'worksheet.h']]],
   ['worksheet_5finsert_5fimage_5fopt',['worksheet_insert_image_opt',['../worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b',1,'worksheet.h']]],
   ['worksheet_5fmerge_5frange',['worksheet_merge_range',['../worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225',1,'worksheet.h']]],
   ['worksheet_5foutline_5fsettings',['worksheet_outline_settings',['../worksheet_8h.html#a9efae5027e762c9a29f6afa547e4b2db',1,'worksheet.h']]],

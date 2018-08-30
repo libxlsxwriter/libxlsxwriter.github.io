@@ -155,6 +155,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a0b05e75e2c2a5c3452374714cdb2b79b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b">worksheet_insert_image_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *filename, <a class="el" href="structlxw__image__options.html">lxw_image_options</a> *options)</td></tr>
 <tr class="memdesc:a0b05e75e2c2a5c3452374714cdb2b79b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an image in a worksheet cell, with options.  <a href="#a0b05e75e2c2a5c3452374714cdb2b79b">More...</a><br /></td></tr>
 <tr class="separator:a0b05e75e2c2a5c3452374714cdb2b79b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd5cc71a42ab0e4a9ce45fe9a6f6908"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#aebd5cc71a42ab0e4a9ce45fe9a6f6908">worksheet_insert_image_buffer</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const unsigned char *image_buffer, size_t image_size)</td></tr>
+<tr class="memdesc:aebd5cc71a42ab0e4a9ce45fe9a6f6908"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an image in a worksheet cell, from a memory buffer.  <a href="#aebd5cc71a42ab0e4a9ce45fe9a6f6908">More...</a><br /></td></tr>
+<tr class="separator:aebd5cc71a42ab0e4a9ce45fe9a6f6908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4c868a5cf0eaab8740c1f966ba5561c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#af4c868a5cf0eaab8740c1f966ba5561c">worksheet_insert_image_buffer_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const unsigned char *image_buffer, size_t image_size, <a class="el" href="structlxw__image__options.html">lxw_image_options</a> *options)</td></tr>
+<tr class="memdesc:af4c868a5cf0eaab8740c1f966ba5561c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an image in a worksheet cell, from a memory buffer.  <a href="#af4c868a5cf0eaab8740c1f966ba5561c">More...</a><br /></td></tr>
+<tr class="separator:af4c868a5cf0eaab8740c1f966ba5561c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2067faaacb8bfa6550b019e915900a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__chart.html">lxw_chart</a> *chart)</td></tr>
 <tr class="memdesc:ac2067faaacb8bfa6550b019e915900a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a chart object into a worksheet.  <a href="#ac2067faaacb8bfa6550b019e915900a2">More...</a><br /></td></tr>
 <tr class="separator:ac2067faaacb8bfa6550b019e915900a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1404,6 +1410,142 @@ Functions</h2></td></tr>
 </div>
 <dl class="section note"><dt>Note</dt><dd>See the notes about row scaling and BMP images in <code><a class="el" href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> above. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="images_8c-example.html#a11">images.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aebd5cc71a42ab0e4a9ce45fe9a6f6908"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_insert_image_buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>image_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>image_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
+    <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
+    <tr><td class="paramname">image_buffer</td><td>Pointer to an array of bytes that holds the image data. </td></tr>
+    <tr><td class="paramname">image_size</td><td>The size of the array of bytes.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<p>This function can be used to insert a image into a worksheet from a memory buffer:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aebd5cc71a42ab0e4a9ce45fe9a6f6908">worksheet_insert_image_buffer</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;B3&quot;</span>), image_buffer, image_size);</div>
+</div><!-- fragment --><div class="image">
+<img src="image_buffer.png" alt="image_buffer.png"/>
+</div>
+<p>The buffer should be a pointer to an array of unsigned char data with a specified size.</p>
+<p>See <code><a class="el" href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> for details about the supported image formats, and other image features. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="image_buffer_8c-example.html#a6">image_buffer.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="af4c868a5cf0eaab8740c1f966ba5561c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_insert_image_buffer_opt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>image_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>image_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__image__options.html">lxw_image_options</a> *&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
+    <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
+    <tr><td class="paramname">image_buffer</td><td>Pointer to an array of bytes that holds the image data. </td></tr>
+    <tr><td class="paramname">image_size</td><td>The size of the array of bytes. </td></tr>
+    <tr><td class="paramname">options</td><td>Optional image parameters.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<p>The <code>worksheet_insert_image_buffer_opt()</code> function is like <code><a class="el" href="worksheet_8h.html#aebd5cc71a42ab0e4a9ce45fe9a6f6908" title="Insert an image in a worksheet cell, from a memory buffer. ">worksheet_insert_image_buffer()</a></code> function except that it takes an optional <a class="el" href="structlxw__image__options.html" title="Options for inserted images. ">lxw_image_options</a> struct to scale and position the image:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__image__options.html">lxw_image_options</a> options = {.<a class="code" href="structlxw__image__options.html#a7ef9c6980b8e66bcdfff18627250001c">x_offset</a> = 32, .y_offset = 4,</div>
+<div class="line">                             .x_scale  = 2,  .y_scale  = 1};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="worksheet_8h.html#af4c868a5cf0eaab8740c1f966ba5561c">worksheet_insert_image_buffer_opt</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;B3&quot;</span>), image_buffer, image_size, &amp;options);</div>
+</div><!-- fragment --><div class="image">
+<img src="image_buffer_opt.png" alt="image_buffer_opt.png"/>
+</div>
+<p>The buffer should be a pointer to an array of unsigned char data with a specified size.</p>
+<p>See <code><a class="el" href="worksheet_8h.html#af4c868a5cf0eaab8740c1f966ba5561c" title="Insert an image in a worksheet cell, from a memory buffer. ">worksheet_insert_image_buffer_opt()</a></code> for details about the supported image formats, and other image options. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="image_buffer_8c-example.html#a8">image_buffer.c</a>.</dd>
 </dl>
 </div>
 </div>
