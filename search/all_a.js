@@ -36,6 +36,10 @@ var searchData=
   ['lxw_5fchart_5farea_5fstacked_5fpercent',['LXW_CHART_AREA_STACKED_PERCENT',['../chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca9df7f4ab4ee2fc2e45937e3937046d17',1,'chart.h']]],
   ['lxw_5fchart_5faxis',['lxw_chart_axis',['../structlxw__chart__axis.html',1,'lxw_chart_axis'],['../chart_8h.html#a08fb818c59b2d29c0dcb624026c4bf14',1,'lxw_chart_axis():&#160;chart.h']]],
   ['lxw_5fchart_5faxis_5fdisplay_5funit',['lxw_chart_axis_display_unit',['../chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90',1,'lxw_chart_axis_display_unit():&#160;chart.h'],['../chart_8h.html#a8ff14a855d5030e3a82ce9de0d7ca5f7',1,'lxw_chart_axis_display_unit():&#160;chart.h']]],
+  ['lxw_5fchart_5faxis_5flabel_5falign_5fcenter',['LXW_CHART_AXIS_LABEL_ALIGN_CENTER',['../chart_8h.html#a5568ef6c983bfcab6701153cc5e73807acdee4c624a28b837549bea1985f32cf4',1,'chart.h']]],
+  ['lxw_5fchart_5faxis_5flabel_5falign_5fleft',['LXW_CHART_AXIS_LABEL_ALIGN_LEFT',['../chart_8h.html#a5568ef6c983bfcab6701153cc5e73807afd36f36b7e8dfe3c906b494db46cff88',1,'chart.h']]],
+  ['lxw_5fchart_5faxis_5flabel_5falign_5fright',['LXW_CHART_AXIS_LABEL_ALIGN_RIGHT',['../chart_8h.html#a5568ef6c983bfcab6701153cc5e73807aae868c3099ef7c0c0169dd0c5ad58845',1,'chart.h']]],
+  ['lxw_5fchart_5faxis_5flabel_5falignment',['lxw_chart_axis_label_alignment',['../chart_8h.html#a5568ef6c983bfcab6701153cc5e73807',1,'lxw_chart_axis_label_alignment():&#160;chart.h'],['../chart_8h.html#af1bf1bb061a9ae5add68efc0430c0b20',1,'lxw_chart_axis_label_alignment():&#160;chart.h']]],
   ['lxw_5fchart_5faxis_5flabel_5fposition',['lxw_chart_axis_label_position',['../chart_8h.html#a8e225505503d9f488427f2d06666a5f2',1,'lxw_chart_axis_label_position():&#160;chart.h'],['../chart_8h.html#a7a599d4c090c8821ca17445a7519b843',1,'lxw_chart_axis_label_position():&#160;chart.h']]],
   ['lxw_5fchart_5faxis_5flabel_5fposition_5fhigh',['LXW_CHART_AXIS_LABEL_POSITION_HIGH',['../chart_8h.html#a8e225505503d9f488427f2d06666a5f2a0dee32fbc50d4874ee2107a443ad33fb',1,'chart.h']]],
   ['lxw_5fchart_5faxis_5flabel_5fposition_5flow',['LXW_CHART_AXIS_LABEL_POSITION_LOW',['../chart_8h.html#a8e225505503d9f488427f2d06666a5f2a918e5b6a43f7e81eb6d41fe7acaf0515',1,'chart.h']]],
@@ -333,6 +337,7 @@ var searchData=
   ['lxw_5fvalidation_5ftype_5ftime',['LXW_VALIDATION_TYPE_TIME',['../worksheet_8h.html#a20e0dbd70400f2eb7c5d88696f812b4ca5d77c63d440a5ecedc33ce41d7d60521',1,'worksheet.h']]],
   ['lxw_5fvalidation_5ftype_5ftime_5fformula',['LXW_VALIDATION_TYPE_TIME_FORMULA',['../worksheet_8h.html#a20e0dbd70400f2eb7c5d88696f812b4ca4a21e111494a0927a836e38037164296',1,'worksheet.h']]],
   ['lxw_5fvalidation_5ftypes',['lxw_validation_types',['../worksheet_8h.html#a20e0dbd70400f2eb7c5d88696f812b4c',1,'worksheet.h']]],
+  ['lxw_5fversion',['lxw_version',['../utility_8h.html#a91acc3053f7cbe1e16872830149dc3cb',1,'utility.h']]],
   ['lxw_5fworkbook',['lxw_workbook',['../structlxw__workbook.html',1,'lxw_workbook'],['../workbook_8h.html#aa2650cd721ed5e4ecb1716c60f1977da',1,'lxw_workbook():&#160;workbook.h']]],
   ['lxw_5fworkbook_5foptions',['lxw_workbook_options',['../structlxw__workbook__options.html',1,'lxw_workbook_options'],['../workbook_8h.html#abe05edcbed2b2dcf1e7aa37f25343078',1,'lxw_workbook_options():&#160;workbook.h']]],
   ['lxw_5fworksheet',['lxw_worksheet',['../structlxw__worksheet.html',1,'lxw_worksheet'],['../worksheet_8h.html#a356e12f6f1c3f94b8de98dc99ef78b86',1,'lxw_worksheet():&#160;worksheet.h']]]

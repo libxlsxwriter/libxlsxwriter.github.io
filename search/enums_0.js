@@ -2,6 +2,7 @@ var searchData=
 [
   ['lxw_5fboolean',['lxw_boolean',['../common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349',1,'common.h']]],
   ['lxw_5fchart_5faxis_5fdisplay_5funit',['lxw_chart_axis_display_unit',['../chart_8h.html#a36e5182bd82f3d40e633a2eaed15bd90',1,'chart.h']]],
+  ['lxw_5fchart_5faxis_5flabel_5falignment',['lxw_chart_axis_label_alignment',['../chart_8h.html#a5568ef6c983bfcab6701153cc5e73807',1,'chart.h']]],
   ['lxw_5fchart_5faxis_5flabel_5fposition',['lxw_chart_axis_label_position',['../chart_8h.html#a8e225505503d9f488427f2d06666a5f2',1,'chart.h']]],
   ['lxw_5fchart_5faxis_5ftick_5fmark',['lxw_chart_axis_tick_mark',['../chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67',1,'chart.h']]],
   ['lxw_5fchart_5faxis_5ftick_5fposition',['lxw_chart_axis_tick_position',['../chart_8h.html#aab90178f4981b77368f84155ebd5377d',1,'chart.h']]],
