@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: Creating Excel files with C and libxlsxwriter</title>
+<title>libxlsxwriter: lxw_chartsheet Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,7 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Contents</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
@@ -59,7 +59,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -74,68 +73,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Creating Excel files with C and libxlsxwriter </div>  </div>
+<div class="title">lxw_chartsheet Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><b>Libxlsxwriter</b> is a C library for creating Excel XLSX files.</p>
-<div class="image">
-<img src="demo.png" alt="demo.png"/>
-</div>
-<p><a class="el" href="demo_8c-example.html">(Sample code to create the above spreadsheet.)</a></p>
-<h1><a class="anchor" id="mainpage_intro"></a>
-libxlsxwriter</h1>
-<p>Libxlsxwriter is a C library that can be used to write text, numbers, formulas and hyperlinks to multiple worksheets in an Excel 2007+ XLSX file. It supports features such as:</p>
-<ul>
-<li>100% compatible Excel XLSX files.</li>
-<li>Full Excel formatting.</li>
-<li>Merged cells.</li>
-<li>Defined names.</li>
-<li>Autofilters.</li>
-<li>Charts.</li>
-<li>Data validation and drop down lists.</li>
-<li>Worksheet PNG/JPEG images.</li>
-<li>Memory optimization mode for writing large files.</li>
-<li>Source code available on <a href="https://github.com/jmcnamara/libxlsxwriter">GitHub</a>.</li>
-<li>FreeBSD <a class="el" href="license.html">License</a>.</li>
-<li>ANSI C.</li>
-<li>Works with GCC, Clang, Xcode, MSVC 2015, ICC, TCC, MinGW, MingGW-w64/32.</li>
-<li>Works on Linux, FreeBSD, OpenBSD, OS X, iOS and Windows. Also works on MSYS/MSYS2 and Cygwin.</li>
-<li>Compiles for 32 and 64 bit.</li>
-<li>Compiles and works on big and little endian systems.</li>
-<li>The only dependency is on <code>zlib</code>.</li>
-</ul>
-<p>This document explains how to use the libxlsxwriter library. See the following sections for more information:</p>
-<ul>
-<li><a class="el" href="introduction.html">Introduction</a></li>
-<li><a class="el" href="getting_started.html">Getting Started with libxlsxwriter</a></li>
-<li><a class="el" href="tutorial01.html">Tutorial 1: Create a simple XLSX file</a></li>
-<li><a class="el" href="tutorial02.html">Tutorial 2: Adding formatting to the XLSX File</a></li>
-<li><a class="el" href="tutorial03.html">Tutorial 3: Writing different types of data to the XLSX File</a></li>
-<li><a class="el" href="workbook_8h.html">The Workbook object</a></li>
-<li><a class="el" href="worksheet_8h.html">The Worksheet object</a></li>
-<li><a class="el" href="format_8h.html">The Format object</a></li>
-<li><a class="el" href="chart_8h.html">The Chart object</a></li>
-<li><a class="el" href="chartsheet_8h.html">The Chartsheet object</a></li>
-<li><a class="el" href="utility_8h.html">Utility functions and macros</a></li>
-<li><a class="el" href="working_with_formats.html">Working with Formats</a></li>
-<li><a class="el" href="working_with_colors.html">Working with Colors</a></li>
-<li><a class="el" href="working_with_formulas.html">Working with Formulas</a></li>
-<li><a class="el" href="working_with_dates.html">Working with Dates and Times</a></li>
-<li><a class="el" href="working_with_charts.html">Working with Charts</a></li>
-<li><a class="el" href="working_with_data_validation.html">Working with Data Validation</a></li>
-<li><a class="el" href="working_with_outlines.html">Working with Outlines and Grouping</a></li>
-<li><a class="el" href="working_with_memory.html">Working with Memory and Performance</a></li>
-<li><a class="el" href="examples.html">Example Programs</a></li>
-<li><a class="el" href="running_the_tests.html">Running the Test Suite</a></li>
-<li><a class="el" href="faq.html">Frequently Asked Questions</a></li>
-<li><a class="el" href="bugs.html">Known Issues and Bugs</a></li>
-<li><a class="el" href="author.html">Author</a></li>
-<li><a class="el" href="license.html">License</a></li>
-<li><a class="el" href="changes.html">Changes</a> </li>
-</ul>
-</div></div><!-- contents -->
+
+<p>Struct to represent an Excel chartsheet.  
+ <a href="structlxw__chartsheet.html#details">More...</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The members of the <a class="el" href="structlxw__chartsheet.html" title="Struct to represent an Excel chartsheet. ">lxw_chartsheet</a> struct aren't modified directly. Instead the chartsheet properties are set by calling the functions shown in <a class="el" href="chartsheet_8h.html" title="Functions related to adding data and formatting to a chartsheet. ">chartsheet.h</a>. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chartsheet_8c-example.html#_a7">chartsheet.c</a>.</dd>
+</dl></div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

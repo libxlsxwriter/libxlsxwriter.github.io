@@ -1,10 +1,12 @@
 var searchData=
 [
   ['workbook_5fadd_5fchart',['workbook_add_chart',['../workbook_8h.html#a63b001ecefdbc4417986a3e344657726',1,'workbook.h']]],
+  ['workbook_5fadd_5fchartsheet',['workbook_add_chartsheet',['../workbook_8h.html#a9cb69c057990a4139f0a19b53b04b805',1,'workbook.h']]],
   ['workbook_5fadd_5fformat',['workbook_add_format',['../workbook_8h.html#a279a5d7075d09a3931aae9782afede33',1,'workbook.h']]],
   ['workbook_5fadd_5fworksheet',['workbook_add_worksheet',['../workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e',1,'workbook.h']]],
   ['workbook_5fclose',['workbook_close',['../workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e',1,'workbook.h']]],
   ['workbook_5fdefine_5fname',['workbook_define_name',['../workbook_8h.html#a442b4056e8d4debf56c07888f2a776f6',1,'workbook.h']]],
+  ['workbook_5fget_5fchartsheet_5fby_5fname',['workbook_get_chartsheet_by_name',['../workbook_8h.html#aaf401cf363d4e497ca72dba14d53af42',1,'workbook.h']]],
   ['workbook_5fget_5fworksheet_5fby_5fname',['workbook_get_worksheet_by_name',['../workbook_8h.html#a857f1d02d04a7d5a039642abde91c280',1,'workbook.h']]],
   ['workbook_5fnew',['workbook_new',['../workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b',1,'workbook.h']]],
   ['workbook_5fnew_5fopt',['workbook_new_opt',['../workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323',1,'workbook.h']]],
@@ -13,7 +15,7 @@ var searchData=
   ['workbook_5fset_5fcustom_5fproperty_5fnumber',['workbook_set_custom_property_number',['../workbook_8h.html#af2d8534bf9d58e48491a761228d31e14',1,'workbook.h']]],
   ['workbook_5fset_5fcustom_5fproperty_5fstring',['workbook_set_custom_property_string',['../workbook_8h.html#a337caad1c1cb16fed505a180d77f20d3',1,'workbook.h']]],
   ['workbook_5fset_5fproperties',['workbook_set_properties',['../workbook_8h.html#aa814fd7f8d2c3ce86a7aa5d5ed127000',1,'workbook.h']]],
-  ['workbook_5fvalidate_5fworksheet_5fname',['workbook_validate_worksheet_name',['../workbook_8h.html#af73200590cfb420db317dc8964c92a6d',1,'workbook.h']]],
+  ['workbook_5fvalidate_5fsheet_5fname',['workbook_validate_sheet_name',['../workbook_8h.html#a9ecbd616a8306c88210794140c434031',1,'workbook.h']]],
   ['worksheet_5factivate',['worksheet_activate',['../worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08',1,'worksheet.h']]],
   ['worksheet_5fautofilter',['worksheet_autofilter',['../worksheet_8h.html#a4e2b1de34e96331000a996f512aecfcf',1,'worksheet.h']]],
   ['worksheet_5fcenter_5fhorizontally',['worksheet_center_horizontally',['../worksheet_8h.html#a931114d5266e03931f9fc1b21bd9b56c',1,'worksheet.h']]],

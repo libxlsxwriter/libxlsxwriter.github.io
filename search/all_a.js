@@ -216,6 +216,7 @@ var searchData=
   ['lxw_5fchart_5ftrendline_5ftype_5fpoly',['LXW_CHART_TRENDLINE_TYPE_POLY',['../chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a93bf93434b12f928eed686da2cf50b9b',1,'chart.h']]],
   ['lxw_5fchart_5ftrendline_5ftype_5fpower',['LXW_CHART_TRENDLINE_TYPE_POWER',['../chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a982a6397c9a9713d2474c2ab1fba1b51',1,'chart.h']]],
   ['lxw_5fchart_5ftype',['lxw_chart_type',['../chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85c',1,'lxw_chart_type():&#160;chart.h'],['../chart_8h.html#ad30e22b3cf06dddd125254b2399719f3',1,'lxw_chart_type():&#160;chart.h']]],
+  ['lxw_5fchartsheet',['lxw_chartsheet',['../structlxw__chartsheet.html',1,'lxw_chartsheet'],['../chartsheet_8h.html#a514a515ac288aa5f03738682216c3084',1,'lxw_chartsheet():&#160;chartsheet.h']]],
   ['lxw_5fcol_5ft',['lxw_col_t',['../common_8h.html#a4fedd8dede664b070e84e850a3f92fd2',1,'common.h']]],
   ['lxw_5fcolor_5fblack',['LXW_COLOR_BLACK',['../format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba13bdb1312b42e892cd29dfeb79ec8451',1,'format.h']]],
   ['lxw_5fcolor_5fblue',['LXW_COLOR_BLUE',['../format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37',1,'format.h']]],
