@@ -123,6 +123,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a169a4a2ec5b7d57abe02feb9fc22023b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chartsheet_8h.html#a169a4a2ec5b7d57abe02feb9fc22023b">chartsheet_activate</a> (<a class="el" href="structlxw__chartsheet.html">lxw_chartsheet</a> *chartsheet)</td></tr>
 <tr class="memdesc:a169a4a2ec5b7d57abe02feb9fc22023b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a chartsheet the active, i.e., visible chartsheet.  <a href="#a169a4a2ec5b7d57abe02feb9fc22023b">More...</a><br /></td></tr>
 <tr class="separator:a169a4a2ec5b7d57abe02feb9fc22023b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e5acf866495f81e227bd99bc9f8e8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chartsheet_8h.html#a50e5acf866495f81e227bd99bc9f8e8b">chartsheet_select</a> (<a class="el" href="structlxw__chartsheet.html">lxw_chartsheet</a> *chartsheet)</td></tr>
+<tr class="memdesc:a50e5acf866495f81e227bd99bc9f8e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a chartsheet tab as selected.  <a href="#a50e5acf866495f81e227bd99bc9f8e8b">More...</a><br /></td></tr>
+<tr class="separator:a50e5acf866495f81e227bd99bc9f8e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a350f52a5de9988662af0f99f4592ac64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chartsheet_8h.html#a350f52a5de9988662af0f99f4592ac64">chartsheet_hide</a> (<a class="el" href="structlxw__chartsheet.html">lxw_chartsheet</a> *chartsheet)</td></tr>
+<tr class="memdesc:a350f52a5de9988662af0f99f4592ac64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide the current chartsheet.  <a href="#a350f52a5de9988662af0f99f4592ac64">More...</a><br /></td></tr>
+<tr class="separator:a350f52a5de9988662af0f99f4592ac64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54addfc00908f1c910ab12024a1deb7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chartsheet_8h.html#a54addfc00908f1c910ab12024a1deb7f">chartsheet_set_first_sheet</a> (<a class="el" href="structlxw__chartsheet.html">lxw_chartsheet</a> *chartsheet)</td></tr>
+<tr class="memdesc:a54addfc00908f1c910ab12024a1deb7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current chartsheet as the first visible sheet tab.  <a href="#a54addfc00908f1c910ab12024a1deb7f">More...</a><br /></td></tr>
+<tr class="separator:a54addfc00908f1c910ab12024a1deb7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d7a783d2b4ff43725d5e2b16c2eeef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chartsheet_8h.html#a16d7a783d2b4ff43725d5e2b16c2eeef">chartsheet_protect</a> (<a class="el" href="structlxw__chartsheet.html">lxw_chartsheet</a> *chartsheet, const char *password, <a class="el" href="structlxw__protection.html">lxw_protection</a> *options)</td></tr>
+<tr class="memdesc:a16d7a783d2b4ff43725d5e2b16c2eeef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protect elements of a chartsheet from modification.  <a href="#a16d7a783d2b4ff43725d5e2b16c2eeef">More...</a><br /></td></tr>
+<tr class="separator:a16d7a783d2b4ff43725d5e2b16c2eeef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a1c2cc87b14539396de75cd59ab2a6031"></a>
@@ -206,11 +218,156 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="chartsheet_activate.png" alt="chartsheet_activate.png"/>
 </div>
-<p>More than one chartsheet can be selected via the <code>chartsheet_select()</code> function, see below, however only one chartsheet can be active.</p>
+<p>More than one chartsheet can be selected via the <code><a class="el" href="chartsheet_8h.html#a50e5acf866495f81e227bd99bc9f8e8b" title="Set a chartsheet tab as selected. ">chartsheet_select()</a></code> function, see below, however only one chartsheet can be active.</p>
 <p>The default active chartsheet is the first chartsheet.</p>
 <p>See also <code><a class="el" href="worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08" title="Make a worksheet the active, i.e., visible worksheet. ">worksheet_activate()</a></code>. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="chartsheet_8c-example.html#a26">chartsheet.c</a>.</dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="a50e5acf866495f81e227bd99bc9f8e8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chartsheet_select </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chartsheet.html">lxw_chartsheet</a> *&#160;</td>
+          <td class="paramname"><em>chartsheet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chartsheet</td><td>Pointer to a <a class="el" href="structlxw__chartsheet.html" title="Struct to represent an Excel chartsheet. ">lxw_chartsheet</a> instance to be updated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>chartsheet_select()</code> function is used to indicate that a chartsheet is selected in a multi-sheet workbook:</p>
+<div class="fragment"><div class="line"><a class="code" href="chartsheet_8h.html#a169a4a2ec5b7d57abe02feb9fc22023b">chartsheet_activate</a>(chartsheet1);</div>
+<div class="line"><a class="code" href="chartsheet_8h.html#a50e5acf866495f81e227bd99bc9f8e8b">chartsheet_select</a>(chartsheet2);</div>
+<div class="line"><a class="code" href="chartsheet_8h.html#a50e5acf866495f81e227bd99bc9f8e8b">chartsheet_select</a>(chartsheet3);</div>
+</div><!-- fragment --><p>A selected chartsheet has its tab highlighted. Selecting chartsheets is a way of grouping them together so that, for example, several chartsheets could be printed in one go. A chartsheet that has been activated via the <code><a class="el" href="chartsheet_8h.html#a169a4a2ec5b7d57abe02feb9fc22023b" title="Make a chartsheet the active, i.e., visible chartsheet. ">chartsheet_activate()</a></code> function will also appear as selected.</p>
+<p>See also <code><a class="el" href="worksheet_8h.html#a78bfe3a786149deca69248db57da182f" title="Set a worksheet tab as selected. ">worksheet_select()</a></code>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a350f52a5de9988662af0f99f4592ac64"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chartsheet_hide </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chartsheet.html">lxw_chartsheet</a> *&#160;</td>
+          <td class="paramname"><em>chartsheet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chartsheet</td><td>Pointer to a <a class="el" href="structlxw__chartsheet.html" title="Struct to represent an Excel chartsheet. ">lxw_chartsheet</a> instance to be updated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>chartsheet_hide()</code> function is used to hide a chartsheet:</p>
+<div class="fragment"><div class="line"><a class="code" href="chartsheet_8h.html#a350f52a5de9988662af0f99f4592ac64">chartsheet_hide</a>(chartsheet2);</div>
+</div><!-- fragment --><p>You may wish to hide a chartsheet in order to avoid confusing a user with intermediate data or calculations.</p>
+<div class="image">
+<img src="hide_sheet.png" alt="hide_sheet.png"/>
+</div>
+<p>A hidden chartsheet can not be activated or selected so this function is mutually exclusive with the <code><a class="el" href="chartsheet_8h.html#a169a4a2ec5b7d57abe02feb9fc22023b" title="Make a chartsheet the active, i.e., visible chartsheet. ">chartsheet_activate()</a></code> and <code><a class="el" href="chartsheet_8h.html#a50e5acf866495f81e227bd99bc9f8e8b" title="Set a chartsheet tab as selected. ">chartsheet_select()</a></code> functions. In addition, since the first chartsheet will default to being the active chartsheet, you cannot hide the first chartsheet without activating another sheet:</p>
+<div class="fragment"><div class="line"><a class="code" href="chartsheet_8h.html#a169a4a2ec5b7d57abe02feb9fc22023b">chartsheet_activate</a>(chartsheet2);</div>
+<div class="line"><a class="code" href="chartsheet_8h.html#a350f52a5de9988662af0f99f4592ac64">chartsheet_hide</a>(chartsheet1);</div>
+</div><!-- fragment --><p>See also <code><a class="el" href="worksheet_8h.html#a180fcbcf012b5c165a01490d1128dc11" title="Hide the current worksheet. ">worksheet_hide()</a></code>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a54addfc00908f1c910ab12024a1deb7f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chartsheet_set_first_sheet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chartsheet.html">lxw_chartsheet</a> *&#160;</td>
+          <td class="paramname"><em>chartsheet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chartsheet</td><td>Pointer to a <a class="el" href="structlxw__chartsheet.html" title="Struct to represent an Excel chartsheet. ">lxw_chartsheet</a> instance to be updated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code><a class="el" href="chartsheet_8h.html#a169a4a2ec5b7d57abe02feb9fc22023b" title="Make a chartsheet the active, i.e., visible chartsheet. ">chartsheet_activate()</a></code> function determines which chartsheet is initially selected. However, if there are a large number of chartsheets the selected chartsheet may not appear on the screen. To avoid this you can select the leftmost visible chartsheet tab using <code>chartsheet_set_first_sheet()</code>:</p>
+<div class="fragment"><div class="line"><a class="code" href="chartsheet_8h.html#a54addfc00908f1c910ab12024a1deb7f">chartsheet_set_first_sheet</a>(chartsheet19); <span class="comment">// First visible chartsheet tab.</span></div>
+<div class="line"><a class="code" href="chartsheet_8h.html#a169a4a2ec5b7d57abe02feb9fc22023b">chartsheet_activate</a>(chartsheet20);        <span class="comment">// First visible chartsheet.</span></div>
+</div><!-- fragment --><p>This function is not required very often. The default value is the first chartsheet.</p>
+<p>See also <code><a class="el" href="worksheet_8h.html#a463c8d3247f56e0ec191b148355f42f0" title="Set current worksheet as the first visible sheet tab. ">worksheet_set_first_sheet()</a></code>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a16d7a783d2b4ff43725d5e2b16c2eeef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chartsheet_protect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chartsheet.html">lxw_chartsheet</a> *&#160;</td>
+          <td class="paramname"><em>chartsheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>password</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__protection.html">lxw_protection</a> *&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chartsheet</td><td>Pointer to a <a class="el" href="structlxw__chartsheet.html" title="Struct to represent an Excel chartsheet. ">lxw_chartsheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">password</td><td>A chartsheet password. </td></tr>
+    <tr><td class="paramname">options</td><td>Chartsheet elements to protect.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>chartsheet_protect()</code> function protects chartsheet elements from modification:</p>
+<div class="fragment"><div class="line"><a class="code" href="chartsheet_8h.html#a16d7a783d2b4ff43725d5e2b16c2eeef">chartsheet_protect</a>(chartsheet, <span class="stringliteral">&quot;Some Password&quot;</span>, options);</div>
+</div><!-- fragment --><p>The <code>password</code> and <a class="el" href="structlxw__protection.html" title="Worksheet protection options. ">lxw_protection</a> pointer are both optional:</p>
+<div class="fragment"><div class="line"><a class="code" href="chartsheet_8h.html#a16d7a783d2b4ff43725d5e2b16c2eeef">chartsheet_protect</a>(chartsheet2, NULL,       my_options);</div>
+<div class="line"><a class="code" href="chartsheet_8h.html#a16d7a783d2b4ff43725d5e2b16c2eeef">chartsheet_protect</a>(chartsheet3, <span class="stringliteral">&quot;password&quot;</span>, NULL);</div>
+<div class="line"><a class="code" href="chartsheet_8h.html#a16d7a783d2b4ff43725d5e2b16c2eeef">chartsheet_protect</a>(chartsheet4, <span class="stringliteral">&quot;password&quot;</span>, my_options);</div>
+</div><!-- fragment --><p>Passing a <code>NULL</code> password is the same as turning on protection without a password. Passing a <code>NULL</code> password and <code>NULL</code> options had no effect on chartsheets.</p>
+<p>You can specify which chartsheet elements you wish to protect by passing a <a class="el" href="structlxw__protection.html" title="Worksheet protection options. ">lxw_protection</a> pointer in the <code>options</code> argument. In Excel chartsheets only have two protection options: </p><pre class="fragment">no_content
+no_objects
+</pre><p>All parameters are off by default. Individual elements can be protected as follows:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__protection.html">lxw_protection</a> options = {</div>
+<div class="line">    .<a class="code" href="structlxw__protection.html#afea5e584eb539965ee41d582a4dbab0d">no_content</a>  = 1,</div>
+<div class="line">    .no_objects  = 1,</div>
+<div class="line">};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chartsheet_8h.html#a16d7a783d2b4ff43725d5e2b16c2eeef">chartsheet_protect</a>(chartsheet, NULL, &amp;options);</div>
+</div><!-- fragment --><p>See also <a class="el" href="worksheet_8h.html#a1b49e135d4debcdb25941f2f40f04cb0" title="Protect elements of a worksheet from modification. ">worksheet_protect()</a>.</p>
+<p><b>Note:</b> Sheet level passwords in Excel offer <b>very</b> weak protection. They don't encrypt your data and are very easy to deactivate. Full workbook encryption is not supported by <code>libxlsxwriter</code> since it requires a completely different file format. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
