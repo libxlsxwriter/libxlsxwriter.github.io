@@ -99,5 +99,7 @@ var searchData=
   ['chartsheet_5fprotect',['chartsheet_protect',['../chartsheet_8h.html#a16d7a783d2b4ff43725d5e2b16c2eeef',1,'chartsheet.h']]],
   ['chartsheet_5fselect',['chartsheet_select',['../chartsheet_8h.html#a50e5acf866495f81e227bd99bc9f8e8b',1,'chartsheet.h']]],
   ['chartsheet_5fset_5fchart',['chartsheet_set_chart',['../chartsheet_8h.html#a1c2cc87b14539396de75cd59ab2a6031',1,'chartsheet.h']]],
-  ['chartsheet_5fset_5ffirst_5fsheet',['chartsheet_set_first_sheet',['../chartsheet_8h.html#a54addfc00908f1c910ab12024a1deb7f',1,'chartsheet.h']]]
+  ['chartsheet_5fset_5ffirst_5fsheet',['chartsheet_set_first_sheet',['../chartsheet_8h.html#a54addfc00908f1c910ab12024a1deb7f',1,'chartsheet.h']]],
+  ['chartsheet_5fset_5ftab_5fcolor',['chartsheet_set_tab_color',['../chartsheet_8h.html#ad4128360dead5256f6ccdb2430b6a19b',1,'chartsheet.h']]],
+  ['chartsheet_5fset_5fzoom',['chartsheet_set_zoom',['../chartsheet_8h.html#a8e65099f374b986329f10ea9bfdcbce9',1,'chartsheet.h']]]
 ];

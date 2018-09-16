@@ -132,9 +132,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a54addfc00908f1c910ab12024a1deb7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chartsheet_8h.html#a54addfc00908f1c910ab12024a1deb7f">chartsheet_set_first_sheet</a> (<a class="el" href="structlxw__chartsheet.html">lxw_chartsheet</a> *chartsheet)</td></tr>
 <tr class="memdesc:a54addfc00908f1c910ab12024a1deb7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current chartsheet as the first visible sheet tab.  <a href="#a54addfc00908f1c910ab12024a1deb7f">More...</a><br /></td></tr>
 <tr class="separator:a54addfc00908f1c910ab12024a1deb7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4128360dead5256f6ccdb2430b6a19b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chartsheet_8h.html#ad4128360dead5256f6ccdb2430b6a19b">chartsheet_set_tab_color</a> (<a class="el" href="structlxw__chartsheet.html">lxw_chartsheet</a> *chartsheet, <a class="el" href="format_8h.html#a422d719f90588b17d1399eaced80ae31">lxw_color_t</a> color)</td></tr>
+<tr class="memdesc:ad4128360dead5256f6ccdb2430b6a19b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the chartsheet tab.  <a href="#ad4128360dead5256f6ccdb2430b6a19b">More...</a><br /></td></tr>
+<tr class="separator:ad4128360dead5256f6ccdb2430b6a19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16d7a783d2b4ff43725d5e2b16c2eeef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chartsheet_8h.html#a16d7a783d2b4ff43725d5e2b16c2eeef">chartsheet_protect</a> (<a class="el" href="structlxw__chartsheet.html">lxw_chartsheet</a> *chartsheet, const char *password, <a class="el" href="structlxw__protection.html">lxw_protection</a> *options)</td></tr>
 <tr class="memdesc:a16d7a783d2b4ff43725d5e2b16c2eeef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protect elements of a chartsheet from modification.  <a href="#a16d7a783d2b4ff43725d5e2b16c2eeef">More...</a><br /></td></tr>
 <tr class="separator:a16d7a783d2b4ff43725d5e2b16c2eeef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e65099f374b986329f10ea9bfdcbce9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chartsheet_8h.html#a8e65099f374b986329f10ea9bfdcbce9">chartsheet_set_zoom</a> (<a class="el" href="structlxw__chartsheet.html">lxw_chartsheet</a> *chartsheet, uint16_t scale)</td></tr>
+<tr class="memdesc:a8e65099f374b986329f10ea9bfdcbce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the chartsheet zoom factor.  <a href="#a8e65099f374b986329f10ea9bfdcbce9">More...</a><br /></td></tr>
+<tr class="separator:a8e65099f374b986329f10ea9bfdcbce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a1c2cc87b14539396de75cd59ab2a6031"></a>
@@ -312,6 +318,45 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad4128360dead5256f6ccdb2430b6a19b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chartsheet_set_tab_color </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chartsheet.html">lxw_chartsheet</a> *&#160;</td>
+          <td class="paramname"><em>chartsheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="format_8h.html#a422d719f90588b17d1399eaced80ae31">lxw_color_t</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chartsheet</td><td>Pointer to a <a class="el" href="structlxw__chartsheet.html" title="Struct to represent an Excel chartsheet. ">lxw_chartsheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">color</td><td>The tab color.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>chartsheet_set_tab_color()</code> function is used to change the color of the chartsheet tab:</p>
+<div class="fragment"><div class="line"><a class="code" href="chartsheet_8h.html#ad4128360dead5256f6ccdb2430b6a19b">chartsheet_set_tab_color</a>(chartsheet1, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>);</div>
+<div class="line"><a class="code" href="chartsheet_8h.html#ad4128360dead5256f6ccdb2430b6a19b">chartsheet_set_tab_color</a>(chartsheet2, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38bae0b5c39ced3b8c871974f0e4917e4871">LXW_COLOR_GREEN</a>);</div>
+<div class="line"><a class="code" href="chartsheet_8h.html#ad4128360dead5256f6ccdb2430b6a19b">chartsheet_set_tab_color</a>(chartsheet3, 0xFF9900); <span class="comment">// Orange.</span></div>
+</div><!-- fragment --><p>The color should be an RGB integer value, see <a class="el" href="working_with_colors.html">Working with Colors</a>.</p>
+<p>See also <code><a class="el" href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0" title="Set the color of the worksheet tab. ">worksheet_set_tab_color()</a></code>. </p>
+
+</div>
+</div>
 <a class="anchor" id="a16d7a783d2b4ff43725d5e2b16c2eeef"></a>
 <div class="memitem">
 <div class="memproto">
@@ -367,6 +412,43 @@ no_objects
 <div class="line"><a class="code" href="chartsheet_8h.html#a16d7a783d2b4ff43725d5e2b16c2eeef">chartsheet_protect</a>(chartsheet, NULL, &amp;options);</div>
 </div><!-- fragment --><p>See also <a class="el" href="worksheet_8h.html#a1b49e135d4debcdb25941f2f40f04cb0" title="Protect elements of a worksheet from modification. ">worksheet_protect()</a>.</p>
 <p><b>Note:</b> Sheet level passwords in Excel offer <b>very</b> weak protection. They don't encrypt your data and are very easy to deactivate. Full workbook encryption is not supported by <code>libxlsxwriter</code> since it requires a completely different file format. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8e65099f374b986329f10ea9bfdcbce9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chartsheet_set_zoom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chartsheet.html">lxw_chartsheet</a> *&#160;</td>
+          <td class="paramname"><em>chartsheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chartsheet</td><td>Pointer to a <a class="el" href="structlxw__chartsheet.html" title="Struct to represent an Excel chartsheet. ">lxw_chartsheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">scale</td><td>Chartsheet zoom factor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the chartsheet zoom factor in the range <code>10 &lt;= zoom &lt;= 400</code>:</p>
+<div class="fragment"><div class="line"><a class="code" href="chartsheet_8h.html#a8e65099f374b986329f10ea9bfdcbce9">chartsheet_set_zoom</a>(chartsheet, 75);</div>
+</div><!-- fragment --><p>The default zoom factor is 100. It isn't possible to set the zoom to "Selection" because it is calculated by Excel at run-time.</p>
+<p>See also <code><a class="el" href="worksheet_8h.html#a38e16dc0a2e75d7ec99dca21fbeec89b" title="Set the worksheet zoom factor. ">worksheet_set_zoom()</a></code>. </p>
 
 </div>
 </div>
