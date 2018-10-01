@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: hyperlinks.c</title>
+<title>libxlsxwriter: merge_rich_string.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -76,19 +76,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">hyperlinks.c</div>  </div>
+<div class="title">merge_rich_string.c</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table  width="600">
 <tr>
-<td><a class="el" href="dates_and_times03_8c-example.html">&lt;&lt; dates_and_times03.c</a> </td><td align="right"><a class="el" href="rich_strings_8c-example.html">rich_strings.c &gt;&gt;</a>  </td></tr>
+<td><a class="el" href="merge_range_8c-example.html">&lt;&lt; merge_range.c</a> </td><td align="right"><a class="el" href="autofilter_8c-example.html">autofilter.c &gt;&gt;</a>  </td></tr>
 </table>
-<p>Example of writing urls/hyperlinks to a worksheet.</p>
+<p>Example of merging cells with a rich string in a worksheet.</p>
 <div class="image">
-<img src="hyperlinks.png" alt="hyperlinks.png"/>
+<img src="merge_rich.png" alt="merge_rich.png"/>
 </div>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Example of writing urls/hyperlinks with the libxlsxwriter library.</span></div>
+<div class="line"><span class="comment"> * An example of merging cells containing a rich string using libxlsxwriter.</span></div>
 <div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> * Copyright 2014-2018, John McNamara, jmcnamara@cpan.org</span></div>
 <div class="line"><span class="comment"> *</span></div>
@@ -98,47 +98,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Create a new workbook. */</span></div>
-<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a> *workbook   = <a name="a1"></a><a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;hyperlinks.xlsx&quot;</span>);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Add a worksheet. */</span></div>
+<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a name="a1"></a><a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;merge_rich_string.xlsx&quot;</span>);</div>
 <div class="line">    <a name="_a2"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a name="a3"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Add some cell formats for the hyperlinks. */</span></div>
-<div class="line">    <a name="_a4"></a><a class="code" href="structlxw__format.html">lxw_format</a> *url_format   = <a name="a5"></a><a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
-<div class="line">    <a class="code" href="structlxw__format.html">lxw_format</a> *red_format   = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line">    <span class="comment">/* Configure a format for the merged range. */</span></div>
+<div class="line">    <a name="_a4"></a><a class="code" href="structlxw__format.html">lxw_format</a> *merge_format = <a name="a5"></a><a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line">    <a name="a6"></a><a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>(merge_format, <a name="a7"></a><a class="code" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a9899936ef3a43721b394b9b5d2314496">LXW_ALIGN_CENTER</a>);</div>
+<div class="line">    <a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>(merge_format, <a name="a8"></a><a class="code" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5ae0a52569d3110521d3e9341809336063">LXW_ALIGN_VERTICAL_CENTER</a>);</div>
+<div class="line">    <a name="a9"></a><a class="code" href="format_8h.html#a9cf7a28a6e8014cb98dff27415e2b1ca">format_set_border</a>(merge_format, <a name="a10"></a><a class="code" href="format_8h.html#a4d5e924b1acd9571fd5e0fe2615e9f8fa7ca212fb42e5816bb81d7b96ff623082">LXW_BORDER_THIN</a>);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Create the standard url link format. */</span></div>
-<div class="line">    <a name="a6"></a><a class="code" href="format_8h.html#ad35ee5445826bd93ec1bc0d489fc09db">format_set_underline</a> (url_format, <a name="a7"></a><a class="code" href="format_8h.html#af530d7971d15c164f3fb6bbfede9a39fa76d5bdd1c57c126df937f0b003597e18">LXW_UNDERLINE_SINGLE</a>);</div>
-<div class="line">    <a name="a8"></a><a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(url_format, <a name="a9"></a><a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>);</div>
+<div class="line">    <span class="comment">/* Configure formats for the rich string. */</span></div>
+<div class="line">    <a class="code" href="structlxw__format.html">lxw_format</a> *red = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line">    <a name="a11"></a><a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(red, <a name="a12"></a><a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Create another sample format. */</span></div>
-<div class="line">    <a class="code" href="format_8h.html#ad35ee5445826bd93ec1bc0d489fc09db">format_set_underline</a> (red_format, <a class="code" href="format_8h.html#af530d7971d15c164f3fb6bbfede9a39fa76d5bdd1c57c126df937f0b003597e18">LXW_UNDERLINE_SINGLE</a>);</div>
-<div class="line">    <a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(red_format, <a name="a10"></a><a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>);</div>
+<div class="line">    <a class="code" href="structlxw__format.html">lxw_format</a> *blue = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line">    <a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(blue, <a name="a13"></a><a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Widen the first column to make the text clearer. */</span></div>
-<div class="line">    <a name="a11"></a><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 0, 0, 30, NULL);</div>
+<div class="line">    <span class="comment">/* Create the fragments for the rich string. */</span></div>
+<div class="line">    <a name="_a14"></a><a class="code" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a> fragment1 = {.<a name="a15"></a><a class="code" href="structlxw__rich__string__tuple.html#a331030005bc187f49a855a7ccb749052">format</a> = NULL, .string = <span class="stringliteral">&quot;This is &quot;</span>     };</div>
+<div class="line">    <a class="code" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a> fragment2 = {.<a class="code" href="structlxw__rich__string__tuple.html#a331030005bc187f49a855a7ccb749052">format</a> = red,  .string = <span class="stringliteral">&quot;red&quot;</span>          };</div>
+<div class="line">    <a class="code" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a> fragment3 = {.<a class="code" href="structlxw__rich__string__tuple.html#a331030005bc187f49a855a7ccb749052">format</a> = NULL, .string = <span class="stringliteral">&quot; and this is &quot;</span>};</div>
+<div class="line">    <a class="code" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a> fragment4 = {.<a class="code" href="structlxw__rich__string__tuple.html#a331030005bc187f49a855a7ccb749052">format</a> = blue, .string = <span class="stringliteral">&quot;blue&quot;</span>         };</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Write a hyperlink. */</span></div>
-<div class="line">    <a name="a12"></a><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet,    0, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, url_format);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Write a hyperlink but overwrite the displayed string. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>   (worksheet, 2, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, url_format);</div>
-<div class="line">    <a name="a13"></a><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 2, 0, <span class="stringliteral">&quot;Read the documentation.&quot;</span>,        url_format);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Write a hyperlink with a different format. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet,    4, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, red_format);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Write a mail hyperlink. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>   (worksheet, 6, 0, <span class="stringliteral">&quot;mailto:jmcnamara@cpan.org&quot;</span>,      url_format);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Write a mail hyperlink and overwrite the displayed string. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>   (worksheet, 8, 0, <span class="stringliteral">&quot;mailto:jmcnamara@cpan.org&quot;</span>,      url_format);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 8, 0, <span class="stringliteral">&quot;Drop me a line.&quot;</span>,                url_format);</div>
+<div class="line">    <a class="code" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a> *rich_string[] = {&amp;fragment1, &amp;fragment2,</div>
+<div class="line">                                            &amp;fragment3, &amp;fragment4, NULL};</div>
 <div class="line"></div>
 <div class="line"></div>
-<div class="line">    <span class="comment">/* Close the workbook, save the file and free any memory. */</span></div>
-<div class="line">    <a name="a14"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="comment">/* Write an empty string to the merged range. */</span></div>
+<div class="line">    <a name="a16"></a><a class="code" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225">worksheet_merge_range</a>(worksheet, 1, 1, 4, 3, <span class="stringliteral">&quot;&quot;</span>, merge_format);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* We then overwrite the first merged cell with a rich string. Note that</span></div>
+<div class="line"><span class="comment">     * we must also pass the cell format used in the merged cells format at</span></div>
+<div class="line"><span class="comment">     * the end. */</span></div>
+<div class="line">    <a name="a17"></a><a class="code" href="worksheet_8h.html#a62bf44845ce9dcc505bf228999db5afa">worksheet_write_rich_string</a>(worksheet, 1, 1, rich_string, merge_format);</div>
+<div class="line"></div>
+<div class="line">    <a name="a18"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>

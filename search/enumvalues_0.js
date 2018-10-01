@@ -213,6 +213,7 @@ var searchData=
   ['lxw_5ferror_5fmemory_5fmalloc_5ffailed',['LXW_ERROR_MEMORY_MALLOC_FAILED',['../common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ae094726a5a4b9ab64fcaa5ef9fc44ec3',1,'common.h']]],
   ['lxw_5ferror_5fnull_5fparameter_5fignored',['LXW_ERROR_NULL_PARAMETER_IGNORED',['../common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6afcf00a9c84192235d8f1358890cb3d2d',1,'common.h']]],
   ['lxw_5ferror_5fparameter_5fvalidation',['LXW_ERROR_PARAMETER_VALIDATION',['../common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ac30d804f94b82c867c50e6ade6ac0960',1,'common.h']]],
+  ['lxw_5ferror_5freading_5ftmpfile',['LXW_ERROR_READING_TMPFILE',['../common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a68bddd53bb45c046cd71920d269e14ee',1,'common.h']]],
   ['lxw_5ferror_5fshared_5fstring_5findex_5fnot_5ffound',['LXW_ERROR_SHARED_STRING_INDEX_NOT_FOUND',['../common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a650b6fc844176071127cf8f7bab96c20',1,'common.h']]],
   ['lxw_5ferror_5fsheetname_5falready_5fused',['LXW_ERROR_SHEETNAME_ALREADY_USED',['../common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6aec1c79cef390d15fa0fdbe773db5291b',1,'common.h']]],
   ['lxw_5ferror_5fsheetname_5flength_5fexceeded',['LXW_ERROR_SHEETNAME_LENGTH_EXCEEDED',['../common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a1a17b30af2288b65ed50aef44e4edec2',1,'common.h']]],

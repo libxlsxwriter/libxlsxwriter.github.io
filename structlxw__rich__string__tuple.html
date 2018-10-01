@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: lxw_format Struct Reference</title>
+<title>libxlsxwriter: lxw_rich_string_tuple Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,28 +75,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">lxw_format Struct Reference</div>  </div>
+<div class="title">lxw_rich_string_tuple Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Struct to represent the formatting properties of an Excel format.  
- <a href="structlxw__format.html#details">More...</a></p>
+<p>Struct to represent a rich string format/string pair.  
+ <a href="structlxw__rich__string__tuple.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Formats in <code>libxlsxwriter</code> are accessed via this struct.</p>
-<p>The members of the <a class="el" href="structlxw__format.html" title="Struct to represent the formatting properties of an Excel format. ">lxw_format</a> struct aren't modified directly. Instead the format properties are set by calling the functions shown in <a class="el" href="format_8h.html" title="Functions and properties for adding formatting to cells in Excel. ">format.h</a>.</p>
-<p>For example:</p>
-<div class="fragment"><div class="line"><span class="comment">// Create the Format.</span></div>
-<div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
-<div class="line"></div>
-<div class="line"><span class="comment">// Set some of the format properties.</span></div>
-<div class="line"><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(format);</div>
-<div class="line"><a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(format, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>);</div>
-<div class="line"></div>
-<div class="line"><span class="comment">// Use the format to change the text format in a cell.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, format);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#_a4">anatomy.c</a>, <a class="el" href="chart_area_8c-example.html#_a1">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#_a1">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#_a1">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#_a1">chart_column.c</a>, <a class="el" href="chart_data_table_8c-example.html#_a1">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#_a1">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#_a1">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#_a1">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#_a4">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#_a1">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#_a1">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#_a1">chart_scatter.c</a>, <a class="el" href="chartsheet_8c-example.html#_a1">chartsheet.c</a>, <a class="el" href="data_validate_8c-example.html#_a1">data_validate.c</a>, <a class="el" href="dates_and_times01_8c-example.html#_a4">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#_a5">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#_a5">dates_and_times03.c</a>, <a class="el" href="demo_8c-example.html#_a4">demo.c</a>, <a class="el" href="format_font_8c-example.html#_a5">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#_a5">format_num_format.c</a>, <a class="el" href="hyperlinks_8c-example.html#_a4">hyperlinks.c</a>, <a class="el" href="merge_range_8c-example.html#_a4">merge_range.c</a>, <a class="el" href="merge_rich_string_8c-example.html#_a4">merge_rich_string.c</a>, <a class="el" href="outline_8c-example.html#_a4">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#_a1">outline_collapsed.c</a>, <a class="el" href="panes_8c-example.html#_a4">panes.c</a>, <a class="el" href="rich_strings_8c-example.html#_a4">rich_strings.c</a>, <a class="el" href="tutorial2_8c-example.html#_a4">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#_a6">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#_a4">worksheet_protection.c</a>.</dd>
-</dl></div></div><!-- contents -->
+<div class="textblock"><p>Arrays of this struct are used to define "rich" multi-format strings that are passed to <code><a class="el" href="worksheet_8h.html#a62bf44845ce9dcc505bf228999db5afa" title="Write a &quot;Rich&quot; multi-format string to a worksheet cell. ">worksheet_write_rich_string()</a></code>. Each struct represents a fragment of the rich multi-format string with a <a class="el" href="structlxw__format.html" title="Struct to represent the formatting properties of an Excel format. ">lxw_format</a> to define the format for the string part. If the string fragment is unformatted then <code>NULL</code> can be used for the format. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="merge_rich_string_8c-example.html#_a14">merge_rich_string.c</a>, and <a class="el" href="rich_strings_8c-example.html#_a16">rich_strings.c</a>.</dd>
+</dl></div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a331030005bc187f49a855a7ccb749052"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__format.html">lxw_format</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__rich__string__tuple.html#a331030005bc187f49a855a7ccb749052">format</a></td></tr>
+<tr class="separator:a331030005bc187f49a855a7ccb749052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa25653560242b076014a88622ebbc847"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__rich__string__tuple.html#aa25653560242b076014a88622ebbc847">string</a></td></tr>
+<tr class="separator:aa25653560242b076014a88622ebbc847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Field Documentation</h2>
+<a class="anchor" id="a331030005bc187f49a855a7ccb749052"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlxw__format.html">lxw_format</a>* lxw_rich_string_tuple::format</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The format for a string fragment in a rich string. NULL if the string isn't formatted. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="merge_rich_string_8c-example.html#a15">merge_rich_string.c</a>, and <a class="el" href="rich_strings_8c-example.html#a17">rich_strings.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aa25653560242b076014a88622ebbc847"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* lxw_rich_string_tuple::string</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The string fragment. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

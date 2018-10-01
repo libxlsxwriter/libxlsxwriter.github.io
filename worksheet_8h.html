@@ -137,6 +137,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af474c01f7ec8ac1a01206c9c4a5867af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#af474c01f7ec8ac1a01206c9c4a5867af">worksheet_write_formula_num</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *formula, <a class="el" href="structlxw__format.html">lxw_format</a> *format, double result)</td></tr>
 <tr class="memdesc:af474c01f7ec8ac1a01206c9c4a5867af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formula to a worksheet cell with a user defined result.  <a href="#af474c01f7ec8ac1a01206c9c4a5867af">More...</a><br /></td></tr>
 <tr class="separator:af474c01f7ec8ac1a01206c9c4a5867af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62bf44845ce9dcc505bf228999db5afa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a62bf44845ce9dcc505bf228999db5afa">worksheet_write_rich_string</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, <a class="el" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a> *rich_string[], <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:a62bf44845ce9dcc505bf228999db5afa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a "Rich" multi-format string to a worksheet cell.  <a href="#a62bf44845ce9dcc505bf228999db5afa">More...</a><br /></td></tr>
+<tr class="separator:a62bf44845ce9dcc505bf228999db5afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9b7fb95e1bd9b0da70befd0d37a9173"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, double height, <a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
 <tr class="memdesc:ab9b7fb95e1bd9b0da70befd0d37a9173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the properties for a row of cells.  <a href="#ab9b7fb95e1bd9b0da70befd0d37a9173">More...</a><br /></td></tr>
 <tr class="separator:ab9b7fb95e1bd9b0da70befd0d37a9173"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -950,6 +953,94 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a62bf44845ce9dcc505bf228999db5afa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_write_rich_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a> *&#160;</td>
+          <td class="paramname"><em>rich_string</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__format.html">lxw_format</a> *&#160;</td>
+          <td class="paramname"><em>format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
+    <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
+    <tr><td class="paramname">rich_string</td><td>An array of format/string <a class="el" href="structlxw__rich__string__tuple.html" title="Struct to represent a rich string format/string pair. ">lxw_rich_string_tuple</a> fragments. </td></tr>
+    <tr><td class="paramname">format</td><td>A pointer to a Format instance or NULL.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
+<p>The <code>worksheet_write_rich_string()</code> function is used to write strings with multiple formats. For example to write the string 'This is <b>bold</b> and this is <em>italic</em>' you would use the following:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *bold = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line"><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(bold);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *italic = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line"><a class="code" href="format_8h.html#a19cbd7c34692eb7fb35a7411432d836e">format_set_italic</a>(italic);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a> fragment11 = {.<a class="code" href="structlxw__rich__string__tuple.html#a331030005bc187f49a855a7ccb749052">format</a> = NULL,   .string = <span class="stringliteral">&quot;This is &quot;</span>     };</div>
+<div class="line"><a class="code" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a> fragment12 = {.<a class="code" href="structlxw__rich__string__tuple.html#a331030005bc187f49a855a7ccb749052">format</a> = bold,   .string = <span class="stringliteral">&quot;bold&quot;</span>         };</div>
+<div class="line"><a class="code" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a> fragment13 = {.<a class="code" href="structlxw__rich__string__tuple.html#a331030005bc187f49a855a7ccb749052">format</a> = NULL,   .string = <span class="stringliteral">&quot; and this is &quot;</span>};</div>
+<div class="line"><a class="code" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a> fragment14 = {.<a class="code" href="structlxw__rich__string__tuple.html#a331030005bc187f49a855a7ccb749052">format</a> = italic, .string = <span class="stringliteral">&quot;italic&quot;</span>       };</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a> *rich_string1[] = {&amp;fragment11, &amp;fragment12,</div>
+<div class="line">                                         &amp;fragment13, &amp;fragment14, NULL};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a62bf44845ce9dcc505bf228999db5afa">worksheet_write_rich_string</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;A1&quot;</span>), rich_string1, NULL);</div>
+</div><!-- fragment --><div class="image">
+<img src="rich_strings_small.png" alt="rich_strings_small.png"/>
+</div>
+<p>The basic rule is to break the string into fragments and put a <a class="el" href="structlxw__format.html" title="Struct to represent the formatting properties of an Excel format. ">lxw_format</a> object before the fragment that you want to format. So if we look at the above example again:</p>
+<p>This is <b>bold</b> and this is <em>italic</em></p>
+<p>The would be broken down into 4 fragments: </p><pre class="fragment"> default: |This is |
+ bold:    |bold|
+ default: | and this is |
+ italic:  |italic|
+</pre><p>This in then converted to the <a class="el" href="structlxw__rich__string__tuple.html" title="Struct to represent a rich string format/string pair. ">lxw_rich_string_tuple</a> fragments shown in the example above. For the default format we use <code>NULL</code>.</p>
+<p>The fragments are passed to <code>worksheet_write_rich_string()</code> as a <code>NULL</code> terminated array:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a> *rich_string1[] = {&amp;fragment11, &amp;fragment12,</div>
+<div class="line">                                         &amp;fragment13, &amp;fragment14, NULL};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a62bf44845ce9dcc505bf228999db5afa">worksheet_write_rich_string</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;A1&quot;</span>), rich_string1, NULL);</div>
+</div><!-- fragment --><p><b>Note</b>: Excel doesn't allow the use of two consecutive formats in a rich string or an empty string fragment. For either of these conditions a warning is raised and the input to <code>worksheet_write_rich_string()</code> is ignored. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="merge_rich_string_8c-example.html#a17">merge_rich_string.c</a>, and <a class="el" href="rich_strings_8c-example.html#a18">rich_strings.c</a>.</dd>
+</dl>
+</div>
+</div>
 <a class="anchor" id="ab9b7fb95e1bd9b0da70befd0d37a9173"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1204,7 +1295,7 @@ Functions</h2></td></tr>
 <div class="line"></div>
 <div class="line"><span class="comment">// Cell A2 keeps format2, the column format.</span></div>
 <div class="line"> <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 1, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="data_validate_8c-example.html#a18">data_validate.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a9">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a7">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="hide_sheet_8c-example.html#a6">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a11">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a4">images.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, <a class="el" href="outline_8c-example.html#a9">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a2">outline_collapsed.c</a>, <a class="el" href="panes_8c-example.html#a14">panes.c</a>, <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a8">worksheet_protection.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="data_validate_8c-example.html#a18">data_validate.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a9">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a7">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="hide_sheet_8c-example.html#a6">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a11">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a4">images.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, <a class="el" href="outline_8c-example.html#a9">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a2">outline_collapsed.c</a>, <a class="el" href="panes_8c-example.html#a14">panes.c</a>, <a class="el" href="rich_strings_8c-example.html#a15">rich_strings.c</a>, <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a8">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1766,7 +1857,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="comment">// Then overwrite the first cell with a number.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 1, 1, 123, format);</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Merged ranges generally don’t work in libxlsxwriter when the Workbook <a class="el" href="structlxw__workbook__options.html" title="Workbook options. ">lxw_workbook_options</a> <code>constant_memory</code> mode is enabled. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="merge_range_8c-example.html#a16">merge_range.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="merge_range_8c-example.html#a16">merge_range.c</a>, and <a class="el" href="merge_rich_string_8c-example.html#a16">merge_rich_string.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2581,54 +2672,54 @@ Functions</h2></td></tr>
 <p>For example (with ASCII art representation of the results):</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;LHello&quot;</span>);</div>
 <div class="line"></div>
-<div class="line"> ---------------------------------------------------------------</div>
-<div class="line">|                                                               |</div>
-<div class="line">| Hello                                                         |</div>
-<div class="line">|                                                               |</div>
+<div class="line"><span class="comment">//     ---------------------------------------------------------------</span></div>
+<div class="line"><span class="comment">//    |                                                               |</span></div>
+<div class="line"><span class="comment">//    | Hello                                                         |</span></div>
+<div class="line"><span class="comment">//    |                                                               |</span></div>
 <div class="line"></div>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;CHello&quot;</span>);</div>
 <div class="line"></div>
-<div class="line"> ---------------------------------------------------------------</div>
-<div class="line">|                                                               |</div>
-<div class="line">|                          Hello                                |</div>
-<div class="line">|                                                               |</div>
+<div class="line"><span class="comment">//     ---------------------------------------------------------------</span></div>
+<div class="line"><span class="comment">//    |                                                               |</span></div>
+<div class="line"><span class="comment">//    |                          Hello                                |</span></div>
+<div class="line"><span class="comment">//    |                                                               |</span></div>
 <div class="line"></div>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;RHello&quot;</span>);</div>
 <div class="line"></div>
-<div class="line"> ---------------------------------------------------------------</div>
-<div class="line">|                                                               |</div>
-<div class="line">|                                                         Hello |</div>
-<div class="line">|                                                               |</div>
+<div class="line"><span class="comment">//     ---------------------------------------------------------------</span></div>
+<div class="line"><span class="comment">//    |                                                               |</span></div>
+<div class="line"><span class="comment">//    |                                                         Hello |</span></div>
+<div class="line"><span class="comment">//    |                                                               |</span></div>
 </div><!-- fragment --><p>For simple text, if you do not specify any justification the text will be centered. However, you must prefix the text with <code>&amp;C</code> if you specify a font name or any other formatting:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;Hello&quot;</span>);</div>
 <div class="line"></div>
-<div class="line"> ---------------------------------------------------------------</div>
-<div class="line">|                                                               |</div>
-<div class="line">|                          Hello                                |</div>
-<div class="line">|                                                               |</div>
+<div class="line"><span class="comment">//     ---------------------------------------------------------------</span></div>
+<div class="line"><span class="comment">//    |                                                               |</span></div>
+<div class="line"><span class="comment">//    |                          Hello                                |</span></div>
+<div class="line"><span class="comment">//    |                                                               |</span></div>
 </div><!-- fragment --><p>You can have text in each of the justification regions:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;LCiao&amp;CBello&amp;RCielo&quot;</span>);</div>
 <div class="line"></div>
-<div class="line"> ---------------------------------------------------------------</div>
-<div class="line">|                                                               |</div>
-<div class="line">| Ciao                     Bello                          Cielo |</div>
-<div class="line">|                                                               |</div>
+<div class="line"><span class="comment">//     ---------------------------------------------------------------</span></div>
+<div class="line"><span class="comment">//    |                                                               |</span></div>
+<div class="line"><span class="comment">//    | Ciao                     Bello                          Cielo |</span></div>
+<div class="line"><span class="comment">//    |                                                               |</span></div>
 </div><!-- fragment --><p>The information control characters act as variables that Excel will update as the workbook or worksheet changes. Times and dates are in the users default format:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;CPage &amp;P of &amp;N&quot;</span>);</div>
 <div class="line"></div>
-<div class="line"> ---------------------------------------------------------------</div>
-<div class="line">|                                                               |</div>
-<div class="line">|                        Page 1 of 6                            |</div>
-<div class="line">|                                                               |</div>
+<div class="line"><span class="comment">//     ---------------------------------------------------------------</span></div>
+<div class="line"><span class="comment">//    |                                                               |</span></div>
+<div class="line"><span class="comment">//    |                        Page 1 of 6                            |</span></div>
+<div class="line"><span class="comment">//    |                                                               |</span></div>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;CUpdated at &amp;T&quot;</span>);</div>
 <div class="line"></div>
-<div class="line"> ---------------------------------------------------------------</div>
-<div class="line">|                                                               |</div>
-<div class="line">|                    Updated at 12:30 PM                        |</div>
-<div class="line">|                                                               |</div>
+<div class="line"><span class="comment">//     ---------------------------------------------------------------</span></div>
+<div class="line"><span class="comment">//    |                                                               |</span></div>
+<div class="line"><span class="comment">//    |                    Updated at 12:30 PM                        |</span></div>
+<div class="line"><span class="comment">//    |                                                               |</span></div>
 </div><!-- fragment --><p>You can specify the font size of a section of the text by prefixing it with the control character <code>&amp;n</code> where <code>n</code> is the font size:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet1, <span class="stringliteral">&quot;&amp;C&amp;30Hello Big&quot;</span>);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet2, <span class="stringliteral">&quot;&amp;C&amp;10Hello Small&quot;</span>);</div>
@@ -3657,6 +3748,19 @@ objects
 
 </div>
 </div>
+<a class="anchor" id="af7ccea40eda05454bd859f1210c751a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a>  <a class="el" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Arrays of this struct are used to define "rich" multi-format strings that are passed to <code><a class="el" href="worksheet_8h.html#a62bf44845ce9dcc505bf228999db5afa" title="Write a &quot;Rich&quot; multi-format string to a worksheet cell. ">worksheet_write_rich_string()</a></code>. Each struct represents a fragment of the rich multi-format string with a <a class="el" href="structlxw__format.html" title="Struct to represent the formatting properties of an Excel format. ">lxw_format</a> to define the format for the string part. If the string fragment is unformatted then <code>NULL</code> can be used for the format. </p>
+
+</div>
+</div>
 <a class="anchor" id="a356e12f6f1c3f94b8de98dc99ef78b86"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3885,6 +3989,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__protection.html">lxw_protection</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Worksheet protection options.  <a href="structlxw__protection.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent a rich string format/string pair.  <a href="structlxw__rich__string__tuple.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel worksheet.  <a href="structlxw__worksheet.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3909,6 +4016,10 @@ typedef struct <a class="el" href="structlxw__data__validation.html">lxw_data_va
 typedef struct <a class="el" href="structlxw__protection.html">lxw_protection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ac2c4abcbfd4c21aa6af812e28044f2d1">lxw_protection</a></td></tr>
 <tr class="memdesc:ac2c4abcbfd4c21aa6af812e28044f2d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Worksheet protection options. <br /></td></tr>
 <tr class="separator:ac2c4abcbfd4c21aa6af812e28044f2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7ccea40eda05454bd859f1210c751a3"><td class="memItemLeft" align="right" valign="top">typedef struct <br class="typebreak" />
+<a class="el" href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#af7ccea40eda05454bd859f1210c751a3">lxw_rich_string_tuple</a></td></tr>
+<tr class="memdesc:af7ccea40eda05454bd859f1210c751a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent a rich string format/string pair.  <a href="#af7ccea40eda05454bd859f1210c751a3">More...</a><br /></td></tr>
+<tr class="separator:af7ccea40eda05454bd859f1210c751a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a356e12f6f1c3f94b8de98dc99ef78b86"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__worksheet.html">lxw_worksheet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a356e12f6f1c3f94b8de98dc99ef78b86">lxw_worksheet</a></td></tr>
 <tr class="memdesc:a356e12f6f1c3f94b8de98dc99ef78b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel worksheet.  <a href="#a356e12f6f1c3f94b8de98dc99ef78b86">More...</a><br /></td></tr>
 <tr class="separator:a356e12f6f1c3f94b8de98dc99ef78b86"><td class="memSeparator" colspan="2">&#160;</td></tr>

@@ -84,6 +84,7 @@ var searchData=
   ['worksheet_5fwrite_5fformula',['worksheet_write_formula',['../worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb',1,'worksheet.h']]],
   ['worksheet_5fwrite_5fformula_5fnum',['worksheet_write_formula_num',['../worksheet_8h.html#af474c01f7ec8ac1a01206c9c4a5867af',1,'worksheet.h']]],
   ['worksheet_5fwrite_5fnumber',['worksheet_write_number',['../worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289',1,'worksheet.h']]],
+  ['worksheet_5fwrite_5frich_5fstring',['worksheet_write_rich_string',['../worksheet_8h.html#a62bf44845ce9dcc505bf228999db5afa',1,'worksheet.h']]],
   ['worksheet_5fwrite_5fstring',['worksheet_write_string',['../worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31',1,'worksheet.h']]],
   ['worksheet_5fwrite_5furl',['worksheet_write_url',['../worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1',1,'worksheet.h']]]
 ];

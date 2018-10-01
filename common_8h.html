@@ -192,6 +192,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6ac3646aa2a376f2bb4ac73189485cdb87"></a>LXW_ERROR_CREATING_TMPFILE&#160;</td><td class="fielddoc">
 <p>Error encountered when creating a tmpfile during file assembly. </p>
 </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6a68bddd53bb45c046cd71920d269e14ee"></a>LXW_ERROR_READING_TMPFILE&#160;</td><td class="fielddoc">
+<p>Error reading a tmpfile. </p>
+</td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a04b59aa3c578bc75f88ac16a979c5fe6a10f7b1612ddf55f931863430a31b78d1"></a>LXW_ERROR_ZIP_FILE_OPERATION&#160;</td><td class="fielddoc">
 <p>Zlib error with a file operation while creating xlsx file. </p>
 </td></tr>
@@ -276,25 +279,27 @@ Enumerations</h2></td></tr>
 <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a47dbfec9963f3c0f5f8a22de6d707a78">LXW_ERROR_CREATING_XLSX_FILE</a>, 
 <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ac3646aa2a376f2bb4ac73189485cdb87">LXW_ERROR_CREATING_TMPFILE</a>, 
 <br />
-&#160;&#160;<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a10f7b1612ddf55f931863430a31b78d1">LXW_ERROR_ZIP_FILE_OPERATION</a>, 
+&#160;&#160;<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a68bddd53bb45c046cd71920d269e14ee">LXW_ERROR_READING_TMPFILE</a>, 
+<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a10f7b1612ddf55f931863430a31b78d1">LXW_ERROR_ZIP_FILE_OPERATION</a>, 
 <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a72140ec5ad9439c4242c3b30a346dbc1">LXW_ERROR_ZIP_FILE_ADD</a>, 
 <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ad1b6597961ceac45e001a507726f7473">LXW_ERROR_ZIP_CLOSE</a>, 
-<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6afcf00a9c84192235d8f1358890cb3d2d">LXW_ERROR_NULL_PARAMETER_IGNORED</a>, 
 <br />
-&#160;&#160;<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ac30d804f94b82c867c50e6ade6ac0960">LXW_ERROR_PARAMETER_VALIDATION</a>, 
+&#160;&#160;<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6afcf00a9c84192235d8f1358890cb3d2d">LXW_ERROR_NULL_PARAMETER_IGNORED</a>, 
+<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ac30d804f94b82c867c50e6ade6ac0960">LXW_ERROR_PARAMETER_VALIDATION</a>, 
 <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a1a17b30af2288b65ed50aef44e4edec2">LXW_ERROR_SHEETNAME_LENGTH_EXCEEDED</a>, 
 <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a759ce2a4901534ec456c432671ee788c">LXW_ERROR_INVALID_SHEETNAME_CHARACTER</a>, 
-<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6aec1c79cef390d15fa0fdbe773db5291b">LXW_ERROR_SHEETNAME_ALREADY_USED</a>, 
 <br />
-&#160;&#160;<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ac1bbb8fce2387e0762162afb1f50273c">LXW_ERROR_32_STRING_LENGTH_EXCEEDED</a>, 
+&#160;&#160;<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6aec1c79cef390d15fa0fdbe773db5291b">LXW_ERROR_SHEETNAME_ALREADY_USED</a>, 
+<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ac1bbb8fce2387e0762162afb1f50273c">LXW_ERROR_32_STRING_LENGTH_EXCEEDED</a>, 
 <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6aaf9170a804e606facc80fef4ce968c69">LXW_ERROR_128_STRING_LENGTH_EXCEEDED</a>, 
 <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a2d78ce1e2f5f263a92f76d9d4b6720ca">LXW_ERROR_255_STRING_LENGTH_EXCEEDED</a>, 
-<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6af0920185d94c6195fcfe0f2d0957c555">LXW_ERROR_MAX_STRING_LENGTH_EXCEEDED</a>, 
 <br />
-&#160;&#160;<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a650b6fc844176071127cf8f7bab96c20">LXW_ERROR_SHARED_STRING_INDEX_NOT_FOUND</a>, 
+&#160;&#160;<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6af0920185d94c6195fcfe0f2d0957c555">LXW_ERROR_MAX_STRING_LENGTH_EXCEEDED</a>, 
+<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a650b6fc844176071127cf8f7bab96c20">LXW_ERROR_SHARED_STRING_INDEX_NOT_FOUND</a>, 
 <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ab0ad31e8aa8a58e9371f18d217d72204">LXW_ERROR_WORKSHEET_INDEX_OUT_OF_RANGE</a>, 
 <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a574ead0537d6ffc255d1e6fe121527c4">LXW_ERROR_WORKSHEET_MAX_NUMBER_URLS_EXCEEDED</a>, 
-<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a2c9fe90ef672e00fcd3534e01ff4a8a8">LXW_ERROR_IMAGE_DIMENSIONS</a>
+<br />
+&#160;&#160;<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a2c9fe90ef672e00fcd3534e01ff4a8a8">LXW_ERROR_IMAGE_DIMENSIONS</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a04b59aa3c578bc75f88ac16a979c5fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error codes from libxlsxwriter functions.  <a href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">More...</a><br /></td></tr>
