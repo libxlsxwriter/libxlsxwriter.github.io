@@ -615,7 +615,7 @@ Functions</h2></td></tr>
 </dl>
 <p>This function is similar to <a class="el" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c" title="Set the number format for a cell. ">format_set_num_format()</a> except that it takes an index to a limited number of Excel's built-in number formats instead of a user defined format string:</p>
 <div class="fragment"><div class="line">format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
-<div class="line"><a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format, 0x0F);     <span class="comment">// d-mmm-yy</span></div>
+<div class="line"><a class="code" href="format_8h.html#a688aa42bcc703d17e125d9a34c721872">format_set_num_format_index</a>(format, 0x0F); <span class="comment">// d-mmm-yy</span></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Unless you need to specifically access one of Excel's built-in number formats the <a class="el" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c" title="Set the number format for a cell. ">format_set_num_format()</a> function above is a better solution. The <a class="el" href="format_8h.html#a688aa42bcc703d17e125d9a34c721872" title="Set the Excel built-in number format for a cell. ">format_set_num_format_index()</a> function is mainly included for backward compatibility and completeness.</dd></dl>
 <p>The Excel built-in number formats as shown in the table below:</p>
 <table class="doxtable">
