@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li><p class="startli"><code>constant_memory</code>: Reduces the amount of data stored in memory so that large files can be written efficiently.</p>
 <dl class="section note"><dt>Note</dt><dd>In this mode a row of data is written and then discarded when a cell in a new row is added via one of the <code>worksheet_write_*()</code> functions. Therefore, once this option is active, data should be written in sequential row order. For this reason the <code><a class="el" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225" title="Merge a range of cells. ">worksheet_merge_range()</a></code> doesn't work in this mode. See also <a class="el" href="working_with_memory.html#ww_mem_constant">Constant Memory Mode</a>.</dd></dl>
 </li>
-<li><code>tmpdir</code>: libxlsxwriter stores workbook data in temporary files prior to assembling the final XLSX file. The temporary files are created in the system's temp directory. If the default temporary directory isn't accessible to your application, or doesn't contain enough space, you can specify an alternative location using the <code>tempdir</code> option. </li>
+<li><code>tmpdir</code>: libxlsxwriter stores workbook data in temporary files prior to assembling the final XLSX file. The temporary files are created in the system's temp directory. If the default temporary directory isn't accessible to your application, or doesn't contain enough space, you can specify an alternative location using the <code>tmpdir</code> option. </li>
 </ul>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="constant_memory_8c-example.html#_a0">constant_memory.c</a>.</dd>
 </dl></div><table class="memberdecls">
