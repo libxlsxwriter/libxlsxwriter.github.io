@@ -79,7 +79,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Changes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>0.8.5 February 10 2019</h2>
+<div class="textblock"><h2>0.8.6 April 7 2019</h2>
+<ul>
+<li>Fixed issue where images that started in hidden rows/columns weren't placed correctly in the worksheet.</li>
+<li>Fixed the mime-type reported by system <code>file(1)</code>. The mime-type reported by "file --mime-type"/magic was incorrect for XlsxWriter files since it expected the <code>[Content_types]</code> to be the first file in the zip container.</li>
+</ul>
+<h2>0.8.5 February 10 2019</h2>
 <ul>
 <li>Fix compile-time warnings with strict prototypes enabled. Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/208">#208</a>.</li>
 <li>Make py.test name configurable. Pull request <a href="https://github.com/jmcnamara/libxlsxwriter/pull/206">#206</a>.</li>
