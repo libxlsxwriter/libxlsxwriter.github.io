@@ -102,7 +102,8 @@ Constant Memory Mode</h1>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Set the worksheet options. */</span></div>
 <div class="line">    <a class="code" href="structlxw__workbook__options.html">lxw_workbook_options</a> options = {.<a class="code" href="structlxw__workbook__options.html#aa03636857813ca881bdd09e07bcbe738">constant_memory</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>,</div>
-<div class="line">                                    .tmpdir = NULL};</div>
+<div class="line">                                    .tmpdir = NULL,</div>
+<div class="line">                                    .use_zip64 = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>};</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Create a new workbook with options. */</span></div>
 <div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323">workbook_new_opt</a>(<span class="stringliteral">&quot;constant_memory.xlsx&quot;</span>, &amp;options);</div>
@@ -140,7 +141,7 @@ strings" and instead are written "in-line". This is a documented Excel feature t
 <h1><a class="anchor" id="ww_mem_performance"></a>
 Performance</h1>
 <p>Currently the library isn't highly optimized. Also, the library is currently single threaded.</p>
-<p>Next: <a class="el" href="examples.html">Example Programs</a> </p>
+<p>Next: <a class="el" href="working_with_macros.html">Working with VBA Macros</a> </p>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->

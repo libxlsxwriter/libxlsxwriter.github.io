@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: Creating Excel files with C and libxlsxwriter</title>
+<title>libxlsxwriter: macro.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,7 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Contents</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
@@ -76,68 +76,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Creating Excel files with C and libxlsxwriter </div>  </div>
+<div class="title">macro.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><b>Libxlsxwriter</b> is a C library for creating Excel XLSX files.</p>
+<table  width="600">
+<tr>
+<td><a class="el" href="worksheet_protection_8c-example.html">&lt;&lt; worksheet_protection.c</a> </td><td align="right"><a class="el" href="hide_row_col_8c-example.html">hide_row_col.c &gt;&gt;</a>  </td></tr>
+</table>
+<p>Example adding a VBA macro to a workbook.</p>
 <div class="image">
-<img src="demo.png" alt="demo.png"/>
+<img src="macros.png" alt="macros.png"/>
 </div>
-<p><a class="el" href="demo_8c-example.html">(Sample code to create the above spreadsheet.)</a></p>
-<h1><a class="anchor" id="mainpage_intro"></a>
-libxlsxwriter</h1>
-<p>Libxlsxwriter is a C library that can be used to write text, numbers, formulas and hyperlinks to multiple worksheets in an Excel 2007+ XLSX file. It supports features such as:</p>
-<ul>
-<li>100% compatible Excel XLSX files.</li>
-<li>Full Excel formatting.</li>
-<li>Merged cells.</li>
-<li>Defined names.</li>
-<li>Autofilters.</li>
-<li>Charts.</li>
-<li>Data validation and drop down lists.</li>
-<li>Worksheet PNG/JPEG images.</li>
-<li>Support for adding Macros.</li>
-<li>Memory optimization mode for writing large files.</li>
-<li>Source code available on <a href="https://github.com/jmcnamara/libxlsxwriter">GitHub</a>.</li>
-<li>FreeBSD <a class="el" href="license.html">License</a>.</li>
-<li>ANSI C.</li>
-<li>Works with GCC, Clang, Xcode, MSVC 2015, ICC, TCC, MinGW, MingGW-w64/32.</li>
-<li>Works on Linux, FreeBSD, OpenBSD, OS X, iOS and Windows. Also works on MSYS/MSYS2 and Cygwin.</li>
-<li>Compiles for 32 and 64 bit.</li>
-<li>Compiles and works on big and little endian systems.</li>
-<li>The only dependency is on <code>zlib</code>.</li>
-</ul>
-<p>This document explains how to use the libxlsxwriter library. See the following sections for more information:</p>
-<ul>
-<li><a class="el" href="introduction.html">Introduction</a></li>
-<li><a class="el" href="getting_started.html">Getting Started with libxlsxwriter</a></li>
-<li><a class="el" href="tutorial01.html">Tutorial 1: Create a simple XLSX file</a></li>
-<li><a class="el" href="tutorial02.html">Tutorial 2: Adding formatting to the XLSX File</a></li>
-<li><a class="el" href="tutorial03.html">Tutorial 3: Writing different types of data to the XLSX File</a></li>
-<li><a class="el" href="workbook_8h.html">The Workbook object</a></li>
-<li><a class="el" href="worksheet_8h.html">The Worksheet object</a></li>
-<li><a class="el" href="format_8h.html">The Format object</a></li>
-<li><a class="el" href="chart_8h.html">The Chart object</a></li>
-<li><a class="el" href="chartsheet_8h.html">The Chartsheet object</a></li>
-<li><a class="el" href="utility_8h.html">Utility functions and macros</a></li>
-<li><a class="el" href="working_with_formats.html">Working with Formats</a></li>
-<li><a class="el" href="working_with_colors.html">Working with Colors</a></li>
-<li><a class="el" href="working_with_formulas.html">Working with Formulas</a></li>
-<li><a class="el" href="working_with_dates.html">Working with Dates and Times</a></li>
-<li><a class="el" href="working_with_charts.html">Working with Charts</a></li>
-<li><a class="el" href="working_with_data_validation.html">Working with Data Validation</a></li>
-<li><a class="el" href="working_with_outlines.html">Working with Outlines and Grouping</a></li>
-<li><a class="el" href="working_with_memory.html">Working with Memory and Performance</a></li>
-<li><a class="el" href="working_with_macros.html">Working with VBA Macros</a></li>
-<li><a class="el" href="examples.html">Example Programs</a></li>
-<li><a class="el" href="running_the_tests.html">Running the Test Suite</a></li>
-<li><a class="el" href="faq.html">Frequently Asked Questions</a></li>
-<li><a class="el" href="bugs.html">Known Issues and Bugs</a></li>
-<li><a class="el" href="author.html">Author</a></li>
-<li><a class="el" href="license.html">License</a></li>
-<li><a class="el" href="changes.html">Changes</a> </li>
-</ul>
-</div></div><!-- contents -->
+<div class="fragment"><div class="line"><span class="comment">/*****************************************************************************</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * An example of adding macros to a libxlsxwriter file using a VBA project</span></div>
+<div class="line"><span class="comment"> * file extracted from an existing Excel .xlsm file.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * The vba_extract.py utility from the libxlsxwriter examples directory can be</span></div>
+<div class="line"><span class="comment"> * used to extract the vbaProject.bin file.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Copyright 2014-2018, John McNamara, jmcnamara@cpan.org</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line"></div>
+<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = new_workbook(<span class="stringliteral">&quot;macro.xlsm&quot;</span>);</div>
+<div class="line">    <a name="_a1"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a name="a2"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add a macro that will execute when the file is opened. */</span></div>
+<div class="line">    <a name="a3"></a><a class="code" href="workbook_8h.html#a8de478eed94be65de0622c64a0179ff9">workbook_add_vba_project</a>(workbook, <span class="stringliteral">&quot;vbaProject.bin&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <a name="a4"></a><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Overwrite this&quot;</span>, NULL);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> <a name="a5"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -160,6 +160,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a9ecbd616a8306c88210794140c434031"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a9ecbd616a8306c88210794140c434031">workbook_validate_sheet_name</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, const char *sheetname)</td></tr>
 <tr class="memdesc:a9ecbd616a8306c88210794140c434031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validate a worksheet or chartsheet name.  <a href="#a9ecbd616a8306c88210794140c434031">More...</a><br /></td></tr>
 <tr class="separator:a9ecbd616a8306c88210794140c434031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de478eed94be65de0622c64a0179ff9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a8de478eed94be65de0622c64a0179ff9">workbook_add_vba_project</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, const char *filename)</td></tr>
+<tr class="memdesc:a8de478eed94be65de0622c64a0179ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a vbaProject binary to the Excel workbook.  <a href="#a8de478eed94be65de0622c64a0179ff9">More...</a><br /></td></tr>
+<tr class="separator:a8de478eed94be65de0622c64a0179ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24dd6624ffdc3e17aa5bcfb4608755b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a24dd6624ffdc3e17aa5bcfb4608755b8">workbook_set_vba_name</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, const char *name)</td></tr>
+<tr class="memdesc:a24dd6624ffdc3e17aa5bcfb4608755b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the VBA name for the workbook.  <a href="#a24dd6624ffdc3e17aa5bcfb4608755b8">More...</a><br /></td></tr>
+<tr class="separator:a24dd6624ffdc3e17aa5bcfb4608755b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a1cf96608a23ee4eb0e8467c15240d00b"></a>
@@ -221,19 +227,19 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook. ">lxw_workbook</a> instance.</dd></dl>
 <p>This function is the same as the <code><a class="el" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b" title="Create a new workbook object. ">workbook_new()</a></code> constructor but allows additional options to be set.</p>
-<div class="fragment"><div class="line"><a class="code" href="structlxw__workbook__options.html">lxw_workbook_options</a> options = {.<a class="code" href="structlxw__workbook__options.html#aa03636857813ca881bdd09e07bcbe738">constant_memory</a> = 1,</div>
-<div class="line">                                .tmpdir = <span class="stringliteral">&quot;C:\\Temp&quot;</span>};</div>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__workbook__options.html">lxw_workbook_options</a> options = {.<a class="code" href="structlxw__workbook__options.html#aa03636857813ca881bdd09e07bcbe738">constant_memory</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>,</div>
+<div class="line">                                .tmpdir = <span class="stringliteral">&quot;C:\\Temp&quot;</span>,</div>
+<div class="line">                                .use_zip64 = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>};</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323">workbook_new_opt</a>(<span class="stringliteral">&quot;filename.xlsx&quot;</span>, &amp;options);</div>
 </div><!-- fragment --><p>The options that can be set via <a class="el" href="structlxw__workbook__options.html" title="Workbook options. ">lxw_workbook_options</a> are:</p>
 <ul>
-<li><p class="startli"><code>constant_memory</code>: Reduces the amount of data stored in memory so that large files can be written efficiently.</p>
-<dl class="section note"><dt>Note</dt><dd>In this mode a row of data is written and then discarded when a cell in a new row is added via one of the <code>worksheet_write_*()</code> functions. Therefore, once this option is active, data should be written in sequential row order. For this reason the <code><a class="el" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225" title="Merge a range of cells. ">worksheet_merge_range()</a></code> doesn't work in this mode. See also <a class="el" href="working_with_memory.html#ww_mem_constant">Constant Memory Mode</a>.</dd></dl>
-</li>
-<li><code>tmpdir</code>: libxlsxwriter stores workbook data in temporary files prior to assembling the final XLSX file. The temporary files are created in the system's temp directory. If the default temporary directory isn't accessible to your application, or doesn't contain enough space, you can specify an alternative location using the <code>tmpdir</code> option.*</li>
+<li><code>constant_memory</code>: This option reduces the amount of data stored in memory so that large files can be written efficiently. This option is off by default. See the note below for limitations when this mode is on.</li>
+<li><code>tmpdir</code>: libxlsxwriter stores workbook data in temporary files prior to assembling the final XLSX file. The temporary files are created in the system's temp directory. If the default temporary directory isn't accessible to your application, or doesn't contain enough space, you can specify an alternative location using the <code>tmpdir</code> option.</li>
+<li><code>use_zip64</code>: Make the zip library use ZIP64 extensions when writing very large xlsx files to allow the zip container, or individual XML files within it, to be greater than 4 GB. See <a href="https://en.wikipedia.org/wiki/Zip_(file_format)#ZIP64">ZIP64 on Wikipedia</a> for more information. This option is off by default.</li>
 </ul>
-<p>See <a class="el" href="working_with_memory.html">Working with Memory and Performance</a> for more details. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="constant_memory_8c-example.html#a4">constant_memory.c</a>.</dd>
+<dl class="section note"><dt>Note</dt><dd>In <code>constant_memory</code> mode a row of data is written and then discarded when a cell in a new row is added via one of the <code>worksheet_write_*()</code> functions. Therefore, once this option is active, data should be written in sequential row order. For this reason the <code><a class="el" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225" title="Merge a range of cells. ">worksheet_merge_range()</a></code> doesn't work in this mode. See also <a class="el" href="working_with_memory.html#ww_mem_constant">Constant Memory Mode</a>. </dd></dl>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="constant_memory_8c-example.html#a5">constant_memory.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -278,9 +284,16 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="workbook02.png" alt="workbook02.png"/>
 </div>
-<p>The worksheet name must be a valid Excel worksheet name, i.e. it must be less than 32 character and it cannot contain any of the characters: </p><pre class="fragment">/ \ [ ] : * ?
-</pre><p>In addition, you cannot use the same, case insensitive, <code>sheetname</code> for more than one worksheet, or chartsheet. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a3">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a3">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a3">autofilter.c</a>, <a class="el" href="chart_8c-example.html#a3">chart.c</a>, <a class="el" href="chart_area_8c-example.html#a6">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a6">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#a5">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#a6">chart_column.c</a>, <a class="el" href="chart_data_table_8c-example.html#a6">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a6">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a6">chart_doughnut.c</a>, <a class="el" href="chart_fonts_8c-example.html#a2">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a6">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a2">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a6">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a6">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a6">chart_scatter.c</a>, <a class="el" href="chart_styles_8c-example.html#a7">chart_styles.c</a>, <a class="el" href="chartsheet_8c-example.html#a6">chartsheet.c</a>, <a class="el" href="constant_memory_8c-example.html#a6">constant_memory.c</a>, <a class="el" href="data_validate_8c-example.html#a7">data_validate.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a3">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a4">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a4">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a3">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a3">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a3">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a3">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a3">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a3">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a3">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a3">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a3">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a3">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a3">hyperlinks.c</a>, <a class="el" href="image_buffer_8c-example.html#a3">image_buffer.c</a>, <a class="el" href="images_8c-example.html#a3">images.c</a>, <a class="el" href="merge_range_8c-example.html#a3">merge_range.c</a>, <a class="el" href="merge_rich_string_8c-example.html#a3">merge_rich_string.c</a>, <a class="el" href="outline_8c-example.html#a3">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a10">outline_collapsed.c</a>, <a class="el" href="panes_8c-example.html#a3">panes.c</a>, <a class="el" href="rich_strings_8c-example.html#a3">rich_strings.c</a>, <a class="el" href="tab_colors_8c-example.html#a3">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a3">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a3">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a5">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a3">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a3">worksheet_protection.c</a>.</dd>
+<p>The worksheet name must be a valid Excel worksheet name, i.e:</p>
+<ul>
+<li>The name is less than or equal to 31 UTF-8 characters.</li>
+<li>The name doesn't contain any of the characters: <code>[ ] : * ? / \</code></li>
+<li>The name doesn't start or end with an apostrophe.</li>
+<li>The name isn't "History", which is reserved by Excel. (Case insensitive).</li>
+<li>The name isn't already in use. (Case insensitive).</li>
+</ul>
+<p>If any of these errors are encountered the function will return NULL. You can check for valid name using the <code><a class="el" href="workbook_8h.html#a9ecbd616a8306c88210794140c434031" title="Validate a worksheet or chartsheet name. ">workbook_validate_sheet_name()</a></code> function. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a3">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a3">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a3">autofilter.c</a>, <a class="el" href="chart_8c-example.html#a3">chart.c</a>, <a class="el" href="chart_area_8c-example.html#a6">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a6">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#a5">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#a6">chart_column.c</a>, <a class="el" href="chart_data_table_8c-example.html#a6">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a6">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a6">chart_doughnut.c</a>, <a class="el" href="chart_fonts_8c-example.html#a2">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a6">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a2">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a6">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a6">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a6">chart_scatter.c</a>, <a class="el" href="chart_styles_8c-example.html#a7">chart_styles.c</a>, <a class="el" href="chartsheet_8c-example.html#a6">chartsheet.c</a>, <a class="el" href="constant_memory_8c-example.html#a7">constant_memory.c</a>, <a class="el" href="data_validate_8c-example.html#a7">data_validate.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a3">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a4">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a4">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a3">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a3">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a3">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a3">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a3">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a3">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a3">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a3">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a3">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a3">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a3">hyperlinks.c</a>, <a class="el" href="image_buffer_8c-example.html#a3">image_buffer.c</a>, <a class="el" href="images_8c-example.html#a3">images.c</a>, <a class="el" href="macro_8c-example.html#a2">macro.c</a>, <a class="el" href="merge_range_8c-example.html#a3">merge_range.c</a>, <a class="el" href="merge_rich_string_8c-example.html#a3">merge_rich_string.c</a>, <a class="el" href="outline_8c-example.html#a3">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a10">outline_collapsed.c</a>, <a class="el" href="panes_8c-example.html#a3">panes.c</a>, <a class="el" href="rich_strings_8c-example.html#a3">rich_strings.c</a>, <a class="el" href="tab_colors_8c-example.html#a3">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a3">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a3">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a5">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a3">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a3">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -323,8 +336,15 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line">chartsheet = <a class="code" href="workbook_8h.html#a9cb69c057990a4139f0a19b53b04b805">workbook_add_chartsheet</a>(workbook, NULL  );     <span class="comment">// Chart1</span></div>
 <div class="line">chartsheet = <a class="code" href="workbook_8h.html#a9cb69c057990a4139f0a19b53b04b805">workbook_add_chartsheet</a>(workbook, <span class="stringliteral">&quot;My Chart&quot;</span>); <span class="comment">// My Chart</span></div>
 <div class="line">chartsheet = <a class="code" href="workbook_8h.html#a9cb69c057990a4139f0a19b53b04b805">workbook_add_chartsheet</a>(workbook, NULL  );     <span class="comment">// Chart3</span></div>
-</div><!-- fragment --><p>The chartsheet name must be a valid Excel worksheet name, i.e. it must be less than 32 character and it cannot contain any of the characters: </p><pre class="fragment">/ \ [ ] : * ?
-</pre><p>In addition, you cannot use the same, case insensitive, <code>sheetname</code> for more than one chartsheet, or worksheet.</p>
+</div><!-- fragment --><p>The chartsheet name must be a valid Excel worksheet name, i.e.:</p>
+<ul>
+<li>The name is less than or equal to 31 UTF-8 characters.</li>
+<li>The name doesn't contain any of the characters: <code>[ ] : * ? / \</code></li>
+<li>The name doesn't start or end with an apostrophe.</li>
+<li>The name isn't "History", which is reserved by Excel. (Case insensitive).</li>
+<li>The name isn't already in use. (Case insensitive).</li>
+</ul>
+<p>If any of these errors are encountered the function will return NULL. You can check for valid name using the <code><a class="el" href="workbook_8h.html#a9ecbd616a8306c88210794140c434031" title="Validate a worksheet or chartsheet name. ">workbook_validate_sheet_name()</a></code> function.</p>
 <p>At least one worksheet should be added to a new workbook when creating a chartsheet in order to provide data for the chart. The <a class="el" href="worksheet_8h.html">Worksheet</a> object is used to write data and configure a worksheet in the workbook. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="chartsheet_8c-example.html#a8">chartsheet.c</a>.</dd>
 </dl>
@@ -481,7 +501,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 </div><!-- fragment --><p>The <code>workbook_close()</code> function returns any <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> error codes encountered when creating the Excel file. The error code can be returned from the program main or the calling function:</p>
 <div class="fragment"><div class="line"><span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a11">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a7">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a7">autofilter.c</a>, <a class="el" href="chart_8c-example.html#a10">chart.c</a>, <a class="el" href="chart_area_8c-example.html#a26">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a26">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#a17">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#a26">chart_column.c</a>, <a class="el" href="chart_data_table_8c-example.html#a28">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a37">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a25">chart_doughnut.c</a>, <a class="el" href="chart_fonts_8c-example.html#a27">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a24">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a29">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a24">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a26">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a28">chart_scatter.c</a>, <a class="el" href="chart_styles_8c-example.html#a15">chart_styles.c</a>, <a class="el" href="chartsheet_8c-example.html#a27">chartsheet.c</a>, <a class="el" href="constant_memory_8c-example.html#a8">constant_memory.c</a>, <a class="el" href="data_validate_8c-example.html#a49">data_validate.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a9">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a10">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a14">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a9">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a11">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a11">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a9">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a10">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a9">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a9">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a6">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a12">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a7">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a14">hyperlinks.c</a>, <a class="el" href="image_buffer_8c-example.html#a9">image_buffer.c</a>, <a class="el" href="images_8c-example.html#a13">images.c</a>, <a class="el" href="merge_range_8c-example.html#a17">merge_range.c</a>, <a class="el" href="merge_rich_string_8c-example.html#a18">merge_rich_string.c</a>, <a class="el" href="outline_8c-example.html#a20">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a19">outline_collapsed.c</a>, <a class="el" href="panes_8c-example.html#a20">panes.c</a>, <a class="el" href="rich_strings_8c-example.html#a20">rich_strings.c</a>, <a class="el" href="tab_colors_8c-example.html#a8">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a7">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a11">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a15">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a5">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a12">worksheet_protection.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a11">anatomy.c</a>, <a class="el" href="array_formula_8c-example.html#a7">array_formula.c</a>, <a class="el" href="autofilter_8c-example.html#a7">autofilter.c</a>, <a class="el" href="chart_8c-example.html#a10">chart.c</a>, <a class="el" href="chart_area_8c-example.html#a26">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a26">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#a17">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#a26">chart_column.c</a>, <a class="el" href="chart_data_table_8c-example.html#a28">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a37">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a25">chart_doughnut.c</a>, <a class="el" href="chart_fonts_8c-example.html#a27">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a24">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a29">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a24">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a26">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a28">chart_scatter.c</a>, <a class="el" href="chart_styles_8c-example.html#a15">chart_styles.c</a>, <a class="el" href="chartsheet_8c-example.html#a27">chartsheet.c</a>, <a class="el" href="constant_memory_8c-example.html#a9">constant_memory.c</a>, <a class="el" href="data_validate_8c-example.html#a49">data_validate.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a9">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a10">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a14">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a9">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a11">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a11">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a9">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a10">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a9">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a9">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a6">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a12">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a7">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a14">hyperlinks.c</a>, <a class="el" href="image_buffer_8c-example.html#a9">image_buffer.c</a>, <a class="el" href="images_8c-example.html#a13">images.c</a>, <a class="el" href="macro_8c-example.html#a5">macro.c</a>, <a class="el" href="merge_range_8c-example.html#a17">merge_range.c</a>, <a class="el" href="merge_rich_string_8c-example.html#a18">merge_rich_string.c</a>, <a class="el" href="outline_8c-example.html#a20">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a19">outline_collapsed.c</a>, <a class="el" href="panes_8c-example.html#a20">panes.c</a>, <a class="el" href="rich_strings_8c-example.html#a20">rich_strings.c</a>, <a class="el" href="tab_colors_8c-example.html#a8">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a7">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a11">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a15">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a5">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a12">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -906,10 +926,92 @@ Functions</h2></td></tr>
 <ul>
 <li>The name is less than or equal to 31 UTF-8 characters.</li>
 <li>The name doesn't contain any of the characters: <code>[ ] : * ? / \</code></li>
-<li>The name isn't already in use.</li>
+<li>The name doesn't start or end with an apostrophe.</li>
+<li>The name isn't "History", which is reserved by Excel. (Case insensitive).</li>
+<li>The name isn't already in use. (Case insensitive, see the note below).</li>
 </ul>
 <div class="fragment"><div class="line"><a class="code" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> err = <a class="code" href="workbook_8h.html#a9ecbd616a8306c88210794140c434031">workbook_validate_sheet_name</a>(workbook, <span class="stringliteral">&quot;Foglio&quot;</span>);</div>
-</div><!-- fragment --><p>This function is called by <code><a class="el" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e" title="Add a new worksheet to a workbook. ">workbook_add_worksheet()</a></code> and <code><a class="el" href="workbook_8h.html#a9cb69c057990a4139f0a19b53b04b805" title="Add a new chartsheet to a workbook. ">workbook_add_chartsheet()</a></code> but it can be explicitly called by the user beforehand to ensure that the sheet name is valid. </p>
+</div><!-- fragment --><p>This function is called by <code><a class="el" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e" title="Add a new worksheet to a workbook. ">workbook_add_worksheet()</a></code> and <code><a class="el" href="workbook_8h.html#a9cb69c057990a4139f0a19b53b04b805" title="Add a new chartsheet to a workbook. ">workbook_add_chartsheet()</a></code> but it can be explicitly called by the user beforehand to ensure that the sheet name is valid.</p>
+<dl class="section note"><dt>Note</dt><dd>This function does an ASCII lowercase string comparison to determine if the sheet name is already in use. It doesn't take UTF-8 characters into account. Thus it would flag "Café" and "café" as a duplicate (just like Excel) but it wouldn't catch "CAFÉ". If you need a full UTF-8 case insensitive check you should use a third party library to implement it. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8de478eed94be65de0622c64a0179ff9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> workbook_add_vba_project </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__workbook.html">lxw_workbook</a> *&#160;</td>
+          <td class="paramname"><em>workbook</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">workbook</td><td>Pointer to a <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook. ">lxw_workbook</a> instance. </td></tr>
+    <tr><td class="paramname">filename</td><td>The path/filename of the vbaProject.bin file.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>workbook_add_vba_project()</code> function can be used to add macros or functions to a workbook using a binary VBA project file that has been extracted from an existing Excel xlsm file:</p>
+<div class="fragment"><div class="line"><a class="code" href="workbook_8h.html#a8de478eed94be65de0622c64a0179ff9">workbook_add_vba_project</a>(workbook, <span class="stringliteral">&quot;vbaProject.bin&quot;</span>);</div>
+</div><!-- fragment --><p>Only one <code>vbaProject.bin file</code> can be added per workbook. The name doesn't have to be <code>vbaProject.bin</code>. Any suitable path/name for an existing VBA bin file will do.</p>
+<p>Once you add a VBA project had been add to an libxlsxwriter workbook you should ensure that the file extension is <code>.xlsm</code> to prevent Excel from giving a warning when it opens the file:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__workbook.html">lxw_workbook</a> *workbook = new_workbook(<span class="stringliteral">&quot;macro.xlsm&quot;</span>);</div>
+</div><!-- fragment --><p>See also <a class="el" href="working_with_macros.html">Working with VBA Macros</a></p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a>. </dd></dl>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="macro_8c-example.html#a3">macro.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a24dd6624ffdc3e17aa5bcfb4608755b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> workbook_set_vba_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__workbook.html">lxw_workbook</a> *&#160;</td>
+          <td class="paramname"><em>workbook</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">workbook</td><td>Pointer to a <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook. ">lxw_workbook</a> instance. </td></tr>
+    <tr><td class="paramname">name</td><td>Name of the workbook used by VBA.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code><a class="el" href="workbook_8h.html#a24dd6624ffdc3e17aa5bcfb4608755b8" title="Set the VBA name for the workbook. ">workbook_set_vba_name()</a></code> function can be used to set the VBA name for the workbook. This is sometimes required when a vbaProject macro included via <code><a class="el" href="workbook_8h.html#a8de478eed94be65de0622c64a0179ff9" title="Add a vbaProject binary to the Excel workbook. ">workbook_add_vba_project()</a></code> refers to the workbook by a name other than <code>ThisWorkbook</code>.</p>
+<div class="fragment"><div class="line"><a class="code" href="workbook_8h.html#a24dd6624ffdc3e17aa5bcfb4608755b8">workbook_set_vba_name</a>(workbook, <span class="stringliteral">&quot;MyWorkbook&quot;</span>);</div>
+</div><!-- fragment --><p>If an Excel VBA name for the workbook isn't specified then libxlsxwriter will use <code>ThisWorkbook</code>.</p>
+<p>See also <a class="el" href="working_with_macros.html">Working with VBA Macros</a></p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a>. </dd></dl>
 
 </div>
 </div>
@@ -939,11 +1041,11 @@ Functions</h2></td></tr>
 <p>Optional parameters when creating a new Workbook object via <a class="el" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323" title="Create a new workbook object, and set the workbook options. ">workbook_new_opt()</a>.</p>
 <p>The following properties are supported:</p>
 <ul>
-<li><p class="startli"><code>constant_memory</code>: Reduces the amount of data stored in memory so that large files can be written efficiently.</p>
-<dl class="section note"><dt>Note</dt><dd>In this mode a row of data is written and then discarded when a cell in a new row is added via one of the <code>worksheet_write_*()</code> functions. Therefore, once this option is active, data should be written in sequential row order. For this reason the <code><a class="el" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225" title="Merge a range of cells. ">worksheet_merge_range()</a></code> doesn't work in this mode. See also <a class="el" href="working_with_memory.html#ww_mem_constant">Constant Memory Mode</a>.</dd></dl>
-</li>
-<li><code>tmpdir</code>: libxlsxwriter stores workbook data in temporary files prior to assembling the final XLSX file. The temporary files are created in the system's temp directory. If the default temporary directory isn't accessible to your application, or doesn't contain enough space, you can specify an alternative location using the <code>tmpdir</code> option. </li>
+<li><code>constant_memory</code>: This option reduces the amount of data stored in memory so that large files can be written efficiently. This option is off by default. See the note below for limitations when this mode is on.</li>
+<li><code>tmpdir</code>: libxlsxwriter stores workbook data in temporary files prior to assembling the final XLSX file. The temporary files are created in the system's temp directory. If the default temporary directory isn't accessible to your application, or doesn't contain enough space, you can specify an alternative location using the <code>tmpdir</code> option.</li>
+<li><code>use_zip64</code>: Make the zip library use ZIP64 extensions when writing very large xlsx files to allow the zip container, or individual XML files within it, to be greater than 4 GB. See <a href="https://en.wikipedia.org/wiki/Zip_(file_format)#ZIP64">ZIP64 on Wikipedia</a> for more information. This option is off by default.</li>
 </ul>
+<dl class="section note"><dt>Note</dt><dd>In <code>constant_memory</code> mode a row of data is written and then discarded when a cell in a new row is added via one of the <code>worksheet_write_*()</code> functions. Therefore, once this option is active, data should be written in sequential row order. For this reason the <code><a class="el" href="worksheet_8h.html#ad5a2a09ec65c0f286b756235c7327225" title="Merge a range of cells. ">worksheet_merge_range()</a></code> doesn't work in this mode. See also <a class="el" href="working_with_memory.html#ww_mem_constant">Constant Memory Mode</a>. </dd></dl>
 
 </div>
 </div>
