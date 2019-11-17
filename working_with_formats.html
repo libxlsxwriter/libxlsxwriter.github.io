@@ -85,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li class="level1"><a href="#ww_formats_colors">Format Colors</a></li>
 <li class="level1"><a href="#ww_formats_default">Format Defaults</a></li>
 <li class="level1"><a href="#ww_formats_reusing">Modifying and Reusing Formats</a></li>
+<li class="level1"><a href="#ww_formats_categories">Number Format Categories</a></li>
 </ul>
 </div>
 <div class="textblock"><p>The main functions and properties used to add formatting to a cell are shown in <a class="el" href="format_8h.html">The Format object</a>. This section provides some additional information about working with formats.</p>
@@ -198,6 +199,61 @@ Modifying and Reusing Formats</h1>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 1, 0, <span class="stringliteral">&quot;World&quot;</span>, format);</div>
 </div><!-- fragment --><p>Cell <code>(0, 0)</code> is assigned a format which with the font set to bold. However, the italic property is subsequently and used in cell <code>(1, 0)</code>. This has the effect of adding italic to any previous uses of <code>format</code>. The result in this case is that "Hello" and "World" will both appear as bold and italic.</p>
+<h1><a class="anchor" id="ww_formats_categories"></a>
+Number Format Categories</h1>
+<p>The <code><a class="el" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c" title="Set the number format for a cell. ">format_set_num_format()</a></code> function shown below, is used to set the number format for numbers used with <code><a class="el" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289" title="Write a number to a worksheet cell. ">worksheet_write_number()</a></code>:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;currency_format.xlsx&quot;</span>);</div>
+<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="structlxw__format.html">lxw_format</a> *currency_format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(currency_format, <span class="stringliteral">&quot;$#,##0.00&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 0, 0, 1234.56, currency_format);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>If the number format you use is the same as one of Excel's built in number formats then it will have a number category such as "General", "Number", "Currency", "Accounting", "Date", "Time", "Percentage", "Fraction", "Scientific", "Text", "Special or "Custom". In the case of the example above the formatted output shows up as a Number category:</p>
+<div class="image">
+<img src="currency_format1.png" alt="currency_format1.png"/>
+</div>
+<p>If we wanted it to have a different category, such as Currency, then we would have to match the number format string with the number format used by Excel. The easiest way to do this is to open the Number Formatting dialog in Excel and set the format that you want:</p>
+<div class="image">
+<img src="currency_format2.png" alt="currency_format2.png"/>
+</div>
+<p>Then, while still in the dialog, change to Custom. The format displayed is the format used by Excel.</p>
+<div class="image">
+<img src="currency_format3.png" alt="currency_format3.png"/>
+</div>
+<p>If we put the format that we found (<code>"[$$-409]#,##0.00"</code>) into our previous example and rerun it we will get a number format in the Currency category:</p>
+<div class="fragment"><div class="line">include <span class="stringliteral">&quot;xlsxwriter.h&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;currency_format.xlsx&quot;</span>);</div>
+<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="structlxw__format.html">lxw_format</a> *currency_format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(currency_format, <span class="stringliteral">&quot;[$$-409]#,##0.00&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 0, 0, 1234.56, currency_format);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Here is the output:</p>
+<div class="image">
+<img src="currency_format4.png" alt="currency_format4.png"/>
+</div>
+<p>The same process can be used to find format strings for "Date" or "Accountancy" formats.</p>
 <p>Next: <a class="el" href="working_with_colors.html">Working with Colors</a> </p>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->

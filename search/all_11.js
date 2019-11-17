@@ -3,6 +3,7 @@ var searchData=
   ['the_20chart_20object',['The Chart object',['../chart_page.html',1,'']]],
   ['the_20chartsheet_20object',['The Chartsheet object',['../chartsheet_page.html',1,'']]],
   ['the_20format_20object',['The Format object',['../format_page.html',1,'']]],
+  ['tip',['tip',['../structlxw__image__options.html#a8c11ce77a275cac8ff9aa9ab81edfe01',1,'lxw_image_options']]],
   ['title',['title',['../structlxw__doc__properties.html#a23d8fd5995ef26d1eab54c4dbd92393c',1,'lxw_doc_properties']]],
   ['tmpdir',['tmpdir',['../structlxw__workbook__options.html#a6a79cfd2824acc5a438f37d4f79da325',1,'lxw_workbook_options']]],
   ['transparency',['transparency',['../structlxw__chart__line.html#ab7b216ce182116ce1b33d127ab59b1ca',1,'lxw_chart_line::transparency()'],['../structlxw__chart__fill.html#a9525caba07fe20ac7c1f0c4e42264cc2',1,'lxw_chart_fill::transparency()']]],

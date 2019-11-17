@@ -5,6 +5,7 @@ var searchData=
   ['lxw_5fchart_5ffill',['lxw_chart_fill',['../structlxw__chart__fill.html',1,'']]],
   ['lxw_5fchart_5ffont',['lxw_chart_font',['../structlxw__chart__font.html',1,'']]],
   ['lxw_5fchart_5fline',['lxw_chart_line',['../structlxw__chart__line.html',1,'']]],
+  ['lxw_5fchart_5foptions',['lxw_chart_options',['../structlxw__chart__options.html',1,'']]],
   ['lxw_5fchart_5fpattern',['lxw_chart_pattern',['../structlxw__chart__pattern.html',1,'']]],
   ['lxw_5fchart_5fpoint',['lxw_chart_point',['../structlxw__chart__point.html',1,'']]],
   ['lxw_5fchart_5fseries',['lxw_chart_series',['../structlxw__chart__series.html',1,'']]],

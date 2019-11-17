@@ -79,7 +79,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Changes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>0.8.7 June 20 2019</h2>
+<div class="textblock"><h2>0.8.8 November 17 2019</h2>
+<ul>
+<li>Added option to allow a user defined, or overridden, image description used with <code><a class="el" href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code>. By default it uses the filename as the description. Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/238">#238</a>.</li>
+<li>Added Windows portable version of <code>fopen</code> to handle utf8 filenames when working with images. Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/238">#238</a>.</li>
+<li>Added an option to allow chart fonts to be rotation to 270 deg to give a stacked orientation. Also added support for East Asian vertical chart fonts.</li>
+<li>Refactored struct types used in pubic APIs to remove or document hidden fields. <b>Note:</b> This change introduces backward incompatible API changes. However, it should minimize any future changes of this nature. See issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/252">#252</a>.</li>
+</ul>
+<h2>0.8.7 June 20 2019</h2>
 <ul>
 <li>Added support for adding VBA macros to workbooks. These macros can be extracted from existing xlsm files, created in Excel, and added to new xlsm files. See <a class="el" href="working_with_macros.html">Working with VBA Macros</a>. Feature request <a href="https://github.com/jmcnamara/libxlsxwriter/issues/29">#29</a>.</li>
 <li>Added support for ZIP64 extensions when writing very large xlsx files to allow the zip container, or individual XML files within it, to be greater than 4 GB. See <a class="el" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323">workbook_new_opt()</a>. Feature request <a href="https://github.com/jmcnamara/libxlsxwriter/issues/228">#228</a>.</li>

@@ -108,14 +108,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a name="_a4"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet;</div>
 <div class="line">    <a name="_a5"></a><a class="code" href="structlxw__chart.html">lxw_chart</a> *chart;</div>
 <div class="line"></div>
-<div class="line">    <a name="_a6"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = new_workbook(<span class="stringliteral">&quot;chart_styles.xlsx&quot;</span>);</div>
+<div class="line">    <a name="_a6"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a name="a7"></a><a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;chart_styles.xlsx&quot;</span>);</div>
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">for</span> (chart_num = 0; chart_num &lt; 4; chart_num++) {</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">/* Add a worksheet for each chart type. */</span></div>
-<div class="line">        worksheet = <a name="a7"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, chart_names[chart_num]);</div>
-<div class="line">        <a name="a8"></a><a class="code" href="worksheet_8h.html#a38e16dc0a2e75d7ec99dca21fbeec89b">worksheet_set_zoom</a>(worksheet, 30);</div>
+<div class="line">        worksheet = <a name="a8"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, chart_names[chart_num]);</div>
+<div class="line">        <a name="a9"></a><a class="code" href="worksheet_8h.html#a38e16dc0a2e75d7ec99dca21fbeec89b">worksheet_set_zoom</a>(worksheet, 30);</div>
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">        <span class="comment">/* Create 48 charts, each with a different style. */</span></div>
@@ -124,14 +124,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line">            <span class="keywordflow">for</span> (col_num = 0; col_num &lt; 64; col_num += 8) {</div>
 <div class="line"></div>
-<div class="line">                chart = <a name="a9"></a><a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, chart_types[chart_num]);</div>
+<div class="line">                chart = <a name="a10"></a><a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, chart_types[chart_num]);</div>
 <div class="line">                sprintf(chart_title, <span class="stringliteral">&quot;Style %d&quot;</span>, style_num);</div>
 <div class="line"></div>
-<div class="line">                <a name="a10"></a><a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, NULL, <span class="stringliteral">&quot;=Data!$A$1:$A$6&quot;</span>);</div>
-<div class="line">                <a name="a11"></a><a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, chart_title);</div>
-<div class="line">                <a name="a12"></a><a class="code" href="chart_8h.html#a6865755f0adb52e41466a6576a8a030e">chart_set_style</a>(chart, style_num);</div>
+<div class="line">                <a name="a11"></a><a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, NULL, <span class="stringliteral">&quot;=Data!$A$1:$A$6&quot;</span>);</div>
+<div class="line">                <a name="a12"></a><a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, chart_title);</div>
+<div class="line">                <a name="a13"></a><a class="code" href="chart_8h.html#a6865755f0adb52e41466a6576a8a030e">chart_set_style</a>(chart, style_num);</div>
 <div class="line"></div>
-<div class="line">                <a name="a13"></a><a class="code" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a>(worksheet, row_num, col_num, chart);</div>
+<div class="line">                <a name="a14"></a><a class="code" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a>(worksheet, row_num, col_num, chart);</div>
 <div class="line"></div>
 <div class="line">                style_num++;</div>
 <div class="line">            }</div>
@@ -140,14 +140,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Create a worksheet with data for the charts. */</span></div>
 <div class="line">    worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, <span class="stringliteral">&quot;Data&quot;</span>);</div>
-<div class="line">    <a name="a14"></a><a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 0, 0, 10, NULL);</div>
+<div class="line">    <a name="a15"></a><a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 0, 0, 10, NULL);</div>
 <div class="line">    <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 1, 0, 40, NULL);</div>
 <div class="line">    <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 2, 0, 50, NULL);</div>
 <div class="line">    <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 3, 0, 20, NULL);</div>
 <div class="line">    <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 4, 0, 10, NULL);</div>
 <div class="line">    <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 5, 0, 50, NULL);</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> <a name="a15"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="keywordflow">return</span> <a name="a16"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->

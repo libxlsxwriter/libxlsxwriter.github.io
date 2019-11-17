@@ -116,12 +116,14 @@ var searchData=
   ['chartsheet_5fset_5fportrait',['chartsheet_set_portrait',['../chartsheet_8h.html#a78bd8a7e54b4a14211945e736c06c4c1',1,'chartsheet.h']]],
   ['chartsheet_5fset_5ftab_5fcolor',['chartsheet_set_tab_color',['../chartsheet_8h.html#ad4128360dead5256f6ccdb2430b6a19b',1,'chartsheet.h']]],
   ['chartsheet_5fset_5fzoom',['chartsheet_set_zoom',['../chartsheet_8h.html#a8e65099f374b986329f10ea9bfdcbce9',1,'chartsheet.h']]],
+  ['collapsed',['collapsed',['../structlxw__row__col__options.html#a8d069e9a054baee66de7788752af989d',1,'lxw_row_col_options']]],
   ['color',['color',['../structlxw__chart__line.html#a2619e85b4ece41f55302b5bc8157d738',1,'lxw_chart_line::color()'],['../structlxw__chart__fill.html#a1780f71f3de68cb03e2f2825952283e4',1,'lxw_chart_fill::color()'],['../structlxw__chart__font.html#a7921a876ed780271df6e0f4bca8e38f5',1,'lxw_chart_font::color()']]],
   ['cols',['COLS',['../utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8',1,'utility.h']]],
   ['comments',['comments',['../structlxw__doc__properties.html#a1fb19c33fb666bdb551b390997bb0689',1,'lxw_doc_properties']]],
   ['common_2eh',['common.h',['../common_8h.html',1,'']]],
   ['company',['company',['../structlxw__doc__properties.html#a67793efe283f109b62e5ea10a6dfd99a',1,'lxw_doc_properties']]],
   ['constant_5fmemory',['constant_memory',['../structlxw__workbook__options.html#aa03636857813ca881bdd09e07bcbe738',1,'lxw_workbook_options']]],
+  ['created',['created',['../structlxw__doc__properties.html#a1aa96fa112e0eca3b38c8884c6cdb0f4',1,'lxw_doc_properties']]],
   ['criteria',['criteria',['../structlxw__data__validation.html#a7d648cb7da5e14cb1ba1c446cd91f93f',1,'lxw_data_validation']]],
   ['creating_20excel_20files_20with_20c_20and_20libxlsxwriter',['Creating Excel files with C and libxlsxwriter',['../index.html',1,'']]]
 ];

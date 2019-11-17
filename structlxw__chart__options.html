@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: lxw_chart_fill Struct Reference</title>
+<title>libxlsxwriter: lxw_chart_options Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -78,63 +78,91 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">lxw_chart_fill Struct Reference</div>  </div>
+<div class="title">lxw_chart_options Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Struct to represent a chart fill.  
- <a href="structlxw__chart__fill.html#details">More...</a></p>
+<p>Options for inserted charts.  
+ <a href="structlxw__chart__options.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>See <a class="el" href="working_with_charts.html#chart_fills">Chart formatting: Fill</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_tools_8c-example.html#_a23">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#_a19">chart_doughnut.c</a>, and <a class="el" href="chart_pie_8c-example.html#_a19">chart_pie.c</a>.</dd>
-</dl></div><table class="memberdecls">
+<div class="textblock"><p>Options for modifying charts inserted via <code><a class="el" href="worksheet_8h.html#a4e8ea2614bc214fa0cc8992733c51f5f" title="Insert a chart object into a worksheet, with options. ">worksheet_insert_chart_opt()</a></code>. </p>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a1780f71f3de68cb03e2f2825952283e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="format_8h.html#a34a05058edd856109e5bcf1cc6739fc9">lxw_color_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__fill.html#a1780f71f3de68cb03e2f2825952283e4">color</a></td></tr>
-<tr class="separator:a1780f71f3de68cb03e2f2825952283e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97c6c00984b20f692af6b6c1ac2cc3b4"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__fill.html#a97c6c00984b20f692af6b6c1ac2cc3b4">none</a></td></tr>
-<tr class="separator:a97c6c00984b20f692af6b6c1ac2cc3b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9525caba07fe20ac7c1f0c4e42264cc2"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__fill.html#a9525caba07fe20ac7c1f0c4e42264cc2">transparency</a></td></tr>
-<tr class="separator:a9525caba07fe20ac7c1f0c4e42264cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bad76e66248d60d07a26e9bb963232f"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__options.html#a1bad76e66248d60d07a26e9bb963232f">x_offset</a></td></tr>
+<tr class="separator:a1bad76e66248d60d07a26e9bb963232f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe9dc7eddd34e9c59e465b82e1c3c9b5"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__options.html#afe9dc7eddd34e9c59e465b82e1c3c9b5">y_offset</a></td></tr>
+<tr class="separator:afe9dc7eddd34e9c59e465b82e1c3c9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb07bd8937bbbb57a1e45b1058fbad26"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__options.html#abb07bd8937bbbb57a1e45b1058fbad26">x_scale</a></td></tr>
+<tr class="separator:abb07bd8937bbbb57a1e45b1058fbad26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a864299d3f1a528f1f8ef6f0b1271ccac"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__options.html#a864299d3f1a528f1f8ef6f0b1271ccac">y_scale</a></td></tr>
+<tr class="separator:a864299d3f1a528f1f8ef6f0b1271ccac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a823d586ee815c4afa53420d87e344eb5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__options.html#a823d586ee815c4afa53420d87e344eb5">object_position</a></td></tr>
+<tr class="separator:a823d586ee815c4afa53420d87e344eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
-<a class="anchor" id="a1780f71f3de68cb03e2f2825952283e4"></a>
+<a class="anchor" id="a1bad76e66248d60d07a26e9bb963232f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="format_8h.html#a34a05058edd856109e5bcf1cc6739fc9">lxw_color_t</a> lxw_chart_fill::color</td>
+          <td class="memname">int32_t lxw_chart_options::x_offset</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The chart font color. See <a class="el" href="working_with_colors.html">Working with Colors</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_tools_8c-example.html#a24">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a20">chart_doughnut.c</a>, and <a class="el" href="chart_pie_8c-example.html#a20">chart_pie.c</a>.</dd>
-</dl>
-</div>
-</div>
-<a class="anchor" id="a97c6c00984b20f692af6b6c1ac2cc3b4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t lxw_chart_fill::none</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Turn off/hide line. Set to 0 or 1. </p>
+<p>Offset from the left of the cell in pixels. </p>
 
 </div>
 </div>
-<a class="anchor" id="a9525caba07fe20ac7c1f0c4e42264cc2"></a>
+<a class="anchor" id="afe9dc7eddd34e9c59e465b82e1c3c9b5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t lxw_chart_fill::transparency</td>
+          <td class="memname">int32_t lxw_chart_options::y_offset</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the transparency of the fill. 0 - 100. Default 0. </p>
+<p>Offset from the top of the cell in pixels. </p>
+
+</div>
+</div>
+<a class="anchor" id="abb07bd8937bbbb57a1e45b1058fbad26"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double lxw_chart_options::x_scale</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>X scale of the chart as a decimal. </p>
+
+</div>
+</div>
+<a class="anchor" id="a864299d3f1a528f1f8ef6f0b1271ccac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double lxw_chart_options::y_scale</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Y scale of the chart as a decimal. </p>
+
+</div>
+</div>
+<a class="anchor" id="a823d586ee815c4afa53420d87e344eb5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t lxw_chart_options::object_position</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Object position - not implemented yet. Set to 0. </p>
 
 </div>
 </div>
