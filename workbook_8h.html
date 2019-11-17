@@ -548,8 +548,9 @@ Functions</h2></td></tr>
 <li><code>keywords</code></li>
 <li><code>comments</code></li>
 <li><code>hyperlink_base</code></li>
+<li><code>created</code></li>
 </ul>
-<p>The properties are specified via a <code><a class="el" href="structlxw__doc__properties.html">lxw_doc_properties</a></code> struct. All the members are <code>char *</code> and they are all optional. An example of how to create and pass the properties is:</p>
+<p>The properties are specified via a <code><a class="el" href="structlxw__doc__properties.html">lxw_doc_properties</a></code> struct. All the fields are all optional. An example of how to create and pass the properties is:</p>
 <div class="fragment"><div class="line"><span class="comment">// Create a properties structure and set some of the fields.</span></div>
 <div class="line"><a class="code" href="structlxw__doc__properties.html">lxw_doc_properties</a> properties = {</div>
 <div class="line">    .<a class="code" href="structlxw__doc__properties.html#a23d8fd5995ef26d1eab54c4dbd92393c">title</a>    = <span class="stringliteral">&quot;This is an example spreadsheet&quot;</span>,</div>
@@ -568,7 +569,8 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="doc_properties.png" alt="doc_properties.png"/>
 </div>
- <dl><dt><b>Examples: </b></dt><dd><a class="el" href="doc_properties_8c-example.html#a6">doc_properties.c</a>.</dd>
+<p>The <code>created</code> parameter sets the file creation date/time shown in Excel. This defaults to the current time and date if set to 0. If you wish to create files that are binary equivalent (for the same input data) then you should set this creation date/time to a known value using a <code>time_t</code> value. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="doc_properties_8c-example.html#a6">doc_properties.c</a>.</dd>
 </dl>
 </div>
 </div>
