@@ -221,6 +221,7 @@ var searchData=
   ['lxw_5ferror_5fsheetname_5fstart_5fend_5fapostrophe',['LXW_ERROR_SHEETNAME_START_END_APOSTROPHE',['../common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a83d83111f465545ba2f5bd9ff02135c8',1,'common.h']]],
   ['lxw_5ferror_5fworksheet_5findex_5fout_5fof_5frange',['LXW_ERROR_WORKSHEET_INDEX_OUT_OF_RANGE',['../common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ab0ad31e8aa8a58e9371f18d217d72204',1,'common.h']]],
   ['lxw_5ferror_5fworksheet_5fmax_5fnumber_5furls_5fexceeded',['LXW_ERROR_WORKSHEET_MAX_NUMBER_URLS_EXCEEDED',['../common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a574ead0537d6ffc255d1e6fe121527c4',1,'common.h']]],
+  ['lxw_5ferror_5fworksheet_5fmax_5furl_5flength_5fexceeded',['LXW_ERROR_WORKSHEET_MAX_URL_LENGTH_EXCEEDED',['../common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a4e4a0337d971176bca4d38b7bf65075e',1,'common.h']]],
   ['lxw_5ferror_5fzip_5fbad_5fzip_5ffile',['LXW_ERROR_ZIP_BAD_ZIP_FILE',['../common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6afc439b89092dc7281b6bae23646542e4',1,'common.h']]],
   ['lxw_5ferror_5fzip_5fclose',['LXW_ERROR_ZIP_CLOSE',['../common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6ad1b6597961ceac45e001a507726f7473',1,'common.h']]],
   ['lxw_5ferror_5fzip_5ffile_5fadd',['LXW_ERROR_ZIP_FILE_ADD',['../common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a72140ec5ad9439c4242c3b30a346dbc1',1,'common.h']]],

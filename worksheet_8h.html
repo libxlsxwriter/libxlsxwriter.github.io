@@ -727,50 +727,57 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_write_url()</code> function is used to write a URL/hyperlink to a worksheet cell specified by <code>row</code> and <code>column</code>.</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, url_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, NULL);</div>
 </div><!-- fragment --><div class="image">
 <img src="hyperlinks_short.png" alt="hyperlinks_short.png"/>
 </div>
-<p>The <code>format</code> parameter is used to apply formatting to the cell. This parameter can be <code>NULL</code> to indicate no formatting or it can be a <a class="el" href="format_8h.html">Format</a> object. The typical worksheet format for a hyperlink is a blue underline:</p>
+<p>The <code>format</code> parameter is used to apply formatting to the cell. This parameter can be <code>NULL</code>, in which case the default Excel blue underlined hyperlink style will be used. If required a user defined <a class="el" href="format_8h.html">Format</a> object can be used: underline:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *url_format   = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="format_8h.html#ad35ee5445826bd93ec1bc0d489fc09db">format_set_underline</a> (url_format, <a class="code" href="format_8h.html#af530d7971d15c164f3fb6bbfede9a39fa76d5bdd1c57c126df937f0b003597e18">LXW_UNDERLINE_SINGLE</a>);</div>
-<div class="line"><a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(url_format, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>);</div>
+<div class="line"><a class="code" href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a>(url_format, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>);</div>
 </div><!-- fragment --><p>The usual web style URI's are supported: <code>http://</code>, <code>https://</code>, <code>ftp://</code> and <code>mailto:</code> :</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;ftp://www.python.org/&quot;</span>,     url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;http://www.python.org/&quot;</span>,    url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 2, 0, <span class="stringliteral">&quot;https://www.python.org/&quot;</span>,   url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 3, 0, <span class="stringliteral">&quot;mailto:jmcnamara@cpan.org&quot;</span>, url_format);</div>
-</div><!-- fragment --><p>An Excel hyperlink is comprised of two elements: the displayed string and the non-displayed link. By default the displayed string is the same as the link. However, it is possible to overwrite it with any other <code>libxlsxwriter</code> type using the appropriate <code>worksheet_write_*()</code> function. The most common case is to overwrite the displayed link text with another string:</p>
-<div class="fragment"><div class="line"><span class="comment">// Write a hyperlink but overwrite the displayed string.</span></div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>   (worksheet, 2, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 2, 0, <span class="stringliteral">&quot;Read the documentation.&quot;</span>,        url_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;ftp://www.python.org/&quot;</span>,     NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;http://www.python.org/&quot;</span>,    NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 2, 0, <span class="stringliteral">&quot;https://www.python.org/&quot;</span>,   NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 3, 0, <span class="stringliteral">&quot;mailto:jmcnamara@cpan.org&quot;</span>, NULL);</div>
+</div><!-- fragment --><p>An Excel hyperlink is comprised of two elements: the displayed string and the non-displayed link. By default the displayed string is the same as the link. However, it is possible to overwrite it with any other <code>libxlsxwriter</code> type using the appropriate <code>worksheet_write_*()</code> function. The most common case is to overwrite the displayed link text with another string. To do this we must also match the default URL format using <code><a class="el" href="workbook_8h.html#abd18b07856137e94b34c9aca7e0831b5" title="Get the default URL format used with worksheet_write_url(). ">workbook_get_default_url_format()</a></code>:</p>
+<div class="fragment"><div class="line"><span class="comment">// Write a hyperlink with the default blue underline format.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 2, 0, <span class="stringliteral">&quot;http://libxlsxwriter.github.io&quot;</span>, NULL);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Get the default url format.</span></div>
+<div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *url_format = <a class="code" href="workbook_8h.html#abd18b07856137e94b34c9aca7e0831b5">workbook_get_default_url_format</a>(workbook);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Overwrite the hyperlink with a user defined string and default format.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 2, 0, <span class="stringliteral">&quot;Read the documentation.&quot;</span>, url_format);</div>
 </div><!-- fragment --><div class="image">
 <img src="hyperlinks_short2.png" alt="hyperlinks_short2.png"/>
 </div>
 <p>Two local URIs are supported: <code>internal:</code> and <code>external:</code>. These are used for hyperlinks to internal worksheet references or external workbook and worksheet references:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;internal:Sheet2!A1&quot;</span>,                url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;internal:Sheet2!B2&quot;</span>,                url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 2, 0, <span class="stringliteral">&quot;internal:Sheet2!A1:B2&quot;</span>,             url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 3, 0, <span class="stringliteral">&quot;internal:&#39;Sales Data&#39;!A1&quot;</span>,          url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 4, 0, <span class="stringliteral">&quot;external:c:\\temp\\foo.xlsx&quot;</span>,       url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 5, 0, <span class="stringliteral">&quot;external:c:\\foo.xlsx#Sheet2!A1&quot;</span>,   url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 6, 0, <span class="stringliteral">&quot;external:..\\foo.xlsx&quot;</span>,             url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 7, 0, <span class="stringliteral">&quot;external:..\\foo.xlsx#Sheet2!A1&quot;</span>,   url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 8, 0, <span class="stringliteral">&quot;external:\\\\NET\\share\\foo.xlsx&quot;</span>, url_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;internal:Sheet2!A1&quot;</span>,                NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;internal:Sheet2!B2&quot;</span>,                NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 2, 0, <span class="stringliteral">&quot;internal:Sheet2!A1:B2&quot;</span>,             NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 3, 0, <span class="stringliteral">&quot;internal:&#39;Sales Data&#39;!A1&quot;</span>,          NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 4, 0, <span class="stringliteral">&quot;external:c:\\temp\\foo.xlsx&quot;</span>,       NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 5, 0, <span class="stringliteral">&quot;external:c:\\foo.xlsx#Sheet2!A1&quot;</span>,   NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 6, 0, <span class="stringliteral">&quot;external:..\\foo.xlsx&quot;</span>,             NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 7, 0, <span class="stringliteral">&quot;external:..\\foo.xlsx#Sheet2!A1&quot;</span>,   NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 8, 0, <span class="stringliteral">&quot;external:\\\\NET\\share\\foo.xlsx&quot;</span>, NULL);</div>
 </div><!-- fragment --><p>Worksheet references are typically of the form <code>Sheet1!A1</code>. You can also link to a worksheet range using the standard Excel notation: <code>Sheet1!A1:B2</code>.</p>
 <p>In external links the workbook and worksheet name must be separated by the <code>#</code> character:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:c:\\foo.xlsx#Sheet2!A1&quot;</span>,   url_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:c:\\foo.xlsx#Sheet2!A1&quot;</span>,   NULL);</div>
 </div><!-- fragment --><p>You can also link to a named range in the target worksheet: For example say you have a named range called <code>my_name</code> in the workbook <code>c:\temp\foo.xlsx</code> you could link to it as follows:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:c:\\temp\\foo.xlsx#my_name&quot;</span>, url_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:c:\\temp\\foo.xlsx#my_name&quot;</span>, NULL);</div>
 </div><!-- fragment --><p>Excel requires that worksheet names containing spaces or non alphanumeric characters are single quoted as follows:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;internal:&#39;Sales Data&#39;!A1&quot;</span>, url_format);</div>
-</div><!-- fragment --><p>Links to network files are also supported. Network files normally begin with two back slashes as follows <code>\\NETWORK\etc</code>. In order to represent this in a C string literal the backslashes should be escaped: </p><div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:\\\\NET\\share\\foo.xlsx&quot;</span>, url_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;internal:&#39;Sales Data&#39;!A1&quot;</span>, NULL);</div>
+</div><!-- fragment --><p>Links to network files are also supported. Network files normally begin with two back slashes as follows <code>\\NETWORK\etc</code>. In order to represent this in a C string literal the backslashes should be escaped: </p><div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:\\\\NET\\share\\foo.xlsx&quot;</span>, NULL);</div>
 </div><!-- fragment --><p>Alternatively, you can use Unix style forward slashes. These are translated internally to backslashes:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:c:/temp/foo.xlsx&quot;</span>,     url_format);</div>
-<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;external://NET/share/foo.xlsx&quot;</span>, url_format);</div>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 0, 0, <span class="stringliteral">&quot;external:c:/temp/foo.xlsx&quot;</span>,     NULL);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url</a>(worksheet, 1, 0, <span class="stringliteral">&quot;external://NET/share/foo.xlsx&quot;</span>, NULL);</div>
 </div><!-- fragment --><p><b>Note:</b></p>
-<p>libxlsxwriter will escape the following characters in URLs as required by Excel: <code>\s " &lt; &gt; \ [ ] ^ { }</code> unless the URL already contains <code>%xx</code> style escapes. In which case it is assumed that the URL was escaped correctly by the user and will by passed directly to Excel. </p>
+<p>libxlsxwriter will escape the following characters in URLs as required by Excel: <code>\s " &lt; &gt; \ [ ] ^ { }</code>. Existing URL <code>%xx</code> style escapes in the string are ignored to allow for user-escaped strings.</p>
+<p><b>Note:</b></p>
+<p>The maximum allowable URL length in recent versions of Excel is 2079 characters. In older versions of Excel (and libxlsxwriter &lt;= 0.8.8) the limit was 255 characters. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="hyperlinks_8c-example.html#a12">hyperlinks.c</a>.</dd>
 </dl>
 </div>
@@ -1496,13 +1503,23 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_insert_image_opt()</code> function is like <code><a class="el" href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> function except that it takes an optional <a class="el" href="structlxw__image__options.html" title="Options for inserted images. ">lxw_image_options</a> struct to scale and position the image:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__image__options.html">lxw_image_options</a> options = {.x_offset = 30,  .y_offset = 10,</div>
-<div class="line">                             .x_scale  = 0.5, .y_scale  = 0.5};</div>
+<div class="line">                            .x_scale  = 0.5, .y_scale  = 0.5};</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b">worksheet_insert_image_opt</a>(worksheet, 2, 1, <span class="stringliteral">&quot;logo.png&quot;</span>, &amp;options);</div>
 </div><!-- fragment --><div class="image">
 <img src="insert_image_opt.png" alt="insert_image_opt.png"/>
 </div>
-<dl class="section note"><dt>Note</dt><dd>See the notes about row scaling and BMP images in <code><a class="el" href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> above. </dd></dl>
+<p>The <code>url</code> field of <a class="el" href="structlxw__image__options.html" title="Options for inserted images. ">lxw_image_options</a> can be use to used to add a hyperlink to an image:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__image__options.html">lxw_image_options</a> options = {.<a class="code" href="structlxw__image__options.html#a0c023a71168ff25274cfe41ac5403a99">url</a> = <span class="stringliteral">&quot;https://github.com/jmcnamara&quot;</span>};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b">worksheet_insert_image_opt</a>(worksheet, 3, 1, <span class="stringliteral">&quot;logo.png&quot;</span>, &amp;options);</div>
+</div><!-- fragment --><p>The supported URL formats are the same as those supported by the <code><a class="el" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url()</a></code> method and the same rules/limits apply.</p>
+<p>The <code>tip</code> field of <a class="el" href="structlxw__image__options.html" title="Options for inserted images. ">lxw_image_options</a> can be use to used to add a mouseover tip to the hyperlink:</p>
+<div class="fragment"><div class="line"> <a class="code" href="structlxw__image__options.html">lxw_image_options</a> options = {.<a class="code" href="structlxw__image__options.html#a0c023a71168ff25274cfe41ac5403a99">url</a> = <span class="stringliteral">&quot;https://github.com/jmcnamara&quot;</span>,</div>
+<div class="line">                              .tip = <span class="stringliteral">&quot;GitHub&quot;</span>};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b">worksheet_insert_image_opt</a>(worksheet, 4, 1, <span class="stringliteral">&quot;logo.png&quot;</span>, &amp;options);</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>See the notes about row scaling and BMP images in <code><a class="el" href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code> above. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="images_8c-example.html#a11">images.c</a>.</dd>
 </dl>
 </div>

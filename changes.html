@@ -79,7 +79,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Changes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>0.8.8 November 17 2019</h2>
+<div class="textblock"><h2>0.8.9 December 16 2019</h2>
+<ul>
+<li>Added support for default hyperlink style in <code><a class="el" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url()</a></code>.</li>
+<li>Added support for hyperlink in images, see <code><a class="el" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b" title="Insert an image in a worksheet cell, with options. ">worksheet_insert_image_opt()</a></code>.</li>
+<li>Fixed several <code><a class="el" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url()</a></code> edge cases.</li>
+</ul>
+<h2>0.8.8 November 17 2019</h2>
 <ul>
 <li>Added option to allow a user defined, or overridden, image description used with <code><a class="el" href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f" title="Insert an image in a worksheet cell. ">worksheet_insert_image()</a></code>. By default it uses the filename as the description. Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/238">#238</a>.</li>
 <li>Added Windows portable version of <code>fopen</code> to handle utf8 filenames when working with images. Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/238">#238</a>.</li>
