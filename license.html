@@ -107,7 +107,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 The views and conclusions contained in the software and documentation are
 those of the authors and should not be interpreted as representing
 official policies, either expressed or implied, of the FreeBSD Project.
-</pre><p>Libxlsxwriter includes <code>queue.h</code> and <code>tree.h</code> from FreeBSD, the <code>minizip</code> component of <code>zlib</code> and <code>tmpfileplus</code> which have the following licenses:</p>
+</pre><p>Libxlsxwriter includes <code>queue.h</code> and <code>tree.h</code> from FreeBSD, the <code>minizip</code> component of <code>zlib</code>, <code>tmpfileplus</code> and <code>md5</code> which have the following licenses:</p>
 <p>Queue.h from FreeBSD: </p><pre class="fragment">Copyright (c) 1991, 1993
  The Regents of the University of California.  All rights reserved.
 
@@ -190,6 +190,20 @@ Copyright (C) 2009-2010 Mathias Svensson ( http://result42.com )
  &lt;http://www.di-mgt.com.au/contact/&gt;.
 </pre><p>See the <a href="http://mozilla.org/MPL/2.0/">Mozilla Public License, v. 2.0</a>.</p>
 <p>Note, it is possible to compile libxlsxwriter using the standard library <code>tmpfile()</code> function instead of <code>tmpfileplus</code>, see <a class="el" href="getting_started.html#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a>.</p>
+<p><a href="https://openwall.info/wiki/people/solar/software/public-domain-source-code/md5">Openwall MD5</a> has the following licence: </p><pre class="fragment">This software was written by Alexander Peslyak in 2001.  No copyright is
+claimed, and the software is hereby placed in the public domain.
+In case this attempt to disclaim copyright and place the software in the
+public domain is deemed null and void, then the software is
+Copyright (c) 2001 Alexander Peslyak and it is hereby released to the
+general public under the following terms:
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted.
+
+There's ABSOLUTELY NO WARRANTY, express or implied.
+
+(This is a heavily cut-down "BSD license".)
+</pre><p>Note, the MD5 library is used to avoid including duplicate image files in the xlsx file. If this functionality isn't required it is possible to compile libxlsxwriter without this library by passing <code>USE_NO_MD5=1</code> to make.</p>
 <p>Next: <a class="el" href="changes.html">Changes</a> </p>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
