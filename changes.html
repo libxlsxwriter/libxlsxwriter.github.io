@@ -81,6 +81,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><h2>0.9.0 December 26 2019</h2>
 <ul>
+<li>Fix to missing MD5 linkage in Cocoapod file. Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/259">#259</a>.</li>
+</ul>
+<h2>0.9.0 December 26 2019</h2>
+<ul>
 <li><p class="startli">Fix to avoid duplicate images being copied to an libxlsxwriter file. Excel uses an optimization where it only stores one copy of a repeated/duplicate image in a workbook. Libxlsxwriter didn't do this which meant that the file size would increase when then was a large number of repeated images. This release fixes that issue and replicates Excel's behavior.</p>
 <p class="startli">Note, that this change adds a dependency on the <a href="https://openwall.info/wiki/people/solar/software/public-domain-source-code/md5">Openwall MD5</a> library, which is now included with the libxlsxwriter third party source files. It is possible to compile libxlsxwriter without this library, and thus getting the older behavior, by passing <code>USE_NO_MD5=1</code> to make.</p>
 </li>
