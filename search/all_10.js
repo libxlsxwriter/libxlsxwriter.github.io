@@ -6,6 +6,8 @@ var searchData=
   ['show_5finput',['show_input',['../structlxw__data__validation.html#a9afa5c82f4d99384298ed4d16facc5cb',1,'lxw_data_validation']]],
   ['size',['size',['../structlxw__chart__font.html#a4f7cacf074c6d16fc077b072b74c9c5a',1,'lxw_chart_font']]],
   ['sort',['sort',['../structlxw__protection.html#a65d1e87b6603a1a3e4f00d93d228c46b',1,'lxw_protection']]],
+  ['start_5fcol',['start_col',['../structlxw__comment__options.html#af0cd41b5c72fe32c545c1531ae7a9e4e',1,'lxw_comment_options']]],
+  ['start_5frow',['start_row',['../structlxw__comment__options.html#a1360f4a255e8c255b3759d44205de938',1,'lxw_comment_options']]],
   ['status',['status',['../structlxw__doc__properties.html#aa1dac7e63e16678271e45bf0045e93b7',1,'lxw_doc_properties']]],
   ['string',['string',['../structlxw__rich__string__tuple.html#aa25653560242b076014a88622ebbc847',1,'lxw_rich_string_tuple']]],
   ['subject',['subject',['../structlxw__doc__properties.html#a216d40acad776338b8250a61fc29ba6a',1,'lxw_doc_properties']]]

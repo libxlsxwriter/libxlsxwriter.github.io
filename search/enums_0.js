@@ -20,6 +20,7 @@ var searchData=
   ['lxw_5fchart_5fpattern_5ftype',['lxw_chart_pattern_type',['../chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9d',1,'chart.h']]],
   ['lxw_5fchart_5ftrendline_5ftype',['lxw_chart_trendline_type',['../chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1',1,'chart.h']]],
   ['lxw_5fchart_5ftype',['lxw_chart_type',['../chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85c',1,'chart.h']]],
+  ['lxw_5fcomment_5fdisplay_5ftypes',['lxw_comment_display_types',['../worksheet_8h.html#aad352c6cf9a5359d4cda51839a91c7d2',1,'worksheet.h']]],
   ['lxw_5fdefined_5fcolors',['lxw_defined_colors',['../format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38b',1,'format.h']]],
   ['lxw_5ferror',['lxw_error',['../common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6',1,'common.h']]],
   ['lxw_5fformat_5falignments',['lxw_format_alignments',['../format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5',1,'format.h']]],

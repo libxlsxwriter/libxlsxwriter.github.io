@@ -10,6 +10,7 @@ var searchData=
   ['lxw_5fchart_5fpoint',['lxw_chart_point',['../structlxw__chart__point.html',1,'']]],
   ['lxw_5fchart_5fseries',['lxw_chart_series',['../structlxw__chart__series.html',1,'']]],
   ['lxw_5fchartsheet',['lxw_chartsheet',['../structlxw__chartsheet.html',1,'']]],
+  ['lxw_5fcomment_5foptions',['lxw_comment_options',['../structlxw__comment__options.html',1,'']]],
   ['lxw_5fdata_5fvalidation',['lxw_data_validation',['../structlxw__data__validation.html',1,'']]],
   ['lxw_5fdatetime',['lxw_datetime',['../structlxw__datetime.html',1,'']]],
   ['lxw_5fdoc_5fproperties',['lxw_doc_properties',['../structlxw__doc__properties.html',1,'']]],

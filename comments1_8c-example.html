@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>libxlsxwriter: lxw_rich_string_tuple Struct Reference</title>
+<title>libxlsxwriter: comments1.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -59,6 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -73,57 +74,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">lxw_rich_string_tuple Struct Reference</div>  </div>
+<div class="title">comments1.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Struct to represent a rich string format/string pair.  
- <a href="structlxw__rich__string__tuple.html#details">More...</a></p>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Arrays of this struct are used to define "rich" multi-format strings that are passed to <code><a class="el" href="worksheet_8h.html#a62bf44845ce9dcc505bf228999db5afa" title="Write a &quot;Rich&quot; multi-format string to a worksheet cell. ">worksheet_write_rich_string()</a></code>. Each struct represents a fragment of the rich multi-format string with a <a class="el" href="structlxw__format.html" title="Struct to represent the formatting properties of an Excel format. ">lxw_format</a> to define the format for the string part. If the string fragment is unformatted then <code>NULL</code> can be used for the format. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="merge_rich_string_8c-example.html#_a14">merge_rich_string.c</a>, and <a class="el" href="rich_strings_8c-example.html#_a16">rich_strings.c</a>.</dd>
-</dl></div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Data Fields</h2></td></tr>
-<tr class="memitem:a331030005bc187f49a855a7ccb749052"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__format.html">lxw_format</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__rich__string__tuple.html#a331030005bc187f49a855a7ccb749052">format</a></td></tr>
-<tr class="separator:a331030005bc187f49a855a7ccb749052"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa25653560242b076014a88622ebbc847"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__rich__string__tuple.html#aa25653560242b076014a88622ebbc847">string</a></td></tr>
-<tr class="separator:aa25653560242b076014a88622ebbc847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<table  width="600">
+<tr>
+<td><a class="el" href="macro_8c-example.html">&lt;&lt; macro.c</a> </td><td align="right"><a class="el" href="comments2_8c-example.html">comments2.c &gt;&gt;</a>  </td></tr>
 </table>
-<h2 class="groupheader">Field Documentation</h2>
-<a class="anchor" id="a331030005bc187f49a855a7ccb749052"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structlxw__format.html">lxw_format</a>* lxw_rich_string_tuple::format</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The format for a string fragment in a rich string. NULL if the string isn't formatted. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="merge_rich_string_8c-example.html#a15">merge_rich_string.c</a>, and <a class="el" href="rich_strings_8c-example.html#a17">rich_strings.c</a>.</dd>
-</dl>
+<p>A simple example of adding cell comments to a worksheet.</p>
+<div class="image">
+<img src="comments1.png" alt="comments1.png"/>
 </div>
-</div>
-<a class="anchor" id="aa25653560242b076014a88622ebbc847"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char* lxw_rich_string_tuple::string</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The string fragment. </p>
-
-</div>
-</div>
-</div><!-- contents -->
+<div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * An example of writing cell comments to a worksheet using libxlsxwriter.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Copyright 2014-2020, John McNamara, jmcnamara@cpan.org</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line"></div>
+<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a name="a1"></a><a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;comments1.xlsx&quot;</span>);</div>
+<div class="line">    <a name="_a2"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a name="a3"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line"></div>
+<div class="line">    <a name="a4"></a><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>( worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span> , NULL);</div>
+<div class="line"></div>
+<div class="line">    <a name="a5"></a><a class="code" href="worksheet_8h.html#abd1728d105365c0113e15f40c6bb1b27">worksheet_write_comment</a>(worksheet, 0, 0, <span class="stringliteral">&quot;This is a comment&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> <a name="a6"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

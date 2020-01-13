@@ -31,6 +31,7 @@ var searchData=
   ['lxw_5fchartsheet',['lxw_chartsheet',['../chartsheet_8h.html#a514a515ac288aa5f03738682216c3084',1,'chartsheet.h']]],
   ['lxw_5fcol_5ft',['lxw_col_t',['../common_8h.html#a4fedd8dede664b070e84e850a3f92fd2',1,'common.h']]],
   ['lxw_5fcolor_5ft',['lxw_color_t',['../format_8h.html#a34a05058edd856109e5bcf1cc6739fc9',1,'format.h']]],
+  ['lxw_5fcomment_5foptions',['lxw_comment_options',['../worksheet_8h.html#a9bb7314822cbe38a1f47db7307138ef2',1,'worksheet.h']]],
   ['lxw_5fdata_5fvalidation',['lxw_data_validation',['../worksheet_8h.html#aca52c42f844a228875a5626b492111d0',1,'worksheet.h']]],
   ['lxw_5fdatetime',['lxw_datetime',['../common_8h.html#a702a2013231565d5014690478bf3ff26',1,'common.h']]],
   ['lxw_5fdoc_5fproperties',['lxw_doc_properties',['../workbook_8h.html#a82e6f279b1c9478867ef53d60e6cfc9b',1,'workbook.h']]],
