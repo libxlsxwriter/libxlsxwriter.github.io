@@ -30,6 +30,7 @@ var searchData=
   ['working_20with_20formulas',['Working with Formulas',['../working_with_formulas.html',1,'']]],
   ['working_20with_20vba_20macros',['Working with VBA Macros',['../working_with_macros.html',1,'']]],
   ['working_20with_20memory_20and_20performance',['Working with Memory and Performance',['../working_with_memory.html',1,'']]],
+  ['working_20with_20object_20positioning',['Working with Object Positioning',['../working_with_object_positioning.html',1,'']]],
   ['working_20with_20outlines_20and_20grouping',['Working with Outlines and Grouping',['../working_with_outlines.html',1,'']]],
   ['worksheet_2eh',['worksheet.h',['../worksheet_8h.html',1,'']]],
   ['worksheet_5factivate',['worksheet_activate',['../worksheet_8h.html#a76ec76f91328c512d3d86a35642f0a08',1,'worksheet.h']]],

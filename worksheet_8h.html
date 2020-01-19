@@ -1592,7 +1592,7 @@ Functions</h2></td></tr>
 <img src="insert_image.png" alt="insert_image.png"/>
 </div>
 <p>The <code><a class="el" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b" title="Insert an image in a worksheet cell, with options. ">worksheet_insert_image_opt()</a></code> function takes additional optional parameters to position and scale the image, see below.</p>
-<p><b>Note</b>: The scaling of a image may be affected if is crosses a row that has its default height changed due to a font that is larger than the default font size or that has text wrapping turned on. To avoid this you should explicitly set the height of the row using <code><a class="el" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173" title="Set the properties for a row of cells. ">worksheet_set_row()</a></code> if it crosses an inserted image.</p>
+<p><b>Note</b>: The scaling of a image may be affected if is crosses a row that has its default height changed due to a font that is larger than the default font size or that has text wrapping turned on. To avoid this you should explicitly set the height of the row using <code><a class="el" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173" title="Set the properties for a row of cells. ">worksheet_set_row()</a></code> if it crosses an inserted image. See <a class="el" href="working_with_object_positioning.html">Working with Object Positioning</a>.</p>
 <p>BMP images are only supported for backward compatibility. In general it is best to avoid BMP images since they aren't compressed. If used, BMP images must be 24 bit, true color, bitmaps. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="demo_8c-example.html#a10">demo.c</a>, and <a class="el" href="images_8c-example.html#a8">images.c</a>.</dd>
 </dl>
@@ -4290,6 +4290,36 @@ objects
 
 </div>
 </div>
+<a class="anchor" id="a915c52f231594642bad90422c5b2cf81"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="worksheet_8h.html#a915c52f231594642bad90422c5b2cf81">lxw_object_position</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Options to control the positioning of worksheet objects such as images or charts. See <a class="el" href="working_with_object_positioning.html">Working with Object Positioning</a>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a915c52f231594642bad90422c5b2cf81a9241d2348b2f692d3973d89f46a848a9"></a>LXW_OBJECT_POSITION_DEFAULT&#160;</td><td class="fielddoc">
+<p>Default positioning for the object. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a915c52f231594642bad90422c5b2cf81a3a7fd9f3ceaa180ddba415b8b7d80f68"></a>LXW_OBJECT_MOVE_AND_SIZE&#160;</td><td class="fielddoc">
+<p>Move and size with the worksheet object with the cells. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a915c52f231594642bad90422c5b2cf81ae8e56c6314407205b48e9e8085926182"></a>LXW_OBJECT_MOVE_DONT_SIZE&#160;</td><td class="fielddoc">
+<p>Move but don't size with the worksheet object with the cells. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a915c52f231594642bad90422c5b2cf81a2ce8ef5e158013c4872d312fb6b2e1a4"></a>LXW_OBJECT_DONT_MOVE_DONT_SIZE&#160;</td><td class="fielddoc">
+<p>Don't move or size the worksheet object with the cells. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a915c52f231594642bad90422c5b2cf81a833c0825a5e212ad263a20346d972a93"></a>LXW_OBJECT_MOVE_AND_SIZE_AFTER&#160;</td><td class="fielddoc">
+<p>Same as <a class="el" href="worksheet_8h.html#a915c52f231594642bad90422c5b2cf81a3a7fd9f3ceaa180ddba415b8b7d80f68">LXW_OBJECT_MOVE_AND_SIZE</a> except libxlsxwriter applies hidden cells after the object is inserted. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -4411,6 +4441,16 @@ Enumerations</h2></td></tr>
 <a class="el" href="worksheet_8h.html#aad352c6cf9a5359d4cda51839a91c7d2a3d78b49cb38d25b6d5473a1c0112404d">LXW_COMMENT_DISPLAY_VISIBLE</a>
  }</td></tr>
 <tr class="separator:aad352c6cf9a5359d4cda51839a91c7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a915c52f231594642bad90422c5b2cf81"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a915c52f231594642bad90422c5b2cf81">lxw_object_position</a> { <br />
+&#160;&#160;<a class="el" href="worksheet_8h.html#a915c52f231594642bad90422c5b2cf81a9241d2348b2f692d3973d89f46a848a9">LXW_OBJECT_POSITION_DEFAULT</a>, 
+<a class="el" href="worksheet_8h.html#a915c52f231594642bad90422c5b2cf81a3a7fd9f3ceaa180ddba415b8b7d80f68">LXW_OBJECT_MOVE_AND_SIZE</a>, 
+<a class="el" href="worksheet_8h.html#a915c52f231594642bad90422c5b2cf81ae8e56c6314407205b48e9e8085926182">LXW_OBJECT_MOVE_DONT_SIZE</a>, 
+<a class="el" href="worksheet_8h.html#a915c52f231594642bad90422c5b2cf81a2ce8ef5e158013c4872d312fb6b2e1a4">LXW_OBJECT_DONT_MOVE_DONT_SIZE</a>, 
+<br />
+&#160;&#160;<a class="el" href="worksheet_8h.html#a915c52f231594642bad90422c5b2cf81a833c0825a5e212ad263a20346d972a93">LXW_OBJECT_MOVE_AND_SIZE_AFTER</a>
+<br />
+ }</td></tr>
+<tr class="separator:a915c52f231594642bad90422c5b2cf81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>

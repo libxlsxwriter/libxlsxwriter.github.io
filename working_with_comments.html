@@ -99,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h1><a class="anchor" id="ww_comments_properties"></a>
 Setting Comment Properties</h1>
 <p>The properties of the cell comment can be modified by passing an optional <a class="el" href="structlxw__comment__options.html" title="Options for inserted comments. ">lxw_comment_options</a> struct to <code><a class="el" href="worksheet_8h.html#a158dadac385cd1007994e5478b7b2aa7" title="Write a comment to a worksheet cell with options. ">worksheet_write_comment_opt()</a></code> control the format of the comment. For example:</p>
-<div class="fragment"><div class="line"><a class="code" href="structlxw__comment__options.html">lxw_comment_options</a> options = {.x_scale = 1.2, .y_scale = 0.5};</div>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__comment__options.html">lxw_comment_options</a> options = {.<a class="code" href="structlxw__image__options.html#ac75127b545dc66c6a24e3b41bd20a7ab">x_scale</a> = 1.2, .y_scale = 0.5};</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a158dadac385cd1007994e5478b7b2aa7">worksheet_write_comment_opt</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;C6&quot;</span>), <span class="stringliteral">&quot;Hello&quot;</span>, &amp;options);</div>
 </div><!-- fragment --><p>The following options are available in <a class="el" href="structlxw__comment__options.html" title="Options for inserted comments. ">lxw_comment_options</a>:</p>
