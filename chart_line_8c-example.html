@@ -83,9 +83,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr>
 <td><a class="el" href="chart_column_8c-example.html">&lt;&lt; chart_column.c</a> </td><td align="right"><a class="el" href="chart_scatter_8c-example.html">chart_scatter.c &gt;&gt;</a>  </td></tr>
 </table>
-<p>Example of creating an Excel Line chart.</p>
+<p>Example of creating Excel Line charts. Three types of line chart are shown.</p>
 <p>The default line chart: </p><div class="image">
 <img src="chart_line1.png" alt="chart_line1.png"/>
+</div>
+<p>Stacked line chart: </p><div class="image">
+<img src="chart_line2.png" alt="chart_line2.png"/>
+</div>
+<p>Percent stacked line chart: </p><div class="image">
+<img src="chart_line3.png" alt="chart_line3.png"/>
 </div>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment"> * An example of creating an Excel line chart using the libxlsxwriter library.</span></div>
@@ -170,7 +176,64 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a name="a24"></a><a class="code" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;E2&quot;</span>), chart);</div>
 <div class="line"></div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> <a name="a25"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     * Chart 2. Create a stacked line chart.</span></div>
+<div class="line"><span class="comment">     */</span></div>
+<div class="line">    chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a name="a25"></a><a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca91abd3a3face03ed45f949c5073fcacf">LXW_CHART_LINE_STACKED</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add the first series to the chart. */</span></div>
+<div class="line">    series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$B$2:$B$7&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Set the name for the series instead of the default &quot;Series 1&quot;. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#a4361fb66cf0e15501995f89466888578">chart_series_set_name</a>(series, <span class="stringliteral">&quot;=Sheet1!$B$1&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add the second series to the chart. */</span></div>
+<div class="line">    series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$C$2:$C$7&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Set the name for the series instead of the default &quot;Series 2&quot;. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#a4361fb66cf0e15501995f89466888578">chart_series_set_name</a>(series, <span class="stringliteral">&quot;=Sheet1!$C$1&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add a chart title and some axis labels. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart,        <span class="stringliteral">&quot;Results of sample analysis&quot;</span>);</div>
+<div class="line">    <a class="code" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <span class="stringliteral">&quot;Test number&quot;</span>);</div>
+<div class="line">    <a class="code" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, <span class="stringliteral">&quot;Sample length (mm)&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Set an Excel chart style. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#a6865755f0adb52e41466a6576a8a030e">chart_set_style</a>(chart, 12);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Insert the chart into the worksheet. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;E18&quot;</span>), chart);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     * Chart 3. Create a percent stacked line chart.</span></div>
+<div class="line"><span class="comment">     */</span></div>
+<div class="line">    chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a name="a26"></a><a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca1fe7e2bcd7a70a760828ea37512ee264">LXW_CHART_LINE_STACKED_PERCENT</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add the first series to the chart. */</span></div>
+<div class="line">    series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$B$2:$B$7&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Set the name for the series instead of the default &quot;Series 1&quot;. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#a4361fb66cf0e15501995f89466888578">chart_series_set_name</a>(series, <span class="stringliteral">&quot;=Sheet1!$B$1&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add the second series to the chart. */</span></div>
+<div class="line">    series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>, <span class="stringliteral">&quot;=Sheet1!$C$2:$C$7&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Set the name for the series instead of the default &quot;Series 2&quot;. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#a4361fb66cf0e15501995f89466888578">chart_series_set_name</a>(series, <span class="stringliteral">&quot;=Sheet1!$C$1&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add a chart title and some axis labels. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart,        <span class="stringliteral">&quot;Results of sample analysis&quot;</span>);</div>
+<div class="line">    <a class="code" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a>(chart-&gt;<a class="code" href="structlxw__chart.html#a17fa7931e6825a60de50444438e7f718">x_axis</a>, <span class="stringliteral">&quot;Test number&quot;</span>);</div>
+<div class="line">    <a class="code" href="chart_8h.html#a650d569ff37a087101b7bff4ee7bb130">chart_axis_set_name</a>(chart-&gt;<a class="code" href="structlxw__chart.html#aec951bda729ea8184fa0827c5f091f37">y_axis</a>, <span class="stringliteral">&quot;Sample length (mm)&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Set an Excel chart style. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#a6865755f0adb52e41466a6576a8a030e">chart_set_style</a>(chart, 13);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Insert the chart into the worksheet. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;E34&quot;</span>), chart);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> <a name="a27"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
