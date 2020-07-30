@@ -104,6 +104,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li class="level1"><a href="#gsg_vcpkg">Using libxlsxwriter in Microsoft Visual Studio via vcpkg</a></li>
 <li class="level1"><a href="#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a></li>
 <li class="level1"><a href="#gsg_ming">Installation on Windows using Mingw-w64 and MSYS2</a></li>
+<li class="level1"><a href="#gsg_qt">Installation in Qt-Creator for Windows</a></li>
 <li class="level1"><a href="#gsg_minizip">Linking against system minizip</a></li>
 <li class="level1"><a href="#gsg_endian">Compiling on Big Endian Architecture</a></li>
 <li class="level1"><a href="#gsg_next">Next steps</a></li>
@@ -199,7 +200,17 @@ Installation on macOS and iOS</h1>
 <h2><a class="anchor" id="gsg_cocoapods"></a>
 Install using Cocoa Pods for Xcode</h2>
 <p>For iOS and macOS projects in Xcode you can install libxlsxwriter using <a href="https://cocoapods.org">CocoaPods</a>.</p>
-<p>For a sample Xcode project that uses the libxlsxwriter cocoapod for iOS and macOS with Objective-C and Swift see <a href="https://github.com/lrossi/libxlsxwriterCocoaExamples">libxlsxwriter Cocoa Examples</a>, provided by Ludovico Rossi.</p>
+<p>Add the following entry to your <code>Podfile</code>: </p><pre class="fragment">pod 'libxlsxwriter', '~&gt; 0.9'
+</pre><p>if you are using Swift, you can now add an import: </p><pre class="fragment">import xlsxwriter
+</pre><p>And call its C functions like this: </p><pre class="fragment">let documentDirectory = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:false)
+let fileURL = documentDirectory.appendingPathComponent("hello_world.xlsx")
+
+let workbook = workbook_new((fileURL.absoluteString.dropFirst(6) as NSString).fileSystemRepresentation)
+let worksheet = workbook_add_worksheet(workbook, nil)
+worksheet_write_string(worksheet, 0, 0, "Hello", nil)
+worksheet_write_number(worksheet, 1, 0, 123, nil)
+workbook_close(workbook)
+</pre><p>For a sample Xcode project that uses the libxlsxwriter cocoapod for iOS and macOS with Objective-C and Swift see <a href="https://github.com/lrossi/libxlsxwriterCocoaExamples">libxlsxwriter Cocoa Examples</a> or <a href="https://github.com/FrankenApps/LibXlsxWriterSwiftSample">LibXlsxWriterSwiftSample</a> for an updated example for Swift 5.</p>
 <h2><a class="anchor" id="gsg_brew"></a>
 Installation on macOS with homebrew</h2>
 <p>On macOS you can also use <a href="https://brew.sh">brew/homebrew</a>: </p><pre class="fragment">brew install libxlsxwriter
@@ -383,6 +394,9 @@ make
 </pre><p>After compilation you can follow the instructions in the <a class="el" href="getting_started.html#gsg_install">Install the library</a> and <a class="el" href="getting_started.html#gsg_using">Using the library</a> sections above. When using the library you may also need to link against the zlib library using <code>-lz</code>: </p><pre class="fragment">gcc myexcel.c -o myexcel -lxlsxwriter -lz
 </pre><p>It is also possible to use <a href="https://cygwin.com">Cygwin</a> and the older <a href="http://mingw.org">MinGW and MSYS</a>. Libxlsxwriter has been confirmed to compile and work in all of these environments.</p>
 <p>See also <a class="el" href="getting_started.html#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a>.</p>
+<h1><a class="anchor" id="gsg_qt"></a>
+Installation in Qt-Creator for Windows</h1>
+<p>The following external guide shows how to <a href="https://github.com/jmcnamara/libxlsxwriter/issues/270">Build libxlsxwriter inside Qt-Creator for Windows</a> with step by step instructions.</p>
 <h1><a class="anchor" id="gsg_minizip"></a>
 Linking against system minizip</h1>
 <p>Libxlsxwriter uses the <code>minizip</code> component of <a href="http://www.zlib.net">Zlib</a> to create the xlsx zip file container. The source files for <code>minizip</code> are included in the src tree of libxlsxwriter and are statically linked by default.</p>

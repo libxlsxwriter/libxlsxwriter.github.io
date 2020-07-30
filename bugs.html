@@ -112,7 +112,7 @@ Formulas displayed as 'NAME?' until edited</h1>
 Formula results displaying as zero in non-Excel applications</h1>
 <p>Due to wide range of possible formulas and inter-dependencies between them, <code>xlsxwriter</code> doesn't, and realistically cannot, calculate the result of a formula when it is written to an XLSX file. Instead, it stores the value 0 as the formula result. It then sets a global flag in the XLSX file to say that all formulas and functions should be recalculated when the file is opened.</p>
 <p>This is the method recommended in the Excel documentation and in general it works fine with spreadsheet applications. However, applications that don't have a facility to calculate formulas, such as Excel Viewer, or several mobile applications, will only display the 0 results.</p>
-<p>If required, it is also possible to specify the calculated result of the formula using the <code><a class="el" href="worksheet_8h.html#af474c01f7ec8ac1a01206c9c4a5867af" title="Write a formula to a worksheet cell with a user defined result. ">worksheet_write_formula_num()</a></code> function.</p>
+<p>If required, it is also possible to specify the calculated result of the formula using the <code><a class="el" href="worksheet_8h.html#af474c01f7ec8ac1a01206c9c4a5867af" title="Write a formula to a worksheet cell with a user defined numeric result. ">worksheet_write_formula_num()</a></code> function.</p>
 <p>See also <a class="el" href="working_with_formulas.html">Working with Formulas</a>.</p>
 <h1><a class="anchor" id="bugs_images"></a>
 Images not displayed correctly in Excel 2001 for Mac and non-Excel applications</h1>
