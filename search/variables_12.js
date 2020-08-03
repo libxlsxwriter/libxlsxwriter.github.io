@@ -1,6 +1,7 @@
 var searchData=
 [
   ['validate',['validate',['../structlxw__data__validation.html#a4495d388fd38d3824db6d8b7af3cdecc',1,'lxw_data_validation']]],
+  ['value',['value',['../structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460',1,'lxw_chart_data_label']]],
   ['value_5fdatetime',['value_datetime',['../structlxw__data__validation.html#a88b1a98df0ec6ca3509a2af95ff80b5e',1,'lxw_data_validation']]],
   ['value_5fformula',['value_formula',['../structlxw__data__validation.html#aba116e382c2276bd68fd910a73b6bf64',1,'lxw_data_validation']]],
   ['value_5flist',['value_list',['../structlxw__data__validation.html#a7168c44107ed6b5c63f6b701b69cc50b',1,'lxw_data_validation']]],

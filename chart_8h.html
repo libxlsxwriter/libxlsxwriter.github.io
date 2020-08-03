@@ -187,6 +187,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aede723351fb3f426cd0ef2b891fc6726"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aede723351fb3f426cd0ef2b891fc6726">chart_series_set_labels_options</a> (<a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *series, uint8_t show_name, uint8_t show_category, uint8_t show_value)</td></tr>
 <tr class="memdesc:aede723351fb3f426cd0ef2b891fc6726"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the display options for the labels of a data series.  <a href="#aede723351fb3f426cd0ef2b891fc6726">More...</a><br /></td></tr>
 <tr class="separator:aede723351fb3f426cd0ef2b891fc6726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcaf0404fe7cd5c9e49a7b7025c64a35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#adcaf0404fe7cd5c9e49a7b7025c64a35">chart_series_set_labels_custom</a> (<a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *series, <a class="el" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> *data_labels[])</td></tr>
+<tr class="memdesc:adcaf0404fe7cd5c9e49a7b7025c64a35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the properties for data labels in a series.  <a href="#adcaf0404fe7cd5c9e49a7b7025c64a35">More...</a><br /></td></tr>
+<tr class="separator:adcaf0404fe7cd5c9e49a7b7025c64a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35e370165e50f5e053ccdc96ed933e66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a35e370165e50f5e053ccdc96ed933e66">chart_series_set_labels_separator</a> (<a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *series, uint8_t separator)</td></tr>
 <tr class="memdesc:a35e370165e50f5e053ccdc96ed933e66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the separator for the data label captions.  <a href="#a35e370165e50f5e053ccdc96ed933e66">More...</a><br /></td></tr>
 <tr class="separator:a35e370165e50f5e053ccdc96ed933e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -483,7 +486,7 @@ Functions</h2></td></tr>
 <div class="line">    <span class="stringliteral">&quot;=(Sheet1!$A$1:$A$9,Sheet1!$A$14:$A$25)&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;=(Sheet1!$B$1:$B$9,Sheet1!$B$14:$B$25)&quot;</span></div>
 <div class="line">);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_8c-example.html#a8">chart.c</a>, <a class="el" href="chart_area_8c-example.html#a14">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a14">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#a12">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#a14">chart_column.c</a>, <a class="el" href="chart_data_table_8c-example.html#a14">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a15">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a14">chart_doughnut.c</a>, <a class="el" href="chart_fonts_8c-example.html#a8">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a14">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a13">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a14">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a14">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a14">chart_scatter.c</a>, <a class="el" href="chart_styles_8c-example.html#a11">chart_styles.c</a>, and <a class="el" href="chartsheet_8c-example.html#a16">chartsheet.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_8c-example.html#a8">chart.c</a>, <a class="el" href="chart_area_8c-example.html#a14">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a14">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#a12">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#a14">chart_column.c</a>, <a class="el" href="chart_data_labels_8c-example.html#a16">chart_data_labels.c</a>, <a class="el" href="chart_data_table_8c-example.html#a14">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a15">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a14">chart_doughnut.c</a>, <a class="el" href="chart_fonts_8c-example.html#a8">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a14">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a13">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a14">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a14">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a14">chart_scatter.c</a>, <a class="el" href="chart_styles_8c-example.html#a11">chart_styles.c</a>, and <a class="el" href="chartsheet_8c-example.html#a16">chartsheet.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1228,15 +1231,15 @@ Functions</h2></td></tr>
 <p>The <code>chart_series_set_labels()</code> function is used to turn on data labels for a chart series. Data labels indicate the values of the plotted data points.</p>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
 </div><!-- fragment --><div class="image">
-<img src="chart_labels1.png" alt="chart_labels1.png"/>
+<img src="chart_data_labels1.png" alt="chart_data_labels1.png"/>
 </div>
 <p>By default data labels are displayed in Excel with only the values shown:</p>
 <div class="image">
-<img src="chart_labels2.png" alt="chart_labels2.png"/>
+<img src="chart_data_labels2.png" alt="chart_data_labels2.png"/>
 </div>
 <p>However, it is possible to configure other display options, as shown in the functions below.</p>
 <p>For more information see <a class="el" href="working_with_charts.html#chart_labels">Working with Chart Data Labels</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_tools_8c-example.html#a29">chart_data_tools.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_labels_8c-example.html#a17">chart_data_labels.c</a>, and <a class="el" href="chart_data_tools_8c-example.html#a29">chart_data_tools.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1288,10 +1291,78 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
 <div class="line"><a class="code" href="chart_8h.html#aede723351fb3f426cd0ef2b891fc6726">chart_series_set_labels_options</a>(series, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>);</div>
 </div><!-- fragment --><div class="image">
-<img src="chart_labels3.png" alt="chart_labels3.png"/>
+<img src="chart_data_labels3.png" alt="chart_data_labels3.png"/>
 </div>
 <p>For more information see <a class="el" href="working_with_charts.html#chart_labels">Working with Chart Data Labels</a>. </p>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_labels_8c-example.html#a22">chart_data_labels.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="adcaf0404fe7cd5c9e49a7b7025c64a35"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> chart_series_set_labels_custom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *&#160;</td>
+          <td class="paramname"><em>series</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> *&#160;</td>
+          <td class="paramname"><em>data_labels</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">series</td><td>A series object created via <code><a class="el" href="chart_8h.html#ad60de0eb056e93435407e91482115f55" title="Add a data series to a chart. ">chart_add_series()</a></code>. </td></tr>
+    <tr><td class="paramname">data_labels</td><td>An NULL terminated array of <a class="el" href="structlxw__chart__data__label.html" title="Struct to represent an Excel chart data label. ">lxw_chart_data_label</a> pointers.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a>.</dd></dl>
+<p>The <code>chart_series_set_labels_custom()</code> function is used to set the properties for data labels in a series. It can also be used to delete individual data labels in a series.</p>
+<p>In general properties are set for all the data labels in a chart series. However, it is also possible to set properties for individual data labels in a series using <code>chart_series_set_labels_custom()</code>.</p>
+<p>The <code>chart_series_set_labels_custom()</code> function takes a pointer to an array of <a class="el" href="structlxw__chart__data__label.html" title="Struct to represent an Excel chart data label. ">lxw_chart_data_label</a> pointers. The list should be <code>NULL</code> terminated:</p>
+<div class="fragment"><div class="line"><span class="comment">// Add the series data labels.</span></div>
+<div class="line"><a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Create some custom labels.</span></div>
+<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label1 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Jan&quot;</span>};</div>
+<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label2 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Feb&quot;</span>};</div>
+<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label3 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Mar&quot;</span>};</div>
+<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label4 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Apr&quot;</span>};</div>
+<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label5 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;May&quot;</span>};</div>
+<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label6 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Jun&quot;</span>};</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Create an array of label pointers. NULL indicates the end of the array.</span></div>
+<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> *data_labels[] = {</div>
+<div class="line">    &amp;data_label1,</div>
+<div class="line">    &amp;data_label2,</div>
+<div class="line">    &amp;data_label3,</div>
+<div class="line">    &amp;data_label4,</div>
+<div class="line">    &amp;data_label5,</div>
+<div class="line">    &amp;data_label6,</div>
+<div class="line">    NULL</div>
+<div class="line">};</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Set the custom labels.</span></div>
+<div class="line"><a class="code" href="chart_8h.html#adcaf0404fe7cd5c9e49a7b7025c64a35">chart_series_set_labels_custom</a>(series, data_labels);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_data_labels18.png" alt="chart_data_labels18.png"/>
+</div>
+<dl class="section note"><dt>Note</dt><dd>The array of <a class="el" href="structlxw__chart__point.html" title="Struct to represent an Excel chart data point. ">lxw_chart_point</a> pointers should be NULL terminated as shown in the example. Any <a class="el" href="structlxw__chart__data__label.html" title="Struct to represent an Excel chart data label. ">lxw_chart_data_label</a> items set to a default initialization or omitted from the list will be assigned the default data label value.</dd></dl>
+<p>For more details see <a class="el" href="working_with_charts.html#chart_custom_labels">Custom Chart Data Labels</a>. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_labels_8c-example.html#a31">chart_data_labels.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="a35e370165e50f5e053ccdc96ed933e66"></a>
@@ -1337,7 +1408,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="chart_8h.html#aede723351fb3f426cd0ef2b891fc6726">chart_series_set_labels_options</a>(series, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>);</div>
 <div class="line"><a class="code" href="chart_8h.html#a35e370165e50f5e053ccdc96ed933e66">chart_series_set_labels_separator</a>(series, <a class="code" href="chart_8h.html#a2775e02cfba1d2b2dc85ebadc03f264da3299a79c3621de0373dac60fdc37f2fa">LXW_CHART_LABEL_SEPARATOR_NEWLINE</a>);</div>
 </div><!-- fragment --><div class="image">
-<img src="chart_labels4.png" alt="chart_labels4.png"/>
+<img src="chart_data_labels4.png" alt="chart_data_labels4.png"/>
 </div>
 <p>For more information see <a class="el" href="working_with_charts.html#chart_labels">Working with Chart Data Labels</a>. </p>
 
@@ -1377,7 +1448,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
 <div class="line"><a class="code" href="chart_8h.html#a6f4baebf02df517d55a5d1447e3511cd">chart_series_set_labels_position</a>(series, <a class="code" href="chart_8h.html#a1128d0e553fc350134c4937a19cfe430af5e0e1d7fda566367f65c52f793a25c8">LXW_CHART_LABEL_POSITION_ABOVE</a>);</div>
 </div><!-- fragment --><div class="image">
-<img src="chart_labels5.png" alt="chart_labels5.png"/>
+<img src="chart_data_labels5.png" alt="chart_data_labels5.png"/>
 </div>
 <p>In Excel the allowable data label positions vary for different chart types. The allowable, and default, positions are:</p>
 <table class="doxtable">
@@ -1456,7 +1527,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
 <div class="line"><a class="code" href="chart_8h.html#a0da8f7fad7a0967686a6006a7178c41b">chart_series_set_labels_legend</a>(series);</div>
 </div><!-- fragment --><div class="image">
-<img src="chart_labels6.png" alt="chart_labels6.png"/>
+<img src="chart_data_labels6.png" alt="chart_data_labels6.png"/>
 </div>
 <p>For more information see <a class="el" href="working_with_charts.html#chart_labels">Working with Chart Data Labels</a>. </p>
 
@@ -1486,7 +1557,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="chart_8h.html#aede723351fb3f426cd0ef2b891fc6726">chart_series_set_labels_options</a>(series, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>, <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>);</div>
 <div class="line"><a class="code" href="chart_8h.html#ac13170c981b800c64596e4355e87044c">chart_series_set_labels_percentage</a>(series);</div>
 </div><!-- fragment --><div class="image">
-<img src="chart_labels7.png" alt="chart_labels7.png"/>
+<img src="chart_data_labels7.png" alt="chart_data_labels7.png"/>
 </div>
 <p>For more information see <a class="el" href="working_with_charts.html#chart_labels">Working with Chart Data Labels</a>. </p>
 
@@ -1526,7 +1597,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
 <div class="line"><a class="code" href="chart_8h.html#aaaf55fefef465fee308c5fe5be44674b">chart_series_set_labels_num_format</a>(series, <span class="stringliteral">&quot;$0.00&quot;</span>);</div>
 </div><!-- fragment --><div class="image">
-<img src="chart_labels8.png" alt="chart_labels8.png"/>
+<img src="chart_data_labels8.png" alt="chart_data_labels8.png"/>
 </div>
 <p>The number format is similar to the Worksheet Cell Format num_format, see <code><a class="el" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c" title="Set the number format for a cell. ">format_set_num_format()</a></code>.</p>
 <p>For more information see <a class="el" href="working_with_charts.html#chart_labels">Working with Chart Data Labels</a>. </p>
@@ -1569,10 +1640,11 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
 <div class="line"><a class="code" href="chart_8h.html#aea2957adf1e8c754f771bbcb836229d4">chart_series_set_labels_font</a>(series, &amp;font);</div>
 </div><!-- fragment --><div class="image">
-<img src="chart_labels9.png" alt="chart_labels9.png"/>
+<img src="chart_data_labels9.png" alt="chart_data_labels9.png"/>
 </div>
 <p>For more information see <a class="el" href="working_with_charts.html#chart_fonts">Chart formatting: Fonts</a> and <a class="el" href="working_with_charts.html#chart_labels">Working with Chart Data Labels</a>. </p>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_labels_8c-example.html#a28">chart_data_labels.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="a59b3a386d854b9cb5e8bbdf9eef0c97d"></a>
@@ -3475,7 +3547,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, <span class="stringliteral">&quot;=Sheet1!$B$1&quot;</span>);</div>
 </div><!-- fragment --><p>See also the <code><a class="el" href="chart_8h.html#a642fbe010112eefcf10779da732e936b" title="Set a chart title formula using row and column values. ">chart_title_set_name_range()</a></code> function to see how to set the name formula programmatically.</p>
 <p>The Excel default is to have no chart title. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_area_8c-example.html#a19">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a19">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a19">chart_column.c</a>, <a class="el" href="chart_data_table_8c-example.html#a19">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a14">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a16">chart_doughnut.c</a>, <a class="el" href="chart_fonts_8c-example.html#a16">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a19">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a15">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a16">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a19">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a19">chart_scatter.c</a>, <a class="el" href="chart_styles_8c-example.html#a12">chart_styles.c</a>, and <a class="el" href="chartsheet_8c-example.html#a21">chartsheet.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_area_8c-example.html#a19">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a19">chart_bar.c</a>, <a class="el" href="chart_column_8c-example.html#a19">chart_column.c</a>, <a class="el" href="chart_data_labels_8c-example.html#a14">chart_data_labels.c</a>, <a class="el" href="chart_data_table_8c-example.html#a19">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a14">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a16">chart_doughnut.c</a>, <a class="el" href="chart_fonts_8c-example.html#a16">chart_fonts.c</a>, <a class="el" href="chart_line_8c-example.html#a19">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a15">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a16">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a19">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a19">chart_scatter.c</a>, <a class="el" href="chart_styles_8c-example.html#a12">chart_styles.c</a>, and <a class="el" href="chartsheet_8c-example.html#a21">chartsheet.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -3644,7 +3716,7 @@ LXW_CHART_LEGEND_OVERLAY_TOP_RIGHT
 </div><!-- fragment --><div class="image">
 <img src="chart_legend_none.png" alt="chart_legend_none.png"/>
 </div>
- <dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_clustered_8c-example.html#a14">chart_clustered.c</a>, <a class="el" href="chart_data_table_8c-example.html#a27">chart_data_table.c</a>, and <a class="el" href="chart_fonts_8c-example.html#a23">chart_fonts.c</a>.</dd>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_clustered_8c-example.html#a14">chart_clustered.c</a>, <a class="el" href="chart_data_labels_8c-example.html#a18">chart_data_labels.c</a>, <a class="el" href="chart_data_table_8c-example.html#a27">chart_data_table.c</a>, and <a class="el" href="chart_fonts_8c-example.html#a23">chart_fonts.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -4603,6 +4675,19 @@ LXW_CHART_LEGEND_OVERLAY_TOP_RIGHT
 
 </div>
 </div>
+<a class="anchor" id="a4891191779f8f637d180bf7a165aeb4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structlxw__chart__data__label.html">lxw_chart_data_label</a>  <a class="el" href="structlxw__chart__data__label.html">lxw_chart_data_label</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The <a class="el" href="structlxw__chart__data__label.html" title="Struct to represent an Excel chart data label. ">lxw_chart_data_label</a> struct is used to represent a data label in a chart series so that custom properties can be set for it. </p>
+
+</div>
+</div>
 <a class="anchor" id="a3a404c5dd6bc6d21a5e20c2e96ccb701"></a>
 <div class="memitem">
 <div class="memproto">
@@ -5411,6 +5496,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__point.html">lxw_chart_point</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel chart data point.  <a href="structlxw__chart__point.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__data__label.html">lxw_chart_data_label</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel chart data label.  <a href="structlxw__chart__data__label.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__series.html">lxw_chart_series</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel chart data series.  <a href="structlxw__chart__series.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -5498,6 +5586,9 @@ typedef enum <br class="typebreak" />
 <tr class="memitem:a7431004f56580318db63df64ff239d4a"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__chart__point.html">lxw_chart_point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a7431004f56580318db63df64ff239d4a">lxw_chart_point</a></td></tr>
 <tr class="memdesc:a7431004f56580318db63df64ff239d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel chart data point.  <a href="#a7431004f56580318db63df64ff239d4a">More...</a><br /></td></tr>
 <tr class="separator:a7431004f56580318db63df64ff239d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4891191779f8f637d180bf7a165aeb4a"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__chart__data__label.html">lxw_chart_data_label</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a4891191779f8f637d180bf7a165aeb4a">lxw_chart_data_label</a></td></tr>
+<tr class="memdesc:a4891191779f8f637d180bf7a165aeb4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel chart data label.  <a href="#a4891191779f8f637d180bf7a165aeb4a">More...</a><br /></td></tr>
+<tr class="separator:a4891191779f8f637d180bf7a165aeb4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a049cdd6d20fcfc71def6a6155afda2ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a049cdd6d20fcfc71def6a6155afda2ac"></a>
 typedef enum <a class="el" href="chart_8h.html#af7ecbdf6aeea5098164e88a0107aa89c">lxw_chart_blank</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a049cdd6d20fcfc71def6a6155afda2ac">lxw_chart_blank</a></td></tr>
 <tr class="memdesc:a049cdd6d20fcfc71def6a6155afda2ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define how blank values are displayed in a chart. <br /></td></tr>

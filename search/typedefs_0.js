@@ -8,6 +8,7 @@ var searchData=
   ['lxw_5fchart_5faxis_5ftick_5fposition',['lxw_chart_axis_tick_position',['../chart_8h.html#aa40b19d5576be11988d2f8fe4e3ee8c3',1,'chart.h']]],
   ['lxw_5fchart_5faxis_5ftype',['lxw_chart_axis_type',['../chart_8h.html#aa057baee0d7fab6a02e21e4de8a0e425',1,'chart.h']]],
   ['lxw_5fchart_5fblank',['lxw_chart_blank',['../chart_8h.html#a049cdd6d20fcfc71def6a6155afda2ac',1,'chart.h']]],
+  ['lxw_5fchart_5fdata_5flabel',['lxw_chart_data_label',['../chart_8h.html#a4891191779f8f637d180bf7a165aeb4a',1,'chart.h']]],
   ['lxw_5fchart_5ferror_5fbar_5faxis',['lxw_chart_error_bar_axis',['../chart_8h.html#afe7da8cd21a9b550ce2287b2f734dd58',1,'chart.h']]],
   ['lxw_5fchart_5ferror_5fbar_5fcap',['lxw_chart_error_bar_cap',['../chart_8h.html#a8497875b7ff31f1724fb32ea461dd135',1,'chart.h']]],
   ['lxw_5fchart_5ferror_5fbar_5fdirection',['lxw_chart_error_bar_direction',['../chart_8h.html#ae67b71f99fe00822f67e7631c80d5aff',1,'chart.h']]],

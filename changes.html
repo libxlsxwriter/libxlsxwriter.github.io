@@ -79,7 +79,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Changes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>0.9.5 May 31 2020</h2>
+<div class="textblock"><h2>0.9.6 August 3 2020</h2>
+<ul>
+<li>Added support for chart custom data labels. See <a class="el" href="working_with_charts.html#chart_custom_labels">Custom Chart Data Labels</a> and <a class="el" href="chart_data_labels_8c-example.html">chart_data_labels.c</a>.</li>
+<li>Fix for issue where array formulas weren't included in the output file for certain ranges/conditions. Issue <a href="https://github.com/jmcnamara/XlsxWriter/issues/735">#735</a>.</li>
+</ul>
+<h2>0.9.5 May 31 2020</h2>
 <ul>
 <li>Fix for issue where hyperlinks urls and tips were ignored for <code><a class="el" href="worksheet_8h.html#af4c868a5cf0eaab8740c1f966ba5561c" title="Insert an image in a worksheet cell, from a memory buffer. ">worksheet_insert_image_buffer_opt()</a></code> images. Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/292">#292</a>.</li>
 <li>Added <a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca91abd3a3face03ed45f949c5073fcacf">LXW_CHART_LINE_STACKED</a> and <a class="el" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85ca1fe7e2bcd7a70a760828ea37512ee264">LXW_CHART_LINE_STACKED_PERCENT</a> line charts subtypes.</li>

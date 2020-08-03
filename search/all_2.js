@@ -55,6 +55,7 @@ var searchData=
   ['chart_5fseries_5fset_5ffill',['chart_series_set_fill',['../chart_8h.html#a6f1d7cd452a4a3f87046468ce5588bfd',1,'chart.h']]],
   ['chart_5fseries_5fset_5finvert_5fif_5fnegative',['chart_series_set_invert_if_negative',['../chart_8h.html#aec54a5e2359af30e5d5694db63ab9607',1,'chart.h']]],
   ['chart_5fseries_5fset_5flabels',['chart_series_set_labels',['../chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9',1,'chart.h']]],
+  ['chart_5fseries_5fset_5flabels_5fcustom',['chart_series_set_labels_custom',['../chart_8h.html#adcaf0404fe7cd5c9e49a7b7025c64a35',1,'chart.h']]],
   ['chart_5fseries_5fset_5flabels_5ffont',['chart_series_set_labels_font',['../chart_8h.html#aea2957adf1e8c754f771bbcb836229d4',1,'chart.h']]],
   ['chart_5fseries_5fset_5flabels_5fleader_5fline',['chart_series_set_labels_leader_line',['../chart_8h.html#ab81a050644bc887512b435b1022950aa',1,'chart.h']]],
   ['chart_5fseries_5fset_5flabels_5flegend',['chart_series_set_labels_legend',['../chart_8h.html#a0da8f7fad7a0967686a6006a7178c41b',1,'chart.h']]],
