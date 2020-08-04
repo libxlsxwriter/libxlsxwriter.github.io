@@ -79,7 +79,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Changes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>0.9.6 August 3 2020</h2>
+<div class="textblock"><h2>0.9.7 August 3 2020</h2>
+<ul>
+<li>Changed <a class="el" href="structlxw__chart__data__label.html" title="Struct to represent an Excel chart data label. ">lxw_chart_data_label</a> field from <code>.delete</code> to <code>.hide</code> in order to avoid reserved word conflict with C++. Issue <a href="https://github.com/jmcnamara/libxlsxwriter/issues/300">#300</a>.</li>
+</ul>
+<h2>0.9.6 August 3 2020</h2>
 <ul>
 <li>Added support for chart custom data labels. See <a class="el" href="working_with_charts.html#chart_custom_labels">Custom Chart Data Labels</a> and <a class="el" href="chart_data_labels_8c-example.html">chart_data_labels.c</a>.</li>
 <li>Fix for issue where array formulas weren't included in the output file for certain ranges/conditions. Issue <a href="https://github.com/jmcnamara/XlsxWriter/issues/735">#735</a>.</li>

@@ -706,22 +706,22 @@ Custom Chart Data Labels</h2>
 </div><!-- fragment --><div class="image">
 <img src="chart_data_labels20.png" alt="chart_data_labels20.png"/>
 </div>
-<p>The <code>delete</code> element in the <a class="el" href="structlxw__chart__data__label.html" title="Struct to represent an Excel chart data label. ">lxw_chart_data_label</a> struct can be used to delete labels in a series. This can be useful if you want to highlight one or more cells in the series, for example the maximum and the minimum:</p>
+<p>The <code>hide</code> element in the <a class="el" href="structlxw__chart__data__label.html" title="Struct to represent an Excel chart data label. ">lxw_chart_data_label</a> struct can be used to hide/delete labels in a series. This can be useful if you want to highlight one or more cells in the series, for example the maximum and the minimum:</p>
 <div class="fragment"><div class="line"><span class="comment">// Add the series data labels.</span></div>
 <div class="line"><a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Create some custom labels.</span></div>
-<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> <span class="keyword">delete</span> = {.<a class="code" href="structlxw__chart__data__label.html#a46ecdef66d09a889808fe03fe3d06c18">delete</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>};</div>
-<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> keep   = {.<a class="code" href="structlxw__chart__data__label.html#a46ecdef66d09a889808fe03fe3d06c18">delete</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>};</div>
+<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> hide = {.<a class="code" href="structlxw__chart__data__label.html#a4cd68183846a54e6fa95edc8ba873ec9">hide</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>};</div>
+<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> keep = {.<a class="code" href="structlxw__chart__data__label.html#a4cd68183846a54e6fa95edc8ba873ec9">hide</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>};</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Create an array of label pointers. NULL indicates the end of the array.</span></div>
 <div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> *data_labels[] = {</div>
-<div class="line">    &amp;<span class="keyword">delete</span>,</div>
+<div class="line">    &amp;hide,</div>
 <div class="line">    &amp;keep,</div>
-<div class="line">    &amp;<span class="keyword">delete</span>,</div>
-<div class="line">    &amp;<span class="keyword">delete</span>,</div>
+<div class="line">    &amp;hide,</div>
+<div class="line">    &amp;hide,</div>
 <div class="line">    &amp;keep,</div>
-<div class="line">    &amp;<span class="keyword">delete</span>,</div>
+<div class="line">    &amp;hide,</div>
 <div class="line">    NULL</div>
 <div class="line">};</div>
 <div class="line"></div>

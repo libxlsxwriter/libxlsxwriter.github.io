@@ -99,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Chart 5: chart with custom data labels referenced from worksheet cells. </p><div class="image">
 <img src="chart_data_labels15.png" alt="chart_data_labels15.png"/>
 </div>
-<p>Chart 6: chart with a mix of custom and default labels. The items inialised with '{0}' and items without a custom label (points 5 and 6 which come after NULL) will get the default value. We also set a font for the custom items as an extra example. </p><div class="image">
+<p>Chart 6: chart with a mix of custom and default labels. The items initialized with '{0}' and items without a custom label (points 5 and 6 which come after NULL) will get the default value. We also set a font for the custom items as an extra example. </p><div class="image">
 <img src="chart_data_labels16.png" alt="chart_data_labels16.png"/>
 </div>
 <p>Chart 7: chart with some deleted custom labels and defaults. </p><div class="image">
@@ -365,7 +365,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/*</span></div>
-<div class="line"><span class="comment">     * Chart 7. Example with deleted custom data labels.</span></div>
+<div class="line"><span class="comment">     * Chart 7. Example with deleted/hidden custom data labels.</span></div>
 <div class="line"><span class="comment">     */</span></div>
 <div class="line">    chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cafa7f69bde9c99b5818297c64e8b9070a">LXW_CHART_COLUMN</a>);</div>
 <div class="line"></div>
@@ -380,20 +380,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Create some custom labels. */</span></div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> <span class="keyword">delete</span> = {.<a name="a33"></a><a class="code" href="structlxw__chart__data__label.html#a46ecdef66d09a889808fe03fe3d06c18">delete</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>};</div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> keep   = {.<a class="code" href="structlxw__chart__data__label.html#a46ecdef66d09a889808fe03fe3d06c18">delete</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> hide = {.<a name="a33"></a><a class="code" href="structlxw__chart__data__label.html#a4cd68183846a54e6fa95edc8ba873ec9">hide</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> keep = {.<a class="code" href="structlxw__chart__data__label.html#a4cd68183846a54e6fa95edc8ba873ec9">hide</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>};</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* An initialized struct like this would also work: */</span></div>
 <div class="line">    <span class="comment">/* lxw_chart_data_label keep = {0}; */</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Create an array of label pointers. NULL indicates the end of the array. */</span></div>
 <div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> *data_labels7[] = {</div>
-<div class="line">        &amp;<span class="keyword">delete</span>,</div>
+<div class="line">        &amp;hide,</div>
 <div class="line">        &amp;keep,</div>
-<div class="line">        &amp;<span class="keyword">delete</span>,</div>
-<div class="line">        &amp;<span class="keyword">delete</span>,</div>
+<div class="line">        &amp;hide,</div>
+<div class="line">        &amp;hide,</div>
 <div class="line">        &amp;keep,</div>
-<div class="line">        &amp;<span class="keyword">delete</span>,</div>
+<div class="line">        &amp;hide,</div>
 <div class="line">        NULL</div>
 <div class="line">    };</div>
 <div class="line"></div>
