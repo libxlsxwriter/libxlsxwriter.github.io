@@ -2,7 +2,7 @@ var searchData=
 [
   ['frequently_20asked_20questions',['Frequently Asked Questions',['../faq.html',1,'']]],
   ['fg_5fcolor',['fg_color',['../structlxw__chart__pattern.html#ac6b955efa0f4fc0df8e6c6ff38a3f30d',1,'lxw_chart_pattern']]],
-  ['fill',['fill',['../structlxw__chart__point.html#a99ad02687c88e7ac4625fa8c12f6ba48',1,'lxw_chart_point']]],
+  ['fill',['fill',['../structlxw__chart__point.html#a99ad02687c88e7ac4625fa8c12f6ba48',1,'lxw_chart_point::fill()'],['../structlxw__chart__data__label.html#a5ec62b7c74059c02c7258b70218a1a78',1,'lxw_chart_data_label::fill()']]],
   ['font',['font',['../structlxw__chart__data__label.html#a5293d8aace00c4288f3098575db9589a',1,'lxw_chart_data_label']]],
   ['font_5ffamily',['font_family',['../structlxw__comment__options.html#ae26ce8cbacfcff2967944e7c97cdfdfe',1,'lxw_comment_options']]],
   ['font_5fname',['font_name',['../structlxw__comment__options.html#a81608aa6e7816544847c1a74beb0f34d',1,'lxw_comment_options']]],

@@ -86,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="structlxw__chart__data__label.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="structlxw__chart__data__label.html" title="Struct to represent an Excel chart data label. ">lxw_chart_data_label</a> struct is used to represent a data label in a chart series so that custom properties can be set for it. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_labels_8c-example.html#_a29">chart_data_labels.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_labels_8c-example.html#_a36">chart_data_labels.c</a>.</dd>
 </dl></div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -96,6 +96,12 @@ Data Fields</h2></td></tr>
 <tr class="separator:a4cd68183846a54e6fa95edc8ba873ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5293d8aace00c4288f3098575db9589a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__chart__font.html">lxw_chart_font</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__data__label.html#a5293d8aace00c4288f3098575db9589a">font</a></td></tr>
 <tr class="separator:a5293d8aace00c4288f3098575db9589a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3124712fa23bceb71baacffa812d756a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__chart__line.html">lxw_chart_line</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__data__label.html#a3124712fa23bceb71baacffa812d756a">line</a></td></tr>
+<tr class="separator:a3124712fa23bceb71baacffa812d756a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ec62b7c74059c02c7258b70218a1a78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__chart__fill.html">lxw_chart_fill</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__data__label.html#a5ec62b7c74059c02c7258b70218a1a78">fill</a></td></tr>
+<tr class="separator:a5ec62b7c74059c02c7258b70218a1a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3e66ab25f3ba1aa8f470c3db9af1e04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__chart__pattern.html">lxw_chart_pattern</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__data__label.html#aa3e66ab25f3ba1aa8f470c3db9af1e04">pattern</a></td></tr>
+<tr class="separator:aa3e66ab25f3ba1aa8f470c3db9af1e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
 <a class="anchor" id="a084f083e48841fa41d109a4601441460"></a>
@@ -108,7 +114,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>The string or formula value for the data label. See <a class="el" href="working_with_charts.html#chart_custom_labels">Custom Chart Data Labels</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_labels_8c-example.html#a30">chart_data_labels.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_labels_8c-example.html#a37">chart_data_labels.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -122,7 +128,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Option to hide/delete the data label from the chart series. See <a class="el" href="working_with_charts.html#chart_custom_labels">Custom Chart Data Labels</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_labels_8c-example.html#a33">chart_data_labels.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_labels_8c-example.html#a40">chart_data_labels.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -136,6 +142,45 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>The font properties for the chart data label. <a class="el" href="working_with_charts.html#chart_fonts">Chart formatting: Fonts</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3124712fa23bceb71baacffa812d756a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlxw__chart__line.html">lxw_chart_line</a>* lxw_chart_data_label::line</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The line/border for the chart data label. See <a class="el" href="working_with_charts.html#chart_lines">Chart formatting: Line</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5ec62b7c74059c02c7258b70218a1a78"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlxw__chart__fill.html">lxw_chart_fill</a>* lxw_chart_data_label::fill</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The fill for the chart data label. See <a class="el" href="working_with_charts.html#chart_fills">Chart formatting: Fill</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa3e66ab25f3ba1aa8f470c3db9af1e04"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlxw__chart__pattern.html">lxw_chart_pattern</a>* lxw_chart_data_label::pattern</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The pattern for the chart data label. See <a class="el" href="working_with_charts.html#chart_patterns">Chart formatting: Pattern</a>. </p>
 
 </div>
 </div>

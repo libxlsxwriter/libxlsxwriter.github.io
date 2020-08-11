@@ -2,7 +2,7 @@ var searchData=
 [
   ['level',['level',['../structlxw__row__col__options.html#a3bce7511a4db9fed6e52f071aba4d78f',1,'lxw_row_col_options']]],
   ['license',['License',['../license.html',1,'']]],
-  ['line',['line',['../structlxw__chart__point.html#a87fef88f0b3cedd6d61dc4d89eb77e11',1,'lxw_chart_point']]],
+  ['line',['line',['../structlxw__chart__point.html#a87fef88f0b3cedd6d61dc4d89eb77e11',1,'lxw_chart_point::line()'],['../structlxw__chart__data__label.html#a3124712fa23bceb71baacffa812d756a',1,'lxw_chart_data_label::line()']]],
   ['lxw_5falign_5fcenter',['LXW_ALIGN_CENTER',['../format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a9899936ef3a43721b394b9b5d2314496',1,'format.h']]],
   ['lxw_5falign_5fcenter_5facross',['LXW_ALIGN_CENTER_ACROSS',['../format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5ae1400bbf14fd49d4e3525f479a5f55f0',1,'format.h']]],
   ['lxw_5falign_5fdistributed',['LXW_ALIGN_DISTRIBUTED',['../format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a1ff90b4c61e058bf2254f43e534d9c57',1,'format.h']]],

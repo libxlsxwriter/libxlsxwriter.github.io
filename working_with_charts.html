@@ -596,6 +596,15 @@ Working with Chart Data Labels</h1>
 <img src="chart_data_labels9.png" alt="chart_data_labels9.png"/>
 </div>
 <p>For more information see <a class="el" href="working_with_charts.html#chart_fonts">Chart formatting: Fonts</a> below.</p>
+<p>The <code><a class="el" href="chart_8h.html#a4476eee2a69555f7eac7f716d179fad6" title="Set the line properties for the data labels in a chart series. ">chart_series_set_labels_line()</a></code>, <code><a class="el" href="chart_8h.html#add8ab9f6f62a3de270b8d17bd2748217" title="Set the fill properties for the data labels in a chart series. ">chart_series_set_labels_fill()</a></code> and <code><a class="el" href="chart_8h.html#afa638b6c6dd10d58d43ee8d1f6667833" title="Set the pattern properties for the data labels in a chart series. ">chart_series_set_labels_pattern()</a></code> functions can be used to set the formatting for a data series using standard chart formatting structs:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__chart__line.html">lxw_chart_line</a> line = {.<a class="code" href="structlxw__chart__line.html#a2619e85b4ece41f55302b5bc8157d738">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>};</div>
+<div class="line"><a class="code" href="structlxw__chart__fill.html">lxw_chart_fill</a> fill = {.<a class="code" href="structlxw__chart__fill.html#a1780f71f3de68cb03e2f2825952283e4">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baebda4f169497f225a9c67bb51691c095">LXW_COLOR_YELLOW</a>};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a4476eee2a69555f7eac7f716d179fad6">chart_series_set_labels_line</a>(series, &amp;line);</div>
+<div class="line"><a class="code" href="chart_8h.html#add8ab9f6f62a3de270b8d17bd2748217">chart_series_set_labels_fill</a>(series, &amp;fill);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_data_labels24.png" alt="chart_data_labels24.png"/>
+</div>
 <h2><a class="anchor" id="chart_custom_labels"></a>
 Custom Chart Data Labels</h2>
 <p>The <code><a class="el" href="chart_8h.html#adcaf0404fe7cd5c9e49a7b7025c64a35" title="Set the properties for data labels in a series. ">chart_series_set_labels_custom()</a></code> function is used to set the properties of individual data labels in a series. The most common use for this is to set custom text or number labels:</p>
@@ -729,6 +738,41 @@ Custom Chart Data Labels</h2>
 <div class="line"><a class="code" href="chart_8h.html#adcaf0404fe7cd5c9e49a7b7025c64a35">chart_series_set_labels_custom</a>(series, data_labels);</div>
 </div><!-- fragment --><div class="image">
 <img src="chart_data_labels21.png" alt="chart_data_labels21.png"/>
+</div>
+<p>Standard chart formatting such as <a class="el" href="structlxw__chart__line.html" title="Struct to represent a chart line. ">lxw_chart_line</a>, <a class="el" href="structlxw__chart__fill.html" title="Struct to represent a chart fill. ">lxw_chart_fill</a> and <a class="el" href="structlxw__chart__pattern.html" title="Struct to represent a chart pattern. ">lxw_chart_pattern</a> can also be applied to custom data labels via <a class="el" href="structlxw__chart__data__label.html" title="Struct to represent an Excel chart data label. ">lxw_chart_data_label</a>:</p>
+<div class="fragment"><div class="line"><span class="comment">// Set the border/line and fill for the data labels.</span></div>
+<div class="line"><a class="code" href="structlxw__chart__line.html">lxw_chart_line</a> line2 = {.<a class="code" href="structlxw__chart__line.html#a2619e85b4ece41f55302b5bc8157d738">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>};</div>
+<div class="line"><a class="code" href="structlxw__chart__fill.html">lxw_chart_fill</a> fill2 = {.<a class="code" href="structlxw__chart__fill.html#a1780f71f3de68cb03e2f2825952283e4">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baebda4f169497f225a9c67bb51691c095">LXW_COLOR_YELLOW</a>};</div>
+<div class="line"><a class="code" href="structlxw__chart__line.html">lxw_chart_line</a> line3 = {.<a class="code" href="structlxw__chart__line.html#a2619e85b4ece41f55302b5bc8157d738">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>};</div>
+<div class="line"><a class="code" href="structlxw__chart__fill.html">lxw_chart_fill</a> fill3 = {.<a class="code" href="structlxw__chart__fill.html#a1780f71f3de68cb03e2f2825952283e4">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38bae0b5c39ced3b8c871974f0e4917e4871">LXW_COLOR_GREEN</a>};</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Create some custom labels.</span></div>
+<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label9_1 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Amy&quot;</span>, .line = &amp;line3};</div>
+<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label9_2 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Bea&quot;</span>};</div>
+<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label9_3 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Eva&quot;</span>};</div>
+<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label9_4 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Fay&quot;</span>};</div>
+<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label9_5 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Liv&quot;</span>};</div>
+<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label9_6 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Una&quot;</span>, .fill = &amp;fill3};</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Set the default formatting for the data labels in the series.</span></div>
+<div class="line"><a class="code" href="chart_8h.html#a4476eee2a69555f7eac7f716d179fad6">chart_series_set_labels_line</a>(series, &amp;line2);</div>
+<div class="line"><a class="code" href="chart_8h.html#add8ab9f6f62a3de270b8d17bd2748217">chart_series_set_labels_fill</a>(series, &amp;fill2);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Create an array of label pointers. NULL indicates the end of the array.</span></div>
+<div class="line"><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> *data_labels9[] = {</div>
+<div class="line">    &amp;data_label9_1,</div>
+<div class="line">    &amp;data_label9_2,</div>
+<div class="line">    &amp;data_label9_3,</div>
+<div class="line">    &amp;data_label9_4,</div>
+<div class="line">    &amp;data_label9_5,</div>
+<div class="line">    &amp;data_label9_6,</div>
+<div class="line">    NULL</div>
+<div class="line">};</div>
+<div class="line"></div>
+<div class="line"><span class="comment">/* Set the custom labels. */</span></div>
+<div class="line"><a class="code" href="chart_8h.html#adcaf0404fe7cd5c9e49a7b7025c64a35">chart_series_set_labels_custom</a>(series, data_labels9);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_data_labels25.png" alt="chart_data_labels25.png"/>
 </div>
 <h1><a class="anchor" id="chart_formatting"></a>
 Chart Formatting</h1>

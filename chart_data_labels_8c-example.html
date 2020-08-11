@@ -93,17 +93,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Chart 3: chart with data labels with a user defined font. </p><div class="image">
 <img src="chart_data_labels13.png" alt="chart_data_labels13.png"/>
 </div>
-<p>Chart 4: chart with custom string data labels. </p><div class="image">
+<p>Chart 4: chart with data labels and formatting. </p><div class="image">
+<img src="chart_data_labels22.png" alt="chart_data_labels22.png"/>
+</div>
+<p>Chart 5: chart with custom string data labels. </p><div class="image">
 <img src="chart_data_labels14.png" alt="chart_data_labels14.png"/>
 </div>
-<p>Chart 5: chart with custom data labels referenced from worksheet cells. </p><div class="image">
+<p>Chart 6: chart with custom data labels referenced from worksheet cells. </p><div class="image">
 <img src="chart_data_labels15.png" alt="chart_data_labels15.png"/>
 </div>
-<p>Chart 6: chart with a mix of custom and default labels. The items initialized with '{0}' and items without a custom label (points 5 and 6 which come after NULL) will get the default value. We also set a font for the custom items as an extra example. </p><div class="image">
+<p>Chart 7: chart with a mix of custom and default labels. The items initialized with '{0}' and items without a custom label (points 5 and 6 which come after NULL) will get the default value. We also set a font for the custom items as an extra example. </p><div class="image">
 <img src="chart_data_labels16.png" alt="chart_data_labels16.png"/>
 </div>
-<p>Chart 7: chart with some deleted custom labels and defaults. </p><div class="image">
+<p>Chart 8: chart with some deleted custom labels and defaults. </p><div class="image">
 <img src="chart_data_labels17.png" alt="chart_data_labels17.png"/>
+</div>
+<p>Chart 9: chart with custom string data labels and formatting. </p><div class="image">
+<img src="chart_data_labels23.png" alt="chart_data_labels23.png"/>
 </div>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment"> * A demo of an various Excel chart data label features that are available via</span></div>
@@ -229,7 +235,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/*</span></div>
-<div class="line"><span class="comment">     * Chart 4.Example with custom string data labels.</span></div>
+<div class="line"><span class="comment">     * Chart 4. Example with standard data labels and formatting.</span></div>
+<div class="line"><span class="comment">     */</span></div>
+<div class="line">    chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cafa7f69bde9c99b5818297c64e8b9070a">LXW_CHART_COLUMN</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add a chart title. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, <span class="stringliteral">&quot;Data labels with formatting&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add a data series to the chart. */</span></div>
+<div class="line">    series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>,</div>
+<div class="line">                                     <span class="stringliteral">&quot;=Sheet1!$B$2:$B$7&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add the series data labels. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Set the border/line and fill for the data labels. */</span></div>
+<div class="line">    <a name="_a29"></a><a class="code" href="structlxw__chart__line.html">lxw_chart_line</a> line1 = {.<a name="a30"></a><a class="code" href="structlxw__chart__line.html#a2619e85b4ece41f55302b5bc8157d738">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>};</div>
+<div class="line">    <a name="_a31"></a><a class="code" href="structlxw__chart__fill.html">lxw_chart_fill</a> fill1 = {.<a name="a32"></a><a class="code" href="structlxw__chart__fill.html#a1780f71f3de68cb03e2f2825952283e4">color</a> = <a name="a33"></a><a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baebda4f169497f225a9c67bb51691c095">LXW_COLOR_YELLOW</a>};</div>
+<div class="line"></div>
+<div class="line">    <a name="a34"></a><a class="code" href="chart_8h.html#a4476eee2a69555f7eac7f716d179fad6">chart_series_set_labels_line</a>(series, &amp;line1);</div>
+<div class="line">    <a name="a35"></a><a class="code" href="chart_8h.html#add8ab9f6f62a3de270b8d17bd2748217">chart_series_set_labels_fill</a>(series, &amp;fill1);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Turn off the legend. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#af1382251c31fd8f97e19048acf5db0a1">chart_legend_set_position</a>(chart, <a class="code" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22a8077ef4a20bd15141f6b747f12ea17a4">LXW_CHART_LEGEND_NONE</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Insert the chart into the worksheet. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a4e8ea2614bc214fa0cc8992733c51f5f">worksheet_insert_chart_opt</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;D50&quot;</span>), chart, &amp;options);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     * Chart 5.Example with custom string data labels.</span></div>
 <div class="line"><span class="comment">     */</span></div>
 <div class="line">    chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cafa7f69bde9c99b5818297c64e8b9070a">LXW_CHART_COLUMN</a>);</div>
 <div class="line"></div>
@@ -244,36 +279,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Create some custom labels. */</span></div>
-<div class="line">    <a name="_a29"></a><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label41 = {.<a name="a30"></a><a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Amy&quot;</span>};</div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label42 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Bea&quot;</span>};</div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label43 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Eva&quot;</span>};</div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label44 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Fay&quot;</span>};</div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label45 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Liv&quot;</span>};</div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label46 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Una&quot;</span>};</div>
+<div class="line">    <a name="_a36"></a><a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label5_1 = {.<a name="a37"></a><a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Amy&quot;</span>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label5_2 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Bea&quot;</span>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label5_3 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Eva&quot;</span>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label5_4 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Fay&quot;</span>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label5_5 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Liv&quot;</span>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label5_6 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Una&quot;</span>};</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Create an array of label pointers. NULL indicates the end of the array. */</span></div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> *data_labels4[] = {</div>
-<div class="line">        &amp;data_label41,</div>
-<div class="line">        &amp;data_label42,</div>
-<div class="line">        &amp;data_label43,</div>
-<div class="line">        &amp;data_label44,</div>
-<div class="line">        &amp;data_label45,</div>
-<div class="line">        &amp;data_label46,</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> *data_labels5[] = {</div>
+<div class="line">        &amp;data_label5_1,</div>
+<div class="line">        &amp;data_label5_2,</div>
+<div class="line">        &amp;data_label5_3,</div>
+<div class="line">        &amp;data_label5_4,</div>
+<div class="line">        &amp;data_label5_5,</div>
+<div class="line">        &amp;data_label5_6,</div>
 <div class="line">        NULL</div>
 <div class="line">    };</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Set the custom labels. */</span></div>
-<div class="line">    <a name="a31"></a><a class="code" href="chart_8h.html#adcaf0404fe7cd5c9e49a7b7025c64a35">chart_series_set_labels_custom</a>(series, data_labels4);</div>
+<div class="line">    <a name="a38"></a><a class="code" href="chart_8h.html#adcaf0404fe7cd5c9e49a7b7025c64a35">chart_series_set_labels_custom</a>(series, data_labels5);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Turn off the legend. */</span></div>
 <div class="line">    <a class="code" href="chart_8h.html#af1382251c31fd8f97e19048acf5db0a1">chart_legend_set_position</a>(chart, <a class="code" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22a8077ef4a20bd15141f6b747f12ea17a4">LXW_CHART_LEGEND_NONE</a>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Insert the chart into the worksheet. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a4e8ea2614bc214fa0cc8992733c51f5f">worksheet_insert_chart_opt</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;D50&quot;</span>), chart, &amp;options);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a4e8ea2614bc214fa0cc8992733c51f5f">worksheet_insert_chart_opt</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;D66&quot;</span>), chart, &amp;options);</div>
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/*</span></div>
-<div class="line"><span class="comment">     * Chart 5. Example with custom data labels from cells.</span></div>
+<div class="line"><span class="comment">     * Chart 6. Example with custom data labels from cells.</span></div>
 <div class="line"><span class="comment">     */</span></div>
 <div class="line">    chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cafa7f69bde9c99b5818297c64e8b9070a">LXW_CHART_COLUMN</a>);</div>
 <div class="line"></div>
@@ -288,69 +323,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Create some custom labels. */</span></div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label51 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$2&quot;</span>};</div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label52 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$3&quot;</span>};</div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label53 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$4&quot;</span>};</div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label54 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$5&quot;</span>};</div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label55 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$6&quot;</span>};</div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label56 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$7&quot;</span>};</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Create an array of label pointers. NULL indicates the end of the array. */</span></div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> *data_labels5[] = {</div>
-<div class="line">        &amp;data_label51,</div>
-<div class="line">        &amp;data_label52,</div>
-<div class="line">        &amp;data_label53,</div>
-<div class="line">        &amp;data_label54,</div>
-<div class="line">        &amp;data_label55,</div>
-<div class="line">        &amp;data_label56,</div>
-<div class="line">        NULL</div>
-<div class="line">    };</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Set the custom labels. */</span></div>
-<div class="line">    <a class="code" href="chart_8h.html#adcaf0404fe7cd5c9e49a7b7025c64a35">chart_series_set_labels_custom</a>(series, data_labels5);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Turn off the legend. */</span></div>
-<div class="line">    <a class="code" href="chart_8h.html#af1382251c31fd8f97e19048acf5db0a1">chart_legend_set_position</a>(chart, <a class="code" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22a8077ef4a20bd15141f6b747f12ea17a4">LXW_CHART_LEGEND_NONE</a>);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Insert the chart into the worksheet. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a4e8ea2614bc214fa0cc8992733c51f5f">worksheet_insert_chart_opt</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;D66&quot;</span>), chart, &amp;options);</div>
-<div class="line"></div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/*</span></div>
-<div class="line"><span class="comment">     * Chart 6. Example with custom and default data labels.</span></div>
-<div class="line"><span class="comment">     */</span></div>
-<div class="line">    chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cafa7f69bde9c99b5818297c64e8b9070a">LXW_CHART_COLUMN</a>);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Add a chart title. */</span></div>
-<div class="line">    <a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, <span class="stringliteral">&quot;Mixed custom and default data labels&quot;</span>);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Add a data series to the chart. */</span></div>
-<div class="line">    series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>,</div>
-<div class="line">                                     <span class="stringliteral">&quot;=Sheet1!$B$2:$B$7&quot;</span>);</div>
-<div class="line"></div>
-<div class="line">    <a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font2 = {.<a name="a32"></a><a class="code" href="structlxw__chart__font.html#a7921a876ed780271df6e0f4bca8e38f5">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>};</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Add the series data labels. */</span></div>
-<div class="line">    <a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* Create some custom labels. */</span></div>
-<div class="line"></div>
-<div class="line">    <span class="comment">/* The following is used to get a mix of default and custom labels. The</span></div>
-<div class="line"><span class="comment">     * items initialized with &#39;{0}&#39; and items without a custom label (points 5</span></div>
-<div class="line"><span class="comment">     * and 6 which come after NULL) will get the default value. We also set a</span></div>
-<div class="line"><span class="comment">     * font for the custom items as an extra example.</span></div>
-<div class="line"><span class="comment">     */</span></div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label61 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$2&quot;</span>, .font = &amp;font2};</div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label62 = {0};</div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label63 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$4&quot;</span>, .font = &amp;font2};</div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label64 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$5&quot;</span>, .font = &amp;font2};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label6_1 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$2&quot;</span>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label6_2 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$3&quot;</span>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label6_3 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$4&quot;</span>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label6_4 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$5&quot;</span>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label6_5 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$6&quot;</span>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label6_6 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$7&quot;</span>};</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Create an array of label pointers. NULL indicates the end of the array. */</span></div>
 <div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> *data_labels6[] = {</div>
-<div class="line">        &amp;data_label61,</div>
-<div class="line">        &amp;data_label62,</div>
-<div class="line">        &amp;data_label63,</div>
-<div class="line">        &amp;data_label64,</div>
+<div class="line">        &amp;data_label6_1,</div>
+<div class="line">        &amp;data_label6_2,</div>
+<div class="line">        &amp;data_label6_3,</div>
+<div class="line">        &amp;data_label6_4,</div>
+<div class="line">        &amp;data_label6_5,</div>
+<div class="line">        &amp;data_label6_6,</div>
 <div class="line">        NULL</div>
 <div class="line">    };</div>
 <div class="line"></div>
@@ -365,7 +352,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/*</span></div>
-<div class="line"><span class="comment">     * Chart 7. Example with deleted/hidden custom data labels.</span></div>
+<div class="line"><span class="comment">     * Chart 7. Example with custom and default data labels.</span></div>
+<div class="line"><span class="comment">     */</span></div>
+<div class="line">    chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cafa7f69bde9c99b5818297c64e8b9070a">LXW_CHART_COLUMN</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add a chart title. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, <span class="stringliteral">&quot;Mixed custom and default data labels&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add a data series to the chart. */</span></div>
+<div class="line">    series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>,</div>
+<div class="line">                                     <span class="stringliteral">&quot;=Sheet1!$B$2:$B$7&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="structlxw__chart__font.html">lxw_chart_font</a> font2 = {.<a name="a39"></a><a class="code" href="structlxw__chart__font.html#a7921a876ed780271df6e0f4bca8e38f5">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>};</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add the series data labels. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Create some custom labels. */</span></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* The following is used to get a mix of default and custom labels. The</span></div>
+<div class="line"><span class="comment">     * items initialized with &#39;{0}&#39; and items without a custom label (points 5</span></div>
+<div class="line"><span class="comment">     * and 6 which come after NULL) will get the default value. We also set a</span></div>
+<div class="line"><span class="comment">     * font for the custom items as an extra example.</span></div>
+<div class="line"><span class="comment">     */</span></div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label7_1 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$2&quot;</span>, .font = &amp;font2};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label7_2 = {0};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label7_3 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$4&quot;</span>, .font = &amp;font2};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label7_4 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;=Sheet1!$C$5&quot;</span>, .font = &amp;font2};</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Create an array of label pointers. NULL indicates the end of the array. */</span></div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> *data_labels7[] = {</div>
+<div class="line">        &amp;data_label7_1,</div>
+<div class="line">        &amp;data_label7_2,</div>
+<div class="line">        &amp;data_label7_3,</div>
+<div class="line">        &amp;data_label7_4,</div>
+<div class="line">        NULL</div>
+<div class="line">    };</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Set the custom labels. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#adcaf0404fe7cd5c9e49a7b7025c64a35">chart_series_set_labels_custom</a>(series, data_labels7);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Turn off the legend. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#af1382251c31fd8f97e19048acf5db0a1">chart_legend_set_position</a>(chart, <a class="code" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22a8077ef4a20bd15141f6b747f12ea17a4">LXW_CHART_LEGEND_NONE</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Insert the chart into the worksheet. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a4e8ea2614bc214fa0cc8992733c51f5f">worksheet_insert_chart_opt</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;D98&quot;</span>), chart, &amp;options);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     * Chart 8. Example with deleted/hidden custom data labels.</span></div>
 <div class="line"><span class="comment">     */</span></div>
 <div class="line">    chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cafa7f69bde9c99b5818297c64e8b9070a">LXW_CHART_COLUMN</a>);</div>
 <div class="line"></div>
@@ -380,14 +415,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Create some custom labels. */</span></div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> hide = {.<a name="a33"></a><a class="code" href="structlxw__chart__data__label.html#a4cd68183846a54e6fa95edc8ba873ec9">hide</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> hide = {.<a name="a40"></a><a class="code" href="structlxw__chart__data__label.html#a4cd68183846a54e6fa95edc8ba873ec9">hide</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>};</div>
 <div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> keep = {.<a class="code" href="structlxw__chart__data__label.html#a4cd68183846a54e6fa95edc8ba873ec9">hide</a> = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>};</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* An initialized struct like this would also work: */</span></div>
 <div class="line">    <span class="comment">/* lxw_chart_data_label keep = {0}; */</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Create an array of label pointers. NULL indicates the end of the array. */</span></div>
-<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> *data_labels7[] = {</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> *data_labels8[] = {</div>
 <div class="line">        &amp;hide,</div>
 <div class="line">        &amp;keep,</div>
 <div class="line">        &amp;hide,</div>
@@ -398,16 +433,69 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    };</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Set the custom labels. */</span></div>
-<div class="line">    <a class="code" href="chart_8h.html#adcaf0404fe7cd5c9e49a7b7025c64a35">chart_series_set_labels_custom</a>(series, data_labels7);</div>
+<div class="line">    <a class="code" href="chart_8h.html#adcaf0404fe7cd5c9e49a7b7025c64a35">chart_series_set_labels_custom</a>(series, data_labels8);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Turn off the legend. */</span></div>
 <div class="line">    <a class="code" href="chart_8h.html#af1382251c31fd8f97e19048acf5db0a1">chart_legend_set_position</a>(chart, <a class="code" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22a8077ef4a20bd15141f6b747f12ea17a4">LXW_CHART_LEGEND_NONE</a>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/* Insert the chart into the worksheet. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a4e8ea2614bc214fa0cc8992733c51f5f">worksheet_insert_chart_opt</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;D98&quot;</span>), chart, &amp;options);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a4e8ea2614bc214fa0cc8992733c51f5f">worksheet_insert_chart_opt</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;D114&quot;</span>), chart, &amp;options);</div>
 <div class="line"></div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> <a name="a34"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     * Chart 9.Example with custom string data labels and formatting.</span></div>
+<div class="line"><span class="comment">     */</span></div>
+<div class="line">    chart = <a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, <a class="code" href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cafa7f69bde9c99b5818297c64e8b9070a">LXW_CHART_COLUMN</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add a chart title. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, <span class="stringliteral">&quot;Chart with custom labels and formatting&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add a data series to the chart. */</span></div>
+<div class="line">    series = <a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, <span class="stringliteral">&quot;=Sheet1!$A$2:$A$7&quot;</span>,</div>
+<div class="line">                                     <span class="stringliteral">&quot;=Sheet1!$B$2:$B$7&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Add the series data labels. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#ac8f7f044cc9d893568e9d4c9fcf13aa9">chart_series_set_labels</a>(series);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Set the border/line and fill for the data labels. */</span></div>
+<div class="line">    <a class="code" href="structlxw__chart__line.html">lxw_chart_line</a> line2 = {.<a class="code" href="structlxw__chart__line.html#a2619e85b4ece41f55302b5bc8157d738">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__fill.html">lxw_chart_fill</a> fill2 = {.<a class="code" href="structlxw__chart__fill.html#a1780f71f3de68cb03e2f2825952283e4">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baebda4f169497f225a9c67bb51691c095">LXW_COLOR_YELLOW</a>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__line.html">lxw_chart_line</a> line3 = {.<a class="code" href="structlxw__chart__line.html#a2619e85b4ece41f55302b5bc8157d738">color</a> = <a name="a41"></a><a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__fill.html">lxw_chart_fill</a> fill3 = {.<a class="code" href="structlxw__chart__fill.html#a1780f71f3de68cb03e2f2825952283e4">color</a> = <a name="a42"></a><a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38bae0b5c39ced3b8c871974f0e4917e4871">LXW_COLOR_GREEN</a>};</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Create some custom labels. */</span></div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label9_1 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Amy&quot;</span>, .line = &amp;line3};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label9_2 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Bea&quot;</span>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label9_3 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Eva&quot;</span>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label9_4 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Fay&quot;</span>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label9_5 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Liv&quot;</span>};</div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> data_label9_6 = {.<a class="code" href="structlxw__chart__data__label.html#a084f083e48841fa41d109a4601441460">value</a> = <span class="stringliteral">&quot;Una&quot;</span>, .fill = &amp;fill3};</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Set the default formatting for the data labels in the series. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#a4476eee2a69555f7eac7f716d179fad6">chart_series_set_labels_line</a>(series, &amp;line2);</div>
+<div class="line">    <a class="code" href="chart_8h.html#add8ab9f6f62a3de270b8d17bd2748217">chart_series_set_labels_fill</a>(series, &amp;fill2);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Create an array of label pointers. NULL indicates the end of the array. */</span></div>
+<div class="line">    <a class="code" href="structlxw__chart__data__label.html">lxw_chart_data_label</a> *data_labels9[] = {</div>
+<div class="line">        &amp;data_label9_1,</div>
+<div class="line">        &amp;data_label9_2,</div>
+<div class="line">        &amp;data_label9_3,</div>
+<div class="line">        &amp;data_label9_4,</div>
+<div class="line">        &amp;data_label9_5,</div>
+<div class="line">        &amp;data_label9_6,</div>
+<div class="line">        NULL</div>
+<div class="line">    };</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Set the custom labels. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#adcaf0404fe7cd5c9e49a7b7025c64a35">chart_series_set_labels_custom</a>(series, data_labels9);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Turn off the legend. */</span></div>
+<div class="line">    <a class="code" href="chart_8h.html#af1382251c31fd8f97e19048acf5db0a1">chart_legend_set_position</a>(chart, <a class="code" href="chart_8h.html#aa7331d5134989542f324aa6f1f1f7d22a8077ef4a20bd15141f6b747f12ea17a4">LXW_CHART_LEGEND_NONE</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">/* Insert the chart into the worksheet. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a4e8ea2614bc214fa0cc8992733c51f5f">worksheet_insert_chart_opt</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;D130&quot;</span>), chart, &amp;options);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> <a name="a43"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->

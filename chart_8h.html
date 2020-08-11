@@ -211,6 +211,15 @@ Functions</h2></td></tr>
 <tr class="memitem:aea2957adf1e8c754f771bbcb836229d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aea2957adf1e8c754f771bbcb836229d4">chart_series_set_labels_font</a> (<a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *series, <a class="el" href="structlxw__chart__font.html">lxw_chart_font</a> *font)</td></tr>
 <tr class="memdesc:aea2957adf1e8c754f771bbcb836229d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the font properties for chart data labels in a series.  <a href="#aea2957adf1e8c754f771bbcb836229d4">More...</a><br /></td></tr>
 <tr class="separator:aea2957adf1e8c754f771bbcb836229d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4476eee2a69555f7eac7f716d179fad6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a4476eee2a69555f7eac7f716d179fad6">chart_series_set_labels_line</a> (<a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *series, <a class="el" href="structlxw__chart__line.html">lxw_chart_line</a> *line)</td></tr>
+<tr class="memdesc:a4476eee2a69555f7eac7f716d179fad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the line properties for the data labels in a chart series.  <a href="#a4476eee2a69555f7eac7f716d179fad6">More...</a><br /></td></tr>
+<tr class="separator:a4476eee2a69555f7eac7f716d179fad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add8ab9f6f62a3de270b8d17bd2748217"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#add8ab9f6f62a3de270b8d17bd2748217">chart_series_set_labels_fill</a> (<a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *series, <a class="el" href="structlxw__chart__fill.html">lxw_chart_fill</a> *fill)</td></tr>
+<tr class="memdesc:add8ab9f6f62a3de270b8d17bd2748217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the fill properties for the data labels in a chart series.  <a href="#add8ab9f6f62a3de270b8d17bd2748217">More...</a><br /></td></tr>
+<tr class="separator:add8ab9f6f62a3de270b8d17bd2748217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa638b6c6dd10d58d43ee8d1f6667833"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#afa638b6c6dd10d58d43ee8d1f6667833">chart_series_set_labels_pattern</a> (<a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *series, <a class="el" href="structlxw__chart__pattern.html">lxw_chart_pattern</a> *pattern)</td></tr>
+<tr class="memdesc:afa638b6c6dd10d58d43ee8d1f6667833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pattern properties for the data labels in a chart series.  <a href="#afa638b6c6dd10d58d43ee8d1f6667833">More...</a><br /></td></tr>
+<tr class="separator:afa638b6c6dd10d58d43ee8d1f6667833"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59b3a386d854b9cb5e8bbdf9eef0c97d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a59b3a386d854b9cb5e8bbdf9eef0c97d">chart_series_set_trendline</a> (<a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *series, uint8_t type, uint8_t value)</td></tr>
 <tr class="memdesc:a59b3a386d854b9cb5e8bbdf9eef0c97d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on a trendline for a chart data series.  <a href="#a59b3a386d854b9cb5e8bbdf9eef0c97d">More...</a><br /></td></tr>
 <tr class="separator:a59b3a386d854b9cb5e8bbdf9eef0c97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1361,7 +1370,7 @@ Functions</h2></td></tr>
 </div>
 <dl class="section note"><dt>Note</dt><dd>The array of <a class="el" href="structlxw__chart__point.html" title="Struct to represent an Excel chart data point. ">lxw_chart_point</a> pointers should be NULL terminated as shown in the example. Any <a class="el" href="structlxw__chart__data__label.html" title="Struct to represent an Excel chart data label. ">lxw_chart_data_label</a> items set to a default initialization or omitted from the list will be assigned the default data label value.</dd></dl>
 <p>For more details see <a class="el" href="working_with_charts.html#chart_custom_labels">Custom Chart Data Labels</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_labels_8c-example.html#a31">chart_data_labels.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_labels_8c-example.html#a38">chart_data_labels.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1645,6 +1654,125 @@ Functions</h2></td></tr>
 <p>For more information see <a class="el" href="working_with_charts.html#chart_fonts">Chart formatting: Fonts</a> and <a class="el" href="working_with_charts.html#chart_labels">Working with Chart Data Labels</a>. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_labels_8c-example.html#a28">chart_data_labels.c</a>.</dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="a4476eee2a69555f7eac7f716d179fad6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_series_set_labels_line </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *&#160;</td>
+          <td class="paramname"><em>series</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__line.html">lxw_chart_line</a> *&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">series</td><td>A series object created via <code><a class="el" href="chart_8h.html#ad60de0eb056e93435407e91482115f55" title="Add a data series to a chart. ">chart_add_series()</a></code>. </td></tr>
+    <tr><td class="paramname">line</td><td>A <a class="el" href="structlxw__chart__line.html" title="Struct to represent a chart line. ">lxw_chart_line</a> struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the line/border properties of the data labels in a chart series:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__chart__line.html">lxw_chart_line</a> line = {.<a class="code" href="structlxw__chart__line.html#a2619e85b4ece41f55302b5bc8157d738">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>};</div>
+<div class="line"><a class="code" href="structlxw__chart__fill.html">lxw_chart_fill</a> fill = {.<a class="code" href="structlxw__chart__fill.html#a1780f71f3de68cb03e2f2825952283e4">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baebda4f169497f225a9c67bb51691c095">LXW_COLOR_YELLOW</a>};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#a4476eee2a69555f7eac7f716d179fad6">chart_series_set_labels_line</a>(series, &amp;line);</div>
+<div class="line"><a class="code" href="chart_8h.html#add8ab9f6f62a3de270b8d17bd2748217">chart_series_set_labels_fill</a>(series, &amp;fill);</div>
+</div><!-- fragment --><div class="image">
+<img src="chart_data_labels24.png" alt="chart_data_labels24.png"/>
+</div>
+<p>For more information see <a class="el" href="working_with_charts.html#chart_lines">Chart formatting: Line</a> and <a class="el" href="working_with_charts.html#chart_labels">Working with Chart Data Labels</a>. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_labels_8c-example.html#a34">chart_data_labels.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="add8ab9f6f62a3de270b8d17bd2748217"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_series_set_labels_fill </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *&#160;</td>
+          <td class="paramname"><em>series</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__fill.html">lxw_chart_fill</a> *&#160;</td>
+          <td class="paramname"><em>fill</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">series</td><td>A series object created via <code><a class="el" href="chart_8h.html#ad60de0eb056e93435407e91482115f55" title="Add a data series to a chart. ">chart_add_series()</a></code>. </td></tr>
+    <tr><td class="paramname">fill</td><td>A <a class="el" href="structlxw__chart__fill.html" title="Struct to represent a chart fill. ">lxw_chart_fill</a> struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the fill properties of the data labels in a chart series:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__chart__fill.html">lxw_chart_fill</a> fill = {.<a class="code" href="structlxw__chart__fill.html#a1780f71f3de68cb03e2f2825952283e4">color</a> = <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baebda4f169497f225a9c67bb51691c095">LXW_COLOR_YELLOW</a>};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="chart_8h.html#add8ab9f6f62a3de270b8d17bd2748217">chart_series_set_labels_fill</a>(series, &amp;fill);</div>
+</div><!-- fragment --><p>See the example and image above and also see <a class="el" href="working_with_charts.html#chart_fills">Chart formatting: Fill</a> and <a class="el" href="working_with_charts.html#chart_labels">Working with Chart Data Labels</a>. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="chart_data_labels_8c-example.html#a35">chart_data_labels.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="afa638b6c6dd10d58d43ee8d1f6667833"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_series_set_labels_pattern </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__series.html">lxw_chart_series</a> *&#160;</td>
+          <td class="paramname"><em>series</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__pattern.html">lxw_chart_pattern</a> *&#160;</td>
+          <td class="paramname"><em>pattern</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">series</td><td>A series object created via <code><a class="el" href="chart_8h.html#ad60de0eb056e93435407e91482115f55" title="Add a data series to a chart. ">chart_add_series()</a></code>. </td></tr>
+    <tr><td class="paramname">pattern</td><td>A <a class="el" href="structlxw__chart__pattern.html" title="Struct to represent a chart pattern. ">lxw_chart_pattern</a> struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the pattern properties of the data labels in a chart series:</p>
+<div class="fragment"><div class="line"><a class="code" href="chart_8h.html#afa638b6c6dd10d58d43ee8d1f6667833">chart_series_set_labels_pattern</a>(series, &amp;pattern);</div>
+</div><!-- fragment --><p>For more information see <a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9d" title="Chart pattern types. ">lxw_chart_pattern_type</a> and <a class="el" href="working_with_charts.html#chart_patterns">Chart formatting: Pattern</a>. </p>
+
 </div>
 </div>
 <a class="anchor" id="a59b3a386d854b9cb5e8bbdf9eef0c97d"></a>
