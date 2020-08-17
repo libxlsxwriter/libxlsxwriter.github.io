@@ -98,12 +98,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><span class="comment"> *     &amp;L                  Justification       Left</span></div>
 <div class="line"><span class="comment"> *     &amp;C                                      Center</span></div>
 <div class="line"><span class="comment"> *     &amp;R                                      Right</span></div>
+<div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> *     &amp;P                  Information         Page number</span></div>
 <div class="line"><span class="comment"> *     &amp;N                                      Total number of pages</span></div>
 <div class="line"><span class="comment"> *     &amp;D                                      Date</span></div>
 <div class="line"><span class="comment"> *     &amp;T                                      Time</span></div>
 <div class="line"><span class="comment"> *     &amp;F                                      File name</span></div>
 <div class="line"><span class="comment"> *     &amp;A                                      Worksheet name</span></div>
+<div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> *     &amp;fontsize           Font                Font size</span></div>
 <div class="line"><span class="comment"> *     &amp;&quot;font,style&quot;                           Font name and style</span></div>
 <div class="line"><span class="comment"> *     &amp;U                                      Single underline</span></div>
@@ -111,8 +113,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><span class="comment"> *     &amp;S                                      Strikethrough</span></div>
 <div class="line"><span class="comment"> *     &amp;X                                      Superscript</span></div>
 <div class="line"><span class="comment"> *     &amp;Y                                      Subscript</span></div>
+<div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> *     &amp;[Picture]          Images              Image placeholder</span></div>
 <div class="line"><span class="comment"> *     &amp;G                                      Same as &amp;[Picture]</span></div>
+<div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> *     &amp;&amp;                  Miscellaneous       Literal ampersand &amp;</span></div>
 <div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> * Copyright 2014-2018, John McNamara, jmcnamara@cpan.org</span></div>
@@ -143,29 +147,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/*</span></div>
-<div class="line"><span class="comment">     * This is an example of some of the header/footer variables.</span></div>
+<div class="line"><span class="comment">     * A simple example to start</span></div>
 <div class="line"><span class="comment">     */</span></div>
-<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet2 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, <span class="stringliteral">&quot;Variables&quot;</span>);</div>
-<div class="line">    <span class="keywordtype">char</span> header2[] = <span class="stringliteral">&quot;&amp;LPage &amp;P of &amp;N&quot;</span> <span class="stringliteral">&quot;&amp;CFilename: &amp;F&quot;</span> <span class="stringliteral">&quot;&amp;RSheetname: &amp;A&quot;</span>;</div>
-<div class="line">    <span class="keywordtype">char</span> footer2[] = <span class="stringliteral">&quot;&amp;LCurrent date: &amp;D&quot;</span> <span class="stringliteral">&quot;&amp;RCurrent time: &amp;T&quot;</span>;</div>
-<div class="line">    <a class="code" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> breaks[] = {20, 0};</div>
+<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet2 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, <span class="stringliteral">&quot;Image&quot;</span>);</div>
+<div class="line">    <a name="_a8"></a><a class="code" href="structlxw__header__footer__options.html">lxw_header_footer_options</a> header_options = {.<a name="a9"></a><a class="code" href="structlxw__header__footer__options.html#a3a1bc57f98a514918ea3a38671a4ac2d">image_left</a> = <span class="stringliteral">&quot;logo_small.png&quot;</span>};</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet2, header2);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a57eb561cf3ab5e408a6612f0e379903a">worksheet_set_footer</a>(worksheet2, footer2);</div>
+<div class="line">    <a name="a10"></a><a class="code" href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac">worksheet_set_header_opt</a>(worksheet2, <span class="stringliteral">&quot;&amp;L&amp;[Picture]&quot;</span>, &amp;header_options);</div>
 <div class="line"></div>
+<div class="line">    <a name="a11"></a><a class="code" href="worksheet_8h.html#ab942bbc0493eaa5cf5696da30b6f872d">worksheet_set_margins</a>(worksheet2, -1, -1, 1.3, -1);</div>
 <div class="line">    <a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet2, 0, 0, 50, NULL);</div>
 <div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet2, 0, 0, preview, NULL);</div>
 <div class="line"></div>
-<div class="line">    <a name="a8"></a><a class="code" href="worksheet_8h.html#a9601745a2e9e7b1e194b7f5283f197f0">worksheet_set_h_pagebreaks</a>(worksheet2, breaks);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet2, 20, 0, <span class="stringliteral">&quot;Next page&quot;</span>, NULL);</div>
-<div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/*</span></div>
-<div class="line"><span class="comment">     * This example shows how to use more than one font.</span></div>
+<div class="line"><span class="comment">     * This is an example of some of the header/footer variables.</span></div>
 <div class="line"><span class="comment">     */</span></div>
-<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet3 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, <span class="stringliteral">&quot;Mixed fonts&quot;</span>);</div>
-<div class="line">    <span class="keywordtype">char</span> header3[] = <span class="stringliteral">&quot;&amp;C&amp;\&quot;Courier New,Bold\&quot;Hello &amp;\&quot;Arial,Italic\&quot;World&quot;</span>;</div>
-<div class="line">    <span class="keywordtype">char</span> footer3[] = <span class="stringliteral">&quot;&amp;C&amp;\&quot;Symbol\&quot;e&amp;\&quot;Arial\&quot; = mc&amp;X2&quot;</span>;</div>
+<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet3 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, <span class="stringliteral">&quot;Variables&quot;</span>);</div>
+<div class="line">    <span class="keywordtype">char</span> header3[] = <span class="stringliteral">&quot;&amp;LPage &amp;P of &amp;N&quot;</span> <span class="stringliteral">&quot;&amp;CFilename: &amp;F&quot;</span> <span class="stringliteral">&quot;&amp;RSheetname: &amp;A&quot;</span>;</div>
+<div class="line">    <span class="keywordtype">char</span> footer3[] = <span class="stringliteral">&quot;&amp;LCurrent date: &amp;D&quot;</span> <span class="stringliteral">&quot;&amp;RCurrent time: &amp;T&quot;</span>;</div>
+<div class="line">    <a class="code" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> breaks[] = {20, 0};</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet3, header3);</div>
 <div class="line">    <a class="code" href="worksheet_8h.html#a57eb561cf3ab5e408a6612f0e379903a">worksheet_set_footer</a>(worksheet3, footer3);</div>
@@ -173,24 +173,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet3, 0, 0, 50, NULL);</div>
 <div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet3, 0, 0, preview, NULL);</div>
 <div class="line"></div>
+<div class="line">    <a name="a12"></a><a class="code" href="worksheet_8h.html#a9601745a2e9e7b1e194b7f5283f197f0">worksheet_set_h_pagebreaks</a>(worksheet3, breaks);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet3, 20, 0, <span class="stringliteral">&quot;Next page&quot;</span>, NULL);</div>
+<div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/*</span></div>
-<div class="line"><span class="comment">     * Example of line wrapping.</span></div>
+<div class="line"><span class="comment">     * This example shows how to use more than one font.</span></div>
 <div class="line"><span class="comment">     */</span></div>
-<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet4 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, <span class="stringliteral">&quot;Word wrap&quot;</span>);</div>
-<div class="line">    <span class="keywordtype">char</span> header4[] = <span class="stringliteral">&quot;&amp;CHeading 1\nHeading 2&quot;</span>;</div>
+<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet4 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, <span class="stringliteral">&quot;Mixed fonts&quot;</span>);</div>
+<div class="line">    <span class="keywordtype">char</span> header4[] = <span class="stringliteral">&quot;&amp;C&amp;\&quot;Courier New,Bold\&quot;Hello &amp;\&quot;Arial,Italic\&quot;World&quot;</span>;</div>
+<div class="line">    <span class="keywordtype">char</span> footer4[] = <span class="stringliteral">&quot;&amp;C&amp;\&quot;Symbol\&quot;e&amp;\&quot;Arial\&quot; = mc&amp;X2&quot;</span>;</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet4, header4);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a57eb561cf3ab5e408a6612f0e379903a">worksheet_set_footer</a>(worksheet4, footer4);</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet4, 0, 0, 50, NULL);</div>
 <div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet4, 0, 0, preview, NULL);</div>
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">/*</span></div>
-<div class="line"><span class="comment">     * Example of inserting a literal ampersand &amp;</span></div>
+<div class="line"><span class="comment">     * Example of line wrapping.</span></div>
 <div class="line"><span class="comment">     */</span></div>
-<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet5 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, <span class="stringliteral">&quot;Ampersand&quot;</span>);</div>
-<div class="line">    <span class="keywordtype">char</span> header5[] = <span class="stringliteral">&quot;&amp;CCuriouser &amp;&amp; Curiouser - Attorneys at Law&quot;</span>;</div>
+<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet5 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, <span class="stringliteral">&quot;Word wrap&quot;</span>);</div>
+<div class="line">    <span class="keywordtype">char</span> header5[] = <span class="stringliteral">&quot;&amp;CHeading 1\nHeading 2&quot;</span>;</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet5, header5);</div>
 <div class="line"></div>
@@ -198,7 +203,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet5, 0, 0, preview, NULL);</div>
 <div class="line"></div>
 <div class="line"></div>
-<div class="line">    <a name="a9"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     * Example of inserting a literal ampersand &amp;</span></div>
+<div class="line"><span class="comment">     */</span></div>
+<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet6 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, <span class="stringliteral">&quot;Ampersand&quot;</span>);</div>
+<div class="line">    <span class="keywordtype">char</span> header6[] = <span class="stringliteral">&quot;&amp;CCuriouser &amp;&amp; Curiouser - Attorneys at Law&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet6, header6);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet6, 0, 0, 50, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet6, 0, 0, preview, NULL);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">    <a name="a13"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>

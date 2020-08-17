@@ -29,6 +29,7 @@ var searchData=
   ['lxw_5fformat_5fscripts',['lxw_format_scripts',['../format_8h.html#a0ff8fd761893f60fddbd7f1cab4ac75a',1,'format.h']]],
   ['lxw_5fformat_5funderlines',['lxw_format_underlines',['../format_8h.html#af530d7971d15c164f3fb6bbfede9a39f',1,'format.h']]],
   ['lxw_5fgridlines',['lxw_gridlines',['../worksheet_8h.html#a487e0bffad0a348421b825d715621c20',1,'worksheet.h']]],
+  ['lxw_5fignore_5ferrors',['lxw_ignore_errors',['../worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22',1,'worksheet.h']]],
   ['lxw_5fobject_5fposition',['lxw_object_position',['../worksheet_8h.html#a915c52f231594642bad90422c5b2cf81',1,'worksheet.h']]],
   ['lxw_5fvalidation_5fboolean',['lxw_validation_boolean',['../worksheet_8h.html#a00c0cb6be9a2864d2a4cc977eadea74b',1,'worksheet.h']]],
   ['lxw_5fvalidation_5fcriteria',['lxw_validation_criteria',['../worksheet_8h.html#a88eed033ce0af97d5151528bc514fbf5',1,'worksheet.h']]],

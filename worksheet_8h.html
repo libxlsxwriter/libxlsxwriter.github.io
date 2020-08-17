@@ -308,6 +308,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af196b0cb611f3abc800f3439f3bb8942"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#af196b0cb611f3abc800f3439f3bb8942">worksheet_set_comments_author</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, const char *author)</td></tr>
 <tr class="memdesc:af196b0cb611f3abc800f3439f3bb8942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the default author of the cell comments.  <a href="#af196b0cb611f3abc800f3439f3bb8942">More...</a><br /></td></tr>
 <tr class="separator:af196b0cb611f3abc800f3439f3bb8942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af052fbb1e438c622b873ca3ebd6ef0f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#af052fbb1e438c622b873ca3ebd6ef0f4">worksheet_ignore_errors</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, uint8_t type, const char *range)</td></tr>
+<tr class="memdesc:af052fbb1e438c622b873ca3ebd6ef0f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ignore various Excel errors/warnings in a worksheet for user defined ranges.  <a href="#af052fbb1e438c622b873ca3ebd6ef0f4">More...</a><br /></td></tr>
+<tr class="separator:af052fbb1e438c622b873ca3ebd6ef0f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ad9fc47d3beaa2ab4759414e8580c2289"></a>
@@ -452,7 +455,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="write_string03.png" alt="write_string03.png"/>
 </div>
- <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a4">autofilter.c</a>, <a class="el" href="chart_area_8c-example.html#a2">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a2">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#a2">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#a2">chart_column.c</a>, <a class="el" href="chart_data_labels_8c-example.html#a9">chart_data_labels.c</a>, <a class="el" href="chart_data_table_8c-example.html#a2">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a2">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a2">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a2">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a8">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a2">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a2">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a2">chart_scatter.c</a>, <a class="el" href="chartsheet_8c-example.html#a2">chartsheet.c</a>, <a class="el" href="comments1_8c-example.html#a4">comments1.c</a>, <a class="el" href="comments2_8c-example.html#a11">comments2.c</a>, <a class="el" href="data_validate_8c-example.html#a2">data_validate.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a8">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a10">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a8">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a4">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a5">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a6">images.c</a>, <a class="el" href="macro_8c-example.html#a5">macro.c</a>, <a class="el" href="outline_8c-example.html#a13">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a4">outline_collapsed.c</a>, <a class="el" href="panes_8c-example.html#a17">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a7">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a10">worksheet_protection.c</a>.</dd>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a4">autofilter.c</a>, <a class="el" href="chart_area_8c-example.html#a2">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a2">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#a2">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#a2">chart_column.c</a>, <a class="el" href="chart_data_labels_8c-example.html#a9">chart_data_labels.c</a>, <a class="el" href="chart_data_table_8c-example.html#a2">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a2">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a2">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a2">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a8">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a2">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a2">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a2">chart_scatter.c</a>, <a class="el" href="chartsheet_8c-example.html#a2">chartsheet.c</a>, <a class="el" href="comments1_8c-example.html#a4">comments1.c</a>, <a class="el" href="comments2_8c-example.html#a11">comments2.c</a>, <a class="el" href="data_validate_8c-example.html#a2">data_validate.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a8">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a10">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a8">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a4">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a5">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="ignore_errors_8c-example.html#a4">ignore_errors.c</a>, <a class="el" href="images_8c-example.html#a6">images.c</a>, <a class="el" href="macro_8c-example.html#a5">macro.c</a>, <a class="el" href="outline_8c-example.html#a13">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a4">outline_collapsed.c</a>, <a class="el" href="panes_8c-example.html#a17">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a7">tab_colors.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a10">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -527,7 +530,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="comment">// NO. Error on load.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, 1, 0, <span class="stringliteral">&quot;=SUM(1; 2; 3)&quot;</span>, NULL);</div>
 </div><!-- fragment --><p>See also <a class="el" href="working_with_formulas.html">Working with Formulas</a>. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="data_validate_8c-example.html#a5">data_validate.c</a>, <a class="el" href="defined_name_8c-example.html#a8">defined_name.c</a>, <a class="el" href="outline_8c-example.html#a16">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a7">outline_collapsed.c</a>, <a class="el" href="tutorial1_8c-example.html#a6">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a10">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a14">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a11">worksheet_protection.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="data_validate_8c-example.html#a5">data_validate.c</a>, <a class="el" href="defined_name_8c-example.html#a8">defined_name.c</a>, <a class="el" href="ignore_errors_8c-example.html#a6">ignore_errors.c</a>, <a class="el" href="outline_8c-example.html#a16">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a7">outline_collapsed.c</a>, <a class="el" href="tutorial1_8c-example.html#a6">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a10">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a14">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a11">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1527,7 +1530,7 @@ Functions</h2></td></tr>
 <div class="line"></div>
 <div class="line"><span class="comment">// Cell A2 keeps format2, the column format.</span></div>
 <div class="line"> <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 1, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="comments2_8c-example.html#a9">comments2.c</a>, <a class="el" href="data_validate_8c-example.html#a19">data_validate.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a9">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a7">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="hide_sheet_8c-example.html#a6">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a11">hyperlinks.c</a>, <a class="el" href="images_8c-example.html#a4">images.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, <a class="el" href="outline_8c-example.html#a9">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a2">outline_collapsed.c</a>, <a class="el" href="panes_8c-example.html#a14">panes.c</a>, <a class="el" href="rich_strings_8c-example.html#a15">rich_strings.c</a>, <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a8">worksheet_protection.c</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="comments2_8c-example.html#a9">comments2.c</a>, <a class="el" href="data_validate_8c-example.html#a19">data_validate.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a9">dates_and_times03.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a9">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a7">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="hide_sheet_8c-example.html#a6">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a11">hyperlinks.c</a>, <a class="el" href="ignore_errors_8c-example.html#a10">ignore_errors.c</a>, <a class="el" href="images_8c-example.html#a4">images.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, <a class="el" href="outline_8c-example.html#a9">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a2">outline_collapsed.c</a>, <a class="el" href="panes_8c-example.html#a14">panes.c</a>, <a class="el" href="rich_strings_8c-example.html#a15">rich_strings.c</a>, <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a8">worksheet_protection.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2836,7 +2839,8 @@ Functions</h2></td></tr>
 </dl>
 <p>The <code>worksheet_set_margins()</code> function is used to set the margins of the worksheet when it is printed. The units are in inches. Specifying <code>-1</code> for any parameter will give the default Excel value as shown above.</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ab942bbc0493eaa5cf5696da30b6f872d">worksheet_set_margins</a>(worksheet, 1.3, 1.2, -1, -1);</div>
-</div><!-- fragment --> 
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="headers_footers_8c-example.html#a11">headers_footers.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="a4070c24ed5107f33e94f30a1bf865ba9"></a>
@@ -2909,7 +2913,14 @@ Functions</h2></td></tr>
 <td><code>&amp;X</code> </td><td></td><td>Superscript </td></tr>
 <tr>
 <td><code>&amp;Y</code> </td><td></td><td>Subscript </td></tr>
+<tr>
+<td><code>&amp;[Picture]</code> </td><td>Images </td><td>Image placeholder </td></tr>
+<tr>
+<td><code>&amp;G</code> </td><td></td><td>Same as <code>&amp;[Picture]</code> </td></tr>
+<tr>
+<td><code>&amp;&amp;</code> </td><td>Miscellaneous </td><td>Literal ampersand &amp; </td></tr>
 </table>
+<p>Note: inserting images requires the <code><a class="el" href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac" title="Set the printed page header caption with additional options. ">worksheet_set_header_opt()</a></code> function.</p>
 <p>Text in headers and footers can be justified (aligned) to the left, center and right by prefixing the text with the control characters <code>&amp;L</code>, <code>&amp;C</code> and <code>&amp;R</code>.</p>
 <p>For example (with ASCII art representation of the results):</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;LHello&quot;</span>);</div>
@@ -2975,15 +2986,14 @@ Functions</h2></td></tr>
 <div class="line">.RightHeader = <span class="stringliteral">&quot;&quot;</span></div>
 </div><!-- fragment --><p>Alternatively you can inspect the header and footer strings in an Excel file by unzipping it and grepping the XML sub-files. The following shows how to do that using libxml's xmllint to format the XML for clarity:</p>
 <div class="fragment"><div class="line">$ unzip myfile.xlsm -d myfile</div>
-<div class="line">$ xmllint --format `find myfile -name <span class="stringliteral">&quot;*.xml&quot;</span> | xargs` | egrep <span class="stringliteral">&quot;Header|Footer&quot;</span></div>
+<div class="line">$ xmllint --format `find myfile -name <span class="stringliteral">&quot;*.xml&quot;</span> | xargs` | egrep <span class="stringliteral">&quot;Header|Footer&quot;</span> | sed <span class="stringliteral">&#39;s/&amp;amp;/\&amp;/g&#39;</span></div>
 <div class="line"></div>
 <div class="line">  &lt;headerFooter scaleWithDoc=<span class="stringliteral">&quot;0&quot;</span>&gt;</div>
-<div class="line">    &lt;oddHeader&gt;&amp;amp;L&amp;amp;P&lt;/oddHeader&gt;</div>
+<div class="line">    &lt;oddHeader&gt;&amp;L&amp;P&lt;/oddHeader&gt;</div>
 <div class="line">  &lt;/headerFooter&gt;</div>
-</div><!-- fragment --><p>Note that in this case you need to unescape the Html. In the above example the header string would be <code>&amp;L&amp;P</code>.</p>
-<p>To include a single literal ampersand <code>&amp;</code> in a header or footer you should use a double ampersand <code>&amp;&amp;</code>:</p>
+</div><!-- fragment --><p>To include a single literal ampersand <code>&amp;</code> in a header or footer you should use a double ampersand <code>&amp;&amp;</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9">worksheet_set_header</a>(worksheet, <span class="stringliteral">&quot;&amp;CCuriouser &amp;&amp; Curiouser - Attorneys at Law&quot;</span>);</div>
-</div><!-- fragment --><p>Note, the header or footer string must be less than 255 characters. Strings longer than this will not be written. </p>
+</div><!-- fragment --><p>Note, Excel requires that the header or footer string must be less than 255 characters. Strings longer than this will not be written. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="headers_footers_8c-example.html#a4">headers_footers.c</a>.</dd>
 </dl>
 </div>
@@ -3062,12 +3072,26 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
-<p>The syntax of this function is the same as <a class="el" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9" title="Set the printed page header caption. ">worksheet_set_header()</a> with an additional parameter to specify options for the header.</p>
-<p>Currently, the only available option is the header margin:</p>
-<div class="fragment"><div class="line"><a class="code" href="structlxw__header__footer__options.html">lxw_header_footer_options</a> header_options = { 0.2 };</div>
+<p>The syntax of this function is the same as <code><a class="el" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9" title="Set the printed page header caption. ">worksheet_set_header()</a></code> with an additional parameter to specify options for the header.</p>
+<p>The <a class="el" href="structlxw__header__footer__options.html" title="Header and footer options. ">lxw_header_footer_options</a> options are:</p>
+<ul>
+<li><code>margin</code>: Header or footer margin in inches. The value must by larger than 0.0. The Excel default is 0.3.</li>
+<li><code>image_left</code>: The left header image filename, with path if required. This should have a corresponding <code>&amp;G/&amp;[Picture]</code> placeholder in the <code>&amp;L</code> section of the header/footer string.</li>
+<li><code>image_center</code>: The center header image filename, with path if required. This should have a corresponding <code>&amp;G/&amp;[Picture]</code> placeholder in the <code>&amp;C</code> section of the header/footer string.</li>
+<li><code>image_right</code>: The right header image filename, with path if required. This should have a corresponding <code>&amp;G/&amp;[Picture]</code> placeholder in the <code>&amp;R</code> section of the header/footer string.</li>
+</ul>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__header__footer__options.html">lxw_header_footer_options</a> header_options = { .<a class="code" href="structlxw__header__footer__options.html#a0cd0badf4c6c3dde9aa46e924276a9aa">margin</a> = 0.2 };</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac">worksheet_set_header_opt</a>(worksheet, <span class="stringliteral">&quot;Some text&quot;</span>, &amp;header_options);</div>
-</div><!-- fragment --> 
+</div><!-- fragment --><p>Images can be inserted in the header by specifying the <code>&amp;[Picture]</code> placeholder and a filename/path to the image:</p>
+<div class="fragment"><div class="line"> <a class="code" href="structlxw__header__footer__options.html">lxw_header_footer_options</a> header_options = {.<a class="code" href="structlxw__header__footer__options.html#a3a1bc57f98a514918ea3a38671a4ac2d">image_left</a> = <span class="stringliteral">&quot;logo.png&quot;</span>};</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac">worksheet_set_header_opt</a>(worksheet, <span class="stringliteral">&quot;&amp;L&amp;[Picture]&quot;</span>, &amp;header_options);</div>
+</div><!-- fragment --><div class="image">
+<img src="headers_footers.png" alt="headers_footers.png"/>
+</div>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="headers_footers_8c-example.html#a10">headers_footers.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="aed383b6dd3319d58a113226e5e73331f"></a>
@@ -3108,7 +3132,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a> code.</dd></dl>
-<p>The syntax of this function is the same as <a class="el" href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac" title="Set the printed page header caption with additional options. ">worksheet_set_header_opt()</a>. </p>
+<p>The syntax of this function is the same as <code><a class="el" href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac" title="Set the printed page header caption with additional options. ">worksheet_set_header_opt()</a></code>. </p>
 
 </div>
 </div>
@@ -3157,7 +3181,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="worksheet_8h.html#a9601745a2e9e7b1e194b7f5283f197f0">worksheet_set_h_pagebreaks</a>(worksheet, breaks);</div>
 </div><!-- fragment --><p>There is an Excel limitation of 1023 horizontal page breaks per worksheet.</p>
 <p>Note: If you specify the "fit to page" option via the <code><a class="el" href="worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d" title="Fit the printed area to a specific number of pages both vertically and horizontally. ">worksheet_fit_to_pages()</a></code> function it will override all manual page breaks. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="headers_footers_8c-example.html#a8">headers_footers.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="headers_footers_8c-example.html#a12">headers_footers.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -3973,12 +3997,12 @@ objects
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a>.</dd></dl>
 <p>The <code><a class="el" href="worksheet_8h.html#a8df6c0ce82172dafdd3e81923978bd4b" title="Set the VBA name for the worksheet. ">worksheet_set_vba_name()</a></code> function can be used to set the VBA name for the worksheet. This is sometimes required when a vbaProject macro included via <code><a class="el" href="workbook_8h.html#a8de478eed94be65de0622c64a0179ff9" title="Add a vbaProject binary to the Excel workbook. ">workbook_add_vba_project()</a></code> refers to the worksheet by a name other than the worksheet name:</p>
 <div class="fragment"><div class="line"><a class="code" href="workbook_8h.html#a24dd6624ffdc3e17aa5bcfb4608755b8">workbook_set_vba_name</a> (workbook,  <span class="stringliteral">&quot;MyWorkbook&quot;</span>);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#a8df6c0ce82172dafdd3e81923978bd4b">worksheet_set_vba_name</a>(worksheet, <span class="stringliteral">&quot;MySheet1&quot;</span>);</div>
 </div><!-- fragment --><p>In general Excel uses the worksheet name such as "Sheet1" as the VBA name. However, this can be changed in the VBA environment or if the the macro was extracted from a foreign language version of Excel.</p>
-<p>See also <a class="el" href="working_with_macros.html">Working with VBA Macros</a></p>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a>. </dd></dl>
+<p>See also <a class="el" href="working_with_macros.html">Working with VBA Macros</a> </p>
 
 </div>
 </div>
@@ -4042,6 +4066,84 @@ objects
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#af196b0cb611f3abc800f3439f3bb8942">worksheet_set_comments_author</a>(worksheet, <span class="stringliteral">&quot;Jane Gloriana Villanueva&quot;</span>)</div>
 </div><!-- fragment --><p>Individual authors can be set using the <code>author</code> option of the <a class="el" href="structlxw__comment__options.html" title="Options for inserted comments. ">lxw_comment_options</a> struct and the <code><a class="el" href="worksheet_8h.html#a158dadac385cd1007994e5478b7b2aa7" title="Write a comment to a worksheet cell with options. ">worksheet_write_comment_opt()</a></code> function (see above and <a class="el" href="working_with_comments.html#ww_comments_author">Cell comments: author</a>). </p>
 
+</div>
+</div>
+<a class="anchor" id="af052fbb1e438c622b873ca3ebd6ef0f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_ignore_errors </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>range</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet. ">lxw_worksheet</a> instance. </td></tr>
+    <tr><td class="paramname">type</td><td>The type of error/warning to ignore. See <a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22">lxw_ignore_errors</a>. </td></tr>
+    <tr><td class="paramname">range</td><td>The range(s) for which the error/warning should be ignored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a0e2fee2c8cd25e3eb13829505da5d91d" title="Error codes from libxlsxwriter functions. ">lxw_error</a>.</dd></dl>
+<p>The <code>worksheet_ignore_errors()</code> function can be used to ignore various worksheet cell errors/warnings. For example the following code writes a string that looks like a number:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;D2&quot;</span>), <span class="stringliteral">&quot;123&quot;</span>, NULL);</div>
+</div><!-- fragment --><p>This causes Excel to display a small green triangle in the top left hand corner of the cell to indicate an error/warning:</p>
+<div class="image">
+<img src="ignore_errors1.png" alt="ignore_errors1.png"/>
+</div>
+<p>Sometimes these warnings are useful indicators that there is an issue in the spreadsheet but sometimes it is preferable to turn them off. Warnings can be turned off at the Excel level for all workbooks and worksheets by using the using "Excel options -&gt; Formulas -&gt; Error checking
+rules". Alternatively you can turn them off for individual cells in a worksheet, or ranges of cells, using the <code>worksheet_ignore_errors()</code> function with different <a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22">lxw_ignore_errors</a> options and ranges like this:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#af052fbb1e438c622b873ca3ebd6ef0f4">worksheet_ignore_errors</a>(worksheet, <a class="code" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22add1e6023e41e40f36e290f0b3514460b">LXW_IGNORE_NUMBER_STORED_AS_TEXT</a>, <span class="stringliteral">&quot;C3&quot;</span>);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#af052fbb1e438c622b873ca3ebd6ef0f4">worksheet_ignore_errors</a>(worksheet, <a class="code" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22ae8cd84ea345808631d6c5a33c0218d5a">LXW_IGNORE_EVAL_ERROR</a>,            <span class="stringliteral">&quot;C6&quot;</span>);</div>
+</div><!-- fragment --><p>The range can be a single cell, a range of cells, or multiple cells and ranges separated by spaces:</p>
+<div class="fragment"><div class="line"><span class="comment">// Single cell.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#af052fbb1e438c622b873ca3ebd6ef0f4">worksheet_ignore_errors</a>(worksheet, <a class="code" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22add1e6023e41e40f36e290f0b3514460b">LXW_IGNORE_NUMBER_STORED_AS_TEXT</a>, <span class="stringliteral">&quot;C6&quot;</span>);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Or a single range:</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#af052fbb1e438c622b873ca3ebd6ef0f4">worksheet_ignore_errors</a>(worksheet, <a class="code" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22add1e6023e41e40f36e290f0b3514460b">LXW_IGNORE_NUMBER_STORED_AS_TEXT</a>, <span class="stringliteral">&quot;C6:G8&quot;</span>);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Or multiple cells and ranges:</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#af052fbb1e438c622b873ca3ebd6ef0f4">worksheet_ignore_errors</a>(worksheet, <a class="code" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22add1e6023e41e40f36e290f0b3514460b">LXW_IGNORE_NUMBER_STORED_AS_TEXT</a>, <span class="stringliteral">&quot;C6 E6 G1:G20 J2:J6&quot;</span>);</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Calling <code>worksheet_ignore_errors()</code> more than once for the same <a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22">lxw_ignore_errors</a> type will overwrite the previous range.</dd></dl>
+<p>You can turn off warnings for an entire column by specifying the range from the first cell in the column to the last cell in the column:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#af052fbb1e438c622b873ca3ebd6ef0f4">worksheet_ignore_errors</a>(worksheet, <a class="code" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22add1e6023e41e40f36e290f0b3514460b">LXW_IGNORE_NUMBER_STORED_AS_TEXT</a>, <span class="stringliteral">&quot;A1:A1048576&quot;</span>);</div>
+</div><!-- fragment --><p>Or for the entire worksheet by specifying the range from the first cell in the worksheet to the last cell in the worksheet:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#af052fbb1e438c622b873ca3ebd6ef0f4">worksheet_ignore_errors</a>(worksheet, <a class="code" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22add1e6023e41e40f36e290f0b3514460b">LXW_IGNORE_NUMBER_STORED_AS_TEXT</a>, <span class="stringliteral">&quot;A1:XFD1048576&quot;</span>);</div>
+</div><!-- fragment --><p>The worksheet errors/warnings that can be ignored are:</p>
+<ul>
+<li><a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22add1e6023e41e40f36e290f0b3514460b">LXW_IGNORE_NUMBER_STORED_AS_TEXT</a>: Turn off errors/warnings for numbers stores as text.</li>
+<li><a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22ae8cd84ea345808631d6c5a33c0218d5a">LXW_IGNORE_EVAL_ERROR</a>: Turn off errors/warnings for formula errors (such as divide by zero).</li>
+<li><a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22a61bb58652f573e3643b911dde3d17c12">LXW_IGNORE_FORMULA_DIFFERS</a>: Turn off errors/warnings for formulas that differ from surrounding formulas.</li>
+<li><a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22a476dc8ef5536270c27645ab2a88e2717">LXW_IGNORE_FORMULA_RANGE</a>: Turn off errors/warnings for formulas that omit cells in a range.</li>
+<li><a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22accf664e190a32d5ea8faa08f36662d1d">LXW_IGNORE_FORMULA_UNLOCKED</a>: Turn off errors/warnings for unlocked cells that contain formulas.</li>
+<li><a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22a8e96b5ae88901743ee89658ba2fc9510">LXW_IGNORE_EMPTY_CELL_REFERENCE</a>: Turn off errors/warnings for formulas that refer to empty cells.</li>
+<li><a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22a8d8482fcf797787cb0aef15eda546dc1">LXW_IGNORE_LIST_DATA_VALIDATION</a>: Turn off errors/warnings for cells in a table that do not comply with applicable data validation rules.</li>
+<li><a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22a39f33893037a8f1b6eac268b894cdcec">LXW_IGNORE_CALCULATED_COLUMN</a>: Turn off errors/warnings for cell formulas that differ from the column formula.</li>
+<li><a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22ac41cb6a61704e4bf0b7e874febdab240">LXW_IGNORE_TWO_DIGIT_TEXT_YEAR</a>: Turn off errors/warnings for formulas that contain a two digit text representation of a year. </li>
+</ul>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="ignore_errors_8c-example.html#a7">ignore_errors.c</a>.</dd>
+</dl>
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -4113,7 +4215,7 @@ objects
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Optional parameters used in the <a class="el" href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac" title="Set the printed page header caption with additional options. ">worksheet_set_header_opt()</a> and <a class="el" href="worksheet_8h.html#aed383b6dd3319d58a113226e5e73331f" title="Set the printed page footer caption with additional options. ">worksheet_set_footer_opt()</a> functions. </p>
+<p>Optional parameters used in the <code><a class="el" href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac" title="Set the printed page header caption with additional options. ">worksheet_set_header_opt()</a></code> and <a class="el" href="worksheet_8h.html#aed383b6dd3319d58a113226e5e73331f" title="Set the printed page footer caption with additional options. ">worksheet_set_footer_opt()</a> functions. </p>
 
 </div>
 </div>
@@ -4394,6 +4496,48 @@ objects
 
 </div>
 </div>
+<a class="anchor" id="a8d5ed222f464ed30865534f04bd85b22"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22">lxw_ignore_errors</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Options for ignoring worksheet errors/warnings. See <a class="el" href="worksheet_8h.html#af052fbb1e438c622b873ca3ebd6ef0f4" title="Ignore various Excel errors/warnings in a worksheet for user defined ranges. ">worksheet_ignore_errors()</a>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a8d5ed222f464ed30865534f04bd85b22add1e6023e41e40f36e290f0b3514460b"></a>LXW_IGNORE_NUMBER_STORED_AS_TEXT&#160;</td><td class="fielddoc">
+<p>Turn off errors/warnings for numbers stores as text. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a8d5ed222f464ed30865534f04bd85b22ae8cd84ea345808631d6c5a33c0218d5a"></a>LXW_IGNORE_EVAL_ERROR&#160;</td><td class="fielddoc">
+<p>Turn off errors/warnings for formula errors (such as divide by zero). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a8d5ed222f464ed30865534f04bd85b22a61bb58652f573e3643b911dde3d17c12"></a>LXW_IGNORE_FORMULA_DIFFERS&#160;</td><td class="fielddoc">
+<p>Turn off errors/warnings for formulas that differ from surrounding formulas. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a8d5ed222f464ed30865534f04bd85b22a476dc8ef5536270c27645ab2a88e2717"></a>LXW_IGNORE_FORMULA_RANGE&#160;</td><td class="fielddoc">
+<p>Turn off errors/warnings for formulas that omit cells in a range. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a8d5ed222f464ed30865534f04bd85b22accf664e190a32d5ea8faa08f36662d1d"></a>LXW_IGNORE_FORMULA_UNLOCKED&#160;</td><td class="fielddoc">
+<p>Turn off errors/warnings for unlocked cells that contain formulas. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a8d5ed222f464ed30865534f04bd85b22a8e96b5ae88901743ee89658ba2fc9510"></a>LXW_IGNORE_EMPTY_CELL_REFERENCE&#160;</td><td class="fielddoc">
+<p>Turn off errors/warnings for formulas that refer to empty cells. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a8d5ed222f464ed30865534f04bd85b22a8d8482fcf797787cb0aef15eda546dc1"></a>LXW_IGNORE_LIST_DATA_VALIDATION&#160;</td><td class="fielddoc">
+<p>Turn off errors/warnings for cells in a table that do not comply with applicable data validation rules. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a8d5ed222f464ed30865534f04bd85b22a39f33893037a8f1b6eac268b894cdcec"></a>LXW_IGNORE_CALCULATED_COLUMN&#160;</td><td class="fielddoc">
+<p>Turn off errors/warnings for cell formulas that differ from the column formula. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a8d5ed222f464ed30865534f04bd85b22ac41cb6a61704e4bf0b7e874febdab240"></a>LXW_IGNORE_TWO_DIGIT_TEXT_YEAR&#160;</td><td class="fielddoc">
+<p>Turn off errors/warnings for formulas that contain a two digit text representation of a year. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -4525,6 +4669,21 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a915c52f231594642bad90422c5b2cf81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d5ed222f464ed30865534f04bd85b22"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22">lxw_ignore_errors</a> { <br />
+&#160;&#160;<a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22add1e6023e41e40f36e290f0b3514460b">LXW_IGNORE_NUMBER_STORED_AS_TEXT</a> = 1, 
+<a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22ae8cd84ea345808631d6c5a33c0218d5a">LXW_IGNORE_EVAL_ERROR</a>, 
+<a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22a61bb58652f573e3643b911dde3d17c12">LXW_IGNORE_FORMULA_DIFFERS</a>, 
+<a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22a476dc8ef5536270c27645ab2a88e2717">LXW_IGNORE_FORMULA_RANGE</a>, 
+<br />
+&#160;&#160;<a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22accf664e190a32d5ea8faa08f36662d1d">LXW_IGNORE_FORMULA_UNLOCKED</a>, 
+<a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22a8e96b5ae88901743ee89658ba2fc9510">LXW_IGNORE_EMPTY_CELL_REFERENCE</a>, 
+<a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22a8d8482fcf797787cb0aef15eda546dc1">LXW_IGNORE_LIST_DATA_VALIDATION</a>, 
+<a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22a39f33893037a8f1b6eac268b894cdcec">LXW_IGNORE_CALCULATED_COLUMN</a>, 
+<br />
+&#160;&#160;<a class="el" href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22ac41cb6a61704e4bf0b7e874febdab240">LXW_IGNORE_TWO_DIGIT_TEXT_YEAR</a>
+<br />
+ }</td></tr>
+<tr class="separator:a8d5ed222f464ed30865534f04bd85b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
