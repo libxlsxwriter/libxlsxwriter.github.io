@@ -118,10 +118,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <img src="data_validate4.png" alt="data_validate4.png"/>
 </div>
 <p>For more information on data validation see the Microsoft support article <a href="http://support.microsoft.com/kb/211485">Description and examples of data validation in Excel</a>.</p>
-<p>The following sections describe how to use the <code><a class="el" href="worksheet_8h.html#a70c4b9cfb27b18258117545ac6ce6da0" title="Add a data validation to a cell. ">worksheet_data_validation_cell()</a></code> and <code><a class="el" href="worksheet_8h.html#a14f482010dd0f817e17001d01644a57f" title="Add a data validation to a range cell. ">worksheet_data_validation_range()</a></code> functions and the various options of <a class="el" href="structlxw__data__validation.html" title="Worksheet data validation options. ">lxw_data_validation</a>.</p>
+<p>The following sections describe how to use the <code><a class="el" href="worksheet_8h.html#a70c4b9cfb27b18258117545ac6ce6da0" title="Add a data validation to a cell. ">worksheet_data_validation_cell()</a></code> and <code><a class="el" href="worksheet_8h.html#a14f482010dd0f817e17001d01644a57f" title="Add a data validation to a range. ">worksheet_data_validation_range()</a></code> functions and the various options of <a class="el" href="structlxw__data__validation.html" title="Worksheet data validation options. ">lxw_data_validation</a>.</p>
 <h1><a class="anchor" id="ww_data_validate_functions"></a>
 The data validation functions</h1>
-<p>The <code><a class="el" href="worksheet_8h.html#a70c4b9cfb27b18258117545ac6ce6da0" title="Add a data validation to a cell. ">worksheet_data_validation_cell()</a></code> and <code><a class="el" href="worksheet_8h.html#a14f482010dd0f817e17001d01644a57f" title="Add a data validation to a range cell. ">worksheet_data_validation_range()</a></code> functions are used to construct an Excel data validation.</p>
+<p>The <code><a class="el" href="worksheet_8h.html#a70c4b9cfb27b18258117545ac6ce6da0" title="Add a data validation to a cell. ">worksheet_data_validation_cell()</a></code> and <code><a class="el" href="worksheet_8h.html#a14f482010dd0f817e17001d01644a57f" title="Add a data validation to a range. ">worksheet_data_validation_range()</a></code> functions are used to construct an Excel data validation.</p>
 <p>The data validation can be applied to a single cell or a range of cells:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a70c4b9cfb27b18258117545ac6ce6da0">worksheet_data_validation_cell</a>( worksheet, 2, 1,       data_validation);</div>
 <div class="line"><a class="code" href="worksheet_8h.html#a14f482010dd0f817e17001d01644a57f">worksheet_data_validation_range</a>(worksheet, 2, 1, 4, 1, data_validation);</div>
@@ -390,7 +390,7 @@ Examples</h1>
 <div class="line">data_validation-&gt;<a class="code" href="structlxw__data__validation.html#a3d2c14ba7d150130b18ee90e7bdea9c4">error_title</a>      = <span class="stringliteral">&quot;Input value is not valid!&quot;</span>;</div>
 <div class="line">data_validation-&gt;<a class="code" href="structlxw__data__validation.html#ad021ae9515ce8624db6819667dc10dc9">error_message</a>    = <span class="stringliteral">&quot;It should be an integer between 1 and 100&quot;</span>;</div>
 </div><!-- fragment --><p>For a full example see <a class="el" href="data_validate_8c-example.html">data_validate.c</a>.</p>
-<p>Next: <a class="el" href="working_with_comments.html">Working with Cell Comments</a> </p>
+<p>Next: <a class="el" href="working_with_conditional_formatting.html">Working with Conditional Formatting</a> </p>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->

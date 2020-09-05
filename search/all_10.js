@@ -9,6 +9,7 @@ var searchData=
   ['start_5fcol',['start_col',['../structlxw__comment__options.html#af0cd41b5c72fe32c545c1531ae7a9e4e',1,'lxw_comment_options']]],
   ['start_5frow',['start_row',['../structlxw__comment__options.html#a1360f4a255e8c255b3759d44205de938',1,'lxw_comment_options']]],
   ['status',['status',['../structlxw__doc__properties.html#aa1dac7e63e16678271e45bf0045e93b7',1,'lxw_doc_properties']]],
+  ['stop_5fif_5ftrue',['stop_if_true',['../structlxw__conditional__format.html#a18603b91945774c02a3aeae8e133bbc6',1,'lxw_conditional_format']]],
   ['string',['string',['../structlxw__rich__string__tuple.html#aa25653560242b076014a88622ebbc847',1,'lxw_rich_string_tuple']]],
   ['subject',['subject',['../structlxw__doc__properties.html#a216d40acad776338b8250a61fc29ba6a',1,'lxw_doc_properties']]]
 ];

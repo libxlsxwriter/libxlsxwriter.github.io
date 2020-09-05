@@ -7,7 +7,7 @@ var searchData=
   ['font_5ffamily',['font_family',['../structlxw__comment__options.html#ae26ce8cbacfcff2967944e7c97cdfdfe',1,'lxw_comment_options']]],
   ['font_5fname',['font_name',['../structlxw__comment__options.html#a81608aa6e7816544847c1a74beb0f34d',1,'lxw_comment_options']]],
   ['font_5fsize',['font_size',['../structlxw__comment__options.html#ac17bcd6bb0f71289e51e030198ce7db3',1,'lxw_comment_options']]],
-  ['format',['format',['../structlxw__rich__string__tuple.html#a331030005bc187f49a855a7ccb749052',1,'lxw_rich_string_tuple']]],
+  ['format',['format',['../structlxw__conditional__format.html#a3d3ca3432272ee4d5172349ae030dfcc',1,'lxw_conditional_format::format()'],['../structlxw__rich__string__tuple.html#a331030005bc187f49a855a7ccb749052',1,'lxw_rich_string_tuple::format()']]],
   ['format_2eh',['format.h',['../format_8h.html',1,'']]],
   ['format_5fcells',['format_cells',['../structlxw__protection.html#accce8fbb8b1dad731adbe8234870004e',1,'lxw_protection']]],
   ['format_5fcolumns',['format_columns',['../structlxw__protection.html#a83c3fd434abb2bf45c2d46047250dac9',1,'lxw_protection']]],
