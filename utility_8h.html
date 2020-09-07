@@ -85,6 +85,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8cebc342ea88aa9fb9fe46e26ad442d8"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#a8cebc342ea88aa9fb9fe46e26ad442d8">lxw_strerror</a> (<a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> error_num)</td></tr>
 <tr class="memdesc:a8cebc342ea88aa9fb9fe46e26ad442d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a libxlsxwriter error number to a string.  <a href="utility_8h.html#a8cebc342ea88aa9fb9fe46e26ad442d8">More...</a><br /></td></tr>
 <tr class="separator:a8cebc342ea88aa9fb9fe46e26ad442d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac58c9e5aa239b938ef78c10c055c0f79"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#ac58c9e5aa239b938ef78c10c055c0f79">lxw_datetime_to_excel_datetime</a> (<a class="el" href="structlxw__datetime.html">lxw_datetime</a> *datetime)</td></tr>
+<tr class="memdesc:ac58c9e5aa239b938ef78c10c055c0f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel.">lxw_datetime</a> to an Excel datetime number.  <a href="utility_8h.html#ac58c9e5aa239b938ef78c10c055c0f79">More...</a><br /></td></tr>
+<tr class="separator:ac58c9e5aa239b938ef78c10c055c0f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a91acc3053f7cbe1e16872830149dc3cb"></a>
@@ -162,6 +165,36 @@ Error 2 = Error creating output xlsx file. Usually a permissions error.
 <dl class="section return"><dt>Returns</dt><dd>A pointer to a statically allocated string. Do not free. </dd></dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="anatomy_8c-example.html#a12">anatomy.c</a>.</dd>
 </dl>
+
+</div>
+</div>
+<a id="ac58c9e5aa239b938ef78c10c055c0f79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac58c9e5aa239b938ef78c10c055c0f79">&#9670;&nbsp;</a></span>lxw_datetime_to_excel_datetime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double lxw_datetime_to_excel_datetime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__datetime.html">lxw_datetime</a> *&#160;</td>
+          <td class="paramname"><em>datetime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">datetime</td><td>A pointer to a <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel.">lxw_datetime</a> struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A double representing an Excel datetime.</dd></dl>
+<p>The <code>lxw_datetime_to_excel_datetime()</code> function converts a datetime in <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel.">lxw_datetime</a> to and Excel datetime number:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__datetime.html">lxw_datetime</a> datetime = {2013, 2, 28, 12, 0, 0.0};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">double</span> excel_datetime = lxw_datetime_to_excel_date(&amp;datetime);</div>
+</div><!-- fragment --><p>See <a class="el" href="working_with_dates.html">Working with Dates and Times</a> for more details on the Excel datetime format. </p>
 
 </div>
 </div>
@@ -270,6 +303,7 @@ Macros</h2></td></tr>
 <div class="ttc" id="acommon_8h_html_a04b59aa3c578bc75f88ac16a979c5fe6"><div class="ttname"><a href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a></div><div class="ttdeci">lxw_error</div><div class="ttdoc">Error codes from libxlsxwriter functions.</div><div class="ttdef"><b>Definition:</b> common.h:62</div></div>
 <div class="ttc" id="autility_8h_html_a4dbbdfc9b616195c799dee78e727cecc"><div class="ttname"><a href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a></div><div class="ttdeci">#define RANGE(range)</div><div class="ttdoc">Convert an Excel A1:B2 range into a (first_row, first_col, last_row, last_col) sequence.</div><div class="ttdef"><b>Definition:</b> utility.h:82</div></div>
 <div class="ttc" id="autility_8h_html_a189672bfa9c380a28d8db8c40de17fe8"><div class="ttname"><a href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a></div><div class="ttdeci">#define COLS(cols)</div><div class="ttdoc">Convert an Excel A:B column range into a (col1, col2) pair.</div><div class="ttdef"><b>Definition:</b> utility.h:63</div></div>
+<div class="ttc" id="astructlxw__datetime_html"><div class="ttname"><a href="structlxw__datetime.html">lxw_datetime</a></div><div class="ttdoc">Struct to represent a date and time in Excel.</div><div class="ttdef"><b>Definition:</b> common.h:152</div></div>
 <div class="ttc" id="aworksheet_8h_html_ac208046e7a6d12cc87982422efa41b31"><div class="ttname"><a href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a></div><div class="ttdeci">lxw_error worksheet_write_string(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *string, lxw_format *format)</div><div class="ttdoc">Write a string to a worksheet cell.</div></div>
 <div class="ttc" id="aworksheet_8h_html_a9656e4e05d3787eee6b3e4d8e82d9b7f"><div class="ttname"><a href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a></div><div class="ttdeci">lxw_error worksheet_set_column(lxw_worksheet *worksheet, lxw_col_t first_col, lxw_col_t last_col, double width, lxw_format *format)</div><div class="ttdoc">Set the properties for one or more columns of cells.</div></div>
 <div class="ttc" id="autility_8h_html_ad510ac6df573d23203374e24dba373d2"><div class="ttname"><a href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a></div><div class="ttdeci">#define CELL(cell)</div><div class="ttdoc">Convert an Excel A1 cell string into a (row, col) pair.</div><div class="ttdef"><b>Definition:</b> utility.h:45</div></div>
