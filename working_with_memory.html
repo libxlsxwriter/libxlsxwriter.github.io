@@ -110,23 +110,24 @@ Constant Memory Mode</h1>
 <h1><a class="anchor" id="ww_mem_row_order"></a>
 Row Column Order</h1>
 <p>Since each new row flushes the previous row, data must be written in sequential row order when <code>constant_memory</code> mode is on:</p>
-<div class="fragment"><div class="line"> <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323">workbook_new_opt</a>(<span class="stringliteral">&quot;constant_memory.xlsx&quot;</span>, &amp;options);</div>
-<div class="line"> ...</div>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323">workbook_new_opt</a>(<span class="stringliteral">&quot;constant_memory.xlsx&quot;</span>, &amp;options);</div>
+<div class="line">...</div>
 <div class="line"> </div>
-<div class="line"> <span class="comment">// !! Don&#39;t use &quot;column x row&quot; order in &#39;constant_memory&#39; mode. Only</span></div>
-<div class="line"> <span class="comment">//    the first column of data will be written.</span></div>
-<div class="line"> <span class="keywordflow">for</span> (col = 0; col &lt; max_col; col++) {</div>
-<div class="line">     <span class="keywordflow">for</span> (row = 0; row &lt; max_row; row++) {</div>
-<div class="line">         <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, row, col, 123.45, NULL);</div>
-<div class="line">     }</div>
-<div class="line">-*- mode:  }</div>
+<div class="line"><span class="comment">// !! Don&#39;t use &quot;column x row&quot; order in &#39;constant_memory&#39; mode. Only</span></div>
+<div class="line"><span class="comment">//    the first column of data will be written.</span></div>
+<div class="line">for (col = 0; col &lt; max_col; col++) {</div>
+<div class="line">    <span class="keywordflow">for</span> (row = 0; row &lt; max_row; row++) {</div>
+<div class="line">        <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, row, col, 123.45, NULL);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
 </div><!-- fragment --><h1><a class="anchor" id="ww_mem_inline_strings"></a>
 Inline strings</h1>
 <p>Another optimization that is used to reduce memory usage in <code>constant_memory</code> mode is that cell strings aren't stored in an Excel structure call "shared
-strings" and instead are written "in-line". This is a documented Excel feature that is supported by most spreadsheet applications. One known exception is Apple Numbers for Mac where the string data isn't displayed.</p>
+strings" and instead are written "in-line".</p>
+<p>This is a documented Excel feature that is supported by most spreadsheet applications. However, it isn't supported by some some spreadsheet viewer applications. Also, the size of the output file can increase by 20%-100% depending on the amount of repeated string data.</p>
 <h1><a class="anchor" id="ww_mem_performance"></a>
 Performance</h1>
-<p>Currently the library isn't highly optimized. Also, the library is currently single threaded.</p>
+<p>Currently the library is optimized but not highly optimized. Also, the library is currently single threaded.</p>
 <p>Next: <a class="el" href="working_with_macros.html">Working with VBA Macros</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
