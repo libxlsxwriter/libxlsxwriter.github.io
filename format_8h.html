@@ -188,6 +188,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a8b1965f2420d7803b6ad5d5b33ce73a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format_8h.html#a8b1965f2420d7803b6ad5d5b33ce73a9">format_set_right_color</a> (<a class="el" href="structlxw__format.html">lxw_format</a> *format, <a class="el" href="format_8h.html#a34a05058edd856109e5bcf1cc6739fc9">lxw_color_t</a> color)</td></tr>
 <tr class="memdesc:a8b1965f2420d7803b6ad5d5b33ce73a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the right cell border.  <a href="format_8h.html#a8b1965f2420d7803b6ad5d5b33ce73a9">More...</a><br /></td></tr>
 <tr class="separator:a8b1965f2420d7803b6ad5d5b33ce73a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bd8ade5206d187f4f790dbb004ca129"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format_8h.html#a1bd8ade5206d187f4f790dbb004ca129">format_set_diag_type</a> (<a class="el" href="structlxw__format.html">lxw_format</a> *format, uint8_t type)</td></tr>
+<tr class="memdesc:a1bd8ade5206d187f4f790dbb004ca129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the diagonal cell border type.  <a href="format_8h.html#a1bd8ade5206d187f4f790dbb004ca129">More...</a><br /></td></tr>
+<tr class="separator:a1bd8ade5206d187f4f790dbb004ca129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60a053a40e1e70d5ad4a6171458a360a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format_8h.html#a60a053a40e1e70d5ad4a6171458a360a">format_set_diag_border</a> (<a class="el" href="structlxw__format.html">lxw_format</a> *format, uint8_t style)</td></tr>
+<tr class="memdesc:a60a053a40e1e70d5ad4a6171458a360a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the diagonal cell border style.  <a href="format_8h.html#a60a053a40e1e70d5ad4a6171458a360a">More...</a><br /></td></tr>
+<tr class="separator:a60a053a40e1e70d5ad4a6171458a360a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfffdfb19f1c5bf6ad95a1b40cec2d35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format_8h.html#abfffdfb19f1c5bf6ad95a1b40cec2d35">format_set_diag_color</a> (<a class="el" href="structlxw__format.html">lxw_format</a> *format, <a class="el" href="format_8h.html#a34a05058edd856109e5bcf1cc6739fc9">lxw_color_t</a> color)</td></tr>
+<tr class="memdesc:abfffdfb19f1c5bf6ad95a1b40cec2d35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the diagonal cell border color.  <a href="format_8h.html#abfffdfb19f1c5bf6ad95a1b40cec2d35">More...</a><br /></td></tr>
+<tr class="separator:abfffdfb19f1c5bf6ad95a1b40cec2d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a449e2235a9088cc60233ae443acd2b1a"></a>
@@ -1579,6 +1588,148 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a1bd8ade5206d187f4f790dbb004ca129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bd8ade5206d187f4f790dbb004ca129">&#9670;&nbsp;</a></span>format_set_diag_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_set_diag_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__format.html">lxw_format</a> *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>Pointer to a Format instance. </td></tr>
+    <tr><td class="paramname">type</td><td>The <a class="el" href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2">lxw_format_diagonal_types</a> diagonal border type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the diagonal cell border type:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *format1 = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line"><a class="code" href="format_8h.html#a1bd8ade5206d187f4f790dbb004ca129">format_set_diag_type</a>(  format1, <a class="code" href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2a6a89bbf04376eb234e9d21c58cf4bbb3">LXW_DIAGONAL_BORDER_UP</a>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *format2 = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line"><a class="code" href="format_8h.html#a1bd8ade5206d187f4f790dbb004ca129">format_set_diag_type</a>(  format2, <a class="code" href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2a6f8e8c0f88fb619742db3694d65c8d88">LXW_DIAGONAL_BORDER_DOWN</a>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *format3 = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line"><a class="code" href="format_8h.html#a1bd8ade5206d187f4f790dbb004ca129">format_set_diag_type</a>(  format3, <a class="code" href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2ac9cfa140f5f9960014d4d46e1099a6ba">LXW_DIAGONAL_BORDER_UP_DOWN</a>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="structlxw__format.html">lxw_format</a> *format4 = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line"><a class="code" href="format_8h.html#a1bd8ade5206d187f4f790dbb004ca129">format_set_diag_type</a>(  format4, <a class="code" href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2ac9cfa140f5f9960014d4d46e1099a6ba">LXW_DIAGONAL_BORDER_UP_DOWN</a>);</div>
+<div class="line"><a class="code" href="format_8h.html#a60a053a40e1e70d5ad4a6171458a360a">format_set_diag_border</a>(format4, <a class="code" href="format_8h.html#a4d5e924b1acd9571fd5e0fe2615e9f8fae7797837ba422a1906eae45fc70c433b">LXW_BORDER_HAIR</a>);</div>
+<div class="line"><a class="code" href="format_8h.html#abfffdfb19f1c5bf6ad95a1b40cec2d35">format_set_diag_color</a>( format4, <a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;B3&quot;</span>),  <span class="stringliteral">&quot;Text&quot;</span>, format1);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;B6&quot;</span>),  <span class="stringliteral">&quot;Text&quot;</span>, format2);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;B9&quot;</span>),  <span class="stringliteral">&quot;Text&quot;</span>, format3);</div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;B12&quot;</span>), <span class="stringliteral">&quot;Text&quot;</span>, format4);</div>
+</div><!-- fragment --><div class="image">
+<img src="diagonal_border.png" alt=""/>
+</div>
+<p>The allowable border types are defined in <a class="el" href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2">lxw_format_diagonal_types</a>:</p>
+<ul>
+<li><a class="el" href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2a6a89bbf04376eb234e9d21c58cf4bbb3">LXW_DIAGONAL_BORDER_UP</a>: Cell diagonal border from bottom left to top right.</li>
+<li><a class="el" href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2a6f8e8c0f88fb619742db3694d65c8d88">LXW_DIAGONAL_BORDER_DOWN</a>: Cell diagonal border from top left to bottom right.</li>
+<li><a class="el" href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2ac9cfa140f5f9960014d4d46e1099a6ba">LXW_DIAGONAL_BORDER_UP_DOWN</a>: Cell diagonal border from top left to bottom right. A combination of the 2 previous types.</li>
+</ul>
+<p>If the border style isn't specified with <code><a class="el" href="format_8h.html#a60a053a40e1e70d5ad4a6171458a360a" title="Set the diagonal cell border style.">format_set_diag_border()</a></code> then it will default to <a class="el" href="format_8h.html#a4d5e924b1acd9571fd5e0fe2615e9f8fa7ca212fb42e5816bb81d7b96ff623082">LXW_BORDER_THIN</a>. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="diagonal_border_8c-example.html#a6">diagonal_border.c</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a60a053a40e1e70d5ad4a6171458a360a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60a053a40e1e70d5ad4a6171458a360a">&#9670;&nbsp;</a></span>format_set_diag_border()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_set_diag_border </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__format.html">lxw_format</a> *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>style</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>Pointer to a Format instance. </td></tr>
+    <tr><td class="paramname">style</td><td>The <a class="el" href="format_8h.html#a4d5e924b1acd9571fd5e0fe2615e9f8f">lxw_format_borders</a> style.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the diagonal border style. This should be a <a class="el" href="format_8h.html#a4d5e924b1acd9571fd5e0fe2615e9f8f">lxw_format_borders</a> value. See the example above. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="diagonal_border_8c-example.html#a10">diagonal_border.c</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="abfffdfb19f1c5bf6ad95a1b40cec2d35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfffdfb19f1c5bf6ad95a1b40cec2d35">&#9670;&nbsp;</a></span>format_set_diag_color()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_set_diag_color </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__format.html">lxw_format</a> *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="format_8h.html#a34a05058edd856109e5bcf1cc6739fc9">lxw_color_t</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>Pointer to a Format instance. </td></tr>
+    <tr><td class="paramname">color</td><td>The cell diagonal border color.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the diagonal border color. The color should be an RGB integer value, see <a class="el" href="working_with_colors.html">Working with Colors</a> and the above example. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="diagonal_border_8c-example.html#a12">diagonal_border.c</a>.</dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a34a05058edd856109e5bcf1cc6739fc9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a34a05058edd856109e5bcf1cc6739fc9">&#9670;&nbsp;</a></span>lxw_color_t</h2>
@@ -1706,6 +1857,29 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="adeeb0d70c7c873422d642323e7e1ecf5a4940e5aa8e07a9d659d1cf6c2785286f"></a>LXW_ALIGN_VERTICAL_JUSTIFY&#160;</td><td class="fielddoc"><p>Justify vertical alignment </p>
 </td></tr>
 <tr><td class="fieldname"><a id="adeeb0d70c7c873422d642323e7e1ecf5ae456bcbbc14b0c142b808c49950ff710"></a>LXW_ALIGN_VERTICAL_DISTRIBUTED&#160;</td><td class="fielddoc"><p>Distributed vertical alignment </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="add9c45d94b8c1d29e69b37278384fae2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add9c45d94b8c1d29e69b37278384fae2">&#9670;&nbsp;</a></span>lxw_format_diagonal_types</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2">lxw_format_diagonal_types</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Diagonal border types. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="add9c45d94b8c1d29e69b37278384fae2a6a89bbf04376eb234e9d21c58cf4bbb3"></a>LXW_DIAGONAL_BORDER_UP&#160;</td><td class="fielddoc"><p>Cell diagonal border from bottom left to top right. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="add9c45d94b8c1d29e69b37278384fae2a6f8e8c0f88fb619742db3694d65c8d88"></a>LXW_DIAGONAL_BORDER_DOWN&#160;</td><td class="fielddoc"><p>Cell diagonal border from top left to bottom right. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="add9c45d94b8c1d29e69b37278384fae2ac9cfa140f5f9960014d4d46e1099a6ba"></a>LXW_DIAGONAL_BORDER_UP_DOWN&#160;</td><td class="fielddoc"><p>Cell diagonal border in both directions. </p>
 </td></tr>
 </table>
 
@@ -1908,6 +2082,11 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:adeeb0d70c7c873422d642323e7e1ecf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add9c45d94b8c1d29e69b37278384fae2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2">lxw_format_diagonal_types</a> { <a class="el" href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2a6a89bbf04376eb234e9d21c58cf4bbb3">LXW_DIAGONAL_BORDER_UP</a> = 1, 
+<a class="el" href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2a6f8e8c0f88fb619742db3694d65c8d88">LXW_DIAGONAL_BORDER_DOWN</a>, 
+<a class="el" href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2ac9cfa140f5f9960014d4d46e1099a6ba">LXW_DIAGONAL_BORDER_UP_DOWN</a>
+ }</td></tr>
+<tr class="separator:add9c45d94b8c1d29e69b37278384fae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abeafc6e8222ba9fcfd4f2c2f4e9ea38b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38b">lxw_defined_colors</a> { <br />
 &#160;&#160;<a class="el" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba13bdb1312b42e892cd29dfeb79ec8451">LXW_COLOR_BLACK</a> = 0x1000000, 
 <a class="el" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38ba81f6ca72c0925fe665263547614ebb37">LXW_COLOR_BLUE</a> = 0x0000FF, 
@@ -1985,31 +2164,39 @@ Enumerations</h2></td></tr>
 <div class="ttc" id="aformat_8h_html_a8fc47dd0e47020358c79e20039cbd760"><div class="ttname"><a href="format_8h.html#a8fc47dd0e47020358c79e20039cbd760">format_set_shrink</a></div><div class="ttdeci">void format_set_shrink(lxw_format *format)</div><div class="ttdoc">Turn on the text &quot;shrink to fit&quot; for a cell.</div></div>
 <div class="ttc" id="aformat_8h_html_a56d55dd9257d8f0645c62b296d2c196d"><div class="ttname"><a href="format_8h.html#a56d55dd9257d8f0645c62b296d2c196d">format_set_text_wrap</a></div><div class="ttdeci">void format_set_text_wrap(lxw_format *format)</div><div class="ttdoc">Wrap text in a cell.</div></div>
 <div class="ttc" id="aformat_8h_html_aec5c1028fa3e25ad60e439fd64afb245"><div class="ttname"><a href="format_8h.html#aec5c1028fa3e25ad60e439fd64afb245">format_set_font_size</a></div><div class="ttdeci">void format_set_font_size(lxw_format *format, double size)</div><div class="ttdoc">Set the size of the font used in the cell.</div></div>
+<div class="ttc" id="aformat_8h_html_add9c45d94b8c1d29e69b37278384fae2a6f8e8c0f88fb619742db3694d65c8d88"><div class="ttname"><a href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2a6f8e8c0f88fb619742db3694d65c8d88">LXW_DIAGONAL_BORDER_DOWN</a></div><div class="ttdeci">@ LXW_DIAGONAL_BORDER_DOWN</div><div class="ttdef"><b>Definition:</b> format.h:172</div></div>
 <div class="ttc" id="aformat_8h_html_a19cbd7c34692eb7fb35a7411432d836e"><div class="ttname"><a href="format_8h.html#a19cbd7c34692eb7fb35a7411432d836e">format_set_italic</a></div><div class="ttdeci">void format_set_italic(lxw_format *format)</div><div class="ttdoc">Turn on italic for the format font.</div></div>
 <div class="ttc" id="aformat_8h_html_a1dfd61b72aab2c28c3d51e53e08df587"><div class="ttname"><a href="format_8h.html#a1dfd61b72aab2c28c3d51e53e08df587">format_set_unlocked</a></div><div class="ttdeci">void format_set_unlocked(lxw_format *format)</div><div class="ttdoc">Set the cell unlocked state.</div></div>
 <div class="ttc" id="aformat_8h_html_adeeb0d70c7c873422d642323e7e1ecf5ae0a52569d3110521d3e9341809336063"><div class="ttname"><a href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5ae0a52569d3110521d3e9341809336063">LXW_ALIGN_VERTICAL_CENTER</a></div><div class="ttdeci">@ LXW_ALIGN_VERTICAL_CENTER</div><div class="ttdef"><b>Definition:</b> format.h:153</div></div>
 <div class="ttc" id="aworksheet_8h_html_ae57117f04c82bef29805ec3eabc219bb"><div class="ttname"><a href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a></div><div class="ttdeci">lxw_error worksheet_write_formula(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *formula, lxw_format *format)</div><div class="ttdoc">Write a formula to a worksheet cell.</div></div>
 <div class="ttc" id="aformat_8h_html_a189c83d1f21b01937f1f730720c33d13"><div class="ttname"><a href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a></div><div class="ttdeci">void format_set_align(lxw_format *format, uint8_t alignment)</div><div class="ttdoc">Set the alignment for data in the cell.</div></div>
+<div class="ttc" id="aformat_8h_html_add9c45d94b8c1d29e69b37278384fae2a6a89bbf04376eb234e9d21c58cf4bbb3"><div class="ttname"><a href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2a6a89bbf04376eb234e9d21c58cf4bbb3">LXW_DIAGONAL_BORDER_UP</a></div><div class="ttdeci">@ LXW_DIAGONAL_BORDER_UP</div><div class="ttdef"><b>Definition:</b> format.h:169</div></div>
+<div class="ttc" id="aformat_8h_html_a60a053a40e1e70d5ad4a6171458a360a"><div class="ttname"><a href="format_8h.html#a60a053a40e1e70d5ad4a6171458a360a">format_set_diag_border</a></div><div class="ttdeci">void format_set_diag_border(lxw_format *format, uint8_t style)</div><div class="ttdoc">Set the diagonal cell border style.</div></div>
 <div class="ttc" id="aformat_8h_html_a9cf7a28a6e8014cb98dff27415e2b1ca"><div class="ttname"><a href="format_8h.html#a9cf7a28a6e8014cb98dff27415e2b1ca">format_set_border</a></div><div class="ttdeci">void format_set_border(lxw_format *format, uint8_t style)</div><div class="ttdoc">Set the cell border style.</div></div>
 <div class="ttc" id="aformat_8h_html_a85e1b0baf44b445b65894e48722aec14"><div class="ttname"><a href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a></div><div class="ttdeci">void format_set_bold(lxw_format *format)</div><div class="ttdoc">Turn on bold for the format font.</div></div>
-<div class="ttc" id="aformat_8h_html_abeafc6e8222ba9fcfd4f2c2f4e9ea38baebda4f169497f225a9c67bb51691c095"><div class="ttname"><a href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baebda4f169497f225a9c67bb51691c095">LXW_COLOR_YELLOW</a></div><div class="ttdeci">@ LXW_COLOR_YELLOW</div><div class="ttdef"><b>Definition:</b> format.h:216</div></div>
+<div class="ttc" id="aformat_8h_html_abeafc6e8222ba9fcfd4f2c2f4e9ea38baebda4f169497f225a9c67bb51691c095"><div class="ttname"><a href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baebda4f169497f225a9c67bb51691c095">LXW_COLOR_YELLOW</a></div><div class="ttdeci">@ LXW_COLOR_YELLOW</div><div class="ttdef"><b>Definition:</b> format.h:226</div></div>
 <div class="ttc" id="aformat_8h_html_af77bbd0003344cb16d455c7fb709e16c"><div class="ttname"><a href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a></div><div class="ttdeci">void format_set_num_format(lxw_format *format, const char *num_format)</div><div class="ttdoc">Set the number format for a cell.</div></div>
-<div class="ttc" id="astructlxw__format_html"><div class="ttname"><a href="structlxw__format.html">lxw_format</a></div><div class="ttdoc">Struct to represent the formatting properties of an Excel format.</div><div class="ttdef"><b>Definition:</b> format.h:348</div></div>
+<div class="ttc" id="astructlxw__format_html"><div class="ttname"><a href="structlxw__format.html">lxw_format</a></div><div class="ttdoc">Struct to represent the formatting properties of an Excel format.</div><div class="ttdef"><b>Definition:</b> format.h:358</div></div>
 <div class="ttc" id="aworksheet_8h_html_a1b49e135d4debcdb25941f2f40f04cb0"><div class="ttname"><a href="worksheet_8h.html#a1b49e135d4debcdb25941f2f40f04cb0">worksheet_protect</a></div><div class="ttdeci">void worksheet_protect(lxw_worksheet *worksheet, const char *password, lxw_protection *options)</div><div class="ttdoc">Protect elements of a worksheet from modification.</div></div>
+<div class="ttc" id="aformat_8h_html_a4d5e924b1acd9571fd5e0fe2615e9f8fae7797837ba422a1906eae45fc70c433b"><div class="ttname"><a href="format_8h.html#a4d5e924b1acd9571fd5e0fe2615e9f8fae7797837ba422a1906eae45fc70c433b">LXW_BORDER_HAIR</a></div><div class="ttdeci">@ LXW_BORDER_HAIR</div><div class="ttdef"><b>Definition:</b> format.h:313</div></div>
 <div class="ttc" id="aformat_8h_html_aeef47436c335daf1801683ac7b3b587d"><div class="ttname"><a href="format_8h.html#aeef47436c335daf1801683ac7b3b587d">format_set_bg_color</a></div><div class="ttdeci">void format_set_bg_color(lxw_format *format, lxw_color_t color)</div><div class="ttdoc">Set the pattern background color for a cell.</div></div>
 <div class="ttc" id="aformat_8h_html_adeeb0d70c7c873422d642323e7e1ecf5a9899936ef3a43721b394b9b5d2314496"><div class="ttname"><a href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a9899936ef3a43721b394b9b5d2314496">LXW_ALIGN_CENTER</a></div><div class="ttdeci">@ LXW_ALIGN_CENTER</div><div class="ttdef"><b>Definition:</b> format.h:129</div></div>
 <div class="ttc" id="aformat_8h_html_af530d7971d15c164f3fb6bbfede9a39fa76d5bdd1c57c126df937f0b003597e18"><div class="ttname"><a href="format_8h.html#af530d7971d15c164f3fb6bbfede9a39fa76d5bdd1c57c126df937f0b003597e18">LXW_UNDERLINE_SINGLE</a></div><div class="ttdeci">@ LXW_UNDERLINE_SINGLE</div><div class="ttdef"><b>Definition:</b> format.h:98</div></div>
-<div class="ttc" id="aformat_8h_html_abeafc6e8222ba9fcfd4f2c2f4e9ea38bae0b5c39ced3b8c871974f0e4917e4871"><div class="ttname"><a href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38bae0b5c39ced3b8c871974f0e4917e4871">LXW_COLOR_GREEN</a></div><div class="ttdeci">@ LXW_COLOR_GREEN</div><div class="ttdef"><b>Definition:</b> format.h:186</div></div>
-<div class="ttc" id="aformat_8h_html_a40e28394b961e69d4bee27579b4476e7a1fbd6761c4ccd57d98dfd59eaad9fde5"><div class="ttname"><a href="format_8h.html#a40e28394b961e69d4bee27579b4476e7a1fbd6761c4ccd57d98dfd59eaad9fde5">LXW_PATTERN_SOLID</a></div><div class="ttdeci">@ LXW_PATTERN_SOLID</div><div class="ttdef"><b>Definition:</b> format.h:225</div></div>
+<div class="ttc" id="aformat_8h_html_add9c45d94b8c1d29e69b37278384fae2ac9cfa140f5f9960014d4d46e1099a6ba"><div class="ttname"><a href="format_8h.html#add9c45d94b8c1d29e69b37278384fae2ac9cfa140f5f9960014d4d46e1099a6ba">LXW_DIAGONAL_BORDER_UP_DOWN</a></div><div class="ttdeci">@ LXW_DIAGONAL_BORDER_UP_DOWN</div><div class="ttdef"><b>Definition:</b> format.h:175</div></div>
+<div class="ttc" id="aformat_8h_html_abeafc6e8222ba9fcfd4f2c2f4e9ea38bae0b5c39ced3b8c871974f0e4917e4871"><div class="ttname"><a href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38bae0b5c39ced3b8c871974f0e4917e4871">LXW_COLOR_GREEN</a></div><div class="ttdeci">@ LXW_COLOR_GREEN</div><div class="ttdef"><b>Definition:</b> format.h:196</div></div>
+<div class="ttc" id="aformat_8h_html_a1bd8ade5206d187f4f790dbb004ca129"><div class="ttname"><a href="format_8h.html#a1bd8ade5206d187f4f790dbb004ca129">format_set_diag_type</a></div><div class="ttdeci">void format_set_diag_type(lxw_format *format, uint8_t type)</div><div class="ttdoc">Set the diagonal cell border type.</div></div>
+<div class="ttc" id="aformat_8h_html_abfffdfb19f1c5bf6ad95a1b40cec2d35"><div class="ttname"><a href="format_8h.html#abfffdfb19f1c5bf6ad95a1b40cec2d35">format_set_diag_color</a></div><div class="ttdeci">void format_set_diag_color(lxw_format *format, lxw_color_t color)</div><div class="ttdoc">Set the diagonal cell border color.</div></div>
+<div class="ttc" id="aformat_8h_html_a40e28394b961e69d4bee27579b4476e7a1fbd6761c4ccd57d98dfd59eaad9fde5"><div class="ttname"><a href="format_8h.html#a40e28394b961e69d4bee27579b4476e7a1fbd6761c4ccd57d98dfd59eaad9fde5">LXW_PATTERN_SOLID</a></div><div class="ttdeci">@ LXW_PATTERN_SOLID</div><div class="ttdef"><b>Definition:</b> format.h:235</div></div>
 <div class="ttc" id="aworksheet_8h_html_ac208046e7a6d12cc87982422efa41b31"><div class="ttname"><a href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a></div><div class="ttdeci">lxw_error worksheet_write_string(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *string, lxw_format *format)</div><div class="ttdoc">Write a string to a worksheet cell.</div></div>
-<div class="ttc" id="aformat_8h_html_abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec"><div class="ttname"><a href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a></div><div class="ttdeci">@ LXW_COLOR_RED</div><div class="ttdef"><b>Definition:</b> format.h:207</div></div>
+<div class="ttc" id="aformat_8h_html_abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec"><div class="ttname"><a href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a></div><div class="ttdeci">@ LXW_COLOR_RED</div><div class="ttdef"><b>Definition:</b> format.h:217</div></div>
 <div class="ttc" id="aworksheet_8h_html_ab9b7fb95e1bd9b0da70befd0d37a9173"><div class="ttname"><a href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a></div><div class="ttdeci">lxw_error worksheet_set_row(lxw_worksheet *worksheet, lxw_row_t row, double height, lxw_format *format)</div><div class="ttdoc">Set the properties for a row of cells.</div></div>
 <div class="ttc" id="aformat_8h_html_ae690004cd77f48646da07796b540c309"><div class="ttname"><a href="format_8h.html#ae690004cd77f48646da07796b540c309">format_set_rotation</a></div><div class="ttdeci">void format_set_rotation(lxw_format *format, int16_t angle)</div><div class="ttdoc">Set the rotation of the text in a cell.</div></div>
 <div class="ttc" id="aworksheet_8h_html_ad9fc47d3beaa2ab4759414e8580c2289"><div class="ttname"><a href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a></div><div class="ttdeci">lxw_error worksheet_write_number(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, double number, lxw_format *format)</div><div class="ttdoc">Write a number to a worksheet cell.</div></div>
 <div class="ttc" id="aformat_8h_html_a61981b2080bfe6381ede5358ee05b05c"><div class="ttname"><a href="format_8h.html#a61981b2080bfe6381ede5358ee05b05c">format_set_font_color</a></div><div class="ttdeci">void format_set_font_color(lxw_format *format, lxw_color_t color)</div><div class="ttdoc">Set the color of the font used in the cell.</div></div>
 <div class="ttc" id="aformat_8h_html_a449e2235a9088cc60233ae443acd2b1a"><div class="ttname"><a href="format_8h.html#a449e2235a9088cc60233ae443acd2b1a">format_set_font_name</a></div><div class="ttdeci">void format_set_font_name(lxw_format *format, const char *font_name)</div><div class="ttdoc">Set the font used in the cell.</div></div>
 <div class="ttc" id="aformat_8h_html_ad35ee5445826bd93ec1bc0d489fc09db"><div class="ttname"><a href="format_8h.html#ad35ee5445826bd93ec1bc0d489fc09db">format_set_underline</a></div><div class="ttdeci">void format_set_underline(lxw_format *format, uint8_t style)</div><div class="ttdoc">Turn on underline for the format:</div></div>
-<div class="ttc" id="aformat_8h_html_a4d5e924b1acd9571fd5e0fe2615e9f8fa7ca212fb42e5816bb81d7b96ff623082"><div class="ttname"><a href="format_8h.html#a4d5e924b1acd9571fd5e0fe2615e9f8fa7ca212fb42e5816bb81d7b96ff623082">LXW_BORDER_THIN</a></div><div class="ttdeci">@ LXW_BORDER_THIN</div><div class="ttdef"><b>Definition:</b> format.h:285</div></div>
+<div class="ttc" id="aformat_8h_html_a4d5e924b1acd9571fd5e0fe2615e9f8fa7ca212fb42e5816bb81d7b96ff623082"><div class="ttname"><a href="format_8h.html#a4d5e924b1acd9571fd5e0fe2615e9f8fa7ca212fb42e5816bb81d7b96ff623082">LXW_BORDER_THIN</a></div><div class="ttdeci">@ LXW_BORDER_THIN</div><div class="ttdef"><b>Definition:</b> format.h:295</div></div>
+<div class="ttc" id="autility_8h_html_ad510ac6df573d23203374e24dba373d2"><div class="ttname"><a href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a></div><div class="ttdeci">#define CELL(cell)</div><div class="ttdoc">Convert an Excel A1 cell string into a (row, col) pair.</div><div class="ttdef"><b>Definition:</b> utility.h:45</div></div>
 <div class="ttc" id="aformat_8h_html_a99aea699cd7bb3c56a515c9c9e0caa69"><div class="ttname"><a href="format_8h.html#a99aea699cd7bb3c56a515c9c9e0caa69">format_set_indent</a></div><div class="ttdeci">void format_set_indent(lxw_format *format, uint8_t level)</div><div class="ttdoc">Set the cell text indentation level.</div></div>
 <div class="ttc" id="aworkbook_8h_html_a279a5d7075d09a3931aae9782afede33"><div class="ttname"><a href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a></div><div class="ttdeci">lxw_format * workbook_add_format(lxw_workbook *workbook)</div><div class="ttdoc">Create a new Format object to formats cells in worksheets.</div></div>
 <div class="ttc" id="aformat_8h_html_a43ddbc77d637b04fdfbc45e96857d15a"><div class="ttname"><a href="format_8h.html#a43ddbc77d637b04fdfbc45e96857d15a">format_set_pattern</a></div><div class="ttdeci">void format_set_pattern(lxw_format *format, uint8_t index)</div><div class="ttdoc">Set the background fill pattern for a cell.</div></div>
