@@ -79,6 +79,7 @@ $(function() {
 </li>
 <li class="level1"><a href="#gsg_bsd">Installation on FreeBSD and OpenBSD</a></li>
 <li class="level1"><a href="#gsg_macos">Installation on macOS and iOS</a><ul><li class="level2"><a href="#gsg_cocoapods">Install using Cocoa Pods for Xcode</a></li>
+<li class="level2"><a href="#gsg_universal">Compiling a universal binary on macOS</a></li>
 <li class="level2"><a href="#gsg_brew">Installation on macOS with homebrew</a></li>
 </ul>
 </li>
@@ -198,7 +199,22 @@ worksheet_write_string(worksheet, 0, 0, "Hello", nil)
 worksheet_write_number(worksheet, 1, 0, 123, nil)
 workbook_close(workbook)
 </pre><p>For a sample Xcode project that uses the libxlsxwriter cocoapod for iOS and macOS with Objective-C and Swift see <a href="https://github.com/lrossi/libxlsxwriterCocoaExamples">libxlsxwriter Cocoa Examples</a> or <a href="https://github.com/FrankenApps/LibXlsxWriterSwiftSample">LibXlsxWriterSwiftSample</a> for an updated example for Swift 5.</p>
-<h2><a class="anchor" id="gsg_brew"></a>
+<h2><a class="anchor" id="gsg_universal"></a>
+Compiling a universal binary on macOS</h2>
+<p>With Xcode 12.2 and later you can compile libxlsxwriter as a "universal
+binary" for both Apple silicon and Intel-based Macs, i.e., arm64 and x86_64.</p>
+<p>You can compile a universal binary with standard make as follows: </p><pre class="fragment">$ make universal_binary
+
+# Which gives:
+$ lipo -archs lib/libxlsxwriter.a
+x86_64 arm64
+
+$ lipo -archs lib/libxlsxwriter.dylib
+x86_64 arm64
+</pre><p>Or with Cmake (see also <a class="el" href="getting_started.html#gsg_cmake">Install using CMake</a>): </p><pre class="fragment">cd cmake
+cmake -DCMAKE_OSX_ARCHITECTURES="x86_64;arm64" ..
+make
+</pre><h2><a class="anchor" id="gsg_brew"></a>
 Installation on macOS with homebrew</h2>
 <p>On macOS you can also use <a href="https://brew.sh">brew/homebrew</a>: </p><pre class="fragment">brew install libxlsxwriter
 </pre><p>Once installed you can compile and run a libxlsxwriter program as follows: </p><pre class="fragment">cc myexcel.c -o myexcel -I/usr/local/include -L/usr/local/lib -lxlsxwriter
