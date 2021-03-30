@@ -1109,10 +1109,11 @@ This function does an ASCII lowercase string comparison to determine if the shee
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">workbook</td><td>This function can be used to set the Excel "Read-only Recommended" option that is available when saving a file. This presents the user of the file with an option to open it in "read-only" mode. This means that any changes to the file can't be saved back to the same file and must be saved to a new file. It can be set as follows:</td></tr>
+    <tr><td class="paramname">workbook</td><td>Pointer to a <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook.">lxw_workbook</a> instance.</td></tr>
   </table>
   </dd>
 </dl>
+<p>This function can be used to set the Excel "Read-only Recommended" option that is available when saving a file. This presents the user of the file with an option to open it in "read-only" mode. This means that any changes to the file can't be saved back to the same file and must be saved to a new file. It can be set as follows:</p>
 <div class="fragment"><div class="line"><a class="code" href="workbook_8h.html#a8aaade0a24d1b8e10bd5690cb5479de9">workbook_read_only_recommended</a>(workbook);</div>
 </div><!-- fragment --><p>Which will raise a dialog like the following when opening the file:</p>
 <div class="image">
