@@ -103,7 +103,7 @@ $(function() {
 Installation on Linux</h1>
 <h2><a class="anchor" id="gsg_quick_start"></a>
 Quick-start on Linux</h2>
-<p>If you prefer to assemble Ikea furniture first and only read the instructions when you have parts left over then the following minimal set of commands should get you up and running on a Debian like system: </p><pre class="fragment">sudo apt-get install -y zlib1g-dev
+<p>If you prefer to assemble Ikea furniture first and only read the instructions when you have parts left over, then the following minimal set of commands should get you up and running on a Debian like system: </p><pre class="fragment">sudo apt-get install -y zlib1g-dev
 git clone https://github.com/jmcnamara/libxlsxwriter.git
 cd libxlsxwriter
 make
@@ -169,6 +169,9 @@ Using the library</h2>
 <div class="line">}</div>
 </div><!-- fragment --><p>If you executed the <code>"make install"</code> command in the previous section then you should be able to compile the program as follows: </p><pre class="fragment">cc myexcel.c -o myexcel -lxlsxwriter
 </pre><p>In some environments, or if you changed the <code>PREFIX</code> location, you may have to provide explicit <code>include</code> and <code>lib</code> paths: </p><pre class="fragment">cc myexcel.c -o myexcel -I/usr/local/include -L/usr/local/lib -lxlsxwriter
+</pre><p>You can also use <a href="https://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a> (after you use <code>"make install"</code>) to automatically determine the required arguments and paths: </p><pre class="fragment">$ pkg-config --cflags --libs xlsxwriter
+-I/usr/local/include -L/usr/local/lib -lxlsxwriter -lz
+</pre><p>You can add this information to your compilation as follows: </p><pre class="fragment">cc myexcel.c -o myexcel `pkg-config --cflags --libs xlsxwriter`
 </pre><p>This will create an executable that you can run to generate an Excel spreadsheet: </p><pre class="fragment">./myexcel
 xdg-open myexcel.xlsx
 </pre><p>If the installation didn't work for you then you can link against the static library you created in the "Build the source code" step: </p><pre class="fragment">cc myexcel.c -o myexcel -I /path/to/libxlsxwriter/include \
@@ -177,7 +180,7 @@ xdg-open myexcel.xlsx
 Installation on FreeBSD and OpenBSD</h1>
 <p>Installation on FreeBSD and OpenBSD is mainly the same as on Linux, see above, with the differences outlined below.</p>
 <p>Both FreeBSD and OpenBSD come with the zlib development libraries pre-installed so there are no additional dependencies. However, if you have any issues then follow the instructions <a class="el" href="getting_started.html#gsg_dependencies">to install zlib</a>.</p>
-<p><a class="el" href="getting_started.html#gsg_git">Get the source code via Git</a> or <a class="el" href="getting_started.html#gsg_tarball">get the source code as a tarball</a> as shown above then build the source code as follows using <code>gmake</code> (not make): </p><pre class="fragment">cd libxlsxwriter
+<p><a class="el" href="getting_started.html#gsg_git">Get the source code via Git</a> or <a class="el" href="getting_started.html#gsg_tarball">get the source code as a tarball</a> as shown above then build the source code as follows using <b>gmake</b> (not make): </p><pre class="fragment">cd libxlsxwriter
 gmake
 </pre><p>Then follow the instructions in the Linux section to <a class="el" href="getting_started.html#gsg_install">install the library</a> and <a class="el" href="getting_started.html#gsg_using">use the library</a>.</p>
 <h1><a class="anchor" id="gsg_macos"></a>
@@ -198,7 +201,7 @@ let worksheet = workbook_add_worksheet(workbook, nil)
 worksheet_write_string(worksheet, 0, 0, "Hello", nil)
 worksheet_write_number(worksheet, 1, 0, 123, nil)
 workbook_close(workbook)
-</pre><p>For a sample Xcode project that uses the libxlsxwriter cocoapod for iOS and macOS with Objective-C and Swift see <a href="https://github.com/lrossi/libxlsxwriterCocoaExamples">libxlsxwriter Cocoa Examples</a> or <a href="https://github.com/FrankenApps/LibXlsxWriterSwiftSample">LibXlsxWriterSwiftSample</a> for an updated example for Swift 5.</p>
+</pre><p>For a sample Xcode project that uses the libxlsxwriter cocoapod for iOS and macOS with Objective-C and Swift see <a href="https://github.com/lrossi/libxlsxwriterCocoaExamples">libxlsxwriter Cocoa Examples</a> or <a href="https://github.com/FrankenApps/LibXlsxWriterSwiftSample">LibXlsxWriterSwiftSample</a>.</p>
 <h2><a class="anchor" id="gsg_universal"></a>
 Compiling a universal binary on macOS</h2>
 <p>With Xcode 12.2 and later you can compile libxlsxwriter as a "universal
@@ -331,7 +334,7 @@ zlib.lib
 Using libxlsxwriter in Microsoft Visual Studio via vcpkg</h1>
 <p>A convenient way to get the latest release version of libxlsxwriter and integrate it into your Visual Studio build environment is to use the <a href="https://docs.microsoft.com/en-us/cpp/build/vcpkg?view=vs-2019">vcpkg</a> tool. This uses the CMake build system shown in the previous section but with less user interaction. From the vcpkg docs:</p>
 <blockquote class="doxtable">
-<p>"vcpkg" is a command-line package manager that greatly simplifies the acquisition and installation of third-party libraries on Windows, Linux and MacOS. If your project uses third-party libraries, we recommend that you use vcpkg to install them. vcpkg supports both open-source and proprietary libraries. All libraries in the vcpkg Windows catalog have been tested for compatibility with Visual Studio 2015, Visual Studio 2017, and Visual Studio 2019. </p>
+<p>"vcpkg" is a cross-platform command-line package manager for C and C++ libraries. It simplifies the acquisition and installation of third-party libraries on Windows, Linux, and macOS. If your project uses third-party libraries, we recommend that you use vcpkg to install them. vcpkg supports both open-source and proprietary libraries. All libraries in the vcpkg Windows catalog have been tested for compatibility with Visual Studio 2015, Visual Studio 2017, and Visual Studio 2019. Between the Windows and Linux/macOS catalogs, vcpkg now supports thousands of libraries. The C++ community adds more libraries to both catalogs on an ongoing basis. </p>
 </blockquote>
 <p>Install vcpkg and libxlsxwriter as follows in Windows CMD or Powershell: </p><pre class="fragment">&gt; git clone https://github.com/microsoft/vcpkg.git
 &gt; bootstrap-vcpkg.bat
@@ -394,7 +397,8 @@ pacman -S git gcc make zlib-devel
 git clone https://github.com/jmcnamara/libxlsxwriter.git
 cd libxlsxwriter/
 make
-</pre><p>After compilation you can follow the instructions in the <a class="el" href="getting_started.html#gsg_install">Install the library</a> and <a class="el" href="getting_started.html#gsg_using">Using the library</a> sections above. When using the library you may also need to link against the zlib library using <code>-lz</code>: </p><pre class="fragment">gcc myexcel.c -o myexcel -lxlsxwriter -lz
+</pre><p>By default the library is installed in <code>/usr/local</code> on MinGW/MSYS systems. If you know how to extend your build environments to use that directory then you can just run <code>make install</code>. However, it is generally easier to work with if you install them in the <code>/usr</code> directory like this: </p><pre class="fragment">make install PREFIX=/usr
+</pre><p>After compilation you can follow the instructions in the <a class="el" href="getting_started.html#gsg_using">Using the library</a> section above. When compiling with the library you may also need to link against the zlib library using <code>-lz</code>: </p><pre class="fragment">gcc myexcel.c -o myexcel -lxlsxwriter -lz
 </pre><p>It is also possible to use <a href="https://cygwin.com">Cygwin</a> and the older <a href="http://mingw.org">MinGW and MSYS</a>. Libxlsxwriter has been confirmed to compile and work in all of these environments.</p>
 <p>See also <a class="el" href="getting_started.html#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a>.</p>
 <h1><a class="anchor" id="gsg_qt"></a>
@@ -418,7 +422,7 @@ Next steps</h1>
 <div class="ttc" id="acommon_8h_html_a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4"><div class="ttname"><a href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a></div><div class="ttdeci">@ LXW_FALSE</div><div class="ttdef"><b>Definition:</b> common.h:51</div></div>
 <div class="ttc" id="aworkbook_8h_html_a1cf96608a23ee4eb0e8467c15240d00b"><div class="ttname"><a href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a></div><div class="ttdeci">lxw_workbook * workbook_new(const char *filename)</div><div class="ttdoc">Create a new workbook object.</div></div>
 <div class="ttc" id="aworkbook_8h_html_a8ca9bd8c30c618b81ca6180f78b03323"><div class="ttname"><a href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323">workbook_new_opt</a></div><div class="ttdeci">lxw_workbook * workbook_new_opt(const char *filename, lxw_workbook_options *options)</div><div class="ttdoc">Create a new workbook object, and set the workbook options.</div></div>
-<div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1603</div></div>
+<div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1612</div></div>
 <div class="ttc" id="astructlxw__workbook_html"><div class="ttname"><a href="structlxw__workbook.html">lxw_workbook</a></div><div class="ttdoc">Struct to represent an Excel workbook.</div><div class="ttdef"><b>Definition:</b> workbook.h:280</div></div>
 <div class="ttc" id="aworksheet_8h_html_ac208046e7a6d12cc87982422efa41b31"><div class="ttname"><a href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a></div><div class="ttdeci">lxw_error worksheet_write_string(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *string, lxw_format *format)</div><div class="ttdoc">Write a string to a worksheet cell.</div></div>
 <div class="ttc" id="aworksheet_8h_html_ad9fc47d3beaa2ab4759414e8580c2289"><div class="ttname"><a href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a></div><div class="ttdeci">lxw_error worksheet_write_number(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, double number, lxw_format *format)</div><div class="ttdoc">Write a number to a worksheet cell.</div></div>

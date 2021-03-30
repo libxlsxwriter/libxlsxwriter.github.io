@@ -90,6 +90,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:a3affe5a43c455cc61f8e56a0d6d742d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd2ff64da3a930c2b7715ad71fae8d39"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__image__options.html#acd2ff64da3a930c2b7715ad71fae8d39">description</a></td></tr>
 <tr class="separator:acd2ff64da3a930c2b7715ad71fae8d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd82d91c7e60dcf0200722bbd428a8e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__image__options.html#aacd82d91c7e60dcf0200722bbd428a8e">decorative</a></td></tr>
+<tr class="separator:aacd82d91c7e60dcf0200722bbd428a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c023a71168ff25274cfe41ac5403a99"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__image__options.html#a0c023a71168ff25274cfe41ac5403a99">url</a></td></tr>
 <tr class="separator:a0c023a71168ff25274cfe41ac5403a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c11ce77a275cac8ff9aa9ab81edfe01"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__image__options.html#a8c11ce77a275cac8ff9aa9ab81edfe01">tip</a></td></tr>
@@ -186,7 +188,22 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Optional description of the image. Defaults to the image filename as in Excel. Set to "" to ignore the description field. </p>
+<p>Optional description or "Alt text" for the image. This field can be used to provide a text description of the image to help accessibility. Defaults to the image filename as in Excel. Set to "" to ignore the description field. </p>
+
+</div>
+</div>
+<a id="aacd82d91c7e60dcf0200722bbd428a8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacd82d91c7e60dcf0200722bbd428a8e">&#9670;&nbsp;</a></span>decorative</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t lxw_image_options::decorative</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Optional parameter to help accessibility. It is used to mark the image as decorative, and thus uninformative, for automated screen readers. As in Excel, if this parameter is in use the <code>description</code> field isn't written. </p>
 
 </div>
 </div>

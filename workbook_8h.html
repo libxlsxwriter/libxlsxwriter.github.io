@@ -151,6 +151,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a24dd6624ffdc3e17aa5bcfb4608755b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a24dd6624ffdc3e17aa5bcfb4608755b8">workbook_set_vba_name</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, const char *name)</td></tr>
 <tr class="memdesc:a24dd6624ffdc3e17aa5bcfb4608755b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the VBA name for the workbook.  <a href="workbook_8h.html#a24dd6624ffdc3e17aa5bcfb4608755b8">More...</a><br /></td></tr>
 <tr class="separator:a24dd6624ffdc3e17aa5bcfb4608755b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aaade0a24d1b8e10bd5690cb5479de9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a8aaade0a24d1b8e10bd5690cb5479de9">workbook_read_only_recommended</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook)</td></tr>
+<tr class="memdesc:a8aaade0a24d1b8e10bd5690cb5479de9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a recommendation to open the file in "read-only" mode.  <a href="workbook_8h.html#a8aaade0a24d1b8e10bd5690cb5479de9">More...</a><br /></td></tr>
+<tr class="separator:a8aaade0a24d1b8e10bd5690cb5479de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a1cf96608a23ee4eb0e8467c15240d00b"></a>
@@ -1089,6 +1092,35 @@ This function does an ASCII lowercase string comparison to determine if the shee
 
 </div>
 </div>
+<a id="a8aaade0a24d1b8e10bd5690cb5479de9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aaade0a24d1b8e10bd5690cb5479de9">&#9670;&nbsp;</a></span>workbook_read_only_recommended()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void workbook_read_only_recommended </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__workbook.html">lxw_workbook</a> *&#160;</td>
+          <td class="paramname"><em>workbook</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">workbook</td><td>This function can be used to set the Excel "Read-only Recommended" option that is available when saving a file. This presents the user of the file with an option to open it in "read-only" mode. This means that any changes to the file can't be saved back to the same file and must be saved to a new file. It can be set as follows:</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a class="code" href="workbook_8h.html#a8aaade0a24d1b8e10bd5690cb5479de9">workbook_read_only_recommended</a>(workbook);</div>
+</div><!-- fragment --><p>Which will raise a dialog like the following when opening the file:</p>
+<div class="image">
+<img src="read_only.png" alt=""/>
+</div>
+ 
+</div>
+</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a76827346b7ff0b189f505a42ccc81188"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a76827346b7ff0b189f505a42ccc81188">&#9670;&nbsp;</a></span>lxw_doc_properties</h2>
@@ -1233,7 +1265,7 @@ Macros</h2></td></tr>
 <div class="ttc" id="aworkbook_8h_html_a857f1d02d04a7d5a039642abde91c280"><div class="ttname"><a href="workbook_8h.html#a857f1d02d04a7d5a039642abde91c280">workbook_get_worksheet_by_name</a></div><div class="ttdeci">lxw_worksheet * workbook_get_worksheet_by_name(lxw_workbook *workbook, const char *name)</div><div class="ttdoc">Get a worksheet object from its name.</div></div>
 <div class="ttc" id="aformat_8h_html_a85e1b0baf44b445b65894e48722aec14"><div class="ttname"><a href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a></div><div class="ttdeci">void format_set_bold(lxw_format *format)</div><div class="ttdoc">Turn on bold for the format font.</div></div>
 <div class="ttc" id="aworkbook_8h_html_a843f0d1132a7eb3f8e3e9518ff27e5c9"><div class="ttname"><a href="workbook_8h.html#a843f0d1132a7eb3f8e3e9518ff27e5c9">workbook_set_custom_property_datetime</a></div><div class="ttdeci">lxw_error workbook_set_custom_property_datetime(lxw_workbook *workbook, const char *name, lxw_datetime *datetime)</div><div class="ttdoc">Set a custom document date or time property.</div></div>
-<div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1603</div></div>
+<div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1612</div></div>
 <div class="ttc" id="aworkbook_8h_html_af2d8534bf9d58e48491a761228d31e14"><div class="ttname"><a href="workbook_8h.html#af2d8534bf9d58e48491a761228d31e14">workbook_set_custom_property_number</a></div><div class="ttdeci">lxw_error workbook_set_custom_property_number(lxw_workbook *workbook, const char *name, double value)</div><div class="ttdoc">Set a custom document number property.</div></div>
 <div class="ttc" id="aworkbook_8h_html_a442b4056e8d4debf56c07888f2a776f6"><div class="ttname"><a href="workbook_8h.html#a442b4056e8d4debf56c07888f2a776f6">workbook_define_name</a></div><div class="ttdeci">lxw_error workbook_define_name(lxw_workbook *workbook, const char *name, const char *formula)</div><div class="ttdoc">Create a defined name in the workbook to use as a variable.</div></div>
 <div class="ttc" id="aworkbook_8h_html_abd18b07856137e94b34c9aca7e0831b5"><div class="ttname"><a href="workbook_8h.html#abd18b07856137e94b34c9aca7e0831b5">workbook_get_default_url_format</a></div><div class="ttdeci">lxw_format * workbook_get_default_url_format(lxw_workbook *workbook)</div><div class="ttdoc">Get the default URL format used with worksheet_write_url().</div></div>
@@ -1242,13 +1274,14 @@ Macros</h2></td></tr>
 <div class="ttc" id="aworkbook_8h_html_a8de478eed94be65de0622c64a0179ff9"><div class="ttname"><a href="workbook_8h.html#a8de478eed94be65de0622c64a0179ff9">workbook_add_vba_project</a></div><div class="ttdeci">lxw_error workbook_add_vba_project(lxw_workbook *workbook, const char *filename)</div><div class="ttdoc">Add a vbaProject binary to the Excel workbook.</div></div>
 <div class="ttc" id="astructlxw__format_html"><div class="ttname"><a href="structlxw__format.html">lxw_format</a></div><div class="ttdoc">Struct to represent the formatting properties of an Excel format.</div><div class="ttdef"><b>Definition:</b> format.h:358</div></div>
 <div class="ttc" id="acommon_8h_html_a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf"><div class="ttname"><a href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a></div><div class="ttdeci">@ LXW_TRUE</div><div class="ttdef"><b>Definition:</b> common.h:53</div></div>
-<div class="ttc" id="astructlxw__chart_html"><div class="ttname"><a href="structlxw__chart.html">lxw_chart</a></div><div class="ttdoc">Struct to represent an Excel chart.</div><div class="ttdef"><b>Definition:</b> chart.h:1086</div></div>
+<div class="ttc" id="astructlxw__chart_html"><div class="ttname"><a href="structlxw__chart.html">lxw_chart</a></div><div class="ttdoc">Struct to represent an Excel chart.</div><div class="ttdef"><b>Definition:</b> chart.h:1087</div></div>
 <div class="ttc" id="aworksheet_8h_html_ac2067faaacb8bfa6550b019e915900a2"><div class="ttname"><a href="worksheet_8h.html#ac2067faaacb8bfa6550b019e915900a2">worksheet_insert_chart</a></div><div class="ttdeci">lxw_error worksheet_insert_chart(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, lxw_chart *chart)</div><div class="ttdoc">Insert a chart object into a worksheet.</div></div>
 <div class="ttc" id="aworkbook_8h_html_a929d2f7063651d872ccac14180e042a4"><div class="ttname"><a href="workbook_8h.html#a929d2f7063651d872ccac14180e042a4">workbook_set_custom_property_boolean</a></div><div class="ttdeci">lxw_error workbook_set_custom_property_boolean(lxw_workbook *workbook, const char *name, uint8_t value)</div><div class="ttdoc">Set a custom document boolean property.</div></div>
 <div class="ttc" id="astructlxw__datetime_html"><div class="ttname"><a href="structlxw__datetime.html">lxw_datetime</a></div><div class="ttdoc">Struct to represent a date and time in Excel.</div><div class="ttdef"><b>Definition:</b> common.h:152</div></div>
 <div class="ttc" id="aworkbook_8h_html_a9ecbd616a8306c88210794140c434031"><div class="ttname"><a href="workbook_8h.html#a9ecbd616a8306c88210794140c434031">workbook_validate_sheet_name</a></div><div class="ttdeci">lxw_error workbook_validate_sheet_name(lxw_workbook *workbook, const char *sheetname)</div><div class="ttdoc">Validate a worksheet or chartsheet name.</div></div>
 <div class="ttc" id="astructlxw__doc__properties_html_a23d8fd5995ef26d1eab54c4dbd92393c"><div class="ttname"><a href="structlxw__doc__properties.html#a23d8fd5995ef26d1eab54c4dbd92393c">lxw_doc_properties::title</a></div><div class="ttdeci">char * title</div><div class="ttdef"><b>Definition:</b> workbook.h:185</div></div>
 <div class="ttc" id="astructlxw__workbook_html"><div class="ttname"><a href="structlxw__workbook.html">lxw_workbook</a></div><div class="ttdoc">Struct to represent an Excel workbook.</div><div class="ttdef"><b>Definition:</b> workbook.h:280</div></div>
+<div class="ttc" id="aworkbook_8h_html_a8aaade0a24d1b8e10bd5690cb5479de9"><div class="ttname"><a href="workbook_8h.html#a8aaade0a24d1b8e10bd5690cb5479de9">workbook_read_only_recommended</a></div><div class="ttdeci">void workbook_read_only_recommended(lxw_workbook *workbook)</div><div class="ttdoc">Add a recommendation to open the file in &quot;read-only&quot; mode.</div></div>
 <div class="ttc" id="aworkbook_8h_html_a24dd6624ffdc3e17aa5bcfb4608755b8"><div class="ttname"><a href="workbook_8h.html#a24dd6624ffdc3e17aa5bcfb4608755b8">workbook_set_vba_name</a></div><div class="ttdeci">lxw_error workbook_set_vba_name(lxw_workbook *workbook, const char *name)</div><div class="ttdoc">Set the VBA name for the workbook.</div></div>
 <div class="ttc" id="aworksheet_8h_html_ac208046e7a6d12cc87982422efa41b31"><div class="ttname"><a href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a></div><div class="ttdeci">lxw_error worksheet_write_string(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *string, lxw_format *format)</div><div class="ttdoc">Write a string to a worksheet cell.</div></div>
 <div class="ttc" id="aformat_8h_html_abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec"><div class="ttname"><a href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a></div><div class="ttdeci">@ LXW_COLOR_RED</div><div class="ttdef"><b>Definition:</b> format.h:217</div></div>
