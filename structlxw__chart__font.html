@@ -190,7 +190,13 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The chart font rotation property. Range: -90 to 90, and 270-271. The angle 270 gives a stacked (top to bottom) alignment. The angle 271 gives a stacked alignment for East Asian fonts. </p>
+<p>The chart font rotation property. Range: -90 to 90, and 270, 271 and 360:</p>
+<ul>
+<li>The angles -90 to 90 are the normal range shown in the Excel user interface.</li>
+<li>The angle 270 gives a stacked (top to bottom) alignment.</li>
+<li>The angle 271 gives a stacked alignment for East Asian fonts.</li>
+<li>The angle 360 gives an explicit angle of 0 to override the y axis default. </li>
+</ul>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="chart_fonts_8c-example.html#a13">chart_fonts.c</a>.</dd>
 </dl>
 
