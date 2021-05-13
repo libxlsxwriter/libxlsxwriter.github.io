@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libxlsxwriter: tab_colors.c</title>
+<title>libxlsxwriter: background.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,21 +63,21 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">tab_colors.c</div>  </div>
+<div class="title">background.c</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table width="600">
 <tr>
-<td><a class="el" href="background_8c-example.html">&lt;&lt; background.c</a> </td><td align="right"><a class="el" href="diagonal_border_8c-example.html">diagonal_border.c &gt;&gt;</a>  </td></tr>
+<td><a class="el" href="outline_collapsed_8c-example.html">&lt;&lt; outline_collapsed.c</a> </td><td align="right"><a class="el" href="tab_colors_8c-example.html">tab_colors.c &gt;&gt;</a>  </td></tr>
 </table>
-<p>Example of how to set Excel worksheet tab colors.</p>
+<p>Example of how to set the background image for a worksheet.</p>
 <div class="image">
-<img src="tab_colors.png" alt=""/>
+<img src="background.png" alt=""/>
 </div>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Example of how to set Excel worksheet tab colors using libxlsxwriter.</span></div>
+<div class="line"><span class="comment"> * An example of setting a worksheet background image with libxlsxwriter.</span></div>
 <div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Copyright 2014-2018, John McNamara, jmcnamara@cpan.org</span></div>
+<div class="line"><span class="comment"> * Copyright 2014-2021, John McNamara, jmcnamara@cpan.org</span></div>
 <div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> */</span></div>
 <div class="line"> </div>
@@ -85,36 +85,21 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line"> </div>
-<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook   = <a name="a1"></a><a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;tab_colors.xlsx&quot;</span>);</div>
+<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a name="a1"></a><a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;background.xlsx&quot;</span>);</div>
+<div class="line">    <a name="_a2"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a name="a3"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">/* Set up some worksheets. */</span></div>
-<div class="line">    <a name="_a2"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet1 = <a name="a3"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
-<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet2 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
-<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet3 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
-<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet4 = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line">    <a name="a4"></a><a class="code" href="worksheet_8h.html#ae588a6cb4c7f6c258e1af0ad7213e734">worksheet_set_background</a>(worksheet, <span class="stringliteral">&quot;logo.png&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line"> </div>
-<div class="line">    <span class="comment">/* Set the tab colors. */</span></div>
-<div class="line">    <a name="a4"></a><a class="code" href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0">worksheet_set_tab_color</a>(worksheet1, <a name="a5"></a><a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a>);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0">worksheet_set_tab_color</a>(worksheet2, <a name="a6"></a><a class="code" href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38bae0b5c39ced3b8c871974f0e4917e4871">LXW_COLOR_GREEN</a>);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0">worksheet_set_tab_color</a>(worksheet3, 0xFF9900); <span class="comment">/* Orange. */</span></div>
-<div class="line"> </div>
-<div class="line">    <span class="comment">/* worksheet4 will have the default color. */</span></div>
-<div class="line">    <a name="a7"></a><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet4, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
-<div class="line"> </div>
-<div class="line">    <a name="a8"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">    <a name="a5"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <div class="ttc" id="aworkbook_8h_html_ad9e7aeebc0fd43562db5bcd527b2ee5e"><div class="ttname"><a href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a></div><div class="ttdeci">lxw_error workbook_close(lxw_workbook *workbook)</div><div class="ttdoc">Close the Workbook object and write the XLSX file.</div></div>
 <div class="ttc" id="aworkbook_8h_html_a1cf96608a23ee4eb0e8467c15240d00b"><div class="ttname"><a href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a></div><div class="ttdeci">lxw_workbook * workbook_new(const char *filename)</div><div class="ttdoc">Create a new workbook object.</div></div>
+<div class="ttc" id="aworksheet_8h_html_ae588a6cb4c7f6c258e1af0ad7213e734"><div class="ttname"><a href="worksheet_8h.html#ae588a6cb4c7f6c258e1af0ad7213e734">worksheet_set_background</a></div><div class="ttdeci">lxw_error worksheet_set_background(lxw_worksheet *worksheet, const char *filename)</div><div class="ttdoc">Set the background image for a worksheet.</div></div>
 <div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1620</div></div>
-<div class="ttc" id="aformat_8h_html_abeafc6e8222ba9fcfd4f2c2f4e9ea38bae0b5c39ced3b8c871974f0e4917e4871"><div class="ttname"><a href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38bae0b5c39ced3b8c871974f0e4917e4871">LXW_COLOR_GREEN</a></div><div class="ttdeci">@ LXW_COLOR_GREEN</div><div class="ttdef"><b>Definition:</b> format.h:196</div></div>
 <div class="ttc" id="astructlxw__workbook_html"><div class="ttname"><a href="structlxw__workbook.html">lxw_workbook</a></div><div class="ttdoc">Struct to represent an Excel workbook.</div><div class="ttdef"><b>Definition:</b> workbook.h:280</div></div>
-<div class="ttc" id="aworksheet_8h_html_a1e84ef4dff791fc2278dfb029af94cb0"><div class="ttname"><a href="worksheet_8h.html#a1e84ef4dff791fc2278dfb029af94cb0">worksheet_set_tab_color</a></div><div class="ttdeci">void worksheet_set_tab_color(lxw_worksheet *worksheet, lxw_color_t color)</div><div class="ttdoc">Set the color of the worksheet tab.</div></div>
-<div class="ttc" id="aworksheet_8h_html_ac208046e7a6d12cc87982422efa41b31"><div class="ttname"><a href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a></div><div class="ttdeci">lxw_error worksheet_write_string(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *string, lxw_format *format)</div><div class="ttdoc">Write a string to a worksheet cell.</div></div>
-<div class="ttc" id="aformat_8h_html_abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec"><div class="ttname"><a href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a></div><div class="ttdeci">@ LXW_COLOR_RED</div><div class="ttdef"><b>Definition:</b> format.h:217</div></div>
 <div class="ttc" id="aworkbook_8h_html_a81d456b4f65a464e78e4a0030ecc3c2e"><div class="ttname"><a href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a></div><div class="ttdeci">lxw_worksheet * workbook_add_worksheet(lxw_workbook *workbook, const char *sheetname)</div><div class="ttdoc">Add a new worksheet to a workbook.</div></div>
 <!-- HTML footer for doxygen 1.8.20-->
 <!-- start footer part -->
