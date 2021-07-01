@@ -66,6 +66,12 @@ $(function() {
 <div class="title">Working with Dates and Times </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#ww_date_struct">Writing datetimes with the lxw_datetime struct</a></li>
+<li class="level1"><a href="#ww_date_unix">Writing Unix datetimes</a></li>
+<li class="level1"><a href="#ww_date_formats">Date formatting</a></li>
+</ul>
+</div>
 <div class="textblock"><p>Dates and times in Excel are represented by real numbers. For example a date that is displayed in Excel as "Jan 1 2013 12:00 PM" is stored as the number 41275.5.</p>
 <p>The integer part of the number stores the number of days since the epoch, which is generally 1900, and the fractional part stores the percentage of the day.</p>
 <p>A date or time in Excel is just like any other number. To display the number as a date you must apply an Excel number format to it. Here is an example:</p>
@@ -91,8 +97,8 @@ $(function() {
 <div class="line">    <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 0, 0, number, NULL   );  <span class="comment">// 41333.5</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">/* Write the number with formatting. Note: the worksheet_write_datetime()</span></div>
-<div class="line"><span class="comment">     * function is preferable for writing dates and times. This is for</span></div>
-<div class="line"><span class="comment">     * demonstration purposes only.</span></div>
+<div class="line"><span class="comment">     * or worksheet_write_unixtime() functions are preferable for writing</span></div>
+<div class="line"><span class="comment">     * dates and times. This is for demonstration purposes only.</span></div>
 <div class="line"><span class="comment">     */</span></div>
 <div class="line">    <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 1, 0, number, format);   <span class="comment">// Feb 28 2013 12:00 PM</span></div>
 <div class="line"> </div>
@@ -101,7 +107,10 @@ $(function() {
 </div><!-- fragment --><div class="image">
 <img src="date_example01.png" alt=""/>
 </div>
-<p>To make working with dates and times a little easier the <code>libxlsxwriter</code> library provides the <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel.">lxw_datetime</a> struct and the <a class="el" href="worksheet_8h.html#afb0b3211160927a3412be28c9364b1b5" title="Write a date or time to a worksheet cell.">worksheet_write_datetime()</a> function.</p>
+<p>Some options for creating or converting dates to the correct format are shown below.</p>
+<h1><a class="anchor" id="ww_date_struct"></a>
+Writing datetimes with the lxw_datetime struct</h1>
+<p>To make working with dates and times a little easier the <code>libxlsxwriter</code> library provides the <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel.">lxw_datetime</a> struct and the <code><a class="el" href="worksheet_8h.html#afb0b3211160927a3412be28c9364b1b5" title="Write a date or time to a worksheet cell.">worksheet_write_datetime()</a></code> function.</p>
 <p>The members of the <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel.">lxw_datetime</a> struct and the range of their values are:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -160,6 +169,44 @@ $(function() {
 <div class="image">
 <img src="date_example02.png" alt=""/>
 </div>
+<h1><a class="anchor" id="ww_date_unix"></a>
+Writing Unix datetimes</h1>
+<p>Another alternative when handling dates is <a href="https://en.wikipedia.org/wiki/Unix_time">Unix Time</a> which is a common integer time format. It is defined as the number of seconds since the Unix epoch (1970-01-01 00:00 UTC).</p>
+<p>The <code><a class="el" href="worksheet_8h.html#a6dec0aba49ebf62d5366628e07cee0f1" title="Write a Unix datetime to a worksheet cell.">worksheet_write_unixtime()</a></code> function can be used to write dates and times in this format. Negative values can also be used for dates prior to 1970:</p>
+ <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* Create a new workbook and add a worksheet. */</span></div>
+<div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;date_and_times03.xlsx&quot;</span>);</div>
+<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* Add a format with date formatting. */</span></div>
+<div class="line">    <a class="code" href="structlxw__format.html">lxw_format</a>    *format    = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line">    <a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format, <span class="stringliteral">&quot;mmm d yyyy hh:mm AM/PM&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* Widen the first column to make the text clearer. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 0, 0, 20, NULL);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* Write some Unix datetimes with formatting. */</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* 1970-01-01. The Unix epoch. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a6dec0aba49ebf62d5366628e07cee0f1">worksheet_write_unixtime</a>(worksheet, 0, 0,           0, format);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* 2000-01-01. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a6dec0aba49ebf62d5366628e07cee0f1">worksheet_write_unixtime</a>(worksheet, 1, 0,  1577836800, format);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* 1900-01-01. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a6dec0aba49ebf62d5366628e07cee0f1">worksheet_write_unixtime</a>(worksheet, 2, 0, -2208988800, format);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The output from this program is:</p>
+<div class="image">
+<img src="date_example03.png" alt=""/>
+</div>
+<h1><a class="anchor" id="ww_date_formats"></a>
+Date formatting</h1>
 <p>Dates can be formatted using any of the date formats supported by Excel. Here is a longer example that shows the same date in a several different formats:</p>
  <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
 <div class="line"> </div>
@@ -192,7 +239,7 @@ $(function() {
 <div class="line">    };</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">/* Create a new workbook and add a worksheet. */</span></div>
-<div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;date_and_times03.xlsx&quot;</span>);</div>
+<div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;date_and_times04.xlsx&quot;</span>);</div>
 <div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">/* Add a bold format. */</span></div>
@@ -225,8 +272,9 @@ $(function() {
 <div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --><div class="image">
-<img src="date_example03.png" alt=""/>
+<img src="date_example04.png" alt=""/>
 </div>
+<p>To get date formats that show up in Excel as a "Date" or "Time" number category see <a class="el" href="working_with_formats.html#ww_formats_categories">Number Format Categories</a>.</p>
 <p>Next: <a class="el" href="working_with_charts.html">Working with Charts</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -245,6 +293,7 @@ $(function() {
 <div class="ttc" id="aworksheet_8h_html_ad9fc47d3beaa2ab4759414e8580c2289"><div class="ttname"><a href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a></div><div class="ttdeci">lxw_error worksheet_write_number(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, double number, lxw_format *format)</div><div class="ttdoc">Write a number to a worksheet cell.</div></div>
 <div class="ttc" id="aworksheet_8h_html_a9656e4e05d3787eee6b3e4d8e82d9b7f"><div class="ttname"><a href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a></div><div class="ttdeci">lxw_error worksheet_set_column(lxw_worksheet *worksheet, lxw_col_t first_col, lxw_col_t last_col, double width, lxw_format *format)</div><div class="ttdoc">Set the properties for one or more columns of cells.</div></div>
 <div class="ttc" id="aworkbook_8h_html_a81d456b4f65a464e78e4a0030ecc3c2e"><div class="ttname"><a href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a></div><div class="ttdeci">lxw_worksheet * workbook_add_worksheet(lxw_workbook *workbook, const char *sheetname)</div><div class="ttdoc">Add a new worksheet to a workbook.</div></div>
+<div class="ttc" id="aworksheet_8h_html_a6dec0aba49ebf62d5366628e07cee0f1"><div class="ttname"><a href="worksheet_8h.html#a6dec0aba49ebf62d5366628e07cee0f1">worksheet_write_unixtime</a></div><div class="ttdeci">lxw_error worksheet_write_unixtime(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, time_t unixtime, lxw_format *format)</div><div class="ttdoc">Write a Unix datetime to a worksheet cell.</div></div>
 <div class="ttc" id="aworkbook_8h_html_a279a5d7075d09a3931aae9782afede33"><div class="ttname"><a href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a></div><div class="ttdeci">lxw_format * workbook_add_format(lxw_workbook *workbook)</div><div class="ttdoc">Create a new Format object to formats cells in worksheets.</div></div>
 <!-- HTML footer for doxygen 1.8.20-->
 <!-- start footer part -->

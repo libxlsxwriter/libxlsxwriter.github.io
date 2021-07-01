@@ -68,16 +68,17 @@ $(function() {
 <div class="contents">
 <table width="600">
 <tr>
-<td><a class="el" href="dates_and_times02_8c-example.html">&lt;&lt; dates_and_times02.c</a> </td><td align="right"><a class="el" href="hyperlinks_8c-example.html">hyperlinks.c &gt;&gt;</a>  </td></tr>
+<td><a class="el" href="dates_and_times02_8c-example.html">&lt;&lt; dates_and_times02.c</a> </td><td align="right"><a class="el" href="dates_and_times04_8c-example.html">dates_and_times04.c &gt;&gt;</a>  </td></tr>
 </table>
-<p>Example of writing dates and times in Excel using different date formats.</p>
+<p>Example of writing dates and times in Excel using Unix datetimes and formatting.</p>
 <div class="image">
 <img src="date_example03.png" alt=""/>
 </div>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Example of writing dates and times in Excel using different date formats.</span></div>
+<div class="line"><span class="comment"> * Example of writing dates and times in Excel using a Unix datetime and date</span></div>
+<div class="line"><span class="comment"> * formatting.</span></div>
 <div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Copyright 2014-2018, John McNamara, jmcnamara@cpan.org</span></div>
+<div class="line"><span class="comment"> * Copyright 2014-2021, John McNamara, jmcnamara@cpan.org</span></div>
 <div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> */</span></div>
 <div class="line"> </div>
@@ -85,80 +86,40 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">/* A datetime to display. */</span></div>
-<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__datetime.html">lxw_datetime</a> datetime = {2013, 1, 23, 12, 30, 5.123};</div>
-<div class="line">    uint32_t     row = 0;</div>
-<div class="line">    uint16_t     col = 0;</div>
-<div class="line">    <span class="keywordtype">int</span>          i;</div>
-<div class="line"> </div>
-<div class="line">    <span class="comment">/* Examples date and time formats. In the output file compare how changing</span></div>
-<div class="line"><span class="comment">     * the format strings changes the appearance of the date.</span></div>
-<div class="line"><span class="comment">     */</span></div>
-<div class="line">    <span class="keywordtype">char</span> *date_formats[] = {</div>
-<div class="line">        <span class="stringliteral">&quot;dd/mm/yy&quot;</span>,</div>
-<div class="line">        <span class="stringliteral">&quot;mm/dd/yy&quot;</span>,</div>
-<div class="line">        <span class="stringliteral">&quot;dd m yy&quot;</span>,</div>
-<div class="line">        <span class="stringliteral">&quot;d mm yy&quot;</span>,</div>
-<div class="line">        <span class="stringliteral">&quot;d mmm yy&quot;</span>,</div>
-<div class="line">        <span class="stringliteral">&quot;d mmmm yy&quot;</span>,</div>
-<div class="line">        <span class="stringliteral">&quot;d mmmm yyy&quot;</span>,</div>
-<div class="line">        <span class="stringliteral">&quot;d mmmm yyyy&quot;</span>,</div>
-<div class="line">        <span class="stringliteral">&quot;dd/mm/yy hh:mm&quot;</span>,</div>
-<div class="line">        <span class="stringliteral">&quot;dd/mm/yy hh:mm:ss&quot;</span>,</div>
-<div class="line">        <span class="stringliteral">&quot;dd/mm/yy hh:mm:ss.000&quot;</span>,</div>
-<div class="line">        <span class="stringliteral">&quot;hh:mm&quot;</span>,</div>
-<div class="line">        <span class="stringliteral">&quot;hh:mm:ss&quot;</span>,</div>
-<div class="line">        <span class="stringliteral">&quot;hh:mm:ss.000&quot;</span>,</div>
-<div class="line">    };</div>
-<div class="line"> </div>
 <div class="line">    <span class="comment">/* Create a new workbook and add a worksheet. */</span></div>
-<div class="line">    <a name="_a1"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a name="a2"></a><a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;date_and_times03.xlsx&quot;</span>);</div>
-<div class="line">    <a name="_a3"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a name="a4"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a name="a1"></a><a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;date_and_times03.xlsx&quot;</span>);</div>
+<div class="line">    <a name="_a2"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a name="a3"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">/* Add a bold format. */</span></div>
-<div class="line">    <a name="_a5"></a><a class="code" href="structlxw__format.html">lxw_format</a>    *bold      = <a name="a6"></a><a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
-<div class="line">    <a name="a7"></a><a class="code" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(bold);</div>
-<div class="line"> </div>
-<div class="line">    <span class="comment">/* Write the column headers. */</span></div>
-<div class="line">    <a name="a8"></a><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, row, col,     <span class="stringliteral">&quot;Formatted date&quot;</span>, bold);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, row, col + 1, <span class="stringliteral">&quot;Format&quot;</span>,         bold);</div>
+<div class="line">    <span class="comment">/* Add a format with date formatting. */</span></div>
+<div class="line">    <a name="_a4"></a><a class="code" href="structlxw__format.html">lxw_format</a>    *format    = <a name="a5"></a><a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line">    <a name="a6"></a><a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format, <span class="stringliteral">&quot;mmm d yyyy hh:mm AM/PM&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">/* Widen the first column to make the text clearer. */</span></div>
-<div class="line">    <a name="a9"></a><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 0, 1, 20, NULL);</div>
+<div class="line">    <a name="a7"></a><a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 0, 0, 20, NULL);</div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">/* Write the same date and time using each of the above formats. */</span></div>
-<div class="line">    <span class="keywordflow">for</span> (i = 0; i &lt; 14; i++) {</div>
-<div class="line">        row++;</div>
+<div class="line">    <span class="comment">/* Write some Unix datetimes with formatting. */</span></div>
 <div class="line"> </div>
-<div class="line">        <span class="comment">/* Create a format for the date or time.*/</span></div>
-<div class="line">        <a class="code" href="structlxw__format.html">lxw_format</a> *format  = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
-<div class="line">        <a name="a10"></a><a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format, date_formats[i]);</div>
-<div class="line">        <a name="a11"></a><a class="code" href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a>(format, <a name="a12"></a><a class="code" href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a6d528fd0486c22c04941cd8ed1bbc8e1">LXW_ALIGN_LEFT</a>);</div>
+<div class="line">    <span class="comment">/* 1970-01-01. The Unix epoch. */</span></div>
+<div class="line">    <a name="a8"></a><a class="code" href="worksheet_8h.html#a6dec0aba49ebf62d5366628e07cee0f1">worksheet_write_unixtime</a>(worksheet, 0, 0,           0, format);</div>
 <div class="line"> </div>
-<div class="line">        <span class="comment">/* Write the datetime with each format. */</span></div>
-<div class="line">        <a name="a13"></a><a class="code" href="worksheet_8h.html#afb0b3211160927a3412be28c9364b1b5">worksheet_write_datetime</a>(worksheet, row, col, &amp;datetime, format);</div>
+<div class="line">    <span class="comment">/* 2000-01-01. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a6dec0aba49ebf62d5366628e07cee0f1">worksheet_write_unixtime</a>(worksheet, 1, 0,  1577836800, format);</div>
 <div class="line"> </div>
-<div class="line">        <span class="comment">/* Also write the format string for comparison. */</span></div>
-<div class="line">        <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, row, col + 1, date_formats[i], NULL);</div>
-<div class="line">    }</div>
+<div class="line">    <span class="comment">/* 1900-01-01. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a6dec0aba49ebf62d5366628e07cee0f1">worksheet_write_unixtime</a>(worksheet, 2, 0, -2208988800, format);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">return</span> <a name="a14"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="keywordflow">return</span> <a name="a9"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <div class="ttc" id="aworkbook_8h_html_ad9e7aeebc0fd43562db5bcd527b2ee5e"><div class="ttname"><a href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a></div><div class="ttdeci">lxw_error workbook_close(lxw_workbook *workbook)</div><div class="ttdoc">Close the Workbook object and write the XLSX file.</div></div>
-<div class="ttc" id="aformat_8h_html_a189c83d1f21b01937f1f730720c33d13"><div class="ttname"><a href="format_8h.html#a189c83d1f21b01937f1f730720c33d13">format_set_align</a></div><div class="ttdeci">void format_set_align(lxw_format *format, uint8_t alignment)</div><div class="ttdoc">Set the alignment for data in the cell.</div></div>
 <div class="ttc" id="aworkbook_8h_html_a1cf96608a23ee4eb0e8467c15240d00b"><div class="ttname"><a href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a></div><div class="ttdeci">lxw_workbook * workbook_new(const char *filename)</div><div class="ttdoc">Create a new workbook object.</div></div>
-<div class="ttc" id="aformat_8h_html_a85e1b0baf44b445b65894e48722aec14"><div class="ttname"><a href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a></div><div class="ttdeci">void format_set_bold(lxw_format *format)</div><div class="ttdoc">Turn on bold for the format font.</div></div>
-<div class="ttc" id="aformat_8h_html_adeeb0d70c7c873422d642323e7e1ecf5a6d528fd0486c22c04941cd8ed1bbc8e1"><div class="ttname"><a href="format_8h.html#adeeb0d70c7c873422d642323e7e1ecf5a6d528fd0486c22c04941cd8ed1bbc8e1">LXW_ALIGN_LEFT</a></div><div class="ttdeci">@ LXW_ALIGN_LEFT</div><div class="ttdef"><b>Definition:</b> format.h:126</div></div>
 <div class="ttc" id="aformat_8h_html_af77bbd0003344cb16d455c7fb709e16c"><div class="ttname"><a href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a></div><div class="ttdeci">void format_set_num_format(lxw_format *format, const char *num_format)</div><div class="ttdoc">Set the number format for a cell.</div></div>
 <div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1620</div></div>
 <div class="ttc" id="astructlxw__format_html"><div class="ttname"><a href="structlxw__format.html">lxw_format</a></div><div class="ttdoc">Struct to represent the formatting properties of an Excel format.</div><div class="ttdef"><b>Definition:</b> format.h:358</div></div>
-<div class="ttc" id="aworksheet_8h_html_afb0b3211160927a3412be28c9364b1b5"><div class="ttname"><a href="worksheet_8h.html#afb0b3211160927a3412be28c9364b1b5">worksheet_write_datetime</a></div><div class="ttdeci">lxw_error worksheet_write_datetime(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, lxw_datetime *datetime, lxw_format *format)</div><div class="ttdoc">Write a date or time to a worksheet cell.</div></div>
-<div class="ttc" id="astructlxw__datetime_html"><div class="ttname"><a href="structlxw__datetime.html">lxw_datetime</a></div><div class="ttdoc">Struct to represent a date and time in Excel.</div><div class="ttdef"><b>Definition:</b> common.h:152</div></div>
 <div class="ttc" id="astructlxw__workbook_html"><div class="ttname"><a href="structlxw__workbook.html">lxw_workbook</a></div><div class="ttdoc">Struct to represent an Excel workbook.</div><div class="ttdef"><b>Definition:</b> workbook.h:280</div></div>
-<div class="ttc" id="aworksheet_8h_html_ac208046e7a6d12cc87982422efa41b31"><div class="ttname"><a href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a></div><div class="ttdeci">lxw_error worksheet_write_string(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *string, lxw_format *format)</div><div class="ttdoc">Write a string to a worksheet cell.</div></div>
 <div class="ttc" id="aworksheet_8h_html_a9656e4e05d3787eee6b3e4d8e82d9b7f"><div class="ttname"><a href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a></div><div class="ttdeci">lxw_error worksheet_set_column(lxw_worksheet *worksheet, lxw_col_t first_col, lxw_col_t last_col, double width, lxw_format *format)</div><div class="ttdoc">Set the properties for one or more columns of cells.</div></div>
 <div class="ttc" id="aworkbook_8h_html_a81d456b4f65a464e78e4a0030ecc3c2e"><div class="ttname"><a href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a></div><div class="ttdeci">lxw_worksheet * workbook_add_worksheet(lxw_workbook *workbook, const char *sheetname)</div><div class="ttdoc">Add a new worksheet to a workbook.</div></div>
+<div class="ttc" id="aworksheet_8h_html_a6dec0aba49ebf62d5366628e07cee0f1"><div class="ttname"><a href="worksheet_8h.html#a6dec0aba49ebf62d5366628e07cee0f1">worksheet_write_unixtime</a></div><div class="ttdeci">lxw_error worksheet_write_unixtime(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, time_t unixtime, lxw_format *format)</div><div class="ttdoc">Write a Unix datetime to a worksheet cell.</div></div>
 <div class="ttc" id="aworkbook_8h_html_a279a5d7075d09a3931aae9782afede33"><div class="ttname"><a href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a></div><div class="ttdeci">lxw_format * workbook_add_format(lxw_workbook *workbook)</div><div class="ttdoc">Create a new Format object to formats cells in worksheets.</div></div>
 <!-- HTML footer for doxygen 1.8.20-->
 <!-- start footer part -->
