@@ -73,6 +73,7 @@ $(function() {
 <li class="level1"><a href="#ww_formats_default">Format Defaults</a></li>
 <li class="level1"><a href="#ww_formats_reusing">Modifying and Reusing Formats</a></li>
 <li class="level1"><a href="#ww_formats_categories">Number Format Categories</a></li>
+<li class="level1"><a href="#ww_formats_locale">Number Formats in different locales</a></li>
 </ul>
 </div>
 <div class="textblock"><p>The main functions and properties used to add formatting to a cell are shown in <a class="el" href="format_8h.html">The Format object</a>. This section provides some additional information about working with formats.</p>
@@ -241,6 +242,39 @@ Number Format Categories</h1>
 <img src="currency_format4.png" alt=""/>
 </div>
 <p>The same process can be used to find format strings for "Date" or "Accountancy" formats.</p>
+<h1><a class="anchor" id="ww_formats_locale"></a>
+Number Formats in different locales</h1>
+<p>As shown in the previous section the <code><a class="el" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c" title="Set the number format for a cell.">format_set_num_format()</a></code> method is used to set the number format for libxlsxwriter formats. A common use case is to set a number format with a "grouping/thousands" separator and a "decimal" point:</p>
+<div class="fragment"><div class="line">include <span class="stringliteral">&quot;xlsxwriter.h&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;number_format.xlsx&quot;</span>);</div>
+<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="structlxw__format.html">lxw_format</a> *number_format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(number_format, <span class="stringliteral">&quot;#,##0.00&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 0, 0, 1234.56, number_format);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>In the US locale (and some others) where the number "grouping/thousands" separator is "," and the "decimal" point is "." this would be shown in Excel as:</p>
+<div class="image">
+<img src="currency_format5.png" alt=""/>
+</div>
+<p>In other locales these values may be reversed or different. They are generally set in the "Region" settings of Windows or Mac OS. Excel handles this by storing the number format in the file format in the US locale, in this case <code>#,##0.00</code>, but renders it according to the regional settings of the host OS. For example, here is the same, unmodified, output file shown above in a German locale:</p>
+<div class="image">
+<img src="currency_format6.png" alt=""/>
+</div>
+<p>And here is the same file in a Russian locale. Note the use of a space as the "grouping/thousands" separator:</p>
+<div class="image">
+<img src="currency_format7.png" alt=""/>
+</div>
+<p>In order to replicate Excel's behavior all XlsxWriter programs should use US locale formatting which will then be rendered in the settings of your host OS.</p>
 <p>Next: <a class="el" href="working_with_colors.html">Working with Colors</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
