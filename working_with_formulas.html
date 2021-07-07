@@ -68,6 +68,12 @@ $(function() {
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
 <ul><li class="level1"><a href="#ww_formulas_non_us">Non US Excel functions and syntax</a></li>
+<li class="level1"><a href="#ww_formulas_dynamic_arrays">Dynamic Array support</a><ul><li class="level2"><a href="#ww_formulas_intro">Dynamic Arrays - An introduction</a></li>
+<li class="level2"><a href="#ww_formulas_intersection">Dynamic Arrays - The Implicit Intersection Operator &quot;@&quot;</a></li>
+<li class="level2"><a href="#ww_formulas_spill">Dynamic Arrays - The Spilled Range Operator &quot;#&quot;</a></li>
+<li class="level2"><a href="#ww_formulas_lambda">The Excel 365 LAMBDA() function</a></li>
+</ul>
+</li>
 <li class="level1"><a href="#ww_formulas_future">Formulas added in Excel 2010 and later</a></li>
 <li class="level1"><a href="#ww_formulas_errors">Dealing with formula errors</a></li>
 <li class="level1"><a href="#ww_formulas_results">Formula Results</a></li>
@@ -94,6 +100,127 @@ Non US Excel functions and syntax</h1>
 <div class="line"><span class="comment">// The following formula use semi-colons. Will cause error on load.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(worksheet, 0, 1, <span class="stringliteral">&quot;=SUM(1; 2; 3)&quot;</span>, NULL);</div>
 </div><!-- fragment --><p>If you have a non-English version of Excel you can use the following multi-lingual <a href="http://en.excel-translator.de/language/">Formula Translator</a> to help you convert the formula. It can also replace semi-colons with commas.</p>
+<h1><a class="anchor" id="ww_formulas_dynamic_arrays"></a>
+Dynamic Array support</h1>
+<p>Excel introduced the concept of "Dynamic Arrays" and new functions that use them in Office 365. The new functions are:</p>
+<ul>
+<li><code>FILTER</code></li>
+<li><code>RANDARRAY</code></li>
+<li><code>SEQUENCE</code></li>
+<li><code>SORTBY</code></li>
+<li><code>SORT</code></li>
+<li><code>UNIQUE</code></li>
+<li><code>XLOOKUP</code></li>
+<li><code>XMATCH</code></li>
+</ul>
+<p>The following special case functions were also added with Dynamic Arrays:</p>
+<ul>
+<li><code>SINGLE</code>: Explained below in <a class="el" href="working_with_formulas.html#ww_formulas_intersection">Dynamic Arrays - The Implicit Intersection Operator "@"</a>.</li>
+<li><code>ANCHORARRAY</code>: Explained below in <a class="el" href="working_with_formulas.html#ww_formulas_spill">Dynamic Arrays - The Spilled Range Operator "#"</a>.</li>
+<li><code>LAMBDA</code> and <code>LET</code>: Explained below in <a class="el" href="working_with_formulas.html#ww_formulas_lambda">The Excel 365 LAMBDA() function</a>.</li>
+</ul>
+<p>These functions are all "future functions" and need to written in libxlsxwriter as follows:</p>
+<ul>
+<li><code>_xlfn.ANCHORARRAY</code></li>
+<li><code>_xlfn.LAMBDA</code></li>
+<li><code>_xlfn.RANDARRAY</code></li>
+<li><code>_xlfn.SEQUENCE</code></li>
+<li><code>_xlfn.SINGLE</code></li>
+<li><code>_xlfn.SORTBY</code></li>
+<li><code>_xlfn.UNIQUE</code></li>
+<li><code>_xlfn.XLOOKUP</code></li>
+<li><code>_xlfn.XMATCH</code></li>
+<li><code>_xlfn._xlws.FILTER</code></li>
+<li><code>_xlfn._xlws.SORT</code></li>
+</ul>
+<p>Future functions are explained in the section below on <a class="el" href="working_with_formulas.html#ww_formulas_future">Formulas added in Excel 2010 and later</a>.</p>
+<h2><a class="anchor" id="ww_formulas_intro"></a>
+Dynamic Arrays - An introduction</h2>
+<p>Dynamic arrays in Excel are ranges of return values that can change in size based on the results. For example, a function such as <code>FILTER()</code> returns an array of values that can vary in size depending on the the filter results:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a6454593ea1827ab83dd74cee4bb4c8cb">worksheet_write_dynamic_array_formula</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;F2:F2&quot;</span>),</div>
+<div class="line">                                      <span class="stringliteral">&quot;=_xlfn._xlws.FILTER(A1:D17,C1:C17=K2)&quot;</span>,</div>
+<div class="line">                                      NULL);</div>
+</div><!-- fragment --><p>This formula gives the results shown in the image below. The dynamic range here is "F2:I5" but it can vary based on the filter criteria.</p>
+<div class="image">
+<img src="dynamic_arrays02.png" alt=""/>
+</div>
+<p>It is also possible to get dynamic array behavior with older Excel functions. For example, the Excel function <code>"=LEN(A1)"</code> applies to a single cell and returns a single value but it can also apply to a range of cells and return a range of values using an array formula like <code>"{=LEN(A1:A3)}"</code>. This type of "static" array behavior is referred to as a CSE (Ctrl+Shift+Enter) formula and has existed in Excel since early versions. In Office 365 Excel updated and extended this behavior to create the concept of dynamic arrays. In Excel 365 you can now write the previous LEN function as <code>"=LEN(A1:A3)"</code> and get a dynamic range of return values. In libxlsxwriter you can use the <code><a class="el" href="worksheet_8h.html#a8331799b5821d70c442d637ca66dd6e7" title="Write an array formula to a worksheet cell.">worksheet_write_array_formula()</a></code> function to get a static/CSE range and <code><a class="el" href="worksheet_8h.html#a6454593ea1827ab83dd74cee4bb4c8cb" title="Write an Excel 365 dynamic array formula to a worksheet range.">worksheet_write_dynamic_array_formula()</a></code> to get a dynamic range. For example:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a6454593ea1827ab83dd74cee4bb4c8cb">worksheet_write_dynamic_array_formula</a>(worksheet, <a class="code" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;B1:B3&quot;</span>),</div>
+<div class="line">                                      <span class="stringliteral">&quot;=LEN(A1:A3)&quot;</span>,</div>
+<div class="line">                                      NULL);</div>
+</div><!-- fragment --><p>Which gives the following result:</p>
+<div class="image">
+<img src="intersection03.png" alt=""/>
+</div>
+<p>The difference between the two types of array functions is explained in the Microsoft documentation on <a href="https://support.microsoft.com/en-us/office/dynamic-array-formulas-vs-legacy-cse-array-formulas-ca421f1b-fbb2-4c99-9924-df571bd4f1b4">Dynamic array formulas vs. legacy CSE array formulas</a>. Note the use of the word "legacy" here. This, and the documentation itself, is a clear indication of the future importance of dynamic arrays in Excel.</p>
+<p>For a wider and more general introduction to dynamic arrays see the following: <a href="https://exceljet.net/dynamic-array-formulas-in-excel">Dynamic array formulas in Excel</a>.</p>
+<p>The <code><a class="el" href="worksheet_8h.html#a6454593ea1827ab83dd74cee4bb4c8cb" title="Write an Excel 365 dynamic array formula to a worksheet range.">worksheet_write_dynamic_array_formula()</a></code> function takes a <code>(first_row, first_col, last_row, last_col)</code> cell range to define the area that the formula applies to. However, since the range is dynamic this generally won't be known in advance in which case you can specify the range with the same start and end cell. The following range is "F2:F2":</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#a6454593ea1827ab83dd74cee4bb4c8cb">worksheet_write_dynamic_array_formula</a>(worksheet, 1, 5, 1, 5,</div>
+<div class="line">                                      <span class="stringliteral">&quot;=_xlfn._xlws.FILTER(A1:D17,C1:C17=K2)&quot;</span>,</div>
+<div class="line">                                      NULL);</div>
+</div><!-- fragment --><p>As a syntactic shortcut you can use the <code><a class="el" href="worksheet_8h.html#abaeb07cf420069808de754aec235d5bb" title="Write an Excel 365 dynamic array formula to a worksheet cell.">worksheet_write_dynamic_formula()</a></code> function which only requires the start cell:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#abaeb07cf420069808de754aec235d5bb">worksheet_write_dynamic_formula</a>(worksheet, 1, 5,</div>
+<div class="line">                                <span class="stringliteral">&quot;=_xlfn._xlws.FILTER(A1:D17,C1:C17=K2)&quot;</span>,</div>
+<div class="line">                                NULL);</div>
+</div><!-- fragment --><h2><a class="anchor" id="ww_formulas_intersection"></a>
+Dynamic Arrays - The Implicit Intersection Operator "@"</h2>
+<p>The Implicit Intersection Operator, "@", is used by Excel 365 to indicate a position in a formula that is implicitly returning a single value when a range or an array could be returned.</p>
+<p>We can see how this operator works in practice by considering the formula we used in the last section: <code>=LEN(A1:A3)</code>. In Excel versions without support for dynamic arrays, i.e. prior to Excel 365, this formula would operate on a single value from the input range and return a single value, like the following in Excel 2011:</p>
+<div class="image">
+<img src="intersection01.png" alt=""/>
+</div>
+<p>There is an implicit conversion here of the range of input values, "A1:A3", to a single value "A1". Since this was the default behavior of older versions of Excel this conversion isn't highlighted in any way. But if you open the same file in Excel 365 it will appear as follows:</p>
+<div class="image">
+<img src="intersection02.png" alt=""/>
+</div>
+<p>The result of the formula is the same (this is important to note) and it still operates on, and returns, a single value. However the formula now contains a "@" operator to show that it is implicitly using a single value from the given range.</p>
+<p>Finally, if you entered this formula in Excel 365, or with <code><a class="el" href="worksheet_8h.html#a6454593ea1827ab83dd74cee4bb4c8cb" title="Write an Excel 365 dynamic array formula to a worksheet range.">worksheet_write_dynamic_array_formula()</a></code> in libxlsxwriter, it would operate on the entire range and return an array of values:</p>
+<div class="image">
+<img src="intersection03.png" alt=""/>
+</div>
+<p>If you are encountering the Implicit Intersection Operator "@" for the first time then it is probably from a point of view of "why is Excel/libxlsxwriter
+putting @s in my formulas". In practical terms if you encounter this operator, and you don't intend it to be there, then you should probably write the formula as a CSE or dynamic array function using <code><a class="el" href="worksheet_8h.html#a8331799b5821d70c442d637ca66dd6e7" title="Write an array formula to a worksheet cell.">worksheet_write_array_formula()</a></code> or <code><a class="el" href="worksheet_8h.html#a6454593ea1827ab83dd74cee4bb4c8cb" title="Write an Excel 365 dynamic array formula to a worksheet range.">worksheet_write_dynamic_array_formula()</a></code>.</p>
+<p>A full explanation of this operator is shown in the Microsoft documentation on the <a href="https://support.microsoft.com/en-us/office/implicit-intersection-operator-ce3be07b-0101-4450-a24e-c1c999be2b34?ui=en-us&amp;rs=en-us&amp;ad=us">Implicit intersection operator: @</a>.</p>
+<p>One important thing to note is that the "@" operator isn't stored with the formula. It is just displayed by Excel 365 when reading "legacy" formulas. However, it is possible to write it to a formula, if necessary, using <code>_xlfn.SINGLE()</code>. The unusual cases where this may be necessary are shown in the linked document in the previous paragraph.</p>
+<h2><a class="anchor" id="ww_formulas_spill"></a>
+Dynamic Arrays - The Spilled Range Operator "#"</h2>
+<p>In the section above on <a class="el" href="working_with_formulas.html#ww_formulas_intro">Dynamic Arrays - An introduction</a> we saw that dynamic array formulas can return variable sized ranges of results. The Excel documentation refers to this as a "Spilled" range/array from the idea that the results spill into the required number of cells. This is explained in the Microsoft documentation on <a href="https://support.microsoft.com/en-us/office/dynamic-array-formulas-and-spilled-array-behavior-205c6b06-03ba-4151-89a1-87a7eb36e531">Dynamic array formulas and spilled array behavior</a>.</p>
+<p>Since a spilled range is variable in size a new operator is required to refer to the range. This operator is the <a href="https://support.microsoft.com/en-us/office/spilled-range-operator-3dd5899f-bca2-4b9d-a172-3eae9ac22efd">Spilled range operator</a> and it is represented by "#". For example, the range <code>F2#</code> in the image below is used to refer to a dynamic array returned by <code>UNIQUE()</code> in the cell <code>F2</code>:</p>
+<div class="image">
+<img src="spill01.png" alt=""/>
+</div>
+<p>Unfortunately, Excel doesn't store the formula like this and in libxlsxwriter you need to use the explicit function <code>_xlfn.ANCHORARRAY()</code> to refer to a spilled range. The example in the image above was generated using the following:</p>
+<div class="fragment"><div class="line"><span class="comment">// Same as &#39;=COUNTA(F2#)&#39; in Excel.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#abaeb07cf420069808de754aec235d5bb">worksheet_write_dynamic_formula</a>(worksheet9, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;J2&quot;</span>),</div>
+<div class="line">                                <span class="stringliteral">&quot;=COUNTA(_xlfn.ANCHORARRAY(F2))&quot;</span>,</div>
+<div class="line">                                NULL);</div>
+</div><!-- fragment --><h2><a class="anchor" id="ww_formulas_lambda"></a>
+The Excel 365 LAMBDA() function</h2>
+<dl class="section note"><dt>Note</dt><dd>At the time of writing the <code>LAMBDA()</code> function in Excel is only available to Excel 365 users subscribed to the Beta Channel updates.</dd></dl>
+<p>Beta Channel versions of Excel 365 have introduced a powerful new function/feature called <code>LAMBDA()</code>. This is similar to <a href="https://docs.microsoft.com/en-us/cpp/cpp/lambda-expressions-in-cpp?view=msvc-160">lambda expressions</a> in C++ (and other languages).</p>
+<p>Consider the following Excel example which converts the variable <code>temp</code> from Fahrenheit to Celsius: </p><pre class="fragment">LAMBDA(temp, (5/9) * (temp-32))
+</pre><p>This could be called in Excel with an argument: </p><pre class="fragment">=LAMBDA(temp, (5/9) * (temp-32))(212)
+</pre><p>Or assigned to a defined name and called as a user defined function: </p><pre class="fragment">=ToCelsius(212)
+
+
+An libxlsxwriter example that replicates the described Excel functionality is
+</pre><p> shown below:</p>
+<div class="fragment"><div class="line"><span class="comment">// Write the lambda as a function.</span></div>
+<div class="line"><a class="code" href="worksheet_8h.html#abaeb07cf420069808de754aec235d5bb">worksheet_write_dynamic_formula</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;A2&quot;</span>),</div>
+<div class="line">                                <span class="stringliteral">&quot;=_xlfn.LAMBDA(_xlpm.temp, (5/9) * (_xlpm.temp-32))(32)&quot;</span>,</div>
+<div class="line">                                NULL);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Create the lambda function as a defined name and write it as a dynamic formula.</span></div>
+<div class="line"><a class="code" href="workbook_8h.html#a442b4056e8d4debf56c07888f2a776f6">workbook_define_name</a>(workbook,</div>
+<div class="line">                     <span class="stringliteral">&quot;ToCelsius&quot;</span>,</div>
+<div class="line">                     <span class="stringliteral">&quot;=_xlfn.LAMBDA(_xlpm.temp, (5/9) * (_xlpm.temp-32))&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="worksheet_8h.html#abaeb07cf420069808de754aec235d5bb">worksheet_write_dynamic_formula</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;A3&quot;</span>), <span class="stringliteral">&quot;=ToCelsius(212)&quot;</span>, NULL);</div>
+</div><!-- fragment --><p>Note, that the formula name must have a "_xlfn." prefix and the parameters in the <code>LAMBDA()</code> function must have a "_xlpm." prefix for compatibility with how the formulas are stored in Excel. These prefixes won't show up in the formula, as shown in the image.</p>
+<div class="image">
+<img src="lambda01.png" alt=""/>
+</div>
+<p>The <code>LET()</code> function is often used in conjunction with <code>LAMBDA()</code> to assign names to calculation results.</p>
 <h1><a class="anchor" id="ww_formulas_future"></a>
 Formulas added in Excel 2010 and later</h1>
 <p>Excel 2010 and later versions added functions which weren't defined in the original file specification. These functions are referred to by Microsoft as "Future Functions". Examples of these functions are <code>ACOT</code>, <code>CHISQ.DIST.RT</code> , <code>CONFIDENCE.NORM</code>, <code>STDEV.P</code>, <code>STDEV.S</code> and <code>WORKDAY.INTL</code>.</p>
@@ -354,6 +481,33 @@ Formulas added in Excel 2010 and later</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>_xlfn.Z.TEST</code>   </td></tr>
 </table>
+<p>The dynamic array functions shown in the <a class="el" href="working_with_formulas.html#ww_formulas_dynamic_arrays">Dynamic Array support</a> section above are also future functions:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Dynamic Array Functions   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>_xlfn.ANCHORARRAY</code>   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>_xlfn.LAMBDA</code>   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>_xlfn.RANDARRAY</code>   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>_xlfn.SEQUENCE</code>   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>_xlfn.SINGLE</code>   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>_xlfn.SORTBY</code>   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>_xlfn.UNIQUE</code>   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>_xlfn.XLOOKUP</code>   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>_xlfn.XMATCH</code>   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>_xlfn._xlws.FILTER</code>   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>_xlfn._xlws.SORT</code>   </td></tr>
+</table>
 <h1><a class="anchor" id="ww_formulas_errors"></a>
 Dealing with formula errors</h1>
 <p>If there is an error in the syntax of a formula it is usually displayed in Excel as <code>#NAME</code>?. Alternatively you may get a warning from Excel when the file is loaded. If you encounter an error like this you can debug it as follows:</p>
@@ -362,23 +516,29 @@ Dealing with formula errors</h1>
 <li>Ensure the formula is using comma separators instead of semi-colons, see <a class="el" href="working_with_formulas.html#ww_formulas_non_us">Non US Excel functions and syntax</a> above.</li>
 <li>Ensure the formula is in English, see <a class="el" href="working_with_formulas.html#ww_formulas_non_us">Non US Excel functions and syntax</a> above.</li>
 <li>Ensure that the formula doesn't contain an Excel 2010+ future function as listed above (<a class="el" href="working_with_formulas.html#ww_formulas_future">Formulas added in Excel 2010 and later</a>). If it does then ensure that the correct prefix is used.</li>
+<li>If the function loads in Excel but appears with one or more <code>@</code> symbols added then it is probably an array function and should be written using <code><a class="el" href="worksheet_8h.html#a8331799b5821d70c442d637ca66dd6e7" title="Write an array formula to a worksheet cell.">worksheet_write_array_formula()</a></code> or <code><a class="el" href="worksheet_8h.html#a6454593ea1827ab83dd74cee4bb4c8cb" title="Write an Excel 365 dynamic array formula to a worksheet range.">worksheet_write_dynamic_array_formula()</a></code> (see the sections above on <a class="el" href="working_with_formulas.html#ww_formulas_dynamic_arrays">Dynamic Array support</a> and <a class="el" href="working_with_formulas.html#ww_formulas_intersection">Dynamic Arrays - The Implicit Intersection Operator "@"</a>).</li>
 </ol>
 <p>Finally if you have completed all the previous steps and still get a <code>#NAME</code>? error you can examine a valid Excel file to see what the correct syntax should be. To do this you should create a valid formula in Excel and save the file. You can then examine the XML in the unzipped file.</p>
 <p>The following shows how to do that using Linux <code>unzip</code> and `libxml's <a href="http://xmlsoft.org/xmllint.html">xmllint</a> to format the XML for clarity: </p><pre class="fragment">$ unzip myfile.xlsx -d myfile
-$ xmllint --format myfile/xl/worksheets/sheet1.xml | grep '&lt;f&gt;'
+$ xmllint --format myfile/xl/worksheets/sheet1.xml | grep '&lt;/f&gt;'
 
         &lt;f&gt;SUM(1, 2, 3)&lt;/f&gt;
 </pre><h1><a class="anchor" id="ww_formulas_results"></a>
 Formula Results</h1>
 <p>Libxlsxwriter doesn't calculate the result of a formula and instead stores the value 0 as the formula result. It then sets a global flag in the XLSX file to say that all formulas and functions should be recalculated when the file is opened.</p>
 <p>This is the method recommended in the Excel documentation and in general it works fine with spreadsheet applications. However, applications that don't have a facility to calculate formulas will only display the 0 results. Examples of such applications are Excel Viewer, PDF Converters, and some mobile device applications.</p>
-<p>If required, it is also possible to specify the calculated result of the formula using the <code>result</code> parameter for :func:<code><a class="el" href="worksheet_8h.html#af474c01f7ec8ac1a01206c9c4a5867af" title="Write a formula to a worksheet cell with a user defined numeric result.">worksheet_write_formula_num()</a></code>:</p>
+<p>If required, it is also possible to specify the calculated result of the formula using the <code>result</code> parameter for <code>worksheet_worksheet_write_formula_num()</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#af474c01f7ec8ac1a01206c9c4a5867af">worksheet_write_formula_num</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=2+2&quot;</span>, NULL, 4);</div>
 </div><!-- fragment --><p>Next: <a class="el" href="working_with_dates.html">Working with Dates and Times</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <div class="ttc" id="aworksheet_8h_html_ae57117f04c82bef29805ec3eabc219bb"><div class="ttname"><a href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a></div><div class="ttdeci">lxw_error worksheet_write_formula(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *formula, lxw_format *format)</div><div class="ttdoc">Write a formula to a worksheet cell.</div></div>
+<div class="ttc" id="aworksheet_8h_html_abaeb07cf420069808de754aec235d5bb"><div class="ttname"><a href="worksheet_8h.html#abaeb07cf420069808de754aec235d5bb">worksheet_write_dynamic_formula</a></div><div class="ttdeci">lxw_error worksheet_write_dynamic_formula(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *formula, lxw_format *format)</div><div class="ttdoc">Write an Excel 365 dynamic array formula to a worksheet cell.</div></div>
+<div class="ttc" id="aworkbook_8h_html_a442b4056e8d4debf56c07888f2a776f6"><div class="ttname"><a href="workbook_8h.html#a442b4056e8d4debf56c07888f2a776f6">workbook_define_name</a></div><div class="ttdeci">lxw_error workbook_define_name(lxw_workbook *workbook, const char *name, const char *formula)</div><div class="ttdoc">Create a defined name in the workbook to use as a variable.</div></div>
+<div class="ttc" id="autility_8h_html_a4dbbdfc9b616195c799dee78e727cecc"><div class="ttname"><a href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a></div><div class="ttdeci">#define RANGE(range)</div><div class="ttdoc">Convert an Excel A1:B2 range into a (first_row, first_col, last_row, last_col) sequence.</div><div class="ttdef"><b>Definition:</b> utility.h:82</div></div>
+<div class="ttc" id="aworksheet_8h_html_a6454593ea1827ab83dd74cee4bb4c8cb"><div class="ttname"><a href="worksheet_8h.html#a6454593ea1827ab83dd74cee4bb4c8cb">worksheet_write_dynamic_array_formula</a></div><div class="ttdeci">lxw_error worksheet_write_dynamic_array_formula(lxw_worksheet *worksheet, lxw_row_t first_row, lxw_col_t first_col, lxw_row_t last_row, lxw_col_t last_col, const char *formula, lxw_format *format)</div><div class="ttdoc">Write an Excel 365 dynamic array formula to a worksheet range.</div></div>
 <div class="ttc" id="aworksheet_8h_html_af474c01f7ec8ac1a01206c9c4a5867af"><div class="ttname"><a href="worksheet_8h.html#af474c01f7ec8ac1a01206c9c4a5867af">worksheet_write_formula_num</a></div><div class="ttdeci">lxw_error worksheet_write_formula_num(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *formula, lxw_format *format, double result)</div><div class="ttdoc">Write a formula to a worksheet cell with a user defined numeric result.</div></div>
+<div class="ttc" id="autility_8h_html_ad510ac6df573d23203374e24dba373d2"><div class="ttname"><a href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a></div><div class="ttdeci">#define CELL(cell)</div><div class="ttdoc">Convert an Excel A1 cell string into a (row, col) pair.</div><div class="ttdef"><b>Definition:</b> utility.h:45</div></div>
 <!-- HTML footer for doxygen 1.8.20-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

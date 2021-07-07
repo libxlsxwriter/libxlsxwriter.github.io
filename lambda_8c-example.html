@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libxlsxwriter: utf8.c</title>
+<title>libxlsxwriter: lambda.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,21 +63,21 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">utf8.c</div>  </div>
+<div class="title">lambda.c</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table width="600">
 <tr>
-<td><a class="el" href="dynamic_arrays_8c-example.html">&lt;&lt; dynamic_arrays.c</a> </td><td align="right"><a class="el" href="constant_memory_8c-example.html">constant_memory.c &gt;&gt;</a>  </td></tr>
+<td><a class="el" href="ignore_errors_8c-example.html">&lt;&lt; ignore_errors.c</a> </td><td align="right"><a class="el" href="chart_8c-example.html">chart.c &gt;&gt;</a>  </td></tr>
 </table>
-<p>A simple Unicode UTF-8 example. Note, the source file is UTF-8 encoded.</p>
+<p>Example of using the new Excel <code>LAMBDA()</code> function. It demonstrates how to create a lambda function in Excel and also how to assign a name to it so that it can be called as a user defined function. This particular example converts from Fahrenheit to Celsius. Note, this function is only currently available if you are subscribed to the Microsoft Office Beta Channel program.</p>
 <div class="image">
-<img src="utf8.png" alt=""/>
+<img src="lambda01.png" alt=""/>
 </div>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * A simple Unicode UTF-8 example using libxlsxwriter.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Note: The source file must be UTF-8 encoded.</span></div>
+<div class="line"><span class="comment"> * An example of using the new Excel LAMBDA() function with the libxlsxwriter</span></div>
+<div class="line"><span class="comment"> * library. Note, this function is only currently available if you are</span></div>
+<div class="line"><span class="comment"> * subscribed to the Microsoft Office Beta Channel program.</span></div>
 <div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> * Copyright 2014-2021, John McNamara, jmcnamara@cpan.org</span></div>
 <div class="line"><span class="comment"> *</span></div>
@@ -87,19 +87,42 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line"> </div>
-<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a name="a1"></a><a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;utf8.xlsx&quot;</span>);</div>
+<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a name="a1"></a><a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;lambda.xlsx&quot;</span>);</div>
 <div class="line">    <a name="_a2"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a name="a3"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"> </div>
-<div class="line">    <a name="a4"></a><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 2, 1, <span class="stringliteral">&quot;Это фраза на русском!&quot;</span>, NULL);</div>
+<div class="line">    <a name="a4"></a><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0,</div>
+<div class="line">                           <span class="stringliteral">&quot;Note: Lambda functions currently only work with &quot;</span></div>
+<div class="line">                           <span class="stringliteral">&quot;the Beta Channel versions of Excel 365&quot;</span>, NULL);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">return</span> <a name="a5"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="comment">/* Note that the formula name is prefixed with &quot;_xlfn.&quot; and that the</span></div>
+<div class="line"><span class="comment">     * lambda function parameters are prefixed with &quot;_xlpm.&quot;. These prefixes</span></div>
+<div class="line"><span class="comment">     * won&#39;t show up in Excel.</span></div>
+<div class="line"><span class="comment">     */</span></div>
+<div class="line">    <a name="a5"></a><a class="code" href="worksheet_8h.html#abaeb07cf420069808de754aec235d5bb">worksheet_write_dynamic_formula</a>(worksheet, <a name="a6"></a><a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;A2&quot;</span>),</div>
+<div class="line">                                    <span class="stringliteral">&quot;=_xlfn.LAMBDA(_xlpm.temp, (5/9) * (_xlpm.temp-32))(32)&quot;</span>,</div>
+<div class="line">                                    NULL);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* Create the lambda function as a defined name and write it as a dynamic formula. */</span></div>
+<div class="line">    <a name="a7"></a><a class="code" href="workbook_8h.html#a442b4056e8d4debf56c07888f2a776f6">workbook_define_name</a>(workbook,</div>
+<div class="line">                         <span class="stringliteral">&quot;ToCelsius&quot;</span>,</div>
+<div class="line">                         <span class="stringliteral">&quot;=_xlfn.LAMBDA(_xlpm.temp, (5/9) * (_xlpm.temp-32))&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="worksheet_8h.html#abaeb07cf420069808de754aec235d5bb">worksheet_write_dynamic_formula</a>(worksheet, <a class="code" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;A3&quot;</span>), <span class="stringliteral">&quot;=ToCelsius(212)&quot;</span>, NULL);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    <a name="a8"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <div class="ttc" id="aworkbook_8h_html_ad9e7aeebc0fd43562db5bcd527b2ee5e"><div class="ttname"><a href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a></div><div class="ttdeci">lxw_error workbook_close(lxw_workbook *workbook)</div><div class="ttdoc">Close the Workbook object and write the XLSX file.</div></div>
 <div class="ttc" id="aworkbook_8h_html_a1cf96608a23ee4eb0e8467c15240d00b"><div class="ttname"><a href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a></div><div class="ttdeci">lxw_workbook * workbook_new(const char *filename)</div><div class="ttdoc">Create a new workbook object.</div></div>
+<div class="ttc" id="aworksheet_8h_html_abaeb07cf420069808de754aec235d5bb"><div class="ttname"><a href="worksheet_8h.html#abaeb07cf420069808de754aec235d5bb">worksheet_write_dynamic_formula</a></div><div class="ttdeci">lxw_error worksheet_write_dynamic_formula(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *formula, lxw_format *format)</div><div class="ttdoc">Write an Excel 365 dynamic array formula to a worksheet cell.</div></div>
 <div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1620</div></div>
+<div class="ttc" id="aworkbook_8h_html_a442b4056e8d4debf56c07888f2a776f6"><div class="ttname"><a href="workbook_8h.html#a442b4056e8d4debf56c07888f2a776f6">workbook_define_name</a></div><div class="ttdeci">lxw_error workbook_define_name(lxw_workbook *workbook, const char *name, const char *formula)</div><div class="ttdoc">Create a defined name in the workbook to use as a variable.</div></div>
 <div class="ttc" id="astructlxw__workbook_html"><div class="ttname"><a href="structlxw__workbook.html">lxw_workbook</a></div><div class="ttdoc">Struct to represent an Excel workbook.</div><div class="ttdef"><b>Definition:</b> workbook.h:280</div></div>
 <div class="ttc" id="aworksheet_8h_html_ac208046e7a6d12cc87982422efa41b31"><div class="ttname"><a href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a></div><div class="ttdeci">lxw_error worksheet_write_string(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *string, lxw_format *format)</div><div class="ttdoc">Write a string to a worksheet cell.</div></div>
+<div class="ttc" id="autility_8h_html_ad510ac6df573d23203374e24dba373d2"><div class="ttname"><a href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a></div><div class="ttdeci">#define CELL(cell)</div><div class="ttdoc">Convert an Excel A1 cell string into a (row, col) pair.</div><div class="ttdef"><b>Definition:</b> utility.h:45</div></div>
 <div class="ttc" id="aworkbook_8h_html_a81d456b4f65a464e78e4a0030ecc3c2e"><div class="ttname"><a href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a></div><div class="ttdeci">lxw_worksheet * workbook_add_worksheet(lxw_workbook *workbook, const char *sheetname)</div><div class="ttdoc">Add a new worksheet to a workbook.</div></div>
 <!-- HTML footer for doxygen 1.8.20-->
 <!-- start footer part -->

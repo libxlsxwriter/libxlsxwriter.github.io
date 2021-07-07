@@ -103,12 +103,14 @@ var searchData=
   ['worksheet_5fwrite_5fcomment_872',['worksheet_write_comment',['../worksheet_8h.html#abd1728d105365c0113e15f40c6bb1b27',1,'worksheet.h']]],
   ['worksheet_5fwrite_5fcomment_5fopt_873',['worksheet_write_comment_opt',['../worksheet_8h.html#a158dadac385cd1007994e5478b7b2aa7',1,'worksheet.h']]],
   ['worksheet_5fwrite_5fdatetime_874',['worksheet_write_datetime',['../worksheet_8h.html#afb0b3211160927a3412be28c9364b1b5',1,'worksheet.h']]],
-  ['worksheet_5fwrite_5fformula_875',['worksheet_write_formula',['../worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb',1,'worksheet.h']]],
-  ['worksheet_5fwrite_5fformula_5fnum_876',['worksheet_write_formula_num',['../worksheet_8h.html#af474c01f7ec8ac1a01206c9c4a5867af',1,'worksheet.h']]],
-  ['worksheet_5fwrite_5fformula_5fstr_877',['worksheet_write_formula_str',['../worksheet_8h.html#ae55a1d5b4956a8e07ff721ecd80dde95',1,'worksheet.h']]],
-  ['worksheet_5fwrite_5fnumber_878',['worksheet_write_number',['../worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289',1,'worksheet.h']]],
-  ['worksheet_5fwrite_5frich_5fstring_879',['worksheet_write_rich_string',['../worksheet_8h.html#a62bf44845ce9dcc505bf228999db5afa',1,'worksheet.h']]],
-  ['worksheet_5fwrite_5fstring_880',['worksheet_write_string',['../worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31',1,'worksheet.h']]],
-  ['worksheet_5fwrite_5funixtime_881',['worksheet_write_unixtime',['../worksheet_8h.html#a6dec0aba49ebf62d5366628e07cee0f1',1,'worksheet.h']]],
-  ['worksheet_5fwrite_5furl_882',['worksheet_write_url',['../worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1',1,'worksheet.h']]]
+  ['worksheet_5fwrite_5fdynamic_5farray_5fformula_875',['worksheet_write_dynamic_array_formula',['../worksheet_8h.html#a6454593ea1827ab83dd74cee4bb4c8cb',1,'worksheet.h']]],
+  ['worksheet_5fwrite_5fdynamic_5fformula_876',['worksheet_write_dynamic_formula',['../worksheet_8h.html#abaeb07cf420069808de754aec235d5bb',1,'worksheet.h']]],
+  ['worksheet_5fwrite_5fformula_877',['worksheet_write_formula',['../worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb',1,'worksheet.h']]],
+  ['worksheet_5fwrite_5fformula_5fnum_878',['worksheet_write_formula_num',['../worksheet_8h.html#af474c01f7ec8ac1a01206c9c4a5867af',1,'worksheet.h']]],
+  ['worksheet_5fwrite_5fformula_5fstr_879',['worksheet_write_formula_str',['../worksheet_8h.html#ae55a1d5b4956a8e07ff721ecd80dde95',1,'worksheet.h']]],
+  ['worksheet_5fwrite_5fnumber_880',['worksheet_write_number',['../worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289',1,'worksheet.h']]],
+  ['worksheet_5fwrite_5frich_5fstring_881',['worksheet_write_rich_string',['../worksheet_8h.html#a62bf44845ce9dcc505bf228999db5afa',1,'worksheet.h']]],
+  ['worksheet_5fwrite_5fstring_882',['worksheet_write_string',['../worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31',1,'worksheet.h']]],
+  ['worksheet_5fwrite_5funixtime_883',['worksheet_write_unixtime',['../worksheet_8h.html#a6dec0aba49ebf62d5366628e07cee0f1',1,'worksheet.h']]],
+  ['worksheet_5fwrite_5furl_884',['worksheet_write_url',['../worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1',1,'worksheet.h']]]
 ];
