@@ -291,7 +291,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a9ed8b0603df10ce2439b54f7980efb6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fit the printed area to a specific number of pages both vertically and horizontally.  <a href="worksheet_8h.html#a9ed8b0603df10ce2439b54f7980efb6d">More...</a><br /></td></tr>
 <tr class="separator:a9ed8b0603df10ce2439b54f7980efb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a817235e5ce7b1ea030bedd86ddbb9844"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a817235e5ce7b1ea030bedd86ddbb9844">worksheet_set_start_page</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, uint16_t start_page)</td></tr>
-<tr class="memdesc:a817235e5ce7b1ea030bedd86ddbb9844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the start page number when printing.  <a href="worksheet_8h.html#a817235e5ce7b1ea030bedd86ddbb9844">More...</a><br /></td></tr>
+<tr class="memdesc:a817235e5ce7b1ea030bedd86ddbb9844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the start/first page number when printing.  <a href="worksheet_8h.html#a817235e5ce7b1ea030bedd86ddbb9844">More...</a><br /></td></tr>
 <tr class="separator:a817235e5ce7b1ea030bedd86ddbb9844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26130cfccecf80a9833d65a84039374d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a26130cfccecf80a9833d65a84039374d">worksheet_set_print_scale</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, uint16_t scale)</td></tr>
 <tr class="memdesc:a26130cfccecf80a9833d65a84039374d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the scale factor for the printed page.  <a href="worksheet_8h.html#a26130cfccecf80a9833d65a84039374d">More...</a><br /></td></tr>
@@ -4546,11 +4546,11 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet.">lxw_worksheet</a> instance to be updated. </td></tr>
-    <tr><td class="paramname">start_page</td><td>Starting page number.</td></tr>
+    <tr><td class="paramname">start_page</td><td>Page number of the starting page when printing.</td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code>worksheet_set_start_page()</code> function is used to set the number of the starting page when the worksheet is printed out:</p>
+<p>The <code>worksheet_set_start_page()</code> function is used to set the number number of the first page when the worksheet is printed out. It is the same as the "First Page Number" option in Excel:</p>
 <div class="fragment"><div class="line"><span class="comment">// Start print from page 2.</span></div>
 <div class="line"><a class="code" href="worksheet_8h.html#a817235e5ce7b1ea030bedd86ddbb9844">worksheet_set_start_page</a>(worksheet, 2);</div>
 </div><!-- fragment --> 
@@ -6087,7 +6087,7 @@ Macros</h2></td></tr>
 <div class="ttc" id="aworksheet_8h_html_abaeb07cf420069808de754aec235d5bb"><div class="ttname"><a href="worksheet_8h.html#abaeb07cf420069808de754aec235d5bb">worksheet_write_dynamic_formula</a></div><div class="ttdeci">lxw_error worksheet_write_dynamic_formula(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *formula, lxw_format *format)</div><div class="ttdoc">Write an Excel 365 dynamic array formula to a worksheet cell.</div></div>
 <div class="ttc" id="aworksheet_8h_html_a38e16dc0a2e75d7ec99dca21fbeec89b"><div class="ttname"><a href="worksheet_8h.html#a38e16dc0a2e75d7ec99dca21fbeec89b">worksheet_set_zoom</a></div><div class="ttdeci">void worksheet_set_zoom(lxw_worksheet *worksheet, uint16_t scale)</div><div class="ttdoc">Set the worksheet zoom factor.</div></div>
 <div class="ttc" id="aformat_8h_html_af77bbd0003344cb16d455c7fb709e16c"><div class="ttname"><a href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a></div><div class="ttdeci">void format_set_num_format(lxw_format *format, const char *num_format)</div><div class="ttdoc">Set the number format for a cell.</div></div>
-<div class="ttc" id="aworksheet_8h_html_a817235e5ce7b1ea030bedd86ddbb9844"><div class="ttname"><a href="worksheet_8h.html#a817235e5ce7b1ea030bedd86ddbb9844">worksheet_set_start_page</a></div><div class="ttdeci">void worksheet_set_start_page(lxw_worksheet *worksheet, uint16_t start_page)</div><div class="ttdoc">Set the start page number when printing.</div></div>
+<div class="ttc" id="aworksheet_8h_html_a817235e5ce7b1ea030bedd86ddbb9844"><div class="ttname"><a href="worksheet_8h.html#a817235e5ce7b1ea030bedd86ddbb9844">worksheet_set_start_page</a></div><div class="ttdeci">void worksheet_set_start_page(lxw_worksheet *worksheet, uint16_t start_page)</div><div class="ttdoc">Set the start/first page number when printing.</div></div>
 <div class="ttc" id="aworksheet_8h_html_a4529d77bcefcf478b8209f46fe730f6f"><div class="ttname"><a href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f">worksheet_insert_image</a></div><div class="ttdeci">lxw_error worksheet_insert_image(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *filename)</div><div class="ttdoc">Insert an image in a worksheet cell.</div></div>
 <div class="ttc" id="astructlxw__data__validation_html_acc19c667d02e2e5e917216bc077b2ade"><div class="ttname"><a href="structlxw__data__validation.html#acc19c667d02e2e5e917216bc077b2ade">lxw_data_validation::minimum_number</a></div><div class="ttdeci">double minimum_number</div><div class="ttdef"><b>Definition:</b> worksheet.h:896</div></div>
 <div class="ttc" id="achart_8h_html_a9f577b0fcabe6cac9118a26a483fe85caf309b18af571c90d3ae052e769d30e6c"><div class="ttname"><a href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85caf309b18af571c90d3ae052e769d30e6c">LXW_CHART_LINE</a></div><div class="ttdeci">@ LXW_CHART_LINE</div><div class="ttdef"><b>Definition:</b> chart.h:125</div></div>
