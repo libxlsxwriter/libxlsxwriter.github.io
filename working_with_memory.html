@@ -77,8 +77,7 @@ $(function() {
 </div>
 <div class="textblock"><h1><a class="anchor" id="ww_mem_constant"></a>
 Constant Memory Mode</h1>
-<p>By default libxlsxwriter holds all cell data in memory. This is to allow non-sequential data storage and also to allow future features where formatting is applied separately from the data.</p>
-<p>The effect of this is that for large files libxlsxwriter can consume a lot of memory.</p>
+<p>By default libxlsxwriter holds all cell data in memory to allow non-sequential data storage. The effect of this is that for large files libxlsxwriter can consume a lot of memory.</p>
 <p>Fortunately, this memory usage can be reduced almost completely by using <a class="el" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323" title="Create a new workbook object, and set the workbook options.">workbook_new_opt()</a> and the <a class="el" href="structlxw__workbook__options.html" title="Workbook options.">lxw_workbook_options</a> <code>constant_memory</code> property:</p>
  <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
 <div class="line"> </div>
@@ -138,6 +137,7 @@ strings" and instead are written "in-line".</p>
 <h1><a class="anchor" id="ww_mem_performance"></a>
 Performance</h1>
 <p>Currently the library is optimized but not highly optimized. Also, the library is currently single threaded.</p>
+<p>Compiling with the embedded but option dtoa library is 40-50% faster for raw numeric data. See <a class="el" href="getting_started.html#gsg_dtoa">Using a double formatting library</a>.</p>
 <p>Next: <a class="el" href="working_with_macros.html">Working with VBA Macros</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

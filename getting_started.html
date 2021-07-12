@@ -96,6 +96,7 @@ $(function() {
 <li class="level1"><a href="#gsg_md5">MD5 functionality for handling duplicate images</a></li>
 <li class="level1"><a href="#gsg_minizip">Linking against system minizip</a></li>
 <li class="level1"><a href="#gsg_endian">Compiling on Big Endian Architecture</a></li>
+<li class="level1"><a href="#gsg_dtoa">Using a double formatting library</a></li>
 <li class="level1"><a href="#gsg_next">Next steps</a></li>
 </ul>
 </div>
@@ -418,7 +419,12 @@ Linking against system minizip</h1>
 </pre><h1><a class="anchor" id="gsg_endian"></a>
 Compiling on Big Endian Architecture</h1>
 <p>Libxlsxwriter can be compiled on a big endian system as follows: </p><pre class="fragment">make USE_BIG_ENDIAN=1
-</pre><h1><a class="anchor" id="gsg_next"></a>
+</pre><h1><a class="anchor" id="gsg_dtoa"></a>
+Using a double formatting library</h1>
+<p>Excel uses an IEEE 754 doubles for all numeric values. These values are stored in standard <code>sprintf(...,"%.16G",...)</code> formatting as numbers like "1234.56" or "456E+123". However in some locales, such as "de_DE" these numbers can be stored with the locale specific decimal place like "1234,56" which causes Excel to give an error when it loads the file.</p>
+<p>It some cases this issue can be resolved by using the <code>setlocale()</code> or <code>uselocale()</code> functions in your application. Alternatively you can compile libxlsxwriter with support for a third party <code>dtoa()</code> (decimal to ascii) function. Currently libxlsxwriter uses the <a href="https://github.com/miloyip/dtoa-benchmark">Milo Yip DTOA library</a> as an optional compilation. This avoids the locale sprintf issue and it is also 40-50% faster than the standard dtoa for raw numeric data.</p>
+<p>If you wish to use it you can pass "USE_DTOA_LIBRARY=1" to <code>make</code> or "-DUSE_DTOA_LIBRARY=ON" to cmake.</p>
+<h1><a class="anchor" id="gsg_next"></a>
 Next steps</h1>
 <p>If you got libxlsxwriter built and working successfully then the next sections will look at how to create some more in-depth examples.</p>
 <p>Next: <a class="el" href="tutorial01.html">Tutorial 1: Create a simple XLSX file</a> </p>

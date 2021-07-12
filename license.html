@@ -94,7 +94,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 The views and conclusions contained in the software and documentation are
 those of the authors and should not be interpreted as representing
 official policies, either expressed or implied, of the FreeBSD Project.
-</pre><p>Libxlsxwriter includes <code>queue.h</code> and <code>tree.h</code> from FreeBSD, the <code>minizip</code> component of <code>zlib</code>, <code>tmpfileplus</code> and <code>md5</code> which have the following licenses:</p>
+</pre><p>Libxlsxwriter includes <code>queue.h</code> and <code>tree.h</code> from FreeBSD, the <code>minizip</code> component of <code>zlib</code>. It also includes and uses the optional <code>tmpfileplus</code>, <code>md5</code> and <code>emyg_dtoa</code>. These components which have the following licenses:</p>
 <p>Queue.h from FreeBSD: </p><pre class="fragment">Copyright (c) 1991, 1993
  The Regents of the University of California.  All rights reserved.
 
@@ -169,14 +169,36 @@ jloup@gzip.org          madler@alumni.caltech.edu
 Modifications for Zip64 support
 Copyright (C) 2009-2010 Mathias Svensson ( http://result42.com )
 </pre><p>Note, it is possible to compile libxlsxwriter without statically linking the <code>minizip</code> files and instead dynamically linking to <code>lminizip</code>, see <a class="el" href="getting_started.html#gsg_minizip">Linking against system minizip</a>.</p>
-<p><a href="http://www.di-mgt.com.au/c_function_to_create_temp_file.html">Tmpfileplus</a> has the following license: </p><pre class="fragment"> This Source Code Form is subject to the terms of the Mozilla Public
- License, v. 2.0. If a copy of the MPL was not distributed with this
- file, You can obtain one at http://mozilla.org/MPL/2.0/.
+<p><a href="http://www.di-mgt.com.au/c_function_to_create_temp_file.html">Tmpfileplus</a> has the following license: </p><pre class="fragment">This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this
+file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
- Copyright (c) 2012-16 David Ireland, DI Management Services Pty Ltd
- &lt;http://www.di-mgt.com.au/contact/&gt;.
+Copyright (c) 2012-16 David Ireland, DI Management Services Pty Ltd
+&lt;http://www.di-mgt.com.au/contact/&gt;.
 </pre><p>See the <a href="http://mozilla.org/MPL/2.0/">Mozilla Public License, v. 2.0</a>.</p>
 <p>Note, it is possible to compile libxlsxwriter using the standard library <code>tmpfile()</code> function instead of <code>tmpfileplus</code>, see <a class="el" href="getting_started.html#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a>.</p>
+<p>The <a href="https://github.com/miloyip/dtoa-benchmark">Milo Yip DTOA library</a> for converting doubles to strings. It has the following license: </p><pre class="fragment">Copyright (C) 2015 Doug Currie
+based on dtoa_milo.h
+Copyright (C) 2014 Milo Yip
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</pre><p>This Milo Yip DTOA library (emyg_dtoa) is uses to avoid issues where the standard sprintf() dtoa function changes output based on locale settings. It is also 40-50% faster than the standard dtoa for raw numeric data. The use of this library is optional. If you wish to use it you can pass <code>USE_DTOA_LIBRARY=1</code> to make when compiling.</p>
 <p><a href="https://openwall.info/wiki/people/solar/software/public-domain-source-code/md5">Openwall MD5</a> has the following licence: </p><pre class="fragment">This software was written by Alexander Peslyak in 2001.  No copyright is
 claimed, and the software is hereby placed in the public domain.
 In case this attempt to disclaim copyright and place the software in the
