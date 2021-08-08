@@ -88,6 +88,10 @@ Data Fields</h2></td></tr>
 <tr class="separator:a864299d3f1a528f1f8ef6f0b1271ccac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a823d586ee815c4afa53420d87e344eb5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__options.html#a823d586ee815c4afa53420d87e344eb5">object_position</a></td></tr>
 <tr class="separator:a823d586ee815c4afa53420d87e344eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3dd5cadc299e19e311587512057a4e7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__options.html#ab3dd5cadc299e19e311587512057a4e7">description</a></td></tr>
+<tr class="separator:ab3dd5cadc299e19e311587512057a4e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1046f8e84872a0092ae3c14c4b7108a2"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__options.html#a1046f8e84872a0092ae3c14c4b7108a2">decorative</a></td></tr>
+<tr class="separator:a1046f8e84872a0092ae3c14c4b7108a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
 <a id="a1bad76e66248d60d07a26e9bb963232f"></a>
@@ -164,6 +168,36 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Object position - use one of the values of <a class="el" href="worksheet_8h.html#a915c52f231594642bad90422c5b2cf81">lxw_object_position</a>. See <a class="el" href="working_with_object_positioning.html">Working with Object Positioning</a>. </p>
+
+</div>
+</div>
+<a id="ab3dd5cadc299e19e311587512057a4e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3dd5cadc299e19e311587512057a4e7">&#9670;&nbsp;</a></span>description</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* lxw_chart_options::description</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Optional description or "Alt text" for the chart. This field can be used to provide a text description of the chart to help accessibility. Defaults to the image filename as in Excel. Set to NULL to ignore the description field. </p>
+
+</div>
+</div>
+<a id="a1046f8e84872a0092ae3c14c4b7108a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1046f8e84872a0092ae3c14c4b7108a2">&#9670;&nbsp;</a></span>decorative</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t lxw_chart_options::decorative</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Optional parameter to help accessibility. It is used to mark the chart as decorative, and thus uninformative, for automated screen readers. As in Excel, if this parameter is in use the <code>description</code> field isn't written. </p>
 
 </div>
 </div>

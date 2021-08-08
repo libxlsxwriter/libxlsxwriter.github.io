@@ -129,6 +129,6 @@ var searchData=
   ['company_143',['company',['../structlxw__doc__properties.html#a67793efe283f109b62e5ea10a6dfd99a',1,'lxw_doc_properties']]],
   ['constant_5fmemory_144',['constant_memory',['../structlxw__workbook__options.html#aa03636857813ca881bdd09e07bcbe738',1,'lxw_workbook_options']]],
   ['created_145',['created',['../structlxw__doc__properties.html#a1aa96fa112e0eca3b38c8884c6cdb0f4',1,'lxw_doc_properties']]],
-  ['criteria_146',['criteria',['../structlxw__data__validation.html#a7d648cb7da5e14cb1ba1c446cd91f93f',1,'lxw_data_validation::criteria()'],['../structlxw__conditional__format.html#a06fc7b5549574bac769cf93ae7180e3f',1,'lxw_conditional_format::criteria()']]],
+  ['criteria_146',['criteria',['../structlxw__data__validation.html#a7d648cb7da5e14cb1ba1c446cd91f93f',1,'lxw_data_validation::criteria()'],['../structlxw__conditional__format.html#a06fc7b5549574bac769cf93ae7180e3f',1,'lxw_conditional_format::criteria()'],['../structlxw__filter__rule.html#a9287671eec2b7bc8bf37783d38f1f0e2',1,'lxw_filter_rule::criteria()']]],
   ['creating_20excel_20files_20with_20c_20and_20libxlsxwriter_147',['Creating Excel files with C and libxlsxwriter',['../index.html',1,'']]]
 ];
