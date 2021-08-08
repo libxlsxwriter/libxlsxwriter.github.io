@@ -3048,7 +3048,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a96384aee66a82d783d695374078e1ea9" title="Error codes from libxlsxwriter functions.">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_filter_column_list()</code> function can be used specify multiple string matching criteria. This is a newer type of filter introduced in Excel 2007. Prior to that it was only possible to have either 1 or 2 filter conditions, such as the ones used by <code><a class="el" href="worksheet_8h.html#a49ab41c3b3dc353aa1d50b772b94819d" title="Write a filter rule to an autofilter column.">worksheet_filter_column()</a></code> and <code><a class="el" href="worksheet_8h.html#a8f6c9218d7c922fa73d753e641610144" title="Write two filter rules to an autofilter column.">worksheet_filter_column2()</a></code>.</p>
 <p>As an example, consider a column that contains data for the months of the year. The <code>worksheet_filter_list()</code> function can be used to filter out data rows for different months:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">char</span>* list[] = {<span class="stringliteral">&quot;March&quot;</span>, <span class="stringliteral">&quot;April&quot;</span>, <span class="stringliteral">&quot;May&quot;</span>, NULL};</div>
