@@ -3043,7 +3043,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet.">lxw_worksheet</a> instance to be updated. </td></tr>
     <tr><td class="paramname">col</td><td>The column in the autofilter that the rules applies to. </td></tr>
-    <tr><td class="paramname">list</td><td>Array of strings to filter on.</td></tr>
+    <tr><td class="paramname">list</td><td>A NULL terminated array of strings to filter on.</td></tr>
   </table>
   </dd>
 </dl>
@@ -3056,7 +3056,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="autofilter2.png" alt=""/>
 </div>
-<p>To filter blanks as part of the list use <code>Blanks</code> as a list item:</p>
+<p>Note, the array must be NULL terminated to indicate the end of the array of strings. To filter blanks as part of the list use <code>Blanks</code> as a list item:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">char</span>* list[] = {<span class="stringliteral">&quot;March&quot;</span>, <span class="stringliteral">&quot;April&quot;</span>, <span class="stringliteral">&quot;May&quot;</span>, <span class="stringliteral">&quot;Blanks&quot;</span>, NULL};</div>
 <div class="line"> </div>
 <div class="line"><a class="code" href="worksheet_8h.html#a495de83e95ff7710bb783b2f3ea45ffe">worksheet_filter_list</a>(worksheet, 0, list);</div>
