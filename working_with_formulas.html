@@ -67,7 +67,8 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#ww_formulas_non_us">Non US Excel functions and syntax</a></li>
+<ul><li class="level1"><a href="#ww_formulas_results">Formula Results</a></li>
+<li class="level1"><a href="#ww_formulas_non_us">Non US Excel functions and syntax</a></li>
 <li class="level1"><a href="#ww_formulas_dynamic_arrays">Dynamic Array support</a><ul><li class="level2"><a href="#ww_formulas_intro">Dynamic Arrays - An introduction</a></li>
 <li class="level2"><a href="#ww_formulas_intersection">Dynamic Arrays - The Implicit Intersection Operator &quot;@&quot;</a></li>
 <li class="level2"><a href="#ww_formulas_spill">Dynamic Arrays - The Spilled Range Operator &quot;#&quot;</a></li>
@@ -76,7 +77,6 @@ $(function() {
 </li>
 <li class="level1"><a href="#ww_formulas_future">Formulas added in Excel 2010 and later</a></li>
 <li class="level1"><a href="#ww_formulas_errors">Dealing with formula errors</a></li>
-<li class="level1"><a href="#ww_formulas_results">Formula Results</a></li>
 </ul>
 </div>
 <div class="textblock"><p>In general a formula in Excel can be used directly in the <a class="el" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb" title="Write a formula to a worksheet cell.">worksheet_write_formula()</a> function:</p>
@@ -85,7 +85,13 @@ $(function() {
 <img src="working_with_formulas1.png" alt=""/>
 </div>
 <p>However, there are a few potential issues and differences that the user should be aware of. These are explained in the following sections.</p>
-<h1><a class="anchor" id="ww_formulas_non_us"></a>
+<h1><a class="anchor" id="ww_formulas_results"></a>
+Formula Results</h1>
+<p>Libxlsxwriter doesn't calculate the result of a formula and instead stores the value 0 as the formula result. It then sets a global flag in the XLSX file to say that all formulas and functions should be recalculated when the file is opened.</p>
+<p>This is the method recommended in the Excel documentation and in general it works fine with spreadsheet applications. However, applications that don't have a facility to calculate formulas will only display the 0 results. Examples of such applications are Excel Viewer, PDF Converters, and some mobile device applications.</p>
+<p>If required, it is also possible to specify the calculated result of the formula using the <code>result</code> parameter for <code>worksheet_worksheet_write_formula_num()</code>:</p>
+<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#af474c01f7ec8ac1a01206c9c4a5867af">worksheet_write_formula_num</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=2+2&quot;</span>, NULL, 4);</div>
+</div><!-- fragment --><h1><a class="anchor" id="ww_formulas_non_us"></a>
 Non US Excel functions and syntax</h1>
 <p>Excel stores formulas in the format of the US English version, regardless of the language or locale of the end-user's version of Excel. Therefore all formula function names written using libxlsxwriter must be in English:</p>
 <div class="fragment"><div class="line"><span class="comment">// The following formula syntax is okay.</span></div>
@@ -523,13 +529,7 @@ Dealing with formula errors</h1>
 $ xmllint --format myfile/xl/worksheets/sheet1.xml | grep '&lt;/f&gt;'
 
         &lt;f&gt;SUM(1, 2, 3)&lt;/f&gt;
-</pre><h1><a class="anchor" id="ww_formulas_results"></a>
-Formula Results</h1>
-<p>Libxlsxwriter doesn't calculate the result of a formula and instead stores the value 0 as the formula result. It then sets a global flag in the XLSX file to say that all formulas and functions should be recalculated when the file is opened.</p>
-<p>This is the method recommended in the Excel documentation and in general it works fine with spreadsheet applications. However, applications that don't have a facility to calculate formulas will only display the 0 results. Examples of such applications are Excel Viewer, PDF Converters, and some mobile device applications.</p>
-<p>If required, it is also possible to specify the calculated result of the formula using the <code>result</code> parameter for <code>worksheet_worksheet_write_formula_num()</code>:</p>
-<div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#af474c01f7ec8ac1a01206c9c4a5867af">worksheet_write_formula_num</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=2+2&quot;</span>, NULL, 4);</div>
-</div><!-- fragment --><p>Next: <a class="el" href="working_with_dates.html">Working with Dates and Times</a> </p>
+</pre><p>Next: <a class="el" href="working_with_dates.html">Working with Dates and Times</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <div class="ttc" id="aworksheet_8h_html_ae57117f04c82bef29805ec3eabc219bb"><div class="ttname"><a href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a></div><div class="ttdeci">lxw_error worksheet_write_formula(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *formula, lxw_format *format)</div><div class="ttdoc">Write a formula to a worksheet cell.</div></div>
