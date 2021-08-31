@@ -80,13 +80,22 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line"> </div>
+<div class="line">    <span class="comment">/* Note the xlsm extension of the filename */</span></div>
 <div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;macro.xlsm&quot;</span>);</div>
 <div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">/* Add a macro that will execute when the file is opened. */</span></div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, <a class="code" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:A&quot;</span>), 30, NULL);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* Add a macro file extracted from an Excel workbook. */</span></div>
 <div class="line">    <a class="code" href="workbook_8h.html#a8de478eed94be65de0622c64a0179ff9">workbook_add_vba_project</a>(workbook, <span class="stringliteral">&quot;vbaProject.bin&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Overwrite this&quot;</span>, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 2, 0, <span class="stringliteral">&quot;Press the button to say hello.&quot;</span>, NULL);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="structlxw__button__options.html">lxw_button_options</a> options = {.caption = <span class="stringliteral">&quot;Press Me&quot;</span>, .macro = <span class="stringliteral">&quot;say_hello&quot;</span>,</div>
+<div class="line">                                  .width = 80, .height = 30};</div>
+<div class="line"> </div>
+<div class="line">     <a class="code" href="worksheet_8h.html#a0d4e20a797b8a3df10a7592a4278d024">worksheet_insert_button</a>(worksheet, 2, 1, &amp;options);</div>
+<div class="line"> </div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
@@ -118,7 +127,19 @@ Adding the VBA macros to a libxlsxwriter file</h1>
 <div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a>(0, 0, <span class="stringliteral">&quot;=MyMortgageCalc(200000, 25)&quot;</span>)</div>
 </div><!-- fragment --><p>Excel files that contain functions and macros should use an <code>xlsm</code> extension or else Excel will complain and possibly not open the file:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlxw__workbook.html">lxw_workbook</a> *workbook = new_workbook(<span class="stringliteral">&quot;macro.xlsm&quot;</span>);</div>
-</div><!-- fragment --><h1><a class="anchor" id="ww_macros_codenames"></a>
+</div><!-- fragment --><p>It is also possible to assign a macro to a button that is inserted into a worksheet using the <code><a class="el" href="worksheet_8h.html#a0d4e20a797b8a3df10a7592a4278d024" title="Insert a button object into a worksheet.">worksheet_insert_button()</a></code> function:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__button__options.html">lxw_button_options</a> options = {.caption = <span class="stringliteral">&quot;Press Me&quot;</span>,</div>
+<div class="line">                              .macro   = <span class="stringliteral">&quot;say_hello&quot;</span>};</div>
+<div class="line"> </div>
+<div class="line"> <a class="code" href="worksheet_8h.html#a0d4e20a797b8a3df10a7592a4278d024">worksheet_insert_button</a>(worksheet, 2, 1, &amp;options);</div>
+</div><!-- fragment --><p>See the full example at <a class="el" href="macro_8c-example.html">macro.c</a>.</p>
+<p>It may be necessary to specify a more explicit macro name prefixed by the workbook VBA name as follows:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__button__options.html">lxw_button_options</a> options = {.<a class="code" href="structlxw__button__options.html#a10eb1c2384cf86f25581c6cfd18376d4">caption</a> = <span class="stringliteral">&quot;Press Me&quot;</span>,</div>
+<div class="line">                              .macro   = <span class="stringliteral">&quot;ThisWorkbook.say_hello&quot;</span>};</div>
+<div class="line"> </div>
+<div class="line"> <a class="code" href="worksheet_8h.html#a0d4e20a797b8a3df10a7592a4278d024">worksheet_insert_button</a>(worksheet, 2, 1, &amp;options);</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Button is the only VBA Control supported by libxlsxwriter and due to the implementation effort required it is unlikely that any other form elements will be added in the future.</dd></dl>
+<h1><a class="anchor" id="ww_macros_codenames"></a>
 Setting the VBA codenames</h1>
 <p>VBA macros generally refer to workbook and worksheet objects. If the VBA codenames aren't specified explicitly then libxlsxwriter will use the Excel defaults of <code>ThisWorkbook</code> and <code>Sheet1</code>, <code>Sheet2</code> etc.</p>
 <p>If the macro uses other codenames you can set them using the <code><a class="el" href="workbook_8h.html#a24dd6624ffdc3e17aa5bcfb4608755b8" title="Set the VBA name for the workbook.">workbook_set_vba_name()</a></code> and <code><a class="el" href="worksheet_8h.html#a8df6c0ce82172dafdd3e81923978bd4b" title="Set the VBA name for the worksheet.">worksheet_set_vba_name()</a></code> functions as follows:</p>
@@ -132,7 +153,8 @@ $ xmllint --format `find myfile -name "*.xml" | xargs` | grep "Pr.*codeName"
 
   &lt;workbookPr codeName="MyWorkbook" defaultThemeVersion="124226"/&gt;
   &lt;sheetPr codeName="MySheet1"/&gt;
-</pre><h1><a class="anchor" id="ww_macros_debugging"></a>
+</pre><dl class="section note"><dt>Note</dt><dd>This step is particularly important for macros created with non-English versions of Excel.</dd></dl>
+<h1><a class="anchor" id="ww_macros_debugging"></a>
 What to do if it doesn't work</h1>
 <p>The libxlsxwriter test suite contains several tests to ensure that this feature works and there is a working example as shown above. However, there is no guarantee that it will work in all cases. Some effort may be required and some knowledge of VBA will certainly help. If things don't work out here are some things to try:</p>
 <ol type="1">
@@ -147,16 +169,21 @@ What to do if it doesn't work</h1>
 <p>Next: <a class="el" href="examples.html">Example Programs</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
+<div class="ttc" id="astructlxw__button__options_html"><div class="ttname"><a href="structlxw__button__options.html">lxw_button_options</a></div><div class="ttdoc">Options for inserted buttons.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1900</div></div>
 <div class="ttc" id="aworkbook_8h_html_ad9e7aeebc0fd43562db5bcd527b2ee5e"><div class="ttname"><a href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a></div><div class="ttdeci">lxw_error workbook_close(lxw_workbook *workbook)</div><div class="ttdoc">Close the Workbook object and write the XLSX file.</div></div>
+<div class="ttc" id="aworksheet_8h_html_a0d4e20a797b8a3df10a7592a4278d024"><div class="ttname"><a href="worksheet_8h.html#a0d4e20a797b8a3df10a7592a4278d024">worksheet_insert_button</a></div><div class="ttdeci">lxw_error worksheet_insert_button(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, lxw_button_options *options)</div><div class="ttdoc">Insert a button object into a worksheet.</div></div>
 <div class="ttc" id="aworksheet_8h_html_a8df6c0ce82172dafdd3e81923978bd4b"><div class="ttname"><a href="worksheet_8h.html#a8df6c0ce82172dafdd3e81923978bd4b">worksheet_set_vba_name</a></div><div class="ttdeci">lxw_error worksheet_set_vba_name(lxw_worksheet *worksheet, const char *name)</div><div class="ttdoc">Set the VBA name for the worksheet.</div></div>
 <div class="ttc" id="aworksheet_8h_html_ae57117f04c82bef29805ec3eabc219bb"><div class="ttname"><a href="worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb">worksheet_write_formula</a></div><div class="ttdeci">lxw_error worksheet_write_formula(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *formula, lxw_format *format)</div><div class="ttdoc">Write a formula to a worksheet cell.</div></div>
 <div class="ttc" id="aworkbook_8h_html_a1cf96608a23ee4eb0e8467c15240d00b"><div class="ttname"><a href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a></div><div class="ttdeci">lxw_workbook * workbook_new(const char *filename)</div><div class="ttdoc">Create a new workbook object.</div></div>
-<div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2063</div></div>
+<div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2107</div></div>
 <div class="ttc" id="aworkbook_8h_html_a8de478eed94be65de0622c64a0179ff9"><div class="ttname"><a href="workbook_8h.html#a8de478eed94be65de0622c64a0179ff9">workbook_add_vba_project</a></div><div class="ttdeci">lxw_error workbook_add_vba_project(lxw_workbook *workbook, const char *filename)</div><div class="ttdoc">Add a vbaProject binary to the Excel workbook.</div></div>
+<div class="ttc" id="autility_8h_html_a189672bfa9c380a28d8db8c40de17fe8"><div class="ttname"><a href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a></div><div class="ttdeci">#define COLS(cols)</div><div class="ttdoc">Convert an Excel A:B column range into a (col1, col2) pair.</div><div class="ttdef"><b>Definition:</b> utility.h:63</div></div>
 <div class="ttc" id="astructlxw__workbook_html"><div class="ttname"><a href="structlxw__workbook.html">lxw_workbook</a></div><div class="ttdoc">Struct to represent an Excel workbook.</div><div class="ttdef"><b>Definition:</b> workbook.h:280</div></div>
 <div class="ttc" id="aworkbook_8h_html_a24dd6624ffdc3e17aa5bcfb4608755b8"><div class="ttname"><a href="workbook_8h.html#a24dd6624ffdc3e17aa5bcfb4608755b8">workbook_set_vba_name</a></div><div class="ttdeci">lxw_error workbook_set_vba_name(lxw_workbook *workbook, const char *name)</div><div class="ttdoc">Set the VBA name for the workbook.</div></div>
 <div class="ttc" id="aworksheet_8h_html_ac208046e7a6d12cc87982422efa41b31"><div class="ttname"><a href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a></div><div class="ttdeci">lxw_error worksheet_write_string(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *string, lxw_format *format)</div><div class="ttdoc">Write a string to a worksheet cell.</div></div>
+<div class="ttc" id="aworksheet_8h_html_a9656e4e05d3787eee6b3e4d8e82d9b7f"><div class="ttname"><a href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a></div><div class="ttdeci">lxw_error worksheet_set_column(lxw_worksheet *worksheet, lxw_col_t first_col, lxw_col_t last_col, double width, lxw_format *format)</div><div class="ttdoc">Set the properties for one or more columns of cells.</div></div>
 <div class="ttc" id="aworkbook_8h_html_a81d456b4f65a464e78e4a0030ecc3c2e"><div class="ttname"><a href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a></div><div class="ttdeci">lxw_worksheet * workbook_add_worksheet(lxw_workbook *workbook, const char *sheetname)</div><div class="ttdoc">Add a new worksheet to a workbook.</div></div>
+<div class="ttc" id="astructlxw__button__options_html_a10eb1c2384cf86f25581c6cfd18376d4"><div class="ttname"><a href="structlxw__button__options.html#a10eb1c2384cf86f25581c6cfd18376d4">lxw_button_options::caption</a></div><div class="ttdeci">char * caption</div><div class="ttdef"><b>Definition:</b> worksheet.h:1905</div></div>
 <!-- HTML footer for doxygen 1.8.20-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
