@@ -334,11 +334,12 @@ zlib.lib
 </pre><p>Build the solution and run the output executable. It should create a hello_world.xlsx file in the same directory you ran it from.</p>
 <h1><a class="anchor" id="gsg_vcpkg"></a>
 Using libxlsxwriter in Microsoft Visual Studio via vcpkg</h1>
-<p>A convenient way to get the latest release version of libxlsxwriter and integrate it into your Visual Studio build environment is to use the <a href="https://docs.microsoft.com/en-us/cpp/build/vcpkg?view=vs-2019">vcpkg</a> tool. This uses the CMake build system shown in the previous section but with less user interaction. From the vcpkg docs:</p>
+<p>A convenient way to get the latest release version of libxlsxwriter and integrate it into your Visual Studio build environment is to use the <a href="https://vcpkg.io">vcpkg</a> tool. This uses the CMake build system shown in the previous section but with less user interaction. From the vcpkg docs:</p>
 <blockquote class="doxtable">
-<p>"vcpkg" is a cross-platform command-line package manager for C and C++ libraries. It simplifies the acquisition and installation of third-party libraries on Windows, Linux, and macOS. If your project uses third-party libraries, we recommend that you use vcpkg to install them. vcpkg supports both open-source and proprietary libraries. All libraries in the vcpkg Windows catalog have been tested for compatibility with Visual Studio 2015, Visual Studio 2017, and Visual Studio 2019. Between the Windows and Linux/macOS catalogs, vcpkg now supports thousands of libraries. The C++ community adds more libraries to both catalogs on an ongoing basis. </p>
+<p>vcpkg is a free C/C++ package manager for acquiring and managing libraries. Choose from over 1500 open source libraries to download and build in a single step or add your own private libraries to simplify your build process. Maintained by the Microsoft C++ team and open source contributors. </p>
 </blockquote>
 <p>Install vcpkg and libxlsxwriter as follows in Windows CMD or Powershell: </p><pre class="fragment">&gt; git clone https://github.com/microsoft/vcpkg.git
+&gt; cd vcpkg
 &gt; bootstrap-vcpkg.bat
 &gt; vcpkg install libxlsxwriter
 </pre><p>You should then see libxlsxwriter installed as follows (note that the required zlib dependency has also been installed): </p><pre class="fragment">&gt; vcpkg list
@@ -361,7 +362,8 @@ Visual C++
   -&gt; Win32
     -&gt; Win32 Console Application
 </pre><p>Replace the empty main with a libxlsxwriter example from the distro. Make sure to include "stdafx.h" and "xlsxwriter.h":</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;stdafx.h&quot;</span></div>
+<div class="fragment"><div class="line"><span class="comment">// Some older versions on Visual Studio make need this include:</span></div>
+<div class="line"><span class="comment">// #include &quot;stdafx.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
