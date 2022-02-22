@@ -69,8 +69,9 @@ $(function() {
 <div class="toc"><h3>Table of Contents</h3>
 <ul><li class="level1"><a href="#tests_functional">Functional Tests</a></li>
 <li class="level1"><a href="#tests_">Unit Tests</a></li>
+<li class="level1"><a href="#tests_cmake">Testing with CMake</a></li>
 <li class="level1"><a href="#tests_valgrind">Valgrind Tests</a></li>
-<li class="level1"><a href="#tests_travis">Travis Continuous Integration</a></li>
+<li class="level1"><a href="#tests_ci">GitHub Actions Continuous Integration</a></li>
 </ul>
 </div>
 <div class="textblock"><p>This section shows how to set up and run the test suite for libxlsxwriter.</p>
@@ -80,58 +81,69 @@ Functional Tests</h1>
 <p>The functional tests use the Python module <a href="http://pytest.org/">pytest</a> as a test runner.</p>
 <p>Install the <code>pytest</code> module using one of the following methods: </p><pre class="fragment">sudo apt-get install -y python-pytest
 # or
-sudo easy_install pytest
-# or
 sudo pip install pytest
 </pre><p>The functional tests can then be run: </p><pre class="fragment">$ cd libxlsxwriter
 
 $ make test_functional
 
 =========================== test session starts ===========================
-collected 14 items
+collected 749 items
 
-test/functional/test_formatting.py:16: TestCompareXLSXFiles.test_format01 PASSED
-test/functional/test_formatting.py:19: TestCompareXLSXFiles.test_format02 PASSED
-test/functional/test_formatting.py:24: TestCompareXLSXFiles.test_format06 PASSED
+test/functional/test_array_formula.py::TestCompareXLSXFiles::test_array_formula01 PASSED [  0%]
+test/functional/test_array_formula.py::TestCompareXLSXFiles::test_array_formula02 PASSED [  0%]
+test/functional/test_array_formula.py::TestCompareXLSXFiles::test_array_formula03 PASSED [  0%]
+test/functional/test_array_formula.py::TestCompareXLSXFiles::test_array_formula04 PASSED [  1%]
+test/functional/test_autofilter.py::TestCompareXLSXFiles::test_autofilter00 PASSED       [  1%]
+test/functional/test_autofilter.py::TestCompareXLSXFiles::test_autofilter01 PASSED       [  1%]
 ...
-test/functional/test_write_data.py:25: TestCompareXLSXFiles.test_data04 PASSED
-test/functional/test_write_data.py:28: TestCompareXLSXFiles.test_data05 PASSED
-test/functional/test_write_data.py:31: TestCompareXLSXFiles.test_data06 PASSED
-test/functional/test_write_data.py:34: TestCompareXLSXFiles.test_data07 PASSED
-=========================== 14 passed in 0.41 seconds =====================
+test/functional/test_write_data.py::TestCompareXLSXFiles::test_data05 PASSED             [ 99%]
+test/functional/test_write_data.py::TestCompareXLSXFiles::test_data06 PASSED             [ 99%]
+test/functional/test_write_data.py::TestCompareXLSXFiles::test_data07 PASSED             [ 99%]
+test/functional/test_write_data.py::TestCompareXLSXFiles::test_data08 PASSED             [ 99%]
+test/functional/test_write_data.py::TestCompareXLSXFiles::test_data09 PASSED             [100%]
+=========================== 749 passed in 30.60s ===============================
 </pre><h1><a class="anchor" id="tests_"></a>
 Unit Tests</h1>
 <p>The unit tests test the components of the library at the level of individual functions or compilation units.</p>
 <p>The unit tests uses the <a href="http://github.com/bvdberg/ctest">ctest</a> test framework. This is included as a header file in the <code>test/unit</code> directory and doesn't need to be installed.</p>
 <p>The unit tests can then be run as follows: </p><pre class="fragment">$ make test_unit
 Compiling unit tests ...
-TEST 1/155 utility:_datetime_date_and_time [OK]
-TEST 2/155 utility:_datetime_date_only [OK]
-TEST 3/155 utility:_datetime_date_only_1904 [OK]
-TEST 4/155 utility:_datetime_time_only [OK]
+TEST 1/429 utility:lxw_col_to_name [OK]
+TEST 2/429 utility:test_datetime_date_and_time [OK]
+TEST 3/429 utility:test_datetime_date_only [OK]
+TEST 4/429 utility:test_datetime_date_only_1904 [OK]
+TEST 5/429 utility:test_datetime_time_only [OK]
+TEST 6/429 utility:test_unixtime [OK]
 ...
-TEST 152/155 styles:write_xf34 [OK]
-TEST 153/155 styles:write_xf35 [OK]
-TEST 154/155 styles:write_xf36 [OK]
-TEST 155/155 styles:xml_declaration [OK]
+TEST 425/429 worksheet:worksheet_table12 [OK]
+TEST 426/429 worksheet:worksheet_table13 [OK]
+TEST 427/429 worksheet:worksheet_table14 [OK]
+TEST 428/429 worksheet:worksheet_table15 [OK]
+TEST 429/429 table:xml_declaration [OK]
 
-RESULTS: 155 tests (155 ok, 0 failed, 0 skipped) ran in 42 ms
+RESULTS: 429 tests (429 ok, 0 failed, 0 skipped) ran in 153 ms
 </pre><p>Both functional and unit test can be run together: </p><pre class="fragment">$ make test
+</pre><h1><a class="anchor" id="tests_cmake"></a>
+Testing with CMake</h1>
+<p>You can run the unit and functional tests via CMake as follows: </p><pre class="fragment">cd cmake
+cmake .. -DBUILD_TESTS=ON
+cmake --build .
+ctest -V
 </pre><h1><a class="anchor" id="tests_valgrind"></a>
 Valgrind Tests</h1>
 <p>The functional tests and examples can be run under <a href="http://valgrind.org">Valgrind</a> to verify that there are no memory leaks.</p>
 <p>Install <code>valgrind</code> as follows: </p><pre class="fragment">apt-get install -y valgrind
 </pre><p>Then run the tests: </p><pre class="fragment">make test_valgrind
-</pre><h1><a class="anchor" id="tests_travis"></a>
-Travis Continuous Integration</h1>
-<p>Libxlsxwriter is configured to run all tests in <a href="https://travis-ci.org/jmcnamara/libxlsxwriter">Travis Continuous Integration</a> for each commit.</p>
+</pre><h1><a class="anchor" id="tests_ci"></a>
+GitHub Actions Continuous Integration</h1>
+<p>Libxlsxwriter is configured to run all these tests with <a href="https://github.com/jmcnamara/libxlsxwriter/actions">GitHub Actions Continuous Integration</a> for each commit.</p>
 <p>Next: <a class="el" href="faq.html">Frequently Asked Questions</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.20-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Copyright 2014-2021 John McNamara.
+Copyright 2014-2022 John McNamara.
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>

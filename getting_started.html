@@ -67,54 +67,53 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#gsg_linux">Installation on Linux</a><ul><li class="level2"><a href="#gsg_quick_start">Quick-start on Linux</a></li>
-<li class="level2"><a href="#gsg_dependencies">Install the dependencies</a></li>
-<li class="level2"><a href="#gsg_git">Get the source code via Git</a></li>
-<li class="level2"><a href="#gsg_tarball">Get the source code as a tarball</a></li>
+<ul><li class="level1"><a href="#gsg_quick_start">Quick-start on Linux</a></li>
+<li class="level1"><a href="#gsg_linux">Installation on Linux</a><ul><li class="level2"><a href="#gsg_dependencies">Install the dependencies</a></li>
+<li class="level2"><a href="#gsg_git">Get the source code</a></li>
 <li class="level2"><a href="#gsg_build">Build the source code</a></li>
-<li class="level2"><a href="#gsg_examples">Try an example</a></li>
+<li class="level2"><a href="#gsg_examples">Build the examples</a></li>
 <li class="level2"><a href="#gsg_install">Install the library</a></li>
 <li class="level2"><a href="#gsg_using">Using the library</a></li>
 </ul>
 </li>
-<li class="level1"><a href="#gsg_bsd">Installation on FreeBSD and OpenBSD</a></li>
-<li class="level1"><a href="#gsg_macos">Installation on macOS and iOS</a><ul><li class="level2"><a href="#gsg_cocoapods">Install using Cocoa Pods for Xcode</a></li>
-<li class="level2"><a href="#gsg_universal">Compiling a universal binary on macOS</a></li>
+<li class="level1"><a href="#gsg_macos">Installation on macOS and iOS</a><ul><li class="level2"><a href="#gsg_cocoapods">Install using CocoaPods for Xcode</a></li>
 <li class="level2"><a href="#gsg_brew">Installation on macOS with homebrew</a></li>
 </ul>
 </li>
-<li class="level1"><a href="#gsg_cmake">Install using CMake</a><ul><li class="level2"><a href="#gsg_cmake_flags">CMake Flags</a></li>
-<li class="level2"><a href="#gsg_cmake_options">CMake Options</a></li>
-<li class="level2"><a href="#gsg_cmake_generators">CMake Generators</a></li>
-<li class="level2"><a href="#gsg_cmake_app">Cmake for Microsoft Visual Studio</a></li>
+<li class="level1"><a href="#gsg_windows">Installation on Windows</a><ul><li class="level2"><a href="#gsg_vcpkg">Using vcpkg for Microsoft Visual Studio</a></li>
+<li class="level2"><a href="#gsg_cmake_app">Using CMake for Microsoft Visual Studio</a></li>
+<li class="level2"><a href="#gsg_ming">Installation on Windows using Mingw-w64 and MSYS2</a></li>
+<li class="level2"><a href="#gsg_qt">Installation in Qt-Creator for Windows</a></li>
 </ul>
 </li>
-<li class="level1"><a href="#gsg_vcpkg">Using libxlsxwriter in Microsoft Visual Studio via vcpkg</a></li>
-<li class="level1"><a href="#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a></li>
-<li class="level1"><a href="#gsg_ming">Installation on Windows using Mingw-w64 and MSYS2</a></li>
-<li class="level1"><a href="#gsg_qt">Installation in Qt-Creator for Windows</a></li>
-<li class="level1"><a href="#gsg_md5">MD5 functionality for handling duplicate images</a></li>
-<li class="level1"><a href="#gsg_minizip">Linking against system minizip</a></li>
-<li class="level1"><a href="#gsg_endian">Compiling on Big Endian Architecture</a></li>
-<li class="level1"><a href="#gsg_dtoa">Using a double formatting library</a></li>
+<li class="level1"><a href="#gsg_bsd">Installation on FreeBSD and OpenBSD</a></li>
+<li class="level1"><a href="#gsg_compilation_options">Compilation Options</a><ul><li class="level2"><a href="#gsg_dtoa">Using a double formatting library</a></li>
+<li class="level2"><a href="#gsg_md5">MD5 functionality for handling duplicate images</a></li>
+<li class="level2"><a href="#gsg_minizip">Linking against system minizip</a></li>
+<li class="level2"><a href="#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a></li>
+<li class="level2"><a href="#gsg_endian">Compiling on Big Endian Architecture</a></li>
+<li class="level2"><a href="#gsg_universal">Compiling a universal binary on macOS</a></li>
+<li class="level2"><a href="#gsg_minimal">Minimal dependency compilation</a></li>
+</ul>
+</li>
 <li class="level1"><a href="#gsg_next">Next steps</a></li>
 </ul>
 </div>
 <div class="textblock"><p>Here are some instructions to get you up and running with the libxlsxwriter library on different OSes.</p>
-<h1><a class="anchor" id="gsg_linux"></a>
-Installation on Linux</h1>
-<h2><a class="anchor" id="gsg_quick_start"></a>
-Quick-start on Linux</h2>
-<p>If you prefer to assemble Ikea furniture first and only read the instructions when you have parts left over, then the following minimal set of commands should get you up and running on a Debian like system: </p><pre class="fragment">sudo apt-get install -y zlib1g-dev
+<h1><a class="anchor" id="gsg_quick_start"></a>
+Quick-start on Linux</h1>
+<p>If you prefer to assemble Ikea furniture first and only read the instructions when you have parts left over then the following minimal set of commands should get you up and running on a Debian like system: </p><pre class="fragment">sudo apt-get install -y zlib1g-dev
 git clone https://github.com/jmcnamara/libxlsxwriter.git
 cd libxlsxwriter
 make
 sudo make install
-</pre><p>If you read instructions first and then assemble the furniture you will know how to proceed.</p>
+</pre><p>If you read the instructions first and then assemble the furniture you will know how to proceed.</p>
+<h1><a class="anchor" id="gsg_linux"></a>
+Installation on Linux</h1>
 <h2><a class="anchor" id="gsg_dependencies"></a>
 Install the dependencies</h2>
-<p>The only dependency (apart from <a class="el" href="running_the_tests.html">testing dependencies</a>) is <a href="http://www.zlib.net">Zlib</a> version &gt;= 1.2.8.</p>
-<p>The easiest way to install <code>zlib</code> is from the source code: </p><pre class="fragment">curl -O -L  http://www.zlib.net/zlib-1.2.11.tar.gz
+<p>The only non-optional dependency when building libxlsxwriter is <a href="http://www.zlib.net">Zlib</a>.</p>
+<p>You can do install <code>zlib</code> from source as follows: </p><pre class="fragment">curl -O -L  http://www.zlib.net/zlib-1.2.11.tar.gz
 tar zxf zlib-1.2.11.tar.gz
 cd zlib-1.2.11
 
@@ -123,14 +122,12 @@ make
 
 sudo make install
 </pre><p>Alternatively, you can use your OS packager to install the <code>zlib</code> development libraries. For example: </p><pre class="fragment">sudo apt-get install -y zlib1g-dev
-</pre><p>However, you need to ensure that the version installed is &gt;= 1.2.8 or you will get zlib related compilation issues.</p>
+</pre><p>The zlib version must be &gt;= 1.2.8 to avoid compilation issues.</p>
+<dl class="section note"><dt>Note</dt><dd>There optional dependencies that can be installed for testing. See <a class="el" href="running_the_tests.html">Running the Test Suite</a>.</dd></dl>
 <h2><a class="anchor" id="gsg_git"></a>
-Get the source code via Git</h2>
-<p>Clone the libxlsxwriter source code repository from GitHub as follows: </p><pre class="fragment">git clone https://github.com/jmcnamara/libxlsxwriter.git
-# Or use your preferred protocol instead of https.
-</pre><h2><a class="anchor" id="gsg_tarball"></a>
-Get the source code as a tarball</h2>
-<p>If you prefer you can get a tarball of the latest code as follows: </p><pre class="fragment">curl -O -L http://github.com/jmcnamara/libxlsxwriter/archive/master.tar.gz
+Get the source code</h2>
+<p>To get the latest version of the source code you can clone the libxlsxwriter repository from GitHub: </p><pre class="fragment">git clone https://github.com/jmcnamara/libxlsxwriter.git
+</pre><p>Alternatively you can get a tarball of the latest source code as follows: </p><pre class="fragment">curl -O -L http://github.com/jmcnamara/libxlsxwriter/archive/master.tar.gz
 </pre><h2><a class="anchor" id="gsg_build"></a>
 Build the source code</h2>
 <p>Build the source code as follows: </p><pre class="fragment">cd libxlsxwriter
@@ -138,24 +135,36 @@ make
 </pre><p>This will create a static and dynamic library in the local <code>./lib</code> directory: </p><pre class="fragment">ls lib
 libxlsxwriter.a     libxlsxwriter.so
 </pre><p>To see a verbose summary of the compilation steps use <code>V=1</code>: </p><pre class="fragment">make V=1
+</pre><p>With CMake you can build the library as follows: </p><pre class="fragment">cd cmake # Or another sub-directory.
+cmake ..
+cmake --build .
 </pre><h2><a class="anchor" id="gsg_examples"></a>
-Try an example</h2>
-<p>If there weren't any warnings or errors in the previous step (and there shouldn't have been) then you can build the programs in the <code>examples</code> directory and try one of them out: </p><pre class="fragment">make examples
+Build the examples</h2>
+<p>If there weren't any warnings or errors in the previous step (and there shouldn't have been) then you can build the programs in the <code>examples</code> directory and try one of them out: </p><pre class="fragment"># With Make:
+make examples
+
+# or CMake:
+cd cmake
+cmake .. -DBUILD_EXAMPLES=ON
+cmake --build .
+
+# Then:
 ./examples/hello
 </pre><p>This will create a <code>hello_world.xlsx</code> file in your current directory. Open the file in a spreadsheet application. The output should look like this: </p><div class="image">
 <img src="hello01.png" alt=""/>
 </div>
-<p>There is a large range of tests that you can run but they have some additional dependencies. If you are interested see <a class="el" href="running_the_tests.html">Running the Test Suite</a>.</p>
 <h2><a class="anchor" id="gsg_install"></a>
 Install the library</h2>
 <p>Libxlsxwriter supports a simplified installation scheme for a static and dynamic/shared library and header files. </p><pre class="fragment">sudo make install
 </pre><p>The files are installed to <code>/usr/local</code> by default but this can be overridden by using the <code>PREFIX</code> environmental variable: </p><pre class="fragment">make install PREFIX=/usr/third_party
-</pre><p>A staging directory can be set with <code>DESTDIR</code> which is prepended to all install paths, a feature mostly useful for packaging: </p><pre class="fragment">make install PREFIX=/usr/third_party DESTDIR=./staging/
+</pre><p>A staging directory can be set with <code>DESTDIR</code> which is prepended to all install paths. This is a an occasionally useful feature for packaging: </p><pre class="fragment">make install PREFIX=/usr/third_party DESTDIR=./staging/
 </pre><p>This would build and link the code with <code>/usr/third_party</code> as the installation location but actually install to <code>./staging/usr/third_party</code>.</p>
-<p>This installation method isn't fool proof but if it fails on your system you will probably know exactly how to fix it or have no idea how to fix it. I'm hoping for the former.</p>
-<h2><a class="anchor" id="gsg_using"></a>
+<p>With CMake you can install the library as follows: </p><pre class="fragment">cd cmake
+cmake ..
+cmake --build . --target install
+</pre><h2><a class="anchor" id="gsg_using"></a>
 Using the library</h2>
-<p>Using you favourite editor create a file like the following called <code>myexcel.c</code>:</p>
+<p>Using your source code editor create a file like the following called <code>myexcel.c</code>:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
@@ -178,20 +187,13 @@ Using the library</h2>
 xdg-open myexcel.xlsx
 </pre><p>If the installation didn't work for you then you can link against the static library you created in the "Build the source code" step: </p><pre class="fragment">cc myexcel.c -o myexcel -I /path/to/libxlsxwriter/include \
                            /path/to/libxlsxwriter/lib/libxlsxwriter.a -lz
-</pre><h1><a class="anchor" id="gsg_bsd"></a>
-Installation on FreeBSD and OpenBSD</h1>
-<p>Installation on FreeBSD and OpenBSD is mainly the same as on Linux, see above, with the differences outlined below.</p>
-<p>Both FreeBSD and OpenBSD come with the zlib development libraries pre-installed so there are no additional dependencies. However, if you have any issues then follow the instructions <a class="el" href="getting_started.html#gsg_dependencies">to install zlib</a>.</p>
-<p><a class="el" href="getting_started.html#gsg_git">Get the source code via Git</a> or <a class="el" href="getting_started.html#gsg_tarball">get the source code as a tarball</a> as shown above then build the source code as follows using <b>gmake</b> (not make): </p><pre class="fragment">cd libxlsxwriter
-gmake
-</pre><p>Then follow the instructions in the Linux section to <a class="el" href="getting_started.html#gsg_install">install the library</a> and <a class="el" href="getting_started.html#gsg_using">use the library</a>.</p>
-<h1><a class="anchor" id="gsg_macos"></a>
+</pre><h1><a class="anchor" id="gsg_macos"></a>
 Installation on macOS and iOS</h1>
-<p>The instructions for installing on Linux, shown above, will also work on macOS.</p>
-<p>To install for Xcode and iOS use the Cocoa Pods method shown in the next section.</p>
-<p>On macOS you can also use <a href="https://brew.sh">brew/homebrew</a>, see below.</p>
+<p>The easiest way to install libxlsxwriter for Xcode and iOS is to use the CocoaPods method shown in the next section.</p>
+<p>To install libxlsxwriter from the macOS commandline requires the <a href="https://developer.apple.com/xcode/resources/">Xcode "commandline tools"</a>. You can then follow the same instructions for compiling and installing on Linux, as shown above.</p>
+<p>For commandline access to libxlsxwriter you can also use <a href="https://brew.sh">brew/homebrew</a>, see below.</p>
 <h2><a class="anchor" id="gsg_cocoapods"></a>
-Install using Cocoa Pods for Xcode</h2>
+Install using CocoaPods for Xcode</h2>
 <p>For iOS and macOS projects in Xcode you can install libxlsxwriter using <a href="https://cocoapods.org">CocoaPods</a>.</p>
 <p>Add the following entry to your <code>Podfile</code>: </p><pre class="fragment">pod 'libxlsxwriter', '~&gt; 0.9'
 </pre><p>if you are using Swift, you can now add an import: </p><pre class="fragment">import xlsxwriter
@@ -204,60 +206,73 @@ worksheet_write_string(worksheet, 0, 0, "Hello", nil)
 worksheet_write_number(worksheet, 1, 0, 123, nil)
 workbook_close(workbook)
 </pre><p>For a sample Xcode project that uses the libxlsxwriter cocoapod for iOS and macOS with Objective-C and Swift see <a href="https://github.com/lrossi/libxlsxwriterCocoaExamples">libxlsxwriter Cocoa Examples</a> or <a href="https://github.com/FrankenApps/LibXlsxWriterSwiftSample">LibXlsxWriterSwiftSample</a>.</p>
-<h2><a class="anchor" id="gsg_universal"></a>
-Compiling a universal binary on macOS</h2>
-<p>With Xcode 12.2 and later you can compile libxlsxwriter as a "universal
-binary" for both Apple silicon and Intel-based Macs, i.e., arm64 and x86_64.</p>
-<p>You can compile a universal binary with standard make as follows: </p><pre class="fragment">$ make universal_binary
-
-# Which gives:
-$ lipo -archs lib/libxlsxwriter.a
-x86_64 arm64
-
-$ lipo -archs lib/libxlsxwriter.dylib
-x86_64 arm64
-</pre><p>Or with Cmake (see also <a class="el" href="getting_started.html#gsg_cmake">Install using CMake</a>): </p><pre class="fragment">cd cmake
-cmake -DCMAKE_OSX_ARCHITECTURES="x86_64;arm64" ..
-make
-</pre><h2><a class="anchor" id="gsg_brew"></a>
+<h2><a class="anchor" id="gsg_brew"></a>
 Installation on macOS with homebrew</h2>
 <p>On macOS you can also use <a href="https://brew.sh">brew/homebrew</a>: </p><pre class="fragment">brew install libxlsxwriter
 </pre><p>Once installed you can compile and run a libxlsxwriter program as follows: </p><pre class="fragment">cc myexcel.c -o myexcel -I/usr/local/include -L/usr/local/lib -lxlsxwriter
 ./myexcel
-</pre><h1><a class="anchor" id="gsg_cmake"></a>
-Install using CMake</h1>
-<p>Libxlsxwriter also supports <a href="https://cmake.org">CMake</a> for building and installing the library, as follows: </p><pre class="fragment">cmake $SOURCE_DIR $FLAGS
-</pre><p>For example: </p><pre class="fragment">cd cmake
-cmake ..
-make
-make install
-</pre><h2><a class="anchor" id="gsg_cmake_flags"></a>
-CMake Flags</h2>
-<p>Certain build features can be controlled by passing flags to Cmake. For example: </p><pre class="fragment">cd cmake
-cmake .. -DBUILD_TESTS=ON
-make
+</pre><h1><a class="anchor" id="gsg_windows"></a>
+Installation on Windows</h1>
+<p>There are several ways to compile libxlsxwriter on and for Windows, see below.</p>
+<h2><a class="anchor" id="gsg_vcpkg"></a>
+Using vcpkg for Microsoft Visual Studio</h2>
+<p>The most convenient way to get the latest release version of libxlsxwriter and integrate it into your Visual Studio build environment is to use the <a href="https://vcpkg.io">vcpkg</a> tool:</p>
+<blockquote class="doxtable">
+<p>vcpkg is a free C/C++ package manager for acquiring and managing libraries. Choose from over 1500 open source libraries to download and build in a single step or add your own private libraries to simplify your build process. Maintained by the Microsoft C++ team and open source contributors. </p>
+</blockquote>
+<p>Install vcpkg and libxlsxwriter as follows in Windows CMD or Powershell: </p><pre class="fragment">git clone https://github.com/microsoft/vcpkg.git
+cd vcpkg
+bootstrap-vcpkg.bat
+vcpkg install libxlsxwriter
+</pre><p>You should then see libxlsxwriter installed as follows (note that the required zlib dependency has also been installed): </p><pre class="fragment">vcpkg list
 
-# Run the unit tests.
-./xlsxwriter_unit
-</pre><p>Some of the Libxlsxwriter specific flags are:</p>
-<ul>
-<li><code>BUILD_STATIC</code>: Build static libraries (default on). To build shared libraries, pass <code>-DBUILD_STATIC=OFF</code> during configuration.</li>
-<li><code>BUILD_EXAMPLES</code>: Build example files (default off). To build the examples, pass <code>-DBUILD_EXAMPLES=ON</code> during configuration.</li>
-<li><code>BUILD_TESTS</code>: Build unittests (default off). To build the unittests, pass <code>-DBUILD_TESTS=ON</code> during configuration.</li>
-<li><code>ZLIB_ROOT</code>: The ZLIB root directory can be specified either through an environment variable (<code>export ZLIB_ROOT=/usr/include</code>) or using a flag with CMake (<code>-DZLIB_ROOT:STRING=/usr/include</code>). This sets the preferred search path for the ZLIB installation.</li>
-</ul>
-<h2><a class="anchor" id="gsg_cmake_options"></a>
-CMake Options</h2>
-<p>CMake sets debug and release builds with the <code>CMAKE_BUILD_TYPE</code> option. To build in release mode, pass <code>-DCMAKE_BUILD_TYPE=Release</code> during configuration.</p>
-<h2><a class="anchor" id="gsg_cmake_generators"></a>
-CMake Generators</h2>
-<p>CMake also supports custom build generators, such as Makefiles, Ninja, Visual Studio, and Xcode. For example, to generate a Visual Studio solution, configure with: </p><pre class="fragment">cmake .. -G "Visual Studio 14 2015 Win64"
-</pre><p>For more information on using generators see: <a href="https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html">cmake-generators</a>.</p>
+  libxlsxwriter:x86-windows  0.8.6-1   Libxlsxwriter is a C library that ...
+  zlib:x86-windows           1.2.11-5  A compression library
+</pre><p>You can also install libxlsxwriter for other build targets like <code>x64</code> </p><pre class="fragment">vcpkg install libxlsxwriter:x64-windows
+
+vcpkg list
+
+  libxlsxwriter:x64-windows  1.1.4      Libxlsxwriter is a C library that ...
+  libxlsxwriter:x86-windows  1.1.4      Libxlsxwriter is a C library that ...
+  zlib:x64-windows           1.2.11#13  A compression library
+  zlib:x86-windows           1.2.11#13  A compression library
+</pre><p>To use libxlsxwriter from within Visual Studio you can "integrate" it into your environment: </p><pre class="fragment">vcpkg integrate install
+
+  Applied user-wide integration for this vcpkg root.
+</pre><p>All MSBuild C projects can now include libxlsxwriter directly. Linking will also be handled automatically. For example, create a new Win32 Console (or other C/C++) application in Visual Studio: </p><pre class="fragment">File
+  -&gt; New
+    -&gt; Project
+
+Visual C++
+  -&gt; Win32
+    -&gt; Win32 Console Application
+</pre><p>Replace the empty main with a libxlsxwriter example from the distro. For example:</p>
+<div class="fragment"><div class="line"><span class="comment">// Some older versions on Visual Studio may need &quot;stdafx.h&quot;.</span></div>
+<div class="line"><span class="comment">// #include &quot;stdafx.h&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;hello_world.xlsx&quot;</span>);</div>
+<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 1, 0, 123, NULL);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Change the target to "Release" and the architecture to "x86" or "x64" (depending on the version you installed above). You can now "Build Solution". The resulting executable will be put in the output directory with the required "xlsxwriter.dll" and "zlib1.dll" files.</p>
 <h2><a class="anchor" id="gsg_cmake_app"></a>
-Cmake for Microsoft Visual Studio</h2>
-<p>You can also use Cmake to build a Microsoft Visual Studio (although see also the next section on using vcpkg which is less manual).</p>
-<p>Open a Windows CMD or Command Window and set up your MSVC environment, if required.</p>
-<p>Then create a work directory and and an install directory that the include and library files will be installed to. Set the follow variables to point to the directories: </p><pre class="fragment">set    WORK_DIR=C:/Users/Username/tmp
+Using CMake for Microsoft Visual Studio</h2>
+<p>For a more manual installation, and for older versions of Microsoft Visual Studio or Windows, you can use CMake as shown below.</p>
+<p>Open a Windows CMD or Command Window and set up your MSVC environment, if required. Something like this: </p><pre class="fragment">"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
+
+# Or:
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
+</pre><p>Then create a work directory and an install directory that the include and library files will be installed to. Set the follow variables to point to the directories: </p><pre class="fragment">set    WORK_DIR=C:/Users/Username/tmp
 set INSTALL_DIR=C:/Users/Username/tmp/install_dir
 </pre><p>Build the Zlib library: </p><pre class="fragment">cd %WORK_DIR%
 
@@ -286,9 +301,10 @@ cmake --build . --config Release --target install
 Visual C++
   -&gt; Win32
     -&gt; Win32 Console Application
-</pre><p>Change the ARCH in the main Dialog to "x64" and the Configuration to "Release" (or to match the parameter to cmake).</p>
+</pre><p>Change the ARCH in the main Dialog to "x64" and the Configuration to "Release" (or to match the parameters to cmake).</p>
 <p>Replace the empty main with a libxlsxwriter example from the distro. Make sure to include "stdafx.h" and "xlsxwriter.h":</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;stdafx.h&quot;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;stdafx.h&quot;</span> <span class="comment">// This may not be required.</span></div>
+<div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
@@ -332,65 +348,8 @@ Add the following:
 xlsxwriter.lib
 zlib.lib
 </pre><p>Build the solution and run the output executable. It should create a hello_world.xlsx file in the same directory you ran it from.</p>
-<h1><a class="anchor" id="gsg_vcpkg"></a>
-Using libxlsxwriter in Microsoft Visual Studio via vcpkg</h1>
-<p>A convenient way to get the latest release version of libxlsxwriter and integrate it into your Visual Studio build environment is to use the <a href="https://vcpkg.io">vcpkg</a> tool. This uses the CMake build system shown in the previous section but with less user interaction. From the vcpkg docs:</p>
-<blockquote class="doxtable">
-<p>vcpkg is a free C/C++ package manager for acquiring and managing libraries. Choose from over 1500 open source libraries to download and build in a single step or add your own private libraries to simplify your build process. Maintained by the Microsoft C++ team and open source contributors. </p>
-</blockquote>
-<p>Install vcpkg and libxlsxwriter as follows in Windows CMD or Powershell: </p><pre class="fragment">&gt; git clone https://github.com/microsoft/vcpkg.git
-&gt; cd vcpkg
-&gt; bootstrap-vcpkg.bat
-&gt; vcpkg install libxlsxwriter
-</pre><p>You should then see libxlsxwriter installed as follows (note that the required zlib dependency has also been installed): </p><pre class="fragment">&gt; vcpkg list
-libxlsxwriter:x86-windows  0.8.6-1   Libxlsxwriter is a C library that ...
-zlib:x86-windows           1.2.11-5  A compression library
-</pre><p>You can also install libxlsxwriter for other build targets like <code>x64</code> </p><pre class="fragment">&gt; vcpkg install libxlsxwriter:x64-windows
-
-&gt; vcpkg list
-libxlsxwriter:x64-windows  0.8.6-1   Libxlsxwriter is a C library that ...
-libxlsxwriter:x86-windows  0.8.6-1   Libxlsxwriter is a C library that ...
-zlib:x64-windows           1.2.11-5  A compression library
-zlib:x86-windows           1.2.11-5  A compression library
-</pre><p>To use libxlsxwriter from within Visual Studio you can "integrate" it into your environment: </p><pre class="fragment">&gt; vcpkg integrate install
-Applied user-wide integration for this vcpkg root.
-</pre><p>All MSBuild C projects can now include libxlsxwriter directly. Linking will also be handled automatically. For example, create a new Win32 Console (or other C/C++) application in Visual Studio: </p><pre class="fragment">File
-  -&gt; New
-    -&gt; Project
-
-Visual C++
-  -&gt; Win32
-    -&gt; Win32 Console Application
-</pre><p>Replace the empty main with a libxlsxwriter example from the distro. Make sure to include "stdafx.h" and "xlsxwriter.h":</p>
-<div class="fragment"><div class="line"><span class="comment">// Some older versions on Visual Studio make need this include:</span></div>
-<div class="line"><span class="comment">// #include &quot;stdafx.h&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;xlsxwriter.h&quot;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main() {</div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook = <a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;hello_world.xlsx&quot;</span>);</div>
-<div class="line">    <a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
-<div class="line">    <a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 1, 0, 123, NULL);</div>
-<div class="line"> </div>
-<div class="line">    <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-</div><!-- fragment --><p>Change the target to "Release" and the architecture to "x86" (or whatever you installed above). You can now "Build Solution". The resulting executable will be put in the output directory with the required "xlsxwriter.dll" and "zlib1.dll" files.</p>
-<h1><a class="anchor" id="gsg_tmpdir"></a>
-Specifying a TEMP directory for libxlsxwriter</h1>
-<p>The libxlsxwriter library creates temporary files in the system <code>TEMP</code> directory during assembly of an xlsx file. On Windows this directory may not be writeable by a libxlsxwriter application (although it will try several <code>TEMP</code> locations before returning an error). To work around this you can set the <code>tmpdir</code> parameter of the <a class="el" href="structlxw__workbook__options.html" title="Workbook options.">lxw_workbook_options</a> struct and pass it to <code><a class="el" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323" title="Create a new workbook object, and set the workbook options.">workbook_new_opt()</a></code>:</p>
-<div class="fragment"><div class="line"><a class="code" href="structlxw__workbook__options.html">lxw_workbook_options</a> options = {.constant_memory = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>,</div>
-<div class="line">                                .tmpdir = <span class="stringliteral">&quot;C:\\Temp&quot;</span>};</div>
-<div class="line"> </div>
-<div class="line"><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323">workbook_new_opt</a>(<span class="stringliteral">&quot;filename.xlsx&quot;</span>, &amp;options);</div>
-</div><!-- fragment --><p>This can also be used on Unix systems where the <code>TEMP</code> directory isn't writeable.</p>
-<p>The TEMP file handling with optional temporary directory support is provided by the <a href="http://www.di-mgt.com.au/c_function_to_create_temp_file.html">Tmpfileplus</a> library which is included in the source tree. If you wish to use the standard library <code>tmpfile()</code> function instead you can compile without <code>tmpfileplus</code> as follows: </p><pre class="fragment">make USE_STANDARD_TMPFILE=1
-</pre><dl class="section note"><dt>Note</dt><dd>When using the the standard library <code>tmpfile()</code> the <code>tmpdir</code> parameter, shown above, is ignored.</dd></dl>
-<h1><a class="anchor" id="gsg_ming"></a>
-Installation on Windows using Mingw-w64 and MSYS2</h1>
+<h2><a class="anchor" id="gsg_ming"></a>
+Installation on Windows using Mingw-w64 and MSYS2</h2>
 <p>The libxlsxwriter library can also be compiled on Windows using the <a href="http://mingw-w64.org/doku.php">Mingw-w64</a> "Minimalist GNU for Windows" toolchain. These tools can be run from the Windows <code>cmd.exe</code> but it is recommended to use the <a href="http://msys2.github.io">MSYS2</a> "Minimal System" Bourne Shell.</p>
 <p>Here are some instructions on how to compile libxlsxwriter with Mingw-w64 and MSYS2: </p><pre class="fragment"># Install MSYS2 64 or 32 bit from http://msys2.github.io/
 
@@ -401,34 +360,153 @@ pacman -S git gcc make zlib-devel
 git clone https://github.com/jmcnamara/libxlsxwriter.git
 cd libxlsxwriter/
 make
-</pre><p>By default the library is installed in <code>/usr/local</code> on MinGW/MSYS systems. If you know how to extend your build environments to use that directory then you can just run <code>make install</code>. However, it is generally easier to work with if you install them in the <code>/usr</code> directory like this: </p><pre class="fragment">make install PREFIX=/usr
+</pre><p>By default the library is installed in <code>/usr/local</code> on MinGW/MSYS systems. If you know how to extend your build environments to use that directory then you can just run <code>make install</code>. However, it is generally causes less compile/link issues if you install them in the <code>/usr</code> directory like this: </p><pre class="fragment">make install PREFIX=/usr
 </pre><p>After compilation you can follow the instructions in the <a class="el" href="getting_started.html#gsg_using">Using the library</a> section above. When compiling with the library you may also need to link against the zlib library using <code>-lz</code>: </p><pre class="fragment">gcc myexcel.c -o myexcel -lxlsxwriter -lz
 </pre><p>It is also possible to use <a href="https://cygwin.com">Cygwin</a> and the older <a href="http://mingw.org">MinGW and MSYS</a>. Libxlsxwriter has been confirmed to compile and work in all of these environments.</p>
 <p>See also <a class="el" href="getting_started.html#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a>.</p>
-<h1><a class="anchor" id="gsg_qt"></a>
-Installation in Qt-Creator for Windows</h1>
+<h2><a class="anchor" id="gsg_qt"></a>
+Installation in Qt-Creator for Windows</h2>
 <p>The following external guide shows how to <a href="https://github.com/jmcnamara/libxlsxwriter/issues/270">Build libxlsxwriter inside Qt-Creator for Windows</a> with step by step instructions.</p>
-<h1><a class="anchor" id="gsg_md5"></a>
-MD5 functionality for handling duplicate images</h1>
-<p>Libxlsxwriter uses a an MD5 digest to avoid including duplicate image files in the xlsx file. By default it uses a third party library, <a href="https://openwall.info/wiki/people/solar/software/public-domain-source-code/md5">Openwall MD5</a>, which is a fast portable implementation of the MD5 Algorithm and which uses the same function prototypes as OpenSSL MD5 digest. See <a class="el" href="license.html">License</a>.</p>
-<p>The Openwall MD5 code is included in the libxlsxwriter repo and compiled in by default. If you don't want to use this code, and the additional license, you can use OpenSSL's MD5 functions dynamically by passing <code>USE_OPENSSL_MD5=1</code> to make. </p><pre class="fragment">make USE_OPENSSL_MD5=1
-</pre><p>This requires that you have the OpenSSL development libraries installed and on paths known to your compiler.</p>
-<p>If this MD5 functionality isn't required it is possible to compile libxlsxwriter without image de-duplication by passing <code>USE_NO_MD5=1</code> to make. </p><pre class="fragment">make USE_NO_MD5=1
-</pre><h1><a class="anchor" id="gsg_minizip"></a>
-Linking against system minizip</h1>
-<p>Libxlsxwriter uses the <code>minizip</code> component of <a href="http://www.zlib.net">Zlib</a> to create the xlsx zip file container. The source files for <code>minizip</code> are included in the src tree of libxlsxwriter and are statically linked by default.</p>
-<p>If you have a <code>lminizip</code> library already installed on your system and prefer to dynamically link against that you can use the following compilation option: </p><pre class="fragment">make USE_SYSTEM_MINIZIP=1
-</pre><h1><a class="anchor" id="gsg_endian"></a>
-Compiling on Big Endian Architecture</h1>
-<p>Libxlsxwriter can be compiled on a big endian system as follows: </p><pre class="fragment">make USE_BIG_ENDIAN=1
-</pre><h1><a class="anchor" id="gsg_dtoa"></a>
-Using a double formatting library</h1>
+<h1><a class="anchor" id="gsg_bsd"></a>
+Installation on FreeBSD and OpenBSD</h1>
+<p>Installation on FreeBSD and OpenBSD is mainly the same as on <a class="el" href="getting_started.html#gsg_linux">Linux</a>. To compile the library <a class="el" href="getting_started.html#gsg_git">get the source code</a> and build it using <b>gmake</b> (not make): </p><pre class="fragment">cd libxlsxwriter
+gmake
+</pre><p>Then follow the instructions in the Linux section to <a class="el" href="getting_started.html#gsg_install">install</a> and <a class="el" href="getting_started.html#gsg_using">use</a> the library.</p>
+<p>Both FreeBSD and OpenBSD come with the zlib development libraries pre-installed so there are no additional dependencies. However, if you have any issues then follow the instructions to <a class="el" href="getting_started.html#gsg_dependencies">install zlib</a>.</p>
+<h1><a class="anchor" id="gsg_compilation_options"></a>
+Compilation Options</h1>
+<p>As shown in the previous sections Libxlsxwriter provides both a Make and CMake based build system. The Make build is a straightforward system for building the library and running tests on Unix like systems. The CMake system offers support for more operating systems, cross compilation, and integration with larger CMake builds. In particular it enables building on Windows.</p>
+<p>The following are various compilation targets and options for both build systems:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Make  </th><th class="markdownTableHeadLeft">CMake  </th><th class="markdownTableHeadLeft">Description   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>examples</code>  </td><td class="markdownTableBodyLeft"><code>-DBUILD_EXAMPLES=ON</code>  </td><td class="markdownTableBodyLeft">Build the example   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>test</code>  </td><td class="markdownTableBodyLeft"><code>-DBUILD_TESTS=ON</code>  </td><td class="markdownTableBodyLeft">Build the tests   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>USE_DTOA_LIBRARY=1</code>  </td><td class="markdownTableBodyLeft"><code>-DUSE_DTOA_LIBRARY=ON</code>  </td><td class="markdownTableBodyLeft">Use alternative double sprintf   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>USE_FMEMOPEN=1</code>  </td><td class="markdownTableBodyLeft"><code>-DUSE_FMEMOPEN=ON</code>  </td><td class="markdownTableBodyLeft">Use fmemopen() for temp image files   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>USE_OPENSSL_MD5=1</code>  </td><td class="markdownTableBodyLeft"><code>-DUSE_OPENSSL_MD5=ON</code>  </td><td class="markdownTableBodyLeft">Use OpenSSL for MD5 digest   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>USE_NO_MD5=1</code>  </td><td class="markdownTableBodyLeft"><code>-DUSE_NO_MD5=ON</code>  </td><td class="markdownTableBodyLeft">Don't use a MD5 digest   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>USE_SYSTEM_MINIZIP=1</code>  </td><td class="markdownTableBodyLeft"><code>-DUSE_SYSTEM_MINIZIP=ON</code>  </td><td class="markdownTableBodyLeft">Use system minzip library   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>USE_STANDARD_TMPFILE=1</code>  </td><td class="markdownTableBodyLeft"><code>-DUSE_STANDARD_TMPFILE=ON</code>  </td><td class="markdownTableBodyLeft">Use system tmpfile() function   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>USE_BIG_ENDIAN=1</code>  </td><td class="markdownTableBodyLeft"><code>-DUSE_BIG_ENDIAN=ON</code>  </td><td class="markdownTableBodyLeft">Build on big endian systems   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>universal_binary</code>  </td><td class="markdownTableBodyLeft"><code>-DCMAKE_OSX_ARCHITECTURES="x86_64;arm64"</code>  </td><td class="markdownTableBodyLeft">Create a macOS "Universal Binary"   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><code>-DBUILD_SHARED_LIBS=ON</code>  </td><td class="markdownTableBodyLeft">Build shared library (default on)   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><code>-DUSE_STATIC_MSVC_RUNTIME=ON</code>  </td><td class="markdownTableBodyLeft">Use static msvc runtime library   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><code>-DCMAKE_BUILD_TYPE=Release</code>  </td><td class="markdownTableBodyLeft">Set the build type.   </td></tr>
+</table>
+<p>The compilation options would be used as follows: </p><pre class="fragment"># Make
+make examples USE_DTOA_LIBRARY=1`
+
+# CMake
+cd cmake
+cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_EXAMPLES=ON -DUSE_DTOA_LIBRARY=ON
+cmake --build . --config Release
+</pre><p>Each of the options are explained below:</p>
+<ul>
+<li><code>examples/BUILD_EXAMPLES</code>: Builds the <a class="el" href="examples.html">example programs</a>.</li>
+<li><code>test/BUILD_TESTS</code>: Builds the tests (see <a class="el" href="running_the_tests.html">Running the Test Suite</a>). With Make the tests are also run once they are compiled. With CMake you can run them using <code>ctest</code>.</li>
+<li><code>USE_DTOA_LIBRARY</code>: See <a class="el" href="getting_started.html#gsg_dtoa">using a double formatting library</a>.</li>
+<li><code>USE_FMEMOPEN</code>: When inserting an image from a buffer using <code><a class="el" href="worksheet_8h.html#aebd5cc71a42ab0e4a9ce45fe9a6f6908" title="Insert an image in a worksheet cell, from a memory buffer.">worksheet_insert_image_buffer()</a></code> libxlsxwriter writes the buffer to a temporary file before processing it. In order to avoid this small overhead you can use this option to invoke <code>fmemopen()</code> instead. This option isn't on by default since it isn't supported on Windows.</li>
+<li><code>USE_OPENSSL_MD5</code>: Uses OpenSSL to provide a MD5 digest of image files in order to avoid storing duplicates. See <a class="el" href="getting_started.html#gsg_md5">MD5 functionality for handling duplicate images</a>.</li>
+<li><code>USE_NO_MD5</code>: Don't use a MD5 digest of image files in order to remove duplicates. This can be used if you aren't handling image files and don't need the additional function in the library. See <a class="el" href="getting_started.html#gsg_md5">MD5 functionality for handling duplicate images</a>.</li>
+<li><code>USE_SYSTEM_MINIZIP</code>: Uses a system minizip library, rather than the included copy, to create the xlsx zip container. See <a class="el" href="getting_started.html#gsg_minizip">Linking against system minizip</a>.</li>
+<li><code>USE_STANDARD_TMPFILE</code>: Uses the standard library <code>tmpfile()</code> function to handle temp files instead of <code>tmpfileplus</code>. See <a class="el" href="getting_started.html#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a>.</li>
+<li><code>USE_BIG_ENDIAN</code>: Compiles libxlsxwriter on a big endian system. See <a class="el" href="getting_started.html#gsg_endian">Compiling on Big Endian Architecture</a>.</li>
+<li><code>universal_binary/CMAKE_OSX_ARCHITECTURES</code>: Builds a "universal binary" for both Apple silicon and Intel-based Macs. See <a class="el" href="getting_started.html#gsg_universal">Compiling a universal binary on macOS</a>.</li>
+<li><code>BUILD_SHARED_LIBS</code>: Builds a dynamically loading version of the library (<code>.so</code>, <code>.dll</code> or <code>.dylib</code> depending on the operating system).</li>
+<li><code>USE_STATIC_MSVC_RUNTIME</code>: Sets flags for Microsoft Visual C to use a static MSVC runtime.</li>
+<li><code>CMAKE_BUILD_TYPE</code>: Sets the build type (generally <code>Release</code> or <code>Debug</code>).</li>
+</ul>
+<p>You can view, and set, your CMake options from within your build directory using the <code>ccmake</code> tool: </p><pre class="fragment">ccmake .
+</pre><h2><a class="anchor" id="gsg_dtoa"></a>
+Using a double formatting library</h2>
 <p>Excel uses an IEEE 754 doubles for all numeric values. These values are stored in standard <code>sprintf(...,"%.16G",...)</code> formatting as numbers like "1234.56" or "456E+123". However in some locales, such as "de_DE" these numbers can be stored with the locale specific decimal place like "1234,56" which causes Excel to give an error when it loads the file.</p>
 <p>It some cases this issue can be resolved by using the <code>setlocale()</code> or <code>uselocale()</code> functions in your application. Alternatively you can compile libxlsxwriter with support for a third party <code>dtoa()</code> (decimal to ascii) function. Currently libxlsxwriter uses the <a href="https://github.com/miloyip/dtoa-benchmark">Milo Yip DTOA library</a> as an optional compilation. This avoids the locale sprintf issue and it is also 40-50% faster than the standard dtoa for raw numeric data.</p>
-<p>If you wish to use it you can pass "USE_DTOA_LIBRARY=1" to <code>make</code> or "-DUSE_DTOA_LIBRARY=ON" to cmake.</p>
-<h1><a class="anchor" id="gsg_next"></a>
+<h2><a class="anchor" id="gsg_md5"></a>
+MD5 functionality for handling duplicate images</h2>
+<p>Libxlsxwriter uses a an MD5 digest to avoid including duplicate image files in the xlsx file. By default it uses a third party library, <a href="https://openwall.info/wiki/people/solar/software/public-domain-source-code/md5">Openwall MD5</a>, which is a fast portable implementation of the MD5 Algorithm and which uses the same function prototypes as OpenSSL MD5 digest. See <a class="el" href="license.html">License</a>.</p>
+<p>The Openwall MD5 code is included in the libxlsxwriter repo and compiled in by default. If you don't want to use this code, and the additional license, you can use OpenSSL's MD5 functions dynamically by using the <code>USE_OPENSSL_MD5</code> option: </p><pre class="fragment">make USE_OPENSSL_MD5=1
+
+# or:
+cmake .. -DUSE_OPENSSL_MD5=ON
+</pre><p>This requires that you have the OpenSSL development libraries installed and on paths known to your compiler.</p>
+<p>If this MD5 functionality isn't required it is possible to compile libxlsxwriter without image de-duplication by using the <code>USE_NO_MD5=1</code> option: </p><pre class="fragment">make USE_NO_MD5=1
+
+# or:
+cmake .. -DUSE_NO_MD5=ON
+</pre><h2><a class="anchor" id="gsg_minizip"></a>
+Linking against system minizip</h2>
+<p>Libxlsxwriter uses the <code>minizip</code> component of <a href="http://www.zlib.net">Zlib</a> to create the xlsx zip file container. The source files for <code>minizip</code> are included in the src tree of libxlsxwriter and are statically linked by default.</p>
+<p>If you have a <code>lminizip</code> library already installed on your system and prefer to dynamically link against that you can use the following compilation option: </p><pre class="fragment">make USE_SYSTEM_MINIZIP=1
+
+# or:
+cmake .. -DUSE_SYSTEM_MINIZIP=ON
+</pre><h2><a class="anchor" id="gsg_tmpdir"></a>
+Specifying a TEMP directory for libxlsxwriter</h2>
+<p>The libxlsxwriter library creates temporary files in the system <code>TEMP</code> directory during assembly of an xlsx file. On Windows this directory may not be writeable by a libxlsxwriter application (although it will try several <code>TEMP</code> locations before returning an error). To work around this you can set the <code>tmpdir</code> parameter of the <a class="el" href="structlxw__workbook__options.html" title="Workbook options.">lxw_workbook_options</a> struct and pass it to <code><a class="el" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323" title="Create a new workbook object, and set the workbook options.">workbook_new_opt()</a></code>:</p>
+<div class="fragment"><div class="line"><a class="code" href="structlxw__workbook__options.html">lxw_workbook_options</a> options = {.constant_memory = <a class="code" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a847f574cc183a1d8a4e3800fe28091f4">LXW_FALSE</a>,</div>
+<div class="line">                                .tmpdir = <span class="stringliteral">&quot;C:\\Temp&quot;</span>};</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a class="code" href="workbook_8h.html#a8ca9bd8c30c618b81ca6180f78b03323">workbook_new_opt</a>(<span class="stringliteral">&quot;filename.xlsx&quot;</span>, &amp;options);</div>
+</div><!-- fragment --><p>This can also be used on Unix systems where the <code>TEMP</code> directory isn't writeable.</p>
+<p>The TEMP file handling with optional temporary directory support is provided by the <a href="http://www.di-mgt.com.au/c_function_to_create_temp_file.html">Tmpfileplus</a> library which is included in the source tree. If you wish to use the standard library <code>tmpfile()</code> function instead you can compile without <code>tmpfileplus</code> as follows: </p><pre class="fragment">make USE_STANDARD_TMPFILE=1
+
+# or:
+cmake .. -DUSE_STANDARD_TMPFILE=ON
+</pre><dl class="section note"><dt>Note</dt><dd>When using the the standard library <code>tmpfile()</code> the <code>tmpdir</code> parameter, shown above, is ignored.</dd></dl>
+<h2><a class="anchor" id="gsg_endian"></a>
+Compiling on Big Endian Architecture</h2>
+<p>Libxlsxwriter can be compiled on a big endian system as follows: </p><pre class="fragment">make USE_BIG_ENDIAN=1
+
+# or:
+cmake .. -DUSE_BIG_ENDIAN=ON
+</pre><h2><a class="anchor" id="gsg_universal"></a>
+Compiling a universal binary on macOS</h2>
+<p>With Xcode 12.2 and later you can compile libxlsxwriter as a "universal
+binary" for both Apple silicon and Intel-based Macs, i.e., arm64 and x86_64.</p>
+<p>You can compile a universal binary with standard make as follows: </p><pre class="fragment">$ make universal_binary
+
+# Which gives:
+$ lipo -archs lib/libxlsxwriter.a
+x86_64 arm64
+
+$ lipo -archs lib/libxlsxwriter.dylib
+x86_64 arm64
+</pre><p>Or with CMake: </p><pre class="fragment">cd cmake
+cmake .. -DCMAKE_OSX_ARCHITECTURES="x86_64;arm64"
+make
+</pre><h2><a class="anchor" id="gsg_minimal"></a>
+Minimal dependency compilation</h2>
+<p>As explained in the previous sections Libxlsxwriter includes 3 additional libraries within the <code>third_party</code> directory:</p>
+<ol type="1">
+<li><code>md5</code>: Used for MD5 hashing to avoid including duplicate images. See <a class="el" href="getting_started.html#gsg_md5">MD5 functionality for handling duplicate images</a>.</li>
+<li><code>minizip</code>: Uses creating the xlsx zip container (this is part of the zlib code base but generally packaged separately). See <a class="el" href="getting_started.html#gsg_minizip">Linking against system minizip</a>.</li>
+<li><code>tmpfileplus</code>: Used mainly to overcome temp file issues on Windows but also used for changing the default temp directory. See <a class="el" href="getting_started.html#gsg_tmpdir">Specifying a TEMP directory for libxlsxwriter</a>.</li>
+</ol>
+<p>These components are included in the libxlsxwriter repository to ensure that the library compiles and runs on as many OSes as possible with the least amount of additional dependencies.</p>
+<p>However, all of these are optional and a minimal version of libxlsxwriter can be compiled without them by relying on external libraries as follows: </p><pre class="fragment"># Make:
+make USE_OPENSSL_MD5=1 USE_SYSTEM_MINIZIP=1 USE_STANDARD_TMPFILE=1
+
+# CMake:
+cd cmake
+cmake .. -DUSE_OPENSSL_MD5=ON -DUSE_SYSTEM_MINIZIP=ON -DUSE_STANDARD_TMPFILE=ON
+cmake --build .
+</pre><h1><a class="anchor" id="gsg_next"></a>
 Next steps</h1>
-<p>If you got libxlsxwriter built and working successfully then the next sections will look at how to create some more in-depth examples.</p>
+<p>Once you get libxlsxwriter built and working the next sections will show you how to create some more in-depth examples.</p>
 <p>Next: <a class="el" href="tutorial01.html">Tutorial 1: Create a simple XLSX file</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -445,7 +523,7 @@ Next steps</h1>
 <!-- HTML footer for doxygen 1.8.20-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Copyright 2014-2021 John McNamara.
+Copyright 2014-2022 John McNamara.
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>

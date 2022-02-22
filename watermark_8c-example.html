@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libxlsxwriter: hello.c</title>
+<title>libxlsxwriter: watermark.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,19 +63,22 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">hello.c</div>  </div>
+<div class="title">watermark.c</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table width="600">
 <tr>
-<td><a class="el" href="examples.html">&lt;&lt; Examples page</a> </td><td align="right"><a class="el" href="anatomy_8c-example.html">anatomy.c &gt;&gt;</a>  </td></tr>
+<td><a class="el" href="outline_collapsed_8c-example.html">&lt;&lt; outline_collapsed.c</a> </td><td align="right"><a class="el" href="background_8c-example.html">background.c &gt;&gt;</a>  </td></tr>
 </table>
-<p>The simplest possible program and spreadsheet. This is a good place to start to see if the libxlsxwriter library is installed and working correctly.</p>
+<p>Example of how to a watermark image for a worksheet using the method suggested in the Microsoft documentation: <a href="https://support.microsoft.com/en-us/office/add-a-watermark-in-excel-a372182a-d733-484e-825c-18ddf3edf009">https://support.microsoft.com/en-us/office/add-a-watermark-in-excel-a372182a-d733-484e-825c-18ddf3edf009</a></p>
 <div class="image">
-<img src="hello01.png" alt=""/>
+<img src="worksheet_watermark.png" alt=""/>
 </div>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Example of writing some data to a simple Excel file using libxlsxwriter.</span></div>
+<div class="line"><span class="comment"> * An example of adding a worksheet watermark image using libxlsxwriter. This</span></div>
+<div class="line"><span class="comment"> * is based on the method of putting an image in the worksheet header as</span></div>
+<div class="line"><span class="comment"> * suggested in the Microsoft documentation:</span></div>
+<div class="line"><span class="comment"> * https://support.microsoft.com/en-us/office/add-a-watermark-in-excel-a372182a-d733-484e-825c-18ddf3edf009</span></div>
 <div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> * Copyright 2014-2021, John McNamara, jmcnamara@cpan.org</span></div>
 <div class="line"><span class="comment"> *</span></div>
@@ -85,13 +88,15 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line"> </div>
-<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a name="a1"></a><a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;hello_world.xlsx&quot;</span>);</div>
+<div class="line">    <a name="_a0"></a><a class="code" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a name="a1"></a><a class="code" href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a>(<span class="stringliteral">&quot;watermark.xlsx&quot;</span>);</div>
 <div class="line">    <a name="_a2"></a><a class="code" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a name="a3"></a><a class="code" href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"> </div>
-<div class="line">    <a name="a4"></a><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
-<div class="line">    <a name="a5"></a><a class="code" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 1, 0, 123, NULL);</div>
 <div class="line"> </div>
-<div class="line">    <a name="a6"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">    <span class="comment">/* Set a worksheet header with the watermark image. */</span></div>
+<div class="line">    <a name="_a4"></a><a class="code" href="structlxw__header__footer__options.html">lxw_header_footer_options</a> header_options = {.<a name="a5"></a><a class="code" href="structlxw__header__footer__options.html#a474527349cbcd0ca4d79294043fb8e17">image_center</a> = <span class="stringliteral">&quot;watermark.png&quot;</span>};</div>
+<div class="line">    <a name="a6"></a><a class="code" href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac">worksheet_set_header_opt</a>(worksheet, <span class="stringliteral">&quot;&amp;C&amp;[Picture]&quot;</span>, &amp;header_options);</div>
+<div class="line"> </div>
+<div class="line">    <a name="a7"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
@@ -99,9 +104,10 @@ $(function() {
 <div class="ttc" id="aworkbook_8h_html_ad9e7aeebc0fd43562db5bcd527b2ee5e"><div class="ttname"><a href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a></div><div class="ttdeci">lxw_error workbook_close(lxw_workbook *workbook)</div><div class="ttdoc">Close the Workbook object and write the XLSX file.</div></div>
 <div class="ttc" id="aworkbook_8h_html_a1cf96608a23ee4eb0e8467c15240d00b"><div class="ttname"><a href="workbook_8h.html#a1cf96608a23ee4eb0e8467c15240d00b">workbook_new</a></div><div class="ttdeci">lxw_workbook * workbook_new(const char *filename)</div><div class="ttdoc">Create a new workbook object.</div></div>
 <div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2107</div></div>
+<div class="ttc" id="aworksheet_8h_html_ab913a06656ecf28292d6b21d3c3eaaac"><div class="ttname"><a href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac">worksheet_set_header_opt</a></div><div class="ttdeci">lxw_error worksheet_set_header_opt(lxw_worksheet *worksheet, const char *string, lxw_header_footer_options *options)</div><div class="ttdoc">Set the printed page header caption with additional options.</div></div>
 <div class="ttc" id="astructlxw__workbook_html"><div class="ttname"><a href="structlxw__workbook.html">lxw_workbook</a></div><div class="ttdoc">Struct to represent an Excel workbook.</div><div class="ttdef"><b>Definition:</b> workbook.h:280</div></div>
-<div class="ttc" id="aworksheet_8h_html_ac208046e7a6d12cc87982422efa41b31"><div class="ttname"><a href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a></div><div class="ttdeci">lxw_error worksheet_write_string(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *string, lxw_format *format)</div><div class="ttdoc">Write a string to a worksheet cell.</div></div>
-<div class="ttc" id="aworksheet_8h_html_ad9fc47d3beaa2ab4759414e8580c2289"><div class="ttname"><a href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a></div><div class="ttdeci">lxw_error worksheet_write_number(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, double number, lxw_format *format)</div><div class="ttdoc">Write a number to a worksheet cell.</div></div>
+<div class="ttc" id="astructlxw__header__footer__options_html_a474527349cbcd0ca4d79294043fb8e17"><div class="ttname"><a href="structlxw__header__footer__options.html#a474527349cbcd0ca4d79294043fb8e17">lxw_header_footer_options::image_center</a></div><div class="ttdeci">char * image_center</div><div class="ttdef"><b>Definition:</b> worksheet.h:1991</div></div>
+<div class="ttc" id="astructlxw__header__footer__options_html"><div class="ttname"><a href="structlxw__header__footer__options.html">lxw_header_footer_options</a></div><div class="ttdoc">Header and footer options.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1978</div></div>
 <div class="ttc" id="aworkbook_8h_html_a81d456b4f65a464e78e4a0030ecc3c2e"><div class="ttname"><a href="workbook_8h.html#a81d456b4f65a464e78e4a0030ecc3c2e">workbook_add_worksheet</a></div><div class="ttdeci">lxw_worksheet * workbook_add_worksheet(lxw_workbook *workbook, const char *sheetname)</div><div class="ttdoc">Add a new worksheet to a workbook.</div></div>
 <!-- HTML footer for doxygen 1.8.20-->
 <!-- start footer part -->
