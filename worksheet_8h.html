@@ -314,6 +314,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a26130cfccecf80a9833d65a84039374d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a26130cfccecf80a9833d65a84039374d">worksheet_set_print_scale</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, uint16_t scale)</td></tr>
 <tr class="memdesc:a26130cfccecf80a9833d65a84039374d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the scale factor for the printed page.  <a href="worksheet_8h.html#a26130cfccecf80a9833d65a84039374d">More...</a><br /></td></tr>
 <tr class="separator:a26130cfccecf80a9833d65a84039374d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2cba49a1d00928f6e497ddc7497c524"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#aa2cba49a1d00928f6e497ddc7497c524">worksheet_print_black_and_white</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
+<tr class="memdesc:aa2cba49a1d00928f6e497ddc7497c524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the worksheet to print in black and white.  <a href="worksheet_8h.html#aa2cba49a1d00928f6e497ddc7497c524">More...</a><br /></td></tr>
+<tr class="separator:aa2cba49a1d00928f6e497ddc7497c524"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e32eb8e5f17aedb048035a5df337538"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a6e32eb8e5f17aedb048035a5df337538">worksheet_right_to_left</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet)</td></tr>
 <tr class="memdesc:a6e32eb8e5f17aedb048035a5df337538"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the worksheet cells from right to left for some versions of Excel.  <a href="worksheet_8h.html#a6e32eb8e5f17aedb048035a5df337538">More...</a><br /></td></tr>
 <tr class="separator:a6e32eb8e5f17aedb048035a5df337538"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -956,13 +959,13 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a96384aee66a82d783d695374078e1ea9" title="Error codes from libxlsxwriter functions.">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_write_unixtime()</code> function can be used to write dates and times in Unix date format to the cell specified by <code>row</code> and <code>column</code>. <a href="https://en.wikipedia.org/wiki/Unix_time">Unix Time</a> which is a common integer time format. It is defined as the number of seconds since the Unix epoch (1970-01-01 00:00 UTC). Negative values can also be used for dates prior to 1970:</p>
  <div class="fragment"><div class="line">    <span class="comment">/* 1970-01-01. The Unix epoch. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a11ad207090da7ecaf0ae9085bb6cb626">worksheet_write_unixtime</a>(worksheet, 0, 0,           0, format);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a11ad207090da7ecaf0ae9085bb6cb626">worksheet_write_unixtime</a>(worksheet, 0, 0,             0, format);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">/* 2000-01-01. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a11ad207090da7ecaf0ae9085bb6cb626">worksheet_write_unixtime</a>(worksheet, 1, 0,  1577836800, format);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a11ad207090da7ecaf0ae9085bb6cb626">worksheet_write_unixtime</a>(worksheet, 1, 0,  1577836800LL, format);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">/* 1900-01-01. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a11ad207090da7ecaf0ae9085bb6cb626">worksheet_write_unixtime</a>(worksheet, 2, 0, -2208988800, format);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a11ad207090da7ecaf0ae9085bb6cb626">worksheet_write_unixtime</a>(worksheet, 2, 0, -2208988800LL, format);</div>
 </div><!-- fragment --><p>The <code>format</code> parameter should be used to apply formatting to the cell using a <a class="el" href="format_8h.html">Format</a> object as shown above. Without a date format the datetime will appear as a number only.</p>
 <p>The output from this code sample is:</p>
 <div class="image">
@@ -4995,6 +4998,31 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aa2cba49a1d00928f6e497ddc7497c524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2cba49a1d00928f6e497ddc7497c524">&#9670;&nbsp;</a></span>worksheet_print_black_and_white()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void worksheet_print_black_and_white </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet.">lxw_worksheet</a> instance to be updated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the option to print the worksheet in black and white: </p><div class="fragment"><div class="line"><a class="code" href="worksheet_8h.html#aa2cba49a1d00928f6e497ddc7497c524">worksheet_print_black_and_white</a>(worksheet);</div>
+</div><!-- fragment --> 
+</div>
+</div>
 <a id="a6e32eb8e5f17aedb048035a5df337538"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6e32eb8e5f17aedb048035a5df337538">&#9670;&nbsp;</a></span>worksheet_right_to_left()</h2>
 
@@ -6738,6 +6766,7 @@ Macros</h2></td></tr>
 <div class="ttc" id="astructlxw__data__validation_html_abc1601dcfcd8e7d7172984fb34e14626"><div class="ttname"><a href="structlxw__data__validation.html#abc1601dcfcd8e7d7172984fb34e14626">lxw_data_validation::maximum_number</a></div><div class="ttdeci">double maximum_number</div><div class="ttdef"><b>Definition:</b> worksheet.h:1031</div></div>
 <div class="ttc" id="aworkbook_8h_html_abd18b07856137e94b34c9aca7e0831b5"><div class="ttname"><a href="workbook_8h.html#abd18b07856137e94b34c9aca7e0831b5">workbook_get_default_url_format</a></div><div class="ttdeci">lxw_format * workbook_get_default_url_format(lxw_workbook *workbook)</div><div class="ttdoc">Get the default URL format used with worksheet_write_url().</div></div>
 <div class="ttc" id="aworksheet_8h_html_a8d5ed222f464ed30865534f04bd85b22ae8cd84ea345808631d6c5a33c0218d5a"><div class="ttname"><a href="worksheet_8h.html#a8d5ed222f464ed30865534f04bd85b22ae8cd84ea345808631d6c5a33c0218d5a">LXW_IGNORE_EVAL_ERROR</a></div><div class="ttdeci">@ LXW_IGNORE_EVAL_ERROR</div><div class="ttdef"><b>Definition:</b> worksheet.h:683</div></div>
+<div class="ttc" id="aworksheet_8h_html_aa2cba49a1d00928f6e497ddc7497c524"><div class="ttname"><a href="worksheet_8h.html#aa2cba49a1d00928f6e497ddc7497c524">worksheet_print_black_and_white</a></div><div class="ttdeci">void worksheet_print_black_and_white(lxw_worksheet *worksheet)</div><div class="ttdoc">Set the worksheet to print in black and white.</div></div>
 <div class="ttc" id="astructlxw__format_html"><div class="ttname"><a href="structlxw__format.html">lxw_format</a></div><div class="ttdoc">Struct to represent the formatting properties of an Excel format.</div><div class="ttdef"><b>Definition:</b> format.h:358</div></div>
 <div class="ttc" id="aworksheet_8h_html_aca5e7c947b82d66bf3d701d669fea206ae3222badeac52bfe47f327db1a54dcaf"><div class="ttname"><a href="worksheet_8h.html#aca5e7c947b82d66bf3d701d669fea206ae3222badeac52bfe47f327db1a54dcaf">LXW_FILTER_CRITERIA_EQUAL_TO</a></div><div class="ttdeci">@ LXW_FILTER_CRITERIA_EQUAL_TO</div><div class="ttdef"><b>Definition:</b> worksheet.h:601</div></div>
 <div class="ttc" id="aworksheet_8h_html_a9601745a2e9e7b1e194b7f5283f197f0"><div class="ttname"><a href="worksheet_8h.html#a9601745a2e9e7b1e194b7f5283f197f0">worksheet_set_h_pagebreaks</a></div><div class="ttdeci">lxw_error worksheet_set_h_pagebreaks(lxw_worksheet *worksheet, lxw_row_t breaks[])</div><div class="ttdoc">Set the horizontal page breaks on a worksheet.</div></div>

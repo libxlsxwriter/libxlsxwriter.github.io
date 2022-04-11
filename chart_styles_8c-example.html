@@ -112,7 +112,7 @@ $(function() {
 <div class="line">            <span class="keywordflow">for</span> (col_num = 0; col_num &lt; 64; col_num += 8) {</div>
 <div class="line"> </div>
 <div class="line">                chart = <a name="a10"></a><a class="code" href="workbook_8h.html#a63b001ecefdbc4417986a3e344657726">workbook_add_chart</a>(workbook, chart_types[chart_num]);</div>
-<div class="line">                sprintf(chart_title, <span class="stringliteral">&quot;Style %d&quot;</span>, style_num);</div>
+<div class="line">                snprintf(chart_title, 32, <span class="stringliteral">&quot;Style %d&quot;</span>, style_num);</div>
 <div class="line"> </div>
 <div class="line">                <a name="a11"></a><a class="code" href="chart_8h.html#ad60de0eb056e93435407e91482115f55">chart_add_series</a>(chart, NULL, <span class="stringliteral">&quot;=Data!$A$1:$A$6&quot;</span>);</div>
 <div class="line">                <a name="a12"></a><a class="code" href="chart_8h.html#aa0a0b3eadc51a608c76bb9473943e191">chart_title_set_name</a>(chart, chart_title);</div>

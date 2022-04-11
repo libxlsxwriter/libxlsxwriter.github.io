@@ -100,13 +100,13 @@ $(function() {
 <div class="line">    <span class="comment">/* Write some Unix datetimes with formatting. */</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">/* 1970-01-01. The Unix epoch. */</span></div>
-<div class="line">    <a name="a8"></a><a class="code" href="worksheet_8h.html#a11ad207090da7ecaf0ae9085bb6cb626">worksheet_write_unixtime</a>(worksheet, 0, 0,           0, format);</div>
+<div class="line">    <a name="a8"></a><a class="code" href="worksheet_8h.html#a11ad207090da7ecaf0ae9085bb6cb626">worksheet_write_unixtime</a>(worksheet, 0, 0,             0, format);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">/* 2000-01-01. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a11ad207090da7ecaf0ae9085bb6cb626">worksheet_write_unixtime</a>(worksheet, 1, 0,  1577836800, format);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a11ad207090da7ecaf0ae9085bb6cb626">worksheet_write_unixtime</a>(worksheet, 1, 0,  1577836800LL, format);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">/* 1900-01-01. */</span></div>
-<div class="line">    <a class="code" href="worksheet_8h.html#a11ad207090da7ecaf0ae9085bb6cb626">worksheet_write_unixtime</a>(worksheet, 2, 0, -2208988800, format);</div>
+<div class="line">    <a class="code" href="worksheet_8h.html#a11ad207090da7ecaf0ae9085bb6cb626">worksheet_write_unixtime</a>(worksheet, 2, 0, -2208988800LL, format);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> <a name="a9"></a><a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>

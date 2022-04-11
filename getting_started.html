@@ -113,7 +113,7 @@ Installation on Linux</h1>
 <h2><a class="anchor" id="gsg_dependencies"></a>
 Install the dependencies</h2>
 <p>The only non-optional dependency when building libxlsxwriter is <a href="http://www.zlib.net">Zlib</a>.</p>
-<p>You can do install <code>zlib</code> from source as follows: </p><pre class="fragment">curl -O -L  http://www.zlib.net/zlib-1.2.11.tar.gz
+<p>You can install <code>zlib</code> from source as follows: </p><pre class="fragment">curl -O -L  http://www.zlib.net/zlib-1.2.11.tar.gz
 tar zxf zlib-1.2.11.tar.gz
 cd zlib-1.2.11
 
@@ -123,7 +123,7 @@ make
 sudo make install
 </pre><p>Alternatively, you can use your OS packager to install the <code>zlib</code> development libraries. For example: </p><pre class="fragment">sudo apt-get install -y zlib1g-dev
 </pre><p>The zlib version must be &gt;= 1.2.8 to avoid compilation issues.</p>
-<dl class="section note"><dt>Note</dt><dd>There optional dependencies that can be installed for testing. See <a class="el" href="running_the_tests.html">Running the Test Suite</a>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>There are optional dependencies that can be installed for testing. See <a class="el" href="running_the_tests.html">Running the Test Suite</a>.</dd></dl>
 <h2><a class="anchor" id="gsg_git"></a>
 Get the source code</h2>
 <p>To get the latest version of the source code you can clone the libxlsxwriter repository from GitHub: </p><pre class="fragment">git clone https://github.com/jmcnamara/libxlsxwriter.git
@@ -178,9 +178,9 @@ Using the library</h2>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>If you executed the <code>"make install"</code> command in the previous section then you should be able to compile the program as follows: </p><pre class="fragment">cc myexcel.c -o myexcel -lxlsxwriter
-</pre><p>In some environments, or if you changed the <code>PREFIX</code> location, you may have to provide explicit <code>include</code> and <code>lib</code> paths: </p><pre class="fragment">cc myexcel.c -o myexcel -I/usr/local/include -L/usr/local/lib -lxlsxwriter
-</pre><p>You can also use <a href="https://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a> (after you use <code>"make install"</code>) to automatically determine the required arguments and paths: </p><pre class="fragment">$ pkg-config --cflags --libs xlsxwriter
+</div><!-- fragment --><p>If you executed the install commands in the previous section then you should be able to compile the program as follows: </p><pre class="fragment">cc myexcel.c -o myexcel -lxlsxwriter
+</pre><p>In some OS environments, or if you changed the <code>PREFIX</code> location, you may have to provide explicit <code>include</code> and <code>lib</code> paths: </p><pre class="fragment">cc myexcel.c -o myexcel -I/usr/local/include -L/usr/local/lib -lxlsxwriter
+</pre><p>You can also use <a href="https://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a> (after installation of the library) to automatically determine the required arguments and paths: </p><pre class="fragment">$ pkg-config --cflags --libs xlsxwriter
 -I/usr/local/include -L/usr/local/lib -lxlsxwriter -lz
 </pre><p>You can add this information to your compilation as follows: </p><pre class="fragment">cc myexcel.c -o myexcel `pkg-config --cflags --libs xlsxwriter`
 </pre><p>This will create an executable that you can run to generate an Excel spreadsheet: </p><pre class="fragment">./myexcel
@@ -385,7 +385,7 @@ Compilation Options</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>test</code>  </td><td class="markdownTableBodyLeft"><code>-DBUILD_TESTS=ON</code>  </td><td class="markdownTableBodyLeft">Build the tests   </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code>USE_DTOA_LIBRARY=1</code>  </td><td class="markdownTableBodyLeft"><code>-DUSE_DTOA_LIBRARY=ON</code>  </td><td class="markdownTableBodyLeft">Use alternative double sprintf   </td></tr>
+<td class="markdownTableBodyLeft"><code>USE_DTOA_LIBRARY=1</code>  </td><td class="markdownTableBodyLeft"><code>-DUSE_DTOA_LIBRARY=ON</code>  </td><td class="markdownTableBodyLeft">Use alternative double in sprintf   </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"><code>USE_FMEMOPEN=1</code>  </td><td class="markdownTableBodyLeft"><code>-DUSE_FMEMOPEN=ON</code>  </td><td class="markdownTableBodyLeft">Use fmemopen() for temp image files   </td></tr>
 <tr class="markdownTableRowOdd">
@@ -408,7 +408,7 @@ Compilation Options</h1>
 <td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"><code>-DCMAKE_BUILD_TYPE=Release</code>  </td><td class="markdownTableBodyLeft">Set the build type.   </td></tr>
 </table>
 <p>The compilation options would be used as follows: </p><pre class="fragment"># Make
-make examples USE_DTOA_LIBRARY=1`
+make examples USE_DTOA_LIBRARY=1
 
 # CMake
 cd cmake
