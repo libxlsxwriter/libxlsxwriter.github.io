@@ -94,7 +94,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 The views and conclusions contained in the software and documentation are
 those of the authors and should not be interpreted as representing
 official policies, either expressed or implied, of the FreeBSD Project.
-</pre><p>Libxlsxwriter includes <code>queue.h</code> and <code>tree.h</code> from FreeBSD, the <code>minizip</code> component of <code>zlib</code>. It also includes and uses the optional <code>tmpfileplus</code>, <code>md5</code> and <code>emyg_dtoa</code>. These components which have the following licenses:</p>
+</pre><p>Libxlsxwriter includes the <code>queue.h</code> and <code>tree.h</code> macros from FreeBSD. It also includes and, unless overridden, uses the optional libraries <code>minizip</code>, <code>tmpfileplus</code> and <code>md5</code>. It also includes the <code>emyg_dtoa</code> library but doesn't use it by default. These components have the following licenses:</p>
 <p>Queue.h from FreeBSD: </p><pre class="fragment">Copyright (c) 1991, 1993
  The Regents of the University of California.  All rights reserved.
 
