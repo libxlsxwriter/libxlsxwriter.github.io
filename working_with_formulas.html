@@ -203,7 +203,7 @@ Dynamic Arrays - The Spilled Range Operator "#"</h2>
 </div><!-- fragment --><h2><a class="anchor" id="ww_formulas_lambda"></a>
 The Excel 365 LAMBDA() function</h2>
 <dl class="section note"><dt>Note</dt><dd>At the time of writing the <code>LAMBDA()</code> function in Excel is only available to Excel 365 users subscribed to the Beta Channel updates.</dd></dl>
-<p>Beta Channel versions of Excel 365 have introduced a powerful new function/feature called <code>LAMBDA()</code>. This is similar to <a href="https://docs.microsoft.com/en-us/cpp/cpp/lambda-expressions-in-cpp?view=msvc-160">lambda expressions</a> in C++ (and other languages).</p>
+<p>Recent versions of Excel 365 have introduced a powerful new function/feature called <code>LAMBDA()</code>. This is similar to <a href="https://docs.microsoft.com/en-us/cpp/cpp/lambda-expressions-in-cpp?view=msvc-160">lambda expressions</a> in C++ (and other languages).</p>
 <p>Consider the following Excel example which converts the variable <code>temp</code> from Fahrenheit to Celsius: </p><pre class="fragment">LAMBDA(temp, (5/9) * (temp-32))
 </pre><p>This could be called in Excel with an argument: </p><pre class="fragment">=LAMBDA(temp, (5/9) * (temp-32))(212)
 </pre><p>Or assigned to a defined name and called as a user defined function: </p><pre class="fragment">=ToCelsius(212)
