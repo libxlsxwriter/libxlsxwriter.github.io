@@ -197,6 +197,9 @@ Functions</h2></td></tr>
 <tr class="memitem:abfffdfb19f1c5bf6ad95a1b40cec2d35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format_8h.html#abfffdfb19f1c5bf6ad95a1b40cec2d35">format_set_diag_color</a> (<a class="el" href="structlxw__format.html">lxw_format</a> *format, <a class="el" href="format_8h.html#a34a05058edd856109e5bcf1cc6739fc9">lxw_color_t</a> color)</td></tr>
 <tr class="memdesc:abfffdfb19f1c5bf6ad95a1b40cec2d35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the diagonal cell border color.  <a href="format_8h.html#abfffdfb19f1c5bf6ad95a1b40cec2d35">More...</a><br /></td></tr>
 <tr class="separator:abfffdfb19f1c5bf6ad95a1b40cec2d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc0ae296e245012dc29e1d33a9164033"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format_8h.html#acc0ae296e245012dc29e1d33a9164033">format_set_quote_prefix</a> (<a class="el" href="structlxw__format.html">lxw_format</a> *format)</td></tr>
+<tr class="memdesc:acc0ae296e245012dc29e1d33a9164033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on quote prefix for the format.  <a href="format_8h.html#acc0ae296e245012dc29e1d33a9164033">More...</a><br /></td></tr>
+<tr class="separator:acc0ae296e245012dc29e1d33a9164033"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a449e2235a9088cc60233ae443acd2b1a"></a>
@@ -1730,6 +1733,35 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="acc0ae296e245012dc29e1d33a9164033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc0ae296e245012dc29e1d33a9164033">&#9670;&nbsp;</a></span>format_set_quote_prefix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_set_quote_prefix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__format.html">lxw_format</a> *&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>Pointer to a Format instance.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the quote prefix property of a format to ensure a string is treated as a string after editing. This is the same as prefixing the string with a single quote in Excel. You don't need to add the quote to the string but you do need to add the format.</p>
+<div class="fragment"><div class="line">format = <a class="code" href="workbook_8h.html#a279a5d7075d09a3931aae9782afede33">workbook_add_format</a>(workbook);</div>
+<div class="line"><a class="code" href="format_8h.html#acc0ae296e245012dc29e1d33a9164033">format_set_quote_prefix</a>(format);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;=Foo&quot;</span>, format);</div>
+</div><!-- fragment --> 
+</div>
+</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a34a05058edd856109e5bcf1cc6739fc9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a34a05058edd856109e5bcf1cc6739fc9">&#9670;&nbsp;</a></span>lxw_color_t</h2>
@@ -2189,6 +2221,7 @@ Enumerations</h2></td></tr>
 <div class="ttc" id="aformat_8h_html_a40e28394b961e69d4bee27579b4476e7a1fbd6761c4ccd57d98dfd59eaad9fde5"><div class="ttname"><a href="format_8h.html#a40e28394b961e69d4bee27579b4476e7a1fbd6761c4ccd57d98dfd59eaad9fde5">LXW_PATTERN_SOLID</a></div><div class="ttdeci">@ LXW_PATTERN_SOLID</div><div class="ttdef"><b>Definition:</b> format.h:235</div></div>
 <div class="ttc" id="aworksheet_8h_html_ac208046e7a6d12cc87982422efa41b31"><div class="ttname"><a href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a></div><div class="ttdeci">lxw_error worksheet_write_string(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *string, lxw_format *format)</div><div class="ttdoc">Write a string to a worksheet cell.</div></div>
 <div class="ttc" id="aformat_8h_html_abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec"><div class="ttname"><a href="format_8h.html#abeafc6e8222ba9fcfd4f2c2f4e9ea38baedd7412491d9f34fc5f947ada9d196ec">LXW_COLOR_RED</a></div><div class="ttdeci">@ LXW_COLOR_RED</div><div class="ttdef"><b>Definition:</b> format.h:217</div></div>
+<div class="ttc" id="aformat_8h_html_acc0ae296e245012dc29e1d33a9164033"><div class="ttname"><a href="format_8h.html#acc0ae296e245012dc29e1d33a9164033">format_set_quote_prefix</a></div><div class="ttdeci">void format_set_quote_prefix(lxw_format *format)</div><div class="ttdoc">Turn on quote prefix for the format.</div></div>
 <div class="ttc" id="aworksheet_8h_html_ab9b7fb95e1bd9b0da70befd0d37a9173"><div class="ttname"><a href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a></div><div class="ttdeci">lxw_error worksheet_set_row(lxw_worksheet *worksheet, lxw_row_t row, double height, lxw_format *format)</div><div class="ttdoc">Set the properties for a row of cells.</div></div>
 <div class="ttc" id="aformat_8h_html_ae690004cd77f48646da07796b540c309"><div class="ttname"><a href="format_8h.html#ae690004cd77f48646da07796b540c309">format_set_rotation</a></div><div class="ttdeci">void format_set_rotation(lxw_format *format, int16_t angle)</div><div class="ttdoc">Set the rotation of the text in a cell.</div></div>
 <div class="ttc" id="aworksheet_8h_html_ad9fc47d3beaa2ab4759414e8580c2289"><div class="ttname"><a href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a></div><div class="ttdeci">lxw_error worksheet_write_number(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, double number, lxw_format *format)</div><div class="ttdoc">Write a number to a worksheet cell.</div></div>
