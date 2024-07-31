@@ -98,7 +98,7 @@ $(function() {
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line">}</div>
 <div class="ttc" id="astructlxw__workbook_html"><div class="ttname"><a href="structlxw__workbook.html">lxw_workbook</a></div><div class="ttdoc">Struct to represent an Excel workbook.</div><div class="ttdef"><b>Definition:</b> workbook.h:293</div></div>
-<div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2108</div></div>
+<div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2115</div></div>
 <div class="ttc" id="aworkbook_8h_html_a89d256eddbfc5bbac0925e0d38b8139c"><div class="ttname"><a href="workbook_8h.html#a89d256eddbfc5bbac0925e0d38b8139c">workbook_new</a></div><div class="ttdeci">lxw_workbook * workbook_new(const char *filename)</div><div class="ttdoc">Create a new workbook object.</div></div>
 <div class="ttc" id="aworkbook_8h_html_ad9e7aeebc0fd43562db5bcd527b2ee5e"><div class="ttname"><a href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a></div><div class="ttdeci">lxw_error workbook_close(lxw_workbook *workbook)</div><div class="ttdoc">Close the Workbook object and write the XLSX file.</div></div>
 <div class="ttc" id="aworkbook_8h_html_add5f5793676a87cf9173f52da9cb04f5"><div class="ttname"><a href="workbook_8h.html#add5f5793676a87cf9173f52da9cb04f5">workbook_add_worksheet</a></div><div class="ttdeci">lxw_worksheet * workbook_add_worksheet(lxw_workbook *workbook, const char *sheetname)</div><div class="ttdoc">Add a new worksheet to a workbook.</div></div>
@@ -189,6 +189,18 @@ Functions</h2></td></tr>
 <tr class="memitem:af4c868a5cf0eaab8740c1f966ba5561c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#af4c868a5cf0eaab8740c1f966ba5561c">worksheet_insert_image_buffer_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const unsigned char *image_buffer, size_t image_size, <a class="el" href="structlxw__image__options.html">lxw_image_options</a> *options)</td></tr>
 <tr class="memdesc:af4c868a5cf0eaab8740c1f966ba5561c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an image in a worksheet cell, from a memory buffer.  <br /></td></tr>
 <tr class="separator:af4c868a5cf0eaab8740c1f966ba5561c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaf00521027cd79c6d7d93537848b283"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#afaf00521027cd79c6d7d93537848b283">worksheet_embed_image</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *filename)</td></tr>
+<tr class="memdesc:afaf00521027cd79c6d7d93537848b283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Embed an image in a worksheet cell.  <br /></td></tr>
+<tr class="separator:afaf00521027cd79c6d7d93537848b283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af02d8d80c5322da6a2178913aeda2c1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#af02d8d80c5322da6a2178913aeda2c1f">worksheet_embed_image_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const char *filename, <a class="el" href="structlxw__image__options.html">lxw_image_options</a> *options)</td></tr>
+<tr class="memdesc:af02d8d80c5322da6a2178913aeda2c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Embed an image in a worksheet cell, with options.  <br /></td></tr>
+<tr class="separator:af02d8d80c5322da6a2178913aeda2c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade488e5f777f02ea8b0afd25a19617ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ade488e5f777f02ea8b0afd25a19617ac">worksheet_embed_image_buffer</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const unsigned char *image_buffer, size_t image_size)</td></tr>
+<tr class="memdesc:ade488e5f777f02ea8b0afd25a19617ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Embed an image in a worksheet cell, from a memory buffer.  <br /></td></tr>
+<tr class="separator:ade488e5f777f02ea8b0afd25a19617ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00cb1904c81e93878d9cf7360e7fa856"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a00cb1904c81e93878d9cf7360e7fa856">worksheet_embed_image_buffer_opt</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col, const unsigned char *image_buffer, size_t image_size, <a class="el" href="structlxw__image__options.html">lxw_image_options</a> *options)</td></tr>
+<tr class="memdesc:a00cb1904c81e93878d9cf7360e7fa856"><td class="mdescLeft">&#160;</td><td class="mdescRight">Embed an image in a worksheet cell, from a memory buffer.  <br /></td></tr>
+<tr class="separator:a00cb1904c81e93878d9cf7360e7fa856"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae588a6cb4c7f6c258e1af0ad7213e734"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ae588a6cb4c7f6c258e1af0ad7213e734">worksheet_set_background</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, const char *filename)</td></tr>
 <tr class="memdesc:ae588a6cb4c7f6c258e1af0ad7213e734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the background image for a worksheet.  <br /></td></tr>
 <tr class="separator:ae588a6cb4c7f6c258e1af0ad7213e734"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -252,9 +264,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9f4a3845529bcc2922b89bdb450ded32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a9f4a3845529bcc2922b89bdb450ded32">worksheet_split_panes</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, double vertical, double horizontal)</td></tr>
 <tr class="memdesc:a9f4a3845529bcc2922b89bdb450ded32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a worksheet into panes.  <br /></td></tr>
 <tr class="separator:a9f4a3845529bcc2922b89bdb450ded32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62368aa313184d72a9ca2b1cf5de9a8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col)</td></tr>
-<tr class="memdesc:a62368aa313184d72a9ca2b1cf5de9a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the selected cell or cells in a worksheet:  <br /></td></tr>
-<tr class="separator:a62368aa313184d72a9ca2b1cf5de9a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3ad4323d1e1c11d2107ec3b92d7745e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#ab3ad4323d1e1c11d2107ec3b92d7745e">worksheet_set_selection</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> first_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> first_col, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> last_row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> last_col)</td></tr>
+<tr class="memdesc:ab3ad4323d1e1c11d2107ec3b92d7745e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the selected cell or cells in a worksheet:  <br /></td></tr>
+<tr class="separator:ab3ad4323d1e1c11d2107ec3b92d7745e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c78541a64360c4c8141acebf59679a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="worksheet_8h.html#a4c78541a64360c4c8141acebf59679a1">worksheet_set_top_left_cell</a> (<a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col)</td></tr>
 <tr class="memdesc:a4c78541a64360c4c8141acebf59679a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the first visible cell at the top left of a worksheet.  <br /></td></tr>
 <tr class="separator:a4c78541a64360c4c8141acebf59679a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -514,7 +526,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><div class="image">
 <img src="write_string03.png" alt=""/>
 </div>
- <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a10">autofilter.c</a>, <a class="el" href="chart_area_8c-example.html#a2">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a2">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#a2">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#a2">chart_column.c</a>, <a class="el" href="chart_data_labels_8c-example.html#a9">chart_data_labels.c</a>, <a class="el" href="chart_data_table_8c-example.html#a2">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a2">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a2">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a2">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a8">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a2">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a2">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a2">chart_scatter.c</a>, <a class="el" href="chartsheet_8c-example.html#a2">chartsheet.c</a>, <a class="el" href="comments1_8c-example.html#a4">comments1.c</a>, <a class="el" href="comments2_8c-example.html#a11">comments2.c</a>, <a class="el" href="conditional_format2_8c-example.html#a10">conditional_format2.c</a>, <a class="el" href="data_validate_8c-example.html#a2">data_validate.c</a>, <a class="el" href="dates_and_times04_8c-example.html#a8">dates_and_times04.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="diagonal_border_8c-example.html#a14">diagonal_border.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a10">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a8">doc_properties.c</a>, <a class="el" href="dynamic_arrays_8c-example.html#a10">dynamic_arrays.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a4">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a5">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="ignore_errors_8c-example.html#a4">ignore_errors.c</a>, <a class="el" href="images_8c-example.html#a6">images.c</a>, <a class="el" href="macro_8c-example.html#a7">macro.c</a>, <a class="el" href="outline_8c-example.html#a13">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a4">outline_collapsed.c</a>, <a class="el" href="output_buffer_8c-example.html#a7">output_buffer.c</a>, <a class="el" href="panes_8c-example.html#a17">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a7">tab_colors.c</a>, <a class="el" href="tables_8c-example.html#a9">tables.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a10">worksheet_protection.c</a>.</dd>
+ <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="anatomy_8c-example.html#a9">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a10">autofilter.c</a>, <a class="el" href="chart_area_8c-example.html#a2">chart_area.c</a>, <a class="el" href="chart_bar_8c-example.html#a2">chart_bar.c</a>, <a class="el" href="chart_clustered_8c-example.html#a2">chart_clustered.c</a>, <a class="el" href="chart_column_8c-example.html#a2">chart_column.c</a>, <a class="el" href="chart_data_labels_8c-example.html#a9">chart_data_labels.c</a>, <a class="el" href="chart_data_table_8c-example.html#a2">chart_data_table.c</a>, <a class="el" href="chart_data_tools_8c-example.html#a2">chart_data_tools.c</a>, <a class="el" href="chart_doughnut_8c-example.html#a2">chart_doughnut.c</a>, <a class="el" href="chart_line_8c-example.html#a2">chart_line.c</a>, <a class="el" href="chart_pattern_8c-example.html#a8">chart_pattern.c</a>, <a class="el" href="chart_pie_8c-example.html#a2">chart_pie.c</a>, <a class="el" href="chart_radar_8c-example.html#a2">chart_radar.c</a>, <a class="el" href="chart_scatter_8c-example.html#a2">chart_scatter.c</a>, <a class="el" href="chartsheet_8c-example.html#a2">chartsheet.c</a>, <a class="el" href="comments1_8c-example.html#a4">comments1.c</a>, <a class="el" href="comments2_8c-example.html#a11">comments2.c</a>, <a class="el" href="conditional_format2_8c-example.html#a10">conditional_format2.c</a>, <a class="el" href="data_validate_8c-example.html#a2">data_validate.c</a>, <a class="el" href="dates_and_times04_8c-example.html#a8">dates_and_times04.c</a>, <a class="el" href="defined_name_8c-example.html#a7">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a8">demo.c</a>, <a class="el" href="diagonal_border_8c-example.html#a14">diagonal_border.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a10">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a8">doc_properties.c</a>, <a class="el" href="dynamic_arrays_8c-example.html#a10">dynamic_arrays.c</a>, <a class="el" href="embed_images_8c-example.html#a6">embed_images.c</a>, <a class="el" href="format_font_8c-example.html#a9">format_font.c</a>, <a class="el" href="headers_footers_8c-example.html#a7">headers_footers.c</a>, <a class="el" href="hello_8c-example.html#a4">hello.c</a>, <a class="el" href="hide_row_col_8c-example.html#a4">hide_row_col.c</a>, <a class="el" href="hide_sheet_8c-example.html#a5">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a13">hyperlinks.c</a>, <a class="el" href="ignore_errors_8c-example.html#a4">ignore_errors.c</a>, <a class="el" href="images_8c-example.html#a6">images.c</a>, <a class="el" href="macro_8c-example.html#a7">macro.c</a>, <a class="el" href="outline_8c-example.html#a13">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a4">outline_collapsed.c</a>, <a class="el" href="output_buffer_8c-example.html#a7">output_buffer.c</a>, <a class="el" href="panes_8c-example.html#a17">panes.c</a>, <a class="el" href="tab_colors_8c-example.html#a7">tab_colors.c</a>, <a class="el" href="tables_8c-example.html#a9">tables.c</a>, <a class="el" href="tutorial1_8c-example.html#a4">tutorial1.c</a>, <a class="el" href="tutorial2_8c-example.html#a8">tutorial2.c</a>, <a class="el" href="tutorial3_8c-example.html#a11">tutorial3.c</a>, <a class="el" href="utf8_8c-example.html#a4">utf8.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a10">worksheet_protection.c</a>.</dd>
 </dl>
 
 </div>
@@ -915,7 +927,7 @@ Functions</h2></td></tr>
 <div class="line">    <span class="comment">/* Add a format with date formatting. */</span></div>
 <div class="line">    <a class="code hl_struct" href="structlxw__format.html">lxw_format</a>    *format    = <a class="code hl_function" href="workbook_8h.html#aa3505daef8fb288585c56ae597493ae6">workbook_add_format</a>(workbook);</div>
 <div class="line">    <a class="code hl_function" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a>(format, <span class="stringliteral">&quot;mmm d yyyy hh:mm AM/PM&quot;</span>);</div>
-<div class="ttc" id="astructlxw__datetime_html"><div class="ttname"><a href="structlxw__datetime.html">lxw_datetime</a></div><div class="ttdoc">Struct to represent a date and time in Excel.</div><div class="ttdef"><b>Definition:</b> common.h:156</div></div>
+<div class="ttc" id="astructlxw__datetime_html"><div class="ttname"><a href="structlxw__datetime.html">lxw_datetime</a></div><div class="ttdoc">Struct to represent a date and time in Excel.</div><div class="ttdef"><b>Definition:</b> common.h:159</div></div>
 <div class="line">    <a class="code hl_function" href="worksheet_8h.html#afb0b3211160927a3412be28c9364b1b5">worksheet_write_datetime</a>(worksheet, 1, 0, &amp;datetime, format);  <span class="comment">// Feb 28 2013 12:00 PM</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
@@ -1455,8 +1467,8 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a62bf44845ce9dcc505bf228999db5afa">worksheet_write_rich_string</a>(worksheet, <a class="code hl_define" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;A1&quot;</span>), rich_string1, NULL);</div>
 <div class="ttc" id="aformat_8h_html_a19cbd7c34692eb7fb35a7411432d836e"><div class="ttname"><a href="format_8h.html#a19cbd7c34692eb7fb35a7411432d836e">format_set_italic</a></div><div class="ttdeci">void format_set_italic(lxw_format *format)</div><div class="ttdoc">Turn on italic for the format font.</div></div>
-<div class="ttc" id="astructlxw__rich__string__tuple_html"><div class="ttname"><a href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a></div><div class="ttdoc">Struct to represent a rich string format/string pair.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2091</div></div>
-<div class="ttc" id="astructlxw__rich__string__tuple_html_a331030005bc187f49a855a7ccb749052"><div class="ttname"><a href="structlxw__rich__string__tuple.html#a331030005bc187f49a855a7ccb749052">lxw_rich_string_tuple::format</a></div><div class="ttdeci">lxw_format * format</div><div class="ttdef"><b>Definition:</b> worksheet.h:2095</div></div>
+<div class="ttc" id="astructlxw__rich__string__tuple_html"><div class="ttname"><a href="structlxw__rich__string__tuple.html">lxw_rich_string_tuple</a></div><div class="ttdoc">Struct to represent a rich string format/string pair.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2098</div></div>
+<div class="ttc" id="astructlxw__rich__string__tuple_html_a331030005bc187f49a855a7ccb749052"><div class="ttname"><a href="structlxw__rich__string__tuple.html#a331030005bc187f49a855a7ccb749052">lxw_rich_string_tuple::format</a></div><div class="ttdeci">lxw_format * format</div><div class="ttdef"><b>Definition:</b> worksheet.h:2102</div></div>
 <div class="ttc" id="autility_8h_html_ad510ac6df573d23203374e24dba373d2"><div class="ttname"><a href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a></div><div class="ttdeci">#define CELL(cell)</div><div class="ttdoc">Convert an Excel A1 cell string into a (row, col) pair.</div><div class="ttdef"><b>Definition:</b> utility.h:46</div></div>
 <div class="ttc" id="aworksheet_8h_html_a62bf44845ce9dcc505bf228999db5afa"><div class="ttname"><a href="worksheet_8h.html#a62bf44845ce9dcc505bf228999db5afa">worksheet_write_rich_string</a></div><div class="ttdeci">lxw_error worksheet_write_rich_string(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, lxw_rich_string_tuple *rich_string[], lxw_format *format)</div><div class="ttdoc">Write a &quot;Rich&quot; multi-format string to a worksheet cell.</div></div>
 </div><!-- fragment --><div class="image">
@@ -1599,8 +1611,8 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="structlxw__comment__options.html">lxw_comment_options</a> options = {.<a class="code hl_variable" href="structlxw__comment__options.html#a3a3399ada29d05d2e7702e881fbe3ccb">visible</a> = <a class="code hl_enumvalue" href="worksheet_8h.html#aad352c6cf9a5359d4cda51839a91c7d2a3d78b49cb38d25b6d5473a1c0112404d">LXW_COMMENT_DISPLAY_VISIBLE</a>};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a158dadac385cd1007994e5478b7b2aa7">worksheet_write_comment_opt</a>(worksheet, <a class="code hl_define" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;C6&quot;</span>), <span class="stringliteral">&quot;Hello.&quot;</span>, &amp;options);</div>
-<div class="ttc" id="astructlxw__comment__options_html"><div class="ttname"><a href="structlxw__comment__options.html">lxw_comment_options</a></div><div class="ttdoc">Options for inserted comments.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1820</div></div>
-<div class="ttc" id="astructlxw__comment__options_html_a3a3399ada29d05d2e7702e881fbe3ccb"><div class="ttname"><a href="structlxw__comment__options.html#a3a3399ada29d05d2e7702e881fbe3ccb">lxw_comment_options::visible</a></div><div class="ttdeci">uint8_t visible</div><div class="ttdef"><b>Definition:</b> worksheet.h:1829</div></div>
+<div class="ttc" id="astructlxw__comment__options_html"><div class="ttname"><a href="structlxw__comment__options.html">lxw_comment_options</a></div><div class="ttdoc">Options for inserted comments.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1827</div></div>
+<div class="ttc" id="astructlxw__comment__options_html_a3a3399ada29d05d2e7702e881fbe3ccb"><div class="ttname"><a href="structlxw__comment__options.html#a3a3399ada29d05d2e7702e881fbe3ccb">lxw_comment_options::visible</a></div><div class="ttdeci">uint8_t visible</div><div class="ttdef"><b>Definition:</b> worksheet.h:1836</div></div>
 <div class="ttc" id="aworksheet_8h_html_a158dadac385cd1007994e5478b7b2aa7"><div class="ttname"><a href="worksheet_8h.html#a158dadac385cd1007994e5478b7b2aa7">worksheet_write_comment_opt</a></div><div class="ttdeci">lxw_error worksheet_write_comment_opt(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *string, lxw_comment_options *options)</div><div class="ttdoc">Write a comment to a worksheet cell with options.</div></div>
 <div class="ttc" id="aworksheet_8h_html_aad352c6cf9a5359d4cda51839a91c7d2a3d78b49cb38d25b6d5473a1c0112404d"><div class="ttname"><a href="worksheet_8h.html#aad352c6cf9a5359d4cda51839a91c7d2a3d78b49cb38d25b6d5473a1c0112404d">LXW_COMMENT_DISPLAY_VISIBLE</a></div><div class="ttdeci">@ LXW_COMMENT_DISPLAY_VISIBLE</div><div class="ttdef"><b>Definition:</b> worksheet.h:225</div></div>
 </div><!-- fragment --><p>The following options are available in <a class="el" href="structlxw__comment__options.html" title="Options for inserted comments.">lxw_comment_options</a>:</p>
@@ -1699,7 +1711,7 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Cell B1 in Row 1 keeps format2.</span></div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 1, <span class="stringliteral">&quot;Hello&quot;</span>, format2);</div>
-</div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="autofilter_8c-example.html#a29">autofilter.c</a>, <a class="el" href="comments2_8c-example.html#a10">comments2.c</a>, <a class="el" href="data_validate_8c-example.html#a20">data_validate.c</a>, <a class="el" href="hide_row_col_8c-example.html#a7">hide_row_col.c</a>, <a class="el" href="merge_range_8c-example.html#a15">merge_range.c</a>, <a class="el" href="outline_8c-example.html#a17">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a17">outline_collapsed.c</a>, and <a class="el" href="panes_8c-example.html#a15">panes.c</a>.</dd>
+</div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="autofilter_8c-example.html#a29">autofilter.c</a>, <a class="el" href="comments2_8c-example.html#a10">comments2.c</a>, <a class="el" href="data_validate_8c-example.html#a20">data_validate.c</a>, <a class="el" href="embed_images_8c-example.html#a9">embed_images.c</a>, <a class="el" href="hide_row_col_8c-example.html#a7">hide_row_col.c</a>, <a class="el" href="merge_range_8c-example.html#a15">merge_range.c</a>, <a class="el" href="outline_8c-example.html#a17">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a17">outline_collapsed.c</a>, and <a class="el" href="panes_8c-example.html#a15">panes.c</a>.</dd>
 </dl>
 
 </div>
@@ -1771,8 +1783,8 @@ Functions</h2></td></tr>
 <div class="line"><span class="comment">// Hide the fourth and fifth (zero indexed) rows.</span></div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807">worksheet_set_row_opt</a>(worksheet, 3,  <a class="code hl_define" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>, NULL, &amp;options1);</div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807">worksheet_set_row_opt</a>(worksheet, 4,  <a class="code hl_define" href="worksheet_8h.html#a8901b9706d1c48c28c97e95b452a927a">LXW_DEF_ROW_HEIGHT</a>, NULL, &amp;options1);</div>
-<div class="ttc" id="astructlxw__row__col__options_html"><div class="ttname"><a href="structlxw__row__col__options.html">lxw_row_col_options</a></div><div class="ttdoc">Options for rows and columns.</div><div class="ttdef"><b>Definition:</b> worksheet.h:840</div></div>
-<div class="ttc" id="astructlxw__row__col__options_html_a0e46063d954292f4018ecb91621b7562"><div class="ttname"><a href="structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562">lxw_row_col_options::hidden</a></div><div class="ttdeci">uint8_t hidden</div><div class="ttdef"><b>Definition:</b> worksheet.h:842</div></div>
+<div class="ttc" id="astructlxw__row__col__options_html"><div class="ttname"><a href="structlxw__row__col__options.html">lxw_row_col_options</a></div><div class="ttdoc">Options for rows and columns.</div><div class="ttdef"><b>Definition:</b> worksheet.h:842</div></div>
+<div class="ttc" id="astructlxw__row__col__options_html_a0e46063d954292f4018ecb91621b7562"><div class="ttname"><a href="structlxw__row__col__options.html#a0e46063d954292f4018ecb91621b7562">lxw_row_col_options::hidden</a></div><div class="ttdeci">uint8_t hidden</div><div class="ttdef"><b>Definition:</b> worksheet.h:844</div></div>
 <div class="ttc" id="aworksheet_8h_html_abbc2de45e0aa84341fb10a98778b3807"><div class="ttname"><a href="worksheet_8h.html#abbc2de45e0aa84341fb10a98778b3807">worksheet_set_row_opt</a></div><div class="ttdeci">lxw_error worksheet_set_row_opt(lxw_worksheet *worksheet, lxw_row_t row, double height, lxw_format *format, lxw_row_col_options *options)</div><div class="ttdoc">Set the properties for a row of cells.</div></div>
 </div><!-- fragment --><div class="image">
 <img src="hide_row_col2.png" alt=""/>
@@ -2015,7 +2027,7 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Cell A2 keeps format2, the column format.</span></div>
 <div class="line"> <a class="code hl_function" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 1, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
-</div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a28">autofilter.c</a>, <a class="el" href="comments2_8c-example.html#a9">comments2.c</a>, <a class="el" href="data_validate_8c-example.html#a19">data_validate.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a7">dates_and_times03.c</a>, <a class="el" href="dates_and_times04_8c-example.html#a9">dates_and_times04.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a9">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a7">doc_properties.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="hide_sheet_8c-example.html#a6">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a11">hyperlinks.c</a>, <a class="el" href="ignore_errors_8c-example.html#a10">ignore_errors.c</a>, <a class="el" href="images_8c-example.html#a4">images.c</a>, <a class="el" href="macro_8c-example.html#a4">macro.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, <a class="el" href="outline_8c-example.html#a9">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a2">outline_collapsed.c</a>, <a class="el" href="panes_8c-example.html#a14">panes.c</a>, <a class="el" href="rich_strings_8c-example.html#a15">rich_strings.c</a>, <a class="el" href="tables_8c-example.html#a7">tables.c</a>, <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a8">worksheet_protection.c</a>.</dd>
+</div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="anatomy_8c-example.html#a8">anatomy.c</a>, <a class="el" href="autofilter_8c-example.html#a28">autofilter.c</a>, <a class="el" href="comments2_8c-example.html#a9">comments2.c</a>, <a class="el" href="data_validate_8c-example.html#a19">data_validate.c</a>, <a class="el" href="dates_and_times01_8c-example.html#a7">dates_and_times01.c</a>, <a class="el" href="dates_and_times02_8c-example.html#a8">dates_and_times02.c</a>, <a class="el" href="dates_and_times03_8c-example.html#a7">dates_and_times03.c</a>, <a class="el" href="dates_and_times04_8c-example.html#a9">dates_and_times04.c</a>, <a class="el" href="defined_name_8c-example.html#a6">defined_name.c</a>, <a class="el" href="demo_8c-example.html#a7">demo.c</a>, <a class="el" href="doc_custom_properties_8c-example.html#a9">doc_custom_properties.c</a>, <a class="el" href="doc_properties_8c-example.html#a7">doc_properties.c</a>, <a class="el" href="embed_images_8c-example.html#a4">embed_images.c</a>, <a class="el" href="format_font_8c-example.html#a4">format_font.c</a>, <a class="el" href="format_num_format_8c-example.html#a4">format_num_format.c</a>, <a class="el" href="headers_footers_8c-example.html#a6">headers_footers.c</a>, <a class="el" href="hide_sheet_8c-example.html#a6">hide_sheet.c</a>, <a class="el" href="hyperlinks_8c-example.html#a11">hyperlinks.c</a>, <a class="el" href="ignore_errors_8c-example.html#a10">ignore_errors.c</a>, <a class="el" href="images_8c-example.html#a4">images.c</a>, <a class="el" href="macro_8c-example.html#a4">macro.c</a>, <a class="el" href="merge_range_8c-example.html#a14">merge_range.c</a>, <a class="el" href="outline_8c-example.html#a9">outline.c</a>, <a class="el" href="outline_collapsed_8c-example.html#a2">outline_collapsed.c</a>, <a class="el" href="panes_8c-example.html#a14">panes.c</a>, <a class="el" href="rich_strings_8c-example.html#a15">rich_strings.c</a>, <a class="el" href="tables_8c-example.html#a7">tables.c</a>, <a class="el" href="tutorial3_8c-example.html#a10">tutorial3.c</a>, and <a class="el" href="worksheet_protection_8c-example.html#a8">worksheet_protection.c</a>.</dd>
 </dl>
 
 </div>
@@ -2294,6 +2306,7 @@ Functions</h2></td></tr>
 </div>
 <p>The <code><a class="el" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b" title="Insert an image in a worksheet cell, with options.">worksheet_insert_image_opt()</a></code> function takes additional optional parameters to position and scale the image, see below.</p>
 <p><b>Note</b>: The scaling of a image may be affected if is crosses a row that has its default height changed due to a font that is larger than the default font size or that has text wrapping turned on. To avoid this you should explicitly set the height of the row using <code><a class="el" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173" title="Set the properties for a row of cells.">worksheet_set_row()</a></code> if it crosses an inserted image. See <a class="el" href="working_with_object_positioning.html">Working with Object Positioning</a>.</p>
+<p><b>NOTE on SVG files</b>: Excel doesn't directly support SVG files in the same way as other image file formats. It allows SVG to be inserted into a worksheet but converts them to, and displays them as, PNG files. It stores the original SVG image in the file so the original format can be retrieved. This removes the file size and resolution advantage of using SVG files. As such SVG files are not supported by <code>libxlsxwriter</code> since a conversion to the PNG format would be required and that format is already supported.</p>
 <p>BMP images are only supported for backward compatibility. In general it is best to avoid BMP images since they aren't compressed. If used, BMP images must be 24 bit, true color, bitmaps. </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="demo_8c-example.html#a10">demo.c</a>, and <a class="el" href="images_8c-example.html#a8">images.c</a>.</dd>
 </dl>
@@ -2371,8 +2384,8 @@ Functions</h2></td></tr>
 <div class="line">                            .x_scale  = 0.5, .y_scale  = 0.5};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b">worksheet_insert_image_opt</a>(worksheet, 2, 1, <span class="stringliteral">&quot;logo.png&quot;</span>, &amp;options);</div>
-<div class="ttc" id="astructlxw__image__options_html"><div class="ttname"><a href="structlxw__image__options.html">lxw_image_options</a></div><div class="ttdoc">Options for inserted images.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1702</div></div>
-<div class="ttc" id="astructlxw__image__options_html_a7ef9c6980b8e66bcdfff18627250001c"><div class="ttname"><a href="structlxw__image__options.html#a7ef9c6980b8e66bcdfff18627250001c">lxw_image_options::x_offset</a></div><div class="ttdeci">int32_t x_offset</div><div class="ttdef"><b>Definition:</b> worksheet.h:1705</div></div>
+<div class="ttc" id="astructlxw__image__options_html"><div class="ttname"><a href="structlxw__image__options.html">lxw_image_options</a></div><div class="ttdoc">Options for inserted images.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1704</div></div>
+<div class="ttc" id="astructlxw__image__options_html_a7ef9c6980b8e66bcdfff18627250001c"><div class="ttname"><a href="structlxw__image__options.html#a7ef9c6980b8e66bcdfff18627250001c">lxw_image_options::x_offset</a></div><div class="ttdeci">int32_t x_offset</div><div class="ttdef"><b>Definition:</b> worksheet.h:1707</div></div>
 <div class="ttc" id="aworksheet_8h_html_a0b05e75e2c2a5c3452374714cdb2b79b"><div class="ttname"><a href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b">worksheet_insert_image_opt</a></div><div class="ttdeci">lxw_error worksheet_insert_image_opt(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *filename, lxw_image_options *options)</div><div class="ttdoc">Insert an image in a worksheet cell, with options.</div></div>
 </div><!-- fragment --><div class="image">
 <img src="insert_image_opt.png" alt=""/>
@@ -2381,7 +2394,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="structlxw__image__options.html">lxw_image_options</a> options = {.<a class="code hl_variable" href="structlxw__image__options.html#ac6c54eb3cf685f3ba45c4d39b98577f4">url</a> = <span class="stringliteral">&quot;https://github.com/jmcnamara&quot;</span>};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b">worksheet_insert_image_opt</a>(worksheet, 3, 1, <span class="stringliteral">&quot;logo.png&quot;</span>, &amp;options);</div>
-<div class="ttc" id="astructlxw__image__options_html_ac6c54eb3cf685f3ba45c4d39b98577f4"><div class="ttname"><a href="structlxw__image__options.html#ac6c54eb3cf685f3ba45c4d39b98577f4">lxw_image_options::url</a></div><div class="ttdeci">const char * url</div><div class="ttdef"><b>Definition:</b> worksheet.h:1734</div></div>
+<div class="ttc" id="astructlxw__image__options_html_ac6c54eb3cf685f3ba45c4d39b98577f4"><div class="ttname"><a href="structlxw__image__options.html#ac6c54eb3cf685f3ba45c4d39b98577f4">lxw_image_options::url</a></div><div class="ttdeci">const char * url</div><div class="ttdef"><b>Definition:</b> worksheet.h:1736</div></div>
 </div><!-- fragment --><p>The supported URL formats are the same as those supported by the <code><a class="el" href="worksheet_8h.html#a9b2ac96ee23574a432f5703eedcaf9a1">worksheet_write_url()</a></code> method and the same rules/limits apply.</p>
 <p>The <code>tip</code> field of <a class="el" href="structlxw__image__options.html" title="Options for inserted images.">lxw_image_options</a> can be use to used to add a mouseover tip to the hyperlink:</p>
 <div class="fragment"><div class="line"> <a class="code hl_struct" href="structlxw__image__options.html">lxw_image_options</a> options = {.<a class="code hl_variable" href="structlxw__image__options.html#ac6c54eb3cf685f3ba45c4d39b98577f4">url</a> = <span class="stringliteral">&quot;https://github.com/jmcnamara&quot;</span>,</div>
@@ -2522,7 +2535,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions.">lxw_error</a> code.</dd></dl>
-<p>The <code>worksheet_insert_image_buffer_opt()</code> function is like <code><a class="el" href="worksheet_8h.html#aebd5cc71a42ab0e4a9ce45fe9a6f6908" title="Insert an image in a worksheet cell, from a memory buffer.">worksheet_insert_image_buffer()</a></code> function except that it takes an optional <a class="el" href="structlxw__image__options.html" title="Options for inserted images.">lxw_image_options</a> struct * <a class="el" href="structlxw__image__options.html" title="Options for inserted images.">lxw_image_options</a> struct with the following members/options:</p>
+<p>The <code>worksheet_insert_image_buffer_opt()</code> function is like <code><a class="el" href="worksheet_8h.html#aebd5cc71a42ab0e4a9ce45fe9a6f6908" title="Insert an image in a worksheet cell, from a memory buffer.">worksheet_insert_image_buffer()</a></code> function except that it takes an optional <a class="el" href="structlxw__image__options.html" title="Options for inserted images.">lxw_image_options</a> struct with the following members/options:</p>
 <ul>
 <li><code>x_offset</code>: Offset from the left of the cell in pixels.</li>
 <li><code>y_offset</code>: Offset from the top of the cell in pixels.</li>
@@ -2547,6 +2560,284 @@ Functions</h2></td></tr>
 <p>See <code><a class="el" href="worksheet_8h.html#af4c868a5cf0eaab8740c1f966ba5561c" title="Insert an image in a worksheet cell, from a memory buffer.">worksheet_insert_image_buffer_opt()</a></code> for details about the supported image formats, and other image options. </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="image_buffer_8c-example.html#a8">image_buffer.c</a>.</dd>
 </dl>
+
+</div>
+</div>
+<a id="afaf00521027cd79c6d7d93537848b283" name="afaf00521027cd79c6d7d93537848b283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf00521027cd79c6d7d93537848b283">&#9670;&#160;</a></span>worksheet_embed_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_embed_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet.">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
+    <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
+    <tr><td class="paramname">filename</td><td>The image filename, with path if required.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions.">lxw_error</a> code.</dd></dl>
+<p>This function can be used to embed a image into a worksheet cell and have the image automatically scale to the width and height of the cell. The X/Y scaling of the image is preserved but the size of the image is adjusted to fit the largest possible width or height depending on the cell dimensions.</p>
+<p>This is the equivalent of Excel's menu option to insert an image using the option to "Place in Cell" which is only available in Excel 365 versions from 2023 onwards. For older versions of Excel a <code>#VALUE!</code> error is displayed.</p>
+ <div class="fragment"><div class="line">    <span class="comment">/* Change some of the column widths for clarity. */</span></div>
+<div class="line">    <a class="code hl_function" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, <a class="code hl_define" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:B&quot;</span>), 30, NULL);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* Embed an image. */</span></div>
+<div class="line">    <a class="code hl_function" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, <a class="code hl_define" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;A2&quot;</span>), <span class="stringliteral">&quot;Embed an image in a cell:&quot;</span>, NULL);</div>
+<div class="line">    <a class="code hl_function" href="worksheet_8h.html#afaf00521027cd79c6d7d93537848b283">worksheet_embed_image</a>(worksheet, <a class="code hl_define" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;B2&quot;</span>), <span class="stringliteral">&quot;logo.png&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* Make a row bigger and embed the image. */</span></div>
+<div class="line">    <a class="code hl_function" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a>(worksheet, 3, 72, NULL);</div>
+<div class="line">    <a class="code hl_function" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, <a class="code hl_define" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;A4&quot;</span>), <span class="stringliteral">&quot;Embed an image in a cell:&quot;</span>, NULL);</div>
+<div class="line">    <a class="code hl_function" href="worksheet_8h.html#afaf00521027cd79c6d7d93537848b283">worksheet_embed_image</a>(worksheet, <a class="code hl_define" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;B4&quot;</span>), <span class="stringliteral">&quot;logo.png&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* Make a row bigger and embed the image. */</span></div>
+<div class="line">    <a class="code hl_function" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a>(worksheet, 5, 150, NULL);</div>
+<div class="line">    <a class="code hl_function" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, <a class="code hl_define" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;A6&quot;</span>), <span class="stringliteral">&quot;Embed an image in a cell:&quot;</span>, NULL);</div>
+<div class="line">    <a class="code hl_function" href="worksheet_8h.html#afaf00521027cd79c6d7d93537848b283">worksheet_embed_image</a>(worksheet, <a class="code hl_define" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;B6&quot;</span>), <span class="stringliteral">&quot;logo.png&quot;</span>);</div>
+<div class="ttc" id="aworksheet_8h_html_afaf00521027cd79c6d7d93537848b283"><div class="ttname"><a href="worksheet_8h.html#afaf00521027cd79c6d7d93537848b283">worksheet_embed_image</a></div><div class="ttdeci">lxw_error worksheet_embed_image(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *filename)</div><div class="ttdoc">Embed an image in a worksheet cell.</div></div>
+</div><!-- fragment --> <div class="image">
+<img src="embed_image.png" alt=""/>
+</div>
+<p>The <code><a class="el" href="worksheet_8h.html#af02d8d80c5322da6a2178913aeda2c1f" title="Embed an image in a worksheet cell, with options.">worksheet_embed_image_opt()</a></code> function takes additional optional parameters to add urls or format the cell background, see below. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="embed_images_8c-example.html#a8">embed_images.c</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="af02d8d80c5322da6a2178913aeda2c1f" name="af02d8d80c5322da6a2178913aeda2c1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af02d8d80c5322da6a2178913aeda2c1f">&#9670;&#160;</a></span>worksheet_embed_image_opt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_embed_image_opt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__image__options.html">lxw_image_options</a> *&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet.">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
+    <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
+    <tr><td class="paramname">filename</td><td>The image filename, with path if required. </td></tr>
+    <tr><td class="paramname">options</td><td>Optional image parameters.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions.">lxw_error</a> code.</dd></dl>
+<p>The <code>worksheet_embed_image_opt()</code> function is like <code><a class="el" href="worksheet_8h.html#afaf00521027cd79c6d7d93537848b283" title="Embed an image in a worksheet cell.">worksheet_embed_image()</a></code> function except that it takes an optional <a class="el" href="structlxw__image__options.html" title="Options for inserted images.">lxw_image_options</a> struct with the following members/options:</p>
+<ul>
+<li><code>description</code>: Optional description or "Alt text" for the image.</li>
+<li><code>decorative</code>: Optional parameter to mark image as decorative.</li>
+<li><code>url</code>: Add an optional hyperlink to the image.</li>
+<li><code>cell_format</code>: Add a format for the cell behind the embedded image. </li>
+</ul>
+
+</div>
+</div>
+<a id="ade488e5f777f02ea8b0afd25a19617ac" name="ade488e5f777f02ea8b0afd25a19617ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade488e5f777f02ea8b0afd25a19617ac">&#9670;&#160;</a></span>worksheet_embed_image_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_embed_image_buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>image_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>image_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet.">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
+    <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
+    <tr><td class="paramname">image_buffer</td><td>Pointer to an array of bytes that holds the image data. </td></tr>
+    <tr><td class="paramname">image_size</td><td>The size of the array of bytes.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions.">lxw_error</a> code.</dd></dl>
+<p>This function can be used to embed a image into a worksheet from a memory buffer:</p>
+ <div class="fragment"><div class="line">    <span class="comment">/* Embed the image from the buffer. */</span></div>
+<div class="line">    <a class="code hl_function" href="worksheet_8h.html#ade488e5f777f02ea8b0afd25a19617ac">worksheet_embed_image_buffer</a>(worksheet, <a class="code hl_define" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;B3&quot;</span>), image_buffer, image_size);</div>
+<div class="ttc" id="aworksheet_8h_html_ade488e5f777f02ea8b0afd25a19617ac"><div class="ttname"><a href="worksheet_8h.html#ade488e5f777f02ea8b0afd25a19617ac">worksheet_embed_image_buffer</a></div><div class="ttdeci">lxw_error worksheet_embed_image_buffer(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const unsigned char *image_buffer, size_t image_size)</div><div class="ttdoc">Embed an image in a worksheet cell, from a memory buffer.</div></div>
+</div><!-- fragment --> <div class="image">
+<img src="embed_image_buffer.png" alt=""/>
+</div>
+<p>The buffer should be a pointer to an array of unsigned char data with a specified size.</p>
+<p>See <code><a class="el" href="worksheet_8h.html#afaf00521027cd79c6d7d93537848b283" title="Embed an image in a worksheet cell.">worksheet_embed_image()</a></code> for details about the supported image formats, and other image features. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="embed_image_buffer_8c-example.html#a4">embed_image_buffer.c</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a00cb1904c81e93878d9cf7360e7fa856" name="a00cb1904c81e93878d9cf7360e7fa856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00cb1904c81e93878d9cf7360e7fa856">&#9670;&#160;</a></span>worksheet_embed_image_buffer_opt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_embed_image_buffer_opt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
+          <td class="paramname"><em>worksheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a>&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a>&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>image_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>image_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__image__options.html">lxw_image_options</a> *&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worksheet</td><td>Pointer to a <a class="el" href="structlxw__worksheet.html" title="Struct to represent an Excel worksheet.">lxw_worksheet</a> instance to be updated. </td></tr>
+    <tr><td class="paramname">row</td><td>The zero indexed row number. </td></tr>
+    <tr><td class="paramname">col</td><td>The zero indexed column number. </td></tr>
+    <tr><td class="paramname">image_buffer</td><td>Pointer to an array of bytes that holds the image data. </td></tr>
+    <tr><td class="paramname">image_size</td><td>The size of the array of bytes. </td></tr>
+    <tr><td class="paramname">options</td><td>Optional image parameters.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions.">lxw_error</a> code.</dd></dl>
+<p>The <code>worksheet_embed_image_buffer_opt()</code> function is like <code><a class="el" href="worksheet_8h.html#ade488e5f777f02ea8b0afd25a19617ac" title="Embed an image in a worksheet cell, from a memory buffer.">worksheet_embed_image_buffer()</a></code> function except that it takes an optional <a class="el" href="structlxw__image__options.html" title="Options for inserted images.">lxw_image_options</a> struct with the following members/options:</p>
+<ul>
+<li><code>description</code>: Optional description or "Alt text" for the image.</li>
+<li><code>decorative</code>: Optional parameter to mark image as decorative.</li>
+<li><code>url</code>: Add an optional hyperlink to the image.</li>
+<li><code>cell_format</code>: Add a format for the cell behind the embedded image. </li>
+</ul>
 
 </div>
 </div>
@@ -2593,8 +2884,8 @@ Functions</h2></td></tr>
 <p>Some people use this method to add a watermark background to their document. However, Microsoft recommends using a header image <a href="https://support.microsoft.com/en-us/office/add-a-watermark-in-excel-a372182a-d733-484e-825c-18ddf3edf009">to set a watermark</a>. The choice of method depends on whether you want the watermark to be visible in normal viewing mode or just when the file is printed. In libxlsxwriter you can get the header watermark effect using <code><a class="el" href="worksheet_8h.html#a4070c24ed5107f33e94f30a1bf865ba9" title="Set the printed page header caption.">worksheet_set_header()</a></code>:</p>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="structlxw__header__footer__options.html">lxw_header_footer_options</a> header_options = {.<a class="code hl_variable" href="structlxw__header__footer__options.html#a3e39e1bd3baa82f2db7e779aeb233ea0">image_center</a> = <span class="stringliteral">&quot;watermark.png&quot;</span>};</div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac">worksheet_set_header_opt</a>(worksheet, <span class="stringliteral">&quot;&amp;C&amp;G&quot;</span>, &amp;header_options);</div>
-<div class="ttc" id="astructlxw__header__footer__options_html"><div class="ttname"><a href="structlxw__header__footer__options.html">lxw_header_footer_options</a></div><div class="ttdoc">Header and footer options.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1979</div></div>
-<div class="ttc" id="astructlxw__header__footer__options_html_a3e39e1bd3baa82f2db7e779aeb233ea0"><div class="ttname"><a href="structlxw__header__footer__options.html#a3e39e1bd3baa82f2db7e779aeb233ea0">lxw_header_footer_options::image_center</a></div><div class="ttdeci">const char * image_center</div><div class="ttdef"><b>Definition:</b> worksheet.h:1992</div></div>
+<div class="ttc" id="astructlxw__header__footer__options_html"><div class="ttname"><a href="structlxw__header__footer__options.html">lxw_header_footer_options</a></div><div class="ttdoc">Header and footer options.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1986</div></div>
+<div class="ttc" id="astructlxw__header__footer__options_html_a3e39e1bd3baa82f2db7e779aeb233ea0"><div class="ttname"><a href="structlxw__header__footer__options.html#a3e39e1bd3baa82f2db7e779aeb233ea0">lxw_header_footer_options::image_center</a></div><div class="ttdeci">const char * image_center</div><div class="ttdef"><b>Definition:</b> worksheet.h:1999</div></div>
 <div class="ttc" id="aworksheet_8h_html_ab913a06656ecf28292d6b21d3c3eaaac"><div class="ttname"><a href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac">worksheet_set_header_opt</a></div><div class="ttdeci">lxw_error worksheet_set_header_opt(lxw_worksheet *worksheet, const char *string, lxw_header_footer_options *options)</div><div class="ttdoc">Set the printed page header caption with additional options.</div></div>
 </div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="background_8c-example.html#a4">background.c</a>.</dd>
 </dl>
@@ -2779,8 +3070,8 @@ Functions</h2></td></tr>
 <div class="line">                             .x_scale  = 0.5, .y_scale  = 0.75};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a4e8ea2614bc214fa0cc8992733c51f5f">worksheet_insert_chart_opt</a>(worksheet, 0, 2, chart, &amp;options);</div>
-<div class="ttc" id="astructlxw__chart__options_html"><div class="ttname"><a href="structlxw__chart__options.html">lxw_chart_options</a></div><div class="ttdoc">Options for inserted charts.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1747</div></div>
-<div class="ttc" id="astructlxw__chart__options_html_a1bad76e66248d60d07a26e9bb963232f"><div class="ttname"><a href="structlxw__chart__options.html#a1bad76e66248d60d07a26e9bb963232f">lxw_chart_options::x_offset</a></div><div class="ttdeci">int32_t x_offset</div><div class="ttdef"><b>Definition:</b> worksheet.h:1750</div></div>
+<div class="ttc" id="astructlxw__chart__options_html"><div class="ttname"><a href="structlxw__chart__options.html">lxw_chart_options</a></div><div class="ttdoc">Options for inserted charts.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1753</div></div>
+<div class="ttc" id="astructlxw__chart__options_html_a1bad76e66248d60d07a26e9bb963232f"><div class="ttname"><a href="structlxw__chart__options.html#a1bad76e66248d60d07a26e9bb963232f">lxw_chart_options::x_offset</a></div><div class="ttdeci">int32_t x_offset</div><div class="ttdef"><b>Definition:</b> worksheet.h:1756</div></div>
 <div class="ttc" id="aworksheet_8h_html_a4e8ea2614bc214fa0cc8992733c51f5f"><div class="ttname"><a href="worksheet_8h.html#a4e8ea2614bc214fa0cc8992733c51f5f">worksheet_insert_chart_opt</a></div><div class="ttdeci">lxw_error worksheet_insert_chart_opt(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, lxw_chart *chart, lxw_chart_options *user_options)</div><div class="ttdoc">Insert a chart object into a worksheet, with options.</div></div>
 </div><!-- fragment --><div class="image">
 <img src="chart_line_opt.png" alt=""/>
@@ -2949,7 +3240,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions.">lxw_error</a> code.</dd></dl>
 <p>The <code>worksheet_autofilter()</code> function allows an autofilter to be added to a worksheet.</p>
-<p>An autofilter is a way of adding drop down lists to the headers of a 2D range of worksheet data. This allows users to filter the data based on simple criteria so that some data is shown and some is hidden.</p>
+<p>An autofilter is a way of adding dropdown lists to the headers of a 2D range of worksheet data. This allows users to filter the data based on simple criteria so that some data is shown and some is hidden.</p>
 <div class="image">
 <img src="autofilter3.png" alt=""/>
 </div>
@@ -3019,8 +3310,8 @@ Functions</h2></td></tr>
 <div class="line">                                .value_string = <span class="stringliteral">&quot;East&quot;</span>};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a49ab41c3b3dc353aa1d50b772b94819d">worksheet_filter_column</a>(worksheet, 0, &amp;filter_rule);</div>
-<div class="ttc" id="astructlxw__filter__rule_html"><div class="ttname"><a href="structlxw__filter__rule.html">lxw_filter_rule</a></div><div class="ttdoc">Options for autofilter rules.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1664</div></div>
-<div class="ttc" id="astructlxw__filter__rule_html_a9287671eec2b7bc8bf37783d38f1f0e2"><div class="ttname"><a href="structlxw__filter__rule.html#a9287671eec2b7bc8bf37783d38f1f0e2">lxw_filter_rule::criteria</a></div><div class="ttdeci">uint8_t criteria</div><div class="ttdef"><b>Definition:</b> worksheet.h:1667</div></div>
+<div class="ttc" id="astructlxw__filter__rule_html"><div class="ttname"><a href="structlxw__filter__rule.html">lxw_filter_rule</a></div><div class="ttdoc">Options for autofilter rules.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1666</div></div>
+<div class="ttc" id="astructlxw__filter__rule_html_a9287671eec2b7bc8bf37783d38f1f0e2"><div class="ttname"><a href="structlxw__filter__rule.html#a9287671eec2b7bc8bf37783d38f1f0e2">lxw_filter_rule::criteria</a></div><div class="ttdeci">uint8_t criteria</div><div class="ttdef"><b>Definition:</b> worksheet.h:1669</div></div>
 <div class="ttc" id="aworksheet_8h_html_a49ab41c3b3dc353aa1d50b772b94819d"><div class="ttname"><a href="worksheet_8h.html#a49ab41c3b3dc353aa1d50b772b94819d">worksheet_filter_column</a></div><div class="ttdeci">lxw_error worksheet_filter_column(lxw_worksheet *worksheet, lxw_col_t col, lxw_filter_rule *rule)</div><div class="ttdoc">Write a filter rule to an autofilter column.</div></div>
 <div class="ttc" id="aworksheet_8h_html_aca5e7c947b82d66bf3d701d669fea206ae3222badeac52bfe47f327db1a54dcaf"><div class="ttname"><a href="worksheet_8h.html#aca5e7c947b82d66bf3d701d669fea206ae3222badeac52bfe47f327db1a54dcaf">LXW_FILTER_CRITERIA_EQUAL_TO</a></div><div class="ttdeci">@ LXW_FILTER_CRITERIA_EQUAL_TO</div><div class="ttdef"><b>Definition:</b> worksheet.h:602</div></div>
 </div><!-- fragment --><div class="image">
@@ -3228,11 +3519,11 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Same as above with the CELL() macro.</span></div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a70c4b9cfb27b18258117545ac6ce6da0">worksheet_data_validation_cell</a>(worksheet, <a class="code hl_define" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;B3&quot;</span>), data_validation);</div>
-<div class="ttc" id="astructlxw__data__validation_html"><div class="ttname"><a href="structlxw__data__validation.html">lxw_data_validation</a></div><div class="ttdoc">Worksheet data validation options.</div><div class="ttdef"><b>Definition:</b> worksheet.h:921</div></div>
-<div class="ttc" id="astructlxw__data__validation_html_a4495d388fd38d3824db6d8b7af3cdecc"><div class="ttname"><a href="structlxw__data__validation.html#a4495d388fd38d3824db6d8b7af3cdecc">lxw_data_validation::validate</a></div><div class="ttdeci">uint8_t validate</div><div class="ttdef"><b>Definition:</b> worksheet.h:926</div></div>
-<div class="ttc" id="astructlxw__data__validation_html_a7d648cb7da5e14cb1ba1c446cd91f93f"><div class="ttname"><a href="structlxw__data__validation.html#a7d648cb7da5e14cb1ba1c446cd91f93f">lxw_data_validation::criteria</a></div><div class="ttdeci">uint8_t criteria</div><div class="ttdef"><b>Definition:</b> worksheet.h:932</div></div>
-<div class="ttc" id="astructlxw__data__validation_html_abc1601dcfcd8e7d7172984fb34e14626"><div class="ttname"><a href="structlxw__data__validation.html#abc1601dcfcd8e7d7172984fb34e14626">lxw_data_validation::maximum_number</a></div><div class="ttdeci">double maximum_number</div><div class="ttdef"><b>Definition:</b> worksheet.h:1032</div></div>
-<div class="ttc" id="astructlxw__data__validation_html_acc19c667d02e2e5e917216bc077b2ade"><div class="ttname"><a href="structlxw__data__validation.html#acc19c667d02e2e5e917216bc077b2ade">lxw_data_validation::minimum_number</a></div><div class="ttdeci">double minimum_number</div><div class="ttdef"><b>Definition:</b> worksheet.h:1014</div></div>
+<div class="ttc" id="astructlxw__data__validation_html"><div class="ttname"><a href="structlxw__data__validation.html">lxw_data_validation</a></div><div class="ttdoc">Worksheet data validation options.</div><div class="ttdef"><b>Definition:</b> worksheet.h:923</div></div>
+<div class="ttc" id="astructlxw__data__validation_html_a4495d388fd38d3824db6d8b7af3cdecc"><div class="ttname"><a href="structlxw__data__validation.html#a4495d388fd38d3824db6d8b7af3cdecc">lxw_data_validation::validate</a></div><div class="ttdeci">uint8_t validate</div><div class="ttdef"><b>Definition:</b> worksheet.h:928</div></div>
+<div class="ttc" id="astructlxw__data__validation_html_a7d648cb7da5e14cb1ba1c446cd91f93f"><div class="ttname"><a href="structlxw__data__validation.html#a7d648cb7da5e14cb1ba1c446cd91f93f">lxw_data_validation::criteria</a></div><div class="ttdeci">uint8_t criteria</div><div class="ttdef"><b>Definition:</b> worksheet.h:934</div></div>
+<div class="ttc" id="astructlxw__data__validation_html_abc1601dcfcd8e7d7172984fb34e14626"><div class="ttname"><a href="structlxw__data__validation.html#abc1601dcfcd8e7d7172984fb34e14626">lxw_data_validation::maximum_number</a></div><div class="ttdeci">double maximum_number</div><div class="ttdef"><b>Definition:</b> worksheet.h:1034</div></div>
+<div class="ttc" id="astructlxw__data__validation_html_acc19c667d02e2e5e917216bc077b2ade"><div class="ttname"><a href="structlxw__data__validation.html#acc19c667d02e2e5e917216bc077b2ade">lxw_data_validation::minimum_number</a></div><div class="ttdeci">double minimum_number</div><div class="ttdef"><b>Definition:</b> worksheet.h:1016</div></div>
 <div class="ttc" id="aworksheet_8h_html_a20e0dbd70400f2eb7c5d88696f812b4ca0952e8f509c60eca7015ac69ed47b4e5"><div class="ttname"><a href="worksheet_8h.html#a20e0dbd70400f2eb7c5d88696f812b4ca0952e8f509c60eca7015ac69ed47b4e5">LXW_VALIDATION_TYPE_INTEGER</a></div><div class="ttdeci">@ LXW_VALIDATION_TYPE_INTEGER</div><div class="ttdef"><b>Definition:</b> worksheet.h:117</div></div>
 <div class="ttc" id="aworksheet_8h_html_a70c4b9cfb27b18258117545ac6ce6da0"><div class="ttname"><a href="worksheet_8h.html#a70c4b9cfb27b18258117545ac6ce6da0">worksheet_data_validation_cell</a></div><div class="ttdeci">lxw_error worksheet_data_validation_cell(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, lxw_data_validation *validation)</div><div class="ttdoc">Add a data validation to a cell.</div></div>
 <div class="ttc" id="aworksheet_8h_html_a88eed033ce0af97d5151528bc514fbf5a2f5a8dc34e8bd8b298372f2a09102bd9"><div class="ttname"><a href="worksheet_8h.html#a88eed033ce0af97d5151528bc514fbf5a2f5a8dc34e8bd8b298372f2a09102bd9">LXW_VALIDATION_CRITERIA_BETWEEN</a></div><div class="ttdeci">@ LXW_VALIDATION_CRITERIA_BETWEEN</div><div class="ttdef"><b>Definition:</b> worksheet.h:178</div></div>
@@ -3522,8 +3813,8 @@ Functions</h2></td></tr>
 <div class="line">                              .macro   = <span class="stringliteral">&quot;say_hello&quot;</span>};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a0d4e20a797b8a3df10a7592a4278d024">worksheet_insert_button</a>(worksheet, 2, 1, &amp;options);</div>
-<div class="ttc" id="astructlxw__button__options_html"><div class="ttname"><a href="structlxw__button__options.html">lxw_button_options</a></div><div class="ttdoc">Options for inserted buttons.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1901</div></div>
-<div class="ttc" id="astructlxw__button__options_html_a83e56bf2c86bcec3cc58e96dc44a2dbd"><div class="ttname"><a href="structlxw__button__options.html#a83e56bf2c86bcec3cc58e96dc44a2dbd">lxw_button_options::caption</a></div><div class="ttdeci">const char * caption</div><div class="ttdef"><b>Definition:</b> worksheet.h:1906</div></div>
+<div class="ttc" id="astructlxw__button__options_html"><div class="ttname"><a href="structlxw__button__options.html">lxw_button_options</a></div><div class="ttdoc">Options for inserted buttons.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1908</div></div>
+<div class="ttc" id="astructlxw__button__options_html_a83e56bf2c86bcec3cc58e96dc44a2dbd"><div class="ttname"><a href="structlxw__button__options.html#a83e56bf2c86bcec3cc58e96dc44a2dbd">lxw_button_options::caption</a></div><div class="ttdeci">const char * caption</div><div class="ttdef"><b>Definition:</b> worksheet.h:1913</div></div>
 <div class="ttc" id="aworksheet_8h_html_a0d4e20a797b8a3df10a7592a4278d024"><div class="ttname"><a href="worksheet_8h.html#a0d4e20a797b8a3df10a7592a4278d024">worksheet_insert_button</a></div><div class="ttdeci">lxw_error worksheet_insert_button(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, lxw_button_options *options)</div><div class="ttdoc">Insert a button object into a worksheet.</div></div>
 </div><!-- fragment --><div class="image">
 <img src="macros.png" alt=""/>
@@ -3843,14 +4134,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a62368aa313184d72a9ca2b1cf5de9a8a" name="a62368aa313184d72a9ca2b1cf5de9a8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62368aa313184d72a9ca2b1cf5de9a8a">&#9670;&#160;</a></span>worksheet_set_selection()</h2>
+<a id="ab3ad4323d1e1c11d2107ec3b92d7745e" name="ab3ad4323d1e1c11d2107ec3b92d7745e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3ad4323d1e1c11d2107ec3b92d7745e">&#9670;&#160;</a></span>worksheet_set_selection()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void worksheet_set_selection </td>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> worksheet_set_selection </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structlxw__worksheet.html">lxw_worksheet</a> *&#160;</td>
           <td class="paramname"><em>worksheet</em>, </td>
@@ -3899,11 +4190,11 @@ Functions</h2></td></tr>
 <p>The <code>worksheet_set_selection()</code> function can be used to specify which cell or range of cells is selected in a worksheet: The most common requirement is to select a single cell, in which case the <code>first_</code> and <code>last_</code> parameters should be the same.</p>
 <p>The active cell within a selected range is determined by the order in which <code>first_</code> and <code>last_</code> are specified.</p>
 <p>Examples:</p>
-<div class="fragment"><div class="line"><a class="code hl_function" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a>(worksheet1, 3, 3, 3, 3);     <span class="comment">// Cell D4.</span></div>
-<div class="line"><a class="code hl_function" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a>(worksheet2, 3, 3, 6, 6);     <span class="comment">// Cells D4 to G7.</span></div>
-<div class="line"><a class="code hl_function" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a>(worksheet3, 6, 6, 3, 3);     <span class="comment">// Cells G7 to D4.</span></div>
-<div class="line"><a class="code hl_function" href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a>(worksheet5, <a class="code hl_define" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;D4:G7&quot;</span>)); <span class="comment">// Using the RANGE macro.</span></div>
-<div class="ttc" id="aworksheet_8h_html_a62368aa313184d72a9ca2b1cf5de9a8a"><div class="ttname"><a href="worksheet_8h.html#a62368aa313184d72a9ca2b1cf5de9a8a">worksheet_set_selection</a></div><div class="ttdeci">void worksheet_set_selection(lxw_worksheet *worksheet, lxw_row_t first_row, lxw_col_t first_col, lxw_row_t last_row, lxw_col_t last_col)</div><div class="ttdoc">Set the selected cell or cells in a worksheet:</div></div>
+<div class="fragment"><div class="line"><a class="code hl_function" href="worksheet_8h.html#ab3ad4323d1e1c11d2107ec3b92d7745e">worksheet_set_selection</a>(worksheet1, 3, 3, 3, 3);     <span class="comment">// Cell D4.</span></div>
+<div class="line"><a class="code hl_function" href="worksheet_8h.html#ab3ad4323d1e1c11d2107ec3b92d7745e">worksheet_set_selection</a>(worksheet2, 3, 3, 6, 6);     <span class="comment">// Cells D4 to G7.</span></div>
+<div class="line"><a class="code hl_function" href="worksheet_8h.html#ab3ad4323d1e1c11d2107ec3b92d7745e">worksheet_set_selection</a>(worksheet3, 6, 6, 3, 3);     <span class="comment">// Cells G7 to D4.</span></div>
+<div class="line"><a class="code hl_function" href="worksheet_8h.html#ab3ad4323d1e1c11d2107ec3b92d7745e">worksheet_set_selection</a>(worksheet5, <a class="code hl_define" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;D4:G7&quot;</span>)); <span class="comment">// Using the RANGE macro.</span></div>
+<div class="ttc" id="aworksheet_8h_html_ab3ad4323d1e1c11d2107ec3b92d7745e"><div class="ttname"><a href="worksheet_8h.html#ab3ad4323d1e1c11d2107ec3b92d7745e">worksheet_set_selection</a></div><div class="ttdeci">lxw_error worksheet_set_selection(lxw_worksheet *worksheet, lxw_row_t first_row, lxw_col_t first_col, lxw_row_t last_row, lxw_col_t last_col)</div><div class="ttdoc">Set the selected cell or cells in a worksheet:</div></div>
 </div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="panes_8c-example.html#a16">panes.c</a>.</dd>
 </dl>
 
@@ -4478,12 +4769,12 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="structlxw__header__footer__options.html">lxw_header_footer_options</a> header_options = { .<a class="code hl_variable" href="structlxw__header__footer__options.html#a0cd0badf4c6c3dde9aa46e924276a9aa">margin</a> = 0.2 };</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac">worksheet_set_header_opt</a>(worksheet, <span class="stringliteral">&quot;Some text&quot;</span>, &amp;header_options);</div>
-<div class="ttc" id="astructlxw__header__footer__options_html_a0cd0badf4c6c3dde9aa46e924276a9aa"><div class="ttname"><a href="structlxw__header__footer__options.html#a0cd0badf4c6c3dde9aa46e924276a9aa">lxw_header_footer_options::margin</a></div><div class="ttdeci">double margin</div><div class="ttdef"><b>Definition:</b> worksheet.h:1982</div></div>
+<div class="ttc" id="astructlxw__header__footer__options_html_a0cd0badf4c6c3dde9aa46e924276a9aa"><div class="ttname"><a href="structlxw__header__footer__options.html#a0cd0badf4c6c3dde9aa46e924276a9aa">lxw_header_footer_options::margin</a></div><div class="ttdeci">double margin</div><div class="ttdef"><b>Definition:</b> worksheet.h:1989</div></div>
 </div><!-- fragment --><p>Images can be inserted in the header by specifying the <code>&amp;[Picture]</code> placeholder and a filename/path to the image:</p>
 <div class="fragment"><div class="line"> <a class="code hl_struct" href="structlxw__header__footer__options.html">lxw_header_footer_options</a> header_options = {.<a class="code hl_variable" href="structlxw__header__footer__options.html#afdfa9a6c3f132ecf5b14c626d2f955ff">image_left</a> = <span class="stringliteral">&quot;logo.png&quot;</span>};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#ab913a06656ecf28292d6b21d3c3eaaac">worksheet_set_header_opt</a>(worksheet, <span class="stringliteral">&quot;&amp;L&amp;[Picture]&quot;</span>, &amp;header_options);</div>
-<div class="ttc" id="astructlxw__header__footer__options_html_afdfa9a6c3f132ecf5b14c626d2f955ff"><div class="ttname"><a href="structlxw__header__footer__options.html#afdfa9a6c3f132ecf5b14c626d2f955ff">lxw_header_footer_options::image_left</a></div><div class="ttdeci">const char * image_left</div><div class="ttdef"><b>Definition:</b> worksheet.h:1987</div></div>
+<div class="ttc" id="astructlxw__header__footer__options_html_afdfa9a6c3f132ecf5b14c626d2f955ff"><div class="ttname"><a href="structlxw__header__footer__options.html#afdfa9a6c3f132ecf5b14c626d2f955ff">lxw_header_footer_options::image_left</a></div><div class="ttdeci">const char * image_left</div><div class="ttdef"><b>Definition:</b> worksheet.h:1994</div></div>
 </div><!-- fragment --><div class="image">
 <img src="headers_footers.png" alt=""/>
 </div>
@@ -5341,8 +5632,8 @@ objects
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a1b49e135d4debcdb25941f2f40f04cb0">worksheet_protect</a>(worksheet, NULL, &amp;options);</div>
-<div class="ttc" id="astructlxw__protection_html"><div class="ttname"><a href="structlxw__protection.html">lxw_protection</a></div><div class="ttdoc">Worksheet protection options.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2004</div></div>
-<div class="ttc" id="astructlxw__protection_html_accce8fbb8b1dad731adbe8234870004e"><div class="ttname"><a href="structlxw__protection.html#accce8fbb8b1dad731adbe8234870004e">lxw_protection::format_cells</a></div><div class="ttdeci">uint8_t format_cells</div><div class="ttdef"><b>Definition:</b> worksheet.h:2012</div></div>
+<div class="ttc" id="astructlxw__protection_html"><div class="ttname"><a href="structlxw__protection.html">lxw_protection</a></div><div class="ttdoc">Worksheet protection options.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2011</div></div>
+<div class="ttc" id="astructlxw__protection_html_accce8fbb8b1dad731adbe8234870004e"><div class="ttname"><a href="structlxw__protection.html#accce8fbb8b1dad731adbe8234870004e">lxw_protection::format_cells</a></div><div class="ttdeci">uint8_t format_cells</div><div class="ttdef"><b>Definition:</b> worksheet.h:2019</div></div>
 </div><!-- fragment --><p>See also the <a class="el" href="format_8h.html#a1dfd61b72aab2c28c3d51e53e08df587" title="Set the cell unlocked state.">format_set_unlocked()</a> and <a class="el" href="format_8h.html#a135d94ec48564c997c5a78ca8b8861e2" title="Hide formulas in a cell.">format_set_hidden()</a> format functions.</p>
 <p><b>Note:</b> Sheet level passwords in Excel offer <b>very</b> weak protection. They don't encrypt your data and are very easy to deactivate. Full workbook encryption is not supported by <code>libxlsxwriter</code> since it requires a completely different file format. </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="worksheet_protection_8c-example.html#a9">worksheet_protection.c</a>.</dd>
@@ -5758,7 +6049,7 @@ rules". Alternatively you can turn them off for individual cells in a worksheet,
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Options for modifying images inserted via <code><a class="el" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b" title="Insert an image in a worksheet cell, with options.">worksheet_insert_image_opt()</a></code>. </p>
+<p>Options for modifying images inserted via <code><a class="el" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b" title="Insert an image in a worksheet cell, with options.">worksheet_insert_image_opt()</a></code> and <code><a class="el" href="worksheet_8h.html#af02d8d80c5322da6a2178913aeda2c1f" title="Embed an image in a worksheet cell, with options.">worksheet_embed_image_opt()</a></code>. </p>
 
 </div>
 </div>

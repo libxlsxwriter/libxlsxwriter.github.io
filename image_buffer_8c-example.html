@@ -75,9 +75,9 @@ $(function() {
 <div class="contents">
 <table width="600">
 <tr>
-<td><a class="el" href="output_buffer_8c-example.html">&lt;&lt; output_buffer.c</a> </td><td align="right"><a class="el" href="merge_range_8c-example.html">merge_range.c &gt;&gt;</a>  </td></tr>
+<td><a class="el" href="output_buffer_8c-example.html">&lt;&lt; output_buffer.c</a> </td><td align="right"><a class="el" href="embed_image_buffer_8c-example.html">embed_image_buffer.c &gt;&gt;</a>  </td></tr>
 </table>
-<p>Example of adding an image to a worksheet from a memory buffer.</p>
+<p>Example of inserting an image in a worksheet from a memory buffer.</p>
 <div class="image">
 <img src="image_buffer2.png" alt=""/>
 </div>
@@ -85,7 +85,7 @@ $(function() {
 <div class="line"><span class="comment"> * An example of inserting an image from a memory buffer into a worksheet</span></div>
 <div class="line"><span class="comment"> * using the libxlsxwriter library.</span></div>
 <div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Copyright 2014-2021 John McNamara, jmcnamara@cpan.org</span></div>
+<div class="line"><span class="comment"> * Copyright 2014-2024 John McNamara, jmcnamara@cpan.org</span></div>
 <div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> */</span></div>
 <div class="line"> </div>
@@ -135,10 +135,10 @@ $(function() {
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="astructlxw__image__options_html"><div class="ttname"><a href="structlxw__image__options.html">lxw_image_options</a></div><div class="ttdoc">Options for inserted images.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1702</div></div>
-<div class="ttc" id="astructlxw__image__options_html_a7ef9c6980b8e66bcdfff18627250001c"><div class="ttname"><a href="structlxw__image__options.html#a7ef9c6980b8e66bcdfff18627250001c">lxw_image_options::x_offset</a></div><div class="ttdeci">int32_t x_offset</div><div class="ttdef"><b>Definition:</b> worksheet.h:1705</div></div>
+<div class="ttc" id="astructlxw__image__options_html"><div class="ttname"><a href="structlxw__image__options.html">lxw_image_options</a></div><div class="ttdoc">Options for inserted images.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1704</div></div>
+<div class="ttc" id="astructlxw__image__options_html_a7ef9c6980b8e66bcdfff18627250001c"><div class="ttname"><a href="structlxw__image__options.html#a7ef9c6980b8e66bcdfff18627250001c">lxw_image_options::x_offset</a></div><div class="ttdeci">int32_t x_offset</div><div class="ttdef"><b>Definition:</b> worksheet.h:1707</div></div>
 <div class="ttc" id="astructlxw__workbook_html"><div class="ttname"><a href="structlxw__workbook.html">lxw_workbook</a></div><div class="ttdoc">Struct to represent an Excel workbook.</div><div class="ttdef"><b>Definition:</b> workbook.h:293</div></div>
-<div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2108</div></div>
+<div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2115</div></div>
 <div class="ttc" id="autility_8h_html_ad510ac6df573d23203374e24dba373d2"><div class="ttname"><a href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a></div><div class="ttdeci">#define CELL(cell)</div><div class="ttdoc">Convert an Excel A1 cell string into a (row, col) pair.</div><div class="ttdef"><b>Definition:</b> utility.h:46</div></div>
 <div class="ttc" id="aworkbook_8h_html_a89d256eddbfc5bbac0925e0d38b8139c"><div class="ttname"><a href="workbook_8h.html#a89d256eddbfc5bbac0925e0d38b8139c">workbook_new</a></div><div class="ttdeci">lxw_workbook * workbook_new(const char *filename)</div><div class="ttdoc">Create a new workbook object.</div></div>
 <div class="ttc" id="aworkbook_8h_html_ad9e7aeebc0fd43562db5bcd527b2ee5e"><div class="ttname"><a href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a></div><div class="ttdeci">lxw_error workbook_close(lxw_workbook *workbook)</div><div class="ttdoc">Close the Workbook object and write the XLSX file.</div></div>

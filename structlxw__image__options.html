@@ -79,7 +79,7 @@ $(function() {
 <p>Options for inserted images.  
  <a href="structlxw__image__options.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Options for modifying images inserted via <code><a class="el" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b" title="Insert an image in a worksheet cell, with options.">worksheet_insert_image_opt()</a></code>. </p>
+<div class="textblock"><p>Options for modifying images inserted via <code><a class="el" href="worksheet_8h.html#a0b05e75e2c2a5c3452374714cdb2b79b" title="Insert an image in a worksheet cell, with options.">worksheet_insert_image_opt()</a></code> and <code><a class="el" href="worksheet_8h.html#af02d8d80c5322da6a2178913aeda2c1f" title="Embed an image in a worksheet cell, with options.">worksheet_embed_image_opt()</a></code>. </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="image_buffer_8c-example.html#_a4">image_buffer.c</a>, and <a class="el" href="images_8c-example.html#_a9">images.c</a>.</dd>
 </dl>
 </div><table class="memberdecls">
@@ -103,6 +103,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:ac6c54eb3cf685f3ba45c4d39b98577f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76b73b28260cc0d886176fc83cbd21da"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__image__options.html#a76b73b28260cc0d886176fc83cbd21da">tip</a></td></tr>
 <tr class="separator:a76b73b28260cc0d886176fc83cbd21da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79349f4528ba5dc641ae787d0c829cda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlxw__format.html">lxw_format</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__image__options.html#a79349f4528ba5dc641ae787d0c829cda">cell_format</a></td></tr>
+<tr class="separator:a79349f4528ba5dc641ae787d0c829cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
 <a id="a7ef9c6980b8e66bcdfff18627250001c" name="a7ef9c6980b8e66bcdfff18627250001c"></a>
@@ -243,6 +245,21 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Add an optional mouseover tip for a hyperlink to the image. </p>
+
+</div>
+</div>
+<a id="a79349f4528ba5dc641ae787d0c829cda" name="a79349f4528ba5dc641ae787d0c829cda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79349f4528ba5dc641ae787d0c829cda">&#9670;&#160;</a></span>cell_format</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlxw__format.html">lxw_format</a>* lxw_image_options::cell_format</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add an optional format to the cell. Only used with <code><a class="el" href="worksheet_8h.html#af02d8d80c5322da6a2178913aeda2c1f" title="Embed an image in a worksheet cell, with options.">worksheet_embed_image_opt()</a></code> </p>
 
 </div>
 </div>

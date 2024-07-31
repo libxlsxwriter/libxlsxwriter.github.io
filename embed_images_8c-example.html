@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libxlsxwriter: demo.c</title>
+<title>libxlsxwriter: embed_images.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,19 +70,20 @@ $(function() {
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">demo.c</div></div>
+  <div class="headertitle"><div class="title">embed_images.c</div></div>
 </div><!--header-->
 <div class="contents">
 <table width="600">
 <tr>
-<td><a class="el" href="anatomy_8c-example.html">&lt;&lt; anatomy.c</a> </td><td align="right"><a class="el" href="format_font_8c-example.html">format_font.c &gt;&gt;</a>  </td></tr>
+<td><a class="el" href="images_8c-example.html">&lt;&lt; images.c</a> </td><td align="right"><a class="el" href="headers_footers_8c-example.html">headers_footers.c &gt;&gt;</a>  </td></tr>
 </table>
-<p>A simple example of some of the features of the libxlsxwriter library.</p>
+<p>Example of embedding images in a worksheet.</p>
 <div class="image">
-<img src="demo.png" alt=""/>
+<img src="embed_image.png" alt=""/>
 </div>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * A simple example of some of the features of the libxlsxwriter library.</span></div>
+<div class="line"><span class="comment"> * An example of embedding images into a worksheet using the libxlsxwriter</span></div>
+<div class="line"><span class="comment"> * library.</span></div>
 <div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> * Copyright 2014-2024, John McNamara, jmcnamara@cpan.org</span></div>
 <div class="line"><span class="comment"> *</span></div>
@@ -93,47 +94,41 @@ $(function() {
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">/* Create a new workbook and add a worksheet. */</span></div>
-<div class="line">    <a id="_a0" name="_a0"></a><a class="code hl_struct" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a id="a1" name="a1"></a><a class="code hl_function" href="workbook_8h.html#a89d256eddbfc5bbac0925e0d38b8139c">workbook_new</a>(<span class="stringliteral">&quot;demo.xlsx&quot;</span>);</div>
+<div class="line">    <a id="_a0" name="_a0"></a><a class="code hl_struct" href="structlxw__workbook.html">lxw_workbook</a>  *workbook  = <a id="a1" name="a1"></a><a class="code hl_function" href="workbook_8h.html#a89d256eddbfc5bbac0925e0d38b8139c">workbook_new</a>(<span class="stringliteral">&quot;embed_images.xlsx&quot;</span>);</div>
 <div class="line">    <a id="_a2" name="_a2"></a><a class="code hl_struct" href="structlxw__worksheet.html">lxw_worksheet</a> *worksheet = <a id="a3" name="a3"></a><a class="code hl_function" href="workbook_8h.html#add5f5793676a87cf9173f52da9cb04f5">workbook_add_worksheet</a>(workbook, NULL);</div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">/* Add a format. */</span></div>
-<div class="line">    <a id="_a4" name="_a4"></a><a class="code hl_struct" href="structlxw__format.html">lxw_format</a> *format = <a id="a5" name="a5"></a><a class="code hl_function" href="workbook_8h.html#aa3505daef8fb288585c56ae597493ae6">workbook_add_format</a>(workbook);</div>
+<div class="line">    <span class="comment">/* Change some of the column widths for clarity. */</span></div>
+<div class="line">    <a id="a4" name="a4"></a><a class="code hl_function" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, <a id="a5" name="a5"></a><a class="code hl_define" href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a>(<span class="stringliteral">&quot;A:B&quot;</span>), 30, NULL);</div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">/* Set the bold property for the format */</span></div>
-<div class="line">    <a id="a6" name="a6"></a><a class="code hl_function" href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a>(format);</div>
+<div class="line">    <span class="comment">/* Embed an image. */</span></div>
+<div class="line">    <a id="a6" name="a6"></a><a class="code hl_function" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, <a id="a7" name="a7"></a><a class="code hl_define" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;A2&quot;</span>), <span class="stringliteral">&quot;Embed an image in a cell:&quot;</span>, NULL);</div>
+<div class="line">    <a id="a8" name="a8"></a><a class="code hl_function" href="worksheet_8h.html#afaf00521027cd79c6d7d93537848b283">worksheet_embed_image</a>(worksheet, <a class="code hl_define" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;B2&quot;</span>), <span class="stringliteral">&quot;logo.png&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">/* Change the column width for clarity. */</span></div>
-<div class="line">    <a id="a7" name="a7"></a><a class="code hl_function" href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a>(worksheet, 0, 0, 20, NULL);</div>
+<div class="line">    <span class="comment">/* Make a row bigger and embed the image. */</span></div>
+<div class="line">    <a id="a9" name="a9"></a><a class="code hl_function" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a>(worksheet, 3, 72, NULL);</div>
+<div class="line">    <a class="code hl_function" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, <a class="code hl_define" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;A4&quot;</span>), <span class="stringliteral">&quot;Embed an image in a cell:&quot;</span>, NULL);</div>
+<div class="line">    <a class="code hl_function" href="worksheet_8h.html#afaf00521027cd79c6d7d93537848b283">worksheet_embed_image</a>(worksheet, <a class="code hl_define" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;B4&quot;</span>), <span class="stringliteral">&quot;logo.png&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">/* Write some simple text. */</span></div>
-<div class="line">    <a id="a8" name="a8"></a><a class="code hl_function" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 0, 0, <span class="stringliteral">&quot;Hello&quot;</span>, NULL);</div>
+<div class="line">    <span class="comment">/* Make a row bigger and embed the image. */</span></div>
+<div class="line">    <a class="code hl_function" href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a>(worksheet, 5, 150, NULL);</div>
+<div class="line">    <a class="code hl_function" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, <a class="code hl_define" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;A6&quot;</span>), <span class="stringliteral">&quot;Embed an image in a cell:&quot;</span>, NULL);</div>
+<div class="line">    <a class="code hl_function" href="worksheet_8h.html#afaf00521027cd79c6d7d93537848b283">worksheet_embed_image</a>(worksheet, <a class="code hl_define" href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a>(<span class="stringliteral">&quot;B6&quot;</span>), <span class="stringliteral">&quot;logo.png&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">/* Text with formatting. */</span></div>
-<div class="line">    <a class="code hl_function" href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a>(worksheet, 1, 0, <span class="stringliteral">&quot;World&quot;</span>, format);</div>
-<div class="line"> </div>
-<div class="line">    <span class="comment">/* Write some numbers. */</span></div>
-<div class="line">    <a id="a9" name="a9"></a><a class="code hl_function" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 2, 0, 123,     NULL);</div>
-<div class="line">    <a class="code hl_function" href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a>(worksheet, 3, 0, 123.456, NULL);</div>
-<div class="line"> </div>
-<div class="line">    <span class="comment">/* Insert an image. */</span></div>
-<div class="line">    <a id="a10" name="a10"></a><a class="code hl_function" href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f">worksheet_insert_image</a>(worksheet, 1, 2, <span class="stringliteral">&quot;logo.png&quot;</span>);</div>
-<div class="line"> </div>
-<div class="line">    <a id="a11" name="a11"></a><a class="code hl_function" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
+<div class="line">    <a id="a10" name="a10"></a><a class="code hl_function" href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a>(workbook);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aformat_8h_html_a85e1b0baf44b445b65894e48722aec14"><div class="ttname"><a href="format_8h.html#a85e1b0baf44b445b65894e48722aec14">format_set_bold</a></div><div class="ttdeci">void format_set_bold(lxw_format *format)</div><div class="ttdoc">Turn on bold for the format font.</div></div>
-<div class="ttc" id="astructlxw__format_html"><div class="ttname"><a href="structlxw__format.html">lxw_format</a></div><div class="ttdoc">Struct to represent the formatting properties of an Excel format.</div><div class="ttdef"><b>Definition:</b> format.h:359</div></div>
 <div class="ttc" id="astructlxw__workbook_html"><div class="ttname"><a href="structlxw__workbook.html">lxw_workbook</a></div><div class="ttdoc">Struct to represent an Excel workbook.</div><div class="ttdef"><b>Definition:</b> workbook.h:293</div></div>
 <div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2115</div></div>
+<div class="ttc" id="autility_8h_html_a189672bfa9c380a28d8db8c40de17fe8"><div class="ttname"><a href="utility_8h.html#a189672bfa9c380a28d8db8c40de17fe8">COLS</a></div><div class="ttdeci">#define COLS(cols)</div><div class="ttdoc">Convert an Excel A:B column range into a (col1, col2) pair.</div><div class="ttdef"><b>Definition:</b> utility.h:64</div></div>
+<div class="ttc" id="autility_8h_html_ad510ac6df573d23203374e24dba373d2"><div class="ttname"><a href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a></div><div class="ttdeci">#define CELL(cell)</div><div class="ttdoc">Convert an Excel A1 cell string into a (row, col) pair.</div><div class="ttdef"><b>Definition:</b> utility.h:46</div></div>
 <div class="ttc" id="aworkbook_8h_html_a89d256eddbfc5bbac0925e0d38b8139c"><div class="ttname"><a href="workbook_8h.html#a89d256eddbfc5bbac0925e0d38b8139c">workbook_new</a></div><div class="ttdeci">lxw_workbook * workbook_new(const char *filename)</div><div class="ttdoc">Create a new workbook object.</div></div>
-<div class="ttc" id="aworkbook_8h_html_aa3505daef8fb288585c56ae597493ae6"><div class="ttname"><a href="workbook_8h.html#aa3505daef8fb288585c56ae597493ae6">workbook_add_format</a></div><div class="ttdeci">lxw_format * workbook_add_format(lxw_workbook *workbook)</div><div class="ttdoc">Create a new Format object to formats cells in worksheets.</div></div>
 <div class="ttc" id="aworkbook_8h_html_ad9e7aeebc0fd43562db5bcd527b2ee5e"><div class="ttname"><a href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a></div><div class="ttdeci">lxw_error workbook_close(lxw_workbook *workbook)</div><div class="ttdoc">Close the Workbook object and write the XLSX file.</div></div>
 <div class="ttc" id="aworkbook_8h_html_add5f5793676a87cf9173f52da9cb04f5"><div class="ttname"><a href="workbook_8h.html#add5f5793676a87cf9173f52da9cb04f5">workbook_add_worksheet</a></div><div class="ttdeci">lxw_worksheet * workbook_add_worksheet(lxw_workbook *workbook, const char *sheetname)</div><div class="ttdoc">Add a new worksheet to a workbook.</div></div>
-<div class="ttc" id="aworksheet_8h_html_a4529d77bcefcf478b8209f46fe730f6f"><div class="ttname"><a href="worksheet_8h.html#a4529d77bcefcf478b8209f46fe730f6f">worksheet_insert_image</a></div><div class="ttdeci">lxw_error worksheet_insert_image(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *filename)</div><div class="ttdoc">Insert an image in a worksheet cell.</div></div>
 <div class="ttc" id="aworksheet_8h_html_a9656e4e05d3787eee6b3e4d8e82d9b7f"><div class="ttname"><a href="worksheet_8h.html#a9656e4e05d3787eee6b3e4d8e82d9b7f">worksheet_set_column</a></div><div class="ttdeci">lxw_error worksheet_set_column(lxw_worksheet *worksheet, lxw_col_t first_col, lxw_col_t last_col, double width, lxw_format *format)</div><div class="ttdoc">Set the properties for one or more columns of cells.</div></div>
+<div class="ttc" id="aworksheet_8h_html_ab9b7fb95e1bd9b0da70befd0d37a9173"><div class="ttname"><a href="worksheet_8h.html#ab9b7fb95e1bd9b0da70befd0d37a9173">worksheet_set_row</a></div><div class="ttdeci">lxw_error worksheet_set_row(lxw_worksheet *worksheet, lxw_row_t row, double height, lxw_format *format)</div><div class="ttdoc">Set the properties for a row of cells.</div></div>
 <div class="ttc" id="aworksheet_8h_html_ac208046e7a6d12cc87982422efa41b31"><div class="ttname"><a href="worksheet_8h.html#ac208046e7a6d12cc87982422efa41b31">worksheet_write_string</a></div><div class="ttdeci">lxw_error worksheet_write_string(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *string, lxw_format *format)</div><div class="ttdoc">Write a string to a worksheet cell.</div></div>
-<div class="ttc" id="aworksheet_8h_html_ad9fc47d3beaa2ab4759414e8580c2289"><div class="ttname"><a href="worksheet_8h.html#ad9fc47d3beaa2ab4759414e8580c2289">worksheet_write_number</a></div><div class="ttdeci">lxw_error worksheet_write_number(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, double number, lxw_format *format)</div><div class="ttdoc">Write a number to a worksheet cell.</div></div>
+<div class="ttc" id="aworksheet_8h_html_afaf00521027cd79c6d7d93537848b283"><div class="ttname"><a href="worksheet_8h.html#afaf00521027cd79c6d7d93537848b283">worksheet_embed_image</a></div><div class="ttdeci">lxw_error worksheet_embed_image(lxw_worksheet *worksheet, lxw_row_t row, lxw_col_t col, const char *filename)</div><div class="ttdoc">Embed an image in a worksheet cell.</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.20-->
 <!-- start footer part -->

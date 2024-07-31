@@ -103,7 +103,7 @@ $(function() {
 <div class="ttc" id="astructlxw__chart_html"><div class="ttname"><a href="structlxw__chart.html">lxw_chart</a></div><div class="ttdoc">Struct to represent an Excel chart.</div><div class="ttdef"><b>Definition:</b> chart.h:1091</div></div>
 <div class="ttc" id="astructlxw__chartsheet_html"><div class="ttname"><a href="structlxw__chartsheet.html">lxw_chartsheet</a></div><div class="ttdoc">Struct to represent an Excel chartsheet.</div><div class="ttdef"><b>Definition:</b> chartsheet.h:75</div></div>
 <div class="ttc" id="astructlxw__workbook_html"><div class="ttname"><a href="structlxw__workbook.html">lxw_workbook</a></div><div class="ttdoc">Struct to represent an Excel workbook.</div><div class="ttdef"><b>Definition:</b> workbook.h:293</div></div>
-<div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2108</div></div>
+<div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2115</div></div>
 <div class="ttc" id="aworkbook_8h_html_a10bd2ff24973091c4f19909a851cb41f"><div class="ttname"><a href="workbook_8h.html#a10bd2ff24973091c4f19909a851cb41f">workbook_add_chart</a></div><div class="ttdeci">lxw_chart * workbook_add_chart(lxw_workbook *workbook, uint8_t chart_type)</div><div class="ttdoc">Create a new chart to be added to a worksheet:</div></div>
 <div class="ttc" id="aworkbook_8h_html_a5c476197efaad7c46728b832e0629f33"><div class="ttname"><a href="workbook_8h.html#a5c476197efaad7c46728b832e0629f33">workbook_add_chartsheet</a></div><div class="ttdeci">lxw_chartsheet * workbook_add_chartsheet(lxw_workbook *workbook, const char *sheetname)</div><div class="ttdoc">Add a new chartsheet to a workbook.</div></div>
 <div class="ttc" id="aworkbook_8h_html_ad9e7aeebc0fd43562db5bcd527b2ee5e"><div class="ttname"><a href="workbook_8h.html#ad9e7aeebc0fd43562db5bcd527b2ee5e">workbook_close</a></div><div class="ttdeci">lxw_error workbook_close(lxw_workbook *workbook)</div><div class="ttdoc">Close the Workbook object and write the XLSX file.</div></div>
@@ -459,8 +459,8 @@ no_objects
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="chartsheet_8h.html#a16d7a783d2b4ff43725d5e2b16c2eeef">chartsheet_protect</a>(chartsheet, NULL, &amp;options);</div>
-<div class="ttc" id="astructlxw__protection_html"><div class="ttname"><a href="structlxw__protection.html">lxw_protection</a></div><div class="ttdoc">Worksheet protection options.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2004</div></div>
-<div class="ttc" id="astructlxw__protection_html_afea5e584eb539965ee41d582a4dbab0d"><div class="ttname"><a href="structlxw__protection.html#afea5e584eb539965ee41d582a4dbab0d">lxw_protection::no_content</a></div><div class="ttdeci">uint8_t no_content</div><div class="ttdef"><b>Definition:</b> worksheet.h:2051</div></div>
+<div class="ttc" id="astructlxw__protection_html"><div class="ttname"><a href="structlxw__protection.html">lxw_protection</a></div><div class="ttdoc">Worksheet protection options.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2011</div></div>
+<div class="ttc" id="astructlxw__protection_html_afea5e584eb539965ee41d582a4dbab0d"><div class="ttname"><a href="structlxw__protection.html#afea5e584eb539965ee41d582a4dbab0d">lxw_protection::no_content</a></div><div class="ttdeci">uint8_t no_content</div><div class="ttdef"><b>Definition:</b> worksheet.h:2058</div></div>
 </div><!-- fragment --><p>See also <a class="el" href="worksheet_8h.html#a1b49e135d4debcdb25941f2f40f04cb0" title="Protect elements of a worksheet from modification.">worksheet_protect()</a>.</p>
 <p><b>Note:</b> Sheet level passwords in Excel offer <b>very</b> weak protection. They don't encrypt your data and are very easy to deactivate. Full workbook encryption is not supported by <code>libxlsxwriter</code> since it requires a completely different file format. </p>
 
@@ -804,7 +804,7 @@ no_objects
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="chartsheet_8h.html#a68c4f676ef8d16bfe5ec834d29df9554">chartsheet_set_header_opt</a>(chartsheet, <span class="stringliteral">&quot;Some text&quot;</span>, &amp;header_options);</div>
 <div class="ttc" id="achartsheet_8h_html_a68c4f676ef8d16bfe5ec834d29df9554"><div class="ttname"><a href="chartsheet_8h.html#a68c4f676ef8d16bfe5ec834d29df9554">chartsheet_set_header_opt</a></div><div class="ttdeci">lxw_error chartsheet_set_header_opt(lxw_chartsheet *chartsheet, const char *string, lxw_header_footer_options *options)</div><div class="ttdoc">Set the printed page header caption with additional options.</div></div>
-<div class="ttc" id="astructlxw__header__footer__options_html"><div class="ttname"><a href="structlxw__header__footer__options.html">lxw_header_footer_options</a></div><div class="ttdoc">Header and footer options.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1979</div></div>
+<div class="ttc" id="astructlxw__header__footer__options_html"><div class="ttname"><a href="structlxw__header__footer__options.html">lxw_header_footer_options</a></div><div class="ttdoc">Header and footer options.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1986</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

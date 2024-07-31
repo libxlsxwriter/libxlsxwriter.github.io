@@ -124,8 +124,8 @@ Data Fields</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="structlxw__table__options.html">lxw_table_options</a> options = {.<a class="code hl_variable" href="structlxw__table__options.html#a0d9c47d441fc8b263916740ca1351287">name</a> = <span class="stringliteral">&quot;Sales&quot;</span>};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a9ef4ac84328375637bcc60916adbcfa5">worksheet_add_table</a>(worksheet, <a class="code hl_define" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;B3:G8&quot;</span>), &amp;options);</div>
-<div class="ttc" id="astructlxw__table__options_html"><div class="ttname"><a href="structlxw__table__options.html">lxw_table_options</a></div><div class="ttdoc">Worksheet table options.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1422</div></div>
-<div class="ttc" id="astructlxw__table__options_html_a0d9c47d441fc8b263916740ca1351287"><div class="ttname"><a href="structlxw__table__options.html#a0d9c47d441fc8b263916740ca1351287">lxw_table_options::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> worksheet.h:1441</div></div>
+<div class="ttc" id="astructlxw__table__options_html"><div class="ttname"><a href="structlxw__table__options.html">lxw_table_options</a></div><div class="ttdoc">Worksheet table options.</div><div class="ttdef"><b>Definition:</b> worksheet.h:1424</div></div>
+<div class="ttc" id="astructlxw__table__options_html_a0d9c47d441fc8b263916740ca1351287"><div class="ttname"><a href="structlxw__table__options.html#a0d9c47d441fc8b263916740ca1351287">lxw_table_options::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> worksheet.h:1443</div></div>
 <div class="ttc" id="autility_8h_html_a4dbbdfc9b616195c799dee78e727cecc"><div class="ttname"><a href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a></div><div class="ttdeci">#define RANGE(range)</div><div class="ttdoc">Convert an Excel A1:B2 range into a (first_row, first_col, last_row, last_col) sequence.</div><div class="ttdef"><b>Definition:</b> utility.h:83</div></div>
 <div class="ttc" id="aworksheet_8h_html_a9ef4ac84328375637bcc60916adbcfa5"><div class="ttname"><a href="worksheet_8h.html#a9ef4ac84328375637bcc60916adbcfa5">worksheet_add_table</a></div><div class="ttdeci">lxw_error worksheet_add_table(lxw_worksheet *worksheet, lxw_row_t first_row, lxw_col_t first_col, lxw_row_t last_row, lxw_col_t last_col, lxw_table_options *options)</div><div class="ttdoc">Add an Excel table to a worksheet.</div></div>
 </div><!-- fragment --><p>If you override the table name you must ensure that it doesn't clash with an existing table name and that it follows Excel's requirements for table names, see the Microsoft Office documentation on [Naming an Excel Table] (<a href="https://support.microsoft.com/en-us/office/rename-an-excel-table-fbf49a4f-82a3-43eb-8ba2-44d21233b114">https://support.microsoft.com/en-us/office/rename-an-excel-table-fbf49a4f-82a3-43eb-8ba2-44d21233b114</a>). </p>
@@ -148,7 +148,7 @@ Data Fields</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a9ef4ac84328375637bcc60916adbcfa5">worksheet_add_table</a>(worksheet, <a class="code hl_define" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;B4:F7&quot;</span>), &amp;options);</div>
 <div class="ttc" id="acommon_8h_html_a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf"><div class="ttname"><a href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a></div><div class="ttdeci">@ LXW_TRUE</div><div class="ttdef"><b>Definition:</b> common.h:54</div></div>
-<div class="ttc" id="astructlxw__table__options_html_a71a8f836e692157f4234c40252504ba5"><div class="ttname"><a href="structlxw__table__options.html#a71a8f836e692157f4234c40252504ba5">lxw_table_options::no_header_row</a></div><div class="ttdeci">uint8_t no_header_row</div><div class="ttdef"><b>Definition:</b> worksheet.h:1460</div></div>
+<div class="ttc" id="astructlxw__table__options_html_a71a8f836e692157f4234c40252504ba5"><div class="ttname"><a href="structlxw__table__options.html#a71a8f836e692157f4234c40252504ba5">lxw_table_options::no_header_row</a></div><div class="ttdeci">uint8_t no_header_row</div><div class="ttdef"><b>Definition:</b> worksheet.h:1462</div></div>
 </div><!-- fragment --><div class="image">
 <img src="tables4.png" alt=""/>
 </div>
@@ -173,7 +173,7 @@ Data Fields</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="structlxw__table__options.html">lxw_table_options</a> options = {.<a class="code hl_variable" href="structlxw__table__options.html#ad9a346505074cb75fbb793f1b3c841f1">no_autofilter</a> = <a class="code hl_enumvalue" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a9ef4ac84328375637bcc60916adbcfa5">worksheet_add_table</a>(worksheet, <a class="code hl_define" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;B3:F7&quot;</span>), &amp;options);</div>
-<div class="ttc" id="astructlxw__table__options_html_ad9a346505074cb75fbb793f1b3c841f1"><div class="ttname"><a href="structlxw__table__options.html#ad9a346505074cb75fbb793f1b3c841f1">lxw_table_options::no_autofilter</a></div><div class="ttdeci">uint8_t no_autofilter</div><div class="ttdef"><b>Definition:</b> worksheet.h:1478</div></div>
+<div class="ttc" id="astructlxw__table__options_html_ad9a346505074cb75fbb793f1b3c841f1"><div class="ttname"><a href="structlxw__table__options.html#ad9a346505074cb75fbb793f1b3c841f1">lxw_table_options::no_autofilter</a></div><div class="ttdeci">uint8_t no_autofilter</div><div class="ttdef"><b>Definition:</b> worksheet.h:1480</div></div>
 </div><!-- fragment --><div class="image">
 <img src="tables3.png" alt=""/>
 </div>
@@ -198,7 +198,7 @@ Data Fields</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="structlxw__table__options.html">lxw_table_options</a> options = {.<a class="code hl_variable" href="structlxw__table__options.html#a54e64375d179fbb5e07ae867b2547871">no_banded_rows</a> = <a class="code hl_enumvalue" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a9ef4ac84328375637bcc60916adbcfa5">worksheet_add_table</a>(worksheet, <a class="code hl_define" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;B3:F7&quot;</span>), &amp;options);</div>
-<div class="ttc" id="astructlxw__table__options_html_a54e64375d179fbb5e07ae867b2547871"><div class="ttname"><a href="structlxw__table__options.html#a54e64375d179fbb5e07ae867b2547871">lxw_table_options::no_banded_rows</a></div><div class="ttdeci">uint8_t no_banded_rows</div><div class="ttdef"><b>Definition:</b> worksheet.h:1493</div></div>
+<div class="ttc" id="astructlxw__table__options_html_a54e64375d179fbb5e07ae867b2547871"><div class="ttname"><a href="structlxw__table__options.html#a54e64375d179fbb5e07ae867b2547871">lxw_table_options::no_banded_rows</a></div><div class="ttdeci">uint8_t no_banded_rows</div><div class="ttdef"><b>Definition:</b> worksheet.h:1495</div></div>
 </div><!-- fragment --><div class="image">
 <img src="tables6.png" alt=""/>
 </div>
@@ -222,7 +222,7 @@ Data Fields</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="structlxw__table__options.html">lxw_table_options</a> options = {.<a class="code hl_variable" href="structlxw__table__options.html#af8e38b77b1c8eea34f8e74e3867fadcc">banded_columns</a> = <a class="code hl_enumvalue" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a9ef4ac84328375637bcc60916adbcfa5">worksheet_add_table</a>(worksheet, <a class="code hl_define" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;B3:F7&quot;</span>), &amp;options);</div>
-<div class="ttc" id="astructlxw__table__options_html_af8e38b77b1c8eea34f8e74e3867fadcc"><div class="ttname"><a href="structlxw__table__options.html#af8e38b77b1c8eea34f8e74e3867fadcc">lxw_table_options::banded_columns</a></div><div class="ttdeci">uint8_t banded_columns</div><div class="ttdef"><b>Definition:</b> worksheet.h:1508</div></div>
+<div class="ttc" id="astructlxw__table__options_html_af8e38b77b1c8eea34f8e74e3867fadcc"><div class="ttname"><a href="structlxw__table__options.html#af8e38b77b1c8eea34f8e74e3867fadcc">lxw_table_options::banded_columns</a></div><div class="ttdeci">uint8_t banded_columns</div><div class="ttdef"><b>Definition:</b> worksheet.h:1510</div></div>
 </div><!-- fragment --><p>The banded columns formatting is shown in the image in the previous section above. </p>
 
 </div>
@@ -242,7 +242,7 @@ Data Fields</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="structlxw__table__options.html">lxw_table_options</a> options = {.<a class="code hl_variable" href="structlxw__table__options.html#a410c3477ba221f226202fc919ec890f6">first_column</a> = <a class="code hl_enumvalue" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>, .last_column = <a class="code hl_enumvalue" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a9ef4ac84328375637bcc60916adbcfa5">worksheet_add_table</a>(worksheet, <a class="code hl_define" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;B3:F7&quot;</span>), &amp;options);</div>
-<div class="ttc" id="astructlxw__table__options_html_a410c3477ba221f226202fc919ec890f6"><div class="ttname"><a href="structlxw__table__options.html#a410c3477ba221f226202fc919ec890f6">lxw_table_options::first_column</a></div><div class="ttdeci">uint8_t first_column</div><div class="ttdef"><b>Definition:</b> worksheet.h:1524</div></div>
+<div class="ttc" id="astructlxw__table__options_html_a410c3477ba221f226202fc919ec890f6"><div class="ttname"><a href="structlxw__table__options.html#a410c3477ba221f226202fc919ec890f6">lxw_table_options::first_column</a></div><div class="ttdeci">uint8_t first_column</div><div class="ttdef"><b>Definition:</b> worksheet.h:1526</div></div>
 </div><!-- fragment --><div class="image">
 <img src="tables5.png" alt=""/>
 </div>
@@ -288,7 +288,7 @@ Data Fields</h2></td></tr>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a9ef4ac84328375637bcc60916adbcfa5">worksheet_add_table</a>(worksheet, <a class="code hl_define" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;B3:G8&quot;</span>), &amp;options);</div>
-<div class="ttc" id="astructlxw__table__options_html_a4588418abeb66c140b0883700a36efb8"><div class="ttname"><a href="structlxw__table__options.html#a4588418abeb66c140b0883700a36efb8">lxw_table_options::style_type</a></div><div class="ttdeci">uint8_t style_type</div><div class="ttdef"><b>Definition:</b> worksheet.h:1597</div></div>
+<div class="ttc" id="astructlxw__table__options_html_a4588418abeb66c140b0883700a36efb8"><div class="ttname"><a href="structlxw__table__options.html#a4588418abeb66c140b0883700a36efb8">lxw_table_options::style_type</a></div><div class="ttdeci">uint8_t style_type</div><div class="ttdef"><b>Definition:</b> worksheet.h:1599</div></div>
 <div class="ttc" id="aworksheet_8h_html_acb2e6f3a40ea8d6af4db5129ec4b6cb4ac1acf71f37929e57efca49a02105f304"><div class="ttname"><a href="worksheet_8h.html#acb2e6f3a40ea8d6af4db5129ec4b6cb4ac1acf71f37929e57efca49a02105f304">LXW_TABLE_STYLE_TYPE_LIGHT</a></div><div class="ttdeci">@ LXW_TABLE_STYLE_TYPE_LIGHT</div><div class="ttdef"><b>Definition:</b> worksheet.h:549</div></div>
 </div><!-- fragment --><div class="image">
 <img src="tables11.png" alt=""/>
@@ -352,7 +352,7 @@ Data Fields</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="structlxw__table__options.html">lxw_table_options</a> options = {.<a class="code hl_variable" href="structlxw__table__options.html#af74082649fea97fdd1aa5f14b0050256">total_row</a> = <a class="code hl_enumvalue" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="worksheet_8h.html#a9ef4ac84328375637bcc60916adbcfa5">worksheet_add_table</a>(worksheet, <a class="code hl_define" href="utility_8h.html#a4dbbdfc9b616195c799dee78e727cecc">RANGE</a>(<span class="stringliteral">&quot;B3:G8&quot;</span>), &amp;options);</div>
-<div class="ttc" id="astructlxw__table__options_html_af74082649fea97fdd1aa5f14b0050256"><div class="ttname"><a href="structlxw__table__options.html#af74082649fea97fdd1aa5f14b0050256">lxw_table_options::total_row</a></div><div class="ttdeci">uint8_t total_row</div><div class="ttdef"><b>Definition:</b> worksheet.h:1620</div></div>
+<div class="ttc" id="astructlxw__table__options_html_af74082649fea97fdd1aa5f14b0050256"><div class="ttname"><a href="structlxw__table__options.html#af74082649fea97fdd1aa5f14b0050256">lxw_table_options::total_row</a></div><div class="ttdeci">uint8_t total_row</div><div class="ttdef"><b>Definition:</b> worksheet.h:1622</div></div>
 </div><!-- fragment --><div class="image">
 <img src="tables9.png" alt=""/>
 </div>
