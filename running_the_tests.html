@@ -78,6 +78,7 @@ $(function() {
 <li class="level1"><a href="#tests_">Unit Tests</a></li>
 <li class="level1"><a href="#tests_cmake">Testing with CMake</a></li>
 <li class="level1"><a href="#tests_valgrind">Valgrind Tests</a></li>
+<li class="level1"><a href="#static_analysis">Static Analysis</a></li>
 <li class="level1"><a href="#tests_ci">GitHub Actions Continuous Integration</a></li>
 </ul>
 </div>
@@ -141,7 +142,14 @@ Valgrind Tests</h1>
 <p>The functional tests and examples can be run under <a href="http://valgrind.org">Valgrind</a> to verify that there are no memory leaks.</p>
 <p>Install <code>valgrind</code> as follows: </p><pre class="fragment">apt-get install -y valgrind
 </pre><p> Then run the tests: </p><pre class="fragment">make test_valgrind
-</pre><h1><a class="anchor" id="tests_ci"></a>
+</pre><h1><a class="anchor" id="static_analysis"></a>
+Static Analysis</h1>
+<p>For Static Analyis Libxlsxwriter uses:</p>
+<ul>
+<li><a href="https://scan.coverity.com/projects/libxlsxwriter">Coverity</a>.</li>
+<li><a href="https://pvs-studio.com/en/pvs-studio/?utm_source=website&amp;utm_medium=github&amp;utm_campaign=open_source">PVS-Studio</a> - static analyzer for C, C++, C#, and Java code.</li>
+</ul>
+<h1><a class="anchor" id="tests_ci"></a>
 GitHub Actions Continuous Integration</h1>
 <p>Libxlsxwriter is configured to run all these tests with <a href="https://github.com/jmcnamara/libxlsxwriter/actions">GitHub Actions Continuous Integration</a> for each commit.</p>
 <p>Next: <a class="el" href="faq.html">Frequently Asked Questions</a> </p>
