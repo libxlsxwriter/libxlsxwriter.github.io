@@ -135,6 +135,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a471ca432e429505c79982ca5aecd1db0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format_8h.html#a471ca432e429505c79982ca5aecd1db0">format_set_font_script</a> (<a class="el" href="structlxw__format.html">lxw_format</a> *format, uint8_t style)</td></tr>
 <tr class="memdesc:a471ca432e429505c79982ca5aecd1db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the superscript/subscript property of the font.  <br /></td></tr>
 <tr class="separator:a471ca432e429505c79982ca5aecd1db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af57968612135a469eb85818d0e18beac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format_8h.html#af57968612135a469eb85818d0e18beac">format_set_font_family</a> (<a class="el" href="structlxw__format.html">lxw_format</a> *format, uint8_t value)</td></tr>
+<tr class="memdesc:af57968612135a469eb85818d0e18beac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Format font family property.  <br /></td></tr>
+<tr class="separator:af57968612135a469eb85818d0e18beac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b0f95cbbfb2c1da919f7af481e7d36e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format_8h.html#a1b0f95cbbfb2c1da919f7af481e7d36e">format_set_font_charset</a> (<a class="el" href="structlxw__format.html">lxw_format</a> *format, uint8_t value)</td></tr>
+<tr class="memdesc:a1b0f95cbbfb2c1da919f7af481e7d36e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Format font character set property.  <br /></td></tr>
+<tr class="separator:a1b0f95cbbfb2c1da919f7af481e7d36e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af77bbd0003344cb16d455c7fb709e16c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format_8h.html#af77bbd0003344cb16d455c7fb709e16c">format_set_num_format</a> (<a class="el" href="structlxw__format.html">lxw_format</a> *format, const char *num_format)</td></tr>
 <tr class="memdesc:af77bbd0003344cb16d455c7fb709e16c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number format for a cell.  <br /></td></tr>
 <tr class="separator:af77bbd0003344cb16d455c7fb709e16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -538,6 +544,82 @@ Functions</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="rich_strings_8c-example.html#a13">rich_strings.c</a>.</dd>
 </dl>
 
+</div>
+</div>
+<a id="af57968612135a469eb85818d0e18beac" name="af57968612135a469eb85818d0e18beac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af57968612135a469eb85818d0e18beac">&#9670;&#160;</a></span>format_set_font_family()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_set_font_family </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__format.html">lxw_format</a> *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>Pointer to a Format instance. </td></tr>
+    <tr><td class="paramname">value</td><td>The font family index.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the font family. This is usually an integer in the range 1-4. This function is implemented for completeness but is rarely used in practice.</p>
+<div class="fragment"><div class="line"><a class="code hl_function" href="format_8h.html#af57968612135a469eb85818d0e18beac">format_set_font_family</a>(format, 178);</div>
+<div class="ttc" id="aformat_8h_html_af57968612135a469eb85818d0e18beac"><div class="ttname"><a href="format_8h.html#af57968612135a469eb85818d0e18beac">format_set_font_family</a></div><div class="ttdeci">void format_set_font_family(lxw_format *format, uint8_t value)</div><div class="ttdoc">Set the Format font family property.</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a1b0f95cbbfb2c1da919f7af481e7d36e" name="a1b0f95cbbfb2c1da919f7af481e7d36e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b0f95cbbfb2c1da919f7af481e7d36e">&#9670;&#160;</a></span>format_set_font_charset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void format_set_font_charset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__format.html">lxw_format</a> *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>Pointer to a Format instance. </td></tr>
+    <tr><td class="paramname">value</td><td>The font character set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the font character set property. This function is implemented for completeness but is rarely used in practice.</p>
+<div class="fragment"><div class="line"><a class="code hl_function" href="format_8h.html#a1b0f95cbbfb2c1da919f7af481e7d36e">format_set_font_charset</a>(format, 178);</div>
+<div class="ttc" id="aformat_8h_html_a1b0f95cbbfb2c1da919f7af481e7d36e"><div class="ttname"><a href="format_8h.html#a1b0f95cbbfb2c1da919f7af481e7d36e">format_set_font_charset</a></div><div class="ttdeci">void format_set_font_charset(lxw_format *format, uint8_t value)</div><div class="ttdoc">Set the Format font character set property.</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="af77bbd0003344cb16d455c7fb709e16c" name="af77bbd0003344cb16d455c7fb709e16c"></a>
@@ -2240,7 +2322,7 @@ Enumerations</h2></td></tr>
 <!-- HTML footer for doxygen 1.8.20-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Copyright 2014-2024 John McNamara.
+Copyright 2014-2025 John McNamara.
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
