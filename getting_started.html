@@ -142,7 +142,8 @@ make
 </pre><p> This will create a static and dynamic library in the local <code>./lib</code> directory: </p><pre class="fragment">ls lib
 libxlsxwriter.a     libxlsxwriter.so
 </pre><p> To see a verbose summary of the compilation steps use <code>V=1</code>: </p><pre class="fragment">make V=1
-</pre><p> With CMake you can build the library as follows: </p><pre class="fragment">cd cmake # Or another sub-directory.
+</pre><p> With CMake you can build the library as follows: </p><pre class="fragment">mkdir build # Or another sub-directory.
+cd build
 cmake ..
 cmake --build .
 </pre> <h2><a class="anchor" id="gsg_examples"></a>
@@ -151,7 +152,8 @@ Build the examples</h2>
 make examples
 
 # or CMake:
-cd cmake
+mkdir build
+cd build
 cmake .. -DBUILD_EXAMPLES=ON
 cmake --build .
 
@@ -166,7 +168,8 @@ Install the library</h2>
 </pre><p> The files are installed to <code>/usr/local</code> by default but this can be overridden by using the <code>PREFIX</code> environmental variable: </p><pre class="fragment">make install PREFIX=/usr/third_party
 </pre><p> A staging directory can be set with <code>DESTDIR</code> which is prepended to all install paths. This is a an occasionally useful feature for packaging: </p><pre class="fragment">make install PREFIX=/usr/third_party DESTDIR=./staging/
 </pre><p> This would build and link the code with <code>/usr/third_party</code> as the installation location but actually install to <code>./staging/usr/third_party</code>.</p>
-<p>With CMake you can install the library as follows: </p><pre class="fragment">cd cmake
+<p>With CMake you can install the library as follows: </p><pre class="fragment">mkdir build
+cd build
 cmake ..
 cmake --build . --target install
 </pre> <h2><a class="anchor" id="gsg_using"></a>
@@ -425,7 +428,8 @@ Compilation Options</h1>
 make examples USE_DTOA_LIBRARY=1
 
 # CMake
-cd cmake
+mkdir build
+cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_EXAMPLES=ON -DUSE_DTOA_LIBRARY=ON
 cmake --build . --config Release
 </pre><p> Each of the options are explained below:</p>
@@ -503,7 +507,8 @@ x86_64 arm64
 
 $ lipo -archs lib/libxlsxwriter.dylib
 x86_64 arm64
-</pre><p> Or with CMake: </p><pre class="fragment">cd cmake
+</pre><p> Or with CMake: </p><pre class="fragment">mkdir build
+cd build
 cmake .. -DCMAKE_OSX_ARCHITECTURES="x86_64;arm64"
 make
 </pre><h2><a class="anchor" id="gsg_minimal"></a>
@@ -519,7 +524,8 @@ Minimal dependency compilation</h2>
 make USE_OPENSSL_MD5=1 USE_SYSTEM_MINIZIP=1 USE_STANDARD_TMPFILE=1
 
 # CMake:
-cd cmake
+mkdir build
+cd build
 cmake .. -DUSE_OPENSSL_MD5=ON -DUSE_SYSTEM_MINIZIP=ON -DUSE_STANDARD_TMPFILE=ON
 cmake --build .
 </pre> <h1><a class="anchor" id="gsg_next"></a>

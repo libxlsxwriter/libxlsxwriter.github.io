@@ -132,7 +132,8 @@ RESULTS: 429 tests (429 ok, 0 failed, 0 skipped) ran in 153 ms
 </pre><p> Both functional and unit test can be run together: </p><pre class="fragment">$ make test
 </pre> <h1><a class="anchor" id="tests_cmake"></a>
 Testing with CMake</h1>
-<p>You can run the unit and functional tests via CMake as follows: </p><pre class="fragment">cd cmake
+<p>You can run the unit and functional tests via CMake as follows: </p><pre class="fragment">mkdir build
+cd build
 cmake .. -DBUILD_TESTS=ON
 cmake --build .
 ctest -V

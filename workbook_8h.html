@@ -170,6 +170,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8aaade0a24d1b8e10bd5690cb5479de9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a8aaade0a24d1b8e10bd5690cb5479de9">workbook_read_only_recommended</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook)</td></tr>
 <tr class="memdesc:a8aaade0a24d1b8e10bd5690cb5479de9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a recommendation to open the file in "read-only" mode.  <br /></td></tr>
 <tr class="separator:a8aaade0a24d1b8e10bd5690cb5479de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc557e07d3e62a84f57aa56744798db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#aedc557e07d3e62a84f57aa56744798db">workbook_set_size</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, uint16_t width, uint16_t height)</td></tr>
+<tr class="memdesc:aedc557e07d3e62a84f57aa56744798db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size of a workbook window.  <br /></td></tr>
+<tr class="separator:aedc557e07d3e62a84f57aa56744798db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a89d256eddbfc5bbac0925e0d38b8139c" name="a89d256eddbfc5bbac0925e0d38b8139c"></a>
@@ -1226,6 +1229,50 @@ This function does an ASCII lowercase string comparison to determine if the shee
 <img src="read_only.png" alt=""/>
 </div>
  
+</div>
+</div>
+<a id="aedc557e07d3e62a84f57aa56744798db" name="aedc557e07d3e62a84f57aa56744798db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedc557e07d3e62a84f57aa56744798db">&#9670;&#160;</a></span>workbook_set_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void workbook_set_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__workbook.html">lxw_workbook</a> *&#160;</td>
+          <td class="paramname"><em>workbook</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">workbook</td><td>Pointer to a <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook.">lxw_workbook</a> instance. </td></tr>
+    <tr><td class="paramname">width</td><td>Width of the window in pixels. </td></tr>
+    <tr><td class="paramname">height</td><td>Height of the window in pixels.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the size of a workbook window. This is generally only useful on macOS since Microsoft Windows uses the window size from the last time an Excel file was opened/saved. The default size is 1073 x 644 pixels.</p>
+<p>The resulting pixel sizes may not exactly match the target screen and resolution since it is based on the original Excel for Windows sizes. Some trial and error may be required to get an exact size. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
