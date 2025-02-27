@@ -78,10 +78,12 @@ $(function() {
 <ul>
 <li>Added the <code><a class="el" href="workbook_8h.html#aedc557e07d3e62a84f57aa56744798db" title="Set the size of a workbook window.">workbook_set_size()</a></code> function to set the size of the window when the file is opened. This is generally only useful on macOS since Microsoft Windows uses the window size from the last time an Excel file was opened/saved. Feature request <a href="https://github.com/jmcnamara/libxlsxwriter/issues/472">#472</a>.</li>
 <li>Improved the cmake build support for using the <code>minizip</code> library. Pull request <a href="https://github.com/jmcnamara/libxlsxwriter/issues/471">#471</a>.</li>
+<li>Fix buffer overflow in Table formula expansion.</li>
 </ul>
 <h3><a class="anchor" id="autotoc_md1"></a>
 Packagers:</h3>
 <ul>
+<li>Skip this version. The cmake fix below will have to be reworked.</li>
 <li>This is serial version 1.2.1. This is not a semver version.</li>
 <li>This is shared object library version <code>libxlsxwriter.so.8</code>. This should be updated automatically via <code>make</code> and <code>cmake</code> as part of the build process.</li>
 <li>This version tries to improve the overall <code>cmake</code> build process when using minizip via the <code>-DUSE_SYSTEM_MINIZIP=ON</code> configuration option.</li>
