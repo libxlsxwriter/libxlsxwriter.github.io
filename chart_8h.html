@@ -111,7 +111,7 @@ $(function() {
 <div class="line">}</div>
 <div class="ttc" id="achart_8h_html_a80c6b173ab45283b9c9958f27d1beadc"><div class="ttname"><a href="chart_8h.html#a80c6b173ab45283b9c9958f27d1beadc">chart_add_series</a></div><div class="ttdeci">lxw_chart_series * chart_add_series(lxw_chart *chart, const char *categories, const char *values)</div><div class="ttdoc">Add a data series to a chart.</div></div>
 <div class="ttc" id="achart_8h_html_a9f577b0fcabe6cac9118a26a483fe85cafa7f69bde9c99b5818297c64e8b9070a"><div class="ttname"><a href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85cafa7f69bde9c99b5818297c64e8b9070a">LXW_CHART_COLUMN</a></div><div class="ttdeci">@ LXW_CHART_COLUMN</div><div class="ttdef"><b>Definition:</b> chart.h:114</div></div>
-<div class="ttc" id="astructlxw__chart_html"><div class="ttname"><a href="structlxw__chart.html">lxw_chart</a></div><div class="ttdoc">Struct to represent an Excel chart.</div><div class="ttdef"><b>Definition:</b> chart.h:1091</div></div>
+<div class="ttc" id="astructlxw__chart_html"><div class="ttname"><a href="structlxw__chart.html">lxw_chart</a></div><div class="ttdoc">Struct to represent an Excel chart.</div><div class="ttdef"><b>Definition:</b> chart.h:1165</div></div>
 <div class="ttc" id="astructlxw__workbook_html"><div class="ttname"><a href="structlxw__workbook.html">lxw_workbook</a></div><div class="ttdoc">Struct to represent an Excel workbook.</div><div class="ttdef"><b>Definition:</b> workbook.h:293</div></div>
 <div class="ttc" id="astructlxw__worksheet_html"><div class="ttname"><a href="structlxw__worksheet.html">lxw_worksheet</a></div><div class="ttdoc">Struct to represent an Excel worksheet.</div><div class="ttdef"><b>Definition:</b> worksheet.h:2115</div></div>
 <div class="ttc" id="autility_8h_html_ad510ac6df573d23203374e24dba373d2"><div class="ttname"><a href="utility_8h.html#ad510ac6df573d23203374e24dba373d2">CELL</a></div><div class="ttdeci">#define CELL(cell)</div><div class="ttdoc">Convert an Excel A1 cell string into a (row, col) pair.</div><div class="ttdef"><b>Definition:</b> utility.h:46</div></div>
@@ -263,6 +263,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae3cfd6a286f3b717e68d4bca348387ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ae3cfd6a286f3b717e68d4bca348387ff">chart_axis_set_name_range</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, const char *sheetname, <a class="el" href="common_8h.html#aaf33b4e2179dcc466359277210774ce3">lxw_row_t</a> row, <a class="el" href="common_8h.html#a4fedd8dede664b070e84e850a3f92fd2">lxw_col_t</a> col)</td></tr>
 <tr class="memdesc:ae3cfd6a286f3b717e68d4bca348387ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a chart axis name formula using row and column values.  <br /></td></tr>
 <tr class="separator:ae3cfd6a286f3b717e68d4bca348387ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40c510205afc05b09b9f9a7a18c5a3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ae40c510205afc05b09b9f9a7a18c5a3f">chart_axis_set_name_layout</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, <a class="el" href="structlxw__chart__layout.html">lxw_chart_layout</a> *layout)</td></tr>
+<tr class="memdesc:ae40c510205afc05b09b9f9a7a18c5a3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the manual position of the chart axis name.  <br /></td></tr>
+<tr class="separator:ae40c510205afc05b09b9f9a7a18c5a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4be8325cbcaeddda0a92f1809d8156d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ac4be8325cbcaeddda0a92f1809d8156d">chart_axis_set_name_font</a> (<a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *axis, <a class="el" href="structlxw__chart__font.html">lxw_chart_font</a> *font)</td></tr>
 <tr class="memdesc:ac4be8325cbcaeddda0a92f1809d8156d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the font properties for a chart axis name.  <br /></td></tr>
 <tr class="separator:ac4be8325cbcaeddda0a92f1809d8156d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -362,9 +365,17 @@ Functions</h2></td></tr>
 <tr class="memitem:a3a0a7351b8ad164d917877ae8a4a7622"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a3a0a7351b8ad164d917877ae8a4a7622">chart_title_off</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart)</td></tr>
 <tr class="memdesc:a3a0a7351b8ad164d917877ae8a4a7622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off an automatic chart title.  <br /></td></tr>
 <tr class="separator:a3a0a7351b8ad164d917877ae8a4a7622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1879cefec81fcb6419232828c4f6ba7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a1879cefec81fcb6419232828c4f6ba7d">chart_title_set_layout</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, <a class="el" href="structlxw__chart__layout.html">lxw_chart_layout</a> *layout)</td></tr>
+<tr class="memdesc:a1879cefec81fcb6419232828c4f6ba7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the manual position of the chart title.  <br /></td></tr>
+<tr class="separator:a1879cefec81fcb6419232828c4f6ba7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa75ea98312256dad09707a99b66a539b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aa75ea98312256dad09707a99b66a539b">chart_title_set_overlay</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, uint8_t overlay)</td></tr>
+<tr class="separator:aa75ea98312256dad09707a99b66a539b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1382251c31fd8f97e19048acf5db0a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#af1382251c31fd8f97e19048acf5db0a1">chart_legend_set_position</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, uint8_t position)</td></tr>
 <tr class="memdesc:af1382251c31fd8f97e19048acf5db0a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the chart legend.  <br /></td></tr>
 <tr class="separator:af1382251c31fd8f97e19048acf5db0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a031505bed7fd3d22c7f1c86b976759e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a031505bed7fd3d22c7f1c86b976759e7">chart_legend_set_layout</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, <a class="el" href="structlxw__chart__layout.html">lxw_chart_layout</a> *layout)</td></tr>
+<tr class="memdesc:a031505bed7fd3d22c7f1c86b976759e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the manual layout of the chart legend.  <br /></td></tr>
+<tr class="separator:a031505bed7fd3d22c7f1c86b976759e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac24ae880bab2fa949d8b84a25fc9a457"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#ac24ae880bab2fa949d8b84a25fc9a457">chart_legend_set_font</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, <a class="el" href="structlxw__chart__font.html">lxw_chart_font</a> *font)</td></tr>
 <tr class="memdesc:ac24ae880bab2fa949d8b84a25fc9a457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the font properties for a chart legend.  <br /></td></tr>
 <tr class="separator:ac24ae880bab2fa949d8b84a25fc9a457"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -389,6 +400,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a740b9fea5de2148ec3df56f7f131fc95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a740b9fea5de2148ec3df56f7f131fc95">chart_plotarea_set_pattern</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, <a class="el" href="structlxw__chart__pattern.html">lxw_chart_pattern</a> *pattern)</td></tr>
 <tr class="memdesc:a740b9fea5de2148ec3df56f7f131fc95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pattern properties for a plotarea.  <br /></td></tr>
 <tr class="separator:a740b9fea5de2148ec3df56f7f131fc95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fbc35feb0820b8c3dd3ac4feb80a6f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a1fbc35feb0820b8c3dd3ac4feb80a6f0">chart_plotarea_set_layout</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, <a class="el" href="structlxw__chart__layout.html">lxw_chart_layout</a> *layout)</td></tr>
+<tr class="memdesc:a1fbc35feb0820b8c3dd3ac4feb80a6f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the manual layout of the chart plotarea.  <br /></td></tr>
+<tr class="separator:a1fbc35feb0820b8c3dd3ac4feb80a6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6865755f0adb52e41466a6576a8a030e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a6865755f0adb52e41466a6576a8a030e">chart_set_style</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, uint8_t style_id)</td></tr>
 <tr class="memdesc:a6865755f0adb52e41466a6576a8a030e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the chart style type.  <br /></td></tr>
 <tr class="separator:a6865755f0adb52e41466a6576a8a030e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -490,7 +504,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="chart_8h.html#ac29dbe36b53288990ec0b20dddbaf967">chart_series_set_values</a>(    series, <span class="stringliteral">&quot;Sheet1&quot;</span>, 1, 2, 6, 2); <span class="comment">// &quot;=Sheet1!$C$2:$C$7&quot;</span></div>
 <div class="ttc" id="achart_8h_html_abfde30539e8538e64eee370797b4abc5"><div class="ttname"><a href="chart_8h.html#abfde30539e8538e64eee370797b4abc5">chart_series_set_categories</a></div><div class="ttdeci">void chart_series_set_categories(lxw_chart_series *series, const char *sheetname, lxw_row_t first_row, lxw_col_t first_col, lxw_row_t last_row, lxw_col_t last_col)</div><div class="ttdoc">Set a series &quot;categories&quot; range using row and column values.</div></div>
 <div class="ttc" id="achart_8h_html_ac29dbe36b53288990ec0b20dddbaf967"><div class="ttname"><a href="chart_8h.html#ac29dbe36b53288990ec0b20dddbaf967">chart_series_set_values</a></div><div class="ttdeci">void chart_series_set_values(lxw_chart_series *series, const char *sheetname, lxw_row_t first_row, lxw_col_t first_col, lxw_row_t last_row, lxw_col_t last_col)</div><div class="ttdoc">Set a series &quot;values&quot; range using row and column values.</div></div>
-<div class="ttc" id="astructlxw__chart__series_html"><div class="ttname"><a href="structlxw__chart__series.html">lxw_chart_series</a></div><div class="ttdoc">Struct to represent an Excel chart data series.</div><div class="ttdef"><b>Definition:</b> chart.h:961</div></div>
+<div class="ttc" id="astructlxw__chart__series_html"><div class="ttname"><a href="structlxw__chart__series.html">lxw_chart_series</a></div><div class="ttdoc">Struct to represent an Excel chart data series.</div><div class="ttdef"><b>Definition:</b> chart.h:1035</div></div>
 </div><!-- fragment --><p>As shown in the previous example the return value from <code>chart_add_series()</code> is a <a class="el" href="structlxw__chart__series.html" title="Struct to represent an Excel chart data series.">lxw_chart_series</a> pointer. This can be used in other functions that configure a series.</p>
 <p>More than one series can be added to a chart. The series numbering and order in the Excel chart will be the same as the order in which they are added in libxlsxwriter:</p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="chart_8h.html#a80c6b173ab45283b9c9958f27d1beadc">chart_add_series</a>(chart, NULL, <span class="stringliteral">&quot;Sheet1!$A$1:$A$5&quot;</span>);</div>
@@ -1241,8 +1255,8 @@ Functions</h2></td></tr>
 <div class="line">    <span class="comment">/* Add the points to the series. */</span></div>
 <div class="line">    <a class="code hl_function" href="chart_8h.html#a0e27dc551820c1d8d0e06cdd393f4b78">chart_series_set_points</a>(series, points);</div>
 <div class="ttc" id="achart_8h_html_a0e27dc551820c1d8d0e06cdd393f4b78"><div class="ttname"><a href="chart_8h.html#a0e27dc551820c1d8d0e06cdd393f4b78">chart_series_set_points</a></div><div class="ttdeci">lxw_error chart_series_set_points(lxw_chart_series *series, lxw_chart_point *points[])</div><div class="ttdoc">Set the formatting for points in the series.</div></div>
-<div class="ttc" id="astructlxw__chart__point_html"><div class="ttname"><a href="structlxw__chart__point.html">lxw_chart_point</a></div><div class="ttdoc">Struct to represent an Excel chart data point.</div><div class="ttdef"><b>Definition:</b> chart.h:781</div></div>
-<div class="ttc" id="astructlxw__chart__point_html_a99ad02687c88e7ac4625fa8c12f6ba48"><div class="ttname"><a href="structlxw__chart__point.html#a99ad02687c88e7ac4625fa8c12f6ba48">lxw_chart_point::fill</a></div><div class="ttdeci">lxw_chart_fill * fill</div><div class="ttdef"><b>Definition:</b> chart.h:787</div></div>
+<div class="ttc" id="astructlxw__chart__point_html"><div class="ttname"><a href="structlxw__chart__point.html">lxw_chart_point</a></div><div class="ttdoc">Struct to represent an Excel chart data point.</div><div class="ttdef"><b>Definition:</b> chart.h:848</div></div>
+<div class="ttc" id="astructlxw__chart__point_html_a99ad02687c88e7ac4625fa8c12f6ba48"><div class="ttname"><a href="structlxw__chart__point.html#a99ad02687c88e7ac4625fa8c12f6ba48">lxw_chart_point::fill</a></div><div class="ttdeci">lxw_chart_fill * fill</div><div class="ttdef"><b>Definition:</b> chart.h:854</div></div>
 </div><!-- fragment --> <div class="image">
 <img src="chart_points1.png" alt=""/>
 </div>
@@ -1453,8 +1467,8 @@ Functions</h2></td></tr>
 <div class="line"><span class="comment">// Set the custom labels.</span></div>
 <div class="line"><a class="code hl_function" href="chart_8h.html#adcaf0404fe7cd5c9e49a7b7025c64a35">chart_series_set_labels_custom</a>(series, data_labels);</div>
 <div class="ttc" id="achart_8h_html_adcaf0404fe7cd5c9e49a7b7025c64a35"><div class="ttname"><a href="chart_8h.html#adcaf0404fe7cd5c9e49a7b7025c64a35">chart_series_set_labels_custom</a></div><div class="ttdeci">lxw_error chart_series_set_labels_custom(lxw_chart_series *series, lxw_chart_data_label *data_labels[])</div><div class="ttdoc">Set the properties for data labels in a series.</div></div>
-<div class="ttc" id="astructlxw__chart__data__label_html"><div class="ttname"><a href="structlxw__chart__data__label.html">lxw_chart_data_label</a></div><div class="ttdoc">Struct to represent an Excel chart data label.</div><div class="ttdef"><b>Definition:</b> chart.h:800</div></div>
-<div class="ttc" id="astructlxw__chart__data__label_html_a7da4dd29b53da20420752bfe2faf6875"><div class="ttname"><a href="structlxw__chart__data__label.html#a7da4dd29b53da20420752bfe2faf6875">lxw_chart_data_label::value</a></div><div class="ttdeci">const char * value</div><div class="ttdef"><b>Definition:</b> chart.h:804</div></div>
+<div class="ttc" id="astructlxw__chart__data__label_html"><div class="ttname"><a href="structlxw__chart__data__label.html">lxw_chart_data_label</a></div><div class="ttdoc">Struct to represent an Excel chart data label.</div><div class="ttdef"><b>Definition:</b> chart.h:867</div></div>
+<div class="ttc" id="astructlxw__chart__data__label_html_a7da4dd29b53da20420752bfe2faf6875"><div class="ttname"><a href="structlxw__chart__data__label.html#a7da4dd29b53da20420752bfe2faf6875">lxw_chart_data_label::value</a></div><div class="ttdeci">const char * value</div><div class="ttdef"><b>Definition:</b> chart.h:871</div></div>
 </div><!-- fragment --><div class="image">
 <img src="chart_data_labels18.png" alt=""/>
 </div>
@@ -1954,13 +1968,13 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="chart_8h.html#a59b3a386d854b9cb5e8bbdf9eef0c97d">chart_series_set_trendline</a>(series, <a class="code hl_enumvalue" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a412a1b24bf43c9de3b2c0445d8e8e93e">LXW_CHART_TRENDLINE_TYPE_LINEAR</a>, 0);</div>
 <div class="ttc" id="achart_8h_html_a59b3a386d854b9cb5e8bbdf9eef0c97d"><div class="ttname"><a href="chart_8h.html#a59b3a386d854b9cb5e8bbdf9eef0c97d">chart_series_set_trendline</a></div><div class="ttdeci">void chart_series_set_trendline(lxw_chart_series *series, uint8_t type, uint8_t value)</div><div class="ttdoc">Turn on a trendline for a chart data series.</div></div>
 <div class="ttc" id="achart_8h_html_a9f577b0fcabe6cac9118a26a483fe85caf309b18af571c90d3ae052e769d30e6c"><div class="ttname"><a href="chart_8h.html#a9f577b0fcabe6cac9118a26a483fe85caf309b18af571c90d3ae052e769d30e6c">LXW_CHART_LINE</a></div><div class="ttdeci">@ LXW_CHART_LINE</div><div class="ttdef"><b>Definition:</b> chart.h:126</div></div>
-<div class="ttc" id="achart_8h_html_ac4373346b52a625206c7c04ac3d8dba1a412a1b24bf43c9de3b2c0445d8e8e93e"><div class="ttname"><a href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a412a1b24bf43c9de3b2c0445d8e8e93e">LXW_CHART_TRENDLINE_TYPE_LINEAR</a></div><div class="ttdeci">@ LXW_CHART_TRENDLINE_TYPE_LINEAR</div><div class="ttdef"><b>Definition:</b> chart.h:936</div></div>
+<div class="ttc" id="achart_8h_html_ac4373346b52a625206c7c04ac3d8dba1a412a1b24bf43c9de3b2c0445d8e8e93e"><div class="ttname"><a href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1a412a1b24bf43c9de3b2c0445d8e8e93e">LXW_CHART_TRENDLINE_TYPE_LINEAR</a></div><div class="ttdeci">@ LXW_CHART_TRENDLINE_TYPE_LINEAR</div><div class="ttdef"><b>Definition:</b> chart.h:1010</div></div>
 </div><!-- fragment --><div class="image">
 <img src="chart_trendline2.png" alt=""/>
 </div>
 <p>The <code>value</code> parameter corresponds to <em>order</em> for a polynomial trendline and <em>period</em> for a Moving Average trendline. It both cases it must be &gt;= 2. The <code>value</code> parameter is ignored for all other trendlines:</p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="chart_8h.html#a59b3a386d854b9cb5e8bbdf9eef0c97d">chart_series_set_trendline</a>(series, <a class="code hl_enumvalue" href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1ab260b3815f45cbea6ce2b7c0d19157b3">LXW_CHART_TRENDLINE_TYPE_AVERAGE</a>, 2);</div>
-<div class="ttc" id="achart_8h_html_ac4373346b52a625206c7c04ac3d8dba1ab260b3815f45cbea6ce2b7c0d19157b3"><div class="ttname"><a href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1ab260b3815f45cbea6ce2b7c0d19157b3">LXW_CHART_TRENDLINE_TYPE_AVERAGE</a></div><div class="ttdeci">@ LXW_CHART_TRENDLINE_TYPE_AVERAGE</div><div class="ttdef"><b>Definition:</b> chart.h:951</div></div>
+<div class="ttc" id="achart_8h_html_ac4373346b52a625206c7c04ac3d8dba1ab260b3815f45cbea6ce2b7c0d19157b3"><div class="ttname"><a href="chart_8h.html#ac4373346b52a625206c7c04ac3d8dba1ab260b3815f45cbea6ce2b7c0d19157b3">LXW_CHART_TRENDLINE_TYPE_AVERAGE</a></div><div class="ttdeci">@ LXW_CHART_TRENDLINE_TYPE_AVERAGE</div><div class="ttdef"><b>Definition:</b> chart.h:1025</div></div>
 </div><!-- fragment --><div class="image">
 <img src="chart_trendline3.png" alt=""/>
 </div>
@@ -2295,10 +2309,10 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(y_error_bars,</div>
 <div class="line">                            <a class="code hl_enumvalue" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a>, 0);</div>
 <div class="ttc" id="achart_8h_html_a31b72a8b98d7db92c4cc63e226442d0a"><div class="ttname"><a href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a></div><div class="ttdeci">void chart_series_set_error_bars(lxw_series_error_bars *error_bars, uint8_t type, double value)</div></div>
-<div class="ttc" id="achart_8h_html_a78b7d07d421d5339d0e721e28d3dbf2da4ce3511c1f112d18876c00604dfa5306"><div class="ttname"><a href="chart_8h.html#a78b7d07d421d5339d0e721e28d3dbf2da4ce3511c1f112d18876c00604dfa5306">LXW_CHART_ERROR_BAR_AXIS_X</a></div><div class="ttdeci">@ LXW_CHART_ERROR_BAR_AXIS_X</div><div class="ttdef"><b>Definition:</b> chart.h:901</div></div>
-<div class="ttc" id="achart_8h_html_a78b7d07d421d5339d0e721e28d3dbf2da763c0a7dcb94414ee10ae91f5455ac08"><div class="ttname"><a href="chart_8h.html#a78b7d07d421d5339d0e721e28d3dbf2da763c0a7dcb94414ee10ae91f5455ac08">LXW_CHART_ERROR_BAR_AXIS_Y</a></div><div class="ttdeci">@ LXW_CHART_ERROR_BAR_AXIS_Y</div><div class="ttdef"><b>Definition:</b> chart.h:904</div></div>
-<div class="ttc" id="achart_8h_html_a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f"><div class="ttname"><a href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a></div><div class="ttdeci">@ LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</div><div class="ttdef"><b>Definition:</b> chart.h:869</div></div>
-<div class="ttc" id="achart_8h_html_a858b96fd44354565fd9019cdb26149fead7300dcc1274164a42e2359a3dfc1465"><div class="ttname"><a href="chart_8h.html#a858b96fd44354565fd9019cdb26149fead7300dcc1274164a42e2359a3dfc1465">LXW_CHART_ERROR_BAR_TYPE_STD_DEV</a></div><div class="ttdeci">@ LXW_CHART_ERROR_BAR_TYPE_STD_DEV</div><div class="ttdef"><b>Definition:</b> chart.h:878</div></div>
+<div class="ttc" id="achart_8h_html_a78b7d07d421d5339d0e721e28d3dbf2da4ce3511c1f112d18876c00604dfa5306"><div class="ttname"><a href="chart_8h.html#a78b7d07d421d5339d0e721e28d3dbf2da4ce3511c1f112d18876c00604dfa5306">LXW_CHART_ERROR_BAR_AXIS_X</a></div><div class="ttdeci">@ LXW_CHART_ERROR_BAR_AXIS_X</div><div class="ttdef"><b>Definition:</b> chart.h:975</div></div>
+<div class="ttc" id="achart_8h_html_a78b7d07d421d5339d0e721e28d3dbf2da763c0a7dcb94414ee10ae91f5455ac08"><div class="ttname"><a href="chart_8h.html#a78b7d07d421d5339d0e721e28d3dbf2da763c0a7dcb94414ee10ae91f5455ac08">LXW_CHART_ERROR_BAR_AXIS_Y</a></div><div class="ttdeci">@ LXW_CHART_ERROR_BAR_AXIS_Y</div><div class="ttdef"><b>Definition:</b> chart.h:978</div></div>
+<div class="ttc" id="achart_8h_html_a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f"><div class="ttname"><a href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea99f86246aafeee41311ed6681c5b678f">LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</a></div><div class="ttdeci">@ LXW_CHART_ERROR_BAR_TYPE_STD_ERROR</div><div class="ttdef"><b>Definition:</b> chart.h:943</div></div>
+<div class="ttc" id="achart_8h_html_a858b96fd44354565fd9019cdb26149fead7300dcc1274164a42e2359a3dfc1465"><div class="ttname"><a href="chart_8h.html#a858b96fd44354565fd9019cdb26149fead7300dcc1274164a42e2359a3dfc1465">LXW_CHART_ERROR_BAR_TYPE_STD_DEV</a></div><div class="ttdeci">@ LXW_CHART_ERROR_BAR_TYPE_STD_DEV</div><div class="ttdef"><b>Definition:</b> chart.h:952</div></div>
 <div class="ttc" id="achart_8h_html_af19b07f9d67dc838ba6def0351ecc656"><div class="ttname"><a href="chart_8h.html#af19b07f9d67dc838ba6def0351ecc656">chart_series_get_error_bars</a></div><div class="ttdeci">lxw_series_error_bars * chart_series_get_error_bars(lxw_chart_series *series, lxw_chart_error_bar_axis axis_type)</div><div class="ttdoc">Get a pointer to X or Y error bars from a chart series.</div></div>
 </div><!-- fragment --><p>Note, the series error bars can also be accessed directly:</p>
 <div class="fragment"><div class="line"><span class="comment">// Equivalent to the above example, without function calls.</span></div>
@@ -2382,8 +2396,8 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="chart_8h.html#a31b72a8b98d7db92c4cc63e226442d0a">chart_series_set_error_bars</a>(series3-&gt;y_error_bars,</div>
 <div class="line">                            <a class="code hl_enumvalue" href="chart_8h.html#a858b96fd44354565fd9019cdb26149fead7300dcc1274164a42e2359a3dfc1465">LXW_CHART_ERROR_BAR_TYPE_STD_DEV</a>, 1);</div>
-<div class="ttc" id="achart_8h_html_a858b96fd44354565fd9019cdb26149fea49e056be9e39bfca5268ae9eaab11c46"><div class="ttname"><a href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea49e056be9e39bfca5268ae9eaab11c46">LXW_CHART_ERROR_BAR_TYPE_PERCENTAGE</a></div><div class="ttdeci">@ LXW_CHART_ERROR_BAR_TYPE_PERCENTAGE</div><div class="ttdef"><b>Definition:</b> chart.h:875</div></div>
-<div class="ttc" id="achart_8h_html_a858b96fd44354565fd9019cdb26149feaba45d9e553700f3f1a3df0c1f80259c0"><div class="ttname"><a href="chart_8h.html#a858b96fd44354565fd9019cdb26149feaba45d9e553700f3f1a3df0c1f80259c0">LXW_CHART_ERROR_BAR_TYPE_FIXED</a></div><div class="ttdeci">@ LXW_CHART_ERROR_BAR_TYPE_FIXED</div><div class="ttdef"><b>Definition:</b> chart.h:872</div></div>
+<div class="ttc" id="achart_8h_html_a858b96fd44354565fd9019cdb26149fea49e056be9e39bfca5268ae9eaab11c46"><div class="ttname"><a href="chart_8h.html#a858b96fd44354565fd9019cdb26149fea49e056be9e39bfca5268ae9eaab11c46">LXW_CHART_ERROR_BAR_TYPE_PERCENTAGE</a></div><div class="ttdeci">@ LXW_CHART_ERROR_BAR_TYPE_PERCENTAGE</div><div class="ttdef"><b>Definition:</b> chart.h:949</div></div>
+<div class="ttc" id="achart_8h_html_a858b96fd44354565fd9019cdb26149feaba45d9e553700f3f1a3df0c1f80259c0"><div class="ttname"><a href="chart_8h.html#a858b96fd44354565fd9019cdb26149feaba45d9e553700f3f1a3df0c1f80259c0">LXW_CHART_ERROR_BAR_TYPE_FIXED</a></div><div class="ttdeci">@ LXW_CHART_ERROR_BAR_TYPE_FIXED</div><div class="ttdef"><b>Definition:</b> chart.h:946</div></div>
 </div><!-- fragment --><p>For the Standard error type the value is ignored.</p>
 <p>For more information see <a class="el" href="working_with_charts.html#chart_error_bars">Working with Chart Error Bars</a>. </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="chart_data_tools_8c-example.html#a30">chart_data_tools.c</a>.</dd>
@@ -2429,7 +2443,7 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="chart_8h.html#aa897ee54d4a19f264a6b8f9dd43604b3">chart_series_set_error_bars_direction</a>(series-&gt;y_error_bars,</div>
 <div class="line">                                      <a class="code hl_enumvalue" href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66ea359a4cea90dabfa009eeb80d2bde5a14">LXW_CHART_ERROR_BAR_DIR_PLUS</a>);</div>
-<div class="ttc" id="achart_8h_html_a5416ddeb493de3e78245d77d0af8a66ea359a4cea90dabfa009eeb80d2bde5a14"><div class="ttname"><a href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66ea359a4cea90dabfa009eeb80d2bde5a14">LXW_CHART_ERROR_BAR_DIR_PLUS</a></div><div class="ttdeci">@ LXW_CHART_ERROR_BAR_DIR_PLUS</div><div class="ttdef"><b>Definition:</b> chart.h:890</div></div>
+<div class="ttc" id="achart_8h_html_a5416ddeb493de3e78245d77d0af8a66ea359a4cea90dabfa009eeb80d2bde5a14"><div class="ttname"><a href="chart_8h.html#a5416ddeb493de3e78245d77d0af8a66ea359a4cea90dabfa009eeb80d2bde5a14">LXW_CHART_ERROR_BAR_DIR_PLUS</a></div><div class="ttdeci">@ LXW_CHART_ERROR_BAR_DIR_PLUS</div><div class="ttdef"><b>Definition:</b> chart.h:964</div></div>
 <div class="ttc" id="achart_8h_html_aa897ee54d4a19f264a6b8f9dd43604b3"><div class="ttname"><a href="chart_8h.html#aa897ee54d4a19f264a6b8f9dd43604b3">chart_series_set_error_bars_direction</a></div><div class="ttdeci">void chart_series_set_error_bars_direction(lxw_series_error_bars *error_bars, uint8_t direction)</div><div class="ttdoc">Set the direction (up, down or both) of the error bars for a chart series.</div></div>
 </div><!-- fragment --><div class="image">
 <img src="chart_error_bars2.png" alt=""/>
@@ -2482,7 +2496,7 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="chart_8h.html#ab03b0a4da953fa6bb47e2296b82476d2">chart_series_set_error_bars_endcap</a>(series-&gt;y_error_bars,</div>
 <div class="line">                                   <a class="code hl_enumvalue" href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7fa5d70a912eb58cf4790bbadf8bde2dcdd">LXW_CHART_ERROR_BAR_NO_CAP</a>);</div>
-<div class="ttc" id="achart_8h_html_a2893fbacd275cd67fc0e310ea0101a7fa5d70a912eb58cf4790bbadf8bde2dcdd"><div class="ttname"><a href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7fa5d70a912eb58cf4790bbadf8bde2dcdd">LXW_CHART_ERROR_BAR_NO_CAP</a></div><div class="ttdeci">@ LXW_CHART_ERROR_BAR_NO_CAP</div><div class="ttdef"><b>Definition:</b> chart.h:915</div></div>
+<div class="ttc" id="achart_8h_html_a2893fbacd275cd67fc0e310ea0101a7fa5d70a912eb58cf4790bbadf8bde2dcdd"><div class="ttname"><a href="chart_8h.html#a2893fbacd275cd67fc0e310ea0101a7fa5d70a912eb58cf4790bbadf8bde2dcdd">LXW_CHART_ERROR_BAR_NO_CAP</a></div><div class="ttdeci">@ LXW_CHART_ERROR_BAR_NO_CAP</div><div class="ttdef"><b>Definition:</b> chart.h:989</div></div>
 <div class="ttc" id="achart_8h_html_ab03b0a4da953fa6bb47e2296b82476d2"><div class="ttname"><a href="chart_8h.html#ab03b0a4da953fa6bb47e2296b82476d2">chart_series_set_error_bars_endcap</a></div><div class="ttdeci">void chart_series_set_error_bars_endcap(lxw_series_error_bars *error_bars, uint8_t endcap)</div><div class="ttdoc">Set the end cap type for the error bars of a chart series.</div></div>
 </div><!-- fragment --><div class="image">
 <img src="chart_error_bars3.png" alt=""/>
@@ -2588,7 +2602,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="achart_8h_html_a3c36cef7a49c5698e95d112a35d3dc92a0c4f5ebbdbe59d52061b1201370210aa"><div class="ttname"><a href="chart_8h.html#a3c36cef7a49c5698e95d112a35d3dc92a0c4f5ebbdbe59d52061b1201370210aa">LXW_CHART_AXIS_TYPE_X</a></div><div class="ttdeci">@ LXW_CHART_AXIS_TYPE_X</div><div class="ttdef"><b>Definition:</b> chart.h:485</div></div>
 <div class="ttc" id="achart_8h_html_a3c36cef7a49c5698e95d112a35d3dc92a186015afd06af105db5662f7e9ac2809"><div class="ttname"><a href="chart_8h.html#a3c36cef7a49c5698e95d112a35d3dc92a186015afd06af105db5662f7e9ac2809">LXW_CHART_AXIS_TYPE_Y</a></div><div class="ttdeci">@ LXW_CHART_AXIS_TYPE_Y</div><div class="ttdef"><b>Definition:</b> chart.h:488</div></div>
 <div class="ttc" id="achart_8h_html_a561982e8590d1e3d395be019e7915fa0"><div class="ttname"><a href="chart_8h.html#a561982e8590d1e3d395be019e7915fa0">chart_axis_get</a></div><div class="ttdeci">lxw_chart_axis * chart_axis_get(lxw_chart *chart, lxw_chart_axis_type axis_type)</div><div class="ttdoc">Get an axis pointer from a chart.</div></div>
-<div class="ttc" id="astructlxw__chart__axis_html"><div class="ttname"><a href="structlxw__chart__axis.html">lxw_chart_axis</a></div><div class="ttdoc">Struct to represent an Excel chart axis.</div><div class="ttdef"><b>Definition:</b> chart.h:1030</div></div>
+<div class="ttc" id="astructlxw__chart__axis_html"><div class="ttname"><a href="structlxw__chart__axis.html">lxw_chart_axis</a></div><div class="ttdoc">Struct to represent an Excel chart axis.</div><div class="ttdef"><b>Definition:</b> chart.h:1104</div></div>
 </div><!-- fragment --><p>Note, the axis pointer can also be accessed directly:</p>
 <div class="fragment"><div class="line"><span class="comment">// Equivalent to the above example, without function calls.</span></div>
 <div class="line"><a class="code hl_function" href="chart_8h.html#a1f7ddf67b9eaafef1e2d301cf88355e7">chart_axis_major_gridlines_set_visible</a>(chart-&gt;x_axis, <a class="code hl_enumvalue" href="common_8h.html#a57bffaf0ff3cb4e9f4f7f2b0b6dad349a7850bcc34c18efe2e45372f4069be0bf">LXW_TRUE</a>);</div>
@@ -2696,6 +2710,42 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="chart_8h.html#ae3cfd6a286f3b717e68d4bca348387ff">chart_axis_set_name_range</a>(chart-&gt;y_axis, <span class="stringliteral">&quot;Sheet1&quot;</span>, 2, 0);</div>
 <div class="ttc" id="achart_8h_html_ae3cfd6a286f3b717e68d4bca348387ff"><div class="ttname"><a href="chart_8h.html#ae3cfd6a286f3b717e68d4bca348387ff">chart_axis_set_name_range</a></div><div class="ttdeci">void chart_axis_set_name_range(lxw_chart_axis *axis, const char *sheetname, lxw_row_t row, lxw_col_t col)</div><div class="ttdoc">Set a chart axis name formula using row and column values.</div></div>
 </div><!-- fragment --><p><b>Axis types</b>: This function is applicable to to all axes types. See <a class="el" href="working_with_charts.html#ww_charts_axes">Chart Value and Category Axes</a>. </p>
+
+</div>
+</div>
+<a id="ae40c510205afc05b09b9f9a7a18c5a3f" name="ae40c510205afc05b09b9f9a7a18c5a3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae40c510205afc05b09b9f9a7a18c5a3f">&#9670;&#160;</a></span>chart_axis_set_name_layout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_axis_set_name_layout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__axis.html">lxw_chart_axis</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__layout.html">lxw_chart_layout</a> *&#160;</td>
+          <td class="paramname"><em>layout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>A pointer to a chart <a class="el" href="structlxw__chart__axis.html" title="Struct to represent an Excel chart axis.">lxw_chart_axis</a> object. </td></tr>
+    <tr><td class="paramname">layout</td><td>A pointer to a chart <a class="el" href="structlxw__chart__layout.html" title="Struct to represent Excel chart element layout dimensions.">lxw_chart_layout</a> struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function is used to simulate setting the manual position of a chart axis name. See <a class="el" href="working_with_charts.html#chart_layout">Chart Layout</a> for more information. </p>
 
 </div>
 </div>
@@ -4143,6 +4193,77 @@ Functions</h2></td></tr>
 </div><!-- fragment --> 
 </div>
 </div>
+<a id="a1879cefec81fcb6419232828c4f6ba7d" name="a1879cefec81fcb6419232828c4f6ba7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1879cefec81fcb6419232828c4f6ba7d">&#9670;&#160;</a></span>chart_title_set_layout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_title_set_layout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart.html">lxw_chart</a> *&#160;</td>
+          <td class="paramname"><em>chart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__layout.html">lxw_chart_layout</a> *&#160;</td>
+          <td class="paramname"><em>layout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chart</td><td>Pointer to a <a class="el" href="structlxw__chart.html" title="Struct to represent an Excel chart.">lxw_chart</a> instance to be configured. </td></tr>
+    <tr><td class="paramname">layout</td><td>A pointer to a chart <a class="el" href="structlxw__chart__layout.html" title="Struct to represent Excel chart element layout dimensions.">lxw_chart_layout</a> struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function is used to simulate setting the manual position of the chart title. See <a class="el" href="working_with_charts.html#chart_layout">Chart Layout</a> for more information. </p>
+
+</div>
+</div>
+<a id="aa75ea98312256dad09707a99b66a539b" name="aa75ea98312256dad09707a99b66a539b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa75ea98312256dad09707a99b66a539b">&#9670;&#160;</a></span>chart_title_set_overlay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_title_set_overlay </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart.html">lxw_chart</a> *&#160;</td>
+          <td class="paramname"><em>chart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>overlay</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chart</td><td></td></tr>
+    <tr><td class="paramname">overlay</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="af1382251c31fd8f97e19048acf5db0a1" name="af1382251c31fd8f97e19048acf5db0a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af1382251c31fd8f97e19048acf5db0a1">&#9670;&#160;</a></span>chart_legend_set_position()</h2>
 
@@ -4199,6 +4320,42 @@ LXW_CHART_LEGEND_OVERLAY_TOP_RIGHT
 </div>
  <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="chart_clustered_8c-example.html#a14">chart_clustered.c</a>, <a class="el" href="chart_data_labels_8c-example.html#a18">chart_data_labels.c</a>, <a class="el" href="chart_data_table_8c-example.html#a27">chart_data_table.c</a>, and <a class="el" href="chart_fonts_8c-example.html#a23">chart_fonts.c</a>.</dd>
 </dl>
+
+</div>
+</div>
+<a id="a031505bed7fd3d22c7f1c86b976759e7" name="a031505bed7fd3d22c7f1c86b976759e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a031505bed7fd3d22c7f1c86b976759e7">&#9670;&#160;</a></span>chart_legend_set_layout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_legend_set_layout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart.html">lxw_chart</a> *&#160;</td>
+          <td class="paramname"><em>chart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__layout.html">lxw_chart_layout</a> *&#160;</td>
+          <td class="paramname"><em>layout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chart</td><td>Pointer to a <a class="el" href="structlxw__chart.html" title="Struct to represent an Excel chart.">lxw_chart</a> instance to be configured. </td></tr>
+    <tr><td class="paramname">layout</td><td>A pointer to a chart <a class="el" href="structlxw__chart__layout.html" title="Struct to represent Excel chart element layout dimensions.">lxw_chart_layout</a> struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function is used to simulate setting the manual position of the chart legend. See <a class="el" href="working_with_charts.html#chart_layout">Chart Layout</a> for more information. </p>
 
 </div>
 </div>
@@ -4542,6 +4699,42 @@ LXW_CHART_LEGEND_OVERLAY_TOP_RIGHT
 <div class="fragment"><div class="line"><a class="code hl_function" href="chart_8h.html#a740b9fea5de2148ec3df56f7f131fc95">chart_plotarea_set_pattern</a>(series1, &amp;pattern);</div>
 <div class="ttc" id="achart_8h_html_a740b9fea5de2148ec3df56f7f131fc95"><div class="ttname"><a href="chart_8h.html#a740b9fea5de2148ec3df56f7f131fc95">chart_plotarea_set_pattern</a></div><div class="ttdeci">void chart_plotarea_set_pattern(lxw_chart *chart, lxw_chart_pattern *pattern)</div><div class="ttdoc">Set the pattern properties for a plotarea.</div></div>
 </div><!-- fragment --><p>For more information see <a class="el" href="chart_8h.html#aa97ba4df6e3cb14bcb773a7c6b55de9d" title="Chart pattern types.">lxw_chart_pattern_type</a> and <a class="el" href="working_with_charts.html#chart_patterns">Chart formatting: Pattern</a>. </p>
+
+</div>
+</div>
+<a id="a1fbc35feb0820b8c3dd3ac4feb80a6f0" name="a1fbc35feb0820b8c3dd3ac4feb80a6f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fbc35feb0820b8c3dd3ac4feb80a6f0">&#9670;&#160;</a></span>chart_plotarea_set_layout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chart_plotarea_set_layout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__chart.html">lxw_chart</a> *&#160;</td>
+          <td class="paramname"><em>chart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlxw__chart__layout.html">lxw_chart_layout</a> *&#160;</td>
+          <td class="paramname"><em>layout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chart</td><td>Pointer to a <a class="el" href="structlxw__chart.html" title="Struct to represent an Excel chart.">lxw_chart</a> instance to be configured. </td></tr>
+    <tr><td class="paramname">layout</td><td>A pointer to a chart <a class="el" href="structlxw__chart__layout.html" title="Struct to represent Excel chart element layout dimensions.">lxw_chart_layout</a> struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function is used to simulate setting the manual position of the chart plotarea. See <a class="el" href="working_with_charts.html#chart_layout">Chart Layout</a> for more information. </p>
 
 </div>
 </div>
@@ -5031,7 +5224,7 @@ LXW_CHART_LEGEND_OVERLAY_TOP_RIGHT
 <p>The <code>chart_show_blanks_as()</code> function controls how blank data is displayed in a chart:</p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="chart_8h.html#a47a718bcbe2eda90bebc2031c9287251">chart_show_blanks_as</a>(chart, <a class="code hl_enumvalue" href="chart_8h.html#af7ecbdf6aeea5098164e88a0107aa89cace2e142b371744e67c606279d0be4110">LXW_CHART_BLANKS_AS_CONNECTED</a>);</div>
 <div class="ttc" id="achart_8h_html_a47a718bcbe2eda90bebc2031c9287251"><div class="ttname"><a href="chart_8h.html#a47a718bcbe2eda90bebc2031c9287251">chart_show_blanks_as</a></div><div class="ttdeci">void chart_show_blanks_as(lxw_chart *chart, uint8_t option)</div><div class="ttdoc">Set the option for displaying blank data in a chart.</div></div>
-<div class="ttc" id="achart_8h_html_af7ecbdf6aeea5098164e88a0107aa89cace2e142b371744e67c606279d0be4110"><div class="ttname"><a href="chart_8h.html#af7ecbdf6aeea5098164e88a0107aa89cace2e142b371744e67c606279d0be4110">LXW_CHART_BLANKS_AS_CONNECTED</a></div><div class="ttdeci">@ LXW_CHART_BLANKS_AS_CONNECTED</div><div class="ttdef"><b>Definition:</b> chart.h:854</div></div>
+<div class="ttc" id="achart_8h_html_af7ecbdf6aeea5098164e88a0107aa89cace2e142b371744e67c606279d0be4110"><div class="ttname"><a href="chart_8h.html#af7ecbdf6aeea5098164e88a0107aa89cace2e142b371744e67c606279d0be4110">LXW_CHART_BLANKS_AS_CONNECTED</a></div><div class="ttdeci">@ LXW_CHART_BLANKS_AS_CONNECTED</div><div class="ttdef"><b>Definition:</b> chart.h:921</div></div>
 </div><!-- fragment --><p>The <code>option</code> parameter can have one of the following values:</p>
 <ul>
 <li><a class="el" href="chart_8h.html#af7ecbdf6aeea5098164e88a0107aa89ca2348f13206ee272ec69863e013a2fa66">LXW_CHART_BLANKS_AS_GAP</a>: Show empty chart cells as gaps in the data. This is the default option for Excel charts.</li>
@@ -5225,6 +5418,40 @@ LXW_CHART_LEGEND_OVERLAY_TOP_RIGHT
       </table>
 </div><div class="memdoc">
 <p>See <a class="el" href="working_with_charts.html#chart_fonts">Chart formatting: Fonts</a>. </p>
+
+</div>
+</div>
+<a id="a37eef6abb9374fb2f167e1a400bee274" name="a37eef6abb9374fb2f167e1a400bee274"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37eef6abb9374fb2f167e1a400bee274">&#9670;&#160;</a></span>lxw_chart_layout</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structlxw__chart__layout.html">lxw_chart_layout</a> <a class="el" href="structlxw__chart__layout.html">lxw_chart_layout</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Excel supports manual positioning of elements such as the chart axis labels, the chart legend, the chart plot area and the chart title. The <code><a class="el" href="structlxw__chart__layout.html" title="Struct to represent Excel chart element layout dimensions.">lxw_chart_layout</a></code> struct represents the layout dimension for these elements.</p>
+<p>The layout units used by Excel are relative units expressed as a percentage of the chart dimensions and are double values in the range <code>0.0 &lt; x &lt;= 1.0</code>. Excel calculates these dimensions as shown below:</p>
+<div class="image">
+<img src="chart_layout.png" alt=""/>
+</div>
+<p>With reference to the above figure the layout units are calculated as follows:</p>
+<div class="fragment"><div class="line">x = a / W</div>
+<div class="line">y = b / H</div>
+</div><!-- fragment --><p>These units are cumbersome and can vary depending on other elements in the chart such as text lengths. However, these are the units that are required by Excel to allow relative positioning. Some trial and error is generally required.</p>
+<p>For the chart <code><a class="el" href="chart_8h.html#a1fbc35feb0820b8c3dd3ac4feb80a6f0" title="Set the manual layout of the chart plotarea.">chart_plotarea_set_layout()</a></code> and <code><a class="el" href="chart_8h.html#a031505bed7fd3d22c7f1c86b976759e7" title="Set the manual layout of the chart legend.">chart_legend_set_layout()</a></code> functions you can also set the width and height based on the following calculation:</p>
+<div class="fragment"><div class="line">width  = w / W</div>
+<div class="line">height = h / H</div>
+</div><!-- fragment --><p>For other text based objects the width and height are changed by the font dimensions.</p>
+<p>The chart functions that support <code><a class="el" href="structlxw__chart__layout.html" title="Struct to represent Excel chart element layout dimensions.">lxw_chart_layout</a></code> are:</p>
+<ul>
+<li><code><a class="el" href="chart_8h.html#a1879cefec81fcb6419232828c4f6ba7d" title="Set the manual position of the chart title.">chart_title_set_layout()</a></code></li>
+<li><code><a class="el" href="chart_8h.html#a031505bed7fd3d22c7f1c86b976759e7" title="Set the manual layout of the chart legend.">chart_legend_set_layout()</a></code></li>
+<li><code><a class="el" href="chart_8h.html#a1fbc35feb0820b8c3dd3ac4feb80a6f0" title="Set the manual layout of the chart plotarea.">chart_plotarea_set_layout()</a></code></li>
+<li><code><a class="el" href="chart_8h.html#ae40c510205afc05b09b9f9a7a18c5a3f" title="Set the manual position of the chart axis name.">chart_axis_set_name_layout()</a></code> </li>
+</ul>
 
 </div>
 </div>
@@ -5947,6 +6174,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__font.html">lxw_chart_font</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent a chart font.  <a href="structlxw__chart__font.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__layout.html">lxw_chart_layout</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent Excel chart element layout dimensions.  <a href="structlxw__chart__layout.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlxw__chart__point.html">lxw_chart_point</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel chart data point.  <a href="structlxw__chart__point.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -6028,6 +6258,9 @@ typedef enum <a class="el" href="chart_8h.html#aa22c6ef3802e14d3ef8f0055c6d09e67
 <tr class="memitem:aec6f9dd164f2501a62f4cd2e5b32e2f1"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__chart__font.html">lxw_chart_font</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aec6f9dd164f2501a62f4cd2e5b32e2f1">lxw_chart_font</a></td></tr>
 <tr class="memdesc:aec6f9dd164f2501a62f4cd2e5b32e2f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent a chart font.  <br /></td></tr>
 <tr class="separator:aec6f9dd164f2501a62f4cd2e5b32e2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37eef6abb9374fb2f167e1a400bee274"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__chart__layout.html">lxw_chart_layout</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a37eef6abb9374fb2f167e1a400bee274">lxw_chart_layout</a></td></tr>
+<tr class="memdesc:a37eef6abb9374fb2f167e1a400bee274"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent Excel chart element layout dimensions.  <br /></td></tr>
+<tr class="separator:a37eef6abb9374fb2f167e1a400bee274"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40899472cd828961b11761d3643b5432"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structlxw__chart__point.html">lxw_chart_point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#a40899472cd828961b11761d3643b5432">lxw_chart_point</a></td></tr>
 <tr class="memdesc:a40899472cd828961b11761d3643b5432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to represent an Excel chart data point.  <br /></td></tr>
 <tr class="separator:a40899472cd828961b11761d3643b5432"><td class="memSeparator" colspan="2">&#160;</td></tr>

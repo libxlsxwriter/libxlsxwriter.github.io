@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['width_0',['width',['../structlxw__comment__options.html#abc75ab267fe81d828844e6a619c7edef',1,'lxw_comment_options::width()'],['../structlxw__button__options.html#a816bbddd20108e54f1c3c4676fc2614e',1,'lxw_button_options::width()'],['../structlxw__chart__line.html#ab548d8a04d084df9f14cea072111b052',1,'lxw_chart_line::width()']]],
+  ['width_0',['width',['../structlxw__comment__options.html#abc75ab267fe81d828844e6a619c7edef',1,'lxw_comment_options::width()'],['../structlxw__button__options.html#a816bbddd20108e54f1c3c4676fc2614e',1,'lxw_button_options::width()'],['../structlxw__chart__line.html#ab548d8a04d084df9f14cea072111b052',1,'lxw_chart_line::width()'],['../structlxw__chart__layout.html#aaed36f03e81646584045d69293a341ee',1,'lxw_chart_layout::width()']]],
   ['workbook_2eh_1',['workbook.h',['../workbook_8h.html',1,'']]],
   ['workbook_5fadd_5fchart_2',['workbook_add_chart',['../workbook_8h.html#a10bd2ff24973091c4f19909a851cb41f',1,'workbook.h']]],
   ['workbook_5fadd_5fchartsheet_3',['workbook_add_chartsheet',['../workbook_8h.html#a5c476197efaad7c46728b832e0629f33',1,'workbook.h']]],
