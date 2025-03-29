@@ -369,6 +369,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a1879cefec81fcb6419232828c4f6ba7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the manual position of the chart title.  <br /></td></tr>
 <tr class="separator:a1879cefec81fcb6419232828c4f6ba7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa75ea98312256dad09707a99b66a539b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#aa75ea98312256dad09707a99b66a539b">chart_title_set_overlay</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, uint8_t overlay)</td></tr>
+<tr class="memdesc:aa75ea98312256dad09707a99b66a539b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow the chart title to overlay the chart.  <br /></td></tr>
 <tr class="separator:aa75ea98312256dad09707a99b66a539b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1382251c31fd8f97e19048acf5db0a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chart_8h.html#af1382251c31fd8f97e19048acf5db0a1">chart_legend_set_position</a> (<a class="el" href="structlxw__chart.html">lxw_chart</a> *chart, uint8_t position)</td></tr>
 <tr class="memdesc:af1382251c31fd8f97e19048acf5db0a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the chart legend.  <br /></td></tr>
@@ -4256,11 +4257,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">chart</td><td></td></tr>
-    <tr><td class="paramname">overlay</td><td></td></tr>
+    <tr><td class="paramname">chart</td><td>Pointer to a <a class="el" href="structlxw__chart.html" title="Struct to represent an Excel chart.">lxw_chart</a> instance to be configured. </td></tr>
+    <tr><td class="paramname">overlay</td><td>Turn off/on the overlay. (0/1)</td></tr>
   </table>
   </dd>
 </dl>
+<p>This option allows the chart title to overlay the chart when the <code><a class="el" href="chart_8h.html#a1879cefec81fcb6419232828c4f6ba7d" title="Set the manual position of the chart title.">chart_title_set_layout()</a></code> function. </p>
 
 </div>
 </div>
