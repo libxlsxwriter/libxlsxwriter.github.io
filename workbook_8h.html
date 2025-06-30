@@ -170,6 +170,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8aaade0a24d1b8e10bd5690cb5479de9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a8aaade0a24d1b8e10bd5690cb5479de9">workbook_read_only_recommended</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook)</td></tr>
 <tr class="memdesc:a8aaade0a24d1b8e10bd5690cb5479de9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a recommendation to open the file in "read-only" mode.  <br /></td></tr>
 <tr class="separator:a8aaade0a24d1b8e10bd5690cb5479de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79efd6bf9d15c7b3cfc8d02f5597f275"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#a79efd6bf9d15c7b3cfc8d02f5597f275">workbook_use_1904_epoch</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook)</td></tr>
+<tr class="memdesc:a79efd6bf9d15c7b3cfc8d02f5597f275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the workbook to use the 1904 epoch.  <br /></td></tr>
+<tr class="separator:a79efd6bf9d15c7b3cfc8d02f5597f275"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedc557e07d3e62a84f57aa56744798db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbook_8h.html#aedc557e07d3e62a84f57aa56744798db">workbook_set_size</a> (<a class="el" href="structlxw__workbook.html">lxw_workbook</a> *workbook, uint16_t width, uint16_t height)</td></tr>
 <tr class="memdesc:aedc557e07d3e62a84f57aa56744798db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size of a workbook window.  <br /></td></tr>
 <tr class="separator:aedc557e07d3e62a84f57aa56744798db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1229,6 +1232,35 @@ This function does an ASCII lowercase string comparison to determine if the shee
 <img src="read_only.png" alt=""/>
 </div>
  
+</div>
+</div>
+<a id="a79efd6bf9d15c7b3cfc8d02f5597f275" name="a79efd6bf9d15c7b3cfc8d02f5597f275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79efd6bf9d15c7b3cfc8d02f5597f275">&#9670;&#160;</a></span>workbook_use_1904_epoch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void workbook_use_1904_epoch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__workbook.html">lxw_workbook</a> *&#160;</td>
+          <td class="paramname"><em>workbook</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">workbook</td><td>Pointer to a <a class="el" href="structlxw__workbook.html" title="Struct to represent an Excel workbook.">lxw_workbook</a> instance.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>workbook_use_1904_epoch()</code> function can be used to set the workbook to use the 1904 epoch instead of the default 1900 epoch.</p>
+<p>Excel supports two date epochs. The first based on 1900-01-01 is the default for all Windows versions of Excel and for recent versions of Excel for macOS. Older versions of Excel for macOS used a 1904-01-01 epoch. The 1904 epoch can be set for compatibility with older versions of Excel or to work around the Excel limitation of not being able to handle negative times.</p>
+<p>This function should be called before <code>worksheet_add_worksheet()</code>.</p>
+<div class="fragment"><div class="line"><a class="code hl_function" href="workbook_8h.html#a79efd6bf9d15c7b3cfc8d02f5597f275">workbook_use_1904_epoch</a>(workbook);</div>
+<div class="ttc" id="aworkbook_8h_html_a79efd6bf9d15c7b3cfc8d02f5597f275"><div class="ttname"><a href="workbook_8h.html#a79efd6bf9d15c7b3cfc8d02f5597f275">workbook_use_1904_epoch</a></div><div class="ttdeci">void workbook_use_1904_epoch(lxw_workbook *workbook)</div><div class="ttdoc">Set the workbook to use the 1904 epoch.</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="aedc557e07d3e62a84f57aa56744798db" name="aedc557e07d3e62a84f57aa56744798db"></a>

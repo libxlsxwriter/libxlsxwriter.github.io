@@ -96,9 +96,15 @@ Functions</h2></td></tr>
 <tr class="memitem:ac58c9e5aa239b938ef78c10c055c0f79"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#ac58c9e5aa239b938ef78c10c055c0f79">lxw_datetime_to_excel_datetime</a> (<a class="el" href="structlxw__datetime.html">lxw_datetime</a> *datetime)</td></tr>
 <tr class="memdesc:ac58c9e5aa239b938ef78c10c055c0f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel.">lxw_datetime</a> to an Excel datetime number.  <br /></td></tr>
 <tr class="separator:ac58c9e5aa239b938ef78c10c055c0f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1352cea39063f569f68c6b2774dbe20a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#a1352cea39063f569f68c6b2774dbe20a">lxw_datetime_to_excel_date_with_epoch</a> (<a class="el" href="structlxw__datetime.html">lxw_datetime</a> *datetime, uint8_t use_1904_epoch)</td></tr>
+<tr class="memdesc:a1352cea39063f569f68c6b2774dbe20a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel.">lxw_datetime</a> to an Excel datetime number with 1900/1904 epoch.  <br /></td></tr>
+<tr class="separator:a1352cea39063f569f68c6b2774dbe20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa27dba0457269a1044e14fa8dc9294d2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#aa27dba0457269a1044e14fa8dc9294d2">lxw_unixtime_to_excel_date</a> (int64_t unixtime)</td></tr>
 <tr class="memdesc:aa27dba0457269a1044e14fa8dc9294d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a unix datetime to an Excel datetime number.  <br /></td></tr>
 <tr class="separator:aa27dba0457269a1044e14fa8dc9294d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a3563aa8dd3691ecf458fe73ce91dce"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#a8a3563aa8dd3691ecf458fe73ce91dce">lxw_unixtime_to_excel_date_with_epoch</a> (int64_t unixtime, uint8_t use_1904_epoch)</td></tr>
+<tr class="memdesc:a8a3563aa8dd3691ecf458fe73ce91dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a unix datetime to an Excel datetime number with 1900/1904 epoch.  <br /></td></tr>
+<tr class="separator:a8a3563aa8dd3691ecf458fe73ce91dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a03ba9ddfcf3038f2a977bfbf830ed8f7" name="a03ba9ddfcf3038f2a977bfbf830ed8f7"></a>
@@ -215,6 +221,42 @@ Error 2 = Error creating output xlsx file. Usually a permissions error.
 
 </div>
 </div>
+<a id="a1352cea39063f569f68c6b2774dbe20a" name="a1352cea39063f569f68c6b2774dbe20a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1352cea39063f569f68c6b2774dbe20a">&#9670;&#160;</a></span>lxw_datetime_to_excel_date_with_epoch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double lxw_datetime_to_excel_date_with_epoch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__datetime.html">lxw_datetime</a> *&#160;</td>
+          <td class="paramname"><em>datetime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>use_1904_epoch</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function is similar to <code><a class="el" href="utility_8h.html#ac58c9e5aa239b938ef78c10c055c0f79" title="Converts a lxw_datetime to an Excel datetime number.">lxw_datetime_to_excel_datetime()</a></code> but it allows you to specify whether to use the 1900 or 1904 epoch. See also the <code><a class="el" href="workbook_8h.html#a79efd6bf9d15c7b3cfc8d02f5597f275" title="Set the workbook to use the 1904 epoch.">workbook_use_1904_epoch()</a></code> function.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">datetime</td><td>A pointer to a <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel.">lxw_datetime</a> struct. </td></tr>
+    <tr><td class="paramname">use_1904_epoch</td><td>A flag to indicate whether to use the 1904 epoch (true) or the 1900 epoch (false). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aa27dba0457269a1044e14fa8dc9294d2" name="aa27dba0457269a1044e14fa8dc9294d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa27dba0457269a1044e14fa8dc9294d2">&#9670;&#160;</a></span>lxw_unixtime_to_excel_date()</h2>
 
@@ -241,6 +283,42 @@ Error 2 = Error creating output xlsx file. Usually a permissions error.
 <div class="fragment"><div class="line"><span class="keywordtype">double</span> excel_datetime = <a class="code hl_function" href="utility_8h.html#aa27dba0457269a1044e14fa8dc9294d2">lxw_unixtime_to_excel_date</a>(946684800);</div>
 <div class="ttc" id="autility_8h_html_aa27dba0457269a1044e14fa8dc9294d2"><div class="ttname"><a href="utility_8h.html#aa27dba0457269a1044e14fa8dc9294d2">lxw_unixtime_to_excel_date</a></div><div class="ttdeci">double lxw_unixtime_to_excel_date(int64_t unixtime)</div><div class="ttdoc">Converts a unix datetime to an Excel datetime number.</div></div>
 </div><!-- fragment --><p>See <a class="el" href="working_with_dates.html">Working with Dates and Times</a> for more details. </p>
+
+</div>
+</div>
+<a id="a8a3563aa8dd3691ecf458fe73ce91dce" name="a8a3563aa8dd3691ecf458fe73ce91dce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a3563aa8dd3691ecf458fe73ce91dce">&#9670;&#160;</a></span>lxw_unixtime_to_excel_date_with_epoch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double lxw_unixtime_to_excel_date_with_epoch </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>unixtime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>use_1904_epoch</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function is similar to <code><a class="el" href="utility_8h.html#aa27dba0457269a1044e14fa8dc9294d2" title="Converts a unix datetime to an Excel datetime number.">lxw_unixtime_to_excel_date()</a></code> but it allows you to specify whether to use the 1900 or 1904 epoch. See also the <code><a class="el" href="workbook_8h.html#a79efd6bf9d15c7b3cfc8d02f5597f275" title="Set the workbook to use the 1904 epoch.">workbook_use_1904_epoch()</a></code> function.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unixtime</td><td>Unix time (seconds since 1970-01-01) </td></tr>
+    <tr><td class="paramname">use_1904_epoch</td><td>A flag to indicate whether to use the 1904 epoch (true) or the 1900 epoch (false). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
