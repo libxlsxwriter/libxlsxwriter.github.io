@@ -99,6 +99,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a1352cea39063f569f68c6b2774dbe20a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#a1352cea39063f569f68c6b2774dbe20a">lxw_datetime_to_excel_date_with_epoch</a> (<a class="el" href="structlxw__datetime.html">lxw_datetime</a> *datetime, uint8_t use_1904_epoch)</td></tr>
 <tr class="memdesc:a1352cea39063f569f68c6b2774dbe20a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel.">lxw_datetime</a> to an Excel datetime number with 1900/1904 epoch.  <br /></td></tr>
 <tr class="separator:a1352cea39063f569f68c6b2774dbe20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a45738b82d68129f43467e3ed35f89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#aa8a45738b82d68129f43467e3ed35f89">lxw_datetime_validate</a> (<a class="el" href="structlxw__datetime.html">lxw_datetime</a> *datetime)</td></tr>
+<tr class="memdesc:aa8a45738b82d68129f43467e3ed35f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validate a <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel.">lxw_datetime</a> struct.  <br /></td></tr>
+<tr class="separator:aa8a45738b82d68129f43467e3ed35f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa27dba0457269a1044e14fa8dc9294d2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8h.html#aa27dba0457269a1044e14fa8dc9294d2">lxw_unixtime_to_excel_date</a> (int64_t unixtime)</td></tr>
 <tr class="memdesc:aa27dba0457269a1044e14fa8dc9294d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a unix datetime to an Excel datetime number.  <br /></td></tr>
 <tr class="separator:aa27dba0457269a1044e14fa8dc9294d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,7 +219,7 @@ Error 2 = Error creating output xlsx file. Usually a permissions error.
 <div class="fragment"><div class="line"><a class="code hl_struct" href="structlxw__datetime.html">lxw_datetime</a> datetime = {2013, 2, 28, 12, 0, 0.0};</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">double</span> excel_datetime = lxw_datetime_to_excel_date(&amp;datetime);</div>
-<div class="ttc" id="astructlxw__datetime_html"><div class="ttname"><a href="structlxw__datetime.html">lxw_datetime</a></div><div class="ttdoc">Struct to represent a date and time in Excel.</div><div class="ttdef"><b>Definition:</b> common.h:159</div></div>
+<div class="ttc" id="astructlxw__datetime_html"><div class="ttname"><a href="structlxw__datetime.html">lxw_datetime</a></div><div class="ttdoc">Struct to represent a date and time in Excel.</div><div class="ttdef"><b>Definition:</b> common.h:162</div></div>
 </div><!-- fragment --><p>See <a class="el" href="working_with_dates.html">Working with Dates and Times</a> for more details on the Excel datetime format. </p>
 
 </div>
@@ -254,6 +257,49 @@ Error 2 = Error creating output xlsx file. Usually a permissions error.
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aa8a45738b82d68129f43467e3ed35f89" name="aa8a45738b82d68129f43467e3ed35f89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8a45738b82d68129f43467e3ed35f89">&#9670;&#160;</a></span>lxw_datetime_validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6">lxw_error</a> lxw_datetime_validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlxw__datetime.html">lxw_datetime</a> *&#160;</td>
+          <td class="paramname"><em>datetime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Validates a <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel.">lxw_datetime</a> struct to ensure its fields are within acceptable ranges for Excel dates and times.</p>
+<p>The members of the <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel.">lxw_datetime</a> struct and the range of their values are:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Member   </th><th class="markdownTableHeadNone">Value    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">year   </td><td class="markdownTableBodyNone">1900 - 9999    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">month   </td><td class="markdownTableBodyNone">1 - 12    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">day   </td><td class="markdownTableBodyNone">1 - 31    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">hour   </td><td class="markdownTableBodyNone">0 - 23    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">min   </td><td class="markdownTableBodyNone">0 - 59    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">sec   </td><td class="markdownTableBodyNone">0 - 59.999   </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">datetime</td><td>A pointer to a <a class="el" href="structlxw__datetime.html" title="Struct to represent a date and time in Excel.">lxw_datetime</a> struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6" title="Error codes from libxlsxwriter functions.">lxw_error</a> code. Either <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a01078a417fbbaab5a5d956a1bcdfef3b">LXW_NO_ERROR</a> or <a class="el" href="common_8h.html#a04b59aa3c578bc75f88ac16a979c5fe6a336f95911a9ef7431e48c8622b7d3bc1">LXW_ERROR_DATETIME_VALIDATION</a> if a field is out of range. </dd></dl>
 
 </div>
 </div>
@@ -428,7 +474,7 @@ Macros</h2></td></tr>
 <!-- HTML footer for doxygen 1.8.20-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Copyright 2014-2025 John McNamara.
+Copyright 2014-2026 John McNamara.
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
