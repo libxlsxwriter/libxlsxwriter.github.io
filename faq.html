@@ -80,6 +80,7 @@ $(function() {
 <li class="level1"><a href="#faq_msvc">Q. Is Visual C++ on Windows supported?</a></li>
 <li class="level1"><a href="#faq_features">Q. Is feature X supported or will it be supported?</a></li>
 <li class="level1"><a href="#faq_autofit">Q. Is there an &quot;AutoFit&quot; option for columns?</a></li>
+<li class="level1"><a href="#faq_password">Q. Can I password protect an XlsxWriter xlsx file?</a></li>
 <li class="level1"><a href="#faq_faq">Q. Do people actually ask these questions frequently, or at all?</a></li>
 </ul>
 </div>
@@ -112,7 +113,13 @@ Q. Is feature X supported or will it be supported?</h1>
 <h1><a class="anchor" id="faq_autofit"></a>
 Q. Is there an "AutoFit" option for columns?</h1>
 <p>Unfortunately, there is no way to specify "AutoFit" for a column in the Excel file format. This feature is only available at runtime from within Excel. It is possible to simulate "AutoFit" by tracking the width of the data in the column as your write it.</p>
-<h1><a class="anchor" id="faq_faq"></a>
+<h1><a class="anchor" id="faq_password"></a>
+Q. Can I password protect an XlsxWriter xlsx file?</h1>
+<p>Although it is possible to password protect a worksheet using the Worksheet <code>protect</code> method it isn't possible to password protect the entire workbook/file using XlsxWriter.</p>
+<p>The reason for this is that a protected/encrypted xlsx file is in a different format from an ordinary xlsx file. This would require a lot of additional work, and testing, and isn't something that is on the XlsxWriter roadmap.</p>
+<p>However, it is possible to password protect an XlsxWriter generated file using a third party open source tool called <a href="https://github.com/herumi/msoffice">msoffice-crypt</a>. This works for macOS, Linux and Windows:</p>
+<div class="fragment"><div class="line">msoffice-crypt -e -p password input.xlsx output.xlsx</div>
+</div><!-- fragment --><h1><a class="anchor" id="faq_faq"></a>
 Q. Do people actually ask these questions frequently, or at all?</h1>
 <p>Apart from this question, yes.</p>
 <p>Next: <a class="el" href="bugs.html">Known Issues and Bugs</a> </p>
